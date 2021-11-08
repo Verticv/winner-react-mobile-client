@@ -1,0 +1,7 @@
+.angled-gradient {
+    background: linear-gradient(140deg, #ffffff 40%, #909090);
+}
+
+.angled-gradient:hover {
+    background: linear-gradient(130deg, #cef6ff 30%, #379aff);
+}
