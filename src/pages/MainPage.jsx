@@ -10,7 +10,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
     const [isGameBanner, setGameBanner] = useState(0)
 
     return (
-        <div className=" flex flex-col justify-center w-screen h-full">
+        <div className=" flex flex-col justify-center w-screen h-full overflow-x-hidden">
 
             <div className="sticky top-0 w-full z-50 flex flex-col items-center">
                 <NoticeBanner />
@@ -21,7 +21,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
                 <Carousel />
             </div>
 
-            <div className="sticky top-0 flex w-full justify-around w-full shadow-subNavbar bg-gradient-to-b from-blue-lightGradLight to-white border-2 border-white">
+            <div className="overflow-x-scroll sticky top-0 flex w-full justify-around w-full shadow-subNavbar bg-gradient-to-b from-blue-lightGradLight to-white border-2 border-white">
                 <SubNavbar setGameBanner={setGameBanner} isGameBanner={isGameBanner} />
             </div>
             
