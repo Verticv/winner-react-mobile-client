@@ -63,7 +63,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
     }
 
     return (
-        <div id="container" className="flex justify-start items-start w-full">
+        <div id="container" className="flex justify-start items-start w-full h-90px">
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
         </div>
