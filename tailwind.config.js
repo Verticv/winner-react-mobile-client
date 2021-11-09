@@ -268,6 +268,7 @@ module.exports = {
         'limit1920': '1905px',
         'limit1600': '1600px',
         'limit734': '734px',
+        'limit380': '380px'
       },
       colors: {
         blue: {

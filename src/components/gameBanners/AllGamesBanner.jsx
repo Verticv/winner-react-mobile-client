@@ -57,7 +57,7 @@ const AllGamesBanner = () => {
     }
     
     return (
-        <div className="flex flex-col w-screen px-10px space-y-10px pb-80px">
+        <div className="flex flex-col w-screen px-10px space-y-10px">
             <CardList items={gamesArray} />
         </div>
     )

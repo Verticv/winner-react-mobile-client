@@ -65,7 +65,7 @@ const Carousel = () => {
     );
 
     const positionIndicator = (
-        <div className="absolute text-white text-2xl z-10 w-full rounded-sm flex items-center justify-center bottom-0 space-x-2 mb-10px">
+        <div className="absolute text-white text-2xl z-10 w-full rounded-sm flex items-center justify-center bottom-10px left-0 space-x-2">
             {images.map((img, i) => (
                 <button key={i} className="w-15px h-15px bg-gray-cccccc rounded-full p-3px" onClick={() => setCurrentImage(i)}>
                     {currentImage === i && (
@@ -79,13 +79,19 @@ const Carousel = () => {
     const imagesDisplay = (
         <>
             {images.map((img, i) => (
-                 <img onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} key={i} src={images[i]} className={`${currentImage === i ? "opacity-100" : "opacity-0"} ${img === visual2 && "absolute top-0"} w-full  object-contain transition duration-300`} alt={"banner_images"} />
+                 <img 
+                    onMouseEnter={() => setHover(true)} 
+                    onMouseLeave={() => setHover(false)} 
+                    key={i} 
+                    src={images[i]} 
+                    className={`${
+                        currentImage === i ? "opacity-100" : "opacity-0"
+                    } ${
+                        img === visual2 && ""
+                    } absolute top-0 w-full h-full object-contain transition duration-300`} 
+                    alt={"banner_images"} 
+                 />
 
-                // <button key={i} className="w-15px h-15px bg-gray-300 rounded-full p-2px" onClick={() => setCurrentImage(i)}>
-                //     {currentImage === i && (
-                //         <div className="w-full h-full rounded-full bg-blue-gradDark" />
-                //     )}
-                // </button>
             ))}
         </>
     )
@@ -110,11 +116,20 @@ const Carousel = () => {
     );
 
     return (
-        <div className="flex w-default w-full flex-shrink-0">
-            <div className="relative w-full limit1920:h-500px h-full flex items-center">
-                {sliderControl(true)}
+        <div className="relative w-full h-full flex items-center">
+            {sliderControl(true)}
+            <div>
                 {imagesDisplay}
-                {sliderControl()}
+                <img 
+                    onMouseEnter={() => setHover(true)} 
+                    onMouseLeave={() => setHover(false)} 
+                    src={visual} 
+                    className={`opacity-0`} 
+                    alt={"banner_images"} 
+                 />
+            </div>
+            {sliderControl()}
+            <div className="z-20">
                 {positionIndicator}
             </div>
         </div>
