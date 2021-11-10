@@ -32,7 +32,7 @@ const LiveCasinoBanner = () => {
                 onClick={() => item.id !==6 && item.id !==7 && history.push('/live-casino')}
             >
                 <img className="z-20 object-contain" src={item.img} alt="background" />
-                <div className={` shadow-plain3 absolute z-20 right-6px w-80px h-30px rounded-full flex items-center justify-center text-white font-spoqaBold text-14px pt-px ${item.color}`}>{item.btnText}</div>
+                <div className={`shadow-plain3 absolute z-20 right-6px w-64px h-24px rounded-full flex items-center justify-center text-white font-spoqaBold text-12px pt-px ${item.color}`}>{item.btnText}</div>
             </div>
         ));
     }

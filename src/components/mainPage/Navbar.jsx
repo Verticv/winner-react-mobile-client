@@ -28,20 +28,20 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     )
 
     const CountryButton = (
-        <div className="flex items-center w-104px h-40px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-10px shadow-inner p-4px shadow-plain2 hover:opacity-75">
-            <div className="h-32px w-32px bg-white rounded-full flex items-center justify-center">
+        <div className="flex items-center w-80px h-32px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-6px shadow-inner p-4px shadow-plain2 hover:opacity-75">
+            <div className="h-24px w-24px bg-white rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label className="font-spoqaBold text-white cursor-pointer pt-px">{country}</label>
+            <label className="font-spoqaBold text-white cursor-pointer pt-px text-14px">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )
 
     return (
         <div className="w-full z-50">
-            <header className="relative flex items-center justify-between h-60px px-10px shadow-plain bg-white flex flex-shrink-0">
+            <header className="relative flex items-center justify-between h-50px px-10px shadow-plain bg-white flex flex-shrink-0">
                 <div className="flex items-center flex-shrink-0">
-                    <img className=" object-none mb-2 mr-10px cursor-pointer pt-5px" src={Logo} alt="logo" onClick={() => history.push('/')} />
+                    <img className=" object-contain h-30px mb-2 mr-10px cursor-pointer pt-5px" src={Logo} alt="logo" onClick={() => history.push('/')} />
                 </div>
                 
                 <div className="flex space-x-20px items-center flex-shrink-0">

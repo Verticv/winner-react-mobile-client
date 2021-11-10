@@ -36,7 +36,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
 
     function onClickHandle(id) {
         var circle = document.getElementsByClassName("highlight")[0]
-        circle.style.transform = "translate3d(" + (id * 100) + "px, 0px, 0)"
+        circle.style.transform = "translate3d(" + (id * 80) + "px, 0px, 0)"
     }
 
 
@@ -49,21 +49,27 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                     ? "text-white py-4 duration-150" 
                     : " space-x-2px text-gray-subNavbar duration-300 hover:bg-gray-d8dfea"
                 } 
-                flex flex-col justify-start flex-shrink-0 items-center w-100px h-90px rounded-md z-20 transition ease-in-out tracking-tight relative`} 
+                flex flex-col justify-start flex-shrink-0 items-center w-80px h-70px rounded-md z-20 transition ease-in-out tracking-tight relative`} 
                 onClick={() => {
                     setSelectedTab(item.id)
                     setGameBanner(item.id)
                     onClickHandle(item.id)
                 }}
             >
-                <img className={` absolute top-0 ${(selectedTab === item.id && item.id !== 0) ? "mt-16px" : item.classDefault} ${item.id === 0 ? "w-50px h-50px mt-8px object-contain" : "object-none"}`} src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" />
-                <label className={"absolute bottom-4px cursor-pointer flex-shrink-0 font-spoqaMedium text-16px pt-px" }>{item.text}</label>
+                <img 
+                className={`absolute top-0 object-contain 
+                    ${item.id === 0 && "w-40px h-40px mt-8px"}
+                    ${(selectedTab === item.id && item.id !== 0) ? "mt-8px w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-50px h-50px` : ""} 
+                `} 
+                src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
+                />
+                <label className={"absolute bottom-2px cursor-pointer flex-shrink-0 font-spoqaMedium text-12px pt-px" }>{item.text}</label>
             </button>
         ));
     }
 
     return (
-        <div id="container" className="flex justify-start items-start w-full h-90px">
+        <div id="container" className="flex justify-start items-start w-full h-70px">
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
         </div>
