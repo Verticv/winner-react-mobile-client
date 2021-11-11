@@ -43,26 +43,26 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
                 <GameBanner selection={isGameBanner}/>
             </div>
 
-            <div className="h-60px w-full rounded-t-lg shadow-plain bg-white fixed bottom-0 z-20">
-                <div className="flex justify-evenly pt-8px">
-                    <button className="flex flex-col items-center space-y-2px">
-                        <img className="w-24px h-24px object-contain" src={TabIcon5} alt="" />
+            <div className="h-60px w-full rounded-t-xl shadow-plain bg-white fixed bottom-0 z-20">
+                <div className="flex justify-around pt-8px items-center h-full">
+                    <button className="flex flex-col items-center space-y-3px">
+                        <img className="w-20px h-20px object-contain" src={TabIcon5} alt="" />
                         <p style={{color:"#727272"}} className="text-12px font-spoqaMedium">출석부</p>
                     </button>
-                    <button className="flex flex-col items-center space-y-2px">
-                        <img className="w-24px h-24px object-contain" src={TabIcon4} alt="" />
+                    <button className="flex flex-col items-center space-y-3px">
+                        <img className="w-20px h-20px object-contain" src={TabIcon4} alt="" />
                         <p style={{color:"#727272"}} className="text-12px font-spoqaMedium">게시판</p>
                     </button>
-                    <button className="flex flex-col items-center space-y-2px">
-                        <img className="w-24px h-24px object-contain" src={TabIcon3} alt="" />
+                    <button className="flex flex-col items-center space-y-3px">
+                        <img className="w-20px h-20px object-contain" src={TabIcon3} alt="" />
                         <p style={{color:"#727272"}} className="text-12px font-spoqaMedium">홈</p>
                     </button>
-                    <button className="flex flex-col items-center space-y-2px">
-                        <img className="w-24px h-24px object-contain" src={TabIcon2} alt="" />
+                    <button className="flex flex-col items-center space-y-3px">
+                        <img className="w-20px h-20px object-contain" src={TabIcon1} alt="" />
                         <p style={{color:"#727272"}} className="text-12px font-spoqaMedium">문의</p>
                     </button>
-                    <button className="flex flex-col items-center space-y-2px">
-                        <img className="w-24px h-24px object-contain" src={TabIcon1} alt="" />
+                    <button className="flex flex-col items-center space-y-3px">
+                        <img className="w-20px h-20px object-contain" src={TabIcon2} alt="" />
                         <p style={{color:"#727272"}} className="text-12px font-spoqaMedium">마이인포</p>
                     </button>
 

@@ -38,27 +38,26 @@ const Carousel = () => {
         }
     };
 
-    // Tailwind styles. Most importantly notice position absolute, this will sit relative to the carousel's outer div.
-    const arrowStyle = "absolute text-white z-10 bg-black h-40px w-40px rounded-sm opacity-50 flex items-center justify-center hover:opacity-75"
+
 
     // Let's create dynamic buttons. It can be either left or right. Using
     // isLeft boolean we can determine which side we'll be rendering our button
     // as well as change its position and content.
 
     const leftArrow = (
-        <img className="h-16px w-16px object-contain opacity-50" src={LeftArrow} alt="arrow"/>
+        <img className="h-12px w-12px object-contain opacity-50" src={LeftArrow} alt="arrow"/>
 
     )
 
     const rightArrow = (
-        <img className="h-16px w-16px object-contain opacity-50" src={RightArrow} alt="arrow"/>
+        <img className="h-12px w-12px object-contain opacity-50" src={RightArrow} alt="arrow"/>
     )
 
     const sliderControl = isLeft => (
         <button
             type="button"
             onClick={isLeft ? previousImage : nextImage}
-            className={`${arrowStyle} ${isLeft ? 'left-10px' : 'right-10px'}`}
+            className={`absolute text-white z-10 bg-black h-28px w-28px rounded-sm opacity-50 flex items-center justify-center hover:opacity-75 ${isLeft ? 'left-10px' : 'right-10px'}`}
         >
             {isLeft ? leftArrow : rightArrow}
         </button>
@@ -67,7 +66,7 @@ const Carousel = () => {
     const positionIndicator = (
         <div className="absolute text-white text-2xl z-10 w-full rounded-sm flex items-center justify-center bottom-10px left-0 space-x-2">
             {images.map((img, i) => (
-                <button key={i} className="w-15px h-15px bg-gray-cccccc rounded-full p-3px" onClick={() => setCurrentImage(i)}>
+                <button key={i} className="w-10px h-10px bg-gray-cccccc rounded-full p-px" onClick={() => setCurrentImage(i)}>
                     {currentImage === i && (
                         <div className="w-full h-full rounded-full bg-blue-gradDark" />
                     )}

@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
-import Card from '../../images/subNavbar/card.png'
-import Slot from '../../images/subNavbar/slot.png'
-import Sport from '../../images/subNavbar/sport.png'
-import Esport from '../../images/subNavbar/esport.png'
-import Minigame from '../../images/subNavbar/minigame.png'
-import AugmentedGame from '../../images/subNavbar/augmented_game.png'
-import Fishing from '../../images/subNavbar/fishing.png'
-import Lottery from '../../images/subNavbar/lottery.png'
-import CardDefualt from '../../images/subNavbar/card_default.png'
-import SlotDefault from '../../images/subNavbar/slot_default.png'
-import SportDefault from '../../images/subNavbar/sport_default.png'
-import EsportDefault from '../../images/subNavbar/esport_default.png'
-import MinigameDefault from '../../images/subNavbar/minigame_default.png'
-import AugmentedGameDefault from '../../images/subNavbar/augmented_game_default.png'
-import FishingDefault from '../../images/subNavbar/fishing_default.png'
-import LotteryDefault from '../../images/subNavbar/lottery_default.png'
+import Card from '../../images/subNavbar/1_1.png'
+import Slot from '../../images/subNavbar/2_1.png'
+import Sport from '../../images/subNavbar/3_1.png'
+import Esport from '../../images/subNavbar/4_1.png'
+import Minigame from '../../images/subNavbar/5_1.png'
+import AugmentedGame from '../../images/subNavbar/6_1.png'
+import Fishing from '../../images/subNavbar/7_1.png'
+import Lottery from '../../images/subNavbar/8_1.png'
+
+import CardDefualt from '../../images/subNavbar/1.png'
+import SlotDefault from '../../images/subNavbar/2.png'
+import SportDefault from '../../images/subNavbar/3.png'
+import EsportDefault from '../../images/subNavbar/4.png'
+import MinigameDefault from '../../images/subNavbar/5.png'
+import AugmentedGameDefault from '../../images/subNavbar/6.png'
+import FishingDefault from '../../images/subNavbar/7.png'
+import LotteryDefault from '../../images/subNavbar/8.png'
+
 import AllGames from '../../images/subNavbar/all_games.png'
 import './SubNavbar.css'
 
@@ -24,14 +26,14 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
 
     const tabsArray = [
         { text: "전체", icon: AllGames, iconDefault: AllGames, id: 0, class: "", classDefault: "" },
-        { text: "라이브카지노", icon: Card, iconDefault: CardDefualt, id: 1, class: "pt-1 pl-3px", classDefault: "pt-6px -mr-2px" },
-        { text: "슬롯게임", icon: Slot, iconDefault: SlotDefault, id: 2, class: "pt-1 mr-2px", classDefault: "pt-6px" },
-        { text: "스포츠", icon: Sport, iconDefault: SportDefault, id: 3, class: "pt-1 mr-8px", classDefault: "pt-6px" },
-        { text: "e-스포츠", icon: Esport, iconDefault: EsportDefault, id: 4, class: "pt-1 mr-6px", classDefault: "pt-6px" },
-        { text: "미니게임", icon: Minigame, iconDefault: MinigameDefault, id: 5, class: "pt-1 mr-6px", classDefault: "pt-6px" },
-        { text: "키론가상게임", icon: AugmentedGame, iconDefault: AugmentedGameDefault, id: 6, class: "pt-1 mr-6px", classDefault: "pt-6px" },
-        { text: "피싱게임", icon: Fishing, iconDefault: FishingDefault, id: 7, class: "pt-1 mr-2px", classDefault: "pt-6px" },
-        { text: "로터리게임", icon: Lottery, iconDefault: LotteryDefault, id: 8, class: "pt-1 mr-6px", classDefault: "pt-6px" }
+        { text: "라이브카지노", icon: Card, iconDefault: CardDefualt, id: 1, class: "pt-1 pl-3px", classDefault: "pt-4px -mr-2px" },
+        { text: "슬롯게임", icon: Slot, iconDefault: SlotDefault, id: 2, class: "pt-1 mr-2px", classDefault: "pt-4px" },
+        { text: "스포츠", icon: Sport, iconDefault: SportDefault, id: 3, class: "pt-1 mr-8px", classDefault: "pt-4px" },
+        { text: "e-스포츠", icon: Esport, iconDefault: EsportDefault, id: 4, class: "pt-1 mr-6px", classDefault: "pt-4px" },
+        { text: "미니게임", icon: Minigame, iconDefault: MinigameDefault, id: 5, class: "pt-1 mr-6px", classDefault: "pt-4px" },
+        { text: "키론가상게임", icon: AugmentedGame, iconDefault: AugmentedGameDefault, id: 6, class: "pt-1 mr-6px", classDefault: "pt-4px" },
+        { text: "피싱게임", icon: Fishing, iconDefault: FishingDefault, id: 7, class: "pt-1 mr-2px", classDefault: "pt-4px" },
+        { text: "로터리게임", icon: Lottery, iconDefault: LotteryDefault, id: 8, class: "pt-1 mr-6px", classDefault: "pt-4px" }
     ];
 
     function onClickHandle(id) {
@@ -49,7 +51,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                     ? "text-white py-4 duration-150" 
                     : " space-x-2px text-gray-subNavbar duration-300 hover:bg-gray-d8dfea"
                 } 
-                flex flex-col justify-start flex-shrink-0 items-center w-80px h-70px rounded-md z-20 transition ease-in-out tracking-tight relative`} 
+                flex flex-col justify-start flex-shrink-0 items-center w-80px h-64px rounded-md z-20 transition ease-in-out tracking-tight relative`} 
                 onClick={() => {
                     setSelectedTab(item.id)
                     setGameBanner(item.id)
@@ -57,19 +59,19 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 }}
             >
                 <img 
-                className={`absolute top-0 object-contain 
-                    ${item.id === 0 && "w-40px h-40px mt-8px"}
-                    ${(selectedTab === item.id && item.id !== 0) ? "mt-8px w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-50px h-50px` : ""} 
-                `} 
-                src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
+                    className={`absolute top-0 object-contain 
+                        ${item.id === 0 && "w-40px h-40px mt-6px"}
+                        ${(selectedTab === item.id && item.id !== 0) ? "mt-6px w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px` : ""} 
+                    `} 
+                    src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
                 />
-                <label className={"absolute bottom-2px cursor-pointer flex-shrink-0 font-spoqaMedium text-12px pt-px" }>{item.text}</label>
+                <label className={"absolute bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-12px pt-px pr-2px" }>{item.text}</label>
             </button>
         ));
     }
 
     return (
-        <div id="container" className="flex justify-start items-start w-full h-70px">
+        <div id="container" className="flex justify-start items-start w-full h-64px">
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
         </div>
