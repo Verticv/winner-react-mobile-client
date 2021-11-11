@@ -61,9 +61,9 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 <img 
                     className={`absolute top-0 object-contain 
                         ${item.id === 0 && "w-40px h-40px mt-6px"}
-                        ${(selectedTab === item.id && item.id !== 0) ? "mt-6px w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px` : ""} 
+                        ${(selectedTab === item.id && item.id !== 0) ? "mt-6px w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px -mt-2px` : ""} 
                     `} 
-                    src={selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
+                    src={item.id === 0 ? item.icon : selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
                 />
                 <label className={"absolute bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-12px pt-px pr-2px" }>{item.text}</label>
             </button>
