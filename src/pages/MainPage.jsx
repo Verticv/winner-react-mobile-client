@@ -39,7 +39,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
             
             
 
-            <div className="flex w-screen mt-16px h-full pb-24">
+            <div className="flex w-screen mt-10px h-full pb-24">
                 <GameBanner selection={isGameBanner}/>
             </div>
 

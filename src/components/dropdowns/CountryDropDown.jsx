@@ -22,7 +22,7 @@ const CountryDropDown = ({setCountry, country}) => {
                     : (hoveredTab === item.id)
                     ? "bg-gray-f2f2f2"
                     : "bg-white"
-                } flex w-full items-center p-1 h-32px rounded-full`} 
+                } flex w-full items-center p-2px h-28px rounded-full`} 
                 onMouseOver={() => {setHoveredTab(item.id)}}
                 onMouseLeave={() => setHoveredTab(null)}
                 onClick={
@@ -42,7 +42,7 @@ const CountryDropDown = ({setCountry, country}) => {
     }
 
     return (
-        <div style={{borderRadius:"16px"}} className="relative flex flex-col items-center bg-white shadow-plain rounded-16px bg-white w-74px p-2px -mr-3px -mt-26px">
+        <div style={{borderRadius:"16px", width: "70px"}} className="relative flex flex-col items-center bg-white shadow-plain rounded-16px bg-white p-2px -mr-3px -mt-26px">
             <div class="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
                 <div class="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>

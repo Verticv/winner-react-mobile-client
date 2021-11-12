@@ -15,7 +15,7 @@ const EsportsBanner = () => {
                 className={`${cardClass} flex items-center`} 
             >
                 <img className="z-20 object-contain" src={item.background} alt="background" />
-                <div className={`shadow-plain3 absolute z-20 right-8px w-64px h-24px rounded-full flex items-center justify-center text-white font-spoqaBold text-12px pt-px ${item.color}`}>{item.btnText}</div>
+                <div style={{fontSize:"10px"}} className={`shadow-sm absolute z-20 right-8px w-64px h-24px rounded-full flex items-center justify-center text-white font-spoqaBold text-12px pt-px ${item.color}`}>{item.btnText}</div>
             </div>
         ));
     }

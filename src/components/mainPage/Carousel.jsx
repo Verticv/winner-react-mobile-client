@@ -64,9 +64,9 @@ const Carousel = () => {
     );
 
     const positionIndicator = (
-        <div className="absolute text-white text-2xl z-10 w-full rounded-sm flex items-center justify-center bottom-10px left-0 space-x-2">
+        <div className="absolute text-white text-2xl z-10 w-full rounded-sm flex items-center justify-center bottom-10px left-0 space-x-1">
             {images.map((img, i) => (
-                <button key={i} className="w-10px h-10px bg-gray-cccccc rounded-full p-px" onClick={() => setCurrentImage(i)}>
+                <button key={i} className="w-8px h-8px bg-gray-cccccc rounded-full p-px" onClick={() => setCurrentImage(i)}>
                     {currentImage === i && (
                         <div className="w-full h-full rounded-full bg-blue-gradDark" />
                     )}

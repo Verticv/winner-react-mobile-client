@@ -20,28 +20,28 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const DropdownArrow = ({isOpen, isWhite}) => (
         <>
         {isWhite ? (
-            <img src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
+            <img className="-mr-4px w-5px object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
         ) : (
-            <img src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
+            <img className="w-5px object-contain" src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
         )}
         </>
     )
 
     const CountryButton = (
-        <div className="flex items-center w-72px h-28px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full space-x-6px shadow-inner p-3px shadow-plain2 hover:opacity-75">
-            <div className="h-22px w-22px bg-white rounded-full flex items-center justify-center">
+        <div className="flex items-center w-66px h-26px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2px shadow-plain2 hover:opacity-75">
+            <div className="mr-6px h-22px w-22px bg-white rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label className="font-spoqaBold text-white cursor-pointer pt-px text-12px">{country}</label>
+            <label className="mr-8px font-spoqaBold text-white cursor-pointer pt-px text-12px">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )
 
     return (
         <div className="w-full z-50">
-            <header className="relative flex items-center justify-between h-44px px-10px shadow-plain bg-white flex flex-shrink-0">
+            <header className="relative flex items-center justify-between h-42px px-10px shadow-plain bg-white flex flex-shrink-0">
                 <div className="flex items-center flex-shrink-0">
-                    <img className=" object-contain h-24px mb-2 mr-10px cursor-pointer pt-5px" src={Logo} alt="logo" onClick={() => history.push('/')} />
+                    <img className=" object-contain h-28px mb-2 mr-10px cursor-pointer pt-5px" src={Logo} alt="logo" onClick={() => history.push('/')} />
                 </div>
                 
                 <div className="flex space-x-20px items-center flex-shrink-0">
