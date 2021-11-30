@@ -38,7 +38,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
 
     function onClickHandle(id) {
         var circle = document.getElementsByClassName("highlight")[0]
-        circle.style.transform = "translate3d(" + (id * 80) + "px, 0px, 0)"
+        circle.style.transform = "translate3d(" + (id * 8) + "rem, 0px, 0)"
     }
 
 
@@ -48,10 +48,10 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 key={item.id} 
                 className={`
                 ${selectedTab === item.id 
-                    ? "text-white py-4 duration-150" 
+                    ? "text-white duration-150" 
                     : " space-x-2px text-gray-subNavbar duration-300 hover:bg-gray-d8dfea"
                 } 
-                flex flex-col justify-start flex-shrink-0 items-center w-80px h-64px rounded-md z-20 transition ease-in-out tracking-tight relative`} 
+                flex flex-col justify-start flex-shrink-0 items-center w-32 h-28 rounded-md z-20 transition ease-in-out tracking-tight relative`} 
                 onClick={() => {
                     setSelectedTab(item.id)
                     setGameBanner(item.id)
@@ -59,19 +59,19 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 }}
             >
                 <img 
-                    className={`absolute top-0 object-contain 
-                        ${item.id === 0 && "w-40px h-40px mt-6px"}
-                        ${(selectedTab === item.id && item.id !== 0) ? "mt-6px w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px -mt-2px` : ""} 
+                    className={`absolute top-0 object-contain w-16 h-16 ml-2 mb-2
+                        ${item.id === 0 && "w-40px h-40px pt-5px"}
+                        ${(selectedTab === item.id && item.id !== 0) ? "w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px -mt-2px` : ""} 
                     `} 
                     src={item.id === 0 ? item.icon : selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
                 />
-                <label className={"absolute bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-12px pt-px pr-2px" }>{item.text}</label>
+                <label className={"absolute mb-3.5  bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-xl pt-px pr-2px" }>{item.text}</label>
             </button>
         ));
     }
 
     return (
-        <div id="container" className="flex justify-start items-start w-full h-64px">
+        <div id="container" className="flex justify-start items-start w-full">
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
         </div>

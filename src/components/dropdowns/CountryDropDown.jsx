@@ -35,14 +35,14 @@ const CountryDropDown = ({setCountry, country}) => {
                 </div>
                 <div className="w-full flex justify-center mr-3">                
                     <label 
-                    className={`${(selectedTab === item.id) ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-12px cursor-pointer`}>{item.text}</label>
+                    className={`${(selectedTab === item.id) ? "text-white" : "text-gray-subNavbar"} font-spoqaBold text-xl cursor-pointer`}>{item.text}</label>
                 </div>
             </button>
         ));
     }
 
     return (
-        <div style={{borderRadius:"16px", width: "70px"}} className="relative flex flex-col items-center bg-white shadow-plain rounded-16px bg-white p-2px -mr-3px -mt-26px">
+        <div style={{borderRadius:"16px"}} className="w-28 relative flex flex-col items-center bg-white shadow-plain rounded-16px bg-white p-2px -mr-3px -mt-26px">
             <div class="absolute top-0 -mt-2 ml-2 w-4 overflow-hidden inline-block">
                 <div class="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>

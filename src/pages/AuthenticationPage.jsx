@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import MobileBg from '../images/mobile_bg.png'
-import MobileBg1 from '../images/mobile_bg1.png'
 import DownArrowIcon from '../images/down_arrow_icon.png'
 import KakaoLogo from '../images/footer/kakao.png'
 import TelegramLogo from '../images/footer/telegram.png'
@@ -24,10 +23,10 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
         <div
             onFocus={() => setSelectedInput(4)}
             onBlur={(e) => setSelectedInput(false)}
-            className="relative cursor-pointer flex w-16 text-gray-r393e41 font-spoqaMedium text-12px outline-none h-full justify-start items-center tracking-minus05" 
+            className="relative cursor-pointer flex w-full text-gray-r393e41 font-spoqaMedium text-2xl outline-none h-full justify-start items-center tracking-minus05" 
         >
             <label className="w-full group-hover:text-black cursor-pointer text-left">{selectedCarrier}</label>
-            <img className="absolute w-10px h-10px object-contain right-16px" src={DownArrowIcon} alt="arrow" /> 
+            <img style={{marginRight: '20%'}} className="w-10px h-10px object-contain" src={DownArrowIcon} alt="arrow" /> 
         </div>
     )
 
@@ -35,10 +34,10 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
         <div
             onFocus={() => setSelectedInput(4)}
             onBlur={(e) => setSelectedInput(false)}
-            className="relative flex cursor-pointer group w-32 text-gray-r393e41 font-spoqaMedium text-12px outline-none h-full justify-between items-center tracking-minus05" 
+            className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-2xl outline-none h-full justify-between items-center tracking-minus05" 
         >
             <label className="group-hover:text-black cursor-pointer">{selectedBank}</label>
-            <img className="absolute w-10px h-10px object-contain right-16px" src={DownArrowIcon} alt="arrow" /> 
+            <img style={{marginRight: '20%'}} className="w-10px h-10px object-contain" src={DownArrowIcon} alt="arrow" /> 
         </div>
     )
 
@@ -239,22 +238,22 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     )
 
     return (
-        <div className="relative w-full h-screen overflow-hidden">
+        <div className="w-full">
 
             {toSignup === false ? (
                 <>
                     <img src={MobileBg} alt="" />
-                    <div className="absolute bg-white w-full z-20 bottom-0 px-50px">
+                    <div className="bg-white w-full z-20 px-16">
 
                         {/* BREAK */}
                         <div className="w-full h-full flex flex-col items-center justify-end pb-10px">
 
-                            <div className="w-full font-spoqaBold pb-20px text-18px">환영합니다</div>
+                            <div className="w-full mb-14 mt-6 spoqaMedium text-4xl">환영합니다</div>
 
-                            <div className="w-full space-y-24px pb-40px">
+                            <div className="w-full space-y-30px pb-20">
                                 <div className="w-full">
                                     <input 
-                                        className="w-full h-5 text-12px outline-none font-spoqaBold tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
+                                        className="placeholder-gray w-full h-12 text-2xl outline-none spoqaMedium tracking-tight placeholder-gray-bebebe pb-6px tracking-mimus05" 
                                         placeholder={"아이디"} 
                                         onFocus={(e) => {
                                             e.target.placeholder = ""
@@ -269,7 +268,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 </div>
                                 <div className="w-full">
                                     <input 
-                                        className="w-full h-5 text-12px outline-none font-spoqaBold tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
+                                        className="placeholder-gray w-full h-12 text-2xl outline-none spoqaMedium tracking-tight placeholder-gray-bebebe pb-6px tracking-mimus05" 
                                         placeholder={"비밀번호"} 
                                         type="password"
                                         onFocus={(e) => {
@@ -285,21 +284,21 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 </div>
                             </div>
 
-                            <div className="w-full space-y-14px pb-40px">
+                            <div className="w-full space-y-18px pb-40px">
                                 <button 
-                                    className="w-full h-54px rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-14px font-spoqaMedium text-white hover:opacity-75 p-3px"
+                                    className="w-full h-24 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-2xl font-spoqaMedium text-white hover:opacity-75 p-3px"
                                     onClick={() => 
                                         {
                                             setAuthenticated(true)
                                             history.push('/main')
                                         }}
                                 >
-                                    <div style={{color:"#1873cf"}} className="w-full h-full bg-black rounded-full bg-white flex items-center justify-center font-spoqaBold pt-2px">
+                                    <div style={{color:"#1873cf"}} className="w-full h-full rounded-full bg-white text-2xl flex items-center justify-center spoqaMedium pt-2px">
                                         로그인
                                     </div>
                                 </button>
                                 <button 
-                                    className="w-full h-54px rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-14px  font-spoqaBold text-white hover:opacity-75 pt-2px"
+                                    className="w-full h-24 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-2xl  spoqaMedium text-white hover:opacity-75 pt-2px"
                                     onClick={() => setSignup(true)}
                                 >
                                     회원가입
@@ -310,21 +309,21 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                     </div>
                 </>
             ) : (
-                <>
-                    <img className="absolute top-0 w-screen h-screen" src={MobileBg1} alt="" />
+                <div className='bg-register-background bg-repeat-round'>
+                    {/* <img className="absolute top-0 w-screen h-screen" src={MobileBg1} alt="" /> */}
 
-                    <div className="relative w-full h-full z-20">
+                    <div className="w-full h-full z-20">
 
                     {/* BREAK */}
-                    <div className="w-full mt-60px px-50px flex flex-col">
+                    <div className="w-full px-20 flex flex-col">
 
-                        <label className="text-gray-r393e41 text-xl text-18px font-spoqaBold tracking-minus05 mb-36px">회원가입</label>
+                        <label className="text-gray-r393e41 spoqaMedium tracking-minus05 w-full mb-20 mt-32 text-4xl">회원가입</label>
 
                         {/* BREAK */}
-                        <div className="w-full flex flex-col space-y-4px space-x-10px mb-6px">
+                        <div className="w-full flex flex-col mb-5 space-y-4px space-x-10px">
                             <div className={`${selectedInput === 0 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-12px outline-none" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none" 
                                     onFocus={(e) => setSelectedInput(0)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     placeholder="아이디"
@@ -333,10 +332,10 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                             </div>
                         </div>
                         {/* BREAK */}
-                        <div className="w-full flex flex-col space-y-4px mt-2px pb-6px">
+                        <div className="w-full flex flex-col space-y-4px mb-5 mt-2px pb-6px">
                             <div className={`${selectedInput === 1 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-12px outline-none" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none" 
                                     onFocus={(e) => setSelectedInput(1)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -344,13 +343,13 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 />
                                 <div className={`${selectedInput === 1 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                             </div>
-                            <span style={{color:"#ff3a3a", fontSize:"10px"}} className="text-xs font-spoqaMedium text-gray-bebebe tracking-minus05">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요. (특수문자 사용불가)</span>
+                            <span style={{color:"#ff3a3a"}} className="text-xl font-spoqaMedium text-gray-bebebe tracking-minus05">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요. (특수문자 사용불가)</span>
                         </div>
                         {/* BREAK */}
-                        <div className="w-full flex flex-col space-y-8px mt-2px pb-6px">
+                        <div className="w-full flex flex-col space-y-8px mb-5 mt-2px pb-6px">
                             <div className={`${selectedInput === 2 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-12px outline-none" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none" 
                                     onFocus={(e) => setSelectedInput(2)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -360,10 +359,10 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                             </div>
                         </div>
                         {/* BREAK */}
-                        <div className="w-full flex flex-col space-y-8px mt-2px pb-6px">
+                        <div className="w-full flex flex-col space-y-8px mb-5 mt-2px pb-6px">
                             <div className={`${selectedInput === 3 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-12px outline-none" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none" 
                                     onFocus={(e) => setSelectedInput(3)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     placeholder="닉네임"
@@ -372,16 +371,16 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                             </div>
                         </div>
                         {/* BREAK */}
-                        <div className="flex space-x-10px w-full">
-                            <div className="w-1/4 flex-shrink-0 space-y-4px mt-7px">
-                                <DropDownControls buttonChild={carrierButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
+                        <div className="flex space-x-10px mb-5 w-full">
+                            <div className="w-1/4 flex-shrink-0 space-y-4px h-12">
+                                <DropDownControls className='h-12' buttonChild={carrierButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
                                     {carrierDropdown}
                                 </DropDownControls>
-                                <div className={`${selectedInput === 4 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
+                                <div className={`${selectedInput === 4 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px mt-5px"} w-full`} />
                             </div>
                             <div className={`${selectedInput === 5 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-12px outline-none placeholder-gray-bebebe"
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none placeholder-gray-bebebe"
                                     placeholder="휴대폰번호(숫자만 입력)"
                                     onFocus={(e) => {
                                         e.target.placeholder = ""
@@ -396,10 +395,10 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                             </div>
                         </div>
                         {/* BREAK */}
-                        <div className="flex space-x-10px w-full mt-6px">
+                        <div className="flex space-x-10px w-full mb-5">
                             <div className={`${selectedInput === 6 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="w-full text-gray-r393e41 font-spoqaMedium text-12px outline-none placeholder-gray-bebebe" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none placeholder-gray-bebebe" 
                                     placeholder="가입코드"
                                     onFocus={(e) => {
                                         e.target.placeholder = ""
@@ -414,18 +413,18 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                             </div>
                         </div>
                         {/* BREAK */}
-                        <div className="w-full flex flex-col mt-12px">
+                        <div className="w-full flex flex-col mb-5">
                             <div className="flex flex-col space-y-2">
                                 <div className="flex space-x-10px w-full">
-                                    <div className="w-1/2 flex-shrink-0 space-y-4px mt-7px">
-                                        <DropDownControls buttonChild={bankButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen} >
+                                    <div className="w-1/2 flex-shrink-0 space-y-4px h-12">
+                                        <DropDownControls className='h-12' buttonChild={bankButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen} >
                                             {bankDropdown}
                                         </DropDownControls>
-                                        <div className={`${selectedInput === 7 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
+                                        <div className={`${selectedInput === 7 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full mt-5px`} />
                                     </div>
                                     <div className={`${selectedInput === 8 ? "space-y-4px" : "space-y-5px"} w-1/2 `}>
                                         <input 
-                                            className="w-full text-gray-r393e41 font-spoqaMedium text-12px outline-none placeholder-gray-bebebe" 
+                                            className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none placeholder-gray-bebebe" 
                                             placeholder="예금주"
                                             onFocus={(e) => {
                                                 e.target.placeholder = ""
@@ -441,7 +440,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 </div>
                                 <div className="w-full space-y-2">
                                     <input 
-                                        className="w-full text-gray-r393e41 font-spoqaMedium text-12px outline-none placeholder-gray-bebebe" 
+                                        className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none placeholder-gray-bebebe" 
                                         placeholder="계좌번호 (숫자만 입력)"
                                         onFocus={(e) => {
                                             e.target.placeholder = ""
@@ -460,27 +459,27 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                     {/* BREAK */}
                     <div className={`w-full px-50px flex flex-col items-center ${selectedInput === 9 ? "mt-19px" : "mt-20px"}`}>
                         <button 
-                            className="w-full h-54px rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-14px  font-spoqaBold text-white hover:opacity-75 pt-2px"
+                            className="mb-16 w-full h-24 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-2xl  spoqaMedium text-white hover:opacity-75 pt-2px"
                             onClick={() => history.push("/main")}
                         >
                             회원가입
                         </button>
 
-                        <div className="flex h-80px w-full justify-between items-center mt-10px">
+                        <div className="flex w-full justify-between items-center mt-10px mb-24 h-14">
                             <div className="flex items-center space-x-2px pr-10px">
-                                <img className="w-42px h-42px object-contain" src={KakaoLogo} alt="kakao-icon" />
-                                <span style={{fontSize:"10px"}} className="text-brown-r351a1e font-robotoBold text-12px mb-6px tracking-wide">test1234</span>
+                                <img className="w-20 object-contain" src={KakaoLogo} alt="kakao-icon" />
+                                <span className="text-brown-r351a1e spoqaMedium text-xl md:text-3xl leading-snug mb-6px tracking-wide">test1234</span>
                             </div>
-                            <div className="h-7 w-px bg-black" />
+                            <div className="h-full w-px bg-black" />
                             <div className="flex items-center space-x-2px">
-                                <img className="w-42px h-42px object-contain" src={TelegramLogo} alt="kakao-icon" />
-                                <span  style={{fontSize:"10px"}} className="text-blue-r2aa1d5 font-robotoBold text-14px mb-6px tracking-wide">test1234</span>
+                                <img className="w-20 object-contain" src={TelegramLogo} alt="kakao-icon" />
+                                <span className="text-blue-r2aa1d5 spoqaMedium text-xl md:text-3xl leading-snug mb-6px tracking-wide">test1234</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                </>
+                </div>
             )}
 
             

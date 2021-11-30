@@ -1,6 +1,7 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
+  mode: 'jit',
   theme: {
     extend: {
       spacing: {
@@ -499,11 +500,18 @@ module.exports = {
         '3px': '3px',
         '4px': '4px',
         '20px': '20px',
-        '26px': '26px'
+        '26px': '26px',
+        '35px': '35px'
       },
       letterSpacing: {
         digital: '.04em',
         minus05: '-.005em'
+       },
+       backgroundImage: {
+        'register-background': "url('/src/images/mobile_bg1.png')",
+       },
+       placeholderColor: {
+         'gray': '#bbbbbb',
        }
     },
   },

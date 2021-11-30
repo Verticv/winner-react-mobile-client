@@ -20,34 +20,34 @@ const Navbar = ({ isAuthenticated, setAuth }) => {
     const DropdownArrow = ({isOpen, isWhite}) => (
         <>
         {isWhite ? (
-            <img className="-mr-4px w-5px object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
+            <img className="-mr-4px w-2.5 object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
         ) : (
-            <img className="w-5px object-contain" src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
+            <img className="w-2.5 object-contain" src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
         )}
         </>
     )
 
     const CountryButton = (
-        <div className="flex items-center w-66px h-26px bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2px shadow-plain2 hover:opacity-75">
-            <div className="mr-6px h-22px w-22px bg-white rounded-full flex items-center justify-center">
+        <div className="flex items-center w-28 h-10 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2px shadow-plain2 hover:opacity-75">
+            <div className="mr-3.5 h-22px w-8 bg-white rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label className="mr-8px font-spoqaBold text-white cursor-pointer pt-px text-12px">{country}</label>
+            <label className="mr-8px font-spoqaBold text-white cursor-pointer pt-px text-xl">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )
 
     return (
         <div className="w-full z-50">
-            <header className="relative flex items-center justify-between h-42px px-10px shadow-plain bg-white flex flex-shrink-0">
+            <header className="relative flex items-center justify-between h-16 px-4 shadow-plain bg-white flex flex-shrink-0">
                 <div className="flex items-center flex-shrink-0">
-                    <img className=" object-contain h-28px mb-2 mr-10px cursor-pointer pt-5px" src={Logo} alt="logo" onClick={() => history.push('/')} />
+                    <img className=" object-contain w-40 mb-2 mr-10px cursor-pointer pt-5px" src={Logo} alt="logo" onClick={() => history.push('/')} />
                 </div>
                 
                 <div className="flex space-x-20px items-center flex-shrink-0">
                     {/* BREAK */}
-                    <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
-                        <div className="mt-4"><CountryDropDown setCountry={setCountry} country={country} /></div>
+                    <DropDownControls dropDownClasses="w-28 sssssssssssss" buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
+                        <div className="mt-10"><CountryDropDown setCountry={setCountry} country={country} /></div>
                     </DropDownControls>
                 </div>
             </header>
