@@ -42,7 +42,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     )
 
     const carrierDropdown = (
-        <div className="flex flex-col items-center justify-center w-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-16px">
+        <div className="flex flex-col items-center justify-center w-0 md:w-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-16px">
             <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("SKT")
                 setDropdownOpen(false)
