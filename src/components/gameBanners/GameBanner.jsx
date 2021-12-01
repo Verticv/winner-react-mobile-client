@@ -10,7 +10,7 @@ import AllGamesBanner from './AllGamesBanner'
 
 const GameBanner = ({selection}) => {
     return (
-        <div className="w-screen flex flex-col h-full">
+        <div className="flex flex-col h-full">
 
             {selection === 0 ? (
                 <AllGamesBanner />
