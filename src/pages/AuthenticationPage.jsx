@@ -23,7 +23,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
         <div
             onFocus={() => setSelectedInput(4)}
             onBlur={(e) => setSelectedInput(false)}
-            className="relative cursor-pointer flex w-full text-gray-r393e41 font-spoqaMedium text-2xl outline-none h-full justify-start items-center tracking-minus05" 
+            className="relative cursor-pointer flex w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-start items-center tracking-minus05" 
         >
             <label className="w-full group-hover:text-black cursor-pointer text-left">{selectedCarrier}</label>
             <img style={{marginRight: '20%'}} className="w-10px h-10px object-contain" src={DownArrowIcon} alt="arrow" /> 
@@ -34,7 +34,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
         <div
             onFocus={() => setSelectedInput(4)}
             onBlur={(e) => setSelectedInput(false)}
-            className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-2xl outline-none h-full justify-between items-center tracking-minus05" 
+            className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-between items-center tracking-minus05" 
         >
             <label className="group-hover:text-black cursor-pointer">{selectedBank}</label>
             <img style={{marginRight: '20%'}} className="w-10px h-10px object-contain" src={DownArrowIcon} alt="arrow" /> 
@@ -42,7 +42,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     )
 
     const carrierDropdown = (
-        <div className="flex flex-col items-center justify-center w-0 md:w-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-16px">
+        <div className="flex flex-col items-center justify-center w-0 md:w-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-4xl">
             <button className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("SKT")
                 setDropdownOpen(false)
@@ -65,7 +65,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     )
 
     const bankDropdown = (
-        <div className="flex flex-col w-170px h-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-16px overflow-y-scroll overflow-x-hidden">
+        <div className="flex flex-col w-170px h-170px py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-4xl overflow-y-scroll overflow-x-hidden">
             <button className={dropDownCellClass} onClick={() => {
                 setSelectedBank("KEB하나은행")
                 setDropdownOpen(false)
@@ -243,17 +243,17 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
             {toSignup === false ? (
                 <>
                     <img src={MobileBg} alt="" />
-                    <div className="bg-white w-full z-20 px-16">
+                    <div className="bg-white w-full z-20 px-44">
 
                         {/* BREAK */}
                         <div className="w-full h-full flex flex-col items-center justify-end pb-10px">
 
-                            <div className="w-full mb-14 mt-6 spoqaMedium text-4xl">환영합니다</div>
+                            <div className="w-full mb-28 mt-12 spoqaMedium text-7xl">환영합니다</div>
 
-                            <div className="w-full space-y-30px pb-20">
+                            <div className="w-full space-y-30px pb-40">
                                 <div className="w-full">
                                     <input 
-                                        className="placeholder-gray w-full h-12 text-2xl outline-none spoqaMedium tracking-tight placeholder-gray-bebebe pb-6px tracking-mimus05" 
+                                        className="placeholder-gray w-full h-24 text-5xl outline-none spoqaMedium tracking-tight placeholder-gray-bebebe pb-4 tracking-mimus05" 
                                         placeholder={"아이디"} 
                                         onFocus={(e) => {
                                             e.target.placeholder = ""
@@ -268,7 +268,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 </div>
                                 <div className="w-full">
                                     <input 
-                                        className="placeholder-gray w-full h-12 text-2xl outline-none spoqaMedium tracking-tight placeholder-gray-bebebe pb-6px tracking-mimus05" 
+                                        className="placeholder-gray w-full h-24 text-5xl outline-none spoqaMedium tracking-tight placeholder-gray-bebebe pb-4 tracking-mimus05" 
                                         placeholder={"비밀번호"} 
                                         type="password"
                                         onFocus={(e) => {
@@ -284,21 +284,21 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 </div>
                             </div>
 
-                            <div className="w-full space-y-18px pb-40px">
+                            <div className="w-full space-y-28px pb-40px">
                                 <button 
-                                    className="w-full h-24 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-2xl font-spoqaMedium text-white hover:opacity-75 p-3px"
+                                    className="w-full h-48 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-2xl font-spoqaMedium text-white hover:opacity-75 p-3px"
                                     onClick={() => 
                                         {
                                             setAuthenticated(true)
                                             history.push('/main')
                                         }}
                                 >
-                                    <div style={{color:"#1873cf"}} className="w-full h-full rounded-full bg-white text-2xl flex items-center justify-center spoqaMedium pt-2px">
+                                    <div style={{color:"#1873cf"}} className="w-full h-full rounded-full bg-white text-5xl flex items-center justify-center spoqaMedium pt-2px">
                                         로그인
                                     </div>
                                 </button>
                                 <button 
-                                    className="w-full h-24 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-2xl  spoqaMedium text-white hover:opacity-75 pt-2px"
+                                    className="w-full h-48 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  spoqaMedium text-white hover:opacity-75 pt-2px"
                                     onClick={() => setSignup(true)}
                                 >
                                     회원가입
@@ -317,13 +317,13 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                     {/* BREAK */}
                     <div className="w-full px-20 flex flex-col">
 
-                        <label className="text-gray-r393e41 spoqaMedium tracking-minus05 w-full mb-20 mt-32 text-4xl">회원가입</label>
+                        <label className="text-gray-r393e41 spoqaMedium tracking-minus05 w-full mb-44 mt-60 text-7xl">회원가입</label>
 
                         {/* BREAK */}
                         <div className="w-full flex flex-col mb-5 space-y-4px space-x-10px">
                             <div className={`${selectedInput === 0 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none" 
                                     onFocus={(e) => setSelectedInput(0)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     placeholder="아이디"
@@ -333,9 +333,9 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                         {/* BREAK */}
                         <div className="w-full flex flex-col space-y-4px mb-5 mt-2px pb-6px">
-                            <div className={`${selectedInput === 1 ? "space-y-4px" : "space-y-5px"} w-full `}>
+                            <div className={`${selectedInput === 1 ? "space-y-4px" : "space-y-5px"} w-full mb-8 `}>
                                 <input 
-                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none" 
                                     onFocus={(e) => setSelectedInput(1)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -343,13 +343,13 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 />
                                 <div className={`${selectedInput === 1 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full`} />
                             </div>
-                            <span style={{color:"#ff3a3a"}} className="text-xl font-spoqaMedium text-gray-bebebe tracking-minus05">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요. (특수문자 사용불가)</span>
+                            <span style={{color:"#ff3a3a"}} className="text-5xl font-spoqaMedium text-gray-bebebe tracking-minus05">영문 및 숫자를 1자 이상 반드시 포함하여 6~16자 내외로 입력해주세요. (특수문자 사용불가)</span>
                         </div>
                         {/* BREAK */}
                         <div className="w-full flex flex-col space-y-8px mb-5 mt-2px pb-6px">
                             <div className={`${selectedInput === 2 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none" 
                                     onFocus={(e) => setSelectedInput(2)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -362,7 +362,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         <div className="w-full flex flex-col space-y-8px mb-5 mt-2px pb-6px">
                             <div className={`${selectedInput === 3 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none" 
                                     onFocus={(e) => setSelectedInput(3)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     placeholder="닉네임"
@@ -372,15 +372,15 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                         {/* BREAK */}
                         <div className="flex space-x-10px mb-5 w-full">
-                            <div className="w-1/4 flex-shrink-0 space-y-4px h-12">
-                                <DropDownControls className='h-12' buttonChild={carrierButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
+                            <div className="w-1/4 flex-shrink-0 space-y-4px h-24">
+                                <DropDownControls className='h-24' buttonChild={carrierButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
                                     {carrierDropdown}
                                 </DropDownControls>
                                 <div className={`${selectedInput === 4 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px mt-5px"} w-full`} />
                             </div>
                             <div className={`${selectedInput === 5 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none placeholder-gray-bebebe"
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe"
                                     placeholder="휴대폰번호(숫자만 입력)"
                                     onFocus={(e) => {
                                         e.target.placeholder = ""
@@ -398,7 +398,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         <div className="flex space-x-10px w-full mb-5">
                             <div className={`${selectedInput === 6 ? "space-y-4px" : "space-y-5px"} w-full `}>
                                 <input 
-                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none placeholder-gray-bebebe" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe" 
                                     placeholder="가입코드"
                                     onFocus={(e) => {
                                         e.target.placeholder = ""
@@ -416,15 +416,15 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         <div className="w-full flex flex-col mb-5">
                             <div className="flex flex-col space-y-2">
                                 <div className="flex space-x-10px w-full">
-                                    <div className="w-1/2 flex-shrink-0 space-y-4px h-12">
-                                        <DropDownControls className='h-12' buttonChild={bankButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen} >
+                                    <div className="w-1/2 flex-shrink-0 space-y-4px h-24">
+                                        <DropDownControls className='h-24' buttonChild={bankButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen} >
                                             {bankDropdown}
                                         </DropDownControls>
                                         <div className={`${selectedInput === 7 ? "bg-blue-r1ca7ec h-2px" : "bg-gray-bebebe h-px"} w-full mt-5px`} />
                                     </div>
                                     <div className={`${selectedInput === 8 ? "space-y-4px" : "space-y-5px"} w-1/2 `}>
                                         <input 
-                                            className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none placeholder-gray-bebebe" 
+                                            className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe" 
                                             placeholder="예금주"
                                             onFocus={(e) => {
                                                 e.target.placeholder = ""
@@ -440,7 +440,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 </div>
                                 <div className="w-full space-y-2">
                                     <input 
-                                        className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-12 text-2xl outline-none placeholder-gray-bebebe" 
+                                        className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe" 
                                         placeholder="계좌번호 (숫자만 입력)"
                                         onFocus={(e) => {
                                             e.target.placeholder = ""
@@ -457,23 +457,23 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                     </div>
                     {/* BREAK */}
-                    <div className={`w-full px-50px flex flex-col items-center ${selectedInput === 9 ? "mt-19px" : "mt-20px"}`}>
+                    <div className={`w-full px-50px flex flex-col items-center ${selectedInput === 9 ? "mt-19px" : "mt-24"}`}>
                         <button 
-                            className="mb-16 w-full h-24 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-2xl  spoqaMedium text-white hover:opacity-75 pt-2px"
+                            className="mb-32 w-full h-48 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  spoqaMedium text-white hover:opacity-75 pt-2px"
                             onClick={() => history.push("/main")}
                         >
                             회원가입
                         </button>
 
-                        <div className="flex w-full justify-between items-center mt-10px mb-24 h-14">
+                        <div className="flex w-full justify-between items-center mt-10px mb-48 h-28">
                             <div className="flex items-center space-x-2px pr-10px">
-                                <img className="w-20 object-contain" src={KakaoLogo} alt="kakao-icon" />
-                                <span className="text-brown-r351a1e spoqaMedium text-xl md:text-3xl leading-snug mb-6px tracking-wide">test1234</span>
+                                <img className="w-40 object-contain" src={KakaoLogo} alt="kakao-icon" />
+                                <span className="text-brown-r351a1e spoqaMedium text-5xl leading-snug mb-6px tracking-wide">test1234</span>
                             </div>
-                            <div className="h-full w-px bg-black" />
+                            <div className="h-full w-2px bg-black" />
                             <div className="flex items-center space-x-2px">
-                                <img className="w-20 object-contain" src={TelegramLogo} alt="kakao-icon" />
-                                <span className="text-blue-r2aa1d5 spoqaMedium text-xl md:text-3xl leading-snug mb-6px tracking-wide">test1234</span>
+                                <img className="w-40 object-contain" src={TelegramLogo} alt="kakao-icon" />
+                                <span className="text-blue-r2aa1d5 spoqaMedium text-5xl leading-snug mb-6px tracking-wide">test1234</span>
                             </div>
                         </div>
                     </div>

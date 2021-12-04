@@ -400,7 +400,10 @@ module.exports = {
           r45484c: '#45484c',
           r9c9c9c: '#9c9c9c',
           d8dfea: '#d8dfea',
-          f2f2f2: '#f2f2f2'
+          f2f2f2: '#f2f2f2',
+          d9e6f2: '#d9e6f2',
+          f7f7f7: '#f7f7f7',
+          c1cfdb: '#c1cfdb'
         },
         red: {
           notification: '#ed2f59',
