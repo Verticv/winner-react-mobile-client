@@ -1,5 +1,6 @@
 import GameBanner from 'components/gameBanners/GameBanner'
 import React, { useState } from 'react'
+import { useHistory } from 'react-router';
 import Carousel from '../components/mainPage/Carousel'
 import Navbar from '../components/mainPage/Navbar'
 import NoticeBanner from '../components/mainPage/NoticeBanner'
@@ -12,7 +13,7 @@ import TabIcon5 from '../images/tabbar/5.png'
 
 
 const MainPage = ({isAuthenticated, setAuthenticated}) => {
-
+    const history = useHistory();
     const [isGameBanner, setGameBanner] = useState(0)
 
     return (
@@ -44,26 +45,29 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
             </div>
 
             <div style={{maxWidth: '1242px'}} className="w-full z-50 rounded-t-3xl shadow-plain bg-white fixed bottom-0">
-                <div className="flex justify-around py-6 items-center h-full">
+                <div className="flex justify-around py-12 items-center h-full">
                     <button className="flex flex-col items-center space-y-3px">
-                        <img className="w-8 pb-2.5 object-contain" src={TabIcon5} alt="" />
-                        <p style={{color:"#727272"}} className="text-xl font-spoqaMedium">출석부</p>
+                        <img className="w-16 pb-5 object-contain" src={TabIcon5} alt="" />
+                        <p style={{color:"#727272"}} className="text-5xl font-spoqaMedium">출석부</p>
                     </button>
                     <button className="flex flex-col items-center space-y-3px">
-                        <img className="w-10 pb-2.5 object-contain" src={TabIcon4} alt="" />
-                        <p style={{color:"#727272"}} className="text-xl font-spoqaMedium">게시판</p>
+                        <img className="w-20 pb-5 object-contain" src={TabIcon4} alt="" />
+                        <p style={{color:"#727272"}} className="text-5xl font-spoqaMedium">게시판</p>
                     </button>
                     <button className="flex flex-col items-center space-y-3px">
-                        <img className="w-10 pb-2.5 object-contain" src={TabIcon3} alt="" />
-                        <p className="text-blue-r009edf text-xl font-spoqaMedium">홈</p>
+                        <img className="w-20 pb-5 object-contain" src={TabIcon3} alt="" />
+                        <p className="text-blue-r009edf text-5xl font-spoqaMedium">홈</p>
                     </button>
                     <button className="flex flex-col items-center space-y-3px">
-                        <img className="w-8 pb-2.5 object-contain" src={TabIcon1} alt="" />
-                        <p style={{color:"#727272"}} className="text-xl font-spoqaMedium">문의</p>
+                        <img className="w-16 pb-5 object-contain" src={TabIcon1} alt="" />
+                        <p style={{color:"#727272"}} className="text-5xl font-spoqaMedium">문의</p>
                     </button>
-                    <button className="flex flex-col items-center space-y-3px">
-                        <img className="w-8 pb-2.5 object-contain" src={TabIcon2} alt="" />
-                        <p style={{color:"#727272"}} className="text-xl font-spoqaMedium">마이인포</p>
+                    <button 
+                        className="flex flex-col items-center space-y-3px"
+                        onClick={() => history.push('/mypage')}
+                        >
+                        <img className="w-16 pb-5 object-contain" src={TabIcon2} alt="" />
+                        <p style={{color:"#727272"}} className="text-5xl font-spoqaMedium">마이인포</p>
                     </button>
 
                 </div>

@@ -10,6 +10,7 @@ export default function DropDownControls({
     setDropdownOpen,
     className,
     dropDownClasses,
+    isProfilePage
 }) {
     const [open, setOpen] = useState(false);
     const ref = useRef();
@@ -41,7 +42,7 @@ export default function DropDownControls({
                 }}
             >{buttonChild}</button>
             {open && (
-                <div className={`absolute text-copy-primary sm:right-0 sm:top-0 sm:mt-10 fixed top-0 right-0 mt-12 justify-center z-30 ${dropDownClasses}`} ref={ref} >
+                <div className={`absolute text-copy-primary fixed mt-12 justify-center z-30 ${dropDownClasses} ${isProfilePage ? "right-0 top-32" : "right-28 top-0" }`} ref={ref} >
                     {children}
                 </div>
             )}

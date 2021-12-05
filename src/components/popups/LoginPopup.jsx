@@ -13,7 +13,7 @@ const LoginPopup = ({setAuth, setPopupOpen}) => {
             {toSignup ? (
                 <SignupPopup setAuth={setAuth} setPopupOpen={setPopupOpen}/>
             ) : (
-                <div className="relative w-630px h-513px bg-white rounded-xl shadow-popup">
+                <div style={{width: '71rem'}} className="relative h-513px bg-white rounded-xl shadow-popup">
                     <button className="absolute top-0 right-0 mt-21px mr-21px cursor-pointer z-20 hover:opacity-75" onClick={()=> setPopupOpen(false)}>
                         <img src={CloseIcon} alt="close_icon" />
                     </button>

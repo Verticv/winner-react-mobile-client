@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import MainPage from "./pages/MainPage";
 import { Switch, Route } from "react-router-dom";
@@ -19,6 +19,23 @@ import AuthenticationPage from "pages/AuthenticationPage";
 function App() {
 
     const [isAuthenticated, setAuthenticated] = useState(false)
+
+    useEffect(() => {
+        const body = document.querySelector('body');
+        const html = document.querySelector('html');
+        const bodyWidth = body.offsetWidth;
+        if (bodyWidth <= 1242) {
+            const fontSize = (bodyWidth * 16) / 1242;
+            html.style.fontSize = `${fontSize}px`;
+        }
+        window.addEventListener('resize', () => {
+            const bodyWidth = body.offsetWidth
+            if (bodyWidth <= 1242) {
+                const fontSize = (bodyWidth * 16) / 1242;
+                html.style.fontSize = `${fontSize}px`;
+              }
+        });
+    }, [])
 
     return (
         <>
