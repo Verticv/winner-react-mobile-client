@@ -67,9 +67,9 @@ const BetHistory = () => {
                 </div>
             </div>
             
-            <div className="w-full relative sticky  top-0 z-40">
+            <div className="w-full relative top-0 z-40">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff"}} className="absolute w-50px h-full right-0 z-50"></div>
-                <div style={{padding: '1.875rem', paddingRight: '0'}} className="sticky overflow-x-scroll overflow-y-hidden shadow-subNavbar">
+                <div style={{padding: '1.875rem', paddingRight: '0'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">
                     <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                         {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
@@ -96,7 +96,7 @@ const BetHistory = () => {
                     <Pagination page={page} setPage={setPage}/>   
                 </>
             </Route>
-            <Route path="/mypage/bet-history/slot-game">
+            {/*  <Route path="/mypage/bet-history/slot-game">
                 <>
                     <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
                     <Pagination page={page} setPage={setPage}/>   
@@ -133,7 +133,7 @@ const BetHistory = () => {
             </Route>
             <Route path="/mypage/bet-history/lottery-game">
                 <div className="mt-40px"/>
-            </Route>
+            </Route> */}
 
         </div>
     )

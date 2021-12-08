@@ -9,49 +9,61 @@ const SubHorizontalMenu = ({
     const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
-        return items.map(item => (
-            <button 
-                key={item.id} 
-                className={`${
-                    isState === item.id
-                    ? "bg-blue-d3f3fe" 
-                    : "bg-white"
-                } overflow-hidden h-81px w-full rounded-lg flex justify-end border border-gray-dddddd`} 
-                onClick={() => setState(item.id)}
-                onMouseOver={() => setHover(item.id)}
-                onMouseLeave={() => setHover(null)}
-            >
-                <div 
+        return items.map((item, index) => {
+            // TODO: remove this
+            let imageWidth = '5.81rem'
+            if (index === 1) {
+                imageWidth = '14rem';
+            } else if (index === 2 ) {
+                imageWidth = '14.3rem';
+            } else if (index === 3 ) {
+                imageWidth = '12.25rem';
+            }
+
+            return (
+                <button 
                     style={{
-                        background: isState === item.id 
-                        ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
-                        : isHover === item.id 
-                        ? "linear-gradient(to bottom, #daf2ff, #ecffff 60%)"
-                        : "linear-gradient(to bottom, #d0dbe4, #ffffff 60%)"
+                        borderRadius:"1.625rem",
+                        width: '20.81rem',
+                        height: '13.18rem',
+                        marginRight: '0.1875rem',
+                        padding: '0.1875rem'
                     }}
-                    className={`mt-px h-79px w-full rounded-b-md rounded-t-lg flex flex-col items-center justify-end border-b border-l border-r border-blue-d6dfe8`}
+                    key={item.id} 
+                    className={`${
+                        isState === item.id
+                        ? "bg-d0e8ff" 
+                        : "bg-white"
+                    } overflow-hidden flex items-end`} 
+                    onClick={() => setState(item.id)}
+                    onMouseOver={() => setHover(item.id)}
+                    onMouseLeave={() => setHover(null)}
                 >
-                    <img className="mt-8px ml-2px object-none h-40px" src={item.icon} alt="" />
-                    <span className={`text-13px font-spoqaMedium tracking-tight text-gray-r616161 mb-10px mt-2px ${item.custom}`} >{item.text}</span>
-                </div>
-            </button>
-        ));
+                    <div 
+                        style={{
+                            borderRadius: '1.625rem',
+                            borderWidth: '0.1875rem',
+                            background: isState === item.id 
+                            ? "#d0e8ff"
+                            : isHover === item.id 
+                            ? "#d0e8ff"
+                            : "#fff"
+                        }}
+                        className={`mt-px h-full w-full rounded-b-md rounded-t-lg flex flex-col items-center justify-center border-gray-b7b7b7`}
+                    >
+                        <img style={{ width: imageWidth}} className="mt-8px ml-2px w-10 object-contain" src={item.icon} alt="" />
+                        <span style={{marginTop: '1.68rem'}} className={`text-4xl font-spoqaMedium tracking-tight text-gray-r7b7b7b mb-10px mt-2px ${item.custom}`} >{item.text}</span>
+                    </div>
+                </button>
+            )
+        });
     }
 
     return (
-        <>
-            {itemsArray.length < 10 ? (
-                <div className="flex w-full h-80px space-x-px">
-                    <TabsList items={itemsArray} />
-                </div>
-            ) : (
-                <div className="grid grid-cols-8 gap-px w-full space-x-px">
-                    <TabsList items={itemsArray} />
-                </div>
-            )}
-            
-        </>
-    )
+      <div id="container" className="flex justify-start items-start">
+        <TabsList items={itemsArray} />
+      </div>
+    );
 }
 
 export default SubHorizontalMenu

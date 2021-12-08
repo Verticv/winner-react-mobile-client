@@ -2,22 +2,19 @@ import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import SubHorizontalMenu from './SubHorizontalMenu'
 import LiveCasinoBetHistoryTable from '../tables/LiveCasinoBetHistoryTable'
-import AllIcon from '../../../images/myPage/betHistory/all.png'
-import EvoIcon from '../../../images/myPage/betHistory/evolution.png'
-import AsiaIcon from '../../../images/myPage/betHistory/asia.png'
-import PragIcon from '../../../images/myPage/betHistory/pragmatic.png'
-import DgIcon from '../../../images/myPage/betHistory/dg.png'
-import SexyIcon from '../../../images/myPage/betHistory/sexy.png'
-import BigIcon from '../../../images/myPage/betHistory/big.png'
+import Icon1 from '../../../images/newImages/mypage/live-casino/ico-1.png'
+import Icon2 from '../../../images/newImages/mypage/live-casino/ico-2.png'
+import Icon3 from '../../../images/newImages/mypage/live-casino/ico-3.png'
+import Icon4 from '../../../images/newImages/mypage/live-casino/ico-4.png'
 
 const subTabsArray = [
-    { text: "전체", icon: AllIcon, id: 0 },
-    { text: "에볼루션", icon: EvoIcon, id: 1 },
-    { text: "아시아게이밍", icon: AsiaIcon, id: 2 },
-    { text: "프레그메틱플레이", icon: PragIcon, id: 3, custom: "mt-8px" },
-    { text: "드림게이밍", icon: DgIcon, id: 4 },
-    { text: "섹시게이밍", icon: SexyIcon, id: 5 },
-    { text: "빅게이밍", icon: BigIcon, id: 6 },
+    { text: "전체", icon: Icon1, id: 0 },
+    { text: "에볼루션", icon: Icon2, id: 1 },
+    { text: "아시아게이밍", icon: Icon3, id: 2 },
+    { text: "프레그메틱플레이", icon: Icon4, id: 3, custom: "mt-8px" },
+    { text: "드림게이밍", icon: Icon1, id: 4 },
+    { text: "섹시게이밍", icon: Icon1, id: 5 },
+    { text: "빅게이밍", icon: Icon1, id: 6 },
 ];
 
 const tableArray = [
@@ -72,8 +69,13 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
         <div className="w-full">
             {showSub === true && (
                 <>
-                    <div className="mt-10px h-88px w-full bg-gray-eff3f6 rounded-xl p-4px">
-                        <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
+                    <div className="w-full relative top-0">
+                    <div className="absolute bg-white w-50px h-full right-0 z-50"></div>
+                    <div style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                        <div className=" flex flex-shrink-0 w-full">
+                            <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
+                        </div>
+                    </div>
                     </div>
 
                     {/* <DateSearchBar isLeagueSearch={false} /> */}
