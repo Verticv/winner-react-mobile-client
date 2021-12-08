@@ -14,13 +14,13 @@ import LeftArrowIcon from '../../images/newImages/left-arrow-gray.png'
 
 import Pagination from './Pagination'
 import LiveCasinoBetHistory from './betHistory/LiveCasinoBetHistory'
-import SportsBetHistory from './betHistory/SportsBetHistory'
+// import SportsBetHistory from './betHistory/SportsBetHistory'
 import AllBetHistory from './betHistory/AllBetHistory'
-import SlotBetHistory from './betHistory/SlotBetHistory'
-import MinigameBetHistory from './betHistory/MinigameBetHistory'
-import ARGameBetHistory from './betHistory/ARGameBetHistory'
+// import SlotBetHistory from './betHistory/SlotBetHistory'
+// import MinigameBetHistory from './betHistory/MinigameBetHistory'
+// import ARGameBetHistory from './betHistory/ARGameBetHistory'
 import { Route } from 'react-router'
-import ESportsBetHistory from './betHistory/ESportsBetHistory'
+// import ESportsBetHistory from './betHistory/ESportsBetHistory'
 import Navbar from '../mainPage/Navbar'
 import NoticeBanner from '../mainPage/NoticeBanner'
 
@@ -41,9 +41,9 @@ const BetHistory = () => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [page, setPage] = useState(0)
-    const [checkedState, setCheckedState] = useState(
-        new Array(3).fill(false)
-    );
+    // const [checkedState, setCheckedState] = useState(
+    //     new Array(3).fill(false)
+    // );
  
     return (
         <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">
