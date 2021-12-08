@@ -1,8 +1,10 @@
-import { useLocation, useHistory } from "react-router-dom";
 import React, { useState } from "react";
+import { Route } from 'react-router';
+import { useLocation, useHistory } from "react-router-dom";
 import LeftMenu from "components/myPage/LeftMenu";
 import CountryDropDown from "components/dropdowns/CountryDropDown";
 import DropDownControls from "components/dropdowns/DropDownControls";
+import BetHistory from 'components/myPage/BetHistory'
 import Icon1 from "../images/newImages/mainPage/Recharge-application.png";
 import Icon2 from "../images/newImages/mainPage/Recharge-application.png";
 import Icon3 from "../images/newImages/mainPage/Application-for-currency-exchange.png";
@@ -172,7 +174,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     >
       <img
         style={{width: '4.5rem'}}
-        className="ml-2px mt-2px limit1600:object-none object-contain"
+        className="ml-2px mt-2px object-contain"
         src={InboxIcon}
         alt="inbox_icon"
       />
@@ -195,9 +197,9 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     </button>
   );
 
-  return (
-    <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
-      <div className="w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
+  const myInfo = (
+    <>
+    <div className="w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
         <div className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec mb-4">
           <span style={{fontSize: '4rem'}} className="spoqaBold font-semibold">마이 인포</span>
           <img
@@ -288,8 +290,24 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
           </div>
         </div>
       </div>
+      <div className="flex mt-7 w-full">
+            <LeftMenu
+              selectedTab={selectedTab}
+              setSelectedTab={setSelectedTab}
+              selectedSubTab={selectedSubTab}
+              setSelectedSubTab={setSelectedSubTab}
+              array={LeftMenuArray}
+            />
+        </div>
+    </>
+  )
 
+  return (
+    <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
       <div className="flex flex-col items-start limit:items-center w-full h-full">
+        <Route path="/mypage/bet-history">
+            <BetHistory />
+        </Route>
         {/* <Route path="/mypage/bet-history">
           <DirectoryComponent
             setSelectedTab={setSelectedTab}
@@ -297,7 +315,8 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             branch2="베팅내역"
             mainPath="/mypage/bet-history"
           />
-        </Route>
+        </Route> */}
+        {/* 
         <Route path="/mypage/transaction/charge-history">
           <DirectoryComponent
             setSelectedTab={setSelectedTab}
@@ -409,65 +428,15 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
                     <img className="z-10" src={MyPageBanner} alt="" />
                 </div> */}
 
-        <div className="flex mt-7 w-full">
-            <LeftMenu
-              selectedTab={selectedTab}
-              setSelectedTab={setSelectedTab}
-              selectedSubTab={selectedSubTab}
-              setSelectedSubTab={setSelectedSubTab}
-              array={LeftMenuArray}
-            />
-
-          {/* <div className="ml-20px w-1040px">
-                        <Route path="/mypage/bet-history">
-                            <BetHistory />
-                        </Route>
-                        <Route path="/mypage/transaction/charge-history">
-                            <ChargeHistory />
-                        </Route>
-                        <Route path="/mypage/transaction/exchange-history">
-                            <ExchangeHistory />
-                        </Route>
-                        <Route path="/mypage/win-lose-settlement">
-                            <WinLoseSettlement />
-                        </Route>
-                        <Route path="/mypage/coupon/coupon-usage">
-                            <CouponUsage />
-                        </Route>
-                        <Route path="/mypage/coupon/coupon-gift">
-                            <CouponGift />
-                        </Route>
-                        <Route path="/mypage/coupon/coupon-history">
-                            <CouponHistory />
-                        </Route>
-                        <Route path="/mypage/points/points-apply">
-                            <PointsApply />
-                        </Route>
-                        <Route path="/mypage/points/points-accumulate-history">
-                            <PointsAccumulate />
-                        </Route>
-                        <Route path="/mypage/points/points-transaction-history">
-                            <PointsTransaction />
-                        </Route>
-                        <Route exact path="/mypage/inbox">
-                            <Inbox />
-                        </Route>
-                        <Route path="/mypage/inbox/*">
-                            <InboxView />
-                        </Route>
-                        <Route path="/mypage/edit-info">
-                            <EditInfo />
-                        </Route>
-                        <Route path="*">
-                        </Route>
-                    </div> */}
-        </div>
 
         {/* <div>
                     <Footer2 />
                     <Footer />
                 </div> */}
       </div>
+      <Route exact path="/mypage">
+          {myInfo}
+      </Route>
     </div>
   );
 };

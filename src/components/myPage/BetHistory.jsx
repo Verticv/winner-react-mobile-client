@@ -4,13 +4,15 @@ import Icon1 from '../../images/myPage/betHistory/ico_1.png'
 import Icon2 from '../../images/myPage/betHistory/ico_2.png'
 import Icon3 from '../../images/myPage/betHistory/ico_3.png'
 import Icon4 from '../../images/myPage/betHistory/ico_4.png'
-import Icon5 from '../../images/myPage/betHistory/ico_5.png'
-import Icon6 from '../../images/myPage/betHistory/ico_6.png'
-import Icon7 from '../../images/myPage/betHistory/ico_7.png'
-import Icon8 from '../../images/myPage/betHistory/ico_8.png'
-import Icon9 from '../../images/myPage/betHistory/ico_9.png'
+import Icon5 from '../../images/myPage/betHistory/ico_4.png'
+import Icon6 from '../../images/myPage/betHistory/ico_4.png'
+import Icon7 from '../../images/myPage/betHistory/ico_4.png'
+import Icon8 from '../../images/myPage/betHistory/ico_4.png'
+import Icon9 from '../../images/myPage/betHistory/ico_4.png'
+import HomeIcon from '../../images/newImages/mypage/home.png'
+import LeftArrowIcon from '../../images/newImages/left-arrow-gray.png'
+
 import Pagination from './Pagination'
-import MyPageTitle from './MyPageTitle'
 import LiveCasinoBetHistory from './betHistory/LiveCasinoBetHistory'
 import SportsBetHistory from './betHistory/SportsBetHistory'
 import AllBetHistory from './betHistory/AllBetHistory'
@@ -19,6 +21,8 @@ import MinigameBetHistory from './betHistory/MinigameBetHistory'
 import ARGameBetHistory from './betHistory/ARGameBetHistory'
 import { Route } from 'react-router'
 import ESportsBetHistory from './betHistory/ESportsBetHistory'
+import Navbar from '../mainPage/Navbar'
+import NoticeBanner from '../mainPage/NoticeBanner'
 
 const tabsArray = [
     { text: "전체", icon: Icon1, id: 0, path: "/mypage/bet-history" },
@@ -42,18 +46,43 @@ const BetHistory = () => {
     );
  
     return (
-        <div className="flex flex-col items-center">
-            
-            <MyPageTitle title="베팅내역" />
-            
-            <div className="relative w-full mt-20px">
-                <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
-                {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
-                    <div style={{marginLeft: `${selectedTab * 116 + 49}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
-                        <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
-                    </div>
-                )}
+        <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">
+
+            <div className="w-full z-30 flex flex-col items-center">
+                <NoticeBanner />
+                <Navbar /> 
+                <div className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec bg-gray-ebeff4">
+                    <img
+                        className="absolute left-12 top-12 w-9"
+                        src={LeftArrowIcon}
+                        alt="left_arrow_icon"
+                    />
+                    <span style={{fontSize: '4rem'}} className="spoqaBold font-semibold">베팅내역</span>
+                    <img
+                        className="absolute right-12 top-12 w-14"
+                        src={HomeIcon}
+                        alt="home_icon"
+                    />
+                    
+                </div>
             </div>
+            
+            <div className="w-full relative sticky  top-0 z-40">
+                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff"}} className="absolute w-50px h-full right-0 z-50"></div>
+                <div style={{padding: '1.875rem', paddingRight: '0'}} className="sticky overflow-x-scroll overflow-y-hidden shadow-subNavbar">
+                    <div className=" flex flex-shrink-0 w-full">
+                    <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                        {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
+                            <div style={{marginLeft: `${selectedTab * 116 + 49}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
+                                <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+
+                
+
             
             <Route exact path="/mypage/bet-history">
                 <>
