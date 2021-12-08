@@ -403,7 +403,8 @@ module.exports = {
           f2f2f2: '#f2f2f2',
           d9e6f2: '#d9e6f2',
           f7f7f7: '#f7f7f7',
-          c1cfdb: '#c1cfdb'
+          c1cfdb: '#c1cfdb',
+          ebeff4: '#ebeff4'
         },
         red: {
           notification: '#ed2f59',

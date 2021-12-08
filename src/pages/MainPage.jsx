@@ -21,7 +21,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
 
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
-                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} /> 
+                <Navbar /> 
             </div>
 
             <div className="flex justify-center items-center w-full -mt-3px mb-10px">

@@ -10,7 +10,7 @@ import ArrowDown from '../../images/arrows/arrow_down.png'
 import ArrowDownWhite from '../../images/arrows/arrow_down_white.png'
 import { useHistory } from 'react-router-dom'
 
-const Navbar = ({ isAuthenticated, setAuth }) => {
+const Navbar = () => {
 
     const history = useHistory();
 
