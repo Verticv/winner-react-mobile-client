@@ -11,10 +11,11 @@ import Icon8 from '../../images/myPage/betHistory/ico_4.png'
 import Icon9 from '../../images/myPage/betHistory/ico_4.png'
 import HomeIcon from '../../images/newImages/mypage/home.png'
 import LeftArrowIcon from '../../images/newImages/left-arrow-gray.png'
+import BottomNavbar from '../bottomNavbar/BottomNavbar'
 
 import Pagination from './Pagination'
 import LiveCasinoBetHistory from './betHistory/LiveCasinoBetHistory'
-// import SportsBetHistory from './betHistory/SportsBetHistory'
+import SportsBetHistory from './betHistory/SportsBetHistory'
 import AllBetHistory from './betHistory/AllBetHistory'
 // import SlotBetHistory from './betHistory/SlotBetHistory'
 // import MinigameBetHistory from './betHistory/MinigameBetHistory'
@@ -27,7 +28,7 @@ import NoticeBanner from '../mainPage/NoticeBanner'
 const tabsArray = [
     { text: "전체", icon: Icon1, id: 0, path: "/mypage/bet-history" },
     { text: "라이브카지노", icon: Icon2, id: 1, path: "/mypage/bet-history/live-casino" },
-    { text: "슬롯게임", icon: Icon3, id: 2, path: "/mypage/bet-history/slot-game" },
+    { text: "슬롯", icon: Icon3, id: 2, path: "/mypage/bet-history/slot-game" },
     { text: "스포츠", icon: Icon4, id: 3, path: "/mypage/bet-history/sports" },
     { text: "e-스포츠", icon: Icon5, id: 4, path: "/mypage/bet-history/e-sports" },
     { text: "미니게임", icon: Icon6, id: 5, path: "/mypage/bet-history/minigame" },
@@ -41,9 +42,9 @@ const BetHistory = () => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [page, setPage] = useState(0)
-    // const [checkedState, setCheckedState] = useState(
-    //     new Array(3).fill(false)
-    // );
+    const [checkedState, setCheckedState] = useState(
+        new Array(3).fill(false)
+    );
  
     return (
         <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">
@@ -57,7 +58,7 @@ const BetHistory = () => {
                         src={LeftArrowIcon}
                         alt="left_arrow_icon"
                     />
-                    <span style={{fontSize: '4rem'}} className="spoqaBold font-semibold">베팅내역</span>
+                    <span style={{fontSize: '4rem'}} className="text-gray-r454545 font-spoqaBold font-semibold">베팅내역</span>
                     <img
                         className="absolute right-12 top-12 w-14"
                         src={HomeIcon}
@@ -93,22 +94,23 @@ const BetHistory = () => {
             <Route path="/mypage/bet-history/live-casino">
                 <>
                     <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-                    <Pagination page={page} setPage={setPage}/>   
+                    <Pagination page={page} setPage={setPage}/>
+                    <BottomNavbar />
                 </>
             </Route>
-            {/*  <Route path="/mypage/bet-history/slot-game">
+            {/* <Route path="/mypage/bet-history/slot-game">
                 <>
                     <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
                     <Pagination page={page} setPage={setPage}/>   
                 </>
-            </Route>
+            </Route> */}
             <Route path="/mypage/bet-history/sports">
                 <>
                     <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
                     <Pagination page={page} setPage={setPage}/>   
                 </>
             </Route>
-            <Route path="/mypage/bet-history/e-sports">
+            {/*  <Route path="/mypage/bet-history/e-sports">
                 <>
                     <ESportsBetHistory />
                 </>

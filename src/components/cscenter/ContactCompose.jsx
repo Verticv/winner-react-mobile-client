@@ -106,7 +106,7 @@ const ContactCompose = () => {
                     </div>
                     <div className="w-full border-r bg-white px-10px flex items-center">
                         <input 
-                            className="outline-none w-full h-35px rounded-4px border border-gray-dddddd px-9px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
+                            className="outline-none w-full h-35px rounded-lg border border-gray-dddddd px-9px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                             placeholder="제목을 입력하세요."
                         />
                     </div>
@@ -120,7 +120,7 @@ const ContactCompose = () => {
                     <div className="w-full border-r bg-white flex items-center p-10px">
                         <textarea 
                             style={{height: "325px", resize: "none"}}
-                            className="outline-none w-full rounded-4px border border-gray-dddddd px-9px py-8px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
+                            className="outline-none w-full rounded-lg border border-gray-dddddd px-9px py-8px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                             placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                         />
                     </div>
@@ -129,13 +129,13 @@ const ContactCompose = () => {
             </div>
 
             <div className="w-full mt-20px flex items-center justify-center space-x-5px mb-60px">
-                <button className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9 hover:opacity-75">
-                    <div className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                <button className="flex items-center justify-center h-52px w-192px rounded-lg bg-blue-r0070d9 hover:opacity-75">
+                    <div className="flex items-center justify-center h-50px w-190px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
                     </div>
                 </button>
                 <button className="flex items-center justify-center w-192px h-52px rounded-md bg-gray-r171a1d hover:opacity-75" >
-                    <div className="flex items-center justify-center h-50px w-190px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
+                    <div className="flex items-center justify-center h-50px w-190px rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-16px text-white">취소하기</span>
                     </div>
                 </button>

@@ -56,13 +56,13 @@ const FreeBoardCompose = () => {
 
 
             <div className="flex w-full items-center justify-center space-x-5px mb-60px mt-20px">
-                <button onClick={() => history.push("/freeboard")} className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9">
-                    <div className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer pt-2px">
+                <button onClick={() => history.push("/freeboard")} className="flex items-center justify-center h-52px w-192px rounded-lg bg-blue-r0070d9">
+                    <div className="flex items-center justify-center h-50px w-190px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer pt-2px">
                         <span className="font-spoqaMedium tracking-tight text-16px text-white">작성하기</span>
                     </div>
                 </button>
                 <button onClick={() => history.push("/freeboard")} className="flex items-center justify-center w-192px h-52px rounded-md bg-gray-r171a1d">
-                    <div className="flex items-center justify-center h-50px w-190px rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer pt-2px">
+                    <div className="flex items-center justify-center h-50px w-190px rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer pt-2px">
                         <span className="font-spoqaMedium tracking-tight text-16px text-white">취소하기</span>
                     </div>
                 </button>

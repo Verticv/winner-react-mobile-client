@@ -38,10 +38,10 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                 </div>
 
                 <div className="w-full flex items-center justify-center mt-21px">
-                    <button className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9" onClick={()=> setPopupOpen(false)}>
+                    <button className="flex items-center justify-center h-52px w-192px rounded-lg bg-blue-r0070d9" onClick={()=> setPopupOpen(false)}>
                         <div 
                         style={{background:"linear-gradient(to bottom, #1491fc, #0675db)"}} 
-                        className="flex items-center justify-center h-50px w-190px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db cursor-pointer"
+                        className="flex items-center justify-center h-50px w-190px rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">쿠폰발송</span>
                         </div>

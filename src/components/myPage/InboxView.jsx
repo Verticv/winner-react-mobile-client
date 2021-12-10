@@ -58,37 +58,37 @@ const InboxView = () => {
             </div>
 
             <div className="mt-20px mb-60px flex items-start justify-between">
-                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d hover:opacity-75">
+                <button className="flex items-center justify-center h-36px w-90px rounded-lg bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-34px w-88px bg-black rounded-lg border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">이전</span>
                     </div>
                 </button>
 
                 <button 
-                    className="flex items-center justify-center h-52px w-192px rounded-4px bg-gray-r171a1d hover:opacity-75"
+                    className="flex items-center justify-center h-52px w-192px rounded-lg bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/mypage/inbox')}
                 >
                     <div
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-50px w-190px bg-black rounded-lg border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-16px text-white">목록보기</span>
                     </div>
                 </button>
 
-                <button className="flex items-center justify-center h-36px w-90px rounded-4px bg-gray-r171a1d hover:opacity-75">
+                <button className="flex items-center justify-center h-36px w-90px rounded-lg bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-34px w-88px bg-black rounded-lg border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-14px text-white">다음</span>
                     </div>

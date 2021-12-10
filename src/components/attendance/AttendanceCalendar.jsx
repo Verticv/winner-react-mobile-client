@@ -156,10 +156,10 @@ class Calendar extends React.Component {
             </div>
         </div>
         <button 
-          className="flex items-center justify-center h-52px w-192px rounded-4px bg-blue-r0070d9 mt-20px mb-63px hover:opacity-75"
+          className="flex items-center justify-center h-52px w-192px rounded-lg bg-blue-r0070d9 mt-20px mb-63px hover:opacity-75"
           onClick={this.checkAttendance}
         >
-            <div className="flex items-center justify-center h-50px w-190px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+            <div className="flex items-center justify-center h-50px w-190px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                 <span className="font-spoqaMedium tracking-tight text-16px text-white">출석체크하기</span>
             </div>
         </button>

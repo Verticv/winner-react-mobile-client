@@ -411,11 +411,13 @@ module.exports = {
           notification: '#ed2f59',
           db4a4a: '#db4a4a',
           cb4343: '#cb4343',
+          d7434f: '#d7434f',
           f36576: '#f36576',
           f03a50: '#f03a50',
           cf254d: '#cf254d',
           ff7982: '#ff7982',
           ff535f: '#ff535f',
+          f99097: '#f99097',
           ee4e5a: '#ee4e5a',
           f47d7d: '#f47d7d',
           e9441d: '#e9441d',
@@ -458,7 +460,8 @@ module.exports = {
         },
         brown: {
           r351a1e: '#351a1e',
-          r381d1e: '#381d1e'
+          r381d1e: '#381d1e',
+          7e3636: '#7e3636'
         },
         submenu: {
           r8b5f5a: '#8b5f5a',

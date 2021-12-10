@@ -197,16 +197,16 @@ const Contact = () => {
   
 
                 <div className="mt-20px h-36px w-full flex items-center justify-end space-x-2px">
-                    <button className="flex items-center justify-center w-90px h-36px  rounded-4px bg-red-cb4343 hover:opacity-75">
-                        <div className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
+                    <button className="flex items-center justify-center w-90px h-36px  rounded-lg bg-red-cb4343 hover:opacity-75">
+                        <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">계좌문의</span>
                         </div>
                     </button>
                     <button 
-                        className="flex items-center justify-center h-36px w-90px rounded-4px bg-blue-r0070d9 hover:opacity-75"
+                        className="flex items-center justify-center h-36px w-90px rounded-lg bg-blue-r0070d9 hover:opacity-75"
                         onClick={() => history.push('/cscenter/contact/compose')}
                     >
-                        <div className="flex items-center justify-center h-34px w-88px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                        <div className="flex items-center justify-center h-34px w-88px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">문의작성</span>
                         </div>
                     </button>

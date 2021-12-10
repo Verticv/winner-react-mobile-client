@@ -56,7 +56,7 @@ const WinLoseSettlement = () => {
                 <div className="flex space-x-2px">
                     <button 
                         style={{borderRadius:"4px"}}
-                        className="flex items-center justify-center w-90px h-36px rounded-4px bg-gray-r171a1d hover:opacity-75"
+                        className="flex items-center justify-center w-90px h-36px rounded-lg bg-gray-r171a1d hover:opacity-75"
                         onClick={() => AllSelectButtonPressed()}
                     >
                         <div 
@@ -64,21 +64,21 @@ const WinLoseSettlement = () => {
                                 background: "linear-gradient(to bottom, #555555, #333333)",
                                 borderRadius: "3px"
                             }}
-                            className="flex items-center justify-center h-34px w-88px rounded-4px border border-gray-r737579 cursor-pointer pt-2px"
+                            className="flex items-center justify-center h-34px w-88px rounded-lg border border-gray-r737579 cursor-pointer pt-2px"
                         >
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">{isAllSelected ? "선택해제" : "전체선택"}</span>
                         </div>
                     </button>
                     <button 
                         style={{borderRadius:"4px"}}
-                        className="flex items-center justify-center w-90px h-36px rounded-4px bg-red-cb4343 hover:opacity-75"
+                        className="flex items-center justify-center w-90px h-36px rounded-lg bg-red-cb4343 hover:opacity-75"
                     >
                         <div 
                             style={{
                                 background: "linear-gradient(to bottom, #f03a50, #cf254d)",
                                 borderRadius: "3px"
                             }}
-                            className="flex items-center justify-center h-34px w-88px rounded-4px border border-red-f36576 cursor-pointer pt-2px"
+                            className="flex items-center justify-center h-34px w-88px rounded-lg border border-red-f36576 cursor-pointer pt-2px"
                         >
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">선택삭제</span>
                         </div>
