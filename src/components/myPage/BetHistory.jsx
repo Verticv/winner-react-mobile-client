@@ -9,10 +9,8 @@ import Icon6 from '../../images/myPage/betHistory/ico_4.png'
 import Icon7 from '../../images/myPage/betHistory/ico_4.png'
 import Icon8 from '../../images/myPage/betHistory/ico_4.png'
 import Icon9 from '../../images/myPage/betHistory/ico_4.png'
-import HomeIcon from '../../images/newImages/mypage/home.png'
-import LeftArrowIcon from '../../images/newImages/left-arrow-gray.png'
+import HomePageTopBanner from '../common/HomePageTopBanner'
 import BottomNavbar from '../bottomNavbar/BottomNavbar'
-
 import Pagination from './Pagination'
 import LiveCasinoBetHistory from './betHistory/LiveCasinoBetHistory'
 import SportsBetHistory from './betHistory/SportsBetHistory'
@@ -52,20 +50,7 @@ const BetHistory = () => {
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar /> 
-                <div className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec bg-gray-ebeff4">
-                    <img
-                        className="absolute left-12 top-12 w-9"
-                        src={LeftArrowIcon}
-                        alt="left_arrow_icon"
-                    />
-                    <span style={{fontSize: '4rem'}} className="text-gray-r454545 font-spoqaBold font-semibold">베팅내역</span>
-                    <img
-                        className="absolute right-12 top-12 w-14"
-                        src={HomeIcon}
-                        alt="home_icon"
-                    />
-                    
-                </div>
+                <HomePageTopBanner pageTitle='베팅내역' />
             </div>
             
             <div className="w-full relative top-0 z-40">
