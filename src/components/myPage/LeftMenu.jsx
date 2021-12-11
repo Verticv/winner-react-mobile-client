@@ -156,7 +156,7 @@ const LeftMenu = ({
                                         {item.hasArrow && (
                                             <img 
                                             className="w-6 absolute right-1 top-1" 
-                                            src={ArrowRight} 
+                                            src={pathname?.includes(item?.mainPath) ? ArrowRightWhite : ArrowRight } 
                                             alt="icon" />
                                         )}
                                         </div>

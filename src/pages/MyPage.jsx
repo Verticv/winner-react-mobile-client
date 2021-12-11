@@ -37,7 +37,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       icon: Icon1,
       id: 0,
       path: "/mypage/bet-history",
-      mainPath: "/mypage/bet-history",
+      mainPath: "/mypage",
       hasArrow: true,
     },
     {
