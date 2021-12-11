@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import SubHorizontalMenu from './SubHorizontalMenu'
 import LiveCasinoBetHistoryTable from '../tables/LiveCasinoBetHistoryTable'
+import SelectAllButton from '../../common/SelectAllButton'
 import Icon1 from '../../../images/newImages/mypage/live-casino/ico-1.png'
 import Icon2 from '../../../images/newImages/mypage/live-casino/ico-2.png'
 import Icon3 from '../../../images/newImages/mypage/live-casino/ico-3.png'
@@ -16,6 +17,50 @@ const subTabsArray = [
     { text: "섹시게이밍", icon: Icon1, id: 5 },
     { text: "빅게이밍", icon: Icon1, id: 6 },
 ];
+
+const tableArrayTitles = [
+    {
+        id: 0,
+        text: "베팅번호",
+        isRed: false,
+    },
+    {
+        id: 1,
+        text: "베팅시간",
+        isRed: false,
+
+    },
+    {
+        id: 2,
+        text: "게임종류",
+        isRed: false,
+
+    },
+    {
+        id: 3,
+        text: "게임구분",
+        isRed: false,
+
+    },
+    {
+        id: 4,
+        text: "베팅금액",
+        isRed: false,
+
+    },
+    {
+        id: 5,
+        text: "적중/손실금액",
+        isRed: false,
+
+    },
+    {
+        id: 6,
+        text: "상태 : 패",
+        isRed: false,
+
+    },
+]
 
 const tableArray = [
     {
@@ -56,14 +101,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
     const [isAllSelected, setAllSelected] = useState(false)
     const [isPopupOpen, setPopupOpen] = useState(true)
 
-    function allSelectButtonPressed() {
-        if (isAllSelected) {
-            setCheckedState(Array(3).fill(false))
-        } else {
-            setCheckedState(Array(3).fill(true))
-        }
-        setAllSelected(!isAllSelected)
-    }
+   
 
     return (
         <div className="w-full">
@@ -85,50 +123,19 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
             
             <DateSearchBar isLeagueSearch={false} />
 
-
             <div className="h-full">
                 <LiveCasinoBetHistoryTable 
-                    array={tableArray} 
+                    array={tableArray}
+                    titleArray={tableArrayTitles}
                     checkedState={checkedState} 
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}
                     setPopupOpen={setPopupOpen}
+                    cardHeight='33.75rem'
                 />   
             </div>
 
-            <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem'}} className="flex items-center justify-between">
-                <div className="flex w-full space-x-2px">
-                    <button 
-                        style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem'}}
-                        className="flex flex-1 items-center justify-center mr-4 rounded-md bg-gray-r171a1d hover:opacity-75"
-                        onClick={() => allSelectButtonPressed()}
-                    >
-                        <div 
-                            style={{
-                                background: "linear-gradient(to bottom, #555555, #333333)",
-                                borderRadius: "3px"
-                            }}
-                            className="flex items-center justify-center h-full w-full rounded-lg border border-gray-r737579 cursor-pointer"
-                        >
-                            <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">{isAllSelected ? "선택해제" : "전체선택"}</span>
-                        </div>
-                    </button>
-                    <button 
-                        style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem'}}
-                        className="flex flex-1 items-center justify-center m-0 rounded-md bg-red-cb4343 hover:opacity-75"
-                    >
-                        <div 
-                            style={{
-                                background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-                                borderRadius: "3px"
-                            }}
-                            className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 cursor-pointer"
-                        >
-                            <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">선택삭제</span>
-                        </div>
-                    </button>
-                </div>
-            </div>
+            <SelectAllButton isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
         </div>
     )
 }
