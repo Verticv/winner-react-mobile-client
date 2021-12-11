@@ -446,18 +446,3 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
 };
 
 export default MyPage;
-
-// from gradDark to r2088f0
-// from 1873CF to 2088F0
-// .CIR {
-//   background-image: -moz-linear-gradient( 120deg, rgb(24,115,207) 0%, rgb(32,135,240) 100%);
-//   background-image: -webkit-linear-gradient( 120deg, rgb(24,115,207) 0%, rgb(32,135,240) 100%);
-//   background-image: -ms-linear-gradient( 120deg, rgb(24,115,207) 0%, rgb(32,135,240) 100%);
-//   box-shadow: inset 1.5px 2.598px 3px 0px rgba(0, 0, 0, 0.2);
-//   position: absolute;
-//   left: 30px;
-//   top: 1065px;
-//   width: 1182px;
-//   height: 195px;
-//   z-index: 1411;
-// }

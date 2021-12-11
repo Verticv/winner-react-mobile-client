@@ -25,7 +25,7 @@ const MoneyCharge = () => {
     )
 
     return (
-        <div className="flex flex-col items-center">
+        <div style={{padding: '1.875rem'}} className="flex flex-col items-center">
             
             {/* <MyPageTitle title="보유머니 충전" /> */}
 

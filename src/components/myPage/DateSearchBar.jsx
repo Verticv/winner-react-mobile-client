@@ -13,7 +13,8 @@ const DateSearchBar = ({
     isLeagueSearch = false, 
     hasIdSearch = false,
     has3MonthSearch = false,
-    isGameResultsSearch = false
+    isGameResultsSearch = false,
+    withBlackButton = false
 }) => {
 
     // const LeagueExampleArray = [
@@ -131,7 +132,7 @@ const DateSearchBar = ({
                         <img style={{top: '3.44rem', right: '3.94rem'}} src={CalendarIcon} alt="" className="w-14 absolute" />
                     </div>
                 </div>
-                <div style={{margin: '0.75rem 1.875rem', marginBottom: '1.875rem'}} className="flex w-full h-full items-center justify-between">
+                <div style={{margin: '0.75rem 1.875rem', marginBottom: withBlackButton ? '0.75rem' : '1.875rem'}} className="flex w-full h-full items-center justify-between">
                     <div style={{width: '13.25rem', height: '7.3125rem'}} className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75">
                         <div style={{width: '12.875rem', height: '6.9375rem'}} className="flex items-center justify-center rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
                             <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">오늘</span>
@@ -165,9 +166,9 @@ const DateSearchBar = ({
                     )}
 
                     {!hasIdSearch ? (
-                        <div style={{width: '13.25rem', height: '7.3125rem'}} className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75">
-                            <div style={{width: '12.875rem', height: '6.9375rem'}} className="flex items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">검색</span>
+                        <div style={{width: '13.25rem', height: '7.3125rem'}} className={`flex items-center justify-center rounded-lg ${withBlackButton? "bg-blue-r177cce" : "bg-gray-r171a1d"}  hover:opacity-75`}>
+                            <div style={{width: '12.875rem', height: '6.9375rem'}} className={`flex items-center justify-center bg-black rounded-lg border ${withBlackButton ? "border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8" : "border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337"}  cursor-pointer`}>
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">{withBlackButton ? "3개월" : "검색"}</span>
                             </div>
                         </div>
                     ) : (
@@ -179,6 +180,18 @@ const DateSearchBar = ({
                     )}
                     
                 </div>
+
+                <div style={{margin: '0.75rem 1.875rem', marginBottom: '1.875rem', marginTop: '0'}} className="flex w-full h-full items-center justify-between">
+                    {withBlackButton && (
+                        <div style={{height: '7.3125rem', padding: '0.1875rem'}} className="flex w-full items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75">
+                            <div className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">검색</span>
+                            </div>
+                        </div>
+                    )}
+                </div>
+                
+
                 
                 {hasIdSearch && (
                     <div className="flex space-x-5px">
