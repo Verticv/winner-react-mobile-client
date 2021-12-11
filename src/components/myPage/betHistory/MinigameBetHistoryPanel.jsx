@@ -254,7 +254,7 @@ const MinigameBetHistoryPanel = ({
                             }} 
                             className="flex items-center justify-center w-111px h-73px rounded-md bg-blue-r0070d9 hover:opacity-75"
                         >
-                            <div className="pt-px flex items-center justify-center h-71px w-109px rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                            <div className="pt-px flex items-center justify-center h-71px w-109px rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">내역올리기</span>
                             </div>
                         </button>
@@ -262,7 +262,7 @@ const MinigameBetHistoryPanel = ({
                     
                     {(isPopup === false) && (
                         <button onClick={() => setAttachedArray && handleRemoveItem(id) } className="flex items-center justify-center w-111px h-73px rounded-md bg-red-cb4343 hover:opacity-75">
-                            <div className="pt-px flex items-center justify-center h-71px w-109px rounded-4px border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-df304f to-red-cf254d cursor-pointer">
+                            <div className="pt-px flex items-center justify-center h-71px w-109px rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-df304f to-red-cf254d cursor-pointer">
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white">내역삭제</span>
                             </div>
                         </button>

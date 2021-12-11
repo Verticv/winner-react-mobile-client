@@ -28,7 +28,7 @@ const MinigamesRightPanel = ({
                 width:"110px", 
                 borderColor: "#b3bac1"
             }} 
-            className="flex items-center h-46px justify-center rounded-4px flex-shrink-0 border hover:opacity-75"
+            className="flex items-center h-46px justify-center rounded-lg flex-shrink-0 border hover:opacity-75"
             onClick={() => setInputValue(inputValue + amount)}
         >
             <div 
@@ -48,7 +48,7 @@ const MinigamesRightPanel = ({
                 width:"110px",
                 borderColor: "#171a1d",
             }} 
-            className="flex items-center justify-center h-46px rounded-4px flex-shrink-0 border hover:opacity-75"
+            className="flex items-center justify-center h-46px rounded-lg flex-shrink-0 border hover:opacity-75"
             onClick={() => setInputValue(amount)}
         >
             <div 
@@ -178,7 +178,7 @@ const MinigamesRightPanel = ({
 
                 <input 
                     style={{color: "#d52e2e", width: "216px", height: "32px", backgroundColor: "#e8e8e8"}} 
-                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-16px font-roboto tracking-tight text-blue-r0056a6 text-right"
+                    className="flex items-center justify-end px-5px border rounded-lg border-gray-dddddd text-16px font-roboto tracking-tight text-blue-r0056a6 text-right"
                     placeholder="0"
                     value={nf.format(inputValue)}
                     onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
@@ -216,8 +216,8 @@ const MinigamesRightPanel = ({
 
                 
 
-                <button style={{width:"334px"}} className="mt-5px flex items-center justify-center h-46px rounded-4px bg-blue-r2068b2 flex-shrink-0 hover:opacity-75">
-                    <div style={{width:"332px", borderRadius:"3px"}} className="flex items-center justify-center h-44px rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                <button style={{width:"334px"}} className="mt-5px flex items-center justify-center h-46px rounded-lg bg-blue-r2068b2 flex-shrink-0 hover:opacity-75">
+                    <div style={{width:"332px", borderRadius:"3px"}} className="flex items-center justify-center h-44px rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                         <img src={BetIcon} alt="" />
                         <span className="ml-5px font-spoqaMedium tracking-tight text-16px text-white pt-px">베팅하기</span>
                     </div>

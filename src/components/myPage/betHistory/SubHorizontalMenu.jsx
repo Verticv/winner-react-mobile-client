@@ -51,8 +51,10 @@ const SubHorizontalMenu = ({
                         }}
                         className={`mt-px h-full w-full rounded-b-md rounded-t-lg flex flex-col items-center justify-center border-gray-b7b7b7`}
                     >
-                        <img style={{ width: imageWidth}} className="mt-8px ml-2px w-10 object-contain" src={item.icon} alt="" />
-                        <span style={{marginTop: '1.68rem'}} className={`text-4xl font-spoqaMedium tracking-tight text-gray-r7b7b7b mb-10px mt-2px ${item.custom}`} >{item.text}</span>
+                        <img style={{ width: imageWidth}} className="h-full mt-8px ml-2px w-10 object-contain" src={item.icon} alt="" />
+                        <div className='h-24'>
+                            <span style={{marginTop: '1.68rem'}} className={`text-4xl font-spoqaMedium tracking-tight text-gray-r7b7b7b mb-10px mt-2px ${item.custom}`} >{item.text}</span>
+                        </div>
                     </div>
                 </button>
             )

@@ -209,11 +209,11 @@ const DistributorPage = ({
                         <div className="w-full h-full flex items-center justify-center">
                         <button 
                             style={{width: "65px"}}
-                            className={`bg-blue-r2068b2 flex items-center justify-center h-36px w-87px rounded-4px hover:opacity-75`}
+                            className={`bg-blue-r2068b2 flex items-center justify-center h-36px w-87px rounded-lg hover:opacity-75`}
                         >
                             <div 
                                 style={{width:"63px"}}
-                                className={`border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a flex items-center justify-center h-34px w-85px rounded-4px border  cursor-pointer space-x-10px`}
+                                className={`border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a flex items-center justify-center h-34px w-85px rounded-lg border  cursor-pointer space-x-10px`}
                             >
                                 <span className="font-spoqaMedium tracking-tight text-14px text-white ">
                                     수정
@@ -389,7 +389,7 @@ const DistributorPage = ({
                     : 
                     <button 
                         style={{width: "87px"}}
-                        className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-4px hover:opacity-75`}
+                        className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-lg hover:opacity-75`}
                         onClick={() => {
                             handleOnChange1(item.id)
                         }}
@@ -400,7 +400,7 @@ const DistributorPage = ({
                                 isUserCountOpen[item.id] === true
                                 ? "border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db" 
                                 : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
-                                } flex items-center justify-center h-34px w-85px rounded-4px border  cursor-pointer space-x-10px`}
+                                } flex items-center justify-center h-34px w-85px rounded-lg border  cursor-pointer space-x-10px`}
                         >
                             <span className="font-spoqaMedium tracking-tight text-14px text-white ">
                                 {isUserCountOpen[item.id] === true ? "접기" : "보기"}  {item.user_count}
@@ -422,7 +422,7 @@ const DistributorPage = ({
                 </div>
                 <div className="relative w-full h-full flex items-center justify-center">
                     <button 
-                        className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-4px hover:opacity-75`}
+                        className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-lg hover:opacity-75`}
                         onClick={() => {
                             handleOnChange1(item.id + 1)
                         }}
@@ -431,7 +431,7 @@ const DistributorPage = ({
                             isUserCountOpen[item.id + 1] === true
                             ? "border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db" 
                             : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
-                            } flex items-center justify-center h-34px w-85px rounded-4px border  cursor-pointer space-x-10px`}
+                            } flex items-center justify-center h-34px w-85px rounded-lg border  cursor-pointer space-x-10px`}
                         >
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">
                                 {isUserCountOpen[item.id + 1] === true ? "접기" : "보기"}
@@ -453,7 +453,7 @@ const DistributorPage = ({
                 <div className="w-full h-full flex items-center justify-end text-right"><p className="pr-32px">{item.win_lose}</p></div>
                 <div className="relative w-full h-full flex items-center justify-center">
                     <button 
-                        className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-4px hover:opacity-75`}
+                        className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center h-36px w-87px rounded-lg hover:opacity-75`}
                         onClick={() => {
                             handleOnChange1(item.id + 2)
                         }}
@@ -462,7 +462,7 @@ const DistributorPage = ({
                             isUserCountOpen[item.id + 2] === true
                             ? "border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db" 
                             : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
-                            } flex items-center justify-center h-34px w-85px rounded-4px border  cursor-pointer space-x-10px`}
+                            } flex items-center justify-center h-34px w-85px rounded-lg border  cursor-pointer space-x-10px`}
                         >
                             <span className="font-spoqaMedium tracking-tight text-14px text-white">
                                 {isUserCountOpen[item.id + 2] === true ? "접기" : "보기"}
@@ -897,7 +897,7 @@ const DistributorPage = ({
                                     borderRadius: "4px",
                                     marginLeft: "14px"
                                 }} 
-                                className="flex items-center justify-center rounded-4px bg-gray-r171a1d hover:opacity-75"
+                                className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
                                 onClick={() => setViewOnline(!viewOnline)}
                             >
                                 <div 
@@ -907,7 +907,7 @@ const DistributorPage = ({
                                         background: "linear-gradient(to bottom, #585b5e, #303337)",
                                         borderRadius: "3px"
                                     }} 
-                                    className="flex items-center justify-center bg-black rounded-4px border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer"
+                                    className="flex items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer"
                                 >
                                     <span className="font-spoqaMedium tracking-tight text-14px text-white">{viewOnline ? "닫기" : "보기"}</span>
                                 </div>

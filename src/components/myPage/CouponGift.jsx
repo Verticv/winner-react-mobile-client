@@ -11,8 +11,8 @@ const CouponGift = () => {
     const [isPopupOpen, setPopupOpen] = useState(true)
 
     const GiftButton = (
-        <div className="flex items-center justify-center h-36px w-114px rounded-4px bg-blue-r0070d9 hover:opacity-75">
-            <div className="flex items-center justify-center h-34px w-112px bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+        <div className="flex items-center justify-center h-36px w-114px rounded-lg bg-blue-r0070d9 hover:opacity-75">
+            <div className="flex items-center justify-center h-34px w-112px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                 <span className="font-spoqaMedium tracking-tight text-14px text-white pt-2px">쿠폰선물하기</span>
             </div>
         </div>

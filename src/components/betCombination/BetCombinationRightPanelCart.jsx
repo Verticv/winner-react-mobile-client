@@ -84,7 +84,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 borderColor: "#b3bac1",
                 height:"46px"
             }} 
-            className="flex items-center justify-center rounded-4px border hover:opacity-75"
+            className="flex items-center justify-center rounded-lg border hover:opacity-75"
             onClick={() => setInputValue(inputValue + amount)}
         >
             <div 
@@ -149,7 +149,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 <p className="text-14px font-spoqaMedium tracking-tight text-gray-r454545 pt-2px">베팅금액</p>
                 <input 
                     style={{color: "#d52e2e", width: "191px", height: "32px", backgroundColor: "#e8e8e8"}} 
-                    className="flex items-center justify-end px-5px border rounded-4px border-gray-dddddd text-14px font-roboto tracking-tight outline-none text-right pt-2px"
+                    className="flex items-center justify-end px-5px border rounded-lg border-gray-dddddd text-14px font-roboto tracking-tight outline-none text-right pt-2px"
                     placeholder="0"
                     value={nf.format(inputValue)}
                     onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
@@ -188,7 +188,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                             borderColor: "#171a1d",
                             height:"46px"
                         }} 
-                        className="flex items-center justify-center rounded-4px border hover:opacity-75"
+                        className="flex items-center justify-center rounded-lg border hover:opacity-75"
                         onClick={() => setInputValue(inputValue/2)}
                     >
                         <div 
@@ -208,7 +208,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                             borderColor: "#171a1d",
                             height:"46px"
                         }} 
-                        className="flex items-center justify-center rounded-4px border hover:opacity-75"
+                        className="flex items-center justify-center rounded-lg border hover:opacity-75"
                         onClick={() => setInputValue(3522170)}
                     >
                         <div 
@@ -228,7 +228,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                             borderColor: "#171a1d",
                             height:"46px"
                         }} 
-                        className="flex items-center justify-center rounded-4px border hover:opacity-75"
+                        className="flex items-center justify-center rounded-lg border hover:opacity-75"
                         onClick={() => setInputValue(0)}
                     >
                         <div
@@ -246,13 +246,13 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
 
                 <button 
                     style={{width:"287px"}}
-                    className="mt-5px flex items-center justify-center h-46px rounded-4px bg-blue-r2068b2 hover:opacity-75"
+                    className="mt-5px flex items-center justify-center h-46px rounded-lg bg-blue-r2068b2 hover:opacity-75"
                     onClick={() => {
                         setAddedCard([])
                         setShowConfirm(true)
                     }}
                 >
-                    <div style={{width:"285px"}} className="flex items-center justify-center h-44px rounded-4px border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                    <div style={{width:"285px"}} className="flex items-center justify-center h-44px rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                         <img src={BetIcon} alt="" />
                         <span className="ml-5px font-spoqaMedium tracking-tight text-16px text-white pt-px">베팅하기</span>
                     </div>

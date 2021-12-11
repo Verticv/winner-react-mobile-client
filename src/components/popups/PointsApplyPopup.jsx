@@ -53,21 +53,21 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                 </div>
 
                 <div className="flex w-full mt-20px space-x-3px">
-                    <button className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r0070d9 hover:opacity-75">
+                    <button className="flex items-center justify-center h-52px w-268px rounded-lg bg-blue-r0070d9 hover:opacity-75">
                         <div 
                             style={{background:"linear-gradient(to bottom, #1491fc, #0675db)"}} 
-                            className="flex items-center justify-center h-50px w-266px rounded-4px border border-blue-r3ba3fc cursor-pointer"
+                            className="flex items-center justify-center h-50px w-266px rounded-lg border border-blue-r3ba3fc cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">포인트전환</span>
                         </div>
                     </button>
                     <button 
-                        className="flex items-center justify-center h-52px w-268px rounded-4px bg-blue-r004b8a hover:opacity-75"
+                        className="flex items-center justify-center h-52px w-268px rounded-lg bg-blue-r004b8a hover:opacity-75"
                         onClick={() => history.push('/mypage/points/points-transaction-history')}
                     >
                         <div 
                             style={{background:"linear-gradient(to bottom, #004b8a, #012d53)"}} 
-                            className="flex items-center justify-center h-50px w-266px bg-black rounded-4px border border-blue-r2a699c cursor-pointer"
+                            className="flex items-center justify-center h-50px w-266px bg-black rounded-lg border border-blue-r2a699c cursor-pointer"
                         >
                             <span className="font-spoqaMedium tracking-tight text-16px text-white">상세내역</span>
                         </div>

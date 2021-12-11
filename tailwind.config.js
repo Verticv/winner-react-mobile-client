@@ -282,6 +282,7 @@ module.exports = {
           lightGradLight: '#d9edff',
           cardGradLight: '#cef6ff',
           cardGradDark: '#379aff',
+          r2088f0: '#2088f0',
           r2087f0: '#2087f0',
           r009edf: '#009edf',
           r3384ca: '#3384ca',
@@ -405,17 +406,20 @@ module.exports = {
           f7f7f7: '#f7f7f7',
           c1cfdb: '#c1cfdb',
           ebeff4: '#ebeff4',
-          b7b7b7: '#b7b7b7'
+          b7b7b7: '#b7b7b7',
+          404040: '#404040'
         },
         red: {
           notification: '#ed2f59',
           db4a4a: '#db4a4a',
           cb4343: '#cb4343',
+          d7434f: '#d7434f',
           f36576: '#f36576',
           f03a50: '#f03a50',
           cf254d: '#cf254d',
           ff7982: '#ff7982',
           ff535f: '#ff535f',
+          f99097: '#f99097',
           ee4e5a: '#ee4e5a',
           f47d7d: '#f47d7d',
           e9441d: '#e9441d',
@@ -458,7 +462,8 @@ module.exports = {
         },
         brown: {
           r351a1e: '#351a1e',
-          r381d1e: '#381d1e'
+          r381d1e: '#381d1e',
+          7e3636: '#7e3636'
         },
         submenu: {
           r8b5f5a: '#8b5f5a',
@@ -517,6 +522,9 @@ module.exports = {
        },
        placeholderColor: {
          'gray': '#bbbbbb',
+       },
+       height: {
+         '0.75': '0.1875rem',
        }
     },
   },
