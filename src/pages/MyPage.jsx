@@ -36,8 +36,8 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       text: "베팅내역",
       icon: Icon1,
       id: 0,
-      path: "#",
-      mainPath: "#",
+      path: "/mypage/bet-history",
+      mainPath: "/mypage/bet-history",
       hasArrow: true,
     },
     {
