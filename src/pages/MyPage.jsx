@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Route } from 'react-router';
 import { useLocation, useHistory } from "react-router-dom";
+import MoneyPage from "pages/MoneyPage";
 import LeftMenu from "components/myPage/LeftMenu";
 import CountryDropDown from "components/dropdowns/CountryDropDown";
 import DropDownControls from "components/dropdowns/DropDownControls";
@@ -44,7 +45,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       text: "머니충전",
       icon: Icon2,
       id: 1,
-      path: "#",
+      path: "/mypage/money",
       mainPath: "#",
       hasArrow: true,
     },
@@ -307,6 +308,9 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       <div className="flex flex-col items-start limit:items-center w-full h-full">
         <Route path="/mypage/bet-history">
             <BetHistory />
+        </Route>
+        <Route path="/mypage/money">
+            <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
         </Route>
         {/* <Route path="/mypage/bet-history">
           <DirectoryComponent

@@ -344,6 +344,7 @@ module.exports = {
           ececec: '#ececec',
           a7a7a7: '#a7a7a7',
           f9f9f9: '#f9f9f9',
+          f1f1f1: '#f1f1f1',
           f6f6f6: '#f6f6f6',
           fbfbfb: '#fbfbfb',
           d5d5d5: '#d5d5d5',
