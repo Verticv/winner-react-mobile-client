@@ -99,7 +99,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
             <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem'}} className="flex items-center justify-between">
                 <div className="flex w-full space-x-2px">
                     <button 
-                        style={{borderRadius:"4px", padding: '0.375rem', height: '7.3125rem'}}
+                        style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem'}}
                         className="flex flex-1 items-center justify-center mr-4 rounded-md bg-gray-r171a1d hover:opacity-75"
                         onClick={() => allSelectButtonPressed()}
                     >
@@ -114,7 +114,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
                         </div>
                     </button>
                     <button 
-                        style={{borderRadius:"4px", padding: '0.375rem', height: '7.3125rem'}}
+                        style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem'}}
                         className="flex flex-1 items-center justify-center m-0 rounded-md bg-red-cb4343 hover:opacity-75"
                     >
                         <div 

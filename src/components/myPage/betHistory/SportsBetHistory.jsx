@@ -34,7 +34,7 @@ const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attac
                 <div style={{margin: '3.75rem 1.875rem'}} className="flex items-center justify-between">
                     <div style={{marginTop: '1.875rem'}} className="flex w-full">
                         <button 
-                            style={{borderRadius:"4px", padding: '0.375rem', height: '7.3125rem'}}
+                            style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem'}}
                             className="flex flex-1 items-center justify-center mr-4 rounded-md bg-gray-r171a1d hover:opacity-75"
                             onClick={() => AllSelectButtonPressed()}
                         >

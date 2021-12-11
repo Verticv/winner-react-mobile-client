@@ -40,7 +40,7 @@ const Pagination = ({page, setPage}) => {
                 <LeftArrow />
                 <div className="space-x-px flex items-center">
                     <button 
-                        style={{backgroundColor:selectedPage !==1 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.375rem'}} 
+                        style={{backgroundColor:selectedPage !==1 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.1875rem'}} 
                         className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75"
                         onClick={() => setSelectedPage(1)}
                     >
@@ -49,7 +49,7 @@ const Pagination = ({page, setPage}) => {
                         </div>
                     </button>
                     <button 
-                        style={{backgroundColor:selectedPage !==2 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.375rem'}} 
+                        style={{backgroundColor:selectedPage !==2 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.1875rem'}} 
                         className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75"
                         onClick={() => setSelectedPage(2)}
                     >
@@ -58,7 +58,7 @@ const Pagination = ({page, setPage}) => {
                         </div>
                     </button>
                     <button 
-                        style={{backgroundColor:selectedPage !==3 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.375rem'}} 
+                        style={{backgroundColor:selectedPage !==3 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.1875rem'}} 
                         className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75"
                         onClick={() => setSelectedPage(3)}
                     >
@@ -67,7 +67,7 @@ const Pagination = ({page, setPage}) => {
                         </div>
                     </button>
                     <button 
-                        style={{backgroundColor:selectedPage !==4 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.375rem'}} 
+                        style={{backgroundColor:selectedPage !==4 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.1875rem'}} 
                         className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75"
                         onClick={() => setSelectedPage(4)}
                     >
@@ -76,7 +76,7 @@ const Pagination = ({page, setPage}) => {
                         </div>
                     </button>
                     <button 
-                        style={{backgroundColor:selectedPage !==5 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.375rem'}} 
+                        style={{backgroundColor:selectedPage !==5 && "#fff", width: '7.3125rem', height: '7.3125rem', padding: '0.1875rem'}} 
                         className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75"
                         onClick={() => setSelectedPage(5)}
                     >

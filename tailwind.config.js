@@ -282,6 +282,7 @@ module.exports = {
           lightGradLight: '#d9edff',
           cardGradLight: '#cef6ff',
           cardGradDark: '#379aff',
+          r2088f0: '#2088f0',
           r2087f0: '#2087f0',
           r009edf: '#009edf',
           r3384ca: '#3384ca',
@@ -405,7 +406,8 @@ module.exports = {
           f7f7f7: '#f7f7f7',
           c1cfdb: '#c1cfdb',
           ebeff4: '#ebeff4',
-          b7b7b7: '#b7b7b7'
+          b7b7b7: '#b7b7b7',
+          404040: '#404040'
         },
         red: {
           notification: '#ed2f59',
@@ -520,6 +522,9 @@ module.exports = {
        },
        placeholderColor: {
          'gray': '#bbbbbb',
+       },
+       height: {
+         '0.75': '0.1875rem',
        }
     },
   },

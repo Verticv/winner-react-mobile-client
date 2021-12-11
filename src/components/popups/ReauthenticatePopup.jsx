@@ -31,7 +31,7 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
 
                 <div style={{width: '54rem'}}>
                     <div 
-                        className="w-full h-14 text-5xl text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
+                        className="w-full text-5xl text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
                         onFocus={(e) => {
                             e.target.placeholder = ""
                             setSelectedInput(0)
@@ -45,7 +45,7 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
                 </div>
                 <div style={{width: '54rem'}}>
                     <input 
-                        className="w-full h-14 text-5xl text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
+                        className="w-full text-5xl text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
                         placeholder={"비밀번호"} 
                         type="password"
                         onFocus={(e) => {

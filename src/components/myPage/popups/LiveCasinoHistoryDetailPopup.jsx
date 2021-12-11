@@ -6,8 +6,8 @@ import Sample2 from '../../../images/myPage/betHistory/sample2.png'
 const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
     return (
         <div 
-            style={{height: "825px", width:"690px", borderRadius: "10px", backgroundColor:"#5d799c"}}
-            className="bg-white overflow-hidden"
+            style={{height: "825px", width:"72.125rem", borderRadius: "10px", backgroundColor:"#5d799c"}}
+            className="bg-white overflow-hidden mt-400px mb-64"
         >
 
             <div className="relative h-71px bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
@@ -17,7 +17,7 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
                 </button>
             </div>
             
-            <div style={{}} className="h-full bg-white flex flex-col items-center text-gray-r454545">
+            <div style={{padding: '0 2.0625rem'}} className="h-full bg-white flex flex-col items-center text-gray-r454545">
                 <div className="text-22px tracking-tight flex h-22px items-center mt-35px mb-20px">
                     <p className="font-spoqaMedium">플레이어 이름:</p>
                     <p className="font-spoqaBold text-blue-r0056a6 ml-5px">WINlouie3</p>
@@ -26,8 +26,8 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
                 <div style={{width:"459px", backgroundColor:"#868686"}} className="h-px mb-22px"></div>
 
                 <div 
-                    style={{width:"618px", height:"619px", backgroundColor:"#ffffff"}} 
-                    className="rounded-2xl shadow-subNavbar overflow-hidden"
+                    style={{height:"619px", backgroundColor:"#ffffff"}} 
+                    className="w-full rounded-2xl shadow-subNavbar overflow-hidden"
                 >
                     
                     <div className="flex flex-col">
@@ -82,47 +82,7 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
                                     <img src={Sample1} alt="" />
                                 </div>
 
-                                <div style={{height:"41px"}} className="flex h-41px border-b border-gray-dddddd">
-                                    <div 
-                                        style={{backgroundColor:"#8e9296", width:"71px"}}
-                                        className=" flex items-center justify-center text-16px font-spoqaMedium tracking-tight text-white border-r"
-                                    >
-                                        베팅
-                                    </div>
-                                    <div 
-                                        style={{backgroundColor:"#8e9296", width:"119px"}}
-                                        className=" flex items-center justify-center text-16px font-spoqaMedium tracking-tight text-white border-r"
-                                    >
-                                        금액
-                                    </div>
-                                    <div 
-                                        style={{backgroundColor:"#8e9296", width:"119px"}}
-                                        className=" flex items-center justify-center text-16px font-spoqaMedium tracking-tight text-white"
-                                    >
-                                        회원승패
-                                    </div>
-                                </div>
 
-                                <div style={{height:"41px"}} className="flex font-robotoRegular border-b border-gray-dddddd text-gray-r585858">
-                                    <div 
-                                        style={{backgroundColor:"#ffffff", width:"71px"}}
-                                        className=" flex items-center justify-center text-16px tracking-tight text- border-r"
-                                    >
-                                        player
-                                    </div>
-                                    <div 
-                                        style={{backgroundColor:"#ffffff", width:"119px"}}
-                                        className=" flex items-center justify-center text-16px tracking-tight text- border-r"
-                                    >
-                                        50,000.00
-                                    </div>
-                                    <div 
-                                        style={{backgroundColor:"#ffffff", width:"119px"}}
-                                        className=" flex items-center justify-center text-16px tracking-tight text-"
-                                    >
-                                        10,000.00
-                                    </div>
-                                </div>
 
                             </div>
                             
@@ -169,39 +129,84 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
                                     <img src={Sample2} alt="" />
                                 </div>
 
-                                <div style={{height:"41px"}}  className="flex border-b border-gray-dddddd">
-                                    <div 
-                                        style={{backgroundColor:"#8e9296"}}
-                                        className=" flex items-center justify-center text-16px font-spoqaMedium tracking-tight text-white border-r w-full"
-                                    >
-                                        거래아이디
-                                    </div>
-                                    <div 
-                                        style={{backgroundColor:"#8e9296"}}
-                                        className=" flex items-center justify-center text-16px font-spoqaMedium tracking-tight text-white border-r w-full"
-                                    >
-                                        베팅시간
-                                    </div>
-                                </div>
-
-
-                                <div style={{height:"41px"}} className="flex font-robotoRegular border-b border-gray-dddddd text-gray-r585858">
-                                    <div 
-                                        style={{backgroundColor:"#ffffff"}}
-                                        className=" flex items-center justify-center text-16px tracking-tight border-r w-full"
-                                    >
-                                        85040508001
-                                    </div>
-                                    <div 
-                                        style={{backgroundColor:"#ffffff"}}
-                                        className=" flex flex-col -space-y-6px items-center justify-center text-16px tracking-tight w-full"
-                                    >
-                                        <p>2021-08-09</p>
-                                        <p>18:26:27</p>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
+
+                        <div style={{height:"41px"}} className="flex W-FULL h-41px border-b border-gray-dddddd">
+                            <div 
+                                style={{backgroundColor:"#8e9296"}}
+                                className=" flex flex-1 items-center justify-center text-16px font-spoqaMedium tracking-tight text-white border-r"
+                            >
+                                베팅
+                            </div>
+                            <div 
+                                style={{backgroundColor:"#8e9296"}}
+                                className=" flex flex-1 items-center justify-center text-16px font-spoqaMedium tracking-tight text-white border-r"
+                            >
+                                금액
+                            </div>
+                            <div 
+                                style={{backgroundColor:"#8e9296"}}
+                                className=" flex flex-1 items-center justify-center text-16px font-spoqaMedium tracking-tight text-white"
+                            >
+                                회원승패
+                            </div>
+                        </div>
+
+                        <div style={{height:"41px"}} className="flex font-robotoRegular border-b border-gray-dddddd text-gray-r585858">
+                            <div 
+                                style={{backgroundColor:"#ffffff"}}
+                                className=" flex flex-1 items-center justify-center text-16px tracking-tight text- border-r"
+                            >
+                                player
+                            </div>
+                            <div 
+                                style={{backgroundColor:"#ffffff"}}
+                                className=" flex flex-1 items-center justify-center text-16px tracking-tight text- border-r"
+                            >
+                                50,000.00
+                            </div>
+                            <div 
+                                style={{backgroundColor:"#ffffff"}}
+                                className=" flex flex-1 items-center justify-center text-16px tracking-tight text-"
+                            >
+                                10,000.00
+                            </div>
+                        </div>
+
+                        <div style={{height:"41px"}}  className="flex w-full border-b border-gray-dddddd">
+                            <div 
+                                style={{backgroundColor:"#8e9296"}}
+                                className=" flex flex-1 items-center justify-center text-16px font-spoqaMedium tracking-tight text-white border-r"
+                            >
+                                거래아이디
+                            </div>
+                            <div 
+                                style={{backgroundColor:"#8e9296"}}
+                                className=" flex flex-1 items-center justify-center text-16px font-spoqaMedium tracking-tight text-white border-r"
+                            >
+                                베팅시간
+                            </div>
+                        </div>
+
+
+                        <div style={{height:"41px"}} className="flex w-full font-robotoRegular border-b border-gray-dddddd text-gray-r585858">
+                            <div 
+                                style={{backgroundColor:"#ffffff"}}
+                                className=" flex flex-1 items-center justify-center text-16px tracking-tight border-r"
+                            >
+                                85040508001
+                            </div>
+                            <div 
+                                style={{backgroundColor:"#ffffff"}}
+                                className=" flex flex-1 flex-col -space-y-6px items-center justify-center text-16px tracking-tight"
+                            >
+                                <p>2021-08-09</p>
+                                <p>18:26:27</p>
+                            </div>
+                        </div>
+
 
                         <div 
                             style={{backgroundColor:"#8e9296", height: "41px"}}
@@ -209,6 +214,8 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
                         >
                             게임요약
                         </div>
+
+
                         <div className="flex">
                             <div 
                                 style={{backgroundColor:"#f8f9fb"}} 

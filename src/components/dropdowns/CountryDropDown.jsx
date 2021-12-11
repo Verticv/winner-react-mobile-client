@@ -22,7 +22,7 @@ const CountryDropDown = ({setCountry, country, isProfilePage}) => {
                     : (hoveredTab === item.id)
                     ? "bg-gray-f2f2f2"
                     : "bg-white"
-                } flex w-full items-center p-4px h-20 rounded-full`} 
+                } flex w-full items-center ${isProfilePage ? 'h-32 p-5' :  'h-20 p-2'} rounded-full`} 
                 onMouseOver={() => {setHoveredTab(item.id)}}
                 onMouseLeave={() => setHoveredTab(null)}
                 onClick={
@@ -30,8 +30,8 @@ const CountryDropDown = ({setCountry, country, isProfilePage}) => {
                     setCountry(item.text)}
                 }
             >
-                <div className={`${(selectedTab === item.id) && "shadow-plain3"} w-16 bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
-                    <img src={item.icon} alt="flag"></img>
+                <div className={`${(selectedTab === item.id) && "shadow-plain3"} ${isProfilePage ? 'w-28' : 'w-16'} rounded-full flex items-center justify-center flex-shrink-0`} >
+                    <img className='rounded-full' src={item.icon} alt="flag"></img>
                 </div>
                 <div className="w-full flex justify-center mr-3">                
                     <label 

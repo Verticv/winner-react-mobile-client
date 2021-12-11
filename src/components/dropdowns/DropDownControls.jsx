@@ -42,7 +42,7 @@ export default function DropDownControls({
                 }}
             >{buttonChild}</button>
             {open && (
-                <div className={`absolute text-copy-primary fixed mt-12 justify-center z-30 ${dropDownClasses} ${isProfilePage ? "right-0 top-32" : "right-28 top-0" }`} ref={ref} >
+                <div className={`absolute text-copy-primary fixed mt-8 justify-center z-30 ${dropDownClasses} ${isProfilePage ? "right-0 top-32" : "right-28 top-0" }`} ref={ref} >
                     {children}
                 </div>
             )}

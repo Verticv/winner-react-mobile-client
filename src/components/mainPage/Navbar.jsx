@@ -28,11 +28,11 @@ const Navbar = () => {
     )
 
     const CountryButton = (
-        <div className="flex items-center w-56 h-20 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-4px shadow-plain2 hover:opacity-75">
-            <div className="mr-7 h-14px w-16 bg-white rounded-full flex items-center justify-center">
+        <div className="flex items-center w-56 h-20 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2 shadow-plain2 hover:opacity-75">
+            <div className="mr-7 h-14px w-16 rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label className="mr-20px font-spoqaBold text-white cursor-pointer pt-px text-4xl">{country}</label>
+            <label style={{marginRight: '1.4375rem'}} className="font-spoqaBold text-white cursor-pointer pt-px text-4xl">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )
@@ -47,7 +47,7 @@ const Navbar = () => {
                 <div className="flex space-x-20px items-center flex-shrink-0">
                     {/* BREAK */}
                     <DropDownControls dropDownClasses="w-28" buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
-                        <div className="mt-20"><CountryDropDown setCountry={setCountry} country={country} /></div>
+                        <div className="mt-36 sm:mt-20 lg:mt-20"><CountryDropDown setCountry={setCountry} country={country} /></div>
                     </DropDownControls>
                 </div>
             </header>

@@ -153,7 +153,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
 
   const CountryButton = (
     <div className="flex items-center h-36 w-96 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 p-5">
-      <div className="bg-white rounded-full flex items-center justify-center">
+      <div className="rounded-full flex items-center justify-center">
         <img
           className="w-28 h-28"
           src={country === "KR" ? Koreaflag : UKflag}
@@ -200,7 +200,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const myInfo = (
     <>
     <div className="w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
-        <div className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec mb-4">
+        <div style={{marginBottom: '1.875rem'}} className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec">
           <span style={{fontSize: '4rem'}} className="spoqaBold font-semibold">마이 인포</span>
           <img
             className="absolute right-12 top-12 w-14"
@@ -210,15 +210,15 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
         </div>
         <div className="px-10 w-full">
           <div className="relative flex w-full z-10 flex-wrap bg-blue-e8f3fd rounded-3xl">
-            {isAuthenticated && (<div className="flex w-full p-5 pb-8">
+            {isAuthenticated && (<div style={{padding: '2.4375rem', paddingBottom: '1.3125rem'}} className="flex w-full">
               <div style={{width: '23.6rem'}}>
                 <img style={{maxWidth: '23.6rem', width: '23.6rem'}} src={ProfileIcon} alt="profile_icon" />
               </div>
               <div className="ml-5 w-full">
-                <p style={{fontSize: '2.8rem'}} className="robotoBold text-right font-semibold">
+                <p style={{fontSize: '2.8rem', lineHeight: '1', marginBottom: '1.9375rem'}} className="font-robotoBold text-right">
                   LEVEL1
                 </p>
-                <p style={{fontSize: '2.8rem'}} className="mb-4 spoqaBold text-right text-blue-r1ca7ec font-semibold">
+                <p style={{fontSize: '2.8rem', lineHeight: '1.1', marginBottom: '1.9375rem'}} className="spoqaBold text-right text-blue-r1ca7ec font-semibold">
                   마이마이프로틴화이팅
                   <span className="text-gray-a4b1b4 font-semibold">님</span>
                 </p>
@@ -242,7 +242,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
                 </div>
               </div>
             </div>)}
-            <div className="flex w-full p-5 pt-6 pb-10 justify-end">
+            <div style={{marginTop: '2.4375rem', padding: '2.4375rem', paddingTop: '0'}} className="flex w-full justify-end">
               {InboxButton}
               {ProfileButton}
               <div className="flex items-center justify-center h-36 w-96 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-4px shadow-plain2 hover:opacity-75 pr-2 limit1600:pr-0 mr-5">
@@ -259,7 +259,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
                 onClick={() => setCountryOpen(!isCountryOpen)}
                 onClose={() => setCountryOpen(false)}
               >
-                <div className="mt-4">
+                <div className="mt-20 sm:mt-12 lg:mt-4">
                   <CountryDropDown isProfilePage setCountry={setCountry} country={country} />
                 </div>
               </DropDownControls>
@@ -272,7 +272,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
                 src={KakaoLogo}
                 alt="kakao-icon"
               />
-              <span className="text-brown-r351a1e roboto text-4xl leading-snug mb-6px tracking-wide">
+              <span className="text-brown-r351a1e font-roboto text-4xl leading-snug mb-6px tracking-wide">
                 test1234
               </span>
             </div>
@@ -283,14 +283,14 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
                 src={TelegramLogo}
                 alt="kakao-icon"
               />
-              <span className="text-blue-r2aa1d5 roboto text-4xl leading-snug mb-6px tracking-wide">
+              <span className="text-blue-r2aa1d5 font-roboto text-4xl leading-snug mb-6px tracking-wide">
                 test1234
               </span>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex mt-7 w-full">
+      <div style={{marginTop: '1.875rem'}} className="flex w-full">
             <LeftMenu
               selectedTab={selectedTab}
               setSelectedTab={setSelectedTab}
@@ -442,3 +442,18 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
 };
 
 export default MyPage;
+
+// from gradDark to r2088f0
+// from 1873CF to 2088F0
+// .CIR {
+//   background-image: -moz-linear-gradient( 120deg, rgb(24,115,207) 0%, rgb(32,135,240) 100%);
+//   background-image: -webkit-linear-gradient( 120deg, rgb(24,115,207) 0%, rgb(32,135,240) 100%);
+//   background-image: -ms-linear-gradient( 120deg, rgb(24,115,207) 0%, rgb(32,135,240) 100%);
+//   box-shadow: inset 1.5px 2.598px 3px 0px rgba(0, 0, 0, 0.2);
+//   position: absolute;
+//   left: 30px;
+//   top: 1065px;
+//   width: 1182px;
+//   height: 195px;
+//   z-index: 1411;
+// }

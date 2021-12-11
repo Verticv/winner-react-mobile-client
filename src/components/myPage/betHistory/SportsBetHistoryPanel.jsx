@@ -55,29 +55,27 @@ const SportsBetHistoryPanel = ({
         hasUp = false,
         hasDown = false
     }) => (
-        <div className="flex items-center w-full h-36 p-3 bg-gray-fefefe border-b border-gray-dddddd">
-            {/* <div style={{width: isAttached ? "127px" : "122px", marginLeft: isAttached ? "16px" : "0px"}} className="-space-y-4px flex flex-col items-center justify-center h-56px font-spoqaMedium text-14px tracking-tight text-gray-r454545">
-                <span>승무패</span> 
-                <span>(연장포함)</span>
-            </div> */}
-            <div className="flex space-x-2">
+        <div className="flex items-center w-full h-36 p-3 pr-0 bg-gray-fefefe border-b border-gray-dddddd">
+            <div className="flex">
                 <button 
                     style={{
                         width: '26.875rem',
                         height: '7.4375rem',
                         padding: '0.1875rem',
+                        marginRight: '0.375rem',
                         textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
-                        // backgroundColor: bet === "left" ? "#cb4343" : "#dddddd",
+                        backgroundColor: bet === "left" ? "#cb4343" : "#dddddd",
                         
                     }} 
-                    className="flex items-center justify-center h-36px rounded-lg"
+                    className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
                 >
-                    <div 
+                    <div
+                    style={{padding: '0.1875rem'}}
                     className={`${
                         bet === "left" 
                         ? "text-white border-red-f99097 bg-gradient-to-b from-red-d7434f to-red-ff535f" 
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"} 
-                        flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px`
+                        flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer`
                     }>
                         <span style={{fontSize: '2.625rem'}} className="truncate text-left font-spoqaMedium tracking-tight text-14px">{team1}</span>
                         <div className="flex items-center space-x-5px">
@@ -92,6 +90,7 @@ const SportsBetHistoryPanel = ({
                         textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",
                         height: '7.4375rem',
                         padding: '0.1875rem',
+                        marginRight: '0.375rem',
                     }} 
                     className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
                 >
@@ -109,6 +108,7 @@ const SportsBetHistoryPanel = ({
                             width: '26.875rem',
                             height: '7.4375rem',
                             padding: '0.1875rem',
+                            marginRight: '0.375rem',
                         }} 
                     className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                     <div
@@ -123,15 +123,15 @@ const SportsBetHistoryPanel = ({
                         pt-px flex items-center justify-between h-full w-full rounded-lg border border-white cursor-pointer px-10px`}
                     >
                         <div className="flex items-center space-x-5px">
-                            <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px">{stat3}</span>
+                            <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight">{stat3}</span>
                             {hasDown && <img className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
                         </div>
-                        <span style={{fontSize: '2.625rem'}} className="truncate font-spoqaMedium tracking-tight text-14px text-right">{team2}</span>
+                        <span style={{fontSize: '2.625rem'}} className="truncate font-spoqaMedium tracking-tight text-right">{team2}</span>
                     </div>
                 </button>
             </div>
 
-            <div className="flex ml-10px font-spoqaMedium tracking-tight text-14px text-center">
+            <div style={{marginLeft: '0rem', fontSize: '2.625rem'}} className="w-full flex font-spoqaMedium tracking-tight text-center">
                 {/* <div style={{width: isAttached && "90px"}} className="font-roboto w-99px text-gray-r454545">{score}</div> */}
                 {/* <div style={{width: isAttached && "59px"}} className="w-61px text-gray-r454545">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div> */}
                 <div 
@@ -187,7 +187,7 @@ const SportsBetHistoryPanel = ({
                     team2="과달하라 차바스..."
                     stat1="2.26"
                     stat2="2.96"
-                    stat3="3.47"
+                    stat3="3.4"
                 />
             </div>
         </div>
@@ -319,12 +319,9 @@ const SportsBetHistoryPanel = ({
                 <div style={{fontSize: '2.625rem'}} className="h-full flex-1 flex items-center justify-end">무</div>
                 <div style={{fontSize: '2.625rem', flex: '1.3 1.3 0%;'}} className="h-full flex-1 flex items-center justify-end">패(원정)</div>
                 <div style={{fontSize: '2.625rem', flex: '0.8 0.8 0%;'}} className="h-full mr-8 flex-1 flex items-center justify-end">결과</div>
-                {/* <div style={{width: isAttached === true ? "85px" : "108px", marginLeft:  isAttached === true ? "40px" : "0px"}} className="h-full flex items-center justify-center">스코어</div>
-                <div style={{width: isAttached === true ? "66px" : "50px"}} className="h-full flex items-center justify-center">선택</div>
-                <div style={{width: isAttached === true ? "58px" : "80px", marginRight:  isAttached === true ? "25px" : "0px"}} className="h-full flex items-center justify-center">결과</div> */}
             </div>
 
-            <div className="w-full px-10px space-y-10px">
+            <div style={{padding: '0 1.875rem' }} className="w-full space-y-10px">
                 {type === 0 
                 ? <Cards0 />
                 : type === 1 
@@ -340,7 +337,6 @@ const SportsBetHistoryPanel = ({
                 </div>
             
 
-                {/* <div style={{height: '33.75rem', paddingRight: '1.875rem', margin: '1.875rem', marginTop: '1.875rem'}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl"> */}
                     <div style={{margin: '1.875rem', marginBottom: '0'}} className="flex flex-wrap items-center w-full h-full">
                         <div style={{width: '5.8125rem'}} className="relative text-left pt-7px">
                         <label className="form-control">
@@ -404,40 +400,3 @@ const SportsBetHistoryPanel = ({
 }
 
 export default SportsBetHistoryPanel
-
-
-// .BG {
-//     border-style: solid;
-//     border-width: 3px;
-//     border-color: rgb(126, 54, 54);
-//     border-radius: 16px;
-//     background-image: -moz-linear-gradient( 90deg, rgb(207,37,77) 0%, rgb(240,58,80) 100%);
-//     background-image: -webkit-linear-gradient( 90deg, rgb(207,37,77) 0%, rgb(240,58,80) 100%);
-//     background-image: -ms-linear-gradient( 90deg, rgb(207,37,77) 0%, rgb(240,58,80) 100%);
-//     position: absolute;
-//     left: 622px;
-//     top: 1776px;
-//     width: 557px;
-//     height: 124px;
-//     z-index: 195;
-//   }
-  
-
-// border-red-cb4343 bg-gradient-to-b from-red-d7434f to-red-ff535f
-
-// .BG {
-//     border-style: solid;
-//     border-width: 3px;
-//     border-color: rgb(203, 67, 67);
-//     border-radius: 8px;
-//     background-image: -moz-linear-gradient( 90deg, rgb(215,67,79) 0%, rgb(255,83,95) 100%);
-//     background-image: -webkit-linear-gradient( 90deg, rgb(215,67,79) 0%, rgb(255,83,95) 100%);
-//     background-image: -ms-linear-gradient( 90deg, rgb(215,67,79) 0%, rgb(255,83,95) 100%);
-//     position: absolute;
-//     left: 51px;
-//     top: 3246px;
-//     width: 435px;
-//     height: 125px;
-//     z-index: 83;
-//   }
-  

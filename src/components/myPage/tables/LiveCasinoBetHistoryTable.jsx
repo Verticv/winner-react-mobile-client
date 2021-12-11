@@ -47,7 +47,7 @@ const LiveCasinoBetHistoryTable = ({array, checkedState, setCheckedState, isPopu
                     </div>
                 </div>
                 <div className="text-center">
-                    <PopupControls buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                    <PopupControls isNotFullScreen buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                         <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
                     </PopupControls> 
                 </div>

@@ -7,7 +7,8 @@ export default function PopupControls({
     onClick,
     buttonChild,
     isPopupOpen,
-    setPopupOpen
+    setPopupOpen,
+    isNotFullScreen
 }) {
     const [open, setOpen] = useState(false);
     const ref = useRef();
@@ -47,7 +48,7 @@ export default function PopupControls({
                 }}
             >{buttonChild}</div>
             {open && (
-                <div style={{zIndex: '60'}} className="fixed flex items-center justify-center w-screen h-screen bg-black bg-opacity-60 z-50 left-0 top-0" onClick={(e) => onHeaderClick(e)}>
+                <div style={{zIndex: '60'}} className={`fixed flex items-center justify-center w-screen ${isNotFullScreen ? "overflow-y-scroll" : "" } h-screen bg-black bg-opacity-60 z-50 left-0 top-0`} onClick={(e) => onHeaderClick(e)}>
                     <div >
                         {children}
                     </div>
