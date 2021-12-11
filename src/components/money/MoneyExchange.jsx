@@ -1,9 +1,9 @@
-import MyPageTitle from 'components/myPage/MyPageTitle'
+// import MyPageTitle from 'components/myPage/MyPageTitle'
 import Pagination from 'components/myPage/Pagination'
 import React, { useState } from 'react'
-import AlertIcon from '../../images/myPage/alert.png'
-import BankTable from './BankTable'
-import MoneyExchangeTable from './tables/MoneyExchangeTable'
+// import AlertIcon from '../../images/myPage/alert.png'
+// import BankTable from './BankTable'
+// import MoneyExchangeTable from './tables/MoneyExchangeTable'
 import DateSearchBar from '../myPage/DateSearchBar'
 import LiveCasinoBetHistoryTable from '../myPage/tables/LiveCasinoBetHistoryTable';
 import SelectAllButton from '../common/SelectAllButton'
@@ -102,13 +102,13 @@ const tableArray = [
 const MoneyExchange = () => {
     
     const [page, setPage] = useState(0)
-    const [inputValue, setInputValue] = useState(null)
-    const [passwordValue, setPasswordValue] = useState("")
-    const [inputClicked, setInputClicked] = useState(null)
+    // const [inputValue, setInputValue] = useState(null)
+    // const [passwordValue, setPasswordValue] = useState("")
+    // const [inputClicked, setInputClicked] = useState(null)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
-    var nf = new Intl.NumberFormat();
+    // var nf = new Intl.NumberFormat();
 
     
     return (
