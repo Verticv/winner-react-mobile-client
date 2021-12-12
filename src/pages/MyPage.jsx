@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route } from 'react-router';
 import { useLocation, useHistory } from "react-router-dom";
 import MoneyPage from "pages/MoneyPage";
+import MoneyExchangePage from "pages/MoneyExchangePage";
 import LeftMenu from "components/myPage/LeftMenu";
 import CountryDropDown from "components/dropdowns/CountryDropDown";
 import DropDownControls from "components/dropdowns/DropDownControls";
@@ -45,7 +46,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       text: "머니충전",
       icon: Icon2,
       id: 1,
-      path: "/mypage/money",
+      path: "/mypage/money/charge",
       mainPath: "#",
       hasArrow: true,
     },
@@ -53,7 +54,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       text: "머니환전",
       icon: Icon3,
       id: 2,
-      path: "#",
+      path: "/mypage/money/exchange",
       mainPath: "#",
       hasArrow: true,
     },
@@ -309,9 +310,15 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
         <Route path="/mypage/bet-history">
             <BetHistory />
         </Route>
-        <Route path="/mypage/money">
+        <Route path="/mypage/money/charge">
             <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
         </Route>
+        <Route path="/mypage/money/exchange">
+            <MoneyExchangePage isAuthenticated={true} setAuthenticated={setAuthenticated} />
+        </Route>
+
+        
+
         {/* <Route path="/mypage/bet-history">
           <DirectoryComponent
             setSelectedTab={setSelectedTab}

@@ -1,7 +1,7 @@
 // import Footer from 'components/mainPage/Footer'
 // import Footer2 from 'components/mainPage/Footer2'
 import MoneyCharge from 'components/money/MoneyCharge'
-import MoneyExchange from 'components/money/MoneyExchange'
+import MoneyChargeHistory from 'components/money/MoneyChargeHistory'
 // import DirectoryComponent from 'components/myPage/DirectoryComponent'
 // import LeftMenu from 'components/myPage/LeftMenu'
 import Navbar from 'components/mainPage/Navbar'
@@ -24,7 +24,7 @@ import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
 
 const tabsArray = [
     { text: "충전신청", icon: Icon1, id: 0, path: "/mypage/money/charge" },
-    { text: "충전내역", icon: Icon2, id: 1, path: "/mypage/money/exchange" },
+    { text: "충전내역", icon: Icon2, id: 1, path: "/mypage/money/charge/history" },
 ];
 
 
@@ -105,17 +105,21 @@ const MoneyPage = ({isAuthenticated, setAuthenticated}) => {
                     </div> */}
 
                     <div className="w-full">
-                        <Route path="/mypage/money/charge">
-                            <MoneyCharge />
+                        
+                        <Route exact path="/mypage/money/charge">
+                                <MoneyCharge />
                         </Route>
-                        <Route path="/mypage/money/exchange">
-                            <MoneyExchange />
+                        <Route exact path="/mypage/money/charge/history">
+                            {console.log('sssssssssssssssssssssss')}
+                            <MoneyChargeHistory />
                             <BottomNavbar />
                         </Route>
-                        <Route path="*">
-                        </Route>
+                        
+                        {/* <Route path="*">
+                        </Route> */}
                     </div>
                 </div>
+
 
                 {/* <div>
                     <Footer2 />
