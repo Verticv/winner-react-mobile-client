@@ -9,6 +9,7 @@ import LeftMenu from "components/myPage/LeftMenu";
 import CountryDropDown from "components/dropdowns/CountryDropDown";
 import DropDownControls from "components/dropdowns/DropDownControls";
 import BetHistory from 'components/myPage/BetHistory'
+import GameResultsPage from 'components/myPage/GameResults'
 import Icon1 from "../images/newImages/mainPage/Recharge-application.png";
 import Icon2 from "../images/newImages/mainPage/Recharge-application.png";
 import Icon3 from "../images/newImages/mainPage/Application-for-currency-exchange.png";
@@ -93,7 +94,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       text: "경기결과",
       icon: Icon1,
       id: 7,
-      path: "#",
+      path: "/mypage/gameresults",
       mainPath: "#",
       hasArrow: true,
     },
@@ -323,6 +324,9 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
         </Route>
         <Route path="/mypage/win-lose-settlement">
           <WinLoseSettlement isAuthenticated={true} setAuthenticated={setAuthenticated} />
+        </Route>
+        <Route path="/mypage/gameresults">
+            <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
 
         {/* <Route path="/mypage/bet-history">

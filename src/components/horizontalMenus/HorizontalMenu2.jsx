@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router';
 
-const HorizontalMenu2 = ({
+const HorizontalMenu = ({
     itemsArray, 
+    setSelectedTab,
     isState = 0, 
-    setState
+    setSelectedSubTab = null
 }) => {
 
+    const history = useHistory();
+    const pathname = window.location.pathname
     const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
@@ -13,69 +17,73 @@ const HorizontalMenu2 = ({
             <button 
                 key={item.id} 
                 style={{
-                    height:"56px",
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
-                    borderRadius:"5px",
+                    borderRadius:"1.625rem",
+                    width: '18.69rem',
+                    height: '13.18rem',
+                    marginRight: '0.1875rem',
+                    padding: '0.1875rem'
                 }}
                 className={`${
-                    isState === item.id
+                    pathname === item.path
                     ? "bg-blue-r58baf7" 
-                    : "bg-gray-fafafa  hover:bg-blue-d3f3fe"
-                } relative overflow-hidden w-full flex items-end p-px`} 
-                onClick={() => setState(item.id)}
+                    : "bg-white hover:bg-blue-d3f3fe"
+                } overflow-hidden flex items-end`} 
+                onClick={() => {
+                    history.push(item.path)
+                    setSelectedTab(item.id)
+                    if (setSelectedSubTab !== null) {
+                        setSelectedSubTab(0)
+                    }
+                }}
                 onMouseOver={() => setHover(item.id)}
                 onMouseLeave={() => setHover(null)}
             >
                 <div 
                     style={{
-                        height:"54px", 
+                        // height:"78px",
                         width:"100%", 
-                        borderRadius:"4px",
+                        borderRadius:"1.625rem",
+                        paddingTop: '0.5rem'
                     }} 
-                    className={`flex w-full justify-end items-end bg-white ${
-                        isState === item.id
+                    className={`flex w-full justify-end h-full items-end bg-white ${
+                        pathname === item.path
                         ? "bg-blue-r58baf7" 
                         : "bg-white hover:bg-blue-d3f3fe"
                     }`}
                 >
                     <div 
                         style={{
-                            height: "52px",
-                            background: isState === item.id 
+                            background: pathname === item.path
                             ? "linear-gradient(to bottom, #2087f0, #1873cf)"
                             : isHover === item.id 
                             ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
-                            : "#fafafa",
-                            borderRadius: isState === item.id ? "4px" : "4px",
-                            borderColor: isState === item.id  ? "#1a73ce" : "#d6dfe8",
-                            boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset'
+                            : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
+                            borderRadius:"1.625rem",
+                            borderTopLeftRadius:"1.625rem 1.3rem",
+                            borderTopRightRadius: "1.625rem 1.3rem",
+                            borderColor: pathname === item.path ? "#1a73ce" : "#d6dfe8",
+                            boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset',
                         }}
-                        className={`${
-                            isState === item.id 
-                            ? "bg-gradient-to-b from-blue-r2087f0 via-blue-r2087f0 to-blue-gradDark"
-                            : "bg-gray-fafafa"
-                        } mt-2px w-full rounded-b-md flex items-center justify-center space-x-4px`}
+                        className={`mt-3px h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                     >
-                        <img className={`${item.id === 0 ? "mb-3px" : "mb-2px" } object-none`} src={isState === item.id ? item.iconHighlight : item.icon} alt="" />
-                        <div 
+                        <img style={{width: '4.9375rem'}} className="mt-2 ml-2px object-contain" src={item.icon} alt="" />
+                        <span
                             className={`${
-                                isState === item.id
+                                pathname === item.path
                                 ? "text-white"
-                                : "text-gray-r616161" }
-                                text-16px font-spoqaMedium tracking-tight h-16px flex items-center`}
-                        >
-                            {item.text}
-                        </div>
-
+                                : "text-gray-r616161" 
+                            } text-4xl font-spoqaMedium tracking-tight mt-0`}
+                        >{item.text}</span>
                         <div 
+                        style={{width: '6.1875rem', height:'2.785rem'}}
                         className={`${
                             isState === item.id
-                            ? "bg-gradient-to-b from-red-ff426a via-red-ef325f to-red-cf1348"
-                            : "bg-gradient-to-b from-blue-r4c6782 via-blue-r40566c to-blue-r26303a"
-                        } absolute top-3px right-3px h-22px w-22px rounded-full flex items-center justify-center shadow-plain1`}>
-                            <p className=" font-roboto text-12px text-white">{item.number}</p>
+                            ? "bg-blue-r1b4372"
+                            : "bg-gray-r8c8c8c"
+                        } h-22px w-22px rounded-full flex items-center justify-center shadow-plain1`}>
+                            <p style={{fontSize: '2rem'}} className=" font-roboto text-12px text-white">{item.number}</p>
                         </div>
-
                     </div>
                 </div>
             </button>
@@ -83,10 +91,10 @@ const HorizontalMenu2 = ({
     }
 
     return (
-        <div className="flex w-full space-x-2px">
+        <div id="container" className="flex justify-start items-start">
             <TabsList items={itemsArray} />
         </div>
     )
 }
 
-export default HorizontalMenu2
+export default HorizontalMenu
