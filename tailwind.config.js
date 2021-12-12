@@ -488,6 +488,7 @@ module.exports = {
         swagger: ['Swagger']
       },
       fontSize: {
+        '10px': '10px',
         '12px': '12px',
         '13px': '13px',
         '14px': '14px',

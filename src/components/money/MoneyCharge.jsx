@@ -29,7 +29,7 @@ const MoneyCharge = () => {
             
             {/* <MyPageTitle title="보유머니 충전" /> */}
 
-            <div style={{paddingLeft: '2.0625rem', paddingTop: '2.25rem', paddingBottom: '4.6875rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de px-19px pt-17px">
+            <div style={{paddingLeft: '2.0625rem', paddingTop: '2.25rem', paddingBottom: '2.8125rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de px-19px pt-17px">
                 <div className="flex items-center space-x-10px">
                     <img style={{width: '3.375rem'}} src={AlertIcon} alt="" />
                     <span style={{fontSize: '2.8125rem'}} className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
