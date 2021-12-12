@@ -110,7 +110,6 @@ const MoneyPage = ({isAuthenticated, setAuthenticated}) => {
                                 <MoneyCharge />
                         </Route>
                         <Route exact path="/mypage/money/charge/history">
-                            {console.log('sssssssssssssssssssssss')}
                             <MoneyChargeHistory />
                             <BottomNavbar />
                         </Route>

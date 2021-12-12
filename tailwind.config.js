@@ -339,6 +339,7 @@ module.exports = {
         gray: {
           text: '#393e41',
           subNavbar: '#616161',
+          a3b2c2: '#a3b2c2',
           r8f8f8f: '#8f8f8f',
           d2d2d2: '#d2d2d2',
           ececec: '#ececec',
@@ -413,6 +414,7 @@ module.exports = {
         red: {
           notification: '#ed2f59',
           db4a4a: '#db4a4a',
+          d52e2e: '#d52e2e',
           cb4343: '#cb4343',
           d7434f: '#d7434f',
           f36576: '#f36576',

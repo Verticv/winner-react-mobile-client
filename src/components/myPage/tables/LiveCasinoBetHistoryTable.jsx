@@ -37,25 +37,26 @@ const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedS
                         </div>
                     )}
                     {/* hasExtraColumns */}
+                    {console.log(`itemitemitem`, item)}
                     <div style={{width: '52.3125rem'}}>
                         {titles?.[0] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[0].isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[0].text} : </span> {item.number}</div>)} 
                         {titles?.[1] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[1].isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[1].text} : </span> {item.time}</div>)} 
                         {titles?.[2] && (
-                        <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[2].isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
+                        <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[3].isRed ? item.type?.includes("+") ? "#d52e2e" : item.type.includes("-") ? "#0056a6" : "#7b7b7b" : "#7b7b7b"}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
                             <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[2].text} :</span>
                              {item.type}
                              {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>종류 :</span> 스포츠</>}
                         </div>
                         )}
                         {titles?.[3] && (
-                        <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[2].isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
+                        <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[3].isRed ? item.name.includes("+") ? "#d52e2e" : item.name.includes("-") ? "#0056a6" : "#7b7b7b" : "#7b7b7b"}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
                             <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[3].text} :</span>
                              {item.name}
                              {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>보너스퍼센트 :</span> 100%</>}
                         </div>
                         )}
                         {titles?.[4] && (
-                        <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[2].isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
+                        <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[3].isRed ? item.amount.includes("+") ? "#d52e2e" : item.amount.includes("-") ? "#0056a6" : "#7b7b7b" : "#7b7b7b"}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
                             <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[4].text} :</span>
                              {item.amount}
                              {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>적립포인트 :</span><span className='text-blue-r0056a6'> 50P</span></>}
@@ -74,7 +75,7 @@ const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedS
                  : hasButton &&
                     <button style={{width: '10.875rem', height: '10.875rem',  padding: '0.1875rem', backgroundColor: item?.buttonColor || '#0056a6'}} className="flex items-center justify-center rounded-lg hover:opacity-75">
                         <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg cursor-pointer">
-                            <span style={{fontSize: '2.8125rem', lineHeight: '1.1', width: '10.875rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"> {item?.buttonColor === '#0056a6' ? '완료' : '취소'} </span>
+                            <span style={{fontSize: '2.8125rem', lineHeight: '1.1', width: '10.875rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"> {item?.buttonColor === '#0056a6' ? <div> <p>정산</p> <p>완료</p></div> : '진행중'} </span>
                             {/* <span style={{fontSize: '2.8125rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"></span> */}
                         </div>
                     </button>
