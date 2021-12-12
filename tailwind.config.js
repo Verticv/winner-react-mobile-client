@@ -527,6 +527,7 @@ module.exports = {
        },
        height: {
          '0.75': '0.1875rem',
+         '550px': '550px'
        }
     },
   },
