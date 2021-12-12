@@ -4,6 +4,7 @@ import { useLocation, useHistory } from "react-router-dom";
 import MoneyPage from "pages/MoneyPage";
 import MoneyExchangePage from "pages/MoneyExchangePage";
 import PointsPage from "pages/PointsPage";
+import WinLoseSettlement from "pages/WinLoseSettlement";
 import LeftMenu from "components/myPage/LeftMenu";
 import CountryDropDown from "components/dropdowns/CountryDropDown";
 import DropDownControls from "components/dropdowns/DropDownControls";
@@ -78,7 +79,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       text: "윈루즈정산",
       icon: Icon1,
       id: 5,
-      path: "#",
+      path: "/mypage/win-lose-settlement",
       mainPath: "#",
     },
     {
@@ -320,6 +321,9 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
         <Route path="/mypage/points">
             <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
         </Route>
+        <Route path="/mypage/win-lose-settlement">
+          <WinLoseSettlement isAuthenticated={true} setAuthenticated={setAuthenticated} />
+        </Route>
 
         {/* <Route path="/mypage/bet-history">
           <DirectoryComponent
@@ -348,14 +352,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             mainPath="/mypage/transaction/charge-history"
           />
         </Route>
-        <Route path="/mypage/win-lose-settlement">
-          <DirectoryComponent
-            setSelectedTab={setSelectedTab}
-            setSelectedSubTab={setSelectedSubTab}
-            branch2="윈루즈정산"
-            mainPath="/mypage/win-lose-settlement"
-          />
-        </Route>
+        
         <Route path="/mypage/coupon/coupon-usage">
           <DirectoryComponent
             setSelectedTab={setSelectedTab}
