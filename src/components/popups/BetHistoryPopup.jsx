@@ -135,11 +135,11 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                 <div className="px-36px relative">
                     <HorizontalMenu8 itemsArray={tabsArray} selectedTab={selectedTab} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} />
                     
-                    {(selectedTab !== 2 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
+                    {/* {(selectedTab !== 2 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
                         <div style={{marginLeft: `${selectedTab * 130 + 56}px`}} className={`absolute top-80px w-20px -mb-10px overflow-hidden inline-block `}>
                             <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
                         </div>
-                    )}
+                    )} */}
 
                     {(selectedTab !== 2 && selectedTab !== 3 && selectedTab !== 7 && selectedTab !== 8) && (
                         <div className="mt-10px w-full bg-gray-eff3f6 rounded-xl p-4px">

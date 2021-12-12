@@ -1,6 +1,6 @@
 import PointsApply from 'components/points/PointsApply'
 import PointsTransactionHistory from 'components/points/PointsTransactionHistory'
-import MoneyExchangeHistory from 'components/money/MoneyExchangeHistory'
+import PointsAccumulateHistory from 'components/points/PointsAccumulateHistory'
 
 
 import Navbar from 'components/mainPage/Navbar'
@@ -42,11 +42,11 @@ const PointsPage = ({isAuthenticated, setAuthenticated}) => {
                 <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">
                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
-                        {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
+                        {/* {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
                             <div style={{marginLeft: `${selectedTab * 116 + 49}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
                                 <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@ const PointsPage = ({isAuthenticated, setAuthenticated}) => {
                             <BottomNavbar />
                         </Route>
                         <Route exact path="/mypage/points/points-accumulate-history">
-                            <MoneyExchangeHistory />
+                            <PointsAccumulateHistory />
                             <BottomNavbar />
                         </Route>
                         <Route exact path="/mypage/points/points-transaction-history">
