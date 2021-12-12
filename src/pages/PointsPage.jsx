@@ -1,5 +1,8 @@
 import PointsApply from 'components/points/PointsApply'
+import PointsTransactionHistory from 'components/points/PointsTransactionHistory'
 import MoneyExchangeHistory from 'components/money/MoneyExchangeHistory'
+
+
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 import HorizontalMenu1 from 'components/horizontalMenus/HorizontalMenu1'
@@ -60,7 +63,7 @@ const PointsPage = ({isAuthenticated, setAuthenticated}) => {
                             <BottomNavbar />
                         </Route>
                         <Route exact path="/mypage/points/points-transaction-history">
-                            <MoneyExchangeHistory />
+                            <PointsTransactionHistory />
                             <BottomNavbar />
                         </Route>
                         

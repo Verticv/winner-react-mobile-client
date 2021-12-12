@@ -2,7 +2,7 @@ import PopupControls from 'components/popups/PopupControls';
 import React from 'react'
 import LiveCasinoHistoryDetailPopup from '../popups/LiveCasinoHistoryDetailPopup';
 
-const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedState, isPopupOpen, setPopupOpen, cardHeight = '33.75rem', isButtonGradient = true}) => {
+const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedState, isPopupOpen, setPopupOpen, cardHeight = '33.75rem', isButtonGradient = true, hasLeftInput = true}) => {
 
     function Cells({ items, titles }) {
         const detailButton =  (
@@ -24,17 +24,18 @@ const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedS
         return items.map((item, index) => (
             <div style={{height: cardHeight, paddingRight: '1.875rem', margin: '1.875rem', marginTop: `${index ? '0': '1.875rem'}`}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
                 <div className="flex flex-wrap items-center w-full h-full">
-                    <div style={{width: '5.8125rem'}} className="relative text-left pt-7px">
-                    <label className="form-control">
-                    <input
-                            className='w-12 h-12'
-                            type="checkbox"
-                            checked={checkedState[item.id]}
-                            onChange={() => handleOnChange(item.id)}
-                        />
-                    </label>
-                        
-                    </div>
+                    {hasLeftInput && (
+                        <div style={{width: '5.8125rem'}} className="relative text-left pt-7px">
+                            <label className="form-control">
+                                <input
+                                        className='w-12 h-12'
+                                        type="checkbox"
+                                        checked={checkedState[item.id]}
+                                        onChange={() => handleOnChange(item.id)}
+                                    />
+                            </label>
+                        </div>
+                    )}
                     <div style={{width: '52.3125rem'}}>
                         {titles?.[0] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[0].isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[0].text} :</span> {item.number}</div>)} 
                         {titles?.[1] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[1].isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[1].text} :</span> {item.time}</div>)} 
