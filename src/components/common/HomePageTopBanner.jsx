@@ -17,7 +17,8 @@ const HomePageTopBanner = ({pageTitle}) => {
       />
       <span style={{fontSize: '4rem'}} className="text-gray-r454545 font-spoqaBold font-semibold">{pageTitle}</span>
       <img
-          className="absolute right-12 top-12 w-14"
+          onClick={() => history.push('/mypage')}
+          className="absolute right-12 top-12 w-14 cursor-pointer"
           src={HomeIcon}
           alt="home_icon"
       />
