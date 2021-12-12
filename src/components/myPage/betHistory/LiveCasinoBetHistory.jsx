@@ -135,7 +135,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
                 />   
             </div>
 
-            <SelectAllButton isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+            <SelectAllButton count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
         </div>
     )
 }

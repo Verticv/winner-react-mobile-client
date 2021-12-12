@@ -16,16 +16,11 @@ const tableArrayTitles = [
     },
     {
         id: 1,
-        text: "보너스금액",
-        isRed: true,
-    },
-    {
-        id: 2,
         text: "신청일시",
         isRed: false,
     },
     {
-        id: 3,
+        id: 2,
         text: "처리일시",
         isRed: false,
     }
@@ -35,7 +30,7 @@ const tableArray = [
     {
         id: 0,
         number: '12,000',
-        time: "+12,000",
+        time: "2021-06-30 14:45",
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
@@ -43,7 +38,7 @@ const tableArray = [
     {
         id: 1,
         number: '12,000',
-        time: "+12,000",
+        time: "2021-06-30 14:45",
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#9ca3af',
@@ -51,7 +46,7 @@ const tableArray = [
     {
         id: 2,
         number: '12,000',
-        time: "+12,000",
+        time: "2021-06-30 14:45",
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
@@ -59,7 +54,7 @@ const tableArray = [
     {
         id: 3,
         number: '12,000',
-        time: "+12,000",
+        time: "2021-06-30 14:45",
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
@@ -67,7 +62,7 @@ const tableArray = [
     {
         id: 4,
         number: '12,000',
-        time: "+12,000",
+        time: "2021-06-30 14:45",
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
@@ -75,7 +70,7 @@ const tableArray = [
     {
         id: 5,
         number: '12,000',
-        time: "+12,000",
+        time: "2021-06-30 14:45",
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
@@ -83,7 +78,7 @@ const tableArray = [
     {
         id: 6,
         number: '12,000',
-        time: "+12,000",
+        time: "2021-06-30 14:45",
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
@@ -91,7 +86,7 @@ const tableArray = [
     {
         id: 7,
         number: '12,000',
-        time: "+12,000",
+        time: "2021-06-30 14:45",
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
@@ -124,13 +119,13 @@ const MoneyExchangeHistory = () => {
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}
                     setPopupOpen={setPopupOpen}
-                    cardHeight='20.9375rem'
+                    cardHeight='16.625rem'
                     isButtonGradient={false}
                 />   
             </div>
 
             <div className='w-full'>
-                <SelectAllButton isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+                <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
             <div className="mt-20px">

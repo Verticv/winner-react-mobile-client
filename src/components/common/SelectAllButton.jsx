@@ -1,12 +1,12 @@
 import React from 'react'
 
-const SelectAllButton = ({isAllSelected, setCheckedState, setAllSelected}) => {
+const SelectAllButton = ({isAllSelected, setCheckedState, setAllSelected, count = 3}) => {
 
     function allSelectButtonPressed() {
         if (isAllSelected) {
-            setCheckedState(Array(3).fill(false))
+            setCheckedState(Array(count).fill(false))
         } else {
-            setCheckedState(Array(3).fill(true))
+            setCheckedState(Array(count).fill(true))
         }
         setAllSelected(!isAllSelected)
     }
