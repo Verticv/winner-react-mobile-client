@@ -1,21 +1,21 @@
-// import MyPageTitle from 'components/myPage/MyPageTitle'
-// import Pagination from 'components/myPage/Pagination'
 import React, { useState } from 'react'
-import AlertIcon from '../../images/myPage/alert.png'
-// import Step1 from '../../images/money/STEP1.png'
-// import Step2 from '../../images/money/STEP2.png'
-// import Step3 from '../../images/money/STEP3.png'
-// import MoneyChargeTable from './tables/MoneyChargeTable'
-// import BankTable from './BankTable'
-// import BottomNavbar from '../bottomNavbar/BottomNavbar'
+import PopupControls from 'components/popups/PopupControls';
+import AlertIcon from '../../images/myPage/alert.png';
+import PointsApplyPopup from '../popups/PointsApplyPopup';
 
 const PointsApply = () => {
-
-    // const [page, setPage] = useState(0)
     const [inputValue, setInputValue] = useState(null)
     const [inputClicked, setInputClicked] = useState(false)
-    // const [radioValue, setRadioValue] = useState("yes")
+    const [isPopupOpen, setPopupOpen] = useState(true)
     var nf = new Intl.NumberFormat();
+
+    const detailButton =  (
+        <button style={{width: "36.4375rem", height: '7.3125rem', padding: '0.1875rem',  marginTop: '3.75rem', marginBottom: '16rem'}} className="flex items-center justify-center h-52px rounded-lg bg-blue-r0070d9 hover:opacity-75">
+            <div className="flex items-center justify-center rounded-lg w-full h-full border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
+            </div>
+        </button>
+    )
 
     const Title = ({text}) => (
         <div style={{width: "21.2rem", marginRight: '1.875rem'}} className="flex-shrink-0">
@@ -26,9 +26,6 @@ const PointsApply = () => {
 
     return (
         <div style={{padding: '1.875rem'}} className="flex flex-col items-center">
-            
-            {/* <MyPageTitle title="보유머니 충전" /> */}
-
             <div style={{paddingLeft: '2.0625rem', paddingTop: '2.25rem', paddingBottom: '2.8125rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de px-19px pt-17px">
                 <div className="flex items-center space-x-10px">
                     <img style={{width: '3.375rem'}} src={AlertIcon} alt="" />
@@ -199,11 +196,11 @@ const PointsApply = () => {
                 
             </div>
 
-            <button style={{width: "36.4375rem", height: '7.3125rem', padding: '0.1875rem',  marginTop: '3.75rem', marginBottom: '16rem'}} className="flex items-center justify-center h-52px rounded-lg bg-blue-r0070d9 hover:opacity-75">
-                <div className="flex items-center justify-center rounded-lg w-full h-full border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                    <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
-                </div>
-            </button>
+            {/* use PupUp here */}
+            <PopupControls isNotFullScreen buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                <PointsApplyPopup setPopupOpen={setPopupOpen} />
+            </PopupControls> 
+            
 
 
             {/* <div className="mt-40px">
