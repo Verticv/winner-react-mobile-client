@@ -132,7 +132,7 @@ const DateSearchBar = ({
                         <img style={{top: '3.44rem', right: '3.94rem'}} src={CalendarIcon} alt="" className="w-14 absolute" />
                     </div>
                 </div>
-                <div style={{margin: '0.75rem 1.875rem', marginBottom: withBlackButton ? '0.75rem' : '1.875rem'}} className="flex w-full h-full items-center justify-between">
+                <div style={{margin: '0.75rem 1.875rem', marginBottom: withBlackButton ? '0.75rem' : '0'}} className="flex w-full h-full items-center justify-between">
                     <div style={{width: '13.25rem', height: '7.3125rem'}} className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75">
                         <div style={{width: '12.875rem', height: '6.9375rem'}} className="flex items-center justify-center rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
                             <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">오늘</span>

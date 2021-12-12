@@ -5,9 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import MyPage from "pages/MyPage";
 import DistributorPage from "pages/DistributorPage";
 import AttendPage from "pages/AttendPage";
-import MoneyPage from "pages/MoneyPage";
 import CSCenterPage from "pages/CSCenterPage";
-import GameResultsPage from "pages/GameResultsPage";
 import Freeboard from "pages/Freeboard";
 import BetCombinationPage from "pages/BetCombinationPage";
 import MinigamesPage from "pages/MinigamesPage";
@@ -58,14 +56,8 @@ function App() {
                 <Route path="/attendance">
                     <AttendPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
-                <Route path="/money">
-                    <MoneyPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
-                </Route>
                 <Route path="/cscenter">
                     <CSCenterPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
-                </Route>
-                <Route path="/gameresults">
-                    <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
                 <Route path="/freeboard">
                     <Freeboard isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
