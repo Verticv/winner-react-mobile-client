@@ -43,6 +43,8 @@ const BetHistory = () => {
     const [checkedState, setCheckedState] = useState(
         new Array(3).fill(false)
     );
+
+    console.log(selectedTab)
  
     return (
         <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">

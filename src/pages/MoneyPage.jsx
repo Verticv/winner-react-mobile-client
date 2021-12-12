@@ -39,7 +39,7 @@ const MoneyPage = ({isAuthenticated, setAuthenticated}) => {
     // const [selectedTab, setSelectedTab] = useState(location.pathname)
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
-    console.log(selectedSubTab)
+    console.log(selectedSubTab, selectedTab)
 
     return (
         <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
