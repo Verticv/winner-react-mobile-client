@@ -130,7 +130,7 @@ const MoneyChargeHistory = () => {
             </div>
 
             <div className='w-full'>
-                <SelectAllButton isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+                <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
             <div className="mt-20px">
