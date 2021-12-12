@@ -3,6 +3,7 @@ import { Route } from 'react-router';
 import { useLocation, useHistory } from "react-router-dom";
 import MoneyPage from "pages/MoneyPage";
 import MoneyExchangePage from "pages/MoneyExchangePage";
+import PointsPage from "pages/PointsPage";
 import LeftMenu from "components/myPage/LeftMenu";
 import CountryDropDown from "components/dropdowns/CountryDropDown";
 import DropDownControls from "components/dropdowns/DropDownControls";
@@ -62,7 +63,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       text: "포인트전환",
       icon: Icon4,
       id: 3,
-      path: "#",
+      path: "/mypage/points/points-apply",
       mainPath: "#",
       hasArrow: true,
     },
@@ -316,8 +317,9 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
         <Route path="/mypage/money/exchange">
             <MoneyExchangePage isAuthenticated={true} setAuthenticated={setAuthenticated} />
         </Route>
-
-        
+        <Route path="/mypage/points">
+            <PointsPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
+        </Route>
 
         {/* <Route path="/mypage/bet-history">
           <DirectoryComponent
@@ -379,15 +381,6 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             branch2="쿠폰관리"
             branch3="쿠폰내역"
             mainPath="/mypage/coupon/coupon-usage"
-          />
-        </Route>
-        <Route path="/mypage/points/points-apply">
-          <DirectoryComponent
-            setSelectedTab={setSelectedTab}
-            setSelectedSubTab={setSelectedSubTab}
-            branch2="포인트"
-            branch3="포인트전환신청"
-            mainPath="/mypage/points/points-apply"
           />
         </Route>
         <Route path="/mypage/points/points-accumulate-history">
