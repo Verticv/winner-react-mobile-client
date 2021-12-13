@@ -108,7 +108,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
             {showSub === true && (
                 <>
                     <div className="w-full relative top-0">
-                    <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff"}} className="absolute w-50px h-full right-0 z-50"></div>
+                    <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                     <div style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
                             <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
