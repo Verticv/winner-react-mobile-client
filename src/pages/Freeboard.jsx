@@ -61,6 +61,7 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
                     </Route>
                     <Route path="/freeboard/view">
                         <FreeBoardView />
+                        <BottomNavbar />
                     </Route>
                     <Route path="/freeboard/view2">
                         <FreeBoardView2 />

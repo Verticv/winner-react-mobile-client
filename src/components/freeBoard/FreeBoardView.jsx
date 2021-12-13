@@ -18,307 +18,309 @@ const FreeBoardView = () => {
         rank = 1,
         username = "쇼유",
         isEdit = false,
-        tag = null
+        tag = null,
+        isOneButton = false
     }) => (
-        <div className="w-full h-110px pr-20px">
-            <div className="h-56px ml-23px flex items-center justify-between">
-                <div className="flex">
-                    <img className="object-none" src={ReplyArrow} alt="" />
-                    <img className="pl-12px" src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
-                    <p className="ml-5px text-15px font-spoqaMedium tracking-tight text-gray-r454545">{username}</p>
+        <div style={{paddingTop: '3.75rem'}} className="w-full">
+            <div className="w-full flex items-center flex justify-between">
+                <div className="flex items-center">
+                    <img style={{width: '2.5625rem', height: '2.5625rem', marginRight: '2.3125rem'}} src={ReplyArrow} alt="" />
+                    <img style={{width: '3.625rem', height: '4.4375rem', marginRight: '0.8125rem'}} src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
+                    <p style={{fontSize: '2.625rem'}} className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">{username}</p>
+                    <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
+                    <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                 </div>
-                {isEdit === true ? (
-                    <div className="flex space-x-4px my-20px justify-end">
-                        <button className="flex items-center justify-center w-90px h-36px rounded-lg bg-red-cb4343 hover:opacity-75">
-                            <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white">수정하기</span>
-                            </div>
-                        </button>
-                        <button className="flex items-center justify-center w-90px h-36px rounded-lg bg-gray-r171a1d hover:opacity-75" >
-                            <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white">삭제하기</span>
-                            </div>
-                        </button>
-                    </div>
-                ) : (
-                    <button className="flex items-center justify-center h-36px w-90px rounded-lg bg-blue-r0070d9 hover:opacity-75">
-                        <div className="flex items-center justify-center h-34px w-88px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white">답글달기</span>
-                        </div>
-                    </button>
-                )}
-               
             </div> 
-            <div className="pl-49px">
-                <div style={{borderRadius:"1em"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
+            <div style={{marginLeft: '4.125rem', marginTop: '3.4375rem', height: '8.625rem'}} className="">
+                <div style={{borderRadius:"1rem", fontSize: '2.8125rem', paddingLeft: '3.5625rem'}} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
                     <div className="flex text-15px font-spoqa">
-                    {tag && ( <p className="text-blue-r0056a6 mr-10px font-spoqaMedium">@{tag}</p>)}
-                    <p style={{WebkitTextStroke:"0.2px"}} className="text-gray-r585858">{text}</p>
+                    {tag && ( <p style={{fontSize: '2.8125rem'}} className="text-blue-r0056a6 font-spoqaMedium">@{tag}</p>)}
+                    <p style={{WebkitTextStroke:"0.2px", fontSize: '2.8125rem'}} className="text-gray-r585858">{text}</p>
                     </div>
-                    <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                 </div>
+            </div>
+            <div style={{marginTop: '1.1875rem', marginLeft: '4.125rem'}} className='flex'>
+                <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                    <div className={`${isOneButton ? "text-gray-r7b7b7b" : "text-red-d52e2e"} font-roboto flex items-center justify-center`}>수정</div>
+                </div>
+                { !isOneButton && (
+                    <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                        <div className="text-red-d52e2e font-roboto flex items-center justify-center">삭제</div>
+                    </div>
+                ) }
             </div>
         </div>
     )
 
     return (
-        <div className="w-full">
-            <div style={{borderRadius:"1em"}} className="w-full shadow-subNavbar overflow-hidden">
-                <div className="bg-gray-fafafa h-58px border-b border-gray-dddddd flex items-center px-20px space-x-10px">
-                    <div 
-                        style={{backgroundColor:"#02569c"}} 
-                        className="rounded-full flex items-center justify-center w-45px h-25px font-spoqaMedium text-12px tracking-tight text-white"
-                    >
-                        공지
+        <div style={{padding: '0 1.875rem'}} className="w-full">
+            <div style={{borderRadius:"1em", marginTop: '1.875rem'}} className="w-full shadow-subNavbar overflow-hidden">
+                <div className="bg-gray-fafafa border-b border-gray-dddddd flex flex-wrap  items-center px-20px space-x-10px">
+                    <div style={{margin: '2.0625rem 0'}} className='flex w-full justify-center'>
+                        <div 
+                            style={{backgroundColor:"#02569c", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', width: 'fit-content', marginRight: '1.125rem'}} 
+                            className="rounded-full flex items-center justify-center font-spoqaMedium text-12px tracking-tight text-white"
+                        >
+                            공지
+                        </div>
+                        <div 
+                            style={{backgroundColor:"#00a1e9", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', width: 'fit-content'}} 
+                            className="rounded-full flex items-center justify-center font-spoqaMedium text-12px tracking-tight text-white"
+                        >
+                            안내
+                        </div>
                     </div>
-                    <div 
-                        style={{backgroundColor:"#ffab39"}} 
-                        className="rounded-full flex items-center justify-center w-53px h-25px font-spoqaMedium text-12px tracking-tight text-white"
-                    >
-                        이벤트
-                    </div>
-                    <div className="text-15px font-spoqaMedium tracking-tight text-gray-r454545">메신져 고객센터 사칭주의</div>
+                    <div className="text-5xl text-center w-full mb-8 font-spoqaMedium tracking-tight text-gray-r454545">메신져 고객센터 사칭주의</div>
                 </div>
 
-                <div className="bg-gray-fafafa h-58px border-b border-gray-dddddd flex items-center px-20px space-x-10px">
-                    <img className="mb-3px" src={WinnerSmall} alt="" />
-                    <div className="w-px h-10px bg-gray-dddddd" />
-                    <div className="font-spoqaMedium text-14px tracking-tight text-gray-r7b7b7b">댓글</div>
-                    <div className="w-17px h-17px text-white text-12px font-roboto flex items-center justify-center rounded-full bg-red-notification">2</div>
+                <div style={{height: '7.3125rem', padding: '1.4375rem 1.875rem' }} className="bg-gray-fafafa border-b border-gray-dddddd flex justify-between items-center space-x-10px">
+                    <img style={{width: '12.0625rem'}} className="h-12 object-contain" src={WinnerSmall} alt="" />
+                    {/* <div className="w-px h-10px bg-gray-dddddd" /> */}
+                    <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem'}} className='flex justify-center align-center rounded-full border-b border-gray-b7b7b7'>
+                        <div style={{marginRight: '0.6875rem'}} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">댓글</div>
+                        <div className="text-red-d52e2e font-roboto flex items-center justify-center">2</div>
+                    </div>
                 </div>
 
-                <div className="py-59px bg-white">
+                <div style={{paddingTop: '5.625rem'}} className="bg-white pb-8">
 
-                    <div className="w-full flex justify-center">
+                    <div style={{padding: '0 1.875rem'}} className="w-full flex justify-center">
                         <img src={Sample} alt="" />
                     </div>
 
-                    <div className="px-20px pt-20px">
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858">이벤트 중 주간 낙첨 포인트 지급은 21년 6월 7일 이후 베팅건 부터 아래와 같이 적용됩니다.</div>
+                    <div style={{fontSize: '2.8125rem', padding: '2.6875rem 1.875rem'}} className="font-spoqa">
+                        <div className="flex items-center tracking-tight text-gray-r585858">이벤트 중 주간 낙첨 포인트 지급은 21년 6월 7일 이후 베팅건 부터 아래와 같이 적용됩니다.</div>
                         <div 
-                            style={{color:"#c0392b"}} 
-                            className="h-16px flex items-center text-16px font-spoqaMedium tracking-tight mt-37px">
+                            style={{color:"#c0392b", margin: '7.5rem 0'}} 
+                            className="flex items-center tracking-tight mt-37px">
                                 [낙첨 금액별 쿠폰 금액]
                         </div>
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-19px">
+                        <div className="flex items-center tracking-tight text-gray-r585858 mt-19px">
                             10만원 ~     5,000 쿠폰
                         </div>
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-19px">
+                        <div className="flex items-center tracking-tight text-gray-r585858 mt-19px">
                             20만원 이상     10,000  쿠폰
                         </div>
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-19px">
+                        <div className="flex items-center tracking-tight text-gray-r585858 mt-19px">
                             30만원 이상     15,000  쿠폰
                         </div>
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-19px">
+                        <div className="flex items-center tracking-tight text-gray-r585858 mt-19px">
                             50만원 이상     25,000  쿠폰
                         </div>
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-19px">
+                        <div className="flex items-center tracking-tight text-gray-r585858 mt-19px">
                             100만원 이상     50,000  쿠폰
                         </div>
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-19px">
+                        <div className="flex items-center tracking-tight text-gray-r585858 mt-19px">
                             300만원 이상     150,000  쿠폰
                         </div>
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-19px">
+                        <div className="flex items-center tracking-tight text-gray-r585858 mt-19px">
                             500만원 이상     낙첨액 5%  쿠폰
                         </div>
 
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-36px">
+                        <div style={{margin: '7.5rem 0'}} className="flex items-center tracking-tight text-gray-r585858 mt-36px">
                             * 2021년 5월 31일 ~ 6월 6일 (일요일)까지 베팅 내역을 화요일 낙첨금액 5% 쿠폰 발행되며,
                         </div>
-                        <div className="h-14px flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r585858 mt-21px">
-                            <p style={{color:"#2980b9"}}>* 2021년 6월 7일 (월) 이후 베팅에 대한 낙첨쿠폰은 위 기준에 따라 제공</p>되오니 참고 부탁 드립니다.
+                        <div className="flex items-center tracking-tight text-gray-r585858 mt-21px">
+                            <span style={{color:"#2980b9"}}>* 2021년 6월 7일 (월) 이후 베팅에 대한 낙첨쿠폰은 위 기준에 따라 제공 <span className='text-gray-r585858'>되오니 참고 부탁 드립니다.</span></span>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div className="flex space-x-4px my-20px justify-end">
-                <button className="flex items-center justify-center w-90px h-36px rounded-lg bg-red-cb4343 hover:opacity-75">
-                    <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">수정하기</span>
+            <div style={{margin: '3.75rem 0'}} className="w-full flex justify-end">
+                <button style={{padding: '0.1875rem', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-red-cb4343 hover:opacity-75">
+                    <div className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
+                        <span className="font-spoqaMedium tracking-tight text-white">수정하기</span>
                     </div>
                 </button>
-                <button className="flex items-center justify-center w-90px h-36px rounded-lg bg-gray-r171a1d hover:opacity-75" >
-                    <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">삭제하기</span>
+                <button style={{padding: '0.1875rem', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 rounded-lg bg-gray-r171a1d hover:opacity-75" >
+                    <div className="flex items-center justify-center h-full w-full rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
+                        <span className="font-spoqaMedium tracking-tight text-white">삭제하기</span>
                     </div>
                 </button>
             </div>
 
 
-            <div style={{height:"171px", borderRadius:"1em"}} className="w-full bg-gray-fafafa shadow-subNavbar px-20px pb-20px">
-                <div className="h-58px flex items-center space-x-10px">
-                    <p className="text-15px font-spoqaMedium tracking-tight text-gray-r454545">댓글 작성하기</p>
-                    <div className="w-17px h-17px text-white text-12px font-roboto flex items-center justify-center rounded-full bg-red-notification pt-px">2</div>
+            <div style={{borderRadius:"1em", padding: '1.875rem'}} className="w-full bg-gray-fafafa shadow-subNavbar">
+                <div className="flex items-center justify-between space-x-10px">
+                    <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545">댓글 작성하기</p>
+                    <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem'}} className='flex justify-center align-center rounded-full border-b border-gray-b7b7b7'>
+                        <div style={{marginRight: '0.6875rem'}} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">댓글</div>
+                        <div className="text-red-d52e2e font-roboto flex items-center justify-center">2</div>
+                    </div>
                 </div>
-                <div style={{height:"93px", borderRadius:"1em"}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
+                <div style={{height:"17.4375rem", borderRadius:"1.625rem", marginTop: '3.375rem', fontSize: '2.8125rem'}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
 
                     <textarea 
-                        style={{width: "1099px", resize: "none", WebkitTextStroke:"0.2px"}}
-                        className="outline-none w-full px-19px py-19px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
+                        style={{width: "60.9375rem", padding: '3.5625rem', resize: "none", WebkitTextStroke:"0.2px", paddingTop: '1.8rem'}}
+                        className="overflow-hidden outline-none w-full font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                         placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                     />
 
-                    <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2 hover:opacity-75">
-                        <div style={{width:"118px", borderRadius:"1em"}} className="flex items-center justify-center h-91px w-118px bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">댓글작성</span>
+                    <button style={{borderRadius:"1.625rem", width: '10.5625rem', padding: '0.1875rem'}} className="right-0 absolute flex items-center justify-center h-full bg-blue-r2068b2 hover:opacity-75">
+                        <div style={{borderRadius:"1.625rem"}} className="flex items-center justify-center h-full w-full bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                            <span className="font-spoqaMedium tracking-tight text-white pt-px">등록</span>
                         </div>
                     </button>
                 </div>
             </div>
 
 
-            <div style={{borderRadius:"1em"}} className="w-full bg-gray-fafafa shadow-subNavbar mt-20px pb-20px">
-                <div style={{height:"123px"}} className="border-b border-gray-dddddd px-20px"> 
-                    <div className="h-58px w-full flex items-center flex justify-between">
+            <div style={{borderRadius:"1em", marginTop: '3.75rem', padding: '1.875rem'}} className="w-full bg-gray-fafafa shadow-subNavbar mt-20px pb-20px">
+                <div className="border-b border-gray-dddddd px-20px"> 
+                    <div className="w-full flex items-center flex justify-between">
                         <div className="flex items-center space-x-5px">
-                            <img src={Rank2} alt="" />
-                            <p className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
-                        </div>
-                        <div className="flex space-x-4px my-20px justify-end">
-                            <button className="flex items-center justify-center w-90px h-36px rounded-lg bg-red-cb4343 hover:opacity-75">
-                                <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
-                                    <span className="font-spoqaMedium tracking-tight text-14px text-white">수정하기</span>
-                                </div>
-                            </button>
-                            <button className="flex items-center justify-center w-90px h-36px rounded-lg bg-gray-r171a1d hover:opacity-75" >
-                                <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                    <span className="font-spoqaMedium tracking-tight text-14px text-white">삭제하기</span>
-                                </div>
-                            </button>
+                            <img style={{width: '3.625rem', height: '4.4375rem'}} src={Rank2} alt="" />
+                            <p style={{fontSize: '2.625rem'}} className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
+                            <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
+                            <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                         </div>
                     </div>
                     
-                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
-                        <p className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
-                        <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
+                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '3.3125rem', marginBottom: '1.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
+                        <p style={{fontSize: '2.8125rem'}} className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
+                    </div>
+                    <div style={{marginBottom: '1.125rem'}} className='flex'>
+                        <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <div className="text-red-d52e2e font-roboto flex items-center justify-center">수정</div>
+                        </div>
+                        <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <div className="text-red-d52e2e font-roboto flex items-center justify-center">삭제</div>
+                        </div>
                     </div>
                 </div>
 
-                <ReplyCell rank={5} />
+                <ReplyCell rank={5} isOneButton={true} />
                 <ReplyCell rank={2} username="신풍사우나" isEdit={true} text="오전에 발행되나요?" tag="소유"/>
             </div>
 
 
 
-            <div style={{borderRadius:"1em"}} className="w-full bg-gray-fafafa shadow-subNavbar mt-20px">
-                <div style={{height:"123px"}} className="border-b border-gray-dddddd px-20px"> 
-                    <div className="h-58px w-full flex items-center flex justify-between">
+            <div style={{borderRadius:"1em", marginTop: '3.75rem', padding: '1.875rem'}} className="w-full bg-gray-fafafa shadow-subNavbar mt-20px">
+                <div className="border-b border-gray-dddddd px-20px"> 
+                    <div className="w-full flex items-center flex justify-between">
                         <div className="flex items-center space-x-5px">
-                            <img src={Rank2} alt="" />
-                            <p className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
-                        </div>
-                        <div className="flex space-x-4px my-20px justify-end">
-                            <button className="flex items-center justify-center w-90px h-36px rounded-lg bg-red-cb4343 hover:opacity-75">
-                                <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
-                                    <span className="font-spoqaMedium tracking-tight text-14px text-white">수정하기</span>
-                                </div>
-                            </button>
-                            <button className="flex items-center justify-center w-90px h-36px rounded-lg bg-gray-r171a1d hover:opacity-75" >
-                                <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                    <span className="font-spoqaMedium tracking-tight text-14px text-white">삭제하기</span>
-                                </div>
-                            </button>
+                            <img style={{width: '3.625rem', height: '4.4375rem'}} src={Rank2} alt="" />
+                            <p style={{fontSize: '2.625rem'}} className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
+                            <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
+                            <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                         </div>
                     </div>
                     
-                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
-                        <p className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
-                        <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
+                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '3.3125rem', marginBottom: '1.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
+                        <p style={{fontSize: '2.8125rem'}} className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
+                    </div>
+                    <div style={{marginBottom: '1.125rem'}} className='flex'>
+                        <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <div className="text-red-d52e2e font-roboto flex items-center justify-center">수정</div>
+                        </div>
+                        <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <div className="text-red-d52e2e font-roboto flex items-center justify-center">삭제</div>
+                        </div>
                     </div>
                 </div>
-                <div style={{height:"115px"}} className="px-20px py-11px">
-                    <div style={{height:"93px", borderRadius:"1em"}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
+                {/* text-gray-r7b7b7b */}
+
+
+
+
+                {/* <div style={{height:"115px"}} className="px-20px py-11px"> */}
+                    <div style={{height:"17.4375rem", borderRadius:"1.625rem", marginTop: '3.375rem', fontSize: '2.8125rem'}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
+
                         <textarea 
-                            style={{width: "1099px", resize: "none", WebkitTextStroke:"0.2px"}}
-                            className="outline-none w-full px-19px py-19px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
+                            style={{width: "60.9375rem", padding: '3.5625rem', resize: "none", WebkitTextStroke:"0.2px", paddingTop: '1.8rem'}}
+                            className="overflow-hidden outline-none w-full font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                             placeholder="두개의 이벤트 모두 참여하였습니다."
                         />
 
-                        <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2 hover:opacity-75">
-                            <div style={{width:"118px", borderRadius:"1em"}} className="flex items-center justify-center h-91px w-118px bg-black border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">댓글수정</span>
+                        <button style={{borderRadius:"1.625rem", width: '10.5625rem', padding: '0.1875rem'}} className="right-0 absolute flex items-center justify-center h-full bg-blue-r2068b2 hover:opacity-75">
+                            <div style={{borderRadius:"1.625rem"}} className="flex items-center justify-center h-full w-full bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                                <span className="font-spoqaMedium tracking-tight text-white pt-px">등록</span>
                             </div>
                         </button>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
 
-            <div style={{borderRadius:"1em"}} className="w-full bg-gray-fafafa shadow-subNavbar mt-20px">
-                <div style={{height:"123px"}} className="border-b border-gray-dddddd px-20px"> 
-                    <div className="h-58px w-full flex items-center flex justify-between">
-                        <div className="flex items-center space-x-5px">
-                            <img src={Rank2} alt="" />
-                            <p className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
-                        </div>
-                        <button className="flex items-center justify-center h-36px w-90px rounded-lg bg-blue-r0070d9 hover:opacity-75">
-                            <div className="flex items-center justify-center h-34px w-88px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white">답글달기</span>
+            <div style={{borderRadius:"1em", marginTop: '3.75rem', padding: '1.875rem'}} className="w-full bg-gray-fafafa shadow-subNavbar mt-20px">
+                <div className="border-b border-gray-dddddd px-20px"> 
+                        <div className="w-full flex items-center flex justify-between">
+                            <div className="flex items-center space-x-5px">
+                                <img style={{width: '3.625rem', height: '4.4375rem'}} src={Rank2} alt="" />
+                                <p style={{fontSize: '2.625rem'}} className="text-15px font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
+                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
+                                <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
                             </div>
-                        </button>
+                        </div>
+                        
+                        <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '3.3125rem', marginBottom: '1.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
+                            <p style={{fontSize: '2.8125rem'}} className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
+                        </div>
+                        <div style={{marginBottom: '1.125rem'}} className='flex'>
+                            <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                                <div className="text-gray-r7b7b7b font-roboto flex items-center justify-center">수정</div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px"}} className="h-54px w-full bg-white border border-gray-dddddd flex items-center px-20px justify-between">
-                        <p className="text-15px font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
-                        <p className="text-gray-r7b7b7b text-13px tracking-tight font-spoqa">2021.06.28 15:36</p>
-                    </div>
-                </div>
-                <div style={{height:"115px"}} className="px-20px py-11px">
-                    <div style={{height:"93px", borderRadius:"1em", WebkitTextStroke:"0.2px"}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
+
+                    <div style={{height:"17.4375rem", borderRadius:"1.625rem", marginTop: '3.375rem', fontSize: '2.8125rem'}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
+
                         <textarea 
-                            style={{width: "1099px", resize: "none"}}
-                            className="outline-none w-full px-19px py-19px text-14px font-spoqa tracking-tight placeholder-gray-r8f8f8f"
+                            style={{width: "60.9375rem", padding: '3.5625rem', resize: "none", WebkitTextStroke:"0.2px", paddingTop: '1.8rem'}}
+                            className="overflow-hidden outline-none w-full font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                             placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                         />
 
-                        <button style={{borderRadius:"1em"}} className="right-0 absolute flex items-center justify-center h-93px w-120px bg-blue-r2068b2 hover:opacity-75">
-                            <div style={{width:"118px", borderRadius:"1em"}} className="flex items-center justify-center h-91px w-118px bg-black border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">답글작성</span>
+                        <button style={{borderRadius:"1.625rem", width: '10.5625rem', padding: '0.1875rem'}} className="right-0 absolute flex items-center justify-center h-full bg-blue-r2068b2 hover:opacity-75">
+                            <div style={{borderRadius:"1.625rem"}} className="flex items-center justify-center h-full w-full bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                                <span className="font-spoqaMedium tracking-tight text-white pt-px">등록</span>
                             </div>
                         </button>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
 
 
-            <div className="mt-20px mb-60px flex items-start justify-between">
-                <button className="flex items-center justify-center h-36px w-90px rounded-lg bg-gray-r171a1d hover:opacity-75">
+            <div style={{marginTop: '3.75rem', marginBottom: '20rem'}} className="w-full flex items-start justify-between">
+                <button style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-34px w-88px bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
                     >
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">이전</span>
+                        <span className="font-spoqaMedium tracking-tight text-white">이전</span>
                     </div>
                 </button>
 
                 <button 
-                    className="flex items-center justify-center h-52px w-192px rounded-lg bg-gray-r171a1d hover:opacity-75"
+                    style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
+                    className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard')}
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-50px w-190px bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
                     >
-                        <span className="font-spoqaMedium tracking-tight text-16px text-white">목록보기</span>
+                        <span className="font-spoqaMedium tracking-tight text-white">목록보기</span>
                     </div>
                 </button>
 
                 <button 
-                    className="flex items-center justify-center h-36px w-90px rounded-lg bg-gray-r171a1d hover:opacity-75"
+                    style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem'}} 
+                    className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard/view2')}
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-34px w-88px bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
                     >
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">다음</span>
+                        <span className="font-spoqaMedium tracking-tight text-white">다음</span>
                     </div>
                 </button>
             </div>

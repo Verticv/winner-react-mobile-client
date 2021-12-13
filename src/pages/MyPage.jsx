@@ -102,7 +102,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
       text: "게시판",
       icon: Icon1,
       id: 8,
-      path: "#",
+      path: "/freeboard",
       mainPath: "#",
     },
     {
