@@ -1,4 +1,4 @@
-import DropDownControls from 'components/dropdowns/DropDownControls';
+import MobileDropDownControls from 'components/dropdowns/MobileDropDownControls';
 import Pagination from 'components/myPage/Pagination';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router';
@@ -272,20 +272,20 @@ const FreeBoardMain = () => {
     const dropDownCellClass = "flex w-120px h-40px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
 
     const searchDropdown = (
-        <div className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
-            <button className={dropDownCellClass} onClick={() => {
+        <div style={{width: '15rem'}} className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
+            <button style={{width: '15rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("제목")
                 setDropdownOpen(false)
             }}>
                 제목
             </button>
-            <button className={dropDownCellClass} onClick={() => {
+            <button style={{width: '15rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("본문")
                 setDropdownOpen(false)
             }}>
                 본문
             </button>
-            <button className={dropDownCellClass} onClick={() => {
+            <button style={{width: '15rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("작성자")
                 setDropdownOpen(false)
             }}>
@@ -295,34 +295,36 @@ const FreeBoardMain = () => {
     )
 
     const dropdownButton = (
-        <div className="flex w-120px h-42px bg-white rounded-md border border-gray-dddddd group">
+        <div style={{width: '15rem'}} className="flex h-full bg-white rounded-md border border-gray-dddddd group">
             <input  className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
             >
-                <label className="ml-14px cursor-pointer group-hover:text-black">{selectedCarrier}</label>
-                <img className="w-10px h-6px object-contain mr-10px" src={DownArrowIcon} alt="arrow" /> 
+                <label style={{fontSize: '2.8125rem'}} className="ml-14px cursor-pointer group-hover:text-black">{selectedCarrier}</label>
+                <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" /> 
             </div>
         </div>
     )
 
     const InboxSearch = (
-        <div className="h-102px w-full bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex items-center justify-center space-x-10px">
-            <DropDownControls 
+        <div style={{padding: '1.9375rem', height: '10.4375rem'}} className="w-full bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex items-center justify-center space-x-10px">
+            <MobileDropDownControls 
                 buttonChild={dropdownButton} 
                 isDropdownOpen={isDropdownOpen} 
                 setDropdownOpen={setDropdownOpen}
+                dropdownContainerStyle={{marginTop: '6.75rem'}}
             >
                 {searchDropdown}
-            </DropDownControls>
+            </MobileDropDownControls>
 
-            <div className="flex w-381px h-42px bg-white rounded-md border border-gray-dddddd">
+            <div className="flex w-full h-full bg-white rounded-md border border-gray-dddddd">
                 <input 
-                    className="pl-11px rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight"
+                    style={{fontSize: '2.8125rem', paddingLeft: '1.5625rem'}}
+                    className="rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"
                     placeholder="검색어를 입력해 주세요"
                 />
-                <button className="flex items-center justify-center w-42px h-42px rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px flex-shrink-0 hover:opacity-75">
-                    <img src={SearchIcon} alt=""/>
+                <button style={{width: '6.75rem'}} className="flex items-center justify-center h-full rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px flex-shrink-0 hover:opacity-75">
+                    <img style={{width: '3.125rem', height: '3.125rem'}} src={SearchIcon} alt=""/>
                 </button>
             </div>
         </div>
@@ -331,12 +333,15 @@ const FreeBoardMain = () => {
     function InboxList({ items }) {
         return items.map(item => (
             <button 
+                style={{height: '11.625rem'}}
                 key={item.id} 
-                className={`font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd`}
+                className='relative font-spoqaMedium text-14px tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd'
                 onClick={() => history.push(item.path)}
             >
                 <div 
                     style={{
+                        padding: '1.75rem 2.2rem',
+                        paddingBottom: "1.5rem",
                         backgroundColor: 
                         item.type === "안내" 
                         ? "#e5edfb" 
@@ -346,80 +351,88 @@ const FreeBoardMain = () => {
                         ? "#f7f9fc"
                         : ""
                     }}
-                    className="flex items-center font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd" >     
+                    className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full border-b border-gray-dddddd" >     
                     
-                    <div style={{width: "128px"}} className="font-spoqaMedium text-14px tracking-tight text-gray-r585858 flex items-center justify-center">
-                        {item.type === "안내" 
-                        ? <img src={BlueSpeaker} alt="" />
-                        : item.type === "이벤트" 
-                        ? <img src={YellowSpeaker} alt="" />
-                        : item.id
-                        }
-                    </div>   
-
-                    <div 
-                        style={{width: "808px"}}
-                        className={`w-612px flex items-center space-x-10px font-spoqaMedium text-gray-r585858 group`}>
-                        {
-                            item.type === "안내" 
-                            ? <div className="w-45px h-25px rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white text-12px">안내</div> 
+                    {item.type === "안내" || item.type === "이벤트" ? (
+                        <div style={{marginRight: '2.375rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858 flex items-center justify-center">
+                            {item.type === "안내" 
+                            ? <img style={{width: '3.3125rem'}} src={BlueSpeaker} alt="" />
                             : item.type === "이벤트" 
-                            ? <div className="w-53px h-25px rounded-full bg-yellow-ffab39 flex items-center justify-center text-white text-12px">이벤트</div> 
-                            : <div></div>
-                        }
-                        <p
-                            className={`${
-                                item.type === "안내" 
-                                ? "text-blue-r0056a6 group-hover:text-blue-700" 
-                                : item.type === "이벤트" 
-                                ? "text-yellow-a65600 group-hover:text-yellow-600" 
-                                : "group-hover:text-black"
-                            }`}
-                        >
-                            {item.text}
-                        </p>
-                        {item.replies && (
-                            <div className="h-17px pl-7px pr-8px rounded-full flex items-center justify-center text-white font-roboto text-12px bg-blue-r0056a6">{item.replies}</div>
-                        )}
-                        {item.isBetHistory === true && (
-                            <div style={{backgroundColor: "#41b06c"}} className="h-25px w-65px rounded-full flex items-center justify-center text-white font-spoqaMedium text-12px">베팅내역</div>
-                        )}
-                        {item.isRead === false && (
-                            <div className="w-18px h-18px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto">
-                                <p className="flex items-center h-12px pr-px pt-px">N</p>
-                            </div>
-                        )}
-                    </div>
-
-                    <div 
-                        style={{width: "108px"}}
-                        className={`w-158px flex justify-center font-spoqaMedium tracking-tight text-r585858 text-center`} >
-                            {item.type !== "일반"
-                            ? <img src={WinnerLogo} alt="" />
-                            : (
-                                <div className="flex space-x-2px">
-                                    {
-                                    item.level === 1 
-                                    ? <img src={Rank1} alt="" />
-                                    : item.level === 2
-                                    ? <img src={Rank2} alt="" />
-                                    : item.level === 3 
-                                    ? <img src={Rank3} alt="" />
-                                    : item.level === 4
-                                    ? <img src={Rank4} alt="" />
-                                    : <img src={Rank5} alt="" />
-                                    }
-                                    <p>{item.author}</p>
-                                </div>
-                            )
+                            ? <img style={{width: '3.3125rem'}} src={YellowSpeaker} alt="" />
+                            : ''
                             }
+                        </div> 
+                    ): (<></>)}
+
+                      
+
+                    <div className='w-full h-full flex flex-wrap'>
+                        <div 
+                            className={`w-full flex items-center font-spoqaMedium text-gray-r585858 group`}>
+                            {
+                                item.type === "안내" 
+                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4">안내</div> 
+                                : item.type === "이벤트" 
+                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4">이벤트</div> 
+                                : <div></div>
+                            }
+                            <p  
+                            style={{textOverflow: 'ellipsis', maxWidth: '46rem'}}
+                                className={`${
+                                    item.type === "안내" 
+                                    ? "text-blue-r0056a6 group-hover:text-blue-700" 
+                                    : item.type === "이벤트" 
+                                    ? "text-yellow-a65600 group-hover:text-yellow-600" 
+                                    : "group-hover:text-black"
+                                } text-5xl text-ellipsis overflow-hidden whitespace-nowrap`}
+                            >
+                                {item.text}
+                            </p>
+                            {item.replies && (
+                                <div style={{width: '7.0625rem', height: '7.0625rem', borderWidth: '0.1875rem', fontSize: "2.25rem", top: '2.375rem', right: '2.375rem'}} className="absolute pl-7px pr-8px rounded-full flex items-center justify-center border text-red-d52e2e font-roboto">{item.replies}</div>
+                            )}
+                            {item.isBetHistory === true && (
+                                <div style={{backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', marginLeft: '1.1875rem'}} className="rounded-full flex items-center justify-center text-white font-spoqaMedium">베팅내역</div>
+                            )}
+                            {item.isRead === false && (
+                                <div style={{width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem'}} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4">
+                                    <p className="flex items-center pr-px pt-px">N</p>
+                                </div>
+                            )}
                         </div>
-                    <div style={{width: "216px"}} className="w-70px flex items-center justify-center text-gray-r585858 font-spoqa">
-                        {item.type !== "일반"
-                            ? ""
-                            : item.time
-                        }
+
+                        <div 
+                            className={`w-full flex justify-start font-spoqaMedium tracking-tight text-r585858 text-center`} >
+                                {item.type !== "일반"
+                                ? <img style={{width: '12.0625rem', height: '3rem'}} src={WinnerLogo} alt="" />
+                                : (
+                                    <div className="w-full flex space-x-2px align-center">
+                                        {
+                                        item.level === 1 
+                                        ? <img style={{width: "3.875rem", height: '4.5625rem'}} src={Rank1} alt="" />
+                                        : item.level === 2
+                                        ? <img style={{width: "3.875rem", height: '4.5625rem'}} src={Rank2} alt="" />
+                                        : item.level === 3 
+                                        ? <img style={{width: "3.875rem", height: '4.5625rem'}} src={Rank3} alt="" />
+                                        : item.level === 4
+                                        ? <img style={{width: "3.875rem", height: '4.5625rem'}} src={Rank4} alt="" />
+                                        : <img style={{width: "3.875rem", height: '4.5625rem'}} src={Rank5} alt="" />
+                                        }
+                                        <p className='flex items-center text-gray-r7b7b7b' style={{fontSize: '2.625rem', marginLeft: '0.6875rem'}}>{item.author}</p>
+                                        <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
+                                        {item.type === "일반" && (
+                                            <div style={{fontSize: '2.625rem'}} className="flex items-center text-gray-r7b7b7b font-spoqa">
+                                                {item.time}
+                                            </div>
+                                        )}
+                                    </div>
+                                )
+                                }
+                        </div>
                     </div>
+                    
+                    
+                    
                     
                 </div>
             </button>
@@ -429,13 +442,7 @@ const FreeBoardMain = () => {
     return (
         <div className="w-full">
 
-            <div style={{borderRadius:"1em"}} className="shadow-subNavbar w-full overflow-hidden">
-                <div className="h-56px bg-gray-fafafa w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r454545">
-                    <div style={{width: "128px"}} className="flex items-center justify-center">번호</div>
-                    <div style={{width: "808px"}} className="flex items-center justify-center">제목</div>
-                    <div style={{width: "108px"}} className="flex items-center justify-center">닉네임</div>
-                    <div style={{width: "216px"}} className="flex items-center justify-center">등록일시</div>
-                </div>
+            <div style={{borderRadius:"1em", margin: '1.875rem'}} className="shadow-subNavbar overflow-hidden">
 
                 <div className="flex flex-col w-full">
                     <InboxList items={cellArray} />
@@ -443,20 +450,20 @@ const FreeBoardMain = () => {
             </div>
 
 
-            <div className="mt-20px flex justify-end">
-                <button onClick={() => history.push('/freeboard/compose')} className="flex items-center justify-center h-36px w-90px rounded-lg bg-blue-r0070d9 hover:opacity-75">
-                    <div className="flex items-center justify-center h-34px w-88px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white">작성하기</span>
+            <div style={{marginTop: '3.9375rem', marginBottom: '3.75rem'}} className="w-full flex justify-center">
+                <button style={{width: '36.4375rem', height: '7.3125rem', padding: '0.1875rem'}} onClick={() => history.push('/freeboard/compose')} className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75">
+                    <div className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                        <span style={{fontSize: "2.8125rem"}} className="font-spoqaMedium tracking-tight text-white">작성하기</span>
                     </div>
                 </button>
             </div>
             
 
-            <div className="flex w-full justify-center mt-14px">
-                <Pagination page={page} setPage={setPage}/>   
+            <div className="flex w-full justify-center">
+                <Pagination withMarginBottom={false} page={page} setPage={setPage}/>   
             </div>
 
-            <div className="-mt-30px mb-60px">
+            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '50rem'}} className="">
                 {InboxSearch}
             </div>
             
