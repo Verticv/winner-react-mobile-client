@@ -18,6 +18,12 @@ const SubHorizontalMenu = ({
                 imageWidth = '14.3rem';
             } else if (index === 3 ) {
                 imageWidth = '12.25rem';
+            } else if (index === 4 ) {
+                imageWidth = '9rem';
+            } else if (index === 5 ) {
+                imageWidth = '11rem';
+            } else if (index === 6 ) {
+                imageWidth = '13rem';
             }
 
             return (
@@ -26,8 +32,7 @@ const SubHorizontalMenu = ({
                         borderRadius:"1.625rem",
                         width: '20.81rem',
                         height: '13.18rem',
-                        marginRight: '0.1875rem',
-                        padding: '0.1875rem'
+                        marginRight: '0.9375rem',
                     }}
                     key={item.id} 
                     className={`${
@@ -51,7 +56,7 @@ const SubHorizontalMenu = ({
                         }}
                         className={`mt-px h-full w-full rounded-b-md rounded-t-lg flex flex-col items-center justify-center border-gray-b7b7b7`}
                     >
-                        <img style={{ width: imageWidth}} className="h-full mt-8px ml-2px w-10 object-contain" src={item.icon} alt="" />
+                        <img style={{ width: imageWidth}} className="h-full mt-2 ml-2px w-10 object-contain" src={item.icon} alt="" />
                         <div className='h-24'>
                             <span style={{marginTop: '1.68rem'}} className={`text-4xl font-spoqaMedium tracking-tight text-gray-r7b7b7b mb-10px mt-2px ${item.custom}`} >{item.text}</span>
                         </div>
