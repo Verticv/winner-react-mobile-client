@@ -205,16 +205,17 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const myInfo = (
     <>
     <div className="w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
-        <div style={{marginBottom: '1.875rem'}} className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec">
-          <span style={{fontSize: '4rem'}} className="spoqaBold font-semibold">마이 인포</span>
+        <div style={{marginBottom: '1.875rem'}} className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec cursor-pointer">
+          <span style={{fontSize: '4rem'}} className="font-spoqaBold">마이 인포</span>
           <img
+            onClick={() => history.push( isAuthenticated ? "/main" : "/")}
             className="absolute right-12 top-12 w-14"
             src={CloseIcon}
             alt="close_icon"
           />
         </div>
         <div className="px-10 w-full">
-          <div className="relative flex w-full z-10 flex-wrap bg-blue-e8f3fd rounded-3xl">
+          <div style={{borderRadius: '3.75rem'}} className="relative flex w-full z-10 flex-wrap bg-blue-e8f3fd">
             {isAuthenticated && (<div style={{padding: '2.4375rem', paddingBottom: '1.3125rem'}} className="flex w-full">
               <div style={{width: '23.6rem'}}>
                 <img style={{maxWidth: '23.6rem', width: '23.6rem'}} src={ProfileIcon} alt="profile_icon" />
@@ -228,7 +229,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
                   <span className="text-gray-a4b1b4 font-semibold">님</span>
                 </p>
                 <div>
-                  <div className="flex w-full items-center bg-white rounded-t-2xl p-1.5 pr-4 border-b-2 border-blue-e8f3fd">
+                  <div style={{borderTopRightRadius: '3.75rem', borderTopLeftRadius: '3.75rem', padding: '0.75rem', paddingRight: '1rem'}} className="flex w-full items-center bg-white rounded-t-2xl p-1.5 pr-4 border-b-2 border-blue-e8f3fd">
                     <div className="w-1/6 ">
                       <div className="flex justify-center items-center text-white h-24 w-24 rounded-full text-6xl bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
                         ₩
@@ -236,7 +237,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
                     </div>
                     <p className="w-5/6 m-0 text-6xl spoqaBold text-right text-blue-r1ca7ec font-semibold">100,000,000 원</p>
                   </div>
-                  <div className="flex w-full items-center bg-white rounded-b-2xl p-1.5 pr-4">
+                  <div style={{borderBottomRightRadius: '3.75rem', borderBottomLeftRadius: '3.75rem', padding: '0.75rem', paddingRight: '1rem'}} className="flex w-full items-center bg-white rounded-b-2xl p-1.5 pr-4">
                     <div className="w-1/6 ">
                       <div className="flex justify-center items-center text-white h-24 w-24 rounded-full text-6xl bg-orange-ff7e00 shadow-plain2">
                         P
@@ -270,7 +271,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               </DropDownControls>
             </div>
           </div>
-          <div className="flex w-full justify-between items-center pt-16 -mt-14 h-52 rounded-3xl bg-gray-d9e6f2">
+          <div style={{borderBottomRightRadius: '3.75rem', borderBottomLeftRadius: '3.75rem'}} className="flex w-full justify-between items-center pt-16 -mt-14 h-52 rounded-3xl bg-gray-d9e6f2">
             <div className="flex items-center space-x-2px pr-10px ml-24">
               <img
                 className="w-36 object-contain"

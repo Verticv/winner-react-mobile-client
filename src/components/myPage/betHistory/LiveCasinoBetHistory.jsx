@@ -7,15 +7,18 @@ import Icon1 from '../../../images/newImages/mypage/live-casino/ico-1.png'
 import Icon2 from '../../../images/newImages/mypage/live-casino/ico-2.png'
 import Icon3 from '../../../images/newImages/mypage/live-casino/ico-3.png'
 import Icon4 from '../../../images/newImages/mypage/live-casino/ico-4.png'
+import Icon7 from '../../../images/myPage/betHistory/dg.png'
+import Icon8 from '../../../images/myPage/betHistory/sexy.png'
+import Icon9 from '../../../images/myPage/betHistory/big.png'
 
 const subTabsArray = [
     { text: "전체", icon: Icon1, id: 0 },
     { text: "에볼루션", icon: Icon2, id: 1 },
     { text: "아시아게이밍", icon: Icon3, id: 2 },
     { text: "프레그메틱플레이", icon: Icon4, id: 3, custom: "mt-8px" },
-    { text: "드림게이밍", icon: Icon1, id: 4 },
-    { text: "섹시게이밍", icon: Icon1, id: 5 },
-    { text: "빅게이밍", icon: Icon1, id: 6 },
+    { text: "드림게이밍", icon: Icon7, id: 4 },
+    { text: "섹시게이밍", icon: Icon8, id: 5 },
+    { text: "빅게이밍", icon: Icon9, id: 6 },
 ];
 
 const tableArrayTitles = [
@@ -108,7 +111,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
             {showSub === true && (
                 <>
                     <div className="w-full relative top-0">
-                    <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff"}} className="absolute w-50px h-full right-0 z-50"></div>
+                    <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                     <div style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
                             <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />

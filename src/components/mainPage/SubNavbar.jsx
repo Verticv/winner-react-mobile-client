@@ -59,7 +59,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 }}
             >
                 <img 
-                    className={`absolute top-0 object-contain w-32 h-32 ml-4 mb-4
+                    className={`absolute top-0 object-contain w-32 h-32 mb-4
                         ${item.id === 0 && "w-40px h-40px pt-4"}
                         ${(selectedTab === item.id && item.id !== 0) ? "w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px -mt-2px` : ""} 
                     `} 

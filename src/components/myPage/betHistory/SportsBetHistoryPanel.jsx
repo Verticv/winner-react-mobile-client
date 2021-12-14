@@ -55,7 +55,7 @@ const SportsBetHistoryPanel = ({
         hasUp = false,
         hasDown = false
     }) => (
-        <div className="flex items-center w-full h-36 p-3 pr-0 bg-gray-fefefe border-b border-gray-dddddd">
+        <div className="flex items-center w-full p-3 pr-0 bg-gray-fefefe border-b border-gray-dddddd">
             <div className="flex">
                 <button 
                     style={{

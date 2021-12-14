@@ -58,3 +58,7 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.place-color-grey::placeholder {
+  color: #7b7b7b;
+}

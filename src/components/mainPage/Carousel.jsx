@@ -45,19 +45,20 @@ const Carousel = () => {
     // as well as change its position and content.
 
     const leftArrow = (
-        <img className="h-12px w-12px object-contain opacity-50" src={LeftArrow} alt="arrow"/>
+        <img style={{width: '1.25rem', height: '2.0625rem'}} className="object-contain opacity-50" src={LeftArrow} alt="arrow"/>
 
     )
 
     const rightArrow = (
-        <img className="h-12px w-12px object-contain opacity-50" src={RightArrow} alt="arrow"/>
+        <img style={{width: '1.25rem', height: '2.0625rem'}} className="object-contain opacity-50" src={RightArrow} alt="arrow"/>
     )
 
     const sliderControl = isLeft => (
         <button
             type="button"
             onClick={isLeft ? previousImage : nextImage}
-            className={`absolute text-white z-10 bg-black h-28px w-28px rounded-sm opacity-50 flex items-center justify-center hover:opacity-75 ${isLeft ? 'left-10px' : 'right-10px'}`}
+            style={{width: '4.84rem', height: '4.84rem', right:`${isLeft ? '' : '1.875rem'}`, left:`${isLeft ? '1.875rem' : ''}`}}
+            className={`absolute text-white z-10 bg-black h-28px w-28px rounded-sm opacity-50 flex items-center justify-center hover:opacity-75`}
         >
             {isLeft ? leftArrow : rightArrow}
         </button>

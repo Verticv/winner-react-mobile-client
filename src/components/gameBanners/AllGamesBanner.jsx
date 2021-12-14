@@ -39,9 +39,6 @@ const AllGamesBanner = () => {
         { id: 14, img: MinigameBanner4, color: "bg-green-e3ba3c", btnText: "게임시작", class: "", path: "/minigame/kinoladder" },
         { id: 15, img: VirtualBanner, color: "bg-green-r7bd26a", btnText: "게임시작", class: "", path: "/minigame/powerball" },
         { id: 16, img: FishingBanner, color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
-
-        // { id: 6, img: WinnerBg, color: "bg-gray-b2b2b2", btnText: "준비중", class: "" },
-        // { id: 7, img: WinnerBg, color: "bg-gray-b2b2b2", btnText: "준비중", class: "" },
     ];
 
     function CardList({ items }) {
@@ -52,7 +49,7 @@ const AllGamesBanner = () => {
                 style={{marginBottom: items.length - 1 === index ? '18rem' : ''}}
             >
                 <img className="z-20 object-contain" src={item.img} alt="background" />
-                <div className={`mr-8 text-4xl shadow-sm absolute z-20 right-0 w-56 h-20 rounded-full flex items-center justify-center text-white font-spoqaBold pt-px ${item.color}`}>{item.btnText}</div>
+                <div style={{boxShadow: '0px 0.125rem 0.25rem 0px rgba(0, 0, 0, 0.3)'}} className={`mr-8 text-4xl absolute z-20 right-0 w-56 h-20 rounded-full flex items-center justify-center text-white font-spoqaBold pt-px ${item.color}`}>{item.btnText}</div>
             </div>
         ));
     }
