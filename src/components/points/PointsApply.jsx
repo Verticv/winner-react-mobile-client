@@ -20,26 +20,26 @@ const PointsApply = () => {
     const Title = ({text}) => (
         <div style={{width: "21.2rem", marginRight: '1.875rem'}} className="flex-shrink-0">
             <div style={{fontSize: '2.625rem'}} className="text-gray-r454545 font-spoqaMedium">{text}</div>
-            <div style={{height: '0.1875rem'}} className="w-full bg-gray-bebebe"></div>
+            <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
         </div>
     )
 
     return (
-        <div style={{padding: '1.875rem'}} className="flex flex-col items-center">
-            <div style={{paddingLeft: '2.0625rem', paddingTop: '2.25rem', paddingBottom: '2.8125rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de px-19px pt-17px">
-                <div className="flex items-center space-x-10px">
-                    <img style={{width: '3.375rem'}} src={AlertIcon} alt="" />
-                    <span style={{fontSize: '2.8125rem'}} className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
+        <div style={{padding: '1.875rem', paddingTop: '0'}} className="flex flex-col items-center">
+            <div style={{paddingLeft: '1.875rem', paddingTop: '1.875rem', paddingBottom: '1.875rem', borderWidth: '0.1875rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de">
+                <div className="flex space-x-10px">
+                    <img style={{width: '3.375rem', height: '3.375rem'}} src={AlertIcon} alt="" />
+                    <span style={{fontSize: '2.8125rem', lineHeight: '1.2'}} className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
                 </div>
-                <div className="mt-18px flex flex-col space-y-14px text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
+                <div style={{marginTop: '1.625rem'}} className="flex flex-col text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
                     <span style={{fontSize: '2.5rem', marginRight: '13.5rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  포인트 전환 시 보유머니로 충전됩니다.</span>
-                    <span style={{fontSize: '2.5rem', marginRight: '6.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  최소 10,000P 이상 신청 가능합니다.</span>
-                    <span style={{fontSize: '2.5rem'}} className=""><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
+                    <span style={{fontSize: '2.5rem', marginRight: '6.875rem', marginTop: '0.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  최소 10,000P 이상 신청 가능합니다.</span>
+                    <span style={{fontSize: '2.5rem', marginTop: '0.875rem'}} className=""><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
                 </div>
             </div>
 
             <div style={{padding: '0.9375rem', paddingBottom: '2.0625rem', marginTop: '1.875rem'}} className="w-full rounded-2xl shadow-subNavbar">
-                <div style={{padding: '2.0625rem'}} className="w-full rounded-2xl border border-gray-dddddd bg-gray-f9f9f9">
+                <div style={{padding: '1.3125rem 2.0625rem'}} className="w-full rounded-2xl border border-gray-dddddd bg-gray-f9f9f9">
                     <div 
                         style={{fontSize: '2.8125rem'}}
                         className="font-spoqaMedium tracking-tight text-gray-r393e41 flex items-center"
@@ -47,48 +47,49 @@ const PointsApply = () => {
                         전환 포인트 입력
                     </div>
                     <div 
-                        style={{fontSize: '2.625rem', marginRight: '0.875rem'}}
-                        className="font-spoqa tracking-tight text-gray-r7c7c7c flex items-center"
+                        style={{fontSize: '2.625rem', marginRight: '1rem'}}
+                        className="font-spoqaMedium tracking-tight text-gray-r7c7c7c flex items-center"
                     >
-                        <span>현재 포인트가 보유머니로 전환되며, 최소<span className='font-spoqaBold text-blue-r0056a6'>10,000</span>P부터 신청 가능합니다</span>
+                        <span>현재 포인트가 보유머니로 전환되며, 최소<span className='font-spoqaBold text-blue-r0056a6'>10,000</span>P부터 신청 가능합니다.</span>
                     </div>
                     
                 </div>
-                
-                <div style={{marginTop: '3.75rem'}} className="flex flex-col">
-                    <div className="flex space-x-10px">
+
+
+                <div style={{marginTop: '2.9375rem', padding: '0 1.125rem'}} className="flex flex-col">
+                    <div className="flex">
                         <Title text="현재 잔여 포인트" />
                         <div className="w-full">
-                            <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858 pl-9px">
+                            <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
                                 <span className="font-spoqaBold text-blue-r0056a6">278</span>P
                             </div>
-                            <div style={{height: '0.1875rem'}} className="w-full bg-gray-bebebe"></div>
+                            <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
                         </div>
                     </div>
-                    <div style={{marginTop: '4.6875rem'}} className="flex space-x-10px">
-                        <Title text="전환 예정 포인트" />
+                    <div style={{marginTop: '4.6875rem'}} className="flex">
+                        <Title text="현재 잔여 포인트" />
                         <div className="w-full">
-                            <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858 pl-9px">
-                                <span className="font-spoqaBold">0</span>P
+                            <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
+                                <span className="font-spoqaBold text-blue-r0056a6">0</span>P
                             </div>
-                            <div style={{height: '0.1875rem'}} className="w-full bg-gray-bebebe"></div>
+                            <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
                         </div>
                     </div>
-                    <div style={{marginTop: '4.6875rem'}} className="flex space-x-10px">
+                    <div style={{marginTop: '4.6875rem'}} className="flex">
                         <Title text="전환 후 잔여 포인트" />
                         <div className="w-full">
-                            <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858 pl-9px">
-                                <span className="font-spoqaBold">0</span>P
+                            <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
+                                <span className="font-spoqaBold text-blue-r0056a6">278</span>P
                             </div>
-                            <div style={{height: '0.1875rem'}} className="w-full bg-gray-bebebe"></div>
+                            <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
                         </div>
                     </div>
                     <div style={{marginTop: '4.6875rem'}} className="flex">
                         <Title text="전환 포인트 입력" />
                         <div className="w-full">
                             <input 
-                                className="w-full font-spoqa text-gray-bebebe outline-none pl-9px placeholder-gray-bebebe"
-                                style={{fontSize: '2.625rem'}}
+                                className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
+                                style={{fontSize: '2.625rem', marginBottom: '0.9375rem'}}
                                 placeholder="직접 입력시 숫자만 입력해 주세요."
                                 value={inputValue !==null ? nf.format(inputValue) : ""}
                                 onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
@@ -107,7 +108,7 @@ const PointsApply = () => {
                 </div>
 
 
-                <div style={{marginTop: '1.875rem', marginBottom: '0'}} className="">
+                <div style={{marginTop: '1.875rem', marginBottom: '0', padding: '0px 1.125rem'}} className="">
                     <div style={{marginBottom: '0.9375rem'}} className="flex w-full h-full items-center justify-between">
                         <button
                             style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
@@ -199,20 +200,7 @@ const PointsApply = () => {
             {/* use PupUp here */}
             <PopupControls isNotFullScreen buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                 <PointsApplyPopup setPopupOpen={setPopupOpen} />
-            </PopupControls> 
-            
-
-
-            {/* <div className="mt-40px">
-                <MoneyChargeTable />
-            </div>
-
-            <div className="mt-20px">
-                <Pagination page={page} setPage={setPage}/>   
-            </div> */}
-
-            {/* <BankTable /> */}
-            {/* <BottomNavbar /> */}
+            </PopupControls>
 
         </div>
     )

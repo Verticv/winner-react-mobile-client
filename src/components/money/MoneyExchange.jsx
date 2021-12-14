@@ -19,7 +19,7 @@ const MoneyExchange = () => {
     return (
         <div style={{padding: '1.875rem', paddingTop: '0'}} className="flex flex-col items-center">
 
-            <div style={{paddingLeft: '1.875rem', paddingTop: '1.875rem', paddingBottom: '1.875rem', borderWidth: '0.1875rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de px-19px pt-17px">
+            <div style={{paddingLeft: '1.875rem', paddingTop: '1.875rem', paddingBottom: '1.875rem', borderWidth: '0.1875rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de">
                 <div className="flex space-x-10px">
                     <img style={{width: '3.375rem', height: '3.375rem'}} src={AlertIcon} alt="" />
                     <span style={{fontSize: '2.8125rem', lineHeight: '1.2'}} className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
