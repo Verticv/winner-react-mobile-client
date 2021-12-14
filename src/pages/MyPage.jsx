@@ -221,10 +221,10 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
                 <img style={{maxWidth: '23.6rem', width: '23.6rem'}} src={ProfileIcon} alt="profile_icon" />
               </div>
               <div className="ml-5 w-full">
-                <p style={{fontSize: '2.8rem', lineHeight: '1', marginBottom: '1.9375rem'}} className="font-robotoBold text-right">
+                <p style={{fontSize: '2.8rem', lineHeight: '0.7', marginBottom: '1.9375rem', marginRight: '1.75rem'}} className="font-robotoBold text-right">
                   LEVEL1
                 </p>
-                <p style={{fontSize: '2.8rem', lineHeight: '1.1', marginBottom: '1.9375rem'}} className="spoqaBold text-right text-blue-r1ca7ec font-semibold">
+                <p style={{fontSize: '2.8rem', lineHeight: '1.1', marginBottom: '1.9375rem', marginRight: '1.75rem'}} className="spoqaBold text-right text-blue-r1ca7ec font-semibold">
                   마이마이프로틴화이팅
                   <span className="text-gray-a4b1b4 font-semibold">님</span>
                 </p>
