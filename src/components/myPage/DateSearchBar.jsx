@@ -84,11 +84,11 @@ const DateSearchBar = ({
                     <div className="space-x-5px">
                         <input 
                             placeholder="리그선택"
-                            className="pt-px mt-px placeholder-gray-r8c8c8c flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" 
+                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" 
                         />
                         <input
                             placeholder="팀명검색" 
-                            className="pt-px mt-px placeholder-gray-r8c8c8c flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
+                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
                     </div>
                 )}
 
@@ -98,19 +98,19 @@ const DateSearchBar = ({
                         <input
                             style={{height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginLeft: '1.875rem'}}
                             placeholder="리그선택" 
-                            className="pt-px mt-px placeholder-gray-r8c8c8c flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
+                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
                             <span style={{fontSize: '2.6rem', marginTop: '1.875rem'}} className="invisible w-8 text-center font-spoqaMedium text-gray-r454545 mt-px">~</span>
                         <input
                             style={{height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginRight: '1.875rem'}}
                             placeholder="팀명검색" 
-                            className="pt-px mt-px placeholder-gray-r8c8c8c flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
+                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
                     </div>
                 )}
 
                 <div className="flex items-center w-full h-full">
                     <div className="relative">
                         <DatePicker 
-                            className="left-input pt-px mt-px flex-shrink-0 outline-none rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c focus:ml-10px"
+                            className="place-color-grey left-input pt-px mt-px flex-shrink-0 outline-none rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r7b7b7b focus:ml-10px"
                             locale="ko" 
                             selected={startDate} 
                             onChange={(date) => setStartDate(date)}
@@ -122,7 +122,7 @@ const DateSearchBar = ({
                     <span style={{fontSize: '2.6rem', marginTop: '1.875rem'}} className="w-8 text-center font-spoqaMedium text-gray-r454545 mt-px">~</span>
                     <div className="relative">
                         <DatePicker 
-                            className="right-input pt-px mt-px flex-shrink-0 outline-none h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" 
+                            className="place-color-grey right-input pt-px mt-px flex-shrink-0 outline-none h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r7b7b7b" 
                             locale="ko"
                             selected={endDate} 
                             onChange={(date) => setEndDate(date)}
@@ -190,7 +190,6 @@ const DateSearchBar = ({
                         </div>
                     )}
                 </div>
-                
 
                 
                 {hasIdSearch && (
