@@ -50,7 +50,7 @@ const LeftMenu = ({
     }
       
     const EditProfileButton = ({path, text, icon, iconHighlight, selectedTab}) => (
-        <div className='h-full' style={{padding: '0 1.875rem'}} className='w-full'>
+        <div style={{padding: '0 1.875rem'}} className='w-full'>
             <button 
             className={`${
                 pathname.includes(path)
