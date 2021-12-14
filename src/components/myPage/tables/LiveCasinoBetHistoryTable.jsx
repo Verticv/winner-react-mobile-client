@@ -23,7 +23,7 @@ const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedS
 
         return items.map((item, index) => (
             <div style={{height: cardHeight, width: `${!hasButton ? '73.875rem' : ''}` , paddingRight: '1.875rem', margin: '1.875rem', marginTop: `${index ? '0': '1.875rem'}`}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
-                <div className="flex flex-wrap items-center w-full h-full">
+                <div style={{marginTop: '-0.5rem'}} className="flex flex-wrap items-center w-full h-full">
                     {hasLeftInput && (
                         <div style={{width: '5.8125rem'}} className="relative text-left pt-7px">
                             <label className="form-control">

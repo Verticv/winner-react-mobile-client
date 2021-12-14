@@ -19,8 +19,8 @@ import Bank17 from '../../images/money/banks/bank17.png'
 
 const BankTable = () => {
     return (
-        <div style={{marginBottom: '16rem'}} className="relative w-full rounded-2xl border border-gray-dddddd flex flex-col" >
-            <div className="h-full w-full flex bg-gray-f9f9f9">
+        <div style={{marginBottom: '16rem', borderWidth: '0.1875rem'}} className="relative w-full rounded-2xl border border-gray-dddddd flex flex-col" >
+            <div className="h-full w-full flex bg-gray-f9f9f9 rounded-t-2xl">
                 <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
                         <img className='m-auto'  src={Bank1} alt="" />
@@ -145,8 +145,8 @@ const BankTable = () => {
                 </div> 
             </div>
 
-            <div className="h-full w-full flex bg-gray-f9f9f9">
-                <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-full justify-center h-full">
+            <div className="h-full w-full flex bg-gray-f9f9f9 rounded-b-2xl">
+                <div style={{height: '13.5rem'}} className="flex table flex-wrap w-full justify-center h-full rounded-b-2xl">
                     <div className="w-full table-cell align-middle" >
                         <img className='h-15px m-auto w-98px'  src={Bank17} alt="" />
                         <p className="text-10px mt-10px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00~00:30</p>
@@ -159,3 +159,5 @@ const BankTable = () => {
 }
 
 export default BankTable
+
+

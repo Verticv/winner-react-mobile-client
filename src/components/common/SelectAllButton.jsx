@@ -12,7 +12,7 @@ const SelectAllButton = ({isAllSelected, setCheckedState, setAllSelected, count 
     }
 
     return (
-        <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem'}} className="flex items-center justify-between">
+        <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem', marginBottom: '2.5rem'}} className="flex items-center justify-between">
                 <div className="flex w-full space-x-2px">
                     <button 
                         style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem'}}
