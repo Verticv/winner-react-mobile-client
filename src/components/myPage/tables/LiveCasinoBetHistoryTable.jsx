@@ -36,8 +36,6 @@ const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedS
                             </label>
                         </div>
                     )}
-                    {/* hasExtraColumns */}
-                    {console.log(`itemitemitem`, item)}
                     <div style={{width: '52.3125rem'}}>
                         {titles?.[0] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[0]?.isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[0].text} : </span> {item.number}</div>)} 
                         {titles?.[1] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[1]?.isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[1].text} : </span> {item.time}</div>)} 
@@ -75,7 +73,7 @@ const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedS
                  : hasButton &&
                     <button style={{width: '10.875rem', height: '10.875rem',  padding: '0.1875rem', backgroundColor: item?.buttonColor || '#0056a6'}} className="flex items-center justify-center rounded-lg hover:opacity-75">
                         <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg cursor-pointer">
-                            <span style={{fontSize: '2.8125rem', lineHeight: '1.1', width: '10.875rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"> {item?.buttonColor === '#0056a6' ? <div> <p>정산</p> <p>완료</p></div> : '진행중'} </span>
+                            <span style={{fontSize: '2.8125rem', lineHeight: '1.1', width: '10.875rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"> {item?.buttonColor === '#0056a6' ? <div> {item.buttonText ? item.buttonText : <><p>정산</p> <p>완료</p></>} </div> : item.buttonText ||'진행중'} </span>
                             {/* <span style={{fontSize: '2.8125rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"></span> */}
                         </div>
                     </button>
