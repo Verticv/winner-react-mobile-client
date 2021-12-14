@@ -47,7 +47,7 @@ const PointsApply = () => {
                         전환 포인트 입력
                     </div>
                     <div 
-                        style={{fontSize: '2.625rem', marginRight: '1rem'}}
+                        style={{fontSize: '2.625rem', marginRight: '5rem'}}
                         className="font-spoqaMedium tracking-tight text-gray-r7c7c7c flex items-center"
                     >
                         <span>현재 포인트가 보유머니로 전환되며, 최소<span className='font-spoqaBold text-blue-r0056a6'>10,000</span>P부터 신청 가능합니다.</span>
@@ -61,7 +61,7 @@ const PointsApply = () => {
                         <Title text="현재 잔여 포인트" />
                         <div className="w-full">
                             <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
-                                <span className="font-spoqaBold text-blue-r0056a6">278</span>P
+                                <span className="font-robotoBold text-blue-r0056a6">278</span>P
                             </div>
                             <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
                         </div>
@@ -70,7 +70,7 @@ const PointsApply = () => {
                         <Title text="현재 잔여 포인트" />
                         <div className="w-full">
                             <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
-                                <span className="font-spoqaBold text-blue-r0056a6">0</span>P
+                                <span className="font-robotoBold text-blue-r0056a6">0</span>P
                             </div>
                             <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
                         </div>
@@ -79,7 +79,7 @@ const PointsApply = () => {
                         <Title text="전환 후 잔여 포인트" />
                         <div className="w-full">
                             <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
-                                <span className="font-spoqaBold text-blue-r0056a6">278</span>P
+                                <span className="font-robotoBold text-blue-r0056a6">278</span>P
                             </div>
                             <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
                         </div>
