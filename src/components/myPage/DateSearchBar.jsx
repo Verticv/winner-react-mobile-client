@@ -99,7 +99,7 @@ const DateSearchBar = ({
                             style={{height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginLeft: '1.875rem'}}
                             placeholder="리그선택" 
                             className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
-                            <span style={{fontSize: '2.6rem', marginTop: '1.875rem'}} className="invisible w-8 text-center font-spoqaMedium text-gray-r454545 mt-px">~</span>
+                            <span style={{fontSize: '2.6rem', marginTop: '1.875rem', width: '1.880875rem'}} className="invisible text-center font-spoqaMedium text-gray-r454545 mt-px">~</span>
                         <input
                             style={{height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginRight: '1.875rem'}}
                             placeholder="팀명검색" 

@@ -16,7 +16,7 @@ const HomePageTopBanner = ({pageTitle}) => {
           src={LeftArrowIcon}
           alt="left_arrow_icon"
       />
-      <span style={{fontSize: '4rem'}} className="text-gray-r454545 font-spoqaBold font-semibold">{pageTitle}</span>
+      <span style={{fontSize: '4rem', lineHeight: '4.4625rem'}} className="text-gray-r454545 font-spoqaBold font-semibold">{pageTitle}</span>
       <img
           onClick={() => history.push('/mypage')}
           style={{width: '3.875rem', height: '3.875rem', top: '1.875rem'}}
