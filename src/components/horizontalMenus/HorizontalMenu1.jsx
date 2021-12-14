@@ -12,7 +12,7 @@ const HorizontalMenu1 = ({
     const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
-        return items.map(item => (
+        return items.map((item, index) => (
             <button 
                 key={item.id} 
                 style={{
@@ -20,7 +20,7 @@ const HorizontalMenu1 = ({
                     borderRadius:"1.625rem",
                     width: '60%',
                     height: '13.18rem',
-                    marginRight: '0.1875rem',
+                    marginRight: items?.length - 1 === index ? '' : '0.1875rem',
                     padding: '0.1875rem'
                 }}
                 className={`${

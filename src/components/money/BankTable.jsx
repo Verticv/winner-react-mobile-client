@@ -29,7 +29,7 @@ const BankTable = () => {
                 </div>
                 <div style={{height: '13.5rem', borderBottom: '0.1875rem solid #dddddd'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank2} alt="" />
+                        <img className='h-13px m-auto w-102px'  src={Bank2} alt="" />
                         <p className="text-10px mt-7px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">23:55 ~ 00:05</p>
                     </div>
                 </div> 
@@ -38,13 +38,13 @@ const BankTable = () => {
             <div className="h-full w-full flex bg-gray-f1f1f1">
                 <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank3} alt="" />
+                        <img className='h-21px m-auto w-75px'  src={Bank3} alt="" />
                         <p className="text-10px mt-7px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00 ~ 01:00</p>
                     </div>
                 </div>
                 <div style={{height: '13.5rem', borderBottom: '0.1875rem solid #dddddd'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank4} alt="" />
+                        <img className='h-15px m-auto w-107px'  src={Bank4} alt="" />
                         <p className="text-10px mt-3px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00 ~ 00:10</p>
                         <p className="text-10px -mt-4px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">(금 00:00 ~ 00:40)</p>
                     </div>
@@ -54,14 +54,14 @@ const BankTable = () => {
             <div className="h-full w-full flex bg-gray-f9f9f9">
                 <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank5} alt="" />
+                        <img style={{width: '96px'}} className='h-17px m-auto'  src={Bank5} alt="" />
                         <p className="text-10px mt-3px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00 ~ 01:00</p>
                         <p className="text-10px -mt-4px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">(일 00:00 ~ 08:00)</p>
                     </div>
                 </div>
                 <div style={{height: '13.5rem', borderBottom: '0.1875rem solid #dddddd'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank6} alt="" />
+                        <img className='h-19px m-auto w-90px'  src={Bank6} alt="" />
                         <p className="text-10px mt-7px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00 ~ 00:10</p>
                     </div>
                 </div> 
@@ -70,14 +70,14 @@ const BankTable = () => {
             <div className="h-full w-full flex bg-gray-f1f1f1">
                 <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank7} alt="" />
+                        <img className='m-auto w-20px w-88px'  src={Bank7} alt="" />
                         <p className="text-10px mt-3px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">23:00 ~ 24:00</p>
                         <p className="text-10px -mt-4px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">(타행이체불가)</p>
                     </div>
                 </div>
                 <div style={{height: '13.5rem', borderBottom: '0.1875rem solid #dddddd'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank8} alt="" />
+                        <img className='h-14 m-auto w-94px'  src={Bank8} alt="" />
                         <p className="text-10px mt-7px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00 ~ 01:30</p>
                     </div>
                 </div> 
@@ -86,13 +86,13 @@ const BankTable = () => {
             <div className="h-full w-full flex bg-gray-f9f9f9">
                 <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank9} alt="" />
+                        <img className='h-15px m-auto w-53px'  src={Bank9} alt="" />
                         <p className="text-10px mt-7px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">23:50 ~ 00:05</p>
                     </div>
                 </div>
                 <div style={{height: '13.5rem', borderBottom: '0.1875rem solid #dddddd'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank10} alt="" />
+                        <img className='h-19px m-auto w-90px'  src={Bank10} alt="" />
                         <p className="text-10px mt-3px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00 ~ 01:00</p>
                         <p className="text-10px -mt-4px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">(일 00:00 ~ 08:00)</p>
                     </div>
@@ -102,13 +102,13 @@ const BankTable = () => {
             <div className="h-full w-full flex bg-gray-f1f1f1">
                 <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank11} alt="" />
+                        <img className='h-16px m-auto w-83px'  src={Bank11} alt="" />
                         <p className="text-10px mt-7px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">23:50~00:10</p>
                     </div>
                 </div>
                 <div style={{height: '13.5rem', borderBottom: '0.1875rem solid #dddddd'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank12} alt="" />
+                        <img className='h-18px m-auto w-56px'  src={Bank12} alt="" />
                         <p className="text-10px mt-3px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">23:50~00:00</p>
                         <p className="text-10px -mt-4px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">(04:00 ~ 05:00)</p>
                     </div>
@@ -118,13 +118,13 @@ const BankTable = () => {
             <div className="h-full w-full flex bg-gray-f9f9f9">
                 <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank13} alt="" />
+                        <img className='h-24px m-auto w-94px'  src={Bank13} alt="" />
                         <p className="text-10px mt-5px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00~00:30 </p>
                     </div>
                 </div>
                 <div style={{height: '13.5rem', borderBottom: '0.1875rem solid #dddddd'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank14} alt="" />
+                        <img className='h-15px m-auto w-94px'  src={Bank14} alt="" />
                         <p className="text-10px mt-5px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00~00:20</p>
                     </div>
                 </div> 
@@ -133,13 +133,13 @@ const BankTable = () => {
             <div className="h-full w-full flex bg-gray-f1f1f1">
                 <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank15} alt="" />
+                        <img className='h-18px m-auto w-94px'  src={Bank15} alt="" />
                         <p className="text-10px mt-5px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">23:50~00:30</p>
                     </div>
                 </div>
                 <div style={{height: '13.5rem', borderBottom: '0.1875rem solid #dddddd'}} className="flex table flex-wrap w-1/2 justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank16} alt="" />
+                        <img className='h-20px m-auto w-73px'  src={Bank16} alt="" />
                         <p className="text-10px mt-5px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">23:40~00:05</p>
                     </div>
                 </div> 
@@ -148,7 +148,7 @@ const BankTable = () => {
             <div className="h-full w-full flex bg-gray-f9f9f9">
                 <div style={{height: '13.5rem', border: '0.1875rem solid #dddddd', borderLeft: 'none', borderTop: 'none'}} className="flex table flex-wrap w-full justify-center h-full">
                     <div className="w-full table-cell align-middle" >
-                        <img className='m-auto'  src={Bank17} alt="" />
+                        <img className='h-15px m-auto w-98px'  src={Bank17} alt="" />
                         <p className="text-10px mt-10px text-center font-spoqaMedium tracking-tight text-gray-r7b7b7b w-full">00:00~00:30</p>
                     </div>
                 </div>
