@@ -50,7 +50,7 @@ const LeftMenu = ({
     }
       
     const EditProfileButton = ({path, text, icon, iconHighlight, selectedTab}) => (
-        <div style={{padding: '0 1.875rem'}} className='w-full'>
+        <div className='h-full' style={{padding: '0 1.875rem'}} className='w-full'>
             <button 
             className={`${
                 pathname.includes(path)
@@ -68,7 +68,8 @@ const LeftMenu = ({
                 } bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
             >
                 <img 
-                    className="h-36 bg-white rounded-full flex items-center justify-center" 
+                    style={{height: '9.4375rem', width: '9.4375rem', boxShadow: '4px 6.928px 5px 0px rgba(35, 60, 77, 0.3)'}}
+                    className="bg-white rounded-full flex items-center justify-center" 
                     src={icon} 
                     alt="icon" />
             </div>
@@ -101,14 +102,14 @@ const LeftMenu = ({
                         <ReauthenticatePopup setPopupOpen={setPopupOpen} setSelectedTab={setSelectedTab}/>
                     </PopupControls>  
                 ) : (
-                    <div className={index % 2 === 0 ? "bg-gray-f7f7f7" : "bg-white"}>
-                        <div style={{padding: '0 1.875rem'}}>
+                    <div style={{borderBottomWidth: '0.1875rem', height: '12.375rem'}} className={`${index % 2 === 0 ? "bg-gray-f7f7f7" : "bg-white"} border-b border-gray-ececec`}>
+                        <div className='h-full' style={{padding: '0 1.875rem'}}>
                             <button 
                                 className={`${
                                     pathname.includes(item.mainPath)
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                     : ""
-                                } flex w-full items-center focus:text-white p-2.5 px-10 rounded-full hover:bg-gray-f2f2f2 focus:bg-gradient-to-l focus:from-blue-gradDark focus:to-blue-r2088f0`} 
+                                } flex w-full h-full items-center focus:text-white p-2.5 px-10 rounded-full hover:bg-gray-f2f2f2 focus:bg-gradient-to-l focus:from-blue-gradDark focus:to-blue-r2088f0`} 
                                 onClick={(e) => buttonPressed(item.text, item.path)}
                                 onMouseEnter={() => mouseHover(item.path)}
                                 onMouseLeave={() => mouseLeave(item.path)}
@@ -131,7 +132,8 @@ const LeftMenu = ({
                                     } bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
                                 >
                                     <img 
-                                        className="h-36	bg-white rounded-full flex items-center justify-center" 
+                                        style={{height: '9.4375rem', width: '9.4375rem', boxShadow: '4px 6.928px 5px 0px rgba(35, 60, 77, 0.3)'}}
+                                        className="bg-white rounded-full flex items-center justify-center" 
                                         src={item.icon} 
                                         alt="icon" />
                                 </div>
@@ -149,9 +151,13 @@ const LeftMenu = ({
                                             {item.text}
                                         </label>
                                         {item.inboxCount && (
-                                            <div style={{backgroundColor:"#ed2f59"}} className="ml-10px p-5 rounded-full text-white text-3xl ml-8 flex items-center justify-center font-roboto">
-                                                {item.inboxCount}
-                                            </div>
+                                            // <div style={{backgroundColor:"#ed2f59", fontSize: '2rem'}} className={`ml-10px p-5 ${item.inboxCount.split('').length === 1 ? "rounded-full" : ""} w-6 h-6 text-white text-3xl ml-8 flex items-center justify-center font-roboto`}>
+                                            //     {item.inboxCount}
+                                            //     {console.log(`typeof item.inboxCount`, item.inboxCount.split('').length )}
+                                            // </div>
+                                            <div style={{marginLeft: '1.875rem'}} className={`flex items-center justify-center w-16 h-16 bg-red-notification text-white -mr-6px -mt-3px rounded-full shadow-plain6 ${item.inboxCount.split('').length === 1 ? "" : "px-12"}`}>
+                                                <label className="text-4xl font-roboto mt-2px ml-px">{item.inboxCount}</label>
+                                            </div>    
                                         )}
                                         {item.hasArrow && (
                                             <img 
