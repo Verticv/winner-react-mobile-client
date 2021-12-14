@@ -2,7 +2,7 @@ import PopupControls from 'components/popups/PopupControls';
 import React from 'react'
 import LiveCasinoHistoryDetailPopup from '../popups/LiveCasinoHistoryDetailPopup';
 
-const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedState, isPopupOpen, setPopupOpen, cardHeight = '33.75rem', isButtonGradient = true, hasLeftInput = true, hasExtraColumns = false, hasButton = true}) => {
+const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedState, isPopupOpen, setPopupOpen, cardHeight = '33.75rem', isButtonGradient = true, hasLeftInput = true, hasExtraColumns = false, hasButton = true, containerBackground}) => {
 
     function Cells({ items, titles }) {
         const detailButton =  (
@@ -22,7 +22,7 @@ const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedS
         }; 
 
         return items.map((item, index) => (
-            <div style={{height: cardHeight, width: `${!hasButton ? '73.875rem' : ''}` , paddingRight: '1.875rem', margin: '1.875rem', marginTop: `${index ? '0': '1.875rem'}`}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
+            <div style={{height: cardHeight, width: `${!hasButton ? '73.875rem' : ''}` , paddingRight: '1.875rem', margin: '1.875rem', marginTop: `${index ? '0': '1.875rem'}`, background: `${containerBackground && index % 2 ? containerBackground : ''}`}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
                 <div style={{marginTop: '-0.5rem'}} className="flex flex-wrap items-center w-full h-full">
                     {hasLeftInput && (
                         <div style={{width: '5.8125rem'}} className="relative text-left pt-7px">
@@ -41,23 +41,23 @@ const LiveCasinoBetHistoryTable = ({array, titleArray, checkedState, setCheckedS
                         {titles?.[1] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[1]?.isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[1].text} : </span> {item.time}</div>)} 
                         {titles?.[2] && (
                         <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[3]?.isRed ? item.type?.includes("+") ? "#d52e2e" : item.type.includes("-") ? "#0056a6" : "#7b7b7b" : "#7b7b7b"}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
-                            <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[2].text} :</span>
+                            <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[2].text} : </span>
                              {item.type}
                              {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>종류 :</span> 스포츠</>}
                         </div>
                         )}
                         {titles?.[3] && (
                         <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[3]?.isRed ? item.name.includes("+") ? "#d52e2e" : item.name.includes("-") ? "#0056a6" : "#7b7b7b" : "#7b7b7b"}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
-                            <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[3].text} :</span>
+                            <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[3].text} : </span>
                              {item.name}
                              {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>보너스퍼센트 :</span> 100%</>}
                         </div>
                         )}
                         {titles?.[4] && (
                         <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[3]?.isRed ? item.amount.includes("+") ? "#d52e2e" : item.amount.includes("-") ? "#0056a6" : "#7b7b7b" : "#7b7b7b"}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
-                            <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[4].text} :</span>
+                            <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[4].text} : </span>
                              {item.amount}
-                             {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>적립포인트 :</span><span className='text-blue-r0056a6'> 50P</span></>}
+                             {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>적립포인트 : </span><span className='text-blue-r0056a6'> 50P</span></>}
                         </div>
                         )} 
                         {titles?.[5] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: item.profit.includes("+") ? "#d52e2e" : "#585858"}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[5].text} : </span> {item.profit}</div>)} 
