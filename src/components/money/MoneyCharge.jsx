@@ -44,7 +44,7 @@ const MoneyCharge = () => {
                 </div>
             </div>
 
-            <div style={{padding: '0.9375rem', paddingBottom: '2.0625rem'}} className="mt-20px w-full rounded-2xl shadow-subNavbar">
+            <div style={{padding: '0.9375rem', paddingBottom: '2.0625rem', marginTop: '1.875rem'}} className="w-full  ddddddddddddddddd rounded-2xl shadow-subNavbar">
                 <div style={{padding: '2.0625rem', paddingTop: '1.375rem', paddingBottom: '1.1875rem'}} className="w-full rounded-2xl border border-gray-dddddd bg-gray-f9f9f9">
                     <div 
                         style={{fontSize: '2.8125rem'}}
@@ -97,7 +97,7 @@ const MoneyCharge = () => {
                 </div>
                 
                 <div style={{marginTop: '3.75rem', padding: '0 1.125rem'}} className="flex flex-col">
-                    <div className="flex space-x-10px">
+                    <div className="flex">
                         <Title text="현재 보유머니" />
                         <div className="w-full">
                             <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
@@ -232,7 +232,7 @@ const MoneyCharge = () => {
                     </div>
                     <div style={{marginTop: '1.8125rem'}} className="flex items-end">
                         <Title text="보너스 혜택" />
-                        <div className="flex w-full h-full">
+                        <div style={{marginLeft: '1.875rem'}} className="flex w-full h-full">
                             <button 
                                 style={{height: '7.3125rem', padding: '0.1875rem', marginRight: '0.9375rem'}} 
                                 className="flex w-1/2 items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
