@@ -121,7 +121,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
     console.log(`selectedSubTab`, selectedSubTab)
 
     return (
-        <div style={{height:"100vh", width: '77.625rem'}} className="flex flex-col rounded-lg overflow-hidden">
+        <div style={{height:"100vh", width: '77.625rem' ,borderTopLeftRadius: '4rem', borderTopRightRadius: '4rem'}} className="flex flex-col rounded-lg overflow-hidden">
             <div style={{height: '9.5rem'}} className="relative bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
                 <label style={{fontSize: '3.75rem'}} className="font-spoqaBold text-white tracking-tight">베팅내역</label>
                 <button style={{marginRight: '4.625rem'}} className="absolute right-0 cursor-pointer z-20" onClick={() => setPopupOpen(false)}>
@@ -129,7 +129,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                 </button>
             </div>
             
-            <div style={{padding: '1.875rem 0'}} className="w-full h-full bg-white">
+            <div style={{paddingBottom: '1.875rem'}} className="w-full h-full bg-white">
 
             <div className="w-full relative top-0 z-40">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
@@ -155,9 +155,9 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                     <div 
                         style={{
                             height: '100vh',
-                            width: '77.625rem'
+                            width: '77.625rem',
                         }} 
-                        className="overflow-y-auto"
+                        className="overflow-y-auto hide-scrollbar"
                     >
                         {selectedTab === 0 ? (
                             <div className="-mt-20px">
@@ -175,7 +175,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             //     <Pagination page={page} setPage={setPage}/>   
                             // </div>
                             <div style={{marginBottom:'5.625rem'}} className="w-full h-full">
-                            <div style={{paddingBottom: '100rem'}} className="fffffffffffffffff">
+                            <div style={{paddingBottom: '100rem'}}>
                                     <BoardComposeViewPanel type={0} winAmount="0"  isAttached={true} noButtons={true}/>
                                     <BoardComposeViewPanel type={1} winAmount="0"  isAttached={true} noButtons={true}/>
                                     {/* <SportsBetHistoryPanel type={3} isAttached={true} noButtons={true}/> */}
