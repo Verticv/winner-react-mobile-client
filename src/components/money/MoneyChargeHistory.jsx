@@ -39,6 +39,7 @@ const tableArray = [
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
+        buttonText: '완료',
     },
     {
         id: 1,
@@ -47,6 +48,7 @@ const tableArray = [
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#9ca3af',
+        buttonText: '취소',
     },
     {
         id: 2,
@@ -55,6 +57,7 @@ const tableArray = [
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
+        buttonText: '완료',
     },
     {
         id: 3,
@@ -63,6 +66,7 @@ const tableArray = [
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
+        buttonText: '완료',
     },
     {
         id: 4,
@@ -71,6 +75,7 @@ const tableArray = [
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
+        buttonText: '완료',
     },
     {
         id: 5,
@@ -79,6 +84,7 @@ const tableArray = [
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
+        buttonText: '완료',
     },
     {
         id: 6,
@@ -87,6 +93,7 @@ const tableArray = [
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
+        buttonText: '완료',
     },
     {
         id: 7,
@@ -95,6 +102,7 @@ const tableArray = [
         type: "2021-06-30 14:45",
         name: "2021-06-30 14:45",
         buttonColor: '#0056a6',
+        buttonText: '완료',
     },
 ];
 

@@ -31,6 +31,9 @@ const SportsPanel = ({
     secondScore = '4:4',
     firstResult = 'win',
     secondResult = 'win',
+    showHeader = true,
+    isFirstElement = false,
+    isLastElement = false,
 }) => {
 
     // should add these as params
@@ -130,7 +133,7 @@ const SportsPanel = ({
                 </button>
             </div>
 
-            <div style={{marginLeft: '0rem', fontSize: '2.625rem'}} className="w-full flex font-spoqaMedium tracking-tight text-center">
+            <div style={{marginLeft: `${showHeader ? "0" : "1.5rem"}`, fontSize: '2.625rem'}} className="w-full flex font-spoqaMedium tracking-tight text-center">
                 <div 
                 style={{marginRight:isAttached && "5px", fontSize: '2.5rem'}}
                 className={`${
@@ -237,7 +240,7 @@ const SportsPanel = ({
                     </div>
                 </button>
             </div>
-            <div style={{marginLeft: '0rem', fontSize: '2.625rem'}} className="w-full flex font-spoqaMedium tracking-tight text-center">
+            <div style={{marginLeft: `${showHeader ? "0" : "1.5rem"}`, fontSize: '2.625rem'}} className="w-full flex font-spoqaMedium tracking-tight text-center">
                 <div 
                 style={{marginRight:isAttached && "5px", fontSize: '2.5rem'}}
                 className={`${
@@ -473,15 +476,18 @@ const SportsPanel = ({
 
 
     return (
-        <div style={{borderRadius:"1em", margin: '1.875rem', paddingBottom: '2.0625rem'}} className="shadow-subNavbar bg-gray-fafafa">
-            <div style={{paddingTop: '2.1875rem'}} className="flex w-full pb-8 font-spoqaMedium text-14px tracking-tight text-gray-r454545">
-                <div style={{fontSize: '2.625rem'}} className="h-full flex-1 flex items-center justify-end">승(홈)</div>
-                <div style={{fontSize: '2.625rem'}} className="h-full flex-1 flex items-center justify-end">무</div>
-                <div style={{fontSize: '2.625rem', flex: '1.3 1.3 0%;'}} className="h-full flex-1 flex items-center justify-end">패(원정)</div>
-                <div style={{fontSize: '2.625rem', flex: '0.8 0.8 0%;'}} className="h-full mr-8 flex-1 flex items-center justify-end">결과</div>
-            </div>
+        <div style={{borderRadius:"1em", margin: `${showHeader ? "1.875rem" : "0.9375rem"}`, paddingBottom: `${showHeader ? "2.0625rem" : ""}`, marginBottom: `${isLastElement ? "0.9375rem" : "1.875rem"}`, marginTop: `${isFirstElement ? '0' : ''}`}} className="shadow-subNavbar bg-gray-fafafa">
+            {showHeader && (
+                <div style={{paddingTop: '2.1875rem'}} className="flex w-full pb-8 font-spoqaMedium text-14px tracking-tight text-gray-r454545">
+                    <div style={{fontSize: '2.625rem'}} className="h-full flex-1 flex items-center justify-end">승(홈)</div>
+                    <div style={{fontSize: '2.625rem'}} className="h-full flex-1 flex items-center justify-end">무</div>
+                    <div style={{fontSize: '2.625rem', flex: '1.3 1.3 0%;'}} className="h-full flex-1 flex items-center justify-end">패(원정)</div>
+                    <div style={{fontSize: '2.625rem', flex: '0.8 0.8 0%;'}} className="h-full mr-8 flex-1 flex items-center justify-end">결과</div>
+                </div>
+            )}
+            
 
-            <div style={{padding: '0 1.875rem' }} className="w-full space-y-10px">
+            <div style={{padding: `${showHeader ? "0 1.875rem" : ""}`}} className="w-full">
                 {type === 0 
                 ? <Cards0 />
                 : type === 1 

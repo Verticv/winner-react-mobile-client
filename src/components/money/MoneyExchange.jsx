@@ -1,48 +1,38 @@
-// import MyPageTitle from 'components/myPage/MyPageTitle'
-// import Pagination from 'components/myPage/Pagination'
 import React, { useState } from 'react'
 import AlertIcon from '../../images/myPage/alert.png'
-// import Step1 from '../../images/money/STEP1.png'
-// import Step2 from '../../images/money/STEP2.png'
-// import Step3 from '../../images/money/STEP3.png'
-// import MoneyChargeTable from './tables/MoneyChargeTable'
 import BankTable from './BankTable'
 import BottomNavbar from '../bottomNavbar/BottomNavbar'
 
 const MoneyExchange = () => {
-
-    // const [page, setPage] = useState(0)
     const [inputValue, setInputValue] = useState(null)
     const [inputClicked, setInputClicked] = useState(false)
-    // const [radioValue, setRadioValue] = useState("yes")
     var nf = new Intl.NumberFormat();
+
 
     const Title = ({text}) => (
         <div style={{width: "21rem", marginRight: '1.875rem'}} className="flex-shrink-0">
             <div style={{fontSize: '2.625rem'}} className="text-gray-r454545 font-spoqaMedium">{text}</div>
-            <div style={{height: '0.1875rem'}} className="w-full bg-gray-bebebe"></div>
+            <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
         </div>
     )
 
     return (
-        <div style={{padding: '1.875rem'}} className="flex flex-col items-center">
-            
-            {/* <MyPageTitle title="보유머니 충전" /> */}
+        <div style={{padding: '1.875rem', paddingTop: '0'}} className="flex flex-col items-center">
 
-            <div style={{paddingLeft: '2.0625rem', paddingTop: '2.25rem', paddingBottom: '2.8125rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de px-19px pt-17px">
-                <div className="flex items-center space-x-10px">
-                    <img style={{width: '3.375rem'}} src={AlertIcon} alt="" />
-                    <span style={{fontSize: '2.8125rem'}} className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
+            <div style={{paddingLeft: '1.875rem', paddingTop: '1.875rem', paddingBottom: '1.875rem', borderWidth: '0.1875rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de">
+                <div className="flex space-x-10px">
+                    <img style={{width: '3.375rem', height: '3.375rem'}} src={AlertIcon} alt="" />
+                    <span style={{fontSize: '2.8125rem', lineHeight: '1.2'}} className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
                 </div>
-                <div className="mt-18px flex flex-col space-y-14px text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
+                <div style={{marginTop: '1.625rem'}} className="flex flex-col text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
                     <span style={{fontSize: '2.5rem', marginRight: '13.5rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을.</span>
-                    <span style={{fontSize: '2.5rem', marginRight: '6.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.</span>
-                    <span style={{fontSize: '2.5rem'}} className=""><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
+                    <span style={{fontSize: '2.5rem', marginRight: '6.875rem', marginTop: '0.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.</span>
+                    <span style={{fontSize: '2.5rem', marginTop: '0.875rem'}} className=""><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
                 </div>
             </div>
 
-            <div style={{padding: '0.9375rem', paddingBottom: '2.0625rem'}} className="mt-20px w-full rounded-2xl shadow-subNavbar">
-                <div style={{padding: '2.0625rem'}} className="w-full rounded-2xl border border-gray-dddddd bg-gray-f9f9f9">
+            <div style={{padding: '0.9375rem', paddingBottom: '2.0625rem', marginTop: '1.875rem'}} className="w-full rounded-2xl shadow-subNavbar">
+                <div style={{padding: '1.3125rem 2.0625rem'}} className="w-full rounded-2xl border border-gray-dddddd bg-gray-f9f9f9">
                     <div 
                         style={{fontSize: '2.8125rem'}}
                         className="font-spoqaMedium tracking-tight text-gray-r393e41 flex items-center"
@@ -58,22 +48,22 @@ const MoneyExchange = () => {
                     
                 </div>
                 
-                <div style={{marginTop: '3.75rem'}} className="flex flex-col">
-                    <div className="flex space-x-10px">
+                <div style={{marginTop: '2.9375rem', padding: '0 1.125rem'}} className="flex flex-col">
+                    <div className="flex">
                         <Title text="현재 보유머니" />
                         <div className="w-full">
-                            <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858 pl-9px">
-                                <span className="font-spoqaBold text-red-e9441d">478,000</span>
+                            <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
+                                <span className="font-robotoBold text-red-e9441d">478,000</span>
                             </div>
-                            <div style={{height: '0.1875rem'}} className="w-full bg-gray-bebebe"></div>
+                            <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
                         </div>
                     </div>
                     <div style={{marginTop: '4.6875rem'}} className="flex">
                         <Title text="충전금액 입력" />
                         <div className="w-full">
                             <input 
-                                className="w-full font-spoqa text-gray-bebebe outline-none pl-9px placeholder-gray-bebebe"
-                                style={{fontSize: '2.625rem'}}
+                                className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
+                                style={{fontSize: '2.625rem', marginBottom: '0.9375rem'}}
                                 placeholder="직접 입력시 숫자만 입력해 주세요."
                                 value={inputValue !==null ? nf.format(inputValue) : ""}
                                 onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
@@ -95,7 +85,7 @@ const MoneyExchange = () => {
 
 
 
-                <div style={{marginTop: '1.875rem', marginBottom: '4.6875rem'}} className="">
+                <div style={{marginTop: '1.875rem', marginBottom: '3.8125rem'}} className="">
                     <div style={{marginBottom: '0.9375rem'}} className="flex w-full h-full items-center justify-between">
                         <button
                             style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
@@ -181,13 +171,12 @@ const MoneyExchange = () => {
                     </div>
                     
                 </div>
-                
-                <div style={{marginTop: '4.6875rem'}} className="flex">
+                    <div style={{marginTop: '3.8125rem'}} className="flex">
                         <Title text="충전금액 입력" />
                         <div className="w-full">
                             <input 
-                                className="w-full font-spoqa text-gray-bebebe outline-none pl-9px placeholder-gray-bebebe"
-                                style={{fontSize: '2.625rem'}}
+                                className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
+                                style={{fontSize: '2.625rem', marginBottom: '0.9375rem'}}
                                 placeholder="직접 입력시 숫자만 입력해 주세요."
                                 value={inputValue !==null ? nf.format(inputValue) : ""}
                                 onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
@@ -210,15 +199,6 @@ const MoneyExchange = () => {
                     <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
                 </div>
             </button>
-
-
-            {/* <div className="mt-40px">
-                <MoneyChargeTable />
-            </div>
-
-            <div className="mt-20px">
-                <Pagination page={page} setPage={setPage}/>   
-            </div> */}
 
             <BankTable />
             <BottomNavbar />

@@ -5,7 +5,9 @@ const HorizontalMenu = ({
     itemsArray, 
     setSelectedTab,
     isState = 0, 
-    setSelectedSubTab = null
+    setSelectedSubTab = null,
+    width,
+    imageWidth,
 }) => {
 
     const history = useHistory();
@@ -19,7 +21,7 @@ const HorizontalMenu = ({
                 style={{
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
                     borderRadius:"1.625rem",
-                    width: '18.69rem',
+                    width: `${ width ? width : '18.69'}`,
                     height: '13.18rem',
                     marginRight: '0.1875rem',
                     padding: '0.1875rem'
@@ -67,8 +69,9 @@ const HorizontalMenu = ({
                         }}
                         className={`mt-3px h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                     >
-                        <img style={{width: '4.9375rem'}} className="mt-2 ml-2px object-contain" src={item.icon} alt="" />
+                        <img style={{width: imageWidth ? imageWidth : '4.9375rem'}} className="mt-2 ml-2px object-contain" src={item.icon} alt="" />
                         <span
+                            style={{marginTop: `${imageWidth ? '-0.5rem' : ''}`}}
                             className={`${
                                 pathname === item.path
                                 ? "text-white"
