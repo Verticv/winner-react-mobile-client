@@ -16,7 +16,7 @@ const FreeBoardView = () => {
             <div style={{height:"17.4375rem", borderRadius:"1.625rem", marginTop: '1.875rem', fontSize: '2.8125rem', borderWidth: '0.1875rem'}} className="relative flex w-full bg-white border border-gray-dddddd overflow-hidden">
 
                     <textarea 
-                        style={{width: "60.9375rem", padding: '3.5625rem', paddingTop: '2.6875rem', paddingLeft: '3.75rem', paddingRight: '6.5625rem', resize: "none", WebkitTextStroke:"0.2px"}}
+                        style={{width: "60.9375rem", padding: '3.5625rem', paddingTop: '2.6875rem', paddingLeft: '3.75rem', paddingRight: '6.5625rem', resize: "none", lineHeight: '1.3', WebkitTextStroke:"0.2px"}}
                         className="place-color-grey overflow-hidden outline-none w-full font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                         placeholder={placeholder}
                     />
@@ -168,7 +168,7 @@ const FreeBoardView = () => {
                         <div className="text-red-d52e2e font-roboto flex items-center justify-center">2</div>
                     </div>
                 </div>
-                <div style={{paddingTop: '1.875rem'}}>
+                <div style={{paddingTop: '0.625rem'}}>
                     <SendMessage placeholder='욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다.' buttonText='등록' />
                 </div>
             </div>
@@ -185,7 +185,7 @@ const FreeBoardView = () => {
                         </div>
                     </div>
                     
-                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '3.3125rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full h-full bg-white border border-gray-dddddd flex items-center justify-between">
+                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '2.25rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full h-full bg-white border border-gray-dddddd flex items-center justify-between">
                         <p style={{fontSize: '2.8125rem', paddingLeft: '3.6875rem'}} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                     </div>
                     <div style={{marginBottom: '1.125rem'}} className='flex'>
@@ -217,7 +217,7 @@ const FreeBoardView = () => {
                         </div>
                     </div>
                     
-                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '3.3125rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
+                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '2.25rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
                         <p style={{fontSize: '2.8125rem', marginLeft: '3.6875rem'}} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                     </div>
                     <div style={{marginBottom: '1.125rem'}} className='flex'>
@@ -247,7 +247,7 @@ const FreeBoardView = () => {
                             </div>
                         </div>
                         
-                        <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '3.3125rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
+                        <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '3.3125rem', marginBottom: '2.25rem', borderWidth: '0.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
                             <p style={{fontSize: '2.8125rem', paddingLeft: '3.0625rem'}} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         </div>
                         <div style={{marginBottom: '1.125rem'}} className='flex'>
