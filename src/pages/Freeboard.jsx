@@ -69,13 +69,9 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
                     </Route>
                     <Route path="/freeboard/compose">
                         <FreeBoardCompose />
+                        <BottomNavbar />
                     </Route>
                 </div>
-
-                {/* <div>
-                    <Footer2 />
-                    <Footer />
-                </div> */}
 
             </div>
         </div>
