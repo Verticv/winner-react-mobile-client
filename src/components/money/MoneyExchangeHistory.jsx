@@ -121,6 +121,7 @@ const MoneyExchangeHistory = () => {
 
             <div className="h-full">
                 <LiveCasinoBetHistoryTable 
+                    containerBackground= '#f7f9fc'
                     array={tableArray} 
                     titleArray={tableArrayTitles}
                     checkedState={checkedState} 
