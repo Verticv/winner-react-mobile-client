@@ -11,26 +11,26 @@ const FreeBoardCompose = () => {
     const [attachedArray, setAttachedArray] = useState([]);
     const AttachButton = (
         <button 
-            style={{width: "115px", height: "35px", backgroundColor: "#41b06c"}}
-            className="flex items-center justify-center rounded-md text-white text-14px tracking-tight font-spoqaMedium pt-px"
+            style={{width: "25.5625rem", height: "6.75rem", fontSize: '2.4375rem', borderRadius: '1.25rem', backgroundColor: "#41b06c"}}
+            className="flex items-center justify-center rounded-md text-white tracking-tight font-spoqaMedium"
         >
             베팅내역첨부
         </button>
     )
 
     return (
-        <div>
+        <div style={{padding: '1.875rem'}}>
             
             <div className="w-full rounded-2xl shadow-subNavbar overflow-hidden">
 
-                <div className="h-56px w-full bg-gray-fafafa border-b border-gray-dddddd">
+                <div style={{height: '9.1875rem', borderBottomWidth: '0.1875rem', paddingLeft: '2.6875rem'}} className="w-full text-5xl bg-gray-fafafa border-b border-gray-ededed">
                     <input 
-                        className="bg-gray-fafafa outline-none w-full h-full px-20px text-14px font-spoqa tracking-tight placeholder-gray-r454545"
+                        className="bg-gray-fafafa outline-none w-full h-full font-spoqa tracking-tight place-color-grey-1"
                         placeholder="제목을 입력하세요."
                     />
                 </div>
 
-                <div className="h-56px w-full bg-gray-fafafa border-b border-gray-dddddd px-20px flex items-center">
+                <div style={{height: '9.1875rem', paddingLeft: '2.8125rem',  borderBottomWidth: '0.1875rem'}} className="w-full bg-gray-fafafa border-b border-gray-dddddd flex items-center">
 
                     <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                         <BetHistoryPopup setPopupOpen={setPopupOpen} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
@@ -39,31 +39,31 @@ const FreeBoardCompose = () => {
                 </div>
 
                 {attachedArray.map(id => 
-                    <div className="py-20px border-b border-gray-dddddd px-30px space-y-28px"> 
+                    <div className="border-b border-gray-dddddd"> 
                         <SportsBetHistory type={id} id={id} isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray}/>
                     </div>
                 )}
                 
 
-                <div style={{height:"401px"}} className="w-full bg-white">
+                <div style={{height:"70.25rem",paddingTop: '3.125rem', paddingLeft: '2.6875rem', fontSize: '2.8125rem'}} className="w-full bg-white">
                     <textarea 
                         style={{resize: "none"}}
-                        className="outline-none w-full h-full  px-19px py-19px text-14px font-spoqa tracking-tight placeholder-gray-r454545"
+                        className="outline-none w-full h-full font-spoqa tracking-tight placeholder-gray-r454545"
                         placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
                     />
                 </div>
             </div>
 
 
-            <div className="flex w-full items-center justify-center space-x-5px mb-60px mt-20px">
-                <button onClick={() => history.push("/freeboard")} className="flex items-center justify-center h-52px w-192px rounded-lg bg-blue-r0070d9">
-                    <div className="flex items-center justify-center h-50px w-190px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer pt-2px">
-                        <span className="font-spoqaMedium tracking-tight text-16px text-white">작성하기</span>
+            <div style={{marginTop: '3.75rem', marginBottom: '20rem', fontSize: '2.8125rem'}} className="flex w-full items-center justify-center">
+                <button style={{height: '7.3125rem', padding: '0.1875rem'}} onClick={() => history.push("/freeboard")} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-blue-r0070d9">
+                    <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                        <span className="font-spoqaMedium tracking-tight text-white">작성하기</span>
                     </div>
                 </button>
-                <button onClick={() => history.push("/freeboard")} className="flex items-center justify-center w-192px h-52px rounded-md bg-gray-r171a1d">
-                    <div className="flex items-center justify-center h-50px w-190px rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer pt-2px">
-                        <span className="font-spoqaMedium tracking-tight text-16px text-white">취소하기</span>
+                <button style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem'}} onClick={() => history.push("/freeboard")} className="flex items-center justify-center w-1/2 rounded-md bg-gray-r171a1d">
+                    <div className="flex items-center justify-center w-full h-full rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
+                        <span className="font-spoqaMedium tracking-tight text-white">취소하기</span>
                     </div>
                 </button>
             </div>
