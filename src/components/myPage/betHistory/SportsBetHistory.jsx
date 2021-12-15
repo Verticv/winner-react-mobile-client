@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar';
-import SportsBetHistoryPanel from './SportsBetHistoryPanel'
+import SportsBetHistoryPanel from '../../common/cards/SportsBetHistoryPanel'
 
 const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attachedArray, setAttachedArray, setPopupOpen}) => {
 

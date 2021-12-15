@@ -342,6 +342,7 @@ module.exports = {
           subNavbar: '#616161',
           a3b2c2: '#a3b2c2',
           r8f8f8f: '#8f8f8f',
+          ededed: '#ededed',
           c5c5c5: '#c5c5c5',
           d2d2d2: '#d2d2d2',
           ececec: '#ececec',

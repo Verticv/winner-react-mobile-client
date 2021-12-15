@@ -1,6 +1,6 @@
 import React from 'react'
 import DateSearchBar from '../DateSearchBar';
-import SportsPanel from './SportsPanel'
+import SportsPanel from '../../common/cards/SportsMatchResultsPanel'
 
 const SportsContent = ({checkedState, setCheckedState , showSub = true, attachedArray, setAttachedArray, setPopupOpen}) => {
     return (
