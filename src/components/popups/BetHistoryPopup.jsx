@@ -151,7 +151,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
                 
 
-                <div style={{padding: '1.25rem 0'}} className="w-full gggggggggggggg">
+                <div style={{padding: '1.25rem 0'}} className="w-full">
                     <div 
                         style={{
                             height: '100vh',
