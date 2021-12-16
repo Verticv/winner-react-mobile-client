@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Route } from 'react-router'
+import { Route, useHistory } from 'react-router'
 import Pagination from 'components/myPage/Pagination'
 import CouponGiftPopup from 'components/popups/CouponGiftPopup'
 import Navbar from 'components/mainPage/Navbar'
@@ -159,7 +159,6 @@ const giftsTableArrayTitles = [
     }
 ]
 
-
 const giftsTableArray = [
     {
         id: 0,
@@ -236,6 +235,287 @@ const giftsTableArray = [
 ];
 
 
+const historyTableArrayTitles = [
+    {
+        id: 0,
+        text: "쿠폰명",
+        isRed: false,
+    },
+    {
+        id: 1,
+        text: "쿠폰금액",
+        isRed: true,
+
+    },
+    {
+        id: 2,
+        text: "보낸회원아이디",
+        isRed: false,
+
+    },
+    {
+        id: 3,
+        text: "발급일",
+        isRed: false,
+
+    },
+    {
+        id: 4,
+        text: "만료일",
+        isRed: false,
+    }
+]
+
+const historyTableArray = [
+    {
+        id: 0,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 1,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#0056a6',
+    },
+    {
+        id: 2,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#454545',
+    },
+    {
+        id: 3,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#279140',
+    },
+    {
+        id: 4,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 5,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 6,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 7,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+];
+
+const sentHistoryTableArrayTitles = [
+    {
+        id: 0,
+        text: "쿠폰명",
+        isRed: false,
+    },
+    {
+        id: 1,
+        text: "쿠폰금액",
+        isRed: true,
+
+    },
+    {
+        id: 2,
+        text: "보낸회원아이디",
+        isRed: false,
+
+    },
+    {
+        id: 3,
+        text: "보낸일시",
+        isRed: false,
+
+    },
+    {
+        id: 4,
+        text: "발급일",
+        isRed: false,
+
+    },
+    {
+        id: 5,
+        text: "만료일",
+        isRed: false,
+    }
+]
+
+const sentHistoryTableArray = [
+    {
+        id: 0,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#92278f',
+        profit: '2021-06-29 15:45',
+    },
+    {
+        id: 1,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#92278f',
+        profit: '2021-06-29 15:45',
+    },
+    {
+        id: 2,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#92278f',
+        profit: '2021-06-29 15:45',
+    },
+    {
+        id: 3,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#92278f',
+        profit: '2021-06-29 15:45',
+    },
+    {
+        id: 4,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#92278f',
+        profit: '2021-06-29 15:45',
+    },
+    {
+        id: 5,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#92278f',
+        profit: '2021-06-29 15:45',
+    },
+    {
+        id: 6,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#92278f',
+        profit: '2021-06-29 15:45',
+    },
+    {
+        id: 7,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#92278f',
+        profit: '2021-06-29 15:45',
+    },
+];
+
+
+const HistoryMenu = ({
+    itemsArray, 
+    setSelectedTab,
+    setSelectedSubTab = null
+}) => {
+    // r0056a6
+    const history = useHistory();
+    const pathname = window.location.pathname
+    const [isHover, setHover] = useState(null)
+    console.log(isHover)
+
+    function TabsList({ items }) {
+        return items.map((item, index) => (
+            <button 
+                className={`${
+                    pathname === item.path
+                    ? "bg-blue-r0056a6" 
+                    : "bg-white hover:bg-blue-d3f3fe border border-gray-rb7b7b7"
+                } w-1/2 rounded-full`}
+                style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
+                key={item.id} 
+                onClick={() => {
+                    history.push(item.path)
+                    setSelectedTab(item.id)
+                    if (setSelectedSubTab !== null) {
+                        setSelectedSubTab(0)
+                    }
+                }}
+                onMouseOver={() => setHover(item.id)}
+                onMouseLeave={() => setHover(null)}
+            >
+                <div >
+                    <div>
+                        <span
+                            className={`${
+                                pathname === item.path
+                                ? "text-white" 
+                                : "text-gray-r7b7b7b"
+                            }`}
+                        >{item.text}</span>
+                    </div>
+                </div>
+            </button>
+        ));
+    }
+
+    return (
+        <div className="flex w-full">
+            <TabsList items={itemsArray} />
+        </div>
+    )
+}
+
+
 const GiftButton = (
     <div style={{height: '7.3125rem', width: '36.4375rem', padding: '0.1875rem', marginBottom: '1.875rem'}} className="flex items-center justify-center rounded-4px bg-blue-r0070d9 hover:opacity-75">
         <div className="flex items-center justify-center h-full w-full bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
@@ -249,12 +529,12 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     
-    const CouponTitle = ({text = '사용 가능한 쿠폰', number = '10'}) => {
+    const CouponTitle = ({text = '사용 가능한 쿠폰', number = '10', numberColor = '#ed2f59'}) => {
         return (
             <div className="flex items-center space-x-20px">
                 <div style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r8c8c8c">
                     <span>{text} </span>
-                    <span style={{color: "#ed2f59"}} className="font-robotoBold">{number}</span>
+                    <span style={{color: numberColor}} className="font-robotoBold">{number}</span>
                     <span>장</span>
                 </div>
             </div>
@@ -271,8 +551,14 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
     const tabsArray = [
         { text: "쿠폰사용", icon: Icon1, id: 0, path: "/mypage/coupon" },
         { text: "쿠폰선물", icon: Icon2, id: 1, path: "/mypage/coupon/coupon-gift" },
-        { text: "쿠폰내역", icon: Icon3, id: 2, path: "/mypage/coupon/coupon-history" },
+        { text: "쿠폰내역", icon: Icon3, id: 2, path: "/mypage/coupon/coupon-history/received" },
     ];
+
+    const historyTabsArray = [
+        { text: "쿠폰발급내역", icon: Icon1, id: 0, path: "/mypage/coupon/coupon-history/received" },
+        { text: "쿠폰선물내역", icon: Icon2, id: 1, path: "/mypage/coupon/coupon-history/sent" }
+    ]
+
 
     return (
         <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
@@ -325,7 +611,7 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                             <BottomNavbar />
                         </Route>
                         <Route exact path="/mypage/coupon/coupon-gift">
-                        <div className='mt-4 flex justify-center'>
+                            <div className='mt-4 flex justify-center'>
                                 <CouponTitle text='사용 가능한 쿠폰' number='7' />
                             </div>
                             <div className="">
@@ -358,10 +644,69 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                             {/* <PointsAccumulateHistory />
                             <BottomNavbar /> */}
                         </Route>
-                        <Route exact path="/mypage/coupon/coupon-history">
-                            /mypage/coupon/coupon-history
-                            {/* <PointsTransactionHistory />
-                            <BottomNavbar /> */}
+                        <Route exact path="/mypage/coupon/coupon-history/received">
+                            <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
+                                <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
+                            </div>
+                            
+                            <div className='mt-4 flex justify-center'>
+                                <CouponTitle text='사용가능' number='32' />
+                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
+                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                <CouponTitle text='기간만료' number='0' numberColor='#000000' />
+                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
+                            </div>
+                            <div className="">
+                                <CouponGiftTable
+                                    containerBackground= '#f7f9fc'
+                                    array={historyTableArray}
+                                    titleArray={historyTableArrayTitles}
+                                    checkedState={checkedState} 
+                                    setCheckedState={setCheckedState}
+                                    isPopupOpen={isPopupOpen}
+                                    setPopupOpen={setPopupOpen}
+                                    cardHeight='25.3125rem'
+                                    isButtonGradient={false}
+                                />   
+                            </div>
+                            <div style={{marginTop: '1.875rem'}}>
+                                <Pagination page={page} setPage={setPage}/>
+                            </div>
+                            <BottomNavbar />
+                        </Route>
+                        <Route exact path="/mypage/coupon/coupon-history/sent">
+                            <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
+                                <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
+                            </div>
+                            
+                            <div className='mt-4 flex justify-center'>
+                                <CouponTitle text='사용가능' number='32' />
+                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
+                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                <CouponTitle text='기간만료' number='0' numberColor='#000000' />
+                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
+                            </div>
+                            <div className="">
+                                <CouponGiftTable
+                                    containerBackground= '#f7f9fc'
+                                    array={sentHistoryTableArray}
+                                    titleArray={sentHistoryTableArrayTitles}
+                                    checkedState={checkedState} 
+                                    setCheckedState={setCheckedState}
+                                    isPopupOpen={isPopupOpen}
+                                    setPopupOpen={setPopupOpen}
+                                    cardHeight='29.5rem'
+                                    isButtonGradient={false}
+                                />   
+                            </div>
+                            <div style={{marginTop: '1.875rem'}}>
+                                <Pagination page={page} setPage={setPage}/>
+                            </div>
+                            <BottomNavbar />
                         </Route>
                         
                         <Route path="*">
