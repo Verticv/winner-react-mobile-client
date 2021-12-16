@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { Route } from 'react-router'
 import Pagination from 'components/myPage/Pagination'
+import CouponGiftPopup from 'components/popups/CouponGiftPopup'
 import Navbar from 'components/mainPage/Navbar'
 import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import HorizontalMenu1 from 'components/horizontalMenus/HorizontalMenu1'
+import PopupControls from 'components/popups/PopupControls'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 import HomePageTopBanner from 'components/common/HomePageTopBanner';
 import CouponUsageTable from 'components/myPage/tables/CouponUsageTable'
+import CouponGiftTable from 'components/myPage/tables/CouponGiftTable'
+
 import Icon1 from '../../images/newImages/coupon1.png'
 import Icon2 from '../../images/newImages/coupon2.png'
 import Icon3 from '../../images/newImages/coupon3.png'
@@ -48,7 +52,6 @@ const tableArrayTitles = [
 
     }
 ]
-
 
 const tableArray = [
     {
@@ -125,6 +128,122 @@ const tableArray = [
     },
 ];
 
+const giftsTableArrayTitles = [
+    {
+        id: 0,
+        text: "쿠폰명",
+        isRed: false,
+    },
+    {
+        id: 1,
+        text: "쿠폰금액",
+        isRed: true,
+
+    },
+    {
+        id: 2,
+        text: "보낸회원아이디",
+        isRed: false,
+
+    },
+    {
+        id: 3,
+        text: "발급일",
+        isRed: false,
+
+    },
+    {
+        id: 4,
+        text: "만료일",
+        isRed: false,
+    }
+]
+
+
+const giftsTableArray = [
+    {
+        id: 0,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 1,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 2,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 3,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 4,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 5,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 6,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+    {
+        id: 7,
+        number: '테스트쿠폰',
+        time: "5,000",
+        type: "eric123",
+        name: '2021-06-29',
+        amount: "2021-07-29",
+        buttonColor: '#ff1237',
+    },
+];
+
+
+const GiftButton = (
+    <div style={{height: '7.3125rem', width: '36.4375rem', padding: '0.1875rem', marginBottom: '1.875rem'}} className="flex items-center justify-center rounded-4px bg-blue-r0070d9 hover:opacity-75">
+        <div className="flex items-center justify-center h-full w-full bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+            <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white">쿠폰선물하기</span>
+        </div>
+    </div>
+)
+
 
 const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -133,7 +252,6 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
     const CouponTitle = ({text = '사용 가능한 쿠폰', number = '10'}) => {
         return (
             <div className="flex items-center space-x-20px">
-                {/* <div style={{backgroundColor:"#b1b1b1"}} className="h-12px w-px bg-gray-r8c8c8c mb-px" /> */}
                 <div style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r8c8c8c">
                     <span>{text} </span>
                     <span style={{color: "#ed2f59"}} className="font-robotoBold">{number}</span>
@@ -205,12 +323,38 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                                 <Pagination page={page} setPage={setPage}/>
                             </div>
                             <BottomNavbar />
-                            {/* /mypage/coupon/coupon-usage */}
-                            {/* <PointsApply />
-                            <BottomNavbar /> */}
                         </Route>
                         <Route exact path="/mypage/coupon/coupon-gift">
-                            /mypage/coupon/coupon-gift
+                        <div className='mt-4 flex justify-center'>
+                                <CouponTitle text='사용 가능한 쿠폰' number='7' />
+                            </div>
+                            <div className="">
+                                <CouponGiftTable
+                                    containerBackground= '#f7f9fc'
+                                    array={giftsTableArray}
+                                    titleArray={giftsTableArrayTitles}
+                                    checkedState={checkedState} 
+                                    setCheckedState={setCheckedState}
+                                    isPopupOpen={isPopupOpen}
+                                    setPopupOpen={setPopupOpen}
+                                    cardHeight='25.3125rem'
+                                    isButtonGradient={false}
+                                />   
+                            </div>
+                            <div style={{marginBottom: '2.9375rem'}} className='mt-4'>
+                                <p className='font-spoqaMedium text-gray-r7c7c7c text-center' style={{fontSize: '2.625rem'}}>
+                                    <span className='text-blue-r0056a6 font-spoqaBold'>쿠폰선물하기</span> 버튼을 클릭하여 쿠폰받을 회원을 선택하세요.
+                                </p>
+                            </div>
+                            <div className="flex w-full justify-center">
+                                <PopupControls buttonChild={GiftButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                                    <CouponGiftPopup setPopupOpen={setPopupOpen} />
+                                </PopupControls> 
+                            </div>
+                            <div style={{marginTop: '1.875rem'}}>
+                                <Pagination page={page} setPage={setPage}/>
+                            </div>
+                            <BottomNavbar />
                             {/* <PointsAccumulateHistory />
                             <BottomNavbar /> */}
                         </Route>
