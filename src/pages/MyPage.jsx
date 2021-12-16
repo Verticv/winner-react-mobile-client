@@ -9,6 +9,9 @@ import LeftMenu from "components/myPage/LeftMenu";
 import CountryDropDown from "components/dropdowns/CountryDropDown";
 import DropDownControls from "components/dropdowns/DropDownControls";
 import BetHistory from 'components/myPage/BetHistory'
+import CouponUsage from 'components/myPage/CouponUsage'
+// import CouponGift from 'components/myPage/CouponGift'
+// import CouponHistory from 'components/myPage/CouponHistory'
 import GameResultsPage from 'components/myPage/GameResults'
 import Icon1 from "../images/newImages/mainPage/Recharge-application.png";
 import Icon2 from "../images/newImages/mainPage/Recharge-application.png";
@@ -330,6 +333,16 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
 
+        <Route path="/mypage/coupon">
+            <CouponUsage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+        </Route>
+        {/* <Route path="/mypage/coupon/coupon-gift">
+            <CouponGift />
+        </Route>
+        <Route path="/mypage/coupon/coupon-history">
+            <CouponHistory />
+        </Route> */}
+
         {/* <Route path="/mypage/bet-history">
           <DirectoryComponent
             setSelectedTab={setSelectedTab}
@@ -358,15 +371,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
           />
         </Route>
         
-        <Route path="/mypage/coupon/coupon-usage">
-          <DirectoryComponent
-            setSelectedTab={setSelectedTab}
-            setSelectedSubTab={setSelectedSubTab}
-            branch2="쿠폰관리"
-            branch3="쿠폰사용"
-            mainPath="/mypage/coupon/coupon-usage"
-          />
-        </Route>
+        
         <Route path="/mypage/coupon/coupon-gift">
           <DirectoryComponent
             setSelectedTab={setSelectedTab}

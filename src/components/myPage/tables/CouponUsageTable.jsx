@@ -1,141 +1,93 @@
+import PopupControls from 'components/popups/PopupControls';
 import React from 'react'
+import LiveCasinoHistoryDetailPopup from '../popups/LiveCasinoHistoryDetailPopup';
 
-const CouponUsageTable = () => {
+const CouponUsageTable = ({array, titleArray, checkedState, setCheckedState, isPopupOpen, setPopupOpen, cardHeight = '33.75rem', isButtonGradient = true, hasLeftInput = true, hasExtraColumns = false, hasButton = true, containerBackground}) => {
 
-    const ExampleArray = [
-        {
-            id: 0,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-        {
-            id: 1,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-        {
-            id: 2,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-        {
-            id: 3,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-        {
-            id: 4,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-        {
-            id: 5,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-        {
-            id: 6,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-        {
-            id: 7,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-        {
-            id: 8,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-        {
-            id: 9,
-            name: "테스트쿠폰",
-            amount: "10,000",
-            username: "eric123",
-            status: "사용가능",
-            date: "2021-06-29",
-            expireDate: "2021-07-29"
-        },
-    ]
+    function Cells({ items, titles }) {
+        const detailButton =  (
+            <button style={{width: '20.25rem', height: '14.0625rem', padding: '0.1875rem'}} className="flex items-center justify-center rounded-lg bg-orange-d43712 hover:opacity-75">
+                <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-lg p-10 border border-orange-f07a5f bg-gradient-to-b from-orange-f4603d to-orange-e9451e cursor-pointer">
+                    <span style={{fontSize: '2.8125rem', lineHeight: '1.1'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px">사용하기</span>
+                    {/* <span style={{fontSize: '2.8125rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"></span> */}
+                </div>
+            </button>
+        )
 
-    const UseButton = () => (
-        <button className="w-73px h-29px bg-red-e9441d rounded-full flex justify-center items-center hover:opacity-75">
-            <span className="text-white text-14px font-spoqaMedium tracking-tight pt-2px">사용하기</span>
-        </button>
-    )
+        const handleOnChange = (position) => {
+            const updatedCheckedState = checkedState.map((item, index) =>
+              index === position ? !item : item
+            );
+            setCheckedState(updatedCheckedState);
+        }; 
 
-    function Cells({ items }) {
-        return items.map(item => (
-            <tr 
-                style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f8f9fb"}} 
-                className="font-spoqa text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd"
-            >
-                    <td style={{WebkitTextStroke:"0.2px"}} className="w-313px text-center">{item.name}</td>
-                    <td style={{WebkitTextStroke:"0.2px"}} className="w-172px text-right text-red-e9441d pr-20px font-robotoRegular">{item.amount}</td>
-                    <td style={{WebkitTextStroke:"0.2px"}} className="w-111px text-center">{item.username}</td>
-                    <td style={{color: "#ff1237", WebkitTextStroke:"0.2px"}} className="w-108px text-center">{item.status}</td>
-                    <td style={{WebkitTextStroke:"0.2px"}} className="w-122px text-center font-robotoRegular">{item.date}</td>
-                    <td style={{WebkitTextStroke:"0.2px"}} className="w-111px text-center font-robotoRegular">{item.expireDate}</td>
-                    <td className="w-103px pl-13px"><UseButton /></td>
-                </tr>
-        ));
+        return items.map((item, index) => (
+            <div style={{height: cardHeight, width: `${!hasButton ? '73.875rem' : ''}` , paddingRight: '1.875rem', margin: '1.875rem', marginTop: `${index ? '0': '1.0625rem'}`, background: `${containerBackground && index % 2 ? containerBackground : ''}`}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
+                <div style={{marginTop: '-0.5rem'}} className="flex flex-wrap items-center w-full h-full">
+                    {hasLeftInput && (
+                        <div style={{width: '5.8125rem'}} className="relative text-left pt-7px">
+                            <label className="form-control">
+                                <input
+                                        className='w-12 h-12'
+                                        type="checkbox"
+                                        checked={checkedState[item.id]}
+                                        onChange={() => handleOnChange(item.id)}
+                                    />
+                            </label>
+                        </div>
+                    )}
+                    <div style={{width: ''}}>
+                        {titles?.[0] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[0]?.isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[0].text} : </span> {item.number}</div>)} 
+                        {titles?.[1] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[1]?.isRed ? "#d52e2e" : ""}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[1].text} : </span> {item.time}</div>)} 
+                        {titles?.[2] && (
+                        <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[3]?.isRed ? item.type?.includes("+") ? "#d52e2e" : item.type.includes("-") ? "#0056a6" : "#7b7b7b" : "#7b7b7b"}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
+                            <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[2].text} : </span>
+                             {item.type}
+                             {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>종류 :</span> 스포츠</>}
+                        </div>
+                        )}
+                        {titles?.[3] && (
+                        <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: '#ff1237'}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
+                            <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[3].text} : </span>
+                             {item.name}
+                             {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>보너스퍼센트 :</span> 100%</>}
+                        </div>
+                        )}
+                        {titles?.[4] && (
+                        <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: titles?.[3]?.isRed ? item.amount.includes("+") ? "#d52e2e" : item.amount.includes("-") ? "#0056a6" : "#7b7b7b" : "#7b7b7b"}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
+                            <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[4].text} : </span>
+                             {item.amount}
+                             {hasExtraColumns && <><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem', marginLeft: '3.625rem'}}>적립포인트 : </span><span className='text-blue-r0056a6'> 50P</span></>}
+                        </div>
+                        )} 
+                        {titles?.[5] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: item.profit.includes("+") ? "#d52e2e" : "#7b7b7b"}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[5].text} : </span> {item.profit}</div>)} 
+                        {titles?.[6] && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: item.status === "승" ? "#d52e2e" : "#585858"}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{titles[6].text} : </span> {item.status}</div>)} 
+                    </div>
+                </div>
+                {isButtonGradient ? 
+                    hasButton && (<div className="text-center">
+                    <PopupControls isNotFullScreen buttonChild={detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                        <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
+                    </PopupControls> 
+                </div>) 
+                 : hasButton &&
+                    <button style={{width: '10.875rem', height: '10.875rem',  padding: '0.1875rem', backgroundColor: item?.buttonColor || '#0056a6'}} className="flex items-center justify-center rounded-lg hover:opacity-75">
+                        <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg cursor-pointer">
+                            <span style={{fontSize: '2.8125rem', lineHeight: '1.1', width: '10.875rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"> {item?.buttonColor === '#0056a6' ? <div> {item.buttonText ? item.buttonText : <><p>정산</p> <p>완료</p></>} </div> : item.buttonText ||'진행중'} </span>
+                            {/* <span style={{fontSize: '2.8125rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"></span> */}
+                        </div>
+                    </button>
+                }
+                
+            </div>
+        ))
     }
-    
-
     return (
-        <table style={{borderRadius: "1em"}} className="shadow-subNavbar overflow-hidden">
-            <thead className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
-                <tr>
-                    <td className="w-313px text-center">쿠폰명</td>
-                    <td className="w-172px text-center">쿠폰금액</td>
-                    <td className="w-111px text-center">보낸회원아이디</td>
-                    <td className="w-108px text-center">처리상태</td>
-                    <td className="w-122px text-center">발급일</td>
-                    <td className="w-111px text-center">만료일</td>
-                    <td className="w-103px text-center">쿠폰사용</td>
-                </tr>
-            </thead>
-            <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                <Cells items={ExampleArray} />
-            </tbody>
-        </table>   
+        <div style={{borderRadius: "1em"}} className="overflow-hidden">
+            <div className="w-full text-585858 text-14px tracking-tight font-spoqa">
+                <Cells items={array} titles={titleArray} />
+            </div>
+        </div>      
     )
 }
 
