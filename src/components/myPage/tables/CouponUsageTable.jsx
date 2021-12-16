@@ -6,8 +6,8 @@ const CouponUsageTable = ({array, titleArray, checkedState, setCheckedState, isP
 
     function Cells({ items, titles }) {
         const detailButton =  (
-            <button style={{width: '20.25rem', height: '14.0625rem', padding: '0.1875rem'}} className="flex items-center justify-center rounded-lg bg-orange-d43712 hover:opacity-75">
-                <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-lg p-10 border border-orange-f07a5f bg-gradient-to-b from-orange-f4603d to-orange-e9451e cursor-pointer">
+            <button style={{width: '20.25rem', height: '14.0625rem', padding: '0.1875rem'}} className="flex items-center justify-center rounded-3xl bg-orange-d43712 hover:opacity-75">
+                <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-3xl p-10 border border-orange-f07a5f bg-gradient-to-b from-orange-f4603d to-orange-e9451e cursor-pointer">
                     <span style={{fontSize: '2.8125rem', lineHeight: '1.1'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px">사용하기</span>
                     {/* <span style={{fontSize: '2.8125rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"></span> */}
                 </div>
@@ -71,8 +71,8 @@ const CouponUsageTable = ({array, titleArray, checkedState, setCheckedState, isP
                     </PopupControls> 
                 </div>) 
                  : hasButton &&
-                    <button style={{width: '10.875rem', height: '10.875rem',  padding: '0.1875rem', backgroundColor: item?.buttonColor || '#0056a6'}} className="flex items-center justify-center rounded-lg hover:opacity-75">
-                        <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg cursor-pointer">
+                    <button style={{width: '10.875rem', height: '10.875rem',  padding: '0.1875rem', backgroundColor: item?.buttonColor || '#0056a6'}} className="flex items-center justify-center rounded-3xl hover:opacity-75">
+                        <div className="flex w-full h-full items-center justify-center flex-wrap rounded-3xl cursor-pointer">
                             <span style={{fontSize: '2.8125rem', lineHeight: '1.1', width: '10.875rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"> {item?.buttonColor === '#0056a6' ? <div> {item.buttonText ? item.buttonText : <><p>정산</p> <p>완료</p></>} </div> : item.buttonText ||'진행중'} </span>
                             {/* <span style={{fontSize: '2.8125rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"></span> */}
                         </div>

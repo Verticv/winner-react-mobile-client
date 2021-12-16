@@ -16,12 +16,12 @@ const CouponGiftPopup = ({setPopupOpen}) => {
             </div>
 
             <div style={{padding: '0 1.875rem'}} className="w-full h-full bg-white">
-                <div style={{marginTop: '3.125rem', marginBottom: '1.875rem'}} className="flex items-start">
+                <div style={{marginTop: '3.125rem', marginBottom: '1.125rem'}} className="flex items-start">
                     <img style={{width: '7.9375rem', height: '2.875rem', marginLeft: '0.4375rem', marginRight: '1.875rem'}} src={Step1} alt="" />
                     <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r7c7c7c">선물로 보낼 쿠폰을 확인하세요.</span>
                 </div>
 
-                <div style={{height: '10.4375rem', fontSize: '2.8125rem', marginBottom: '7.5rem'}} className="w-full bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl flex items-center justify-center font-spoqaMedium tracking-tight ">
+                <div style={{height: '10.4375rem', fontSize: '2.8125rem', marginBottom: '7rem'}} className="w-full bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl flex items-center justify-center font-spoqaMedium tracking-tight ">
                     <span className="text-gray-r454545">선물할 쿠폰</span>
                     <div style={{height: '6.75rem', width: '41.4375rem', marginLeft: '1.875rem'}} className="bg-white border border-gray-dddddd rounded-md flex items-center">
                         <span style={{paddingLeft: '1.5625rem'}} className="text-gray-r8c8c8c">쿠폰테스트</span>
