@@ -168,6 +168,7 @@ const giftsTableArray = [
         name: '2021-06-29',
         amount: "2021-07-29",
         buttonColor: '#ff1237',
+        buttonText: '사용 가능'
     },
     {
         id: 1,
@@ -177,6 +178,7 @@ const giftsTableArray = [
         name: '2021-06-29',
         amount: "2021-07-29",
         buttonColor: '#ff1237',
+        buttonText: '사용 가능'
     },
     {
         id: 2,
@@ -186,6 +188,7 @@ const giftsTableArray = [
         name: '2021-06-29',
         amount: "2021-07-29",
         buttonColor: '#ff1237',
+        buttonText: '사용 가능'
     },
     {
         id: 3,
@@ -195,6 +198,7 @@ const giftsTableArray = [
         name: '2021-06-29',
         amount: "2021-07-29",
         buttonColor: '#ff1237',
+        buttonText: '사용 가능'
     },
     {
         id: 4,
@@ -204,6 +208,7 @@ const giftsTableArray = [
         name: '2021-06-29',
         amount: "2021-07-29",
         buttonColor: '#ff1237',
+        buttonText: '사용 가능'
     },
     {
         id: 5,
@@ -213,6 +218,7 @@ const giftsTableArray = [
         name: '2021-06-29',
         amount: "2021-07-29",
         buttonColor: '#ff1237',
+        buttonText: '사용 가능'
     },
     {
         id: 6,
@@ -222,6 +228,7 @@ const giftsTableArray = [
         name: '2021-06-29',
         amount: "2021-07-29",
         buttonColor: '#ff1237',
+        buttonText: '사용 가능'
     },
     {
         id: 7,
@@ -231,6 +238,7 @@ const giftsTableArray = [
         name: '2021-06-29',
         amount: "2021-07-29",
         buttonColor: '#ff1237',
+        buttonText: '사용 가능'
     },
 ];
 
@@ -551,7 +559,7 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
     const tabsArray = [
         { text: "쿠폰사용", icon: Icon1, id: 0, path: "/mypage/coupon" },
         { text: "쿠폰선물", icon: Icon2, id: 1, path: "/mypage/coupon/coupon-gift" },
-        { text: "쿠폰내역", icon: Icon3, id: 2, path: "/mypage/coupon/coupon-history/received" },
+        { text: "쿠폰내역", icon: Icon3, id: 2, path: "/mypage/coupon/coupon-history/received", hasSameParent: true },
     ];
 
     const historyTabsArray = [

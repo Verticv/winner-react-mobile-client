@@ -70,8 +70,8 @@ const CouponGiftTable = ({array, titleArray, checkedState, setCheckedState, isPo
                     </PopupControls> 
                 </div>) 
                  : hasButton &&
-                    <button style={{width: '10.875rem', height: '10.875rem',  padding: '0.1875rem', backgroundColor: item?.buttonColor || '#0056a6'}} className="flex items-center justify-center rounded-lg hover:opacity-75">
-                        <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg cursor-pointer">
+                    <button style={{width: '10.875rem', height: '10.875rem',  padding: '0.1875rem', backgroundColor: item?.buttonColor || '#0056a6'}} className="flex items-center justify-center rounded-3xl hover:opacity-75">
+                        <div style={{padding: `${item.buttonText ? '2rem' : ''}`}} className="flex w-full h-full items-center justify-center flex-wrap rounded-3xl cursor-pointer">
                             <span style={{fontSize: '2.8125rem', lineHeight: '1.1', width: '10.875rem'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px"> {item?.buttonColor === '#0056a6' ? <div> {item.buttonText ? item.buttonText : <><p>정산</p> <p>완료</p></>} </div> : item.buttonText ||'진행중'} </span>
                         </div>
                     </button>
