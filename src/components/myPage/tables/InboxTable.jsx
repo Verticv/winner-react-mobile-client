@@ -2,6 +2,9 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 import MailIcon from '../../../images/myPage/mail.png'
 import MailOpenedIcon from '../../../images/myPage/mail_opened.png'
+import Delete from '../../../images/newImages/delete.png'
+import DeleteDark from '../../../images/newImages/delete-dark.png'
+
 
 const InboxTable = ({
     array,
@@ -22,75 +25,80 @@ const InboxTable = ({
         return items.map(item => (
             <div 
                 key={item.id} 
+                style={{height: '11.625rem', borderBottomWidth: '0.1875rem'}}
                 className={`${
                     item.isRead === false
                     ? "bg-gray-e8eff6" :
                     item.id % 2 === 0 
                     ? "bg-gray-fdfdfd" 
                     : "bg-gray-f8f9fb"
-                } font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px w-full border-b border-gray-dddddd hover:font-spoqaBold group`}
+                } flex relative font-spoqaMedium text-14px tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd hover:font-spoqaBold group`}
             >
-                <div className="flex items-center font-spoqaBold text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
-                    
-                    <div className="-ml-2px w-28px flex justify-center">
+                <div style={{width: '7.875rem'}} className="flex justify-center items-center">
+                    <label className="form-control">
                         <input
-                            type="checkbox"
-                            checked={checkedState[item.id]}
-                            onChange={() => handleOnChange(item.id)}
-                        />
-                    </div>
-
-                    <div className="w-107px flex justify-center cursor-pointer" onClick={() => history.push(item.path)}>
-                        <img src={item.isRead === true ? MailOpenedIcon : MailIcon} alt=""/>
-                    </div>
-
-                    <div
-                        className={`${
-                            item.isRead === true 
-                            ? "text-gray-r7b7b7b font-spoqaMedium" 
-                            : "text-gray-r454545 font-spoqaMedium"
-                            } w-612px flex items-center space-x-10px cursor-pointer`}
-                        onClick={() => history.push(item.path)}
-                    >
-                        {
-                            item.type === "안내" 
-                            ? <div className="w-45px h-25px rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white text-12px">안내</div> 
-                            : item.type === "이벤트" 
-                            ? <div className="w-53px h-25px rounded-full bg-yellow-ffab39 flex items-center justify-center text-white text-12px">이벤트</div> 
-                            : <div></div>
-                        }
-                        <p className="group-hover:text-gray-r585858">{item.text}</p>
-                        {item.isRead === false && (
-                            <div className="w-17px h-17px bg-red-ff1237 rounded-full text-12px text-white flex items-center justify-center font-roboto">
-                                N
-                            </div>
-                        )}
-                    </div>
-
-                    <div className={`${item.isRead === true ? "text-gray-r7b7b7b" : "text-gray-r454545"} w-158px flex font-spoqa justify-center text-center`}>{item.time}</div>
-
-                    <button className="w-70px flex items-center justify-center hover:opacity-75">
-                        <div className={`${item.isRead === false  ? "bg-gray-r454545" : "bg-gray-a2a2a2" } w-49px h-29px flex justify-center rounded-full text-white font-spoqaMedium items-center pt-2px`}>
-                            삭제
+                        style={{width: '2.875rem', height: '2.875rem'}}
+                                type="checkbox"
+                                checked={checkedState[item.id]}
+                                onChange={() => handleOnChange(item.id)}
+                            />
+                        </label>
+                </div>
+                <div style={{width: '8.0625rem'}} className="flex justify-start items-center cursor-pointer" onClick={() => history.push(item.path)}>
+                    <img style={{width: '5.625rem', height: '5.625rem'}} src={item.isRead === true ? MailOpenedIcon : MailIcon} alt=""/>
+                </div>
+                 <div 
+                    style={{
+                        maxWidth: '56.25rem',
+                        padding: '1.75rem 2.2rem',
+                        paddingLeft: '0',
+                        paddingBottom: "1.5rem",
+                    }}
+                    className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full" >     
+                               
+                    <div className='w-full h-full flex flex-wrap'>
+                        <div
+                            className={`${
+                                item.isRead === true 
+                                ? "text-gray-r7b7b7b font-spoqaMedium" 
+                                : "text-gray-r454545 font-spoqaMedium"
+                                } flex items-center cursor-pointer`}
+                            onClick={() => history.push(item.path)}
+                        >
+                            {
+                                item.type === "안내" 
+                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="w-max rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2">안내</div> 
+                                : item.type === "이벤트" 
+                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="w-max rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2">이벤트</div> 
+                                : <div></div>
+                            }
+                            <p style={{textOverflow: 'ellipsis', maxWidth: '37rem'}} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap">{item.text}</p>
+                            {item.isRead === false && (
+                                <div style={{width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem'}} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto">
+                                    N
+                                </div>
+                            )}
                         </div>
-                    </button>
+
+                        <div 
+                            className={`w-full flex justify-start font-spoqaMedium tracking-tight text-r585858 text-center`} >
+                                <div className="w-full flex space-x-2px align-center">
+                                    <div style={{fontSize: '2.625rem'}} className="flex items-center text-gray-r7b7b7b font-spoqa">
+                                        {item.time}
+                                    </div>
+                                   
+                                </div>
+                        </div>
+                    </div>
                     
                 </div>
+                <img className='absolute right-0 ' style={{width: '4.75rem', height: '4.75rem', marginRight: '4.6875rem', marginTop: '3.625rem'}} src={item.isRead ? Delete : DeleteDark } alt=""/>
             </div>
         ));
     }
 
     return (
         <div style={{borderRadius:"1em"}} className="w-full shadow-subNavbar overflow-hidden">
-
-            <div className="flex items-center bg-gray-fafafa rounded-t-2xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd px-54px">        
-                <div className="-ml-2px w-28px flex justify-center">선택</div>
-                <div className="w-107px flex justify-center">확인</div>
-                <div className="w-612px flex justify-center">제목</div>
-                <div className="w-158px flex justify-center">보낸시간</div>
-                <div className="w-70px flex justify-center">삭제</div>
-            </div>
-
             <InboxList items={array} />
         </div>
     )

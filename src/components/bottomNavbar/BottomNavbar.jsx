@@ -9,7 +9,7 @@ import TabIcon5 from '../../images/tabbar/5.png'
 
 const BottomNavbar = () => {
     const history = useHistory();
-
+    
     return (
         <div style={{maxWidth: '1242px'}} className="w-full z-50 rounded-t-3xl shadow-plain bg-white fixed bottom-0">
             <div className="flex justify-around py-12 items-center h-full">
@@ -17,11 +17,17 @@ const BottomNavbar = () => {
                     <img className="w-16 pb-5 object-contain" src={TabIcon5} alt="" />
                     <p style={{color:"#727272"}} className="text-5xl font-spoqaMedium">출석부</p>
                 </button>
-                <button className="flex flex-col items-center space-y-3px">
+                <button 
+                    className="flex flex-col items-center space-y-3px"
+                    onClick={() => history.push('/freeboard')}
+                    >
                     <img className="w-20 pb-5 object-contain" src={TabIcon4} alt="" />
                     <p style={{color:"#727272"}} className="text-5xl font-spoqaMedium">게시판</p>
                 </button>
-                <button className="flex flex-col items-center space-y-3px">
+                <button 
+                    className="flex flex-col items-center space-y-3px"
+                    onClick={() => history.push('/main')}
+                >
                     <img className="w-20 pb-5 object-contain" src={TabIcon3} alt="" />
                     <p className="text-blue-r009edf text-5xl font-spoqaMedium">홈</p>
                 </button>
