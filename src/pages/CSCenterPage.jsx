@@ -131,6 +131,11 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                             <Announcement />
                         </Route>
                         <Route exact path="/cscenter/announcement/view">
+                            <div className="w-full z-30 flex flex-col items-center">
+                                <NoticeBanner />
+                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                <HomePageTopBanner pageTitle='고객센터' />
+                            </div>
                             <AnnouncementView />
                         </Route>
                         <Route path="/cscenter/faq">
