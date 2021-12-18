@@ -76,31 +76,34 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
     return (
         <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
 
-            <div className="w-full z-30 flex flex-col items-center">
-                <NoticeBanner />
-                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                <HomePageTopBanner pageTitle='고객센터' />
-            </div>
-
 
             <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
-                <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0 z-40">
-                    <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                        <div className=" flex flex-shrink-0 w-full">
-                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
-                        </div>
-                    </div>
-                </div>
-
                 
-
 
                 <div className="flex w-full">
                     <div className="w-full">
                         <Route path="/cscenter/contact/all/">
+                            <div className="w-full z-30 flex flex-col items-center">
+                                <NoticeBanner />
+                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                <HomePageTopBanner pageTitle='고객센터' />
+                            </div>
+
+                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0 z-40">
+                                <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                                    <div className=" flex flex-shrink-0 w-full">
+                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                    </div>
+                                </div>
+                            </div>
                             <Contact />
                         </Route>
                         <Route path="/cscenter/contact/view/*">
+                            <div className="w-full z-30 flex flex-col items-center">
+                                <NoticeBanner />
+                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                <HomePageTopBanner pageTitle='문의하기' />
+                            </div>
                             <ContactView />
                         </Route>
                         <Route path="/cscenter/contact/compose">
