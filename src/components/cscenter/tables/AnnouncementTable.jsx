@@ -1,117 +1,72 @@
 import React from 'react'
 import { useHistory } from 'react-router';
 
-const ExampleArray = [
-    {
-        id: 0,
-        type: "스포츠북",
-        title: "농구[쿼터] / 배구[세트] 스페셜 규정",
-        isNew: true,
-        time: "2021.06.29"
-    },
-    {
-        id: 1,
-        type: "스포츠북",
-        title: "야구스포츠 스페셜 규정",
-        isNew: false,
-        time: "2021.06.29"
-    },
-    {
-        id: 2,
-        type: "스포츠북",
-        title: "예비 도메인 안내",
-        isNew: false,
-        time: "2021.06.29"
-    },
-    {
-        id: 3,
-        type: "기타",
-        title: "은행별 점검시간안내",
-        isNew: false,
-        time: "2021.06.29"
-    },
-    {
-        id: 4,
-        type: "기타",
-        title: "스포츠 종목별 규정",
-        isNew: false,
-        time: "2021.06.29"
-    },
-    {
-        id: 5,
-        type: "스포츠북",
-        title: "미니게임 통합규정",
-        isNew: false,
-        time: "2021.06.29"
-    },
-    {
-        id: 6,
-        type: "미니게임",
-        title: "스포츠게임 관련규정",
-        isNew: false,
-        time: "2021.06.29"
-    },
-    {
-        id: 7,
-        type: "카지노",
-        title: "에볼루션카지노 이용안내",
-        isNew: false,
-        time: "2021.06.29"
-    },
-    {
-        id: 8,
-        type: "스포츠북",
-        title: "라이브 베팅 기본규정",
-        isNew: false,
-        time: "2021.06.29"
-    },
-    {
-        id: 9,
-        type: "스포츠북",
-        title: "핸디캡의 이해",
-        isNew: false,
-        time: "2021.06.29"
-    },
-    
-]
 
-const AnnouncementTable = () => {
+const AnnouncementTable = ({
+    array,
+    checkedState,
+    setCheckedState
+}) => {
 
     const history = useHistory();
 
-    function Cells({ items }) {
-        return items.map(item => (
-            <tr 
-                style={{backgroundColor: item.id % 2 === 0 ? "#fefefe" : "#f7f9fb"}} 
-                className="bg-gray-fefefe text-14px tracking-tight text-gray-r585858 h-56px w-full border-b border-gray-dddddd group"
+    function InboxList({ items }) {
+        return items?.map(item => (
+            <div 
+                key={item.id} 
+                style={{height: '11.625rem', borderBottomWidth: '0.1875rem'}}
+                className={`${
+                    item.isRead === false
+                    ? "bg-gray-e8eff6" :
+                    item.id % 2 === 0 
+                    ? "bg-gray-fdfdfd" 
+                    : "bg-gray-f8f9fb"
+                } flex font-spoqaMedium text-14px tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd hover:font-spoqaBold group`}
             >
-                <td style={{width: "173px"}} className="h-56px text-center text-blue-r0056a6 ">{item.type}</td>
-                <td  style={{width: "698px"}} className="w-full h-56px flex items-center space-x-10px">
-                    <p className="group-hover:text-black">{item.title}</p>
-                    {item.isNew && (
-                        <div className="w-17px h-17px bg-red-notification rounded-full text-12px text-white flex items-center justify-center font-roboto pr-px">
-                            N
+                 <div 
+                    style={{
+                        maxWidth: '56.25rem',
+                        padding: '1.75rem 2.2rem',
+                        paddingLeft: '0',
+                        paddingBottom: "1.5rem",
+                        marginLeft: '2.5625rem'
+                    }}
+                    className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full" >     
+                               
+                    <div className='w-full h-full flex flex-wrap'>
+                        <div
+                            className= "text-gray-585858 font-spoqaMedium  flex items-center cursor-pointer"
+                            onClick={() => history.push(item.path)}
+                        >
+                            <p style={{textOverflow: 'ellipsis', maxWidth: '65rem'}} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap">{item.title}</p>
+                            {item.isNew && (
+                                <div style={{width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem'}} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto">
+                                    N
+                                </div>
+                            )}
                         </div>
-                    )}
-                </td>
-                <td style={{width: "111px"}} className="w-full text-center pr-60px font-spoqa">{item.time}</td>
-            </tr>
+
+                        <div 
+                            className={`w-full flex justify-start font-spoqaMedium tracking-tight text-r585858 text-center`} >
+                                <div className="w-full flex space-x-2px align-center">
+                                    <p className='flex items-center text-blue-r0056a6' style={{fontSize: '2.625rem'}}>{item.type}</p>
+                                    <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
+                                    <div style={{fontSize: '2.625rem'}} className="flex items-center text-gray-r7b7b7b font-spoqa">
+                                        {item.time}
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         ));
     }
 
     return (
-        <table style={{borderRadius:"1em"}} className="shadow-subNavbar overflow-hidden w-full">
-            <thead className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
-                <tr>
-                    <td style={{width: "173px"}} className="text-center">구분</td>
-                    <td style={{width: "698px"}} className="w-full text-center pr-44px">제목</td>
-                    <td style={{width: "111px"}} className="w-full text-center pr-60px">등록일</td>
-                </tr>
-            </thead>
-            <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium cursor-pointer" onClick={() => history.push('/cscenter/announcement/view')}>
-                <Cells items={ExampleArray} />
-            </tbody>
-        </table>  
+        <div style={{borderRadius:"1em"}} className="w-full shadow-subNavbar overflow-hidden">
+            <InboxList items={array} />
+        </div>
     )
 }
 
