@@ -559,11 +559,11 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
     const tabsArray = [
         { text: "쿠폰사용", icon: Icon1, id: 0, path: "/mypage/coupon" },
         { text: "쿠폰선물", icon: Icon2, id: 1, path: "/mypage/coupon/coupon-gift" },
-        { text: "쿠폰내역", icon: Icon3, id: 2, path: "/mypage/coupon/coupon-history/received", hasSameParent: true },
+        { text: "쿠폰내역", icon: Icon3, id: 2, path: "/mypage/coupon/coupon-history", hasSameParent: true },
     ];
 
     const historyTabsArray = [
-        { text: "쿠폰발급내역", icon: Icon1, id: 0, path: "/mypage/coupon/coupon-history/received" },
+        { text: "쿠폰발급내역", icon: Icon1, id: 0, path: "/mypage/coupon/coupon-history" },
         { text: "쿠폰선물내역", icon: Icon2, id: 1, path: "/mypage/coupon/coupon-history/sent" }
     ]
 
@@ -652,7 +652,7 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                             {/* <PointsAccumulateHistory />
                             <BottomNavbar /> */}
                         </Route>
-                        <Route exact path="/mypage/coupon/coupon-history/received">
+                        <Route exact path="/mypage/coupon/coupon-history">
                             <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
                                 <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
                             </div>

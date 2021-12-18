@@ -15,15 +15,16 @@ const HorizontalMenu1 = ({
     function TabsList({ items }) {
         return items.map((item, index) => {
             let isSameLink = pathname === item.path
+
             if (item.hasSameParent) {
-                const parentPath = window.location.pathname.split('/')
-                parentPath?.pop()
-                const childPath = item.path.split('/')
-                childPath?.pop()
-                if (childPath.join('/') === parentPath.join('/')) {
+                const pagePath = window.location.pathname.split('/')
+                pagePath?.pop()
+                const parentPath = item.path.split('/')
+                if (parentPath.join('/') === pagePath.join('/')) {
                     isSameLink = true
                 }
             }
+
            return (
                 <button 
                     key={item.id} 
