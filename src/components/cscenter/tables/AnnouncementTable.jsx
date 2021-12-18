@@ -13,6 +13,7 @@ const AnnouncementTable = ({
     function InboxList({ items }) {
         return items?.map(item => (
             <div 
+                onClick={() => history.push('/cscenter/announcement/view')}
                 key={item.id} 
                 style={{height: '11.625rem', borderBottomWidth: '0.1875rem'}}
                 className={`${
