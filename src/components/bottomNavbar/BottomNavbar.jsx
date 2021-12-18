@@ -31,7 +31,10 @@ const BottomNavbar = () => {
                     <img className="w-20 pb-5 object-contain" src={TabIcon3} alt="" />
                     <p className="text-blue-r009edf text-5xl font-spoqaMedium">홈</p>
                 </button>
-                <button className="flex flex-col items-center space-y-3px">
+                <button 
+                    className="flex flex-col items-center space-y-3px"
+                    onClick={() => history.push('/cscenter/contact/all')}
+                >
                     <img className="w-16 pb-5 object-contain" src={TabIcon1} alt="" />
                     <p style={{color:"#727272"}} className="text-5xl font-spoqaMedium">문의</p>
                 </button>
