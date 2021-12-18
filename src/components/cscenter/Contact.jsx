@@ -160,19 +160,19 @@ const Contact = () => {
     )
 
     const dropdownButton = (
-        <div style={{width: '15rem'}} className="flex h-full bg-white rounded-md border border-gray-dddddd group">
+        <div style={{width: '15rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-md border border-gray-dddddd group">
             <input  className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
             >
-                <label style={{fontSize: '2.8125rem'}} className="ml-14px cursor-pointer group-hover:text-black">{selectedCarrier}</label>
+                <label style={{fontSize: '2.8125rem', marginLeft: '1.6875rem'}} className="cursor-pointer group-hover:text-black">{selectedCarrier}</label>
                 <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" /> 
             </div>
         </div>
     )
 
     const InboxSearch = (
-        <div style={{padding: '1.9375rem', height: '10.4375rem'}} className="w-full bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex items-center justify-center space-x-10px">
+        <div style={{padding: '1.9375rem', height: '10.4375rem', borderWidth: '0.1875rem'}} className="w-full bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex items-center justify-center space-x-10px">
             <MobileDropDownControls 
                 buttonChild={dropdownButton} 
                 isDropdownOpen={isDropdownOpen} 
@@ -182,7 +182,7 @@ const Contact = () => {
                 {searchDropdown}
             </MobileDropDownControls>
 
-            <div className="flex w-full h-full bg-white rounded-md border border-gray-dddddd">
+            <div style={{borderWidth: '0.1875rem'}} className="flex w-full h-full bg-white rounded-md border border-gray-dddddd">
                 <input 
                     style={{fontSize: '2.8125rem', paddingLeft: '1.5625rem'}}
                     className="rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"

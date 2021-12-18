@@ -107,6 +107,11 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                             <ContactView />
                         </Route>
                         <Route path="/cscenter/contact/compose">
+                            <div className="w-full z-30 flex flex-col items-center">
+                                <NoticeBanner />
+                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                <HomePageTopBanner pageTitle='문의하기' />
+                            </div>
                             <ContactCompose />
                         </Route>
                         <Route exact path="/cscenter/announcement">
