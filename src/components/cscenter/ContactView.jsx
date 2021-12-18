@@ -92,7 +92,7 @@ const ContactView = () => {
                 <button 
                     style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
                     className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
-                    onClick={() => history.push('/freeboard')}
+                    onClick={() => history.push('/cscenter/contact/all')}
                 >
                     <div 
                         style={{
