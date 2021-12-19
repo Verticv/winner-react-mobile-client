@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
 import ArrowDown from '../../images/newImages/arrow-down.png'
 import QIcon from '../../images/newImages/qa.png'
 import Icon1 from '../../images/myPage/betHistory/ico_1.png'
