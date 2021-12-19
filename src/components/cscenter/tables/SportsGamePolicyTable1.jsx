@@ -9,10 +9,10 @@ const SportsGamePolicyTable1 = ({array}) => {
         ruleText, 
         ruleText2 = null
     }) => (
-        <tr className={`${ruleText2 ? "h-73px" : "h-56px"} bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858  w-full border-b border-gray-dddddd`}>
-            <td style={{width: "162px", color: typeColor}} className="font-spoqaMedium w-235px h-56px text-center">{type}</td>
-            <td style={{width: "86px", color: overtime === null ? "#FF0000" : overtime === true ? "#dbae00" : "#585858"}} className="font-spoqaMedium h-56px text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
-            <td style={{width: "792px", WebkitTextStroke:"0.2px"}} className="h-56px pl-20px -space-y-4px">
+        <tr style={{borderBottomWidth: "0.1875rem"}} className={`bg-gray-fefefe font-spoqa tracking-tight text-gray-r585858  w-full border-b border-gray-dddddd`}>
+            <td style={{padding: '0.875rem 0', width: "14.8125rem", paddingLeft: '2.5rem', paddingRight: '1.5rem', color: typeColor}} className="font-spoqaMedium text-center">{type}</td>
+            <td style={{padding: '0.875rem 0', width: "14.1875rem", color: overtime === null ? "#FF0000" : overtime === true ? "#dbae00" : "#585858"}} className="font-spoqaMedium text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
+            <td style={{padding: '0.875rem 0', WebkitTextStroke:"0.2px"}} className="">
                 <p>{ruleText}</p>
                 <p>{ruleText2}</p>
             </td>
@@ -24,17 +24,18 @@ const SportsGamePolicyTable1 = ({array}) => {
             <Cell type={item.type} typeColor={item.typeColor} overtime={item.overtime} ruleText={item.ruleText} ruleText2={item.ruleText2} />           
         )
     )}
+    
 
     return (
-        <table style={{borderRadius:"1em"}} className="shadow-subNavbar overflow-hidden">
-            <thead className="bg-gray-fafafa font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
-                <tr>
-                    <td style={{width: "162px"}} className="text-center">베팅타입</td>
-                    <td style={{width: "86px"}} className="w-170px text-center">적용시간</td>
-                    <td style={{width: "792px"}} className="w-170px text-center">베팅룰</td>
+        <table style={{borderRadius:"1em", margin: '0 1.875rem', fontSize: '2.8125rem'}} className="shadow-subNavbar overflow-hidden">
+            <thead style={{borderBottomWidth: "0.1875rem"}} className="bg-gray-fafafa font-spoqaMedium tracking-tight text-gray-r454545 border-b border-gray-dddddd">
+                <tr style={{height: '9.375rem'}}>
+                    <td style={{width: "14.8125rem"}} className="text-center"><p>베팅타입</p></td>
+                    <td style={{width: "14.1875rem"}} className="text-center">적용시간</td>
+                    <td className="text-center">베팅룰</td>
                 </tr>
             </thead>
-            <tbody className="w-full text-585858 text-14px tracking-tight font-spoqa">       
+            <tbody style={{fontSize: '2.625rem'}} className="w-full text-585858 tracking-tight font-spoqa">       
                                      
                 <Cells items={array} />        
 

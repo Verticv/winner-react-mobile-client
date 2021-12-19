@@ -1,7 +1,6 @@
-import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu';
-import MyPageTitle from 'components/myPage/MyPageTitle'
-import React from 'react'
-import { Route } from 'react-router';
+import React, { useState } from 'react'
+import { Route, useHistory, useLocation } from 'react-router';
+import HorizontalSubMenu1 from 'components/horizontalMenus/HorizontalSubMenu1'
 import Icon1 from '../../images/cscenter/sportsPolicy/1.png'
 import Icon2 from '../../images/cscenter/sportsPolicy/2.png'
 import Icon3 from '../../images/cscenter/sportsPolicy/3.png'
@@ -13,6 +12,7 @@ import Icon8 from '../../images/cscenter/sportsPolicy/8.png'
 import Icon9 from '../../images/cscenter/sportsPolicy/9.png'
 import SportsGamePolicyTable1 from './tables/SportsGamePolicyTable1';
 import SportsGamePolicyTable2 from './tables/SportsGamePolicyTable2';
+import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 
 const SoccerArray = [
     {id:0, type:"승무패", typeColor:"#0056a6", overtime:true, ruleText:"승리가 예상되는 팀 또는 무승부를 선택하여 베팅하는 방식" },
@@ -378,7 +378,70 @@ const ESportsSubArray = [
     {id:0, title: "핸디캡 (전체)", color: "#905a12", text: "선택한 기준점수는 미만 또는 초과 이므로, 연장을 포함하여 핸디캡 적용 결과가 무승부일 경우는 미당첨 처리됨"},
 ]
 
+const HistoryMenu = ({
+    itemsArray, 
+    setSelectedTab,
+    setSelectedSubTab = null
+}) => {
+    const history = useHistory();
+    const pathname = window.location.pathname
+    const [isHover, setHover] = useState(null)
+    console.log(isHover)
+
+    function TabsList({ items }) {
+        return items.map((item, index) => (
+            <button 
+                className={`${
+                    pathname === item.path
+                    ? "bg-blue-r0056a6" 
+                    : "bg-white hover:bg-blue-d3f3fe border border-gray-rb7b7b7"
+                } w-1/2 rounded-full`}
+                style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
+                key={item.id} 
+                onClick={() => {
+                    history.push(item.path)
+                    setSelectedTab(item.id)
+                    if (setSelectedSubTab !== null) {
+                        setSelectedSubTab(0)
+                    }
+                }}
+                onMouseOver={() => setHover(item.id)}
+                onMouseLeave={() => setHover(null)}
+            >
+                <div >
+                    <div>
+                        <span
+                            className={`${
+                                pathname === item.path
+                                ? "text-white" 
+                                : "text-gray-r7b7b7b"
+                            }`}
+                        >{item.text}</span>
+                    </div>
+                </div>
+            </button>
+        ));
+    }
+
+    return (
+        <div className="flex w-full">
+            <TabsList items={itemsArray} />
+        </div>
+    )
+}
+
+const historyTabsArray = [
+    { text: "스포츠게임", icon: Icon1, id: 0, path: "/cscenter/policy/sportsgame/soccer" },
+    { text: "미니게임", icon: Icon2, id: 1, path: "/cscenter/policy/minigame/powerball" },
+    { text: "가상게임", icon: Icon2, id: 1, path: "#" }
+]
+
+
 const SportsGamePolicy = ({setSelectedTab}) => {
+
+    const location = useLocation();
+    const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
+    console.log(`selectedSubTab`, selectedSubTab)
 
     const tabsArray = [
         { text: "축구", icon: Icon1, id: 0, path: "/cscenter/policy/sportsgame/soccer" },
@@ -394,44 +457,49 @@ const SportsGamePolicy = ({setSelectedTab}) => {
     
     return (
         <div>
-            <MyPageTitle title="스포츠게임" />
+            <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
+                <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
+            </div>
+            <div className="w-full relative top-0 z-40">
+                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
+                <div style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div className=" flex flex-shrink-0 w-full">
+                    <HorizontalSubMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                    </div>
+                </div>
+            </div>
 
 
-            <div className="mt-20px" />
-            <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab}/>
-
-
-            <div className=" mt-29px w-full flex h-16px items-center justify-center text-16px tracking-tight font-spoqaMedium text-gray-r454545">
+            <div style={{margin: "0 12.8125rem", marginTop: '1.5rem', marginBottom: '2.9375rem'}} className="flex items-center justify-center tracking-tight font-spoqaMedium text-gray-r454545">
                 <Route path="/cscenter/policy/sportsgame/soccer">
-                    <p className="text-gray-r7b7b7b">모든 프로축구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 프로축구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/basketball">
-                    <p className="text-gray-r7b7b7b">모든 프로농구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 프로농구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/baseball">
-                    <p className="text-gray-r7b7b7b">모든 프로야구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 프로야구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/volleyball">
-                    <p className="text-gray-r7b7b7b">모든 프로배구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 프로배구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/tennis">
-                    <p className="text-gray-r7b7b7b">모든 테니스 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 테니스 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/hockey">
-                    <p className="text-gray-r7b7b7b">모든 아이스하키 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 아이스하키 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/handball">
-                    <p className="text-gray-r7b7b7b">모든 핸드볼 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 핸드볼 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/football">
-                    <p className="text-gray-r7b7b7b">모든 미식축구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 미식축구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
                 <Route path="/cscenter/policy/sportsgame/e-sports">
-                    <p className="text-gray-r7b7b7b">모든 e-스포츠 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
+                    <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 e-스포츠 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>        
             </div>
 
-            <div className="mt-27px" />
 
             <Route path="/cscenter/policy/sportsgame/soccer">
                 <SportsGamePolicyTable1 array={SoccerArray} />
@@ -462,8 +530,6 @@ const SportsGamePolicy = ({setSelectedTab}) => {
             </Route>
 
 
-            <div className="mt-20px" />
-
             <Route path="/cscenter/policy/sportsgame/soccer">
                 <SportsGamePolicyTable2 array={SoccerSubArray} />
             </Route>
@@ -492,7 +558,9 @@ const SportsGamePolicy = ({setSelectedTab}) => {
                 <SportsGamePolicyTable2 array={ESportsSubArray} />
             </Route>
 
-            <div className="mt-60px" />
+            <div style={{marginBottom: '20rem'}} />
+
+            <BottomNavbar />
 
         </div>
     )
