@@ -34,7 +34,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
     const tabsArray = [
         { text: "문의하기", icon: Icon1, id: 0, path: "/cscenter/contact/all", hasSameParent: true },
         { text: "공지사항", icon: Icon2, id: 1, path: "/cscenter/announcement" },
-        { text: "자주묻는질문", icon: Icon3, id: 2, path: "/cscenter/faq/all"},
+        { text: "자주묻는질문", icon: Icon3, id: 2, path: "/cscenter/faq", hasSameParent: true},
         { text: "계좌문의", icon: Icon3, id: 3, path: "/cscenter/inquiry"},
         { text: "베팅규정", icon: Icon3, id: 4, path: "/cscenter/policy/sportsgame/soccer"},
     ];
@@ -139,6 +139,19 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                             <AnnouncementView />
                         </Route>
                         <Route path="/cscenter/faq">
+                            <div className="w-full z-30 flex flex-col items-center">
+                                <NoticeBanner />
+                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                <HomePageTopBanner pageTitle='고객센터' />
+                            </div>
+
+                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0 z-40">
+                                <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                                    <div className=" flex flex-shrink-0 w-full">
+                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                    </div>
+                                </div>
+                            </div>
                             <Faq />
                         </Route>
                         <Route path="/cscenter/policy/sportsgame">
