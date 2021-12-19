@@ -6,6 +6,7 @@ import MoneyExchangePage from "pages/MoneyExchangePage";
 import PointsPage from "pages/PointsPage";
 import WinLoseSettlement from "pages/WinLoseSettlement";
 import LeftMenu from "components/myPage/LeftMenu";
+import EditInfo from 'components/myPage/EditInfo'
 import CountryDropDown from "components/dropdowns/CountryDropDown";
 import DropDownControls from "components/dropdowns/DropDownControls";
 import BetHistory from 'components/myPage/BetHistory'
@@ -342,6 +343,9 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
         </Route>
         <Route path="/mypage/inbox/*">
             <InboxView />
+        </Route>
+        <Route path="/mypage/edit-info">
+            <EditInfo />
         </Route>
 
       </div>

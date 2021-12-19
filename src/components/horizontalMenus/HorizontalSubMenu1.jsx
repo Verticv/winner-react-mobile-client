@@ -44,7 +44,9 @@ const HorizontalSubMenu1 = ({
                         >{item.text}</span>
                     </div>
                 </div>
-                <div style={{height: '2.0625rem', width: '0.1875rem', margin: '', marginTop: ''}} className='bg-gray-c5c5c5' />
+                {items.length - 1 !== index && (
+                    <div style={{height: '2.0625rem', width: '0.1875rem', margin: '', marginTop: ''}} className='bg-gray-c5c5c5' />
+                )}
             </button>
         ));
     }
