@@ -497,7 +497,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 <img className="w-40 object-contain" src={KakaoLogo} alt="kakao-icon" />
                                 <span className="text-brown-r351a1e font-roboto text-5xl leading-snug mb-6px tracking-wide">test1234</span>
                             </div>
-                            <div className="h-full w-1 bg-gray-404040" />
+                            <div className="h-full w-0.5 bg-gray-404040" />
                             <div className="flex items-center space-x-2px">
                                 <img className="w-40 object-contain" src={TelegramLogo} alt="kakao-icon" />
                                 <span className="text-blue-r2aa1d5 font-roboto text-5xl leading-snug mb-6px tracking-wide">test1234</span>

@@ -76,7 +76,7 @@ const ContactTable = ({
                     </div>
                     
                 </div>
-                <img className='absolute right-0 ' style={{width: '4.75rem', height: '4.75rem', marginRight: '4.6875rem', marginTop: '3.625rem'}} src={item.isRead ? Delete : DeleteDark } alt=""/>
+                <img className='absolute right-0 ' style={{width: '4rem', height: '4.375rem', marginRight: '4.6875rem', marginTop: '3.625rem'}} src={item.isRead ? Delete : DeleteDark } alt=""/>
             </div>
         ));
     }

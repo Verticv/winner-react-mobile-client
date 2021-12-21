@@ -159,7 +159,7 @@ const Faq = () => {
                 </div>
             </div>
 
-            <div style={{margin: '1.875rem', marginBottom: '20rem'}} className="">
+            <div style={{margin: '1.875rem', marginBottom: '14rem'}} className="">
                 <MenuList items={questionArray} />
             </div>
 

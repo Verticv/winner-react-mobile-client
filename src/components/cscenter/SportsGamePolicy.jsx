@@ -558,7 +558,7 @@ const SportsGamePolicy = ({setSelectedTab}) => {
                 <SportsGamePolicyTable2 array={ESportsSubArray} />
             </Route>
 
-            <div style={{marginBottom: '20rem'}} />
+            <div style={{marginBottom: '14rem'}} />
 
             <BottomNavbar />
 

@@ -1,4 +1,4 @@
-import SportsBetHistory from 'components/common/cards/SportsBetHistoryPanel';
+import BoardViewPanel from 'components/common/cards/BoardViewPanel';
 import BetHistoryPopup from 'components/popups/BetHistoryPopup';
 import PopupControls from 'components/popups/PopupControls';
 import React, { useState } from 'react'
@@ -9,6 +9,7 @@ const FreeBoardCompose = () => {
     const history = useHistory();
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [attachedArray, setAttachedArray] = useState([]);
+
     const AttachButton = (
         <button 
             style={{width: "19.3125rem", height: "6.75rem", fontSize: '2.4375rem', borderRadius: '1.25rem', backgroundColor: "#41b06c"}}
@@ -38,9 +39,12 @@ const FreeBoardCompose = () => {
                     
                 </div>
 
-                {attachedArray.map(id => 
-                    <div className="border-b border-gray-dddddd"> 
-                        <SportsBetHistory type={id} id={id} isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray}/>
+                {attachedArray.map((id, index) => 
+                    <div 
+                        className={`${attachedArray.length - 1 === index ? "border-b border-gray-dddddd": ""}`}
+                        style={{paddingBottom: `${attachedArray.length - 1 === index ? "3.75rem": ""}`}}
+                        > 
+                        <BoardViewPanel type={id} id={id} isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray}/>
                     </div>
                 )}
                 
@@ -55,7 +59,7 @@ const FreeBoardCompose = () => {
             </div>
 
 
-            <div style={{marginTop: '3.75rem', marginBottom: '20rem', fontSize: '2.8125rem'}} className="flex w-full items-center justify-center">
+            <div style={{marginTop: '3.75rem', marginBottom: '14rem', fontSize: '2.8125rem'}} className="flex w-full items-center justify-center">
                 <button style={{height: '7.3125rem', padding: '0.1875rem'}} onClick={() => history.push("/freeboard")} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-blue-r0070d9">
                     <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">작성하기</span>

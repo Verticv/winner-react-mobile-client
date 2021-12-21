@@ -3,6 +3,7 @@ import './RadioButton.css'
 import FootballIcon from '../../../images/newImages/mypage/sports/football.png'
 import USFlagIcon from '../../../images/newImages/mypage/sports/usaFlag.png'
 import UKFlagIcon from '../../../images/newImages/mypage/sports/englandFlag.png'
+import CloseIcon from '../../../images/newImages/close-white.png'
 import SpainFlagIcon from '../../../images/newImages/mypage/sports/spain.svg.png'
 import ClockIcon from '../../../images/newImages/mypage/sports/clock.png'
 import UpIcon from '../../../images/newImages/mypage/sports/up-red.png'
@@ -39,9 +40,9 @@ const BoardViewPanel = ({
     //     setAttachedArray(oldArray => [...oldArray, id]);
     // };
 
-    // const handleRemoveItem = (id) => {
-    //     setAttachedArray(attachedArray.filter(item => item !== id));
-    // };
+    const handleRemoveItem = (id) => {
+        setAttachedArray(attachedArray.filter(item => item !== id));
+    };
     
     const CardContent = ({
         bet, 
@@ -383,7 +384,7 @@ const BoardViewPanel = ({
                 </div>
             
 
-                    <div style={{margin: '1.875rem', marginBottom:'0'}} className="flex flex-wrap items-center w-full h-full">
+                    <div style={{margin: '1.875rem', marginBottom:'0'}} className="flex flex-wrap items-center justify-between h-full">
                         {/* <div style={{width: '5.8125rem'}} className="relative text-left pt-7px">
                         <label className="form-control">
                         <input
@@ -398,15 +399,53 @@ const BoardViewPanel = ({
                         <div>
                             <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅시간 :</span> 2021-06-29 15:45</div>
                             <div className='flex'>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '5.3125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>게임종류 :</span> 5,000</div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>게임종류 :</span> 5,000</div>
                                 <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>게임구분 :</span> 4.34</div>
                             </div>
                             <div className='flex'>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '5.3125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>예상적중금액 :</span> 20,000</div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>예상적중금액 :</span> 20,000</div>
                                 <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-red-500"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>당첨금 :</span> +900,000,000</div>
                             </div>
                         </div>
+
+                        {/* <button 
+                            onClick={() => {
+                            setAttachedArray && handleRemoveItem(id)
+                            }} 
+                            style={{width: '9rem', height: '9rem',  padding: '0.1875rem'}}
+                            className="flex items-center bg-blue-r286fce justify-center rounded-lg hover:opacity-75 bg-brown-7e3636"
+                        >
+                            <div 
+                                style={{
+                                    borderRadius: "3px"
+                                }}
+                                className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-cf254d to-red-f03a50 cursor-pointer"
+                            >
+                                <img style={{width: '3.75rem', height: '3.75rem'}} className="object-contain" src={UploadIcon} alt="" />
+                            </div>
+                        </button> */}
+
+                        {(isPopup === false && noButtons === false) && (
+                            <button 
+                            onClick={() => {
+                            setAttachedArray && handleRemoveItem(id)
+                            }} 
+                            style={{width: '9rem', height: '9rem',  padding: '0.1875rem'}}
+                            className="flex items-center justify-center rounded-lg hover:opacity-75 bg-brown-r7e3636"
+                        >
+                            <div 
+                                style={{
+                                    borderRadius: "3px"
+                                }}
+                                className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-cf254d to-red-f03a50 cursor-pointer"
+                            >
+                                <img style={{width: '2.5rem', height: '2.5rem'}} className="object-contain" src={CloseIcon} alt="" />
+                            </div>
+                        </button>
+                        )}
                     </div>
+
+                    
 
                     {/* <div style={{margin: '3.75rem 1.875rem', marginTop: '2.8125rem', marginBottom: '0'}} className="flex items-center justify-between">
                         <div className="flex w-full space-x-2px">

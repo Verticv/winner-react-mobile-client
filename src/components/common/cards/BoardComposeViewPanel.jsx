@@ -29,6 +29,8 @@ const BoardComposeViewPanel = ({
     noButtons = false
 }) => {
 
+    console.log(`isAttached`, isAttached)
+
     // using type 0
     // const handleOnChange = (position) => {
     //     const updatedCheckedState = checkedState.map((item, index) =>
@@ -37,13 +39,13 @@ const BoardComposeViewPanel = ({
     //     setCheckedState(updatedCheckedState);
     // }; 
 
-    // const addEntryClick = () => {
-    //     setAttachedArray(oldArray => [...oldArray, id]);
-    // };
+    const addEntryClick = () => {
+        setAttachedArray(oldArray => [...oldArray, id]);
+    };
 
-    // const handleRemoveItem = (id) => {
-    //     setAttachedArray(attachedArray.filter(item => item !== id));
-    // };
+    const handleRemoveItem = (id) => {
+        setAttachedArray(attachedArray.filter(item => item !== id));
+    };
     
     const CardContent = ({
         bet, 
@@ -415,11 +417,38 @@ const BoardComposeViewPanel = ({
                                 <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">1개월</span>
                             </div>
                         </div> */}
-                        <button style={{width: '9rem', height: '9rem',  padding: '0.1875rem'}} className="flex items-center bg-blue-r286fce justify-center rounded-lg hover:opacity-75">
-                            <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                                <img style={{width: '3.75rem', height: '3.75rem'}} className="object-contain" src={UploadIcon} alt="" />
-                            </div>
-                        </button>
+
+                        {isAttached === true && (
+                            <button 
+                                onClick={() => {
+                                    setPopupOpen && setPopupOpen(false)
+                                    setAttachedArray && addEntryClick()
+                                }} 
+                                style={{width: '9rem', height: '9rem',  padding: '0.1875rem'}}
+                                className="flex items-center bg-blue-r286fce justify-center rounded-lg hover:opacity-75"
+                                >
+                                <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
+                                    <img style={{width: '3.75rem', height: '3.75rem'}} className="object-contain" src={UploadIcon} alt="" />
+                                </div>
+                            </button>
+                        )}
+                        
+
+                        {(isPopup === false && noButtons === false) && (
+                             <button 
+                             onClick={() => {
+                                setAttachedArray && handleRemoveItem(id)
+                             }} 
+                             style={{width: '9rem', height: '9rem',  padding: '0.1875rem'}}
+                             className="flex items-center bg-blue-r286fce justify-center rounded-lg hover:opacity-75"
+                             >
+                             <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
+                                 {/* <img style={{width: '3.75rem', height: '3.75rem'}} className="object-contain" src={UploadIcon} alt="" /> */}
+                                 <p>내역삭제</p>
+                             </div>
+                         </button>
+                        )}
+                        
                     </div>
 
                     {/* <div style={{margin: '3.75rem 1.875rem', marginTop: '2.8125rem', marginBottom: '0'}} className="flex items-center justify-between">

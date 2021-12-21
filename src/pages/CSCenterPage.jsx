@@ -12,8 +12,8 @@ import HorizontalMenu1 from 'components/horizontalMenus/HorizontalMenu1'
 import Icon1 from '../images/cscenter/leftMenu/icon_1.png'
 import Icon2 from '../images/cscenter/leftMenu/icon_2.png'
 import Icon3 from '../images/cscenter/leftMenu/icon_3.png'
-// import Icon4 from '../images/cscenter/leftMenu/icon_4.png'
-// import Icon5 from '../images/cscenter/leftMenu/icon_5.png'
+import Icon4 from '../images/cscenter/leftMenu/icon_4.png'
+import Icon5 from '../images/cscenter/leftMenu/icon_5.png'
 // import IconHighlight1 from '../images/cscenter/leftMenu/icon_1_highlight.png'
 // import IconHighlight2 from '../images/cscenter/leftMenu/icon_2_highlight.png'
 // import IconHighlight3 from '../images/cscenter/leftMenu/icon_3_highlight.png'
@@ -35,8 +35,8 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
         { text: "문의하기", icon: Icon1, id: 0, path: "/cscenter/contact/all", hasSameParent: true },
         { text: "공지사항", icon: Icon2, id: 1, path: "/cscenter/announcement" },
         { text: "자주묻는질문", icon: Icon3, id: 2, path: "/cscenter/faq", hasSameParent: true},
-        { text: "계좌문의", icon: Icon3, id: 3, path: "/cscenter/inquiry"},
-        { text: "베팅규정", icon: Icon3, id: 4, path: "/cscenter/policy/sportsgame/soccer"},
+        { text: "계좌문의", icon: Icon4, id: 3, path: "/cscenter/inquiry"},
+        { text: "베팅규정", icon: Icon5, id: 4, path: "/cscenter/policy/sportsgame/soccer"},
     ];
 
     // const LeftMenuArray = [
@@ -118,7 +118,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                             <div className="w-full z-30 flex flex-col items-center">
                                 <NoticeBanner />
                                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                <HomePageTopBanner pageTitle='고객센터' />
+                                <HomePageTopBanner pageTitle='공지사항' />
                             </div>
 
                             <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0 z-40">

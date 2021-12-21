@@ -66,3 +66,7 @@ body {
 .place-color-grey-1::placeholder {
   color: #8d8d8d;
 }
+
+.place-color-grey-2::placeholder {
+  color: #bebebe;
+}
