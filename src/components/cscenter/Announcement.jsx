@@ -165,7 +165,7 @@ const Announcement = () => {
                 <Pagination withMarginBottom={false} page={page} setPage={setPage}/>   
             </div>
 
-            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '20rem'}} className="">
+            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '14rem'}} className="">
                 {InboxSearch}
             </div>
             <BottomNavbar />

@@ -120,7 +120,7 @@ const MinigamePolicy = () => {
                 </Route>
             </div>
 
-            <div style={{marginBottom: '20rem'}} />
+            <div style={{marginBottom: '14rem'}} />
 
             <BottomNavbar />
 

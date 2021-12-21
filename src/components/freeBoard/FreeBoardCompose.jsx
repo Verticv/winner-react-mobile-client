@@ -59,7 +59,7 @@ const FreeBoardCompose = () => {
             </div>
 
 
-            <div style={{marginTop: '3.75rem', marginBottom: '20rem', fontSize: '2.8125rem'}} className="flex w-full items-center justify-center">
+            <div style={{marginTop: '3.75rem', marginBottom: '14rem', fontSize: '2.8125rem'}} className="flex w-full items-center justify-center">
                 <button style={{height: '7.3125rem', padding: '0.1875rem'}} onClick={() => history.push("/freeboard")} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-blue-r0070d9">
                     <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">작성하기</span>

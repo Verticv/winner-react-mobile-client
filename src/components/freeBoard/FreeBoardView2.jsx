@@ -239,7 +239,7 @@ const FreeBoardView2 = () => {
                     </div>
             </div>
 
-            <div style={{marginTop: '3.75rem', marginBottom: '20rem'}} className="w-full flex items-start justify-between">
+            <div style={{marginTop: '3.75rem', marginBottom: '14rem'}} className="w-full flex items-start justify-between">
                 <button style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
