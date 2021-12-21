@@ -1,4 +1,4 @@
-import SportsBetHistory from 'components/common/cards/SportsBetHistoryPanel';
+import BoardViewPanel from 'components/common/cards/BoardViewPanel';
 import BetHistoryPopup from 'components/popups/BetHistoryPopup';
 import PopupControls from 'components/popups/PopupControls';
 import React, { useState } from 'react'
@@ -9,6 +9,7 @@ const FreeBoardCompose = () => {
     const history = useHistory();
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [attachedArray, setAttachedArray] = useState([]);
+
     const AttachButton = (
         <button 
             style={{width: "19.3125rem", height: "6.75rem", fontSize: '2.4375rem', borderRadius: '1.25rem', backgroundColor: "#41b06c"}}
@@ -38,9 +39,12 @@ const FreeBoardCompose = () => {
                     
                 </div>
 
-                {attachedArray.map(id => 
-                    <div className="border-b border-gray-dddddd"> 
-                        <SportsBetHistory type={id} id={id} isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray}/>
+                {attachedArray.map((id, index) => 
+                    <div 
+                        className={`${attachedArray.length - 1 === index ? "border-b border-gray-dddddd": ""}`}
+                        style={{paddingBottom: `${attachedArray.length - 1 === index ? "3.75rem": ""}`}}
+                        > 
+                        <BoardViewPanel type={id} id={id} isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray}/>
                     </div>
                 )}
                 
