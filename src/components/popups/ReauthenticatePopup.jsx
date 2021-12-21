@@ -9,29 +9,30 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
     const [selectedInput, setSelectedInput] = useState()
 
     return (
-        <div style={{width: '71rem'}} className="relative bg-white rounded-xl shadow-popup">
-            <button className="absolute top-0 right-0 mt-21px mr-21px cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
+        <div style={{width: '70.8125rem', maxHeight: '60.625rem'}} className="relative bg-white rounded-xl shadow-popup">
+            <button style={{margin: '2.3125rem'}} className="absolute top-0 right-0 cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
                 <img className='w-12' src={CloseIcon} alt="close_icon" />
             </button>
-            <div style={{width: '71rem'}} className="absolute -mt-79px flex justify-center">
-                <div className="flex items-center justify-center h-158px w-72 ">
-                    <img src={LoginIcon} alt="login_icon"/>
+            <div style={{width: '71rem'}} className="absolute flex justify-center">
+                <div className="flex items-center justify-center">
+                    <img style={{height: '15.5rem', width: '15.5rem', marginTop: '-7.75rem'}} src={LoginIcon} alt="login_icon"/>
                 </div>
             </div>
             {/* BREAK */}
-            <div className="w-full h-full flex flex-col items-center py-48 space-y-40px">
+            <div style={{padding: '11.75rem 0', paddingBottom: '8.4375rem'}} className="w-full h-full flex flex-col items-center">
 
-                <div className="flex flex-col items-center justify-center font-spoqaMedium text-5xl space-y-5px">
+                <div style={{fontSize: '2.625rem', marginBottom: '5.625rem'}} className="flex text-gray-text flex-col items-center justify-center font-spoqaMedium">
                     <div className="flex items-center h-14">
-                        <span className="text-blue-r0056a6 font-spoqaBold">louie3</span>
+                        <span className="text-blue-gradLight font-spoqaBold">louie3</span>
                         <span>님의 회원정보를 수정합니다.</span>
                     </div>
                     <div className="flex items-center h-14">비밀번호를 다시 입력해 주세요.</div>
                 </div>
 
-                <div style={{width: '54rem'}}>
+                <div style={{width: '54rem',marginBottom: '5.3125rem'}}>
                     <div 
-                        className="w-full text-5xl text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
+                        style={{paddingBottom: '1.625rem'}}
+                        className="w-full text-5xl text-center text-gray-text outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe tracking-mimus05" 
                         onFocus={(e) => {
                             e.target.placeholder = ""
                             setSelectedInput(0)
@@ -41,11 +42,14 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
                             setSelectedInput(false)
                         }}
                     >louie3</div>
-                    <div className={`${selectedInput === 0 ? "bg-blue-r1ca7ec h-2px -mb-px" : "bg-gray-bebebe h-px"} w-full`} />
+                    <div className='h-1.5'>
+                        <div className={`${selectedInput !== 1 ? "bg-blue-r1ca7ec h-1.5" : "bg-gray-bebebe h-0.75"} w-full`} />
+                    </div>
                 </div>
-                <div style={{width: '54rem'}}>
+                <div style={{width: '54rem', marginBottom: '3.6875rem'}}>
                     <input 
-                        className="w-full text-5xl text-center outline-none font-spoqaMedium tracking-tight placeholder-gray-bebebe pb-10px tracking-mimus05" 
+                        style={{paddingBottom: '1.625rem'}}
+                        className="w-full text-5xl text-center outline-none font-spoqaMedium tracking-tight place-color-grey-2 placeholder-gray-bebebe tracking-mimus05" 
                         placeholder={"비밀번호"} 
                         type="password"
                         onFocus={(e) => {
@@ -57,11 +61,14 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
                             setSelectedInput(false)
                         }}
                     />
-                    <div className={`${selectedInput === 1 ? "bg-blue-r1ca7ec h-2px -mb-px" : "bg-gray-bebebe h-px"} w-full`} />
+                    <div className='h-1.5'>
+                        <div className={`${selectedInput === 1 ? "bg-blue-r1ca7ec h-1.5" : "bg-gray-bebebe h-0.75"} w-full`} />
+                    </div>
                 </div>
                 <div style={{width: '54rem'}}>
                     <button 
-                        className="w-full h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-27px font-spoqaMedium text-white hover:opacity-75"
+                        style={{height: '8.4375rem', fontSize: '3rem', borderRadius: '0.5625rem'}}
+                        className="w-full rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark font-spoqaMedium text-white hover:opacity-75"
                         onClick={() => {
                             history.push("/mypage/edit-info")
                             setSelectedTab("/mypage/edit-info")
