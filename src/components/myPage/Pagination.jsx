@@ -13,7 +13,7 @@ const Pagination = ({page, setPage, withMarginBottom = true}) => {
             className="flex items-center justify-center rounded-lg  hover:opacity-75"
             onClick={() => selectedPage !== 1 && setSelectedPage(selectedPage - 1)}
         >
-            <img style={{width: '2.125rem', height: '2.125rem'}} className="cursor-pointer object-contain hover:bg-blend-darken" src={LeftIcon} alt="arrow" />
+            <img style={{width: '2.125rem', height: '2.125rem'}} className="cursor-pointer object-contain" src={LeftIcon} alt="arrow" />
         </button>
     )
     const RightArrow = () => (
@@ -22,7 +22,7 @@ const Pagination = ({page, setPage, withMarginBottom = true}) => {
             className="flex items-center justify-center rounded-lg  hover:opacity-75"
             onClick={() => selectedPage !== 5 && setSelectedPage(selectedPage + 1)}
         >
-            <img style={{width: '2.125rem', height: '2.125rem'}} className="cursor-pointer object-contain hover:bg-blend-darken" src={RightIcon} alt="arrow" />
+            <img style={{width: '2.125rem', height: '2.125rem'}} className="cursor-pointer object-contain" src={RightIcon} alt="arrow" />
         </button>
     )
 
@@ -35,7 +35,7 @@ const Pagination = ({page, setPage, withMarginBottom = true}) => {
                 className="flex items-center justify-center rounded-lg  hover:opacity-75"
                 onClick={() => setSelectedPage(1)}
             >
-                <img className="cursor-pointer object-contain hover:bg-blend-darken" src={DoubleLeftIcon} alt="" />
+                <img className="cursor-pointer object-contain" src={DoubleLeftIcon} alt="" />
             </button>
                 <LeftArrow />
                 <div className="space-x-px flex items-center">
@@ -93,7 +93,7 @@ const Pagination = ({page, setPage, withMarginBottom = true}) => {
                     className="flex items-center justify-center rounded-lg  hover:opacity-75"
                     onClick={() => setSelectedPage(5)}
                 >
-                    <img className=" cursor-pointer h-32px object-contain hover:bg-blend-darken" src={DoubleRightIcon} alt="" />
+                    <img className=" cursor-pointer h-32px object-contain" src={DoubleRightIcon} alt="" />
                 </button>
             </div>
     )

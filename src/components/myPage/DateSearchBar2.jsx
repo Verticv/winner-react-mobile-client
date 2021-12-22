@@ -29,7 +29,7 @@ const DateSearchBar2 = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("전체회차")
 
-    const dropDownCellClass = "flex w-full h-30px py-2px bg-white items-center hover:bg-blue-lightGradLight px-10px"
+    const dropDownCellClass = "flex w-full h-30px py-2px bg-white items-center px-10px"
 
     const gameResultButton = (
         <div className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c hover:text-gray-r585858" >

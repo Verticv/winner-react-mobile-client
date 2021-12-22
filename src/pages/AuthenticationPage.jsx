@@ -17,7 +17,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     const [isDropdownOpen, setDropdownOpen] = useState(true)
 
 
-    const dropDownCellClass = "flex w-170px h-40px py-4px bg-white items-center hover:bg-blue-lightGradLight px-10px"
+    const dropDownCellClass = "flex w-170px h-40px py-4px bg-white items-center px-10px"
 
     const carrierButton = (
         <div
@@ -248,7 +248,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         {/* BREAK */}
                         <div className="w-full h-full flex flex-col items-center justify-end pb-10px">
 
-                            <div style={{fontSize: '4.375rem'}} className="w-full mb-28 mt-12 font-spoqaMedium text-7xl">환영합니다</div>
+                            <div style={{fontSize: '4.375rem'}} className="w-full mb-28 mt-12 font-spoqaBold text-7xl">환영합니다</div>
 
                             <div className="w-full space-y-30px pb-40">
 
@@ -305,16 +305,16 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                             history.push('/main')
                                         }}
                                 >
-                                    <div style={{color:"#1873cf"}} className="w-full h-full rounded-full bg-white text-5xl flex items-center justify-center font-spoqaMedium">
-                                        로그인
+                                    <div style={{color:"#1873cf"}} className="w-full h-full rounded-full bg-white text-5xl flex items-center justify-center font-spoqaBold">
+                                        <p className='mt-1'>로그인</p>
                                     </div>
                                 </button>
                                 <button 
                                     style={{height: '11.8125rem'}}
-                                    className="w-full rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  font-spoqaMedium text-white hover:opacity-75"
+                                    className="w-full rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  font-spoqaBold text-white hover:opacity-75"
                                     onClick={() => setSignup(true)}
                                 >
-                                    회원가입
+                                    <p className='mt-1'>회원가입</p>
                                 </button>
                             </div>
 

@@ -16,7 +16,7 @@ const HorizontalMenu7 = ({
                 className={`${
                     pathname === item.path
                     ? "bg-blue-r58baf7" 
-                    : "bg-white hover:bg-blue-d3f3fe"
+                    : "bg-white"
                 } overflow-hidden w-full rounded-lg flex items-end p-px`} 
                 style={{
                     height:"80px",
@@ -38,7 +38,7 @@ const HorizontalMenu7 = ({
                     className={`flex w-full justify-end items-end bg-white ${
                         pathname === item.path 
                         ? "bg-blue-r58baf7" 
-                        : "bg-white hover:bg-blue-d3f3fe"
+                        : "bg-white "
                     }`}
                 >
                     <div 

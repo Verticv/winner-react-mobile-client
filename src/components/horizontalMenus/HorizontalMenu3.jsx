@@ -26,7 +26,7 @@ const HorizontalMenu3 = ({
                 className={`${
                     selectedTab === item.path
                     ? "bg-blue-r58baf7" 
-                    : "bg-white hover:bg-blue-d3f3fe"
+                    : "bg-white"
                 } overflow-hidden h-59px w-full rounded-lg flex items-end p-px`} 
                 onClick={() => {
                     setSelectedTab(item.path)
@@ -54,7 +54,7 @@ const HorizontalMenu3 = ({
                     className={`flex w-full justify-end items-end bg-white ${
                         selectedTab === item.path 
                         ? "bg-blue-r58baf7" 
-                        : "bg-white hover:bg-blue-d3f3fe"
+                        : "bg-white"
                     }`}
                 >
                     <div 

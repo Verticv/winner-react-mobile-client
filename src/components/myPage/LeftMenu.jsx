@@ -56,7 +56,7 @@ const LeftMenu = ({
                 pathname.includes(path)
                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                 : ""
-            } flex w-full items-center p-2.5 px-10 rounded-full group hover:bg-gray-f2f2f2`} 
+            } flex w-full items-center p-2.5 px-10 rounded-full group`} 
             onClick={() => {
                 buttonPressed(path)
                 setPopupOpen(true)
@@ -109,7 +109,7 @@ const LeftMenu = ({
                                     pathname.includes(item.mainPath)
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                     : ""
-                                } flex w-full h-full items-center focus:text-white p-2.5 px-10 rounded-full hover:bg-gray-f2f2f2 focus:bg-gradient-to-l focus:from-blue-gradDark focus:to-blue-r2088f0`} 
+                                } flex w-full h-full items-center focus:text-white p-2.5 px-10 rounded-full focus:bg-gradient-to-l focus:from-blue-gradDark focus:to-blue-r2088f0`} 
                                 onClick={(e) => buttonPressed(item.text, item.path)}
                                 onMouseEnter={() => mouseHover(item.path)}
                                 onMouseLeave={() => mouseLeave(item.path)}

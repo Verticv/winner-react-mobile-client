@@ -25,7 +25,7 @@ const HorizontalMenu9 = ({
                 className={`${
                     pathname === item.path
                     ? "bg-blue-r58baf7" 
-                    : "bg-white hover:bg-blue-d3f3fe"
+                    : "bg-white "
                 } overflow-hidden w-full rounded-lg flex items-end p-px`} 
                 onClick={() => {
                     history.push(item.path)
@@ -46,7 +46,7 @@ const HorizontalMenu9 = ({
                     className={`flex w-full justify-end items-end ${
                         pathname === item.path 
                         ? "bg-blue-r58baf7" 
-                        : "bg-white hover:bg-blue-d3f3fe"
+                        : "bg-white "
                     }`}
                 >
                     <div 

@@ -28,7 +28,7 @@ const MenuCard = ({
     const [selectedTab, setSelectedTab] = useState()
     const [isPopupOpen, setPopupOpen] = useState(true)
 
-    const tabClass = "relative w-full border-b-1 border-gray-d5d5d5 h-59px p-6px z-20 hover:bg-blue-r009edf group"
+    const tabClass = "relative w-full border-b-1 border-gray-d5d5d5 h-59px p-6px z-20 group"
     const selectedTabClass = "relative w-full h-59px bg-blue-r009edf shadow-plain2 p-6px z-20"
 
     const menuArray = [
