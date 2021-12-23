@@ -303,7 +303,7 @@ const BetCombinationPanel = ({
     const [isButtonClicked, setButtonClicked] = useState("")
 
 
-    const dropDownCellClass = "flex w-full h-42px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px space-x-8px"
+    const dropDownCellClass = "flex w-full h-42px py-2px bg-white items-center px-14px space-x-8px"
 
     const gameResultButton = (
         <div
