@@ -19,7 +19,7 @@ const HorizontalMenu6 = ({
                 className={`${
                     isState === item.id
                     ? "bg-blue-r58baf7" 
-                    : "bg-white hover:bg-blue-d3f3fe"
+                    : "bg-white"
                 } grounded-radiants overflow-hidden w-full flex items-end p-px justify-end`} 
                 onClick={() => setState(item.id)}
                 onMouseOver={() => setHover(item.id)}
@@ -34,7 +34,7 @@ const HorizontalMenu6 = ({
                     className={`flex w-full justify-end items-end bg-white ${
                         isState === item.id
                         ? "bg-blue-r58baf7" 
-                        : "bg-white hover:bg-blue-d3f3fe"
+                        : "bg-white"
                     }`}
                 >
                     <div 

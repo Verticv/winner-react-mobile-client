@@ -39,7 +39,7 @@ const HorizontalMenu8 = ({
                     className={`flex w-full justify-end items-end ${
                         selectedTab === item.id 
                         ? "bg-blue-r58baf7" 
-                        : "bg-white hover:bg-blue-d3f3fe"
+                        : "bg-white "
                     }`}
                 >
                     <div 

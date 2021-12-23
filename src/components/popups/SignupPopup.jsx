@@ -18,7 +18,7 @@ const SignupPopup = ({setAuth, setPopupOpen}) => {
     const [isDropdownOpen, setDropdownOpen] = useState(true)
 
 
-    const dropDownCellClass = "flex w-170px h-40px py-4px bg-white items-center hover:bg-blue-lightGradLight px-10px"
+    const dropDownCellClass = "flex w-170px h-40px py-4px bg-white items-center px-10px"
 
     const Title = ({text}) => (
         <div className="w-140px space-y-2 flex-shrink-0">

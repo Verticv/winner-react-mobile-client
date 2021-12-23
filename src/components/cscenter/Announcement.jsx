@@ -90,7 +90,7 @@ const Announcement = () => {
         new Array(inboxArray.length).fill(false)
     );
 
-    const dropDownCellClass = "flex w-120px h-40px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
+    const dropDownCellClass = "flex w-120px h-40px py-2px bg-white items-center px-14px"
 
     const searchDropdown = (
         <div style={{width: '15rem'}} className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">

@@ -7,9 +7,7 @@ export default function DropDownControls({
     onClick,
     buttonChild,
     isDropdownOpen,
-    setDropdownOpen,
-    className,
-    dropDownClasses,
+    setDropdownOpen
 }) {
     const [open, setOpen] = useState(false);
     const ref = useRef();
@@ -32,22 +30,17 @@ export default function DropDownControls({
     useOnClickOutside(ref, handler);
 
     return (
-        <div className={`relative ${className}`}>
+        <div className="relative">
             <button
-                className="flex w-full h-full relative items-center justify-center"
+                className="flex relative items-center justify-center"
                 onMouseDown={() => {
                     if (onClick) onClick();
                     setOpen(true);
                 }}
             >{buttonChild}</button>
             {open && (
-                <div style={{width: '73vw', height: '80vh', top: '10%'}} className={`text-copy-primary overflow-scroll fixed justify-center z-30 ${dropDownClasses} top-0`} ref={ref} >
+                <div style={{marginTop: '8.4rem'}} className="absolute text-copy-primary fixed top-0 right-0 justify-center z-30" ref={ref} >
                     {children}
-                </div>
-            )}
-            {open && (
-                <div className="w-screen h-screen fixed top-0 left-0" style={{background: 'rgba(0,0,0,0.65)'}}>
-
                 </div>
             )}
         </div>

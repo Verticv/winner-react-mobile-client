@@ -15,7 +15,7 @@ const HorizontalMenu4 = ({
                 className={`${
                     selectedTab === item.id
                     ? "bg-blue-r58baf7" 
-                    : "bg-gray-f9f9f9 hover:bg-blue-d3f3fe"
+                    : "bg-gray-f9f9f9"
                 } overflow-hidden h-47px w-full rounded-t-lg flex justify-end border border-gray-dddddd`} 
                 onClick={() => setSelectedTab(item.id)}
                 onMouseOver={() => setHover(item.id)}

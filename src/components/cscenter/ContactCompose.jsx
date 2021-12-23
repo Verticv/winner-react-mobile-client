@@ -7,7 +7,7 @@ const ContactCompose = () => {
 
     const [selectedCarrier, setSelectedCarrier] = useState("선택")
     const [isDropdownOpen, setDropdownOpen] = useState(true)
-    const dropDownCellClass = "flex w-120px h-30px py-2px bg-white items-center hover:bg-blue-lightGradLight px-14px"
+    const dropDownCellClass = "flex w-120px h-30px py-2px bg-white items-center px-14px"
 
     const dropdownButton = (
         <div style={{width: '26.25rem', height: '6.75rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-md border border-gray-dddddd group">

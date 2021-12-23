@@ -19,7 +19,7 @@ const HorizontalSubMenu = ({
             className={`${
                 pathname === item.path
                 ? "bg-blue-r0056a6" 
-                : "bg-white hover:bg-blue-d3f3fe border border-gray-rb7b7b7"
+                : "bg-white  border border-gray-rb7b7b7"
             } rounded-full min-w-fit`}
             style={{height: '6.375rem', minWidth: 'fit-content' , fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
             key={item.id} 

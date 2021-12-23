@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import Logo from '../../images/logo.png'
 import Koreaflag from '../../images/korea_flag.png'
 import UKflag from '../../images/uk_flag.png'
-import DropDownControls from '../dropdowns/DropDownControls'
-import CountryDropDown from '../dropdowns/CountryDropDown'
+import DropDownControls from '../dropdowns/CountriesDropDownControls'
+import CountryDropDown from '../dropdowns/MobileCountryDropDown'
 import ArrowUp from '../../images/arrows/arrow_up.png'
 import ArrowUpWhite from '../../images/arrows/arrow_up_white.png'
 import ArrowDown from '../../images/arrows/arrow_down.png'
@@ -46,8 +46,8 @@ const Navbar = () => {
                 
                 <div className="flex space-x-20px items-center flex-shrink-0">
                     {/* BREAK */}
-                    <DropDownControls dropDownClasses="w-28" buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
-                        <div className="mt-36 sm:mt-20 lg:mt-20"><CountryDropDown setCountry={setCountry} country={country} /></div>
+                    <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
+                        <div className=""><CountryDropDown setCountry={setCountry} country={country} /></div>
                     </DropDownControls>
                 </div>
             </header>

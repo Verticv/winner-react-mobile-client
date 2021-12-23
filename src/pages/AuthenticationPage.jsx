@@ -17,7 +17,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     const [isDropdownOpen, setDropdownOpen] = useState(true)
 
 
-    const dropDownCellClass = "flex w-170px h-40px py-4px bg-white items-center hover:bg-blue-lightGradLight px-10px"
+    const dropDownCellClass = "flex w-full h-40px p-8 bg-white items-center border-b border-gray-ececec"
 
     const carrierButton = (
         <div
@@ -42,20 +42,20 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     )
 
     const carrierDropdown = (
-        <div className="flex flex-col items-center justify-center py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-4xl">
-            <button style={{width: '14.0625rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+        <div className="flex flex-col items-center justify-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("SKT")
                 setDropdownOpen(false)
             }}>
                 SKT
             </button>
-            <button style={{width: '14.0625rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("KT")
                 setDropdownOpen(false)
             }}>
                 KT
             </button>
-            <button style={{width: '14.0625rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '6rem', borderBottom: 'none'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("LGU+")
                 setDropdownOpen(false)
             }}>
@@ -65,170 +65,170 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     )
 
     const bankDropdown = (
-        <div className="flex h-72 overflow-scroll flex-col items-center justify-center py-10px bg-white rounded-lg shadow-plain5 text-gray-r393e41 font-spoqaMedium text-4xl">
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+        <div className="flex overflow-scroll flex-col items-center justify-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("KEB하나은행")
                 setDropdownOpen(false)
             }}>
                 KEB하나은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("제주은행")
                 setDropdownOpen(false)
             }}>
                 제주은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("전북은행")
                 setDropdownOpen(false)
             }}>
                 전북은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("우체국")
                 setDropdownOpen(false)
             }}>
                 우체국
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("우리은행");
                 setDropdownOpen(false)
             }}>
                 우리은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("외환은행")
                 setDropdownOpen(false)
             }}>
                 외환은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("아메리카")
                 setDropdownOpen(false)
             }}>
                 아메리카
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("씨티은행")
                 setDropdownOpen(false)
             }}>
                 씨티은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("신협")
                 setDropdownOpen(false)
             }}>
                 신협
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("신한은행")
                 setDropdownOpen(false)
             }}>
                 신한은행
             </button> 
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("수협")
                 setDropdownOpen(false)
             }}>
                 수협
             </button> 
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("새마을금고")
                 setDropdownOpen(false)
             }}>
                 새마을금고
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("상호저축은행")
                 setDropdownOpen(false)
             }}>
                 상호저축은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("산업은행")
                 setDropdownOpen(false)
             }}>
                 산업은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("부산은행")
                 setDropdownOpen(false)
             }}>
                 부산은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("미즈호")
                 setDropdownOpen(false)
             }}>
                 미즈호
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("미쓰비시")
                 setDropdownOpen(false)
             }}>
                 미쓰비시
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("도이치")
                 setDropdownOpen(false)
             }}>
                 도이치
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("대구은행")
                 setDropdownOpen(false)
             }}>
                 대구은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("농협")
                 setDropdownOpen(false)
             }}>
                 농협
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("기업은행")
                 setDropdownOpen(false)
             }}>
                 기업은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("국민은행")
                 setDropdownOpen(false)
             }}>
                 국민은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("광주은행")
                 setDropdownOpen(false)
             }}>
                 광주은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("경남은행")
                 setDropdownOpen(false)
             }}>
                 경남은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("SC제일은행")
                 setDropdownOpen(false)
             }}>
                 SC제일은행
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("JP모간")
                 setDropdownOpen(false)
             }}>
                 JP모간
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("HSBC")
                 setDropdownOpen(false)
             }}>
                 HSBC
             </button>
-            <button style={{width: '28.125rem', height: '6rem'}} className={dropDownCellClass} onClick={() => {
+            <button style={{height: '6rem', borderBottom: 'none'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("ABN암로")
                 setDropdownOpen(false)
             }}>
@@ -248,7 +248,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         {/* BREAK */}
                         <div className="w-full h-full flex flex-col items-center justify-end pb-10px">
 
-                            <div style={{fontSize: '4.375rem'}} className="w-full mb-28 mt-12 font-spoqaMedium text-7xl">환영합니다</div>
+                            <div style={{fontSize: '4.375rem'}} className="w-full mb-28 mt-12 font-spoqaBold text-7xl">환영합니다</div>
 
                             <div className="w-full space-y-30px pb-40">
 
@@ -305,16 +305,16 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                             history.push('/main')
                                         }}
                                 >
-                                    <div style={{color:"#1873cf"}} className="w-full h-full rounded-full bg-white text-5xl flex items-center justify-center font-spoqaMedium">
-                                        로그인
+                                    <div style={{color:"#1873cf"}} className="w-full h-full rounded-full bg-white text-5xl flex items-center justify-center font-spoqaBold">
+                                        <p className='mt-1'>로그인</p>
                                     </div>
                                 </button>
                                 <button 
                                     style={{height: '11.8125rem'}}
-                                    className="w-full rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  font-spoqaMedium text-white hover:opacity-75"
+                                    className="w-full rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  font-spoqaBold text-white hover:opacity-75"
                                     onClick={() => setSignup(true)}
                                 >
-                                    회원가입
+                                    <p className='mt-1'>회원가입</p>
                                 </button>
                             </div>
 
@@ -401,6 +401,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 <input 
                                     className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe"
                                     placeholder="휴대폰번호(숫자만 입력)"
+                                    type='number'
                                     onFocus={(e) => {
                                         e.target.placeholder = ""
                                         setSelectedInput(5)
@@ -486,7 +487,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                     {/* BREAK */}
                     <div style={{marginTop: '3.4375rem'}} className={`w-full flex flex-col items-center`}>
                         <button 
-                            className="mb-32 w-full h-48 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  font-spoqaMedium text-white hover:opacity-75 pt-2px"
+                            className="mb-32 w-full h-48 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  font-spoqaBold text-white hover:opacity-75 pt-2px"
                             onClick={() => history.push("/main")}
                         >
                             회원가입
