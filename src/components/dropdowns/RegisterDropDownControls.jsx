@@ -41,8 +41,13 @@ export default function DropDownControls({
                 }}
             >{buttonChild}</button>
             {open && (
-                <div className={`absolute text-copy-primary fixed mt-24 justify-center z-30 ${dropDownClasses} top-0`} ref={ref} >
+                <div style={{width: '73vw', height: '80vh', top: '10%'}} className={`text-copy-primary overflow-scroll fixed justify-center z-30 ${dropDownClasses} top-0`} ref={ref} >
                     {children}
+                </div>
+            )}
+            {open && (
+                <div className="w-screen h-screen fixed top-0 left-0" style={{background: 'rgba(0,0,0,0.65)'}}>
+
                 </div>
             )}
         </div>
