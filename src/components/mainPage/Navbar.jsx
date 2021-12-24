@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="w-full z-50">
             <header style={{height: '9rem'}} className="relative flex items-center justify-between h-32 px-8 shadow-plain bg-white flex flex-shrink-0">
                 <div className="flex items-center flex-shrink-0">
-                    <img className=" object-contain w-80 mb-4 cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />
+                    <img style={{marginBottom: '0'}} className=" object-contain w-80 cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />
                 </div>
                 
                 <div className="flex space-x-20px items-center flex-shrink-0">

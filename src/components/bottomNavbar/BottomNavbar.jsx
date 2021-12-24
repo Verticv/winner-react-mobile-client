@@ -12,7 +12,7 @@ const BottomNavbar = () => {
     
     return (
         <div style={{maxWidth: '1242px'}} className="w-full z-50 rounded-t-3xl shadow-plain bg-white fixed bottom-0">
-            <div style={{paddingLeft: '4.875rem', paddingRight: '2.5rem', paddingBottom: '1.875rem'}} className="flex py-12 items-center h-full">
+            <div style={{paddingLeft: '4.5rem', paddingRight: '2.5rem', paddingBottom: '1.875rem'}} className="flex py-12 items-center h-full">
                 <button
                     style={{width: '15.625rem'}}
                     className="flex flex-col">
@@ -24,7 +24,7 @@ const BottomNavbar = () => {
                     className="flex flex-col"
                     onClick={() => history.push('/freeboard')}
                     >
-                    <img style={{width: '4.625rem', marginLeft: '1.1875rem', paddingBottom: '0.4375rem'}} className="object-contain" src={TabIcon4} alt="" />
+                    <img style={{width: '4.625rem', marginLeft: '0.875rem', paddingBottom: '0.4375rem'}} className="object-contain" src={TabIcon4} alt="" />
                     <p style={{color:"#727272", fontSize: '2.625rem'}} className="font-spoqaMedium">게시판</p>
                 </button>
                 <button 
