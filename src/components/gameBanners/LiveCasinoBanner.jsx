@@ -14,12 +14,12 @@ const LiveCasinoBanner = () => {
     const cardClass = "group relative flex justify-end w-full transition cursor-pointer overflow-hidden"
 
     const gamesArray = [
-        { id: 0, img: EvolutionBg, color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "" },
-        { id: 1, img: AsiaBg, color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
-        { id: 2, img: PragmaticBg, color: "bg-purple-d03ab7", btnText: "게임시작", class: "" },
-        { id: 3, img: DgBg, color: "bg-orange-e39e90", btnText: "게임시작", class: "" },
-        { id: 4, img: SexyBg, color: "bg-red-db4a4a", btnText: "게임시작", class: "" },
-        { id: 5, img: BigBg, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
+        { id: 0, img: EvolutionBg, imgText: '에볼루션', textMarginBottom: '26rem', textMarginTop: '6rem', color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "" },
+        { id: 1, img: AsiaBg, imgText: '아시아게이밍', textMarginBottom: '26rem', textMarginTop: '8rem', color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
+        { id: 2, img: PragmaticBg, imgText: '프라그메틱플레이', textMarginBottom: '24rem', textMarginTop: '8rem', color: "bg-purple-d03ab7", btnText: "게임시작", class: "" },
+        { id: 3, img: DgBg, imgText: '드림게이밍', textMarginBottom: '27rem', textMarginTop: '8rem', color: "bg-orange-e39e90", btnText: "게임시작", class: "" },
+        { id: 4, img: SexyBg, imgText: '섹시게이밍', textMarginBottom: '28rem', textMarginTop: '7rem', color: "bg-red-db4a4a", btnText: "게임시작", class: "" },
+        { id: 5, img: BigBg, imgText: '빅게이밍', textMarginBottom: '28rem', textMarginTop: '4.5rem', color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
     ];
 
     function CardList({ items }) {
@@ -31,6 +31,7 @@ const LiveCasinoBanner = () => {
                 style={{marginBottom: items.length - 1 === index ? '18rem' : ''}}
             >
                 <img className="z-20 object-contain" src={item.img} alt="background" />
+                <div style={{fontSize: '2.625rem', marginRight: item.textMarginBottom, marginTop: item.textMarginTop}} className={`mr-72 text-4xl absolute z-20 right-0 justify-center text-black font-spoqaMedium`}>{item.imgText}</div>
                 <div style={{boxShadow: '0px 0.125rem 0.25rem 0px rgba(0, 0, 0, 0.3)'}} className={`mr-8 text-4xl absolute z-20 right-0 w-56 h-20 rounded-full flex items-center justify-center text-white font-spoqaBold pt-px ${item.color}`}>{item.btnText}</div>
             </div>
         ));

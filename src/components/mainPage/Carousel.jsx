@@ -58,7 +58,7 @@ const Carousel = () => {
             type="button"
             onClick={isLeft ? previousImage : nextImage}
             style={{width: '4.84rem', height: '4.84rem', right:`${isLeft ? '' : '1.875rem'}`, left:`${isLeft ? '1.875rem' : ''}`}}
-            className={`absolute text-white z-10 bg-black h-28px w-28px rounded-sm opacity-50 flex items-center justify-center hover:opacity-75`}
+            className={`absolute text-white z-10 bg-black h-28px w-28px rounded-lg opacity-50 flex items-center justify-center hover:opacity-75`}
         >
             {isLeft ? leftArrow : rightArrow}
         </button>

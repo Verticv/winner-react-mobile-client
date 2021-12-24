@@ -15,7 +15,7 @@ const CountryDropDown = ({setCountry, country}) => {
     function CountriesList({ items }) {
         return items.map(item => (
             <button 
-                style={{ height: '5rem'}}
+                style={{ height: '5.25rem'}}
                 key={item.id} 
                 className={`${
                     (selectedTab === item.id) 

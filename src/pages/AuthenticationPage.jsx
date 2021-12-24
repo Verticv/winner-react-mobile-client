@@ -17,7 +17,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     const [isDropdownOpen, setDropdownOpen] = useState(true)
 
 
-    const dropDownCellClass = "flex w-full h-40px p-8 bg-white items-center border-b border-gray-ececec"
+    const dropDownCellClass = "flex w-full h-40px p-8 bg-white justify-between items-center border-b border-gray-ececec"
 
     const carrierButton = (
         <div
@@ -42,197 +42,523 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     )
 
     const carrierDropdown = (
-        <div className="flex flex-col items-center justify-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
+        <div className="flex flex-col h-full items-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("SKT")
                 setDropdownOpen(false)
             }}>
-                SKT
+                <p>SKT</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedCarrier === "SKT"}
+                            name="SKT"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("KT")
                 setDropdownOpen(false)
             }}>
-                KT
+                <p>KT</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedCarrier === "KT"}
+                            name="KT"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '6rem', borderBottom: 'none'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("LGU+")
                 setDropdownOpen(false)
             }}>
-                LGU+
+                <p>LGU+</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedCarrier === "LGU+"}
+                            name="LGU"
+                        />
+                    </label>
+                </div>
             </button>
         </div>
     )
 
     const bankDropdown = (
-        <div className="flex overflow-scroll flex-col items-center justify-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
+        <div className="flex overflow-scroll h-full flex-col items-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
+                setSelectedBank("은행선택")
+                setDropdownOpen(false)
+            }}>
+                <p>은행선택</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "은행선택"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
+            </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("KEB하나은행")
                 setDropdownOpen(false)
             }}>
-                KEB하나은행
+                <p>KEB하나은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "KEB하나은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("제주은행")
                 setDropdownOpen(false)
             }}>
-                제주은행
+                <p>제주은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "제주은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("전북은행")
                 setDropdownOpen(false)
             }}>
-                전북은행
+                <p>전북은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "전북은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("우체국")
                 setDropdownOpen(false)
             }}>
-                우체국
+                <p>우체국</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "우체국"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("우리은행");
                 setDropdownOpen(false)
             }}>
-                우리은행
+                <p>우리은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "우리은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("외환은행")
                 setDropdownOpen(false)
             }}>
-                외환은행
+                <p>외환은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "외환은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("아메리카")
                 setDropdownOpen(false)
             }}>
-                아메리카
+                <p>아메리카</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "아메리카"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("씨티은행")
                 setDropdownOpen(false)
             }}>
-                씨티은행
+                <p>씨티은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "씨티은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("신협")
                 setDropdownOpen(false)
             }}>
-                신협
+                <p>신협</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "신협"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("신한은행")
                 setDropdownOpen(false)
-            }}>
-                신한은행
+            }}> 
+                <p>신한은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "신한은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button> 
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("수협")
                 setDropdownOpen(false)
             }}>
-                수협
+                <p>수협</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "수협"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button> 
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("새마을금고")
                 setDropdownOpen(false)
             }}>
-                새마을금고
+                <p>새마을금고</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "새마을금고"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("상호저축은행")
                 setDropdownOpen(false)
             }}>
-                상호저축은행
+                <p>상호저축은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "상호저축은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("산업은행")
                 setDropdownOpen(false)
             }}>
-                산업은행
+                <p>산업은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "산업은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("부산은행")
                 setDropdownOpen(false)
             }}>
-                부산은행
+                <p>부산은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "부산은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("미즈호")
                 setDropdownOpen(false)
             }}>
-                미즈호
+                <p>미즈호</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "미즈호"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("미쓰비시")
                 setDropdownOpen(false)
             }}>
-                미쓰비시
+                <p>미쓰비시</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "미쓰비시"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("도이치")
                 setDropdownOpen(false)
             }}>
-                도이치
+                <p>도이치</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "도이치"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("대구은행")
                 setDropdownOpen(false)
             }}>
-                대구은행
+                <p>대구은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "대구은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("농협")
                 setDropdownOpen(false)
             }}>
-                농협
+                <p>농협</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "농협"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("기업은행")
                 setDropdownOpen(false)
             }}>
-                기업은행
+                <p>기업은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "기업은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("국민은행")
                 setDropdownOpen(false)
             }}>
-                국민은행
+                <p>국민은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "국민은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("광주은행")
                 setDropdownOpen(false)
             }}>
-                광주은행
+                <p>광주은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "광주은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("경남은행")
                 setDropdownOpen(false)
             }}>
-                경남은행
+                <p>경남은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "경남은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("SC제일은행")
                 setDropdownOpen(false)
             }}>
-                SC제일은행
+                <p>SC제일은행</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "SC제일은행"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("JP모간")
                 setDropdownOpen(false)
             }}>
-                JP모간
+                <p>JP모간</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "JP모간"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("HSBC")
                 setDropdownOpen(false)
             }}>
-                HSBC
+                <p>HSBC</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "HSBC"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>
             <button style={{height: '6rem', borderBottom: 'none'}} className={dropDownCellClass} onClick={() => {
                 setSelectedBank("ABN암로")
                 setDropdownOpen(false)
             }}>
-                ABN암로
+                <p>ABN암로</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedBank === "ABN암로"}
+                            name="bank"
+                        />
+                    </label>
+                </div>
             </button>      
         </div>
     )
@@ -346,9 +672,9 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                         {/* BREAK */}
                         <div className="w-full flex flex-col mb-16">
-                            <div className={`${selectedInput === 1 ? "" : ""} w-full mb-5 `}>
+                            <div className={`${selectedInput === 1 ? "" : ""} w-full space-y-4px mb-5 `}>
                                 <input 
-                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none ssssssss" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none" 
                                     onFocus={(e) => setSelectedInput(1)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -438,8 +764,8 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                         {/* BREAK */}
                         <div style={{marginBottom: '2.375rem'}} className="w-full flex flex-col">
-                            <div className="flex flex-col space-y-2">
-                                <div className="flex space-x-10px w-full">
+                            <div className="flex flex-col">
+                                <div style={{marginBottom: '2.375rem'}} className="flex space-x-10px w-full">
                                     <div className="w-1/2 flex-shrink-0 space-y-4px h-24">
                                         <DropDownControls isBank className='h-24' buttonChild={bankButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen} >
                                             {bankDropdown}
@@ -464,9 +790,10 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="w-full space-y-2">
+                                <div className="w-full space-y-4px">
                                     <input 
                                         className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe" 
+                                        type='number'
                                         placeholder="계좌번호 (숫자만 입력)"
                                         onFocus={(e) => {
                                             e.target.placeholder = ""
@@ -493,12 +820,12 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                             회원가입
                         </button>
 
-                        <div style={{marginBottom: '11.25rem'}} className="flex w-full justify-between items-center h-28">
-                            <div className="flex items-center space-x-2px pr-10px">
+                        <div style={{marginBottom: '11.25rem', marginRight: '-2.8125rem'}} className="flex w-full justify-between items-center h-28">
+                            <div style={{marginLeft: '-3.25rem'}} className="flex items-center space-x-2px pr-10px">
                                 <img className="w-40 object-contain" src={KakaoLogo} alt="kakao-icon" />
                                 <span className="text-brown-r351a1e font-roboto text-5xl leading-snug mb-6px tracking-wide">test1234</span>
                             </div>
-                            <div className="h-full w-0.5 bg-gray-404040" />
+                            <div style={{marginRight: '1.0625rem'}} className="h-full w-0.5 bg-gray-404040" />
                             <div className="flex items-center space-x-2px">
                                 <img className="w-40 object-contain" src={TelegramLogo} alt="kakao-icon" />
                                 <span className="text-blue-r2aa1d5 font-roboto text-5xl leading-snug mb-6px tracking-wide">test1234</span>
