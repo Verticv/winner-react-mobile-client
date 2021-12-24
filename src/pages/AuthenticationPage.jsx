@@ -793,6 +793,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full space-y-2">
                                     <input 
                                         className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe" 
+                                        type='number'
                                         placeholder="계좌번호 (숫자만 입력)"
                                         onFocus={(e) => {
                                             e.target.placeholder = ""
