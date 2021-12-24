@@ -60,6 +60,10 @@ input[type="radio"] {
   place-content: center;
 }
 
+input[type="radio"].radio-input {
+  border-radius: 50%;
+}
+
 .form-control + .form-control {
   margin-top: 1em;
 }
@@ -92,4 +96,8 @@ input[type="checkbox"]:checked::before {
 
 input[type="radio"]:checked::before {
   transform: scale(1);
+}
+
+input[type="radio"].radio-input:checked::before {
+  border-radius: 50%;
 }
