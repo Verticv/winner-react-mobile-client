@@ -22,23 +22,23 @@ const AllGamesBanner = () => {
     const cardClass = "group relative flex justify-end w-full transition cursor-pointer overflow-hidden"
 
     const gamesArray = [
-        { id: 0, img: EvolutionBg, color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "" },
-        { id: 1, img: AsiaBg, color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
-        { id: 2, img: PragmaticBg, color: "bg-purple-d03ab7", btnText: "게임시작", class: "" },
-        { id: 3, img: DgBg, color: "bg-orange-e39e90", btnText: "게임시작", class: "" },
-        { id: 4, img: SexyBg, color: "bg-red-db4a4a", btnText: "게임시작", class: "" },
-        { id: 5, img: BigBg, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
-        { id: 6, img: SlotGameBanner, color: "bg-green-r7bd26a", btnText: "게임시작", class: "" },
-        { id: 7, img: SportsBanner1, color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
-        { id: 8, img: SportsBanner2, color: "bg-blue-r3384ca", btnText: "게임시작", class: "", path: "/bet-combination" },
-        { id: 9, img: SportsBanner3, color: "bg-orange-e39e90", btnText: "게임시작", class: "", path: "/bet-combination" },
-        { id: 10, img: EsportsBannerImage, color: "bg-purple-a898ee", btnText: "게임시작", class: "" },
-        { id: 11, img: MinigameBanner1, color: "bg-purple-d03ab7", btnText: "게임시작", class: "", path: "/minigame/powerball" },
-        { id: 12, img: MinigameBanner2, color: "bg-blue-r77a4e0", btnText: "게임시작", class: "", path: "/minigame/powerladder" },
-        { id: 13, img: MinigameBanner3, color: "bg-orange-e39e90", btnText: "게임시작", class: "", path: "/minigame/speedkino" },
-        { id: 14, img: MinigameBanner4, color: "bg-green-e3ba3c", btnText: "게임시작", class: "", path: "/minigame/kinoladder" },
-        { id: 15, img: VirtualBanner, color: "bg-green-r7bd26a", btnText: "게임시작", class: "", path: "/minigame/powerball" },
-        { id: 16, img: FishingBanner, color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
+        { id: 0, img: EvolutionBg, imgText: '에볼루션', textMarginBottom: '26rem', textMarginTop: '6rem', color: "bg-teal-r4eb2ba", btnText: "게임시작", class: "" },
+        { id: 1, img: AsiaBg, imgText: '아시아게이밍', textMarginBottom: '26rem', textMarginTop: '8rem', color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
+        { id: 2, img: PragmaticBg, imgText: '프라그메틱플레이', textMarginBottom: '24rem', textMarginTop: '8rem', color: "bg-purple-d03ab7", btnText: "게임시작", class: "" },
+        { id: 3, img: DgBg, imgText: '드림게이밍', textMarginBottom: '27rem', textMarginTop: '8rem', color: "bg-orange-e39e90", btnText: "게임시작", class: "" },
+        { id: 4, img: SexyBg, imgText: '섹시게이밍', textMarginBottom: '28rem', textMarginTop: '7rem', color: "bg-red-db4a4a", btnText: "게임시작", class: "" },
+        { id: 5, img: BigBg, imgText: '빅게이밍', textMarginBottom: '28rem', textMarginTop: '4.5rem', color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
+        { id: 6, img: SlotGameBanner, imgText: '케이플레이슬롯', textMarginBottom: '25rem', textMarginTop: '5rem', color: "bg-green-r7bd26a", btnText: "게임시작", class: "" },
+        { id: 7, img: SportsBanner1, imgText: '라이브베팅', textMarginBottom: '27rem', textMarginTop: '8rem', color: "bg-yellow-e3ba3c", btnText: "게임시작", class: "" },
+        { id: 8, img: SportsBanner2, imgText: '조합베팅', textMarginBottom: '28rem', textMarginTop: '8rem', color: "bg-blue-r3384ca", btnText: "게임시작", class: "", path: "/bet-combination" },
+        { id: 9, img: SportsBanner3, imgText: '스페셜', textMarginBottom: '30rem', textMarginTop: '8rem', color: "bg-orange-e39e90", btnText: "게임시작", class: "", path: "/bet-combination" },
+        { id: 10, img: EsportsBannerImage, imgText: '인플레이매트릭스', textMarginBottom: '23rem', textMarginTop: '5rem', color: "bg-purple-a898ee", btnText: "게임시작", class: "" },
+        { id: 11, img: MinigameBanner1, imgText: '파워볼', textMarginBottom: '29.3rem', textMarginTop: '4.5rem', color: "bg-purple-d03ab7", btnText: "게임시작", class: "", path: "/minigame/powerball" },
+        { id: 12, img: MinigameBanner2, imgText: '파워사다리', textMarginBottom: '26.5rem', textMarginTop: '4.5rem', color: "bg-blue-r77a4e0", btnText: "게임시작", class: "", path: "/minigame/powerladder" },
+        { id: 13, img: MinigameBanner3, imgText: '스피드키노', textMarginBottom: '27rem', textMarginTop: '5rem', color: "bg-orange-e39e90", btnText: "게임시작", class: "", path: "/minigame/speedkino" },
+        { id: 14, img: MinigameBanner4, imgText: '키노사다리', textMarginBottom: '27rem', textMarginTop: '4.5rem', color: "bg-green-e3ba3c", btnText: "게임시작", class: "", path: "/minigame/kinoladder" },
+        { id: 15, img: VirtualBanner, imgText: '키론가상게임', textMarginBottom: '25rem', textMarginTop: '5rem', color: "bg-green-r7bd26a", btnText: "게임시작", class: "", path: "/minigame/powerball" },
+        { id: 16, img: FishingBanner, imgText: '케이플레이피싱', textMarginBottom: '24.5rem', textMarginTop: '5rem', color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
     ];
 
     function CardList({ items }) {
@@ -49,6 +49,7 @@ const AllGamesBanner = () => {
                 style={{marginBottom: items.length - 1 === index ? '18rem' : ''}}
             >
                 <img className="z-20 object-contain" src={item.img} alt="background" />
+                <div style={{fontSize: '2.625rem', marginRight: item.textMarginBottom, marginTop: item.textMarginTop}} className={`mr-72 text-4xl absolute z-20 right-0 justify-center text-black font-spoqaMedium`}>{item.imgText}</div>
                 <div style={{boxShadow: '0px 0.125rem 0.25rem 0px rgba(0, 0, 0, 0.3)'}} className={`mr-8 text-4xl absolute z-20 right-0 w-56 h-20 rounded-full flex items-center justify-center text-white font-spoqaBold pt-px ${item.color}`}>{item.btnText}</div>
             </div>
         ));

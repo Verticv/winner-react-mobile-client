@@ -28,7 +28,7 @@ const Navbar = () => {
     )
 
     const CountryButton = (
-        <div className="flex items-center w-56 h-20 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2 shadow-plain2 hover:opacity-75">
+        <div style={{height: '5.25rem'}} className="flex items-center w-56 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2 shadow-plain2 hover:opacity-75">
             <div className="mr-7 h-14px w-16 rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>

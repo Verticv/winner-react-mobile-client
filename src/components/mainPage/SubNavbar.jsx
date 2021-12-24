@@ -45,13 +45,14 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
     function TabsList({ items }) {
         return items.map(item => (
             <button 
-                key={item.id} 
+                key={item.id}
+                style={{height: '13.4375rem'}}
                 className={`
                 ${selectedTab === item.id 
                     ? "text-white duration-150" 
                     : " space-x-2px text-gray-subNavbar duration-300"
                 } 
-                flex flex-col justify-start flex-shrink-0 items-center w-64 h-56 rounded-md z-20 transition ease-in-out tracking-tight relative`} 
+                flex flex-col justify-start flex-shrink-0 items-center w-64 rounded-md z-20 transition ease-in-out tracking-tight relative`} 
                 onClick={() => {
                     setSelectedTab(item.id)
                     setGameBanner(item.id)
@@ -59,13 +60,14 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 }}
             >
                 <img 
+                    style={{height: `${item.id === 0 ? "9.3125rem" : "9.375rem"}`, width: `${item.id === 0 ? "9.3125rem" : "9.375rem"}`}}
                     className={`absolute top-0 object-contain w-32 h-32 mb-4
                         ${item.id === 0 && "w-40px h-40px pt-4"}
                         ${(selectedTab === item.id && item.id !== 0) ? "w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px -mt-2px` : ""} 
                     `} 
                     src={item.id === 0 ? item.icon : selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
                 />
-                <label className={"absolute mb-7  bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-4xl pt-px pr-2px" }>{item.text}</label>
+                <label style={{fontSize: '2.4375rem', marginBottom: '1.375rem'}} className={"absolute mb-7  bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-4xl pt-px pr-2px" }>{item.text}</label>
             </button>
         ));
     }
