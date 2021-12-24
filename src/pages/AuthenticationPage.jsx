@@ -672,9 +672,9 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                         {/* BREAK */}
                         <div className="w-full flex flex-col mb-16">
-                            <div className={`${selectedInput === 1 ? "" : ""} w-full mb-5 `}>
+                            <div className={`${selectedInput === 1 ? "" : ""} w-full space-y-4px mb-5 `}>
                                 <input 
-                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none ssssssss" 
+                                    className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none" 
                                     onFocus={(e) => setSelectedInput(1)}
                                     onBlur={(e) => setSelectedInput(false)}
                                     type="password"
@@ -764,8 +764,8 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                         {/* BREAK */}
                         <div style={{marginBottom: '2.375rem'}} className="w-full flex flex-col">
-                            <div className="flex flex-col space-y-2">
-                                <div className="flex space-x-10px w-full">
+                            <div className="flex flex-col">
+                                <div style={{marginBottom: '2.375rem'}} className="flex space-x-10px w-full">
                                     <div className="w-1/2 flex-shrink-0 space-y-4px h-24">
                                         <DropDownControls isBank className='h-24' buttonChild={bankButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen} >
                                             {bankDropdown}
@@ -790,7 +790,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="w-full space-y-2">
+                                <div className="w-full space-y-4px">
                                     <input 
                                         className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe" 
                                         type='number'
@@ -820,12 +820,12 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                             회원가입
                         </button>
 
-                        <div style={{marginBottom: '11.25rem'}} className="flex w-full justify-between items-center h-28">
-                            <div className="flex items-center space-x-2px pr-10px">
+                        <div style={{marginBottom: '11.25rem', marginRight: '-2.8125rem'}} className="flex w-full justify-between items-center h-28">
+                            <div style={{marginLeft: '-3.25rem'}} className="flex items-center space-x-2px pr-10px">
                                 <img className="w-40 object-contain" src={KakaoLogo} alt="kakao-icon" />
                                 <span className="text-brown-r351a1e font-roboto text-5xl leading-snug mb-6px tracking-wide">test1234</span>
                             </div>
-                            <div className="h-full w-0.5 bg-gray-404040" />
+                            <div style={{marginRight: '1.0625rem'}} className="h-full w-0.5 bg-gray-404040" />
                             <div className="flex items-center space-x-2px">
                                 <img className="w-40 object-contain" src={TelegramLogo} alt="kakao-icon" />
                                 <span className="text-blue-r2aa1d5 font-roboto text-5xl leading-snug mb-6px tracking-wide">test1234</span>
