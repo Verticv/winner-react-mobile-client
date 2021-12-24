@@ -28,15 +28,15 @@ class Calendar extends React.Component {
     const dateFormat2 = "MM";
 
     return (
-        <div className="flex items-center w-full justify-center h-23px space-x-30px mt-10px mb-30px">
-            <img className={`cursor-pointer transform rotate-180 hover:opacity-75`} onClick={this.prevMonth} src={Arrow} alt="" />
-            <div className="flex items-center h-23px text-blue-r0056a6">
-                <div className="flex items-center font-roboto text-32px h-23px">{format(this.state.currentMonth, dateFormat1)}</div>
-                <div className="flex items-center font-spoqaMedium text-25px h-23px pt-px -ml-4px">년</div>
-                <div className="flex items-center font-roboto text-32px h-23px ml-6px">{format(this.state.currentMonth, dateFormat2)}</div>
-                <div className="flex items-center font-spoqaMedium text-25px h-23px pt-px">월</div>
+        <div style={{height: '10.0625rem'}} className="flex items-center w-full justify-center">
+            <img style={{height: '2.125rem', width: '1.3125rem'}} className={`cursor-pointer transform rotate-180 hover:opacity-75`} onClick={this.prevMonth} src={Arrow} alt="" />
+            <div style={{fontSize: '2.625rem', margin: '0 2.8125rem'}} className="flex items-center text-blue-r0056a6">
+                <div style={{fontSize: '3.375rem'}} className="flex items-center font-roboto">{format(this.state.currentMonth, dateFormat1)}</div>
+                <div className="flex items-center font-spoqaMedium">년</div>
+                <div style={{fontSize: '3.375rem'}} className="flex items-center font-roboto">{format(this.state.currentMonth, dateFormat2)}</div>
+                <div className="flex items-center font-spoqaMedium">월</div>
             </div>
-            <img className={`${this.state.currentMonth < this.state.today ? "opacity-100 hover:opacity-75" : "opacity-20"} cursor-pointer`} onClick={this.nextMonth} src={Arrow} alt="" />
+            <img style={{height: '2.125rem', width: '1.3125rem'}} className={`${this.state.currentMonth < this.state.today ? "opacity-100 hover:opacity-75" : "opacity-20"} cursor-pointer`} onClick={this.nextMonth} src={Arrow} alt="" />
 
         </div>
     );
@@ -44,7 +44,7 @@ class Calendar extends React.Component {
 
     renderDays() {
         return (
-            <div className="text-21px font-spoqaBold text-gray-r454545 flex h-50px border-l rounded-t-lg border-gray-dddddd">
+            <div style={{height: '5.625rem', fontSize: '2.25rem'}} className="font-spoqaBold text-gray-r454545 flex border-l rounded-t-lg border-gray-dddddd">
                 <div className="w-full flex items-center justify-center text-red-600">일</div>
                 <div className="w-full flex items-center justify-center">월</div>
                 <div className="w-full flex items-center justify-center">화</div>
@@ -78,20 +78,22 @@ class Calendar extends React.Component {
               formattedDate1 = format(day, dateFormat1);
               days.push(
                     <div
-                        style={{height:"130px"}}
+                        style={{height:"10rem", width: '10rem'}}
                         className="relative w-full border-t border-l border-gray-dddddd flex items-center justify-center"
                         key={day}
                     >
-                        <div className={`${
+                        <div
+                          style={{marginLeft: '1rem', marginTop: '0.625rem'}} 
+                          className={`${
                             i === 0 
                             ? " text-red-600"
                             : " text-gray-r454545"} 
-                            text-21px font-roboto mt-19px ml-18px h-full w-full flex items-start justify-start`}
+                            font-roboto h-full w-full flex items-start justify-start`}
                         >
-                            <p>{isSameMonth(day, monthStart) && formattedDate}</p>
+                            <p style={{fontSize: '2.0625rem'}}>{isSameMonth(day, monthStart) && formattedDate}</p>
                         </div>
                         {isSameMonth(day, monthStart) && (
-                            <img className="absolute" src={isChecked && format(currendDate, dateFormat1) === formattedDate1 ? AttendanceFilled : AttendanceEmpty} alt="" />
+                            <img style={{height: '5.75rem', width: '6.25rem', marginLeft: '0.25rem'}} className="absolute" src={isChecked && format(currendDate, dateFormat1) === formattedDate1 ? AttendanceFilled : AttendanceEmpty} alt="" />
                         )}
                     </div>
                 );
@@ -141,26 +143,27 @@ class Calendar extends React.Component {
       <div className="w-full flex flex-col items-center">
         {this.renderHeader()}
         <div 
-            style={{width:"1260px"}} 
-            className="relative bg-gray-fafafa rounded-3xl shadow-subNavbar border border-gray-dddddd p-73px flex justify-center"
+            style={{padding: '0 2.125rem', paddingTop: '5.8125rem'}} 
+            className="w-full relative bg-gray-fafafa rounded-3xl shadow-subNavbar border border-gray-dddddd flex flex-wrap justify-center"
         >
-            <div className="bg-white rounded-lg border-t border-b border-r border-gray-dddddd overflow-hidden">
+            <div className="bg-white w-full rounded-lg border-t border-b border-r border-gray-dddddd overflow-hidden">
                 {this.renderDays()}
                 {this.renderCells()}
             </div>
         
-            <div className="absolute bottom-0 h-19px flex items-center text-20px font-spoqaMedium mb-26px text-gray-r454545 tracking-tight">
+            <div style={{height: '5.8125rem', fontSize: '2.25rem'}} className="w-full flex items-center justify-center font-spoqaMedium text-gray-r454545 tracking-tight">
                 2021년 07월은 총 
-                <p className="mx-4px font-spoqaBold text-blue-r0056a6">7일</p>
-                출석 하였습니다
+                <p className="font-spoqaBold text-blue-r0056a6 mx-3">7일</p>
+                출석 하였습니다.
             </div>
         </div>
-        <button 
-          className="flex items-center justify-center h-52px w-192px rounded-lg bg-blue-r0070d9 mt-20px mb-63px hover:opacity-75"
+        <button
+          style={{width: '26.3125rem', height: '7.3125rem', padding: '0.1875rem', marginTop: '3.8125rem', marginBottom: '32rem', fontSize: '2.625rem'}}
+          className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75"
           onClick={this.checkAttendance}
         >
-            <div className="flex items-center justify-center h-50px w-190px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                <span className="font-spoqaMedium tracking-tight text-16px text-white">출석체크하기</span>
+            <div className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                <span className="font-spoqaMedium tracking-tight text-white">출석체크하기</span>
             </div>
         </button>
 
