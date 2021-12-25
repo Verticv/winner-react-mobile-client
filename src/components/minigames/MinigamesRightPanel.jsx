@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ClockIcon from '../../images/minigames/clock_blue.png'
 import RefreshIcon from '../../images/minigames/refresh_icon.png'
-import SelectionBg from '../../images/minigames/selection_bg.png'
+import CloseIcon from '../../images/minigames/cart-close.png'
+import SelectionBg from '../../images/minigames/cart-check-img.png'
 import CheckIcon from '../../images/minigames/checkbox.png'
 import BetIcon from '../../images/betCombination/bet_icon.png'
 import LockIcon from '../../images/minigames/lock.png'
@@ -16,7 +17,8 @@ import { ko } from "date-fns/locale"
 
 const MinigamesRightPanel = ({
     selectedGame,
-    selectedOption
+    selectedOption,
+    setOpenedCart
 }) => {
 
     const [inputValue, setInputValue] = useState(null)
@@ -25,41 +27,47 @@ const MinigamesRightPanel = ({
     const BetAmountButton = ({amount}) => (
         <button 
             style={{
-                width:"110px", 
+                width:"24.375rem",
+                height: '7.5rem',
+                padding: '0.1875rem',
+                fontSize: '2.625rem',
                 borderColor: "#b3bac1"
             }} 
-            className="flex items-center h-46px justify-center rounded-lg flex-shrink-0 border hover:opacity-75"
+            className="flex items-center justify-center rounded-lg flex-shrink-0 border hover:opacity-75"
             onClick={() => setInputValue(inputValue + amount)}
         >
             <div 
                 style={{
-                    width:"108px", 
                     borderRadius:"3px",
                     background: "linear-gradient(to bottom, #feffff, #cedeed)",
+                    borderWidth: '0.1875rem'
                 }} 
-                className="flex items-center justify-center h-44px border border-white cursor-pointer pt-px">
-                <span className="font-roboto tracking-tight text-16px text-gray-r585858 pt-px">{nf.format(amount)}</span>
+                className="flex items-center justify-center w-full h-full border border-white cursor-pointer">
+                <span className="font-roboto tracking-tight text-gray-r585858">{nf.format(amount)}</span>
             </div>
         </button>
     )
     const BetFixedAmountButton = ({amount, text}) => (
         <button 
             style={{
-                width:"110px",
+                width:"24.375rem",
+                height: '7.5rem',
+                // padding: '0.1875rem',
+                fontSize: '2.625rem',
                 borderColor: "#171a1d",
             }} 
-            className="flex items-center justify-center h-46px rounded-lg flex-shrink-0 border hover:opacity-75"
+            className="flex items-center justify-center rounded-lg flex-shrink-0 border hover:opacity-75"
             onClick={() => setInputValue(amount)}
         >
             <div 
                 style={{
-                    width:"108px", 
                     borderRadius:"3px",
                     background: "linear-gradient(to bottom, #585b5e, #303337)",
-                    borderColor:"#747679"
+                    borderColor:"#747679",
+                    borderWidth: '0.1875rem'
                 }} 
-                className="flex items-center justify-center h-44px border cursor-pointer pt-px">
-                <span className="font-spoqaMedium tracking-tight text-16px text-white">{text}</span>
+                className="flex items-center justify-center w-full h-full cursor-pointer">
+                <span className="font-spoqaMedium tracking-tight text-white">{text}</span>
             </div>
         </button>
     )
@@ -78,57 +86,67 @@ const MinigamesRightPanel = ({
 
     return (
         <div 
-            style={{width: "347px", height:"509px"}}
-            className="relative rounded-xl shadow-subNavbar flex flex-col overflow-hidden"
+            className="relative rounded-xl flex flex-col overflow-hidden"
         >
+            
             <div 
-                style={{height: "131px"}}
-                className="border-b border-gray-dddddd bg-gray-fbfbfb px-7px pt-7px pb-5px space-y-4px"
+                style={{paddingBottom: '1.125rem'}}
+                className="border-b border-gray-dddddd bg-gray-fbfbfb"
             >
                 <div 
                     style={{
                         background: "linear-gradient(to right, #2087f0, #1873cf", 
-                        boxShadow:'inset 1px 2px 1px 0px rgba(0, 0, 0, 0.2)'
+                        boxShadow:'inset 1px 2px 1px 0px rgba(0, 0, 0, 0.2)',
+                        height: '8.5625rem',
+                        padding: '0 1.125rem'
                     }} 
-                    className="h-52px w-full rounded-lg flex justify-between items-center pr-6px"
+                    className="w-full rounded-lg flex justify-between items-center"
                 >
-                    <div className="flex flex-col px-7px space-y-4px pt-2px">
-                        <div className="text-16px font-spoqaMedium tracking-tight text-white h-16px flex items-center">
-                            {format(time, dateFormat, { locale : ko })} {format(time, dateFormat1, { locale : ko })} <p style={{color:"#ffea00"}} className="ml-3px">[216회차]</p>
+                    <div style={{fontSize: '2.625rem'}} className="flex">
+                        <div style={{marginRight: '1.375rem'}} className="font-spoqaMedium tracking-tight text-white flex items-center">
+                            {format(time, dateFormat, { locale : ko })} {format(time, dateFormat1, { locale : ko })} <p style={{color:"#ffea00", marginLeft: '0.8125rem'}} className=""> [216회차]</p>
                         </div>
-                        <div style={{color:"#bffff5"}} className="flex space-x-2px text-18px font-spoqaBold tracking-tight h-18px items-center">
-                            <img className="object-none mb-2px" src={ClockIcon} alt="" />
-                            <p>02:16</p>
+                        <div style={{color:"#bffff5"}} className="flex font-spoqaBold tracking-tight items-center">
+                            <img style={{width: '2.875rem', marginRight: '0.75rem'}} className="object-contain" src={ClockIcon} alt="" />
+                            <p style={{fontSize: '3.375rem'}}>02:16</p>
                         </div>
                     </div>
-                    <img src={RefreshIcon} alt="" className="cursor-pointer  hover:opacity-75" />
+                    <div className='flex'>
+                        <img style={{width: '6.55rem', marginRight: '0.75rem'}} src={RefreshIcon} alt="" className="cursor-pointer" />
+                        <button
+                            onClick={() => setOpenedCart(false)}
+                            // style={{width: '15.625rem'}}
+                            className="">
+                            <img style={{width: '6.55rem'}} src={CloseIcon} alt="" className="cursor-pointer" />
+                        </button>
+                    </div>
                 </div>
 
-                <div style={{height: "62px"}} className="relative w-full rounded-sm flex">
-                    <img className="absolute object-none z-10" src={SelectionBg} alt="" />
-                    <div style={{width:"106px"}} className="ml-8px flex h-full z-20 flex items-center justify-center space-x-2px pt-1px pr-8px">
+                <div style={{height: "11.6875rem"}} className="relative w-full rounded-sm flex">
+                    <img className="absolute object-contain z-10" src={SelectionBg} alt="" />
+                    <div style={{width:"24rem"}} className="flex h-full z-20 flex items-center justify-center">
                         <img className="" src={CheckIcon} alt="" />
-                        <p style={{color:"#7a5a37"}} className="text-16px tracking-tight font-spoqaBold mt-px">게임선택</p>
+                        <p style={{color:"#7a5a37", fontSize: '2.625rem'}} className="tracking-tight font-spoqaBold">게임선택</p>
                     </div>
-                    <div style={{width:"90px"}} className="ml-18px flex h-full z-20 items-center justify-center pr-2px flex-col space-y-4px">
+                    <div style={{width:"29rem", fontSize: '1.875rem'}} className="flex h-full z-20 items-center justify-center flex-col">
                         {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") && (
-                            <p style={{color:"#3e83b3"}} className="text-12px tracking-tight font-spoqaMedium flex items-center h-12px">{selectedOption[0].type}</p>
+                            <p style={{color:"#3e83b3"}} className="tracking-tight font-spoqaMedium flex items-center">{selectedOption[0].type}</p>
                         )}
                         {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") ? (
-                            <p style={{color:"#365b7e"}} className="text-14px tracking-tight font-spoqaBold flex items-center h-12px">{selectedOption[0].name}</p>
+                            <p style={{color:"#365b7e", fontSize: '2.25rem'}} className="tracking-tight font-spoqaBold flex items-center">{selectedOption[0].name}</p>
                         ) :(
-                            <p style={{color:"#365b7e"}} className="text-12px tracking-tight font-spoqaBold flex items-center h-12px">{selectedOption[0].name}</p>
-                        )}
+                            <p style={{color:"#365b7e"}} className="tracking-tight font-spoqaBold flex items-center">{selectedOption[0].name}</p>
+                        )} 
                     </div>
-                    <div style={{width:"81px"}} className="ml-20px flex h-full z-20 flex items-center justify-center">
+                    <div style={{width:"18.5rem"}} className="flex h-full z-20 flex items-center justify-end">
                         {selectedOption[0].buttonType && (
                             <div 
-                                style={{width:"68px", height:"59px"}} 
-                                className="relative flex items-center justify-center cursor-pointer pt-2px"
+                                style={{width:"9rem"}} 
+                                className="relative flex items-center justify-center cursor-pointer"
                             >
                                 <img 
                                     className={`${
-                                        (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "h-54px" : "h-59px"
+                                        (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "" : ""
                                     } absolute object-contain`} 
                                     src={
                                         selectedOption[0].buttonType === "blue" 
@@ -145,7 +163,7 @@ const MinigamesRightPanel = ({
                                     } 
                                     alt="" 
                                 />
-                                <div className="flex flex-col items-center -space-y-6px">
+                                <div className="flex flex-col items-center">
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">{selectedOption[0].selection}</p>
                                     {selectedOption[0].subtitle && (
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
@@ -165,20 +183,20 @@ const MinigamesRightPanel = ({
 
             </div>
 
-            <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px ">
-                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-2px">보유금액</p>
-                <p className="text-16px font-robotoBold tracking-tight text-blue-r0056a6 pt-px">3,522,170</p>
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between ">
+                <p className="font-spoqaMedium tracking-tight text-gray-r454545">보유금액</p>
+                <p className="font-robotoBold tracking-tight text-blue-r0056a6">3,522,170</p>
             </div>
-            <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px">
-                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">배당률</p>
-                <p style={{color:"#f26522"}} className="text-16px font-roboto tracking-tight pt-px">1.95</p>
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+                <p className="font-spoqaMedium tracking-tight text-gray-r454545">배당률</p>
+                <p style={{color:"#f26522"}} className="font-roboto tracking-tight">1.95</p>
             </div>
-            <div className="h-44px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-13px">
-                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">베팅금액</p>
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '0rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+                <p className="font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
 
                 <input 
-                    style={{color: "#d52e2e", width: "216px", height: "32px", backgroundColor: "#e8e8e8"}} 
-                    className="flex items-center justify-end px-5px border rounded-lg border-gray-dddddd text-16px font-roboto tracking-tight text-blue-r0056a6 text-right"
+                    style={{color: "#d52e2e", width: "36.875rem", height: "5.375rem", backgroundColor: "#e8e8e8", borderWidth: '0.1875rem'}} 
+                    className="flex items-center justify-end border rounded-lg border-gray-dddddd font-roboto tracking-tight text-blue-r0056a6 text-right"
                     placeholder="0"
                     value={nf.format(inputValue)}
                     onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
@@ -189,41 +207,62 @@ const MinigamesRightPanel = ({
                     }}
                 />
             </div>
-            <div className="h-43px border-b border-gray-dddddd flex items-center justify-between pl-14px pr-19px">
-                <p className="text-16px font-spoqaMedium tracking-tight text-gray-r454545 pt-px">적중금액</p>
-                <p className="text-16px font-roboto tracking-tight text-blue-r0056a6 pt-px">19,500</p>
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+                <p className="font-spoqaMedium tracking-tight text-gray-r454545">적중금액</p>
+                <p className="font-roboto tracking-tight text-blue-r0056a6">19,500</p>
             </div>
-            
-            <div style={{height:"208px"}} className="w-full bg-gray-fafafa p-7px">
 
-                <div className="flex flex-col space-y-2px">
-                    <div className="flex space-x-2px">
-                        <BetAmountButton amount={5000}/>
-                        <BetAmountButton amount={10000}/>
+
+
+
+
+            
+            <div style={{height:"", paddingTop: '1.875rem'}} className="w-full">
+
+                <div className="flex flex-col">
+                    <div style={{marginBottom: '0.375rem'}} className="flex">
+                        <div style={{marginRight: '0.375rem'}}>
+                            <BetAmountButton amount={5000}/>
+                        </div>
+                        <div style={{marginRight: '0.375rem'}}>
+                            <BetAmountButton amount={10000}/>
+                        </div>
                         <BetAmountButton amount={50000}/>
                     </div>
-                    <div className="flex space-x-2px">
-                        <BetAmountButton amount={100000}/>
-                        <BetAmountButton amount={500000}/>
+                    <div style={{marginBottom: '0.375rem'}} className="flex">
+                        <div style={{marginRight: '0.375rem'}}>
+                            <BetAmountButton amount={100000}/>
+                        </div>
+                        <div style={{marginRight: '0.375rem'}}>
+                            <BetAmountButton amount={500000}/>
+                        </div>
                         <BetAmountButton amount={1000000}/>
                     </div>
-                    <div className="flex space-x-2px">
-                        <BetFixedAmountButton amount={22170} text="잔돈" />
-                        <BetFixedAmountButton amount={null} text="초기화" />
+                    <div style={{marginBottom: '0.375rem'}} className="flex">
+                        <div style={{marginRight: '0.375rem'}}>
+                            <BetFixedAmountButton amount={22170} text="잔돈" />
+                        </div>
+                        <div style={{marginRight: '0.375rem'}}>
+                            <BetFixedAmountButton amount={null} text="초기화" />
+                        </div>
                         <BetFixedAmountButton amount={3522170} text="최대" />
                     </div>
                 </div>
 
                 
 
-                <button style={{width:"334px"}} className="mt-5px flex items-center justify-center h-46px rounded-lg bg-blue-r2068b2 flex-shrink-0 hover:opacity-75">
-                    <div style={{width:"332px", borderRadius:"3px"}} className="flex items-center justify-center h-44px rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                <button style={{width:"73.875rem", height: '9rem', padding: '0.1875rem', fontSize: '3.1875rem'}} className="flex items-center justify-center rounded-lg bg-blue-r2068b2 flex-shrink-0 hover:opacity-75">
+                    <div style={{borderRadius:"3px"}} className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                         <img src={BetIcon} alt="" />
-                        <span className="ml-5px font-spoqaMedium tracking-tight text-16px text-white pt-px">베팅하기</span>
+                        <span style={{marginLeft: '1.3125rem'}} className="font-spoqaMedium tracking-tight text-white">베팅하기</span>
                     </div>
                 </button>
 
             </div>
+
+
+
+
 
             {(selectedGame === "/minigame/speedkino" || selectedGame === "/minigame/kinoladder") && (
                 <div className="absolute w-full h-full bg-black bg-opacity-70 z-20 flex justify-center"> 
