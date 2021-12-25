@@ -83,13 +83,15 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-1` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">홀</p>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858">1.95</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
+                                </div>
                             </div>
 
                             <div className="flex flex-col items-center">
@@ -103,14 +105,16 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
                                     
-                                    <img style={{width: state === `${titleNumber}-2` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">짝</p>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858">1.95</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
+                                </div>
                             </div>
                         </div>
                     ) : titleNumber === 2 || titleNumber === 7 ? (
@@ -126,10 +130,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-1` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white">언더</p>
                                         <div className='h-10'>
@@ -139,7 +143,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858">1.95</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -152,10 +158,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-2` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white">오버</p>
                                         <div className='h-10'>
@@ -165,7 +171,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>  
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858">1.95</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
+                                </div>
                             </div>
                         </div>
                     ) : titleNumber === 3 || titleNumber === 8 ? (
@@ -181,10 +189,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-1` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white">홀언더</p>
                                         <div className='h-10'>
@@ -194,7 +202,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858">3.75</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -207,10 +217,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-2` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueButtonPressed : BlueButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueButtonPressed : BlueButton} alt="" />
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">홀오버</p>
                                         <div className='h-10'>
@@ -220,7 +230,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">3.75</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -233,10 +245,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-3` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? RedButtonPressed : RedButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-3` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? RedButtonPressed : RedButton} alt="" />
                                     <div className="flex flex-col items-center  absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝언더</p>
                                         <div className='h-10'>
@@ -246,7 +258,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">3.75</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -259,10 +273,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         }
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-4` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? RedButtonPressed : RedButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-4` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? RedButtonPressed : RedButton} alt="" />
                                     <div className="flex flex-col items-center  absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝오버</p>
                                         <div className='h-10'>
@@ -272,7 +286,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">3.75</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
+                                </div>
                             </div>
                         </div>
                     ) : titleNumber === 4 ? (
@@ -284,10 +300,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"구간", selection:"A", buttonType:"yellow", subtitle: "(0~2)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-1` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? YellowButtonPressed : YellowButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? YellowButtonPressed : YellowButton} alt="" />
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">A</p>
                                         <div className='h-10'>
@@ -295,7 +311,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">3.15</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.15</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -304,10 +322,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"구간", selection:"B", buttonType:"yellow", subtitle: "(3~4)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-2` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? YellowButtonPressed : YellowButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? YellowButtonPressed : YellowButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">B</p>
                                         <div className='h-10'>
@@ -315,7 +333,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">4.10</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">4.10</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -324,10 +344,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"구간", selection:"C", buttonType:"yellow", subtitle: "(5~6)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-3` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? YellowButtonPressed : YellowButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-3` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? YellowButtonPressed : YellowButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">C</p>
                                         <div className='h-10'>
@@ -335,7 +355,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">4.10</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">4.10</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -344,10 +366,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"파워볼", name:"구간", selection:"D", buttonType:"yellow", subtitle: "(7~9)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-4` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? YellowButtonPressed : YellowButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-4` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? YellowButtonPressed : YellowButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">D</p>
                                         <div className='h-10'>
@@ -355,7 +377,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">3.15</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.15</p>
+                                </div>
                             </div>
                         </div>
                     ) : titleNumber === 5 ? (
@@ -368,13 +392,15 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"0", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-1` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-1` ? "z-20" : "z-10"}  object-contain`} src={state === `${titleNumber}-1` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-1` ? "z-20" : "z-10"}  object-contain`} src={state === `${titleNumber}-1` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">0</p>
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -383,14 +409,16 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"1", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-2` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-2` ? "z-20" : "z-10"}  object-contain`} src={state === `${titleNumber}-2` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-2` ? "z-20" : "z-10"}  object-contain`} src={state === `${titleNumber}-2` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">1</p>
 
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -399,14 +427,16 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"2", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-3` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-3` ? "z-20" : "z-10"}  object-contain`} src={state === `${titleNumber}-3` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-3` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-3` ? "z-20" : "z-10"}  object-contain`} src={state === `${titleNumber}-3` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">2</p>
 
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -415,14 +445,16 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"3", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-4` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-4` && "z-20"}  object-contain`} src={state === `${titleNumber}-4` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-4` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-4` && "z-20"}  object-contain`} src={state === `${titleNumber}-4` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">3</p>
 
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -431,14 +463,16 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"4", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-5` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-5` && "z-20"}  object-contain`} src={state === `${titleNumber}-5` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-5` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-5` && "z-20"}  object-contain`} src={state === `${titleNumber}-5` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">4</p>
 
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                             </div>
                             <div className="flex justify-between w-full items-center">
@@ -449,14 +483,16 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"5", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-6` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-6` && "z-20"}  object-contain`} src={state === `${titleNumber}-6` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-6` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-6` && "z-20"}  object-contain`} src={state === `${titleNumber}-6` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">5</p>
 
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -465,13 +501,15 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"6", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-7` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-7` && "z-20"}  object-contain`} src={state === `${titleNumber}-7` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-7` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-7` && "z-20"}  object-contain`} src={state === `${titleNumber}-7` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">6</p>
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -480,13 +518,15 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"7", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-8` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-8` && "z-20"}  object-contain`} src={state === `${titleNumber}-8` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-8` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-8` && "z-20"}  object-contain`} src={state === `${titleNumber}-8` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">7</p>
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -495,13 +535,15 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"8", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-9` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-9` && "z-20"}  object-contain`} src={state === `${titleNumber}-9` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-9` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-9` && "z-20"}  object-contain`} src={state === `${titleNumber}-9` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">8</p>
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                                 <div className="flex flex-col items-center">
                                     <div 
@@ -510,13 +552,15 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"파워볼", name:"숫자", selection:"9", buttonType:"yellow"}])
                                         }} 
                                         // style={{paddingTop: "3px"}} 
-                                        // style={{height: '12rem'}}
+                                        style={{height: '11.375rem'}}
                                         className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                     >
-                                        <img style={{width: state === `${titleNumber}-10` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-10` && "z-20"}  object-contain`} src={state === `${titleNumber}-10` ? YellowButtonPressed : YellowButton} alt="" />
+                                        <img style={{width: state === `${titleNumber}-10` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className={`${state === `${titleNumber}-10` && "z-20"}  object-contain`} src={state === `${titleNumber}-10` ? YellowButtonPressed : YellowButton} alt="" />
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">9</p>
                                     </div>
-                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">9.00</p>
+                                    <div style={{height: '3.65rem'}}>
+                                        <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">9.00</p>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -530,10 +574,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"구간", selection:"소", buttonType:"green", subtitle:"(15~64)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-1` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? GreenButtonPressed : GreenButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">소</p>
                                         <div className='h-10'>
@@ -541,7 +585,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">2.90</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">2.90</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -550,10 +596,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"구간", selection:"중", buttonType:"green", subtitle:"(65~80)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-2` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? GreenButtonPressed : GreenButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">중</p>
                                         <div className='h-10'>
@@ -561,7 +607,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">2.60</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">2.60</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -570,10 +618,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"구간", selection:"대", buttonType:"green", subtitle:"(81~130)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-3` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? GreenButtonPressed : GreenButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-3` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">대</p>
                                         <div className='h-10'>
@@ -581,7 +629,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">2.90</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">2.90</p>
+                                </div>
                             </div>
                         </div>
                     ) : titleNumber === 10 ? (
@@ -593,10 +643,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"홀소", buttonType:"green", subtitle:"(15~64)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-1` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? GreenButtonPressed : GreenButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">홀소</p>
                                         <div className='h-10'>
@@ -604,7 +654,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">4.85</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">4.85</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -613,10 +665,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"홀중", buttonType:"green", subtitle:"(65~80)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-2` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? GreenButtonPressed : GreenButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">홀중</p>
                                         <div className='h-10'>
@@ -624,7 +676,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">4.55</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">4.55</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -633,10 +687,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"홀대", buttonType:"green", subtitle:"(81~130)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-3` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? GreenButtonPressed : GreenButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-3` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">홀대</p>
                                         <div className='h-10'>
@@ -644,7 +698,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">4.85</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">4.85</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -653,10 +709,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"짝소", buttonType:"green", subtitle:"(15~64)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-4` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? GreenButtonPressed : GreenButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-4` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝소</p>
                                         <div className='h-10'>
@@ -664,7 +720,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">4.85</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">4.85</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -673,10 +731,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"짝중", buttonType:"green", subtitle:"(64~80)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-5` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-5` ? GreenButtonPressed : GreenButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-5` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-5` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝중</p>
                                         <div className='h-10'>
@@ -684,7 +742,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">4.55</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">4.55</p>
+                                </div>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div 
@@ -693,10 +753,10 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         setSelectedOption([{type:"일반볼", name:"홀짝/소중대", selection:"짝대", buttonType:"green", subtitle:"(81~130)"}])
                                     }} 
                                     // style={{paddingTop: "3px"}} 
-                                    // style={{height: '12rem'}}
+                                    style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >
-                                    <img style={{width: state === `${titleNumber}-6` ? '12rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-6` ? GreenButtonPressed : GreenButton} alt="" />
+                                    <img style={{width: state === `${titleNumber}-6` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-6` ? GreenButtonPressed : GreenButton} alt="" />
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝대</p>
                                         <div className='h-10'>
@@ -704,7 +764,9 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                         </div>
                                     </div>
                                 </div>
-                                <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858">4.85</p>
+                                <div style={{height: '3.65rem'}}>
+                                    <p style={{fontSize: '2.4375rem'}} className=" font-robotoRegular tracking-tight text-gray-r585858 -mt-3">4.85</p>
+                                </div>
                             </div>
                         </div>
                     ) : <></> }
