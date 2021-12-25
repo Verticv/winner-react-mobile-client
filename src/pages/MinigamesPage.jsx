@@ -1,6 +1,7 @@
 import HorizontalMenu3 from 'components/horizontalMenus/HorizontalMenu3'
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
+import Cart from 'components/bottomNavbar/Cart'
 import React, { useEffect, useState } from 'react'
 import PowerballIcon from '../images/minigames/powerball.png'
 import PowerLadder from '../images/minigames/powerladder.png'
@@ -109,6 +110,8 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                     <div className="">
                         <MinigamesPanel selectedGame={selectedGame} setSelectedGame={setSelectedGame} setSelectedOption={setSelectedOption} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
+
+                    <Cart selectedOption={selectedOption} />
 
 
                 </div>
