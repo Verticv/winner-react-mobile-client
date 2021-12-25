@@ -73,3 +73,7 @@ body {
 .place-color-grey-2::placeholder {
   color: #bebebe;
 }
+
+.text-white-border {
+  -webkit-text-stroke: 0.125rem white;
+}

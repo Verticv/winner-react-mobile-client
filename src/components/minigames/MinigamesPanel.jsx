@@ -1,15 +1,21 @@
-import HorizontalMenu4 from 'components/horizontalMenus/HorizontalMenu4'
-import React, { useState } from 'react'
-import KinoLadderPanel from './KinoLadderPanel'
+// import HorizontalMenu4 from 'components/horizontalMenus/HorizontalMenu4'
+import React, { useState, useEffect } from 'react'
+// import KinoLadderPanel from './KinoLadderPanel'
 import PowerballPanel from './PowerballPanel'
-import PowerLadderPanel from './PowerLadderPanel'
-import SpeedKinoPanel from './SpeedKinoPanel'
+import RefreshIcon from '../../images/minigames/refresh_icon.png'
+import ClockIcon from '../../images/minigames/clock_blue.png'
+// import CheckIcon from '../../images/minigames/checkbox.png'
+// import PowerLadderPanel from './PowerLadderPanel'
+// import SpeedKinoPanel from './SpeedKinoPanel'
+// import { he, ko } from "date-fns/locale"
+import { ko } from "date-fns/locale"
+import { format } from 'date-fns'
 import {
     PowerballHistoryArray,
     PowerballResultsArray,
     PowerLadderResultsArray
 } from './arrays'
-import { Route, useHistory } from 'react-router'
+// import { Route, useHistory } from 'react-router'
 
 const MinigamesPanel = ({
     selectedGame,
@@ -19,11 +25,19 @@ const MinigamesPanel = ({
     setSelectedOption
 }) => {
 
+    // const history = useHistory();
     const [checkedState, setCheckedState] = useState(
         new Array(PowerballHistoryArray.length).fill(false)
     );
     const [isAllSelected, setAllSelected] = useState(false)
-    const history = useHistory();
+    const dateFormat = "MM월 dd일"
+    const dateFormat1 = "H:mm:ss"
+
+    const [time, setTime] = useState(Date.now());
+
+    useEffect(() => {
+        setTime(Date.now())
+    }, [])
 
     const MenuArray = [
         { id: 0, text: "게임하기" },
@@ -31,15 +45,47 @@ const MinigamesPanel = ({
         { id: 2, text: "베팅내역" },
     ]
 
+    console.log(PowerLadderResultsArray, isAllSelected, setAllSelected, MenuArray)
+
     return (
         <div className="w-full">
-            <div className="relative flex z-10 px-3px">
+            {/* <div className="relative flex z-10 px-3px">
                 <HorizontalMenu4 itemsArray={MenuArray} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+            </div> */}
+
+            <div 
+                style={{
+                    background: "linear-gradient(to right, #2087f0, #1873cf", 
+                    boxShadow:'inset 1px 2px 1px 0px rgba(0, 0, 0, 0.2)',
+                    height: '8.5rem',
+                    margin: '0.9375rem 0'
+                }} 
+                className="w-full rounded-lg flex justify-between items-center"
+            >
+                <div className="flex w-full justify-center">
+                    <div style={{fontSize: '2.8125rem', marginRight:'1.6875rem'}} className="font-spoqaMedium tracking-tight text-white flex items-center">
+                        {format(time, dateFormat, { locale : ko })} {format(time, dateFormat1, { locale : ko })} <p style={{color:"#ffea00", marginLeft: '0.875rem'}} className="">[216회차]</p>
+                    </div>
+                    <div style={{color:"#bffff5"}} className="flex font-spoqaBold tracking-tight items-center">
+                        <img style={{width: '4rem', marginRight:'0.75rem'}} className="object-contain" src={ClockIcon} alt="" />
+                        <p style={{fontSize: '3.375rem'}}>02:16</p>
+                    </div>
+                </div>
+                <img style={{width: '6.5rem', marginRight: '0.9375rem'}} src={RefreshIcon} alt="" className="cursor-pointer" />
             </div>
 
-            <div className="px-2px w-full">
-                <div className="-mt-7px w-full bg-gray-fafafa z-20 flex relative rounded-xl shadow-subNavbar overflow-hidden">
-                    <Route path="/minigame/powerball">
+            <div className="w-full">
+                <div className="w-full bg-gray-fafafa z-20 flex relative rounded-xl shadow-subNavbar overflow-hidden">
+                    <PowerballPanel  
+                        selectedTab={selectedTab} 
+                        setSelectedTab={setSelectedTab} 
+                        historyArray={PowerballHistoryArray}
+                        resultsArray={PowerballResultsArray}
+                        checkedState={checkedState}
+                        setCheckedState={setCheckedState}
+                        setSelectedOption={setSelectedOption}
+                    />   
+                    {/* <Route path="/minigame/powerball">
                         <PowerballPanel  
                             selectedTab={selectedTab} 
                             setSelectedTab={setSelectedTab} 
@@ -81,44 +127,12 @@ const MinigamesPanel = ({
                             setCheckedState={setCheckedState}
                             setSelectedOption={setSelectedOption}
                         />                   
-                    </Route>
+                    </Route> */}
                 </div>
             </div>
 
-            {selectedTab === 2 && (
-                <div className="mt-20px h-36px w-full flex items-center justify-between">
-                    <div className="flex space-x-2px">
-                        <button 
-                            className="flex items-center justify-center w-90px h-36px rounded-md bg-gray-r171a1d hover:opacity-75"
-                            onClick={() => {
-                                if (isAllSelected === true) {
-                                    setCheckedState(Array(PowerballHistoryArray.length).fill(false))
-                                } else {
-                                    setCheckedState(Array(PowerballHistoryArray.length).fill(true))
-                                }
-                                setAllSelected(!isAllSelected)
-                            }}
-                        >
-                            <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white">{isAllSelected ? "선택해제" : "전체선택"}</span>
-                            </div>
-                        </button>
-                        <button className="flex items-center justify-center w-90px h-36px rounded-md bg-red-cb4343 hover:opacity-75">
-                            <div className="flex items-center justify-center h-34px w-88px rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
-                                <span className="font-spoqaMedium tracking-tight text-14px text-white">선택삭제</span>
-                            </div>
-                        </button>
-                    </div>
-                    <button 
-                        className="flex items-center justify-center h-36px w-114px rounded-lg bg-blue-r0070d9 hover:opacity-75"
-                        onClick={() => history.push('/mypage/bet-history/minigame')}
-                    >
-                        <div className="flex items-center justify-center h-34px w-112px bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white">전체베팅내역</span>
-                        </div>
-                    </button>
-                </div>
-            )}
+            {/* 
+             */}
         </div>
     )
 }
