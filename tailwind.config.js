@@ -341,6 +341,7 @@ module.exports = {
           text: '#393e41',
           subNavbar: '#616161',
           a3b2c2: '#a3b2c2',
+          c7c7c7: '#c7c7c7',
           r727272: '#727272',
           c7b9a6: '#c7b9a6',
           r8f8f8f: '#8f8f8f',

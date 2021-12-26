@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import PopupControls from 'components/popups/PopupControls';
+import RoundResultPopup from 'components/popups/RoundResultPopup';
 import ClockIcon from '../../images/minigames/clock_blue.png'
 import RefreshIcon from '../../images/minigames/refresh_icon.png'
 import CloseIcon from '../../images/minigames/cart-close.png'
@@ -22,6 +24,7 @@ const MinigamesRightPanel = ({
 }) => {
 
     const [inputValue, setInputValue] = useState(null)
+    const [isPopupOpen, setPopupOpen] = useState(true)
     var nf = new Intl.NumberFormat();
 
     const BetAmountButton = ({amount}) => (
@@ -55,6 +58,7 @@ const MinigamesRightPanel = ({
                 // padding: '0.1875rem',
                 fontSize: '2.625rem',
                 borderColor: "#171a1d",
+                borderRadius: '0.75rem'
             }} 
             className="flex items-center justify-center rounded-lg flex-shrink-0 border hover:opacity-75"
             onClick={() => setInputValue(amount)}
@@ -72,6 +76,49 @@ const MinigamesRightPanel = ({
         </button>
     )
 
+    const GrayButton = ({text}) => (
+        <button     
+                    style={{
+                        background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
+                        borderRadius:"0.75rem",
+                        width: '36.375rem',
+                        height: '7.5rem',
+                        padding: '0.1875rem',
+                    }}
+                    className={`bg-white overflow-hidden rounded-lg flex items-end`} 
+                >
+                    <div 
+                        style={{
+                            width:"100%", 
+                            borderRadius:"0.75rem",
+                            paddingBottom: '0.5625rem'
+                        }} 
+                        className={`flex w-full justify-end h-full items-end bg-gray-c7c7c7`}
+                    >
+                        <div 
+                            style={{
+                                background: "linear-gradient(to bottom, #f7f7f7, #e9e9e9)",
+                                borderRadius:"0.75rem",
+                                borderBottomLeftRadius:"0.75rem 0.6rem",
+                                borderBottomRightRadius: "0.75rem 0.6rem",
+                                borderColor: "#d6dfe8",
+                                boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset'
+                            }}
+                            className={`mt-3px h-full w-full rounded-b-lg rounded-t-md flex flex-col justify-center items-center`}
+                        >
+                            <div style={{fontSize: '2.625rem'}} className={`flex items-center font-spoqaMedium text-gray-r585858`}>
+                                {text}
+                            </div>
+                            
+                        </div>
+                    </div>
+                </button>
+    )
+
+    const AttachButton = (
+        <GrayButton  text='회차결과' />
+    )
+
     const dateFormat = "MM월 dd일"
     const dateFormat1 = "H:mm:ss"
 
@@ -85,20 +132,15 @@ const MinigamesRightPanel = ({
     }, []);
 
     return (
+        <>
         <div 
-            className="relative rounded-xl flex flex-col overflow-hidden"
-        >
-            
-            <div 
-                style={{paddingBottom: '1.125rem'}}
-                className="border-b border-gray-dddddd bg-gray-fbfbfb"
-            >
-                <div 
                     style={{
                         background: "linear-gradient(to right, #2087f0, #1873cf", 
                         boxShadow:'inset 1px 2px 1px 0px rgba(0, 0, 0, 0.2)',
                         height: '8.5625rem',
-                        padding: '0 1.125rem'
+                        padding: '0 1.125rem',
+                        marginBottom: '0.9375rem',
+                        borderRadius: '1.6875rem'
                     }} 
                     className="w-full rounded-lg flex justify-between items-center"
                 >
@@ -121,6 +163,16 @@ const MinigamesRightPanel = ({
                         </button>
                     </div>
                 </div>
+
+        <div 
+            className="relative rounded-xl flex flex-col overflow-hidden"
+        >
+            
+            <div 
+                style={{paddingBottom: '1.125rem'}}
+                className="border-b border-gray-dddddd bg-gray-fbfbfb"
+            >
+                
 
                 <div style={{height: "11.6875rem"}} className="relative w-full rounded-sm flex">
                     <img className="absolute object-contain z-10" src={SelectionBg} alt="" />
@@ -196,7 +248,7 @@ const MinigamesRightPanel = ({
 
                 <input 
                     style={{color: "#d52e2e", width: "36.875rem", height: "5.375rem", backgroundColor: "#e8e8e8", borderWidth: '0.1875rem'}} 
-                    className="flex items-center justify-end border rounded-lg border-gray-dddddd font-roboto tracking-tight text-blue-r0056a6 text-right"
+                    className="flex items-center justify-end border rounded-lg pr-8 border-gray-dddddd font-roboto tracking-tight text-blue-r0056a6 text-right"
                     placeholder="0"
                     value={nf.format(inputValue)}
                     onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
@@ -257,6 +309,9 @@ const MinigamesRightPanel = ({
                         <span style={{marginLeft: '1.3125rem'}} className="font-spoqaMedium tracking-tight text-white">베팅하기</span>
                     </div>
                 </button>
+                
+                
+
 
             </div>
 
@@ -264,18 +319,30 @@ const MinigamesRightPanel = ({
 
 
 
-            {(selectedGame === "/minigame/speedkino" || selectedGame === "/minigame/kinoladder") && (
+            { (selectedGame === "/minigame/speedkino" || selectedGame === "/minigame/kinoladder") && (
                 <div className="absolute w-full h-full bg-black bg-opacity-70 z-20 flex justify-center"> 
                     <div className="flex flex-col items-center justify-center">
-                        <img className="object-none" src={LockIcon} alt="" />
+                        <img style={{width: '20.5rem'}} className="object-contain" src={LockIcon} alt="" />
                         <div 
-                            style={{textShadow: "2px 4px 4px #00000080"}} 
+                            style={{textShadow: "2px 4px 4px #00000080", fontSize: '2.9375rem'}} 
                             className="text-white font-spoqaMedium text-18px tracking-tight mt-6px"
                         >지금은 베팅할 수 없습니다.</div>
                     </div>
                 </div>
             )}
         </div>
+
+        
+        <div style={{marginTop: '0.9375rem'}} className='flex'>
+            <div style={{marginRight: '0.75rem'}}>
+                <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                    <RoundResultPopup setPopupOpen={setPopupOpen} />
+                </PopupControls> 
+                
+            </div>
+            <GrayButton  text='전체베팅내역' />
+        </div>
+    </>
     )
 }
 
