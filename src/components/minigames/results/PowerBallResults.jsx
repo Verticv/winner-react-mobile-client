@@ -4,40 +4,45 @@ const PowerBallResults = ({array}) => {
 
     function Cells({ items }) {
         return items.map(item => (
-            <tr 
-                style={{height: "62px", backgroundColor: item.count % 2 === 0 ? "#ffffff" : "#f7f9fc"}} 
-                className="rounded-3xl font-spoqa text-14px tracking-tight text-gray-r585858 h-62px w-full border-b border-gray-dddddd"
+            <div 
+                style={{height: "10.6875rem", borderBottomWidth: '0.1875rem', fontSize: '2.25rem', backgroundColor: item.count % 2 === 0 ? "#ffffff" : "#fafafa"}} 
+                className="flex flex-wrap font-spoqa tracking-tight text-gray-r585858 w-full border-b border-gray-efefef"
             >
-                <td style={{width: "156px"}} className="text-center">{item.count}</td>
-                <td style={{width: "226px"}} className="text-center">{item.chosenNum}</td>
-                <td style={{width: "123px"}} className="text-center">{item.numberSum}</td>
-                <td style={{width: "173px", color:"#e9441d"}} className="text-center">{item.odd ? "홀" : "짝"}</td>
-                <td style={{width: "110px"}} className="text-center">{item.powerball}</td>
-                <td style={{width: "172px", color:"#0056a6"}} className="text-center">{item.powerballOdd ? "홀" : "짝"}</td>
-                <td style={{width: "132px"}} className="text-center">{item.size}</td>
-                <td style={{width: "172px"}} className="text-center">{item.range}</td>
-            </tr>
+                <div style={{width: "10.875rem"}} className="flex justify-center items-center"><div className='text-center'><p>{item.count}</p><p>{item.powerball}</p></div></div>
+                <div style={{width: "20.0625rem"}} className="flex justify-center items-center"><div className='text-center'><p>{item.chosenNum}</p><p style={{color:"#0056a6"}}>{item.powerballOdd ? "홀" : "짝"}</p></div></div>
+                <div style={{width: "20.0625rem"}} className="flex justify-center items-center"><div className='text-center'><p>{item.numberSum}</p><p>{item.size}</p></div></div>
+                <div style={{width: "20.0625rem", color:"#e9441d"}} className="flex justify-center items-center"><div className='text-center'><p>{item.odd ? "홀" : "짝"}</p><p>{item.range}</p></div></div>
+
+                {/* <div style={{width: "10.875rem"}} className="text-center">{item.powerball}</div> */}
+                {/* <div style={{width: "20.0625rem", color:"#0056a6"}} className="text-center">{item.powerballOdd ? "홀" : "짝"}</div> */}
+                {/* <div style={{width: "20.0625rem"}} className="text-center">{item.size}</div> */}
+                {/* <div style={{width: "20.0625rem"}} className="text-center">{item.range}</div> */}
+            </div>
         ));
     }
 
     return (
-        <table className="w-full">
-            <thead className="bg-gray-fafafa rounded-3xl font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-56px border-b border-gray-dddddd">
-                <tr>
-                    <td style={{width: "156px"}} className="text-center">회차</td>
-                    <td style={{width: "226px"}} className="text-center">당첨번호결과</td>
-                    <td style={{width: "123px"}} className="text-center">숫자 합</td>
-                    <td style={{width: "173px"}} className="text-center">홀/짝</td>
-                    <td style={{width: "110px"}} className="text-center">파워볼</td>
-                    <td style={{width: "172px"}} className="text-center">파워볼 홀/짝</td>
-                    <td style={{width: "132px"}} className="text-center">대/중/소</td>
-                    <td style={{width: "172px"}} className="text-center">파워볼 구간</td>
-                </tr>
-            </thead>
-            <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
+        <div className="w-full p-12 pb-0">
+            <div className="font-spoqaMedium tracking-tight text-gray-r454545">
+                <div style={{fontSize: '2.25rem'}} className='flex flex-wrap w-full'>
+                   <div style={{marginBottom: '0.1875rem'}} className='flex w-full'>
+                        <div style={{width: "10.875rem", height: '5.25rem', marginRight:'0.1875rem', borderTopLeftRadius: '0.625rem', borderBottomLeftRadius: '0.625rem'}} className="flex justify-center items-center bg-gray-fafafa">회차</div>
+                        <div style={{width: "20.0625rem", height: '5.25rem', marginRight:'0.1875rem'}} className="flex justify-center items-center bg-gray-fafafa">당첨번호결과</div>
+                        <div style={{width: "20.0625rem", height: '5.25rem', marginRight:'0.1875rem'}} className="flex justify-center items-center bg-gray-fafafa">숫자 합</div>
+                        <div style={{width: "20.0625rem", height: '5.25rem', borderTopRightRadius: '0.625rem', borderBottomRightRadius: '0.625rem'}} className="flex justify-center items-center bg-gray-fafafa">홀/짝</div>
+                   </div>
+                   <div className='flex w-full'>
+                        <div style={{width: "10.875rem", height: '5.25rem', marginRight:'0.1875rem', borderTopLeftRadius: '0.625rem', borderBottomLeftRadius: '0.625rem'}} className="flex justify-center items-center bg-gray-fafafa">파워볼</div>
+                        <div style={{width: "20.0625rem", height: '5.25rem', marginRight:'0.1875rem'}} className="flex justify-center items-center bg-gray-fafafa">파워볼 홀/짝</div>
+                        <div style={{width: "20.0625rem", height: '5.25rem', marginRight:'0.1875rem'}} className="flex justify-center items-center bg-gray-fafafa">대/중/소</div>
+                        <div style={{width: "20.0625rem", height: '5.25rem', borderTopRightRadius: '0.625rem', borderBottomRightRadius: '0.625rem'}} className="flex justify-center items-center bg-gray-fafafa">파워볼 구간</div>
+                   </div>
+                </div>
+            </div>
+            <div className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
                 <Cells items={array} />
-            </tbody>
-        </table>      
+            </div>
+        </div>      
     )
 }
 
