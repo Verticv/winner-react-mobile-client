@@ -1,12 +1,13 @@
 // import HorizontalMenu4 from 'components/horizontalMenus/HorizontalMenu4'
 import React, { useState, useEffect } from 'react'
-// import KinoLadderPanel from './KinoLadderPanel'
+import { Route } from 'react-router'
+import KinoLadderPanel from './KinoLadderPanel'
 import PowerballPanel from './PowerballPanel'
+import PowerLadderPanel from './PowerLadderPanel'
 import RefreshIcon from '../../images/minigames/refresh_icon.png'
 import ClockIcon from '../../images/minigames/clock_blue.png'
 // import CheckIcon from '../../images/minigames/checkbox.png'
-// import PowerLadderPanel from './PowerLadderPanel'
-// import SpeedKinoPanel from './SpeedKinoPanel'
+import SpeedKinoPanel from './SpeedKinoPanel'
 // import { he, ko } from "date-fns/locale"
 import { ko } from "date-fns/locale"
 import { format } from 'date-fns'
@@ -75,17 +76,8 @@ const MinigamesPanel = ({
             </div>
 
             <div className="w-full">
-                <div className="w-full bg-gray-fafafa z-20 flex relative rounded-xl shadow-subNavbar overflow-hidden">
-                    <PowerballPanel  
-                        selectedTab={selectedTab} 
-                        setSelectedTab={setSelectedTab} 
-                        historyArray={PowerballHistoryArray}
-                        resultsArray={PowerballResultsArray}
-                        checkedState={checkedState}
-                        setCheckedState={setCheckedState}
-                        setSelectedOption={setSelectedOption}
-                    />   
-                    {/* <Route path="/minigame/powerball">
+                <div className="w-full z-20 flex relative overflow-hidden">
+                    <Route path="/minigame/powerball">
                         <PowerballPanel  
                             selectedTab={selectedTab} 
                             setSelectedTab={setSelectedTab} 
@@ -94,7 +86,9 @@ const MinigamesPanel = ({
                             checkedState={checkedState}
                             setCheckedState={setCheckedState}
                             setSelectedOption={setSelectedOption}
-                        />                    </Route>
+                        />
+                    </Route>
+
                     <Route path="/minigame/powerladder">
                         <PowerLadderPanel 
                             selectedTab={selectedTab} 
@@ -106,6 +100,7 @@ const MinigamesPanel = ({
                             setSelectedOption={setSelectedOption}
                         />
                     </Route>
+
                     <Route path="/minigame/speedkino">
                         <SpeedKinoPanel
                             selectedTab={selectedTab} 
@@ -117,6 +112,7 @@ const MinigamesPanel = ({
                             setSelectedOption={setSelectedOption}
                         />                    
                     </Route>
+                                    
                     <Route path="/minigame/kinoladder">
                         <KinoLadderPanel 
                             selectedTab={selectedTab} 
@@ -127,7 +123,7 @@ const MinigamesPanel = ({
                             setCheckedState={setCheckedState}
                             setSelectedOption={setSelectedOption}
                         />                   
-                    </Route> */}
+                    </Route>
                 </div>
             </div>
 
