@@ -88,8 +88,8 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
                     <div className="flex w-full">
                         <div 
-                            style={{height: "62.1875rem", backgroundColor:"#e8e8e8"}}
-                            className="rounded-xl  flex justify-center border border-gray-dddddd"
+                            style={{backgroundColor:"#e8e8e8", height: `${iFrameHeight}px`}}
+                            className="rounded-xl  flex justify-center overflow-hidden border border-gray-dddddd"
                         >
                             <Route path="/minigame/powerball">
                                 <iframe src="https://ntry.com/scores/powerball/live.php" width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1)"}} title="powerball"></iframe>
