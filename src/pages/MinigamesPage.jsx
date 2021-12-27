@@ -95,13 +95,13 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                                 <iframe src="https://ntry.com/scores/powerball/live.php" width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1)"}} title="powerball"></iframe>
                             </Route>
                             <Route path="/minigame/powerladder">
-                                <iframe src="https://ntry.com/scores/power_ladder/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
+                                <iframe src="https://ntry.com/scores/power_ladder/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1)"}} title="powerball"></iframe>
                             </Route>
                             <Route path="/minigame/speedkino">
-                                <iframe src="https://ntry.com/scores/speedkeno/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="powerball"></iframe>
+                                <iframe src="https://ntry.com/scores/speedkeno/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1)"}} title="powerball"></iframe>
                             </Route>
                             <Route path="/minigame/kinoladder">
-                                <iframe src="https://ntry.com/scores/keno_ladder/live.php" width="860" height="640" scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(0.795)", marginTop:"-66px"}} title="kinoladder"></iframe>                            
+                                <iframe src="https://ntry.com/scores/keno_ladder/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1)"}} title="kinoladder"></iframe>                            
                             </Route>
                         </div>
                         {/* <MinigamesRightPanel selectedGame={selectedGame} selectedOption={selectedOption}/> */}
