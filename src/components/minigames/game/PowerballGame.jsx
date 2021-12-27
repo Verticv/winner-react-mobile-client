@@ -54,21 +54,14 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             style={{height:"3.9375rem",width: '15.9375rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
                             className="flex-shrink-0 shadow-plain2 rounded-md border border-white flex flex-col items-center justify-center tracking-tight text-white"
                         >
-                            <p className="font-spoqaMedium">[{titleNumber}게임] 파워볼</p>
+                            <p style={{marginTop: '0.4rem'}} className="font-spoqaMedium">[{titleNumber}게임] 파워볼</p>
                         </div>
 
                         <div style={{fontSize: '2.625rem', marginLeft: '0.75rem'}} className="h-full flex flex-col items-center justify-center">
-                            <div className="tracking-tight text-gray-r585858 font-spoqaMedium flex items-center">{subText} {subText2 ? `/${subText2}` : ''} </div>
-                            {/* {subText2 !== null && (
-                                <div className="tracking-tight text-gray-r585858 font-spoqaMedium flex items-center">{subText2}</div>
-                            )} */}
+                            <div className="tracking-tight text-gray-r585858 font-spoqaMedium flex items-center mt-2">{subText} {subText2 ? `/${subText2}` : ''} </div>
                         </div>
                     </div>
 
-                    {/* <div style={{height:"76px", width:"2px"}} className="flex flex-shrink-0 pt-3px">
-                        <div style={{backgroundColor: dividerColor}} className="h-full w-px"></div>
-                        <div style={{backgroundColor:"#ffffff"}} className="h-full w-px"></div>
-                    </div> */}
 
                     {titleNumber === 1 || titleNumber === 6 ? (
                         <div style={{height: '17.375rem', borderWidth: '0.1875rem', borderTopColor: 'white', padding: '0 3.875rem'}} className="flex justify-between w-full items-center border border-gray-c7b9a6">
@@ -82,7 +75,6 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                             setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
                                         }
                                     }} 
-                                    // style={{paddingTop: "3px"}} 
                                     style={{height: '11.375rem'}}
                                     className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                                 >

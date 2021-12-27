@@ -275,6 +275,7 @@ module.exports = {
         blue: {
           banner: '#195ea9',
           gradLight: '#2087f0',
+          abc7db: '#abc7db',
           gradDark: '#1873cf',
           darkGradLight: '#0a50a8',
           darkGradDark: '#00478f',
@@ -442,7 +443,8 @@ module.exports = {
           e2314f: '#e2314f',
           cf1348: '#cf1348',
           ff426a: '#ff426a',
-          ef325f: '#ef325f'
+          ef325f: '#ef325f',
+          cf9494: '#cf9494'
         },
         orange: {
           ff7e00: '#ff7e00',
@@ -477,7 +479,8 @@ module.exports = {
           r351a1e: '#351a1e',
           r381d1e: '#381d1e',
           r7e3636: '#7e3636',
-          7e3636: '#7e3636'
+          7e3636: '#7e3636',
+          c7b8a4: '#c7b8a4'
         },
         submenu: {
           r8b5f5a: '#8b5f5a',
