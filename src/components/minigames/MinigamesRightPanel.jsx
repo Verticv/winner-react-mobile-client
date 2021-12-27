@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { Route } from 'react-router'
 import PopupControls from 'components/popups/PopupControls';
 import RoundResultPopup from 'components/popups/RoundResultPopup';
+import PowerLadderRoundResultPopup from 'components/popups/PowerLadderRoundResultPopup';
+import SpeedKinoRoundResultPopup from 'components/popups/SpeedKinoRoundResultPopup';
 import ClockIcon from '../../images/minigames/clock_blue.png'
 import RefreshIcon from '../../images/minigames/refresh_icon.png'
 import CloseIcon from '../../images/minigames/cart-close.png'
@@ -335,9 +338,28 @@ const MinigamesRightPanel = ({
         
         <div style={{marginTop: '0.9375rem'}} className='flex'>
             <div style={{marginRight: '0.75rem'}}>
+            <Route path="/minigame/powerball">
                 <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
                     <RoundResultPopup setPopupOpen={setPopupOpen} />
                 </PopupControls> 
+            </Route>
+
+            <Route path="/minigame/powerladder">    
+                <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                    <PowerLadderRoundResultPopup setPopupOpen={setPopupOpen} />
+                </PopupControls> 
+            </Route>
+
+            <Route path="/minigame/speedkino">
+                <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                    <SpeedKinoRoundResultPopup setPopupOpen={setPopupOpen} />
+                </PopupControls> 
+            </Route>
+                            
+            <Route path="/minigame/kinoladder">
+                <GrayButton  text='회차결과' />
+            </Route>
+        
                 
             </div>
             <GrayButton  text='전체베팅내역' />
