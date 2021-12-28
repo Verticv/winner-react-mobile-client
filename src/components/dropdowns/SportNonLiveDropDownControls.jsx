@@ -41,7 +41,7 @@ export default function SportNonLiveDropDownControls({
                 }}
             >{buttonChild}</button>
             {open && (
-                <div style={{width: '73vw', height: '80vh', minHeight: '80vh', top: '10%', left: '10%', zIndex: '102'}} className={`text-copy-primary overflow-scroll rounded-3xl fixed justify-center ${dropDownClasses} top-0`} ref={ref} >
+                <div style={{width: '73vw', height: '80vh', minHeight: '80vh', top: '10%', left: '13%', zIndex: '102'}} className={`text-copy-primary overflow-scroll rounded-3xl fixed justify-center ${dropDownClasses} top-0`} ref={ref} >
                     {children}
                 </div>
             )}
