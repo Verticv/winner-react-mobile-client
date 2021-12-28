@@ -1,33 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import UpIcon from '../../images/betCombination/up.png'
 import DownIcon from '../../images/betCombination/down.png'
-import BonusCell from '../../images/betCombination/bonus_cell.png'
-import NormalCell from '../../images/betCombination/normal_cell.png'
-import FootballIcon from '../../images/betCombination/soccer.png'
-import GlobeIcon from '../../images/betCombination/globe.png'
-import ArrowBlack from '../../images/betCombination/arrow_black.png'
-import DropDownControls from 'components/dropdowns/DropDownControls'
-import T1 from '../../images/betCombination/t1.png'
-import T2 from '../../images/betCombination/t2.png'
-import T3 from '../../images/betCombination/t3.png'
-import T4 from '../../images/betCombination/t4.png'
-import T5 from '../../images/betCombination/t5.png'
-import T6 from '../../images/betCombination/t6.png'
-import T7 from '../../images/betCombination/t7.png'
-import T8 from '../../images/betCombination/t8.png'
-import T9 from '../../images/betCombination/t9.png'
-import T10 from '../../images/betCombination/t10.png'
-import T11 from '../../images/betCombination/t11.png'
-import T12 from '../../images/betCombination/t12.png'
-import T13 from '../../images/betCombination/t13.png'
-import T14 from '../../images/betCombination/t14.png'
-import T15 from '../../images/betCombination/t15.png'
-import T16 from '../../images/betCombination/t16.png'
-import NorwayIcon from '../../images/betCombination/norway.png'
-import AustriaIcon from '../../images/betCombination/austria.png'
-import NetherlandIcon from '../../images/betCombination/netherland.png'
-import UKIcon from '../../images/betCombination/uk.png'
-import Bubble1 from '../../images/betCombination/bubble1.png'
+import BonusCell from '../../images/newImages/event.png'
+import Gift from '../../images/newImages/gift.png'
+// import NormalCell from '../../images/betCombination/normal_cell.png'
+import FootballIcon from '../../images/newImages/soccer.png'
+import GlobeIcon from '../../images/newImages/world.png'
+import ArrowBlack from '../../images/newImages/down.png'
+// import DropDownControls from 'components/dropdowns/DropDownControls'
+import DropDownControls from 'components/dropdowns/SportNonLiveDropDownControls'
+// import T1 from '../../images/betCombination/t1.png'
+// import T2 from '../../images/betCombination/t2.png'
+// import T3 from '../../images/betCombination/t3.png'
+// import T4 from '../../images/betCombination/t4.png'
+// import T5 from '../../images/betCombination/t5.png'
+// import T6 from '../../images/betCombination/t6.png'
+// import T7 from '../../images/betCombination/t7.png'
+// import T8 from '../../images/betCombination/t8.png'
+// import T9 from '../../images/betCombination/t9.png'
+// import T10 from '../../images/betCombination/t10.png'
+// import T11 from '../../images/betCombination/t11.png'
+// import T12 from '../../images/betCombination/t12.png'
+// import T13 from '../../images/betCombination/t13.png'
+// import T14 from '../../images/betCombination/t14.png'
+// import T15 from '../../images/betCombination/t15.png'
+// import T16 from '../../images/betCombination/t16.png'
+// import NorwayIcon from '../../images/betCombination/norway.png'
+// import AustriaIcon from '../../images/betCombination/austria.png'
+// import NetherlandIcon from '../../images/betCombination/netherland.png'
+// import UKIcon from '../../images/betCombination/uk.png'
+// import Bubble1 from '../../images/betCombination/bubble1.png'
 import Bubble2 from '../../images/betCombination/bubble2.png'
 import _uniqueId from 'lodash/uniqueId';
 import './BetCombination.css'
@@ -40,284 +42,292 @@ const BetCombinationPanel = ({
     filterArray
 }) => {
 
-    const subArray = [
-        {
-            id: 0,
-            type: "핸디캡",
-            team1: "FK Haugesund",
-            team2: "스트룀스고세 IF",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: false,
-            hasDown: false,
-            bet: "none" 
-        },
-        {
-            id: 1,
-            type: "핸디캡",
-            team1: "FK Haugesund",
-            team2: "스트룀스고세 IF",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: false,
-            hasDown: false,
-            bet: "right" 
-        },
-        {
-            id: 2,
-            type: "언오버",
-            team1: "오버",
-            team2: "언더",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: true,
-            hasDown: true,
-            bet: "none" 
-        },
-        {
-            id: 3,
-            type: "언오버",
-            team1: "오버",
-            team2: "언더",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: true,
-            hasDown: true,
-            bet: "none",
-        },
-    ]
+    // const subArray = [
+    //     {
+    //         id: 0,
+    //         type: "핸디캡",
+    //         team1: "FK Haugesund",
+    //         team2: "스트룀스고세 IF",
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "none" 
+    //     },
+    //     {
+    //         id: 1,
+    //         type: "핸디캡",
+    //         team1: "FK Haugesund",
+    //         team2: "스트룀스고세 IF",
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "right" 
+    //     },
+    //     {
+    //         id: 2,
+    //         type: "언오버",
+    //         team1: "오버",
+    //         team2: "언더",
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         hasUp: true,
+    //         hasDown: true,
+    //         bet: "none" 
+    //     },
+    //     {
+    //         id: 3,
+    //         type: "언오버",
+    //         team1: "오버",
+    //         team2: "언더",
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         hasUp: true,
+    //         hasDown: true,
+    //         bet: "none",
+    //     },
+    // ]
 
-    const subArray2 = [
-        {
-            id: 0,
-            type: "핸디캡",
-            team1: "FK Haugesund",
-            team2: "스트룀스고세 IF",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: false,
-            hasDown: false,
-            bet: "none" 
-        },
-        {
-            id: 1,
-            type: "핸디캡",
-            team1: "FK Haugesund",
-            team2: "스트룀스고세 IF",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: false,
-            hasDown: false,
-            bet: "right" 
-        },
-        {
-            id: 2,
-            type: "언오버",
-            team1: "오버",
-            team2: "언더",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: true,
-            hasDown: true,
-            bet: "none" 
-        },
-        {
-            id: 3,
-            type: "언오버",
-            team1: "오버",
-            team2: "언더",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: true,
-            hasDown: true,
-            bet: "none",
-            isLastSubarray: true
-        },
-    ]
+    // const subArray2 = [
+    //     {
+    //         id: 0,
+    //         type: "핸디캡",
+    //         team1: "FK Haugesund",
+    //         team2: "스트룀스고세 IF",
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "none" 
+    //     },
+    //     {
+    //         id: 1,
+    //         type: "핸디캡",
+    //         team1: "FK Haugesund",
+    //         team2: "스트룀스고세 IF",
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "right" 
+    //     },
+    //     {
+    //         id: 2,
+    //         type: "언오버",
+    //         team1: "오버",
+    //         team2: "언더",
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         hasUp: true,
+    //         hasDown: true,
+    //         bet: "none" 
+    //     },
+    //     {
+    //         id: 3,
+    //         type: "언오버",
+    //         team1: "오버",
+    //         team2: "언더",
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         hasUp: true,
+    //         hasDown: true,
+    //         bet: "none",
+    //         isLastSubarray: true
+    //     },
+    // ]
 
-    const FirstArray = [
-        {
-            id: 4,
-            type: "승무패",
-            team1: "FK Haugesund",
-            team2: "스트룀스고세 IF",
-            logo1: T2,
-            logo2: T3,
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            stat1Color: "red",
-            stat2Color: "blue",
-            hasUp: false,
-            hasDown: false,
-            bet: "none",
-            subArray: subArray
-        },
-        {
-            id: 5,
-            type: "승무패",
-            team1: "바살룬즈 IF",
-            team2: "스타백 IF",
-            logo1: T1,
-            logo2: T4,
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            stat1Color: "red",
-            stat2Color: "blue",
-            hasUp: false,
-            hasDown: false,
-            bet: "none",
-            subArray: subArray2,
-            isLast: true
-        },
-    ]
+    // const FirstArray = [
+    //     {
+    //         id: 4,
+    //         type: "승무패",
+    //         team1: "FK Haugesund",
+    //         team2: "스트룀스고세 IF",
+    //         logo1: T2,
+    //         logo2: T3,
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         stat1Color: "red",
+    //         stat2Color: "blue",
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "none",
+    //         subArray: subArray
+    //     },
+    //     {
+    //         id: 5,
+    //         type: "승무패",
+    //         team1: "바살룬즈 IF",
+    //         team2: "스타백 IF",
+    //         logo1: T1,
+    //         logo2: T4,
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         stat1Color: "red",
+    //         stat2Color: "blue",
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "none",
+    //         subArray: subArray2,
+    //         isLast: true
+    //     },
+    // ]
 
-    const SecondArray = [
-        {
-            id: 6,
-            type: "승무패",
-            team1: "SV Kuchl",
-            team2: "FC Blau Weiss Linz",
-            logo1: T5,
-            logo2: T6,
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            stat1Color: "none",
-            stat2Color: "none",
-            hasUp: false,
-            hasDown: false,
-            bet: "left",
-            subArray: subArray2,
-            isLast: true
-        },
-    ]
+    // const SecondArray = [
+    //     {
+    //         id: 6,
+    //         type: "승무패",
+    //         team1: "SV Kuchl",
+    //         team2: "FC Blau Weiss Linz",
+    //         logo1: T5,
+    //         logo2: T6,
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         stat1Color: "none",
+    //         stat2Color: "none",
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "left",
+    //         subArray: subArray2,
+    //         isLast: true
+    //     },
+    // ]
 
-    const ThirdArray = [
-        {
-            id: 7,
-            type: "승무패",
-            team1: "AZ 알카르크 B",
-            team2: "FC 오스",
-            logo1: T7,
-            logo2: T8,
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            stat1Color: "none",
-            stat2Color: "none",
-            hasUp: false,
-            hasDown: false,
-            bet: "none",
-            subArray: subArray
-        },
-        {
-            id: 8,
-            type: "승무패",
-            team1: "PSV 에인트호번 (Am)",
-            team2: "FC 에인트호번",
-            logo1: T9,
-            logo2: T10,
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            stat1Color: "none",
-            stat2Color: "none",
-            hasUp: false,
-            hasDown: false,
-            bet: "none",
-            subArray: subArray2,
-            isLast: true
-        },
-    ]
+    // const ThirdArray = [
+    //     {
+    //         id: 7,
+    //         type: "승무패",
+    //         team1: "AZ 알카르크 B",
+    //         team2: "FC 오스",
+    //         logo1: T7,
+    //         logo2: T8,
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         stat1Color: "none",
+    //         stat2Color: "none",
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "none",
+    //         subArray: subArray
+    //     },
+    //     {
+    //         id: 8,
+    //         type: "승무패",
+    //         team1: "PSV 에인트호번 (Am)",
+    //         team2: "FC 에인트호번",
+    //         logo1: T9,
+    //         logo2: T10,
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         stat1Color: "none",
+    //         stat2Color: "none",
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "none",
+    //         subArray: subArray2,
+    //         isLast: true
+    //     },
+    // ]
 
-    const FourthArray = [
-        {
-            id: 9,
-            type: "승무패",
-            team1: "버밍엄 시티 FC",
-            team2: "뉴캐슬 유나이티드 FC",
-            logo1: T11,
-            logo2: T12,
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            stat1Color: "none",
-            stat2Color: "none",
-            hasUp: false,
-            hasDown: false,
-            bet: "none",
-            subArray: subArray
-        },
-        {
-            id: 10,
-            type: "승무패",
-            team1: "노팅엄 포리스트 FC",
-            team2: "사우스햄튼 FC",
-            logo1: T13,
-            logo2: T14,
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            stat1Color: "none",
-            stat2Color: "none",
-            hasUp: false,
-            hasDown: false,
-            bet: "none",
-            subArray: subArray
-        },
-        {
-            id: 11,
-            type: "승무패",
-            team1: "레딩",
-            team2: "울버햄프턴 원더러스 FC",
-            logo1: T15,
-            logo2: T16,
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            stat1Color: "none",
-            stat2Color: "none",
-            hasUp: false,
-            hasDown: false,
-            bet: "none",
-            subArray: subArray2,
-            isLast: true
-        },
+    // const FourthArray = [
+    //     {
+    //         id: 9,
+    //         type: "승무패",
+    //         team1: "버밍엄 시티 FC",
+    //         team2: "뉴캐슬 유나이티드 FC",
+    //         logo1: T11,
+    //         logo2: T12,
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         stat1Color: "none",
+    //         stat2Color: "none",
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "none",
+    //         subArray: subArray
+    //     },
+    //     {
+    //         id: 10,
+    //         type: "승무패",
+    //         team1: "노팅엄 포리스트 FC",
+    //         team2: "사우스햄튼 FC",
+    //         logo1: T13,
+    //         logo2: T14,
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         stat1Color: "none",
+    //         stat2Color: "none",
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "none",
+    //         subArray: subArray
+    //     },
+    //     {
+    //         id: 11,
+    //         type: "승무패",
+    //         team1: "레딩",
+    //         team2: "울버햄프턴 원더러스 FC",
+    //         logo1: T15,
+    //         logo2: T16,
+    //         stat1: 2.26,
+    //         stat2: 2.96,
+    //         stat3: 3.47,
+    //         stat1Color: "none",
+    //         stat2Color: "none",
+    //         hasUp: false,
+    //         hasDown: false,
+    //         bet: "none",
+    //         subArray: subArray2,
+    //         isLast: true
+    //     },
         
-    ]
+    // ]
 
     const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("국가선택")
     const [isHover1, setHover1] = useState(null)
     const [isOpen, setOpen] = useState(new Array(20).fill(false))
     const [isButtonClicked, setButtonClicked] = useState("")
+    console.log(`isHover1`, isHover1)
 
+    useEffect(() => {
+        if (!selectedCarrier) {
+            setSelectedCarrier('value')
+        }
+    }, [selectedCarrier])
 
-    const dropDownCellClass = "flex w-full h-42px py-2px bg-white items-center px-14px space-x-8px"
+    // const dropDownCellClass = "flex w-full h-40px p-8 bg-white justify-between items-center border-b border-gray-ececec"
 
     const gameResultButton = (
         <div
             style={{
-                width: "159px",
-                height: "39px"
+                width: "35.25rem",
+                height: "6.75rem",
+                borderWidth: '0.1875rem',
+                fontSize: '2.625rem'
             }}
-            className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-md border border-gray-cccccc px-12px font-spoqaMedium text-15px tracking-tight text-gray-r454545 group" 
+            className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-md border border-gray-cccccc font-spoqaMedium text-15px tracking-tight text-gray-r454545 group" 
         >
             <div className="flex">
-                <img className="object-none" src={GlobeIcon} alt="" />
-                <p className="mt-px ml-6px text-14px group-hover:text-black">{selectedCarrier}</p>
+                <img style={{width: '3.75rem', marginLeft: '2.0625rem', marginRight: '0.9375rem'}} className="object-contain" src={GlobeIcon} alt="" />
+                <p className="group-hover:text-black">{selectedCarrier}</p>
             </div>
-            <img src={ArrowBlack} alt="" />
+            <img style={{width: '1.5625rem', marginRight: '2.0625rem'}} src={ArrowBlack} alt="" />
         </div>
     )
 
@@ -329,73 +339,69 @@ const BetCombinationPanel = ({
     }; 
 
     function SearchDropdownCell({ items }) {
-        return items.map(item => (
-            <div className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("국가선택")
-            }}>
-                <input
-                    type="checkbox"
-                    checked={checkedState[item.id]}
-                    onChange={() => handleOnChange(item.id)}
-                />
-                <span>{item.text}</span>
-            </div>
-        ));
+        return items.map(item => {
+            let isChecked = checkedState[item.id]
+            return (
+                <label style={{height: '8rem', display: 'block', padding: '1.875rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0'}} className="form-control relative w-full border-b border-gray-ececec">
+                    {item.text}
+                    <input
+                        style={{right: '1.875rem', top: '2.5rem'}}
+                        className='w-12 h-12 absolute right-0'
+                        type="checkbox"
+                        checked={isChecked}
+                        name={item.text}
+                        onChange={() => handleOnChange(item.id)}
+                    />
+                </label>
+
+            )
+        });
     }
 
     const searchDropdown = (
-        <div 
-            style={{width: "159px", height:"229px" }}
-            className="mt-px flex flex-col items-start overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r454545 font-spoqaMedium text-14px tracking-tight"
-        >
-            <div style={{height:"185px", width:"155px"}} className="w-full overflow-y-scroll mt-2px flex-shrink-0">
-                <SearchDropdownCell items={filterArray} />
-            </div>
-            <div style={{backgroundColor:"#e8e8e8"}} className="w-full h-full flex items-center justify-center space-x-3px">
+        <div className="flex flex-col items-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
+            <SearchDropdownCell items={filterArray} />
+            <div style={{padding: '1.875rem'}} className="w-full h-full flex items-center justify-center">
                 <button 
                     style={{
-                        width:"75px",
                         backgroundColor: "#171a1d",
-                        height:"35px"
+                        height:"7.3125rem",
+                        padding: '0.1875rem',
                     }} 
-                    className="relative flex items-center justify-center rounded-lg hover:opacity-75"
+                    className="relative w-1/2 flex mr-4 items-center justify-center rounded-lg hover:opacity-75"
                     onClick={() => setDropdownOpen(false)}
                 >
                     <div 
                         style={{
-                            width:"73px",
                             borderColor: "#737579",
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
-                            height:"33px",
-                            borderRadius:"3px"
+                            borderRadius:"4px"
                         }} 
-                        className="flex items-center justify-center border cursor-pointer"
+                        className="flex w-full h-full items-center justify-center border cursor-pointer"
                     >
-                        <span style={{textShadow: "1px 1px 1px #00000070"}} className="font-spoqaMedium tracking-tight text-14px text-white" >
+                        <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
                             확인
                         </span>
                     </div>
                 </button>
                 <button 
                     style={{
-                        width:"75px",
                         backgroundColor: "#cb4343",
-                        height:"35px"
+                        height:"7.3125rem",
+                        padding: '0.1875rem',
                     }} 
-                    className="relative flex items-center justify-center rounded-lg hover:opacity-75"
+                    className="relative w-1/2 flex items-center justify-center rounded-lg hover:opacity-75"
                     onClick={() => setCheckedState(filterArray.fill(false))}
                 >
                     <div 
                         style={{
-                            width:"73px",
                             borderColor: "#f36576",
                             background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-                            height:"33px",
-                            borderRadius:"3px"
+                            borderRadius:"4px"
                         }} 
-                        className="flex items-center justify-center border cursor-pointer"
+                        className="flex w-full h-full items-center justify-center border cursor-pointer"
                     >
-                        <span style={{textShadow: "1px 1px 1px #00000070"}} className="font-spoqaMedium tracking-tight text-14px text-white" >
+                        <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
                             초기화
                         </span>
                     </div>
@@ -421,11 +427,14 @@ const BetCombinationPanel = ({
         stat2 = "2.96",
         stat3 = "3.47",
     }) => (
-        <div className="flex space-x-4px">
+        <div className="flex">
             <button 
                 style={{
-                    width:"267px", 
-                    height: "39px",
+                    width:"29.6875rem", 
+                    height: "7.4375rem",
+                    padding: '0.1875rem',
+                    fontSize: '2.625rem',
+                    marginRight: '0.375rem',
                     backgroundColor: "#ad7b4e"
                 }}  
                 className="flex items-center justify-center rounded-lg"
@@ -434,53 +443,55 @@ const BetCombinationPanel = ({
             >
                 <div 
                     style={{
-                        width:"265px", 
-                        height: "37px",
                         borderColor: "#f9b26d",
                         background: "linear-gradient(to bottom, #f8a351, #f38236)" ,
                         color: "#ffffff",
-                        textShadow: "1px 1px 0px #00000070"
+                        textShadow: "1px 1px 0px #00000070",
+                        padding: '0 1.3125rem'
                     }}  
-                    className="flex items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
+                    className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
                 >
-                    <span className="truncate w-108px text-left font-spoqaMedium tracking-tight text-14px">{team1}</span>
-                    <span className="font-roboto tracking-tight text-14px">{stat1}</span>
+                    <span style={{width: '20.8rem'}} className="truncate text-left font-spoqaMedium tracking-tight">{team1}</span>
+                    <span className="font-roboto tracking-tight">{stat1}</span>
                 </div>
-                {isHover1 === 0 && (
+                {/* {isHover1 === 0 && (
                     <div className="absolute mb-73px">
                         <img className="object-none" src={Bubble1} alt="" />
-                        <div style={{color:"#858585"}} className="ml-36px absolute top-9px text-14px font-spoqaMedium tracking-tight">폴더수에 맞춰서 자동으로 적용됩니다.</div>
+                        <div style={{color:"#858585"}} className="ml-36px absolute top-9px font-spoqaMedium tracking-tight">폴더수에 맞춰서 자동으로 적용됩니다.</div>
                     </div>
-                )}
+                )} */}
             </button>
 
             <button 
                 style={{
-                    width:"71px", 
-                    height: "39px",
+                    width:"10rem", 
+                    height: "7.4375rem",
+                    padding: '0.1875rem',
+                    fontSize: '2.625rem',
+                    marginRight: '0.375rem',
                     backgroundColor: "#ad7b4e"
                 }}  
                 className="flex items-center justify-center rounded-lg"              
             >
                 <div 
                     style={{
-                        width:"69px", 
-                        height: "37px",
                         borderColor: "#f9b26d",
                         background: "linear-gradient(to bottom, #f8a351, #f38236)",
                         color: "#ffffff",
                         textShadow: "1px 1px 0px #00000070"
                     }}  
-                    className="flex items-center justify-center rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
+                    className="flex w-full h-full items-center justify-center rounded-lg border bg-gradient-to-b cursor-pointer"
                 >
-                    <span className="font-spoqaMedium tracking-tight text-14px">{stat2}</span>
+                    <span className="font-spoqaMedium tracking-tight">{stat2}</span>
                 </div>
             </button>
 
             <button 
                 style={{
-                    width:"267px", 
-                    height: "39px",
+                    width:"29.6875rem", 
+                    height: "7.4375rem",
+                    padding: '0.1875rem',
+                    fontSize: '2.625rem',
                     backgroundColor: "#ad7b4e"
                 }}  
                 className="relative flex items-center justify-center rounded-lg"
@@ -489,24 +500,23 @@ const BetCombinationPanel = ({
             >
                 <div 
                     style={{
-                        width:"265px", 
-                        height: "37px",
                         borderColor:"#f9b26d",
                         background: "linear-gradient(to bottom, #f8a351, #f38236)",
                         color: "#ffffff",
-                        textShadow: "1px 1px 0px #00000070"
+                        textShadow: "1px 1px 0px #00000070",
+                        padding: '0 1.3125rem'
                     }}  
-                    className="flex items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer px-10px pt-px"
+                    className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
                 >
-                    <span className="font-roboto tracking-tight text-14px">{stat3}</span>
-                    <span className="truncate font-spoqaMedium tracking-tight text-14px text-right">{team2}</span>
+                    <span className="font-roboto tracking-tight">{stat3}</span>
+                    <span className="truncate font-spoqaMedium tracking-tight text-right">{team2}</span>
                 </div>
-                {isHover1 === 1 && (
+                {/* {isHover1 === 1 && (
                     <div className="absolute mb-73px">
                         <img className="object-none" src={Bubble1} alt="" />
-                        <div style={{color:"#858585"}} className="ml-36px absolute top-9px text-14px font-spoqaMedium tracking-tight">폴더수에 맞춰서 자동으로 적용됩니다.</div>
+                        <div style={{color:"#858585"}} className="ml-36px absolute top-9px font-spoqaMedium tracking-tight">폴더수에 맞춰서 자동으로 적용됩니다.</div>
                     </div>
-                )}
+                )} */}
             </button>
         </div>
     )
@@ -735,72 +745,63 @@ const BetCombinationPanel = ({
         ))
     }
 
-    const LeagueGroup = ({
-        flag = NorwayIcon, 
-        title,
-        array = FirstArray
-    }) => {
-        const [isHover4, setHover4] = useState("")
+    // const LeagueGroup = ({
+    //     flag = NorwayIcon, 
+    //     title,
+    //     array = FirstArray
+    // }) => {
+    //     const [isHover4, setHover4] = useState("")
 
-        return (
-            <div className="relative flex flex-col">
-                <img style={{filter: "drop-shadow(5px 5px 5px #00000020)"}} className="absolute z-10" src={NormalCell} alt="" />
-                <div className="h-50px w-full z-20 flex items-center relative">
-                    <img className="mx-10px" src={FootballIcon} alt="" />
-                    <img className="mr-10px" src={flag} alt="" />
-                    <p 
-                        className="text-20px font-spoqaMedium text-white mt-3px truncate w-350px" 
-                        onMouseEnter={() => setHover4(title)}
-                        onMouseLeave={() => setHover4("")}
-                    >
-                        {title}
-                    </p>
-                    {isHover4.length > 30 && (
-                        <div style={{marginLeft:"15px"}} className="absolute bottom-12px left-407px z-20 h-36px flex items-center">
-                            <div className={`relative bottom-0 w-20px overflow-hidden inline-block transform -rotate-90 mb-4px -mr-px`}>
-                                <div className="h-10px w-10px bg-gray-f9f9f9 rotate-45 transform origin-bottom-left border border-gray-400"></div>
-                            </div>
-                            <div style={{color:"#858585", backgroundColor:"#f9f9f9"}} className="px-16px py-8px top-9px text-14px font-spoqaMedium tracking-tight -ml-5px rounded-lg border border-gray-400">
-                                <p className="mt-2px">{title}</p>
-                            </div>
-                        </div>
-                    )}
-                </div>
-                <div className="h-px w-full bg-gray-dddddd" />
+    //     return (
+    //         <div className="relative flex flex-col">
+    //             <img style={{filter: "drop-shadow(5px 5px 5px #00000020)"}} className="absolute z-10" src={NormalCell} alt="" />
+    //             <div className="h-50px w-full z-20 flex items-center relative">
+    //                 <img style={{width: '3.9375rem'}} className="mx-10px" src={FootballIcon} alt="" />
+    //                 <img className="mr-10px" src={flag} alt="" />
+    //                 <p 
+    //                     className="text-20px font-spoqaMedium text-white mt-3px truncate w-350px" 
+    //                     onMouseEnter={() => setHover4(title)}
+    //                     onMouseLeave={() => setHover4("")}
+    //                 >
+    //                     {title}
+    //                 </p>
+    //                 {isHover4.length > 30 && (
+    //                     <div style={{marginLeft:"15px"}} className="absolute bottom-12px left-407px z-20 h-36px flex items-center">
+    //                         <div className={`relative bottom-0 w-20px overflow-hidden inline-block transform -rotate-90 mb-4px -mr-px`}>
+    //                             <div className="h-10px w-10px bg-gray-f9f9f9 rotate-45 transform origin-bottom-left border border-gray-400"></div>
+    //                         </div>
+    //                         <div style={{color:"#858585", backgroundColor:"#f9f9f9"}} className="px-16px py-8px top-9px text-14px font-spoqaMedium tracking-tight -ml-5px rounded-lg border border-gray-400">
+    //                             <p className="mt-2px">{title}</p>
+    //                         </div>
+    //                     </div>
+    //                 )}
+    //             </div>
+    //             <div className="h-px w-full bg-gray-dddddd" />
                 
-                <div className="w-full bg-white z-20 flex flex-col shadow-subNavbar rounded-b-xl">
-                    <LeagueCell array={array} />
-                </div>
-            </div>
-        ) 
-    }
+    //             <div className="w-full bg-white z-20 flex flex-col shadow-subNavbar rounded-b-xl">
+    //                 <LeagueCell array={array} />
+    //             </div>
+    //         </div>
+    //     ) 
+    // }
 
     return (
-        <div style={{borderRadius:"0.5rem"}} className="w-full shadow-subNavbar bg-gray-fafafa">
-
-            <div className="h-50px w-full flex items-center text-14px font-spoqaMedium tracking-tight text-gray-r454545 pt-4px">
-                <p className="ml-50px">경기일시</p>
-                <p style={{marginLeft: "62px"}}>구분</p>
-                <div style={{marginLeft: "136px"}} className="flex">
-                    <p>승(홈)오버</p>
-                    <img className="blink object-none ml-5px" src={UpIcon} alt="" />
-                </div>
-                <p style={{marginLeft: "112px"}}>무/핸/합</p>
-                <div style={{marginLeft: "107px"}} className="flex">
-                    <p>패(원정)언더</p>
-                    <img className="blink object-none ml-5px" src={DownIcon} alt="" />
-                </div>
-                <p style={{marginLeft: "118px"}}>정보</p>
+        <div style={{borderRadius:"0.5rem", marginBottom: '500px'}} className="w-full shadow-subNavbar bg-gray-fafafa">
+            <div style={{paddingTop: '2.1875rem', paddingBottom: '1.125rem'}} className="flex w-full pb-0 font-spoqaMedium text-14px tracking-tight text-gray-r454545">
+                <div style={{fontSize: '2.625rem'}} className="h-full flex-1 flex items-center justify-end">승(홈)</div>
+                <div style={{fontSize: '2.625rem'}} className="h-full flex-1 flex items-center justify-end">무</div>
+                <div style={{fontSize: '2.625rem', flex: '1.3 1.3 0%;'}} className="h-full flex-1 flex items-center justify-end">패(원정)</div>
+                <div style={{fontSize: '2.625rem', flex: '0.8 0.8 0%;'}} className="h-full mr-8 flex-1 flex items-center justify-end">결과</div>
             </div>
+        
 
-            <div className="relative flex flex-col justify-start items-center h-119px px-10px">
-                <img className="absolute object-none" src={BonusCell} alt="" />
-                <div className="h-50px w-full z-20 mt-4px flex items-center">
-                    <div style={{color:"#ffde00", textShadow: "2px 2px 0px #00000050"}} className="ml-52px font-spoqaBold text-20px mt-6px">보너스 이벤트</div>
+            <div className="relative flex flex-col justify-start items-center">
+                <img style={{width: '77.625rem'}} className="absolute object-contain" src={BonusCell} alt="" />
+                <img style={{width: '6.75rem'}} className="absolute left-6 z-50 object-contain" src={Gift} alt="" />
+                <div className="w-full z-20 flex items-center">
+                    <div style={{color:"#ffde00", textShadow: "2px 2px 0px #00000050", fontSize: '2.625rem'}} className="ml-36 mt-6 font-spoqaMedium">보너스 이벤트</div>
                 </div>
-                <div className="h-60px w-full z-20 flex items-center">
-                    <div style={{color:"#614f46"}} className="font-roboto text-14px tracking-tight ml-10px">2021-06-29 15:45</div>
-                    <div style={{color:"#614f46"}} className="font-spoqaMedium text-14px tracking-tight ml-32px mr-26px">보너스</div>
+                <div style={{marginLeft: '1rem'}} className="w-full z-20 flex items-center mt-8">
                     <EventOptions 
                         team1 = "다폴더 보너스 배당"
                         team2 = "◀ 3폴더 이상 베팅 시"
@@ -811,14 +812,14 @@ const BetCombinationPanel = ({
                 </div>
             </div>
 
-            <div className="mt-6px px-10px">
-                <div className="flex items-center justify-between h-59px border border-gray-dddddd rounded-lg bg-gray-f9f9f9">
+            <div style={{paddingBottom: '1.6875rem'}} className="">
+                <div style={{width: '76.875rem', height: '8.4375rem', marginTop: '1.6875rem', marginLeft: '0.3125rem', borderWidth: '0.1875rem'}} className="flex items-center justify-between border border-gray-dddddd rounded-lg bg-gray-f9f9f9">
                     <div className="flex items-center">
-                        <img className="object-none mx-9px" src={FootballIcon} alt="" />
-                        <p className="text-20px font-spoqaMedium text-gray-r454545 mr-9px">축구</p>
+                        <img style={{width: '3.9375rem', marginLeft: '1.3125rem'}} className="object-contain" src={FootballIcon} alt="" />
+                        <p style={{fontSize: '2.625rem', marginLeft: '0.6875rem'}} className="font-spoqaMedium text-gray-r454545">축구</p>
                         <div 
-                            style={{backgroundColor:"#8494a4"}} 
-                            className="h-27px w-49px rounded-full flex items-center justify-center text-18px font-spoqaMedium tracking-tight text-white pt-2px pr-2px"
+                            style={{backgroundColor:"#8494a4", fontSize: '2.9375rem', width: '8.125rem', height: '4.5'}} 
+                            className="rounded-full ml-4 flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                         >
                             15
                         </div>
@@ -829,12 +830,13 @@ const BetCombinationPanel = ({
                 </div>
             </div>
 
-            <div className="mt-10px px-10px pb-11px mb-60px space-y-11px">
+        
+            {/* <div className="mt-10px px-10px pb-11px mb-60px space-y-11px">
                 <LeagueGroup title="노르웨이 - UEFA Europa Conference League" />
                 <LeagueGroup flag={AustriaIcon} title="오스트리아 - 컵" array={SecondArray}/>
                 <LeagueGroup flag={NetherlandIcon} title="네덜란드 - D2" array={ThirdArray}/>
                 <LeagueGroup flag={UKIcon} title="영국 - U23" array={FourthArray}/>
-            </div>
+            </div> */}
             
             
         </div>
