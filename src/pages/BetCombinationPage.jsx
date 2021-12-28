@@ -1,34 +1,32 @@
 import BetCombinationPanel from 'components/betCombination/BetCombinationPanel'
-import BetCombinationRightPanel from 'components/betCombination/BetCombinationRightPanel'
-import Footer from 'components/mainPage/Footer'
-import Footer2 from 'components/mainPage/Footer2'
-import DirectoryComponent from 'components/myPage/DirectoryComponent'
+// import BetCombinationRightPanel from 'components/betCombination/BetCombinationRightPanel'
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 import React, { useState } from 'react'
-import { Route } from 'react-router'
-import Icon1 from '../images/gameResults/horizontalMenu/icon_1.png'
-import Icon2 from '../images/gameResults/horizontalMenu/icon_2.png'
-import Icon3 from '../images/gameResults/horizontalMenu/icon_3.png'
-import Icon4 from '../images/gameResults/horizontalMenu/icon_4.png'
-import Icon5 from '../images/gameResults/horizontalMenu/icon_5.png'
-import Icon6 from '../images/gameResults/horizontalMenu/icon_6.png'
-import Icon7 from '../images/gameResults/horizontalMenu/icon_7.png'
-import Icon8 from '../images/gameResults/horizontalMenu/icon_8.png'
-import HorizontalMenu6 from 'components/horizontalMenus/HorizontalMenu6'
+// import { Route } from 'react-router'
+import Sports from 'components/myPage/gameResults/Sports'
+// import Icon1 from '../images/gameResults/horizontalMenu/icon_1.png'
+// import Icon2 from '../images/gameResults/horizontalMenu/icon_2.png'
+// import Icon3 from '../images/gameResults/horizontalMenu/icon_3.png'
+// import Icon4 from '../images/gameResults/horizontalMenu/icon_4.png'
+// import Icon5 from '../images/gameResults/horizontalMenu/icon_5.png'
+// import Icon6 from '../images/gameResults/horizontalMenu/icon_6.png'
+// import Icon7 from '../images/gameResults/horizontalMenu/icon_7.png'
+// import Icon8 from '../images/gameResults/horizontalMenu/icon_8.png'
+// import HorizontalMenu6 from 'components/horizontalMenus/HorizontalMenu6'
 
 const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
 
-    const tabsArray = [
-        { text: "전체", icon: Icon1, id: 0, number: 854 },
-        { text: "축구", icon: Icon2, id: 1, number: 567 },
-        { text: "농구", icon: Icon3, id: 2, number: 227 },
-        { text: "야구", icon: Icon4, id: 3, number: 407 },
-        { text: "배구", icon: Icon5, id: 4, number: 0 },
-        { text: "하키", icon: Icon6, id: 5, number: 0 },
-        { text: "미식축구", icon: Icon7, id: 6, number: 0 },
-        { text: "격투기", icon: Icon8, id: 7, number: 9 },
-    ];
+    // const tabsArray = [
+    //     { text: "전체", icon: Icon1, id: 0, number: 854 },
+    //     { text: "축구", icon: Icon2, id: 1, number: 567 },
+    //     { text: "농구", icon: Icon3, id: 2, number: 227 },
+    //     { text: "야구", icon: Icon4, id: 3, number: 407 },
+    //     { text: "배구", icon: Icon5, id: 4, number: 0 },
+    //     { text: "하키", icon: Icon6, id: 5, number: 0 },
+    //     { text: "미식축구", icon: Icon7, id: 6, number: 0 },
+    //     { text: "격투기", icon: Icon8, id: 7, number: 9 },
+    // ];
 
     const filterArray = [
         { text: "러시아", id: 0 },
@@ -57,37 +55,27 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
 
     const cardsArray = []
 
-    const [selectedTab, setSelectedTab] = useState(0)
-    const [isPanelFixed, setPanelFixed] = useState(true)
+    // const [selectedTab, setSelectedTab] = useState(0)
+    // const [isPanelFixed, setPanelFixed] = useState(true)
     const [addedCard, setAddedCard] = useState(cardsArray)
     const [checkedState, setCheckedState] = useState(
         new Array(filterArray.length).fill(false)
     );
     return (
-        <div className="relative flex flex-col justify-center w-full">
+        <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">
 
-            <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
+            <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>
 
 
-            <div className="flex flex-col items-start limit:items-center limit1600:mt-92px mt-122px w-full h-full">
-                <Route path="/bet-combination">
-                    <DirectoryComponent
-                        branch1="스포츠" 
-                        branch2="조합베팅"
-                        mainPath="/mypage/bet-history"
-                    />
-                </Route>
+            <Sports paddingLeft='0' />
 
-                <div className=" relative flex w-default space-x-20px -mt-px">
+            <div className="flex flex-col items-start w-full h-full">
+                <div className=" relative flex w-full">
 
-                    <div style={{width: "933px"}}>
-                        <div style={{width: "935px", marginLeft:"-1px"}}>
-
-                        <HorizontalMenu6 itemsArray={tabsArray} isState={selectedTab} setState={setSelectedTab} />
-                        </div>
+                    <div className='w-full'>
                         <div className="mt-15px">
                             <BetCombinationPanel 
                                 addedCard={addedCard} 
@@ -99,22 +87,16 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                         </div>
                     </div>
                     
-                    <div style={{width: "307px", left:"0px", position:"-webkit-sticky", top: "150px", height: isPanelFixed ? "100%" : ""}} className={`${isPanelFixed && "sticky bottom-0 flex"} mb-60px pt-px `}>
+                    {/* <div style={{width: "307px", left:"0px", position:"-webkit-sticky", top: "150px", height: isPanelFixed ? "100%" : ""}} className={`${isPanelFixed && "sticky bottom-0 flex"} mb-60px pt-px `}>
                         <BetCombinationRightPanel 
                             addedCard={addedCard} 
                             setAddedCard={setAddedCard} 
                             isPanelFixed={isPanelFixed} 
                             setPanelFixed={setPanelFixed} 
                         />
-                    </div>
+                    </div> */}
 
                 </div>
-
-                <div>
-                    <Footer2 />
-                    <Footer />
-                </div>
-
             </div>
         </div>
     )

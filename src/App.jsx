@@ -9,7 +9,7 @@ import CSCenterPage from "pages/CSCenterPage";
 import Freeboard from "pages/Freeboard";
 import BetCombinationPage from "pages/BetCombinationPage";
 import MinigamesPage from "pages/MinigamesPage";
-import EsportsPage from "pages/EsportsPage";
+// import EsportsPage from "pages/EsportsPage";
 import LiveCasinoPage from "pages/LiveCasinoPage";
 import AuthenticationPage from "pages/AuthenticationPage";
 
@@ -68,9 +68,9 @@ function App() {
                 <Route path="/minigame">
                     <MinigamesPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}/>
                 </Route>
-                <Route path="/esports">
+                {/* <Route path="/esports">
                     <EsportsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated}/>
-                </Route>
+                </Route> */}
                 <Route path="/main">
                     <MainPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
                 </Route>
