@@ -37,7 +37,8 @@ const MinigamesRightPanel = ({
                 height: '7.5rem',
                 padding: '0.1875rem',
                 fontSize: '2.625rem',
-                borderColor: "#b3bac1"
+                borderColor: "#b3bac1",
+                borderRadius: '0.75rem'
             }} 
             className="flex items-center justify-center rounded-lg flex-shrink-0 border hover:opacity-75"
             onClick={() => setInputValue(inputValue + amount)}
@@ -238,7 +239,7 @@ const MinigamesRightPanel = ({
 
             </div>
 
-            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between ">
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r454545">보유금액</p>
                 <p className="font-robotoBold tracking-tight text-blue-r0056a6">3,522,170</p>
             </div>

@@ -26,7 +26,6 @@ const BetCartHorizontalMenu2 = ({
                     marginRight: `${!index ? '0.375rem' : '' }`, 
                     padding: '0.1875rem'
                 }}
-                // #26303a 0%, #4c6782
                 className={`${
                     pathname === item.path
                     ? "bg-blue-r58baf7" 
@@ -76,7 +75,7 @@ const BetCartHorizontalMenu2 = ({
                             className={`${
                                 pathname === item.path
                                 ? "text-white"
-                                : "text-gray-r616161" 
+                                : "text-gray-r8c8c8c" 
                             } font-spoqaMedium tracking-tight mt-0`}
                         >{item.text}</span>
                         <div 
@@ -95,7 +94,7 @@ const BetCartHorizontalMenu2 = ({
     }
 
     return (
-        <div id="container" style={{margin: '1.875rem 0',}} className="flex w-full">
+        <div id="container" style={{marginTop: '1.875rem',}} className="flex w-full">
             <TabsList items={itemsArray} />
         </div>
     )
