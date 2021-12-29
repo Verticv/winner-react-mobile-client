@@ -7,7 +7,6 @@ import NormalCell from '../../images/newImages/blue-card.png'
 import FootballIcon from '../../images/newImages/soccer.png'
 import GlobeIcon from '../../images/newImages/world.png'
 import ArrowBlack from '../../images/newImages/down.png'
-// import DropDownControls from 'components/dropdowns/DropDownControls'
 import DropDownControls from 'components/dropdowns/SportNonLiveDropDownControls'
 import T1 from '../../images/betCombination/t1.png'
 import T2 from '../../images/betCombination/t2.png'
@@ -35,12 +34,6 @@ import Clock from '../../images/newImages/clock-light-gray.png'
 import Cup from '../../images/newImages/cup.png'
 import Medal from '../../images/newImages/Medal.png'
 import Jewel from '../../images/newImages/jewel.png'
-
-
-
-
-// import Bubble1 from '../../images/betCombination/bubble1.png'
-// import Bubble2 from '../../images/betCombination/bubble2.png'
 import _uniqueId from 'lodash/uniqueId';
 import './BetCombination.css'
 
@@ -337,8 +330,6 @@ const BetCombinationPanel = ({
         }
     }, [selectedCarrier])
 
-    // const dropDownCellClass = "flex w-full h-40px p-8 bg-white justify-between items-center border-b border-gray-ececec"
-
     const gameResultButton = (
         <div
             style={{
@@ -480,12 +471,6 @@ const BetCombinationPanel = ({
                     <span style={{width: '20.8rem'}} className="truncate text-left font-spoqaMedium tracking-tight">{team1}</span>
                     <span className="font-roboto tracking-tight">{stat1}</span>
                 </div>
-                {/* {isHover1 === 0 && (
-                    <div className="absolute mb-73px">
-                        <img className="object-none" src={Bubble1} alt="" />
-                        <div style={{color:"#858585"}} className="ml-36px absolute top-9px font-spoqaMedium tracking-tight">폴더수에 맞춰서 자동으로 적용됩니다.</div>
-                    </div>
-                )} */}
             </button>
 
             <button 
@@ -537,12 +522,6 @@ const BetCombinationPanel = ({
                     <span className="font-roboto tracking-tight">{stat3}</span>
                     <span className="truncate font-spoqaMedium tracking-tight text-right">{team2}</span>
                 </div>
-                {/* {isHover1 === 1 && (
-                    <div className="absolute mb-73px">
-                        <img className="object-none" src={Bubble1} alt="" />
-                        <div style={{color:"#858585"}} className="ml-36px absolute top-9px font-spoqaMedium tracking-tight">폴더수에 맞춰서 자동으로 적용됩니다.</div>
-                    </div>
-                )} */}
             </button>
         </div>
     )
@@ -599,14 +578,6 @@ const BetCombinationPanel = ({
                         className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
                     >
                         <span className="truncate text-right font-spoqaMedium tracking-tight">{team1}</span>
-                        {/* <div style={{width:"38px"}} className={`${hasUp ? "justify-end pr-5px" : "justify-center"} flex items-center `}>
-                            {logo1 && (
-                                <img src={logo1} alt="" />
-                            )}
-                            {hasUp === true && (
-                                <img src={UpIcon} alt="" />
-                            )}
-                        </div> */}
                         <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked && `${id}left` !== isHover3 ? "#d52e2e" : ""}} className="flex items-center font-roboto tracking-tight">
                             {hasUp === true && (
                                 <img className='mr-4' style={{width: '1.3125rem', height: '1.125rem'}} src={UpIcon} alt="" />
@@ -691,14 +662,6 @@ const BetCombinationPanel = ({
                                 <img className='ml-4' style={{width: '1.3125rem', height: '1.125rem'}} src={DownIcon} alt="" />
                             )}
                             </span>
-                        {/* <div style={{width:"38px"}} className={`${hasDown ? "justify-start pl-5px" : "justify-center"} flex items-center `}>
-                            {logo2 && (
-                                <img src={logo2} alt="" />
-                            )}
-                            {hasDown === true && (
-                                <img src={DownIcon} alt="" />
-                            )}
-                        </div> */}
                         <span className="truncate font-spoqaMedium tracking-tight text-left">{team2}</span>
                     </div>
                 </button>
@@ -707,12 +670,11 @@ const BetCombinationPanel = ({
     }
 
     function LeagueCell({
-        array, 
+        array = [], 
         isSubArray = false, 
         isLastSubarray = false,
         isSubButton
     }) {
-
         const [isHover2, setHover2] = useState(null)
         console.log(`isHover2`, isHover2)
         const handleOnChange = (position) => {
@@ -722,7 +684,7 @@ const BetCombinationPanel = ({
             setOpen(updatedCheckedState);
         }; 
         
-        return array.map(items => (
+        return array?.map(items => (
             <div className="flex flex-col">
                 <div 
                     style={{backgroundColor: isSubArray === true ? "#f1f1f1" : "#ffffff", height: `${isSubButton ? "11.5625rem" : "9.0625rem"}`, borderBottomWidth: '0.1875rem'}} 
@@ -777,14 +739,6 @@ const BetCombinationPanel = ({
                                     </span>
                                 </div>
                             </button>
-                            {/* {isHover2 === items.id && (
-                                <div style={{width:"265px"}} className="absolute bottom-34px left-4px group-hover:opacity-100">
-                                    <img className="object-none" src={Bubble2} alt="" />
-                                    <div style={{color:"#858585"}} className="ml-36px absolute top-9px font-spoqaMedium tracking-tight">
-                                        해당 경기에 등록된 모든베팅종류 제공
-                                    </div>
-                                </div>
-                            )} */}
                         </div>
                     )}
                                                 
@@ -801,7 +755,7 @@ const BetCombinationPanel = ({
         flag = NorwayIcon, 
         title,
         array = FirstArray,
-        isLastElement
+        isLastElement = false
     }) => {
         const [isHover4, setHover4] = useState("")
         console.log(`isHover4`, isHover4)
@@ -819,17 +773,6 @@ const BetCombinationPanel = ({
                     >
                         {title}
                     </p>
-                    {/* {isHover4.length > 30 && (
-                        <div style={{marginLeft:"15px"}} className="absolute bottom-12px left-407px z-20 h-36px flex items-center">
-                            <div className={`relative bottom-0 w-20px overflow-hidden inline-block transform -rotate-90 mb-4px -mr-px`}>
-                                <div className="h-10px w-10px bg-gray-f9f9f9 rotate-45 transform origin-bottom-left border border-gray-400"></div>
-                            </div>
-                            <div style={{color:"#858585", backgroundColor:"#f9f9f9"}} className="px-16px py-8px top-9px font-spoqaMedium tracking-tight -ml-5px rounded-lg border border-gray-400">
-                                <p className="mt-2px">{title}</p>
-                            </div>
-                        </div>
-                    )} */}
-                    {/* clock-light-gray */}
                     <div style={{fontSize: '2.625rem', marginTop: '0.625rem'}} className="flex absolute mr-5 right-0 flex-col text-blue-r8494a4 font-spoqaMedium items-center justify-center h-full">
                         <p className="tracking-tight">2021-06-29</p>
                         <p style={{marginTop: '-0.875rem'}} className="flex w-full justify-end items-center tracking-tight">
