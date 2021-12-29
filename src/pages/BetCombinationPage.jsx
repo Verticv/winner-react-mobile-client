@@ -2,9 +2,11 @@ import BetCombinationPanel from 'components/betCombination/BetCombinationPanel'
 // import BetCombinationRightPanel from 'components/betCombination/BetCombinationRightPanel'
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import { Route } from 'react-router'
 import Sports from 'components/myPage/gameResults/Sports'
+import BetCart from 'components/bottomNavbar/BetCart'
+
 // import Icon1 from '../images/gameResults/horizontalMenu/icon_1.png'
 // import Icon2 from '../images/gameResults/horizontalMenu/icon_2.png'
 // import Icon3 from '../images/gameResults/horizontalMenu/icon_3.png'
@@ -56,11 +58,30 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
     const cardsArray = []
 
     // const [selectedTab, setSelectedTab] = useState(0)
-    // const [isPanelFixed, setPanelFixed] = useState(true)
+    const [isPanelFixed, setPanelFixed] = useState(true)
     const [addedCard, setAddedCard] = useState(cardsArray)
     const [checkedState, setCheckedState] = useState(
         new Array(filterArray.length).fill(false)
     );
+    const [selectedOption, setSelectedOption] = useState([
+        {
+            type: "",
+            name: "",
+            selection: "",
+            buttonType: "",
+            subtitle: null
+        }
+    ])
+
+    useEffect(() => {
+        setSelectedOption({
+            type: "",
+            name: "",
+            selection: "",
+            buttonType: "",
+            subtitle: null
+        })
+    }, [])
     return (
         <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">
 
@@ -86,6 +107,14 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                             />
                         </div>
                     </div>
+
+                    <BetCart 
+                        selectedOption={selectedOption} 
+                        addedCard={addedCard} 
+                        setAddedCard={setAddedCard} 
+                        isPanelFixed={isPanelFixed} 
+                        setPanelFixed={setPanelFixed} 
+                    />
                     
                     {/* <div style={{width: "307px", left:"0px", position:"-webkit-sticky", top: "150px", height: isPanelFixed ? "100%" : ""}} className={`${isPanelFixed && "sticky bottom-0 flex"} mb-60px pt-px `}>
                         <BetCombinationRightPanel 

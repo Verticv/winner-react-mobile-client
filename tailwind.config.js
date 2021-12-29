@@ -283,6 +283,7 @@ module.exports = {
           lightGradLight: '#d9edff',
           cardGradLight: '#cef6ff',
           cardGradDark: '#379aff',
+          r8494a4: '#8494a4',
           r2088f0: '#2088f0',
           r1b4372: '#1b4372',
           r2087f0: '#2087f0',
