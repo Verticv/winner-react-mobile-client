@@ -105,7 +105,7 @@ const HorizontalMenu3 = ({
     }
 
     return (
-        <div style={{margin: '1.875rem 0',}} className="flex w-full">
+        <div style={{margin: '1.875rem 0'}} className="flex w-full">
             <TabsList items={itemsArray} />
         </div>
     )
