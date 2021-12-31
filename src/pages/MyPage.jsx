@@ -14,10 +14,21 @@ import CouponUsage from 'components/myPage/CouponUsage'
 import Inbox from 'components/myPage/Inbox'
 import InboxView from 'components/myPage/InboxView'
 import GameResultsPage from 'components/myPage/GameResults'
-import Icon1 from "../images/newImages/mainPage/Recharge-application.png";
-import Icon2 from "../images/newImages/mainPage/Recharge-application.png";
-import Icon3 from "../images/newImages/mainPage/Application-for-currency-exchange.png";
-import Icon4 from "../images/newImages/mainPage/Point-conversion-request.png";
+import Icon1 from "../images/newImages/mainPage/icons/1.png";
+import Icon2 from "../images/newImages/mainPage/icons/2.png";
+import Icon3 from "../images/newImages/mainPage/icons/3.png";
+import Icon4 from "../images/newImages/mainPage/icons/4.png";
+import Icon5 from "../images/newImages/mainPage/icons/5.png";
+import Icon6 from "../images/newImages/mainPage/icons/6.png";
+import Icon7 from "../images/newImages/mainPage/icons/7.png";
+import Icon8 from "../images/newImages/mainPage/icons/8.png";
+import Icon9 from "../images/newImages/mainPage/icons/9.png";
+import Icon10 from "../images/newImages/mainPage/icons/10.png";
+import Icon11 from "../images/newImages/mainPage/icons/11.png";
+import Icon12 from "../images/newImages/mainPage/icons/12.png";
+import Icon13 from "../images/newImages/mainPage/icons/13.png";
+import Icon14 from "../images/newImages/mainPage/icons/14.png";
+
 import Koreaflag from "../images/korea_flag.png";
 import ArrowUpWhite from "../images/arrows/arrow_up_white.png";
 import ArrowDown from "../images/arrows/arrow_down.png";
@@ -75,28 +86,28 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "총판페이지",
-      icon: Icon1,
+      icon: Icon5,
       id: 4,
       path: "#",
       mainPath: "#",
     },
     {
       text: "윈루즈정산",
-      icon: Icon1,
+      icon: Icon6,
       id: 5,
       path: "/mypage/win-lose-settlement",
       mainPath: "#",
     },
     {
       text: "라이브영상",
-      icon: Icon1,
+      icon: Icon7,
       id: 6,
       path: "#",
       mainPath: "#",
     },
     {
       text: "경기결과",
-      icon: Icon1,
+      icon: Icon8,
       id: 7,
       path: "/mypage/gameresults",
       mainPath: "#",
@@ -104,14 +115,14 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "게시판",
-      icon: Icon1,
+      icon: Icon9,
       id: 8,
       path: "/freeboard",
       mainPath: "#",
     },
     {
       text: "쿠폰관리",
-      icon: Icon1,
+      icon: Icon10,
       id: 9,
       path: "#",
       inboxCount: "1",
@@ -120,7 +131,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "쪽지관리",
-      icon: Icon1,
+      icon: Icon11,
       id: 10,
       path: "#",
       inboxCount: "20",
@@ -128,7 +139,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "고객센터",
-      icon: Icon1,
+      icon: Icon12,
       id: 11,
       path: "#",
       mainPath: "#",
@@ -136,14 +147,14 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "계좌문의",
-      icon: Icon1,
+      icon: Icon13,
       id: 12,
       path: "#",
       mainPath: "#",
     },
     {
       text: "회원정보수정",
-      icon: Icon1,
+      icon: Icon14,
       id: 13,
       path: "#",
       mainPath: "#",
@@ -218,7 +229,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             alt="close_icon"
           />
         </div>
-        <div className="px-10 w-full">
+        <div style={{padding: '0 1.875rem'}} className="w-full">
           <div style={{borderRadius: '3.75rem'}} className="relative flex w-full z-10 flex-wrap bg-blue-e8f3fd">
             {isAuthenticated && (<div style={{padding: '2.4375rem', paddingBottom: '1.3125rem'}} className="flex w-full">
               <div style={{width: '23.6rem'}}>

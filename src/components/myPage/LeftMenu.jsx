@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useState } from 'react'
-import ArrowRight from '../../images/newImages/right-arrow-gray.png'
-import ArrowRightWhite from '../../images/newImages/right-arrow-white.png'
+import ArrowRight from '../../images/newImages/mainPage/icons/right-arrow-gray.png'
+import ArrowRightWhite from '../../images/newImages/mainPage/icons/right-arrow-white.png'
 import { useHistory } from 'react-router-dom'
 import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from 'components/popups/ReauthenticatePopup'
@@ -161,7 +161,8 @@ const LeftMenu = ({
                                         )}
                                         {item.hasArrow && (
                                             <img 
-                                            className="w-6 absolute right-1 top-1" 
+                                            className="object-contain absolute right-1 top-1" 
+                                            style={{width: '1.3125rem', height: '3.1875rem'}}
                                             src={pathname?.includes(item?.mainPath) ? ArrowRightWhite : ArrowRight } 
                                             alt="icon" />
                                         )}
