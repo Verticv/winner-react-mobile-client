@@ -14,10 +14,23 @@ import CouponUsage from 'components/myPage/CouponUsage'
 import Inbox from 'components/myPage/Inbox'
 import InboxView from 'components/myPage/InboxView'
 import GameResultsPage from 'components/myPage/GameResults'
-import Icon1 from "../images/newImages/mainPage/Recharge-application.png";
-import Icon2 from "../images/newImages/mainPage/Recharge-application.png";
-import Icon3 from "../images/newImages/mainPage/Application-for-currency-exchange.png";
-import Icon4 from "../images/newImages/mainPage/Point-conversion-request.png";
+import Icon1 from "../images/newImages/mainPage/icons/1.png";
+import Icon2 from "../images/newImages/mainPage/icons/2.png";
+import Icon3 from "../images/newImages/mainPage/icons/3.png";
+import Icon4 from "../images/newImages/mainPage/icons/4.png";
+import Icon5 from "../images/newImages/mainPage/icons/5.png";
+import Icon6 from "../images/newImages/mainPage/icons/6.png";
+import Icon7 from "../images/newImages/mainPage/icons/7.png";
+import Icon8 from "../images/newImages/mainPage/icons/8.png";
+import Icon9 from "../images/newImages/mainPage/icons/9.png";
+import Icon10 from "../images/newImages/mainPage/icons/10.png";
+import Icon11 from "../images/newImages/mainPage/icons/11.png";
+import Icon12 from "../images/newImages/mainPage/icons/12.png";
+import Icon13 from "../images/newImages/mainPage/icons/13.png";
+import Icon14 from "../images/newImages/mainPage/icons/14.png";
+import Logo from "../images/newImages/mainPage/icons/logo.png";
+import P from "../images/newImages/mainPage/icons/p.png";
+import W from "../images/newImages/mainPage/icons/w.png";
 import Koreaflag from "../images/korea_flag.png";
 import ArrowUpWhite from "../images/arrows/arrow_up_white.png";
 import ArrowDown from "../images/arrows/arrow_down.png";
@@ -29,8 +42,8 @@ import UKflag from "../images/uk_flag.png";
 import TelegramLogo from "../images/footer/telegram.png";
 import CloseIcon from "../images/newImages/close-gray.png";
 import ProfileIcon from "../images/newImages/profile-image.png";
-import InboxIcon from "../images/inbox_icon.png";
-import Profile from "../images/newImages/profile-icon.png";
+import InboxIcon from "../images/newImages/mainPage/icons/mail.png";
+import Profile from "../images/newImages/mainPage/icons/profile.png";
 
 const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const history = useHistory();
@@ -75,28 +88,28 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "총판페이지",
-      icon: Icon1,
+      icon: Icon5,
       id: 4,
       path: "#",
       mainPath: "#",
     },
     {
       text: "윈루즈정산",
-      icon: Icon1,
+      icon: Icon6,
       id: 5,
       path: "/mypage/win-lose-settlement",
       mainPath: "#",
     },
     {
       text: "라이브영상",
-      icon: Icon1,
+      icon: Icon7,
       id: 6,
       path: "#",
       mainPath: "#",
     },
     {
       text: "경기결과",
-      icon: Icon1,
+      icon: Icon8,
       id: 7,
       path: "/mypage/gameresults",
       mainPath: "#",
@@ -104,14 +117,14 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "게시판",
-      icon: Icon1,
+      icon: Icon9,
       id: 8,
       path: "/freeboard",
       mainPath: "#",
     },
     {
       text: "쿠폰관리",
-      icon: Icon1,
+      icon: Icon10,
       id: 9,
       path: "#",
       inboxCount: "1",
@@ -120,7 +133,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "쪽지관리",
-      icon: Icon1,
+      icon: Icon11,
       id: 10,
       path: "#",
       inboxCount: "20",
@@ -128,7 +141,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "고객센터",
-      icon: Icon1,
+      icon: Icon12,
       id: 11,
       path: "#",
       mainPath: "#",
@@ -136,14 +149,14 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     },
     {
       text: "계좌문의",
-      icon: Icon1,
+      icon: Icon13,
       id: 12,
       path: "#",
       mainPath: "#",
     },
     {
       text: "회원정보수정",
-      icon: Icon1,
+      icon: Icon14,
       id: 13,
       path: "#",
       mainPath: "#",
@@ -161,7 +174,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   );
 
   const CountryButton = (
-    <div className="flex items-center h-36 w-96 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 p-5">
+    <div style={{height: '9.3125rem'}} className="flex items-center w-96 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 p-5">
       <div className="rounded-full flex items-center justify-center">
         <img
           className="w-28 h-28"
@@ -169,7 +182,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
           alt="flag"
         />
       </div>
-      <label className="text-5xl mx-14 font-spoqaBold text-white cursor-pointer pt-px">
+      <label style={{marginTop: '0.1875rem'}} className="text-5xl mx-14 font-spoqaBold text-white cursor-pointer">
         {country}
       </label>
       <DropdownArrow isWhite isOpen={isCountryOpen} />   
@@ -179,16 +192,17 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const InboxButton = (
     <button
       onClick={() => history.push("/mypage/inbox")}
-      className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 h-36 w-36 mr-5"
+      style={{height: '9.3125rem'}}
+      className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 w-36 mr-5"
     >
       <img
         style={{width: '4.5rem'}}
-        className="ml-2px mt-2px object-contain"
+        className="object-contain"
         src={InboxIcon}
         alt="inbox_icon"
       />
-      <div className="absolute flex items-center justify-center w-16 h-16 bg-red-notification top-0 right-0 -mr-6px -mt-3px rounded-full shadow-plain6">
-        <label className="text-4xl font-roboto mt-2px ml-px">1</label>
+      <div className="absolute flex items-center justify-center w-16 h-16 bg-red-notification top-0 right-0 rounded-full shadow-plain6">
+        <label style={{fontSize: '2.8125rem', marginLeft: '0.1875rem'}} className="font-roboto">1</label>
       </div>
     </button>
   );
@@ -196,16 +210,17 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const ProfileButton = (
     <button
       onClick={() => history.push("/mypage/inbox")}
-      className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 h-36 w-36 mr-5"
+      style={{height: '9.3125rem'}}
+      className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 w-36 mr-5"
     >
       <img
-        className="ml-2px mt-2px w-14 limit1600:object-none object-contain"
+        style={{width: '4.3125rem'}}
+        className="object-contain"
         src={Profile}
-        alt="inbox_icon"
+        alt="profile_icon"
       />
     </button>
   );
-
   const myInfo = (
     <>
     <div className="w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
@@ -218,36 +233,36 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             alt="close_icon"
           />
         </div>
-        <div className="px-10 w-full">
+        <div style={{padding: '0 1.875rem'}} className="w-full">
           <div style={{borderRadius: '3.75rem'}} className="relative flex w-full z-10 flex-wrap bg-blue-e8f3fd">
             {isAuthenticated && (<div style={{padding: '2.4375rem', paddingBottom: '1.3125rem'}} className="flex w-full">
               <div style={{width: '23.6rem'}}>
                 <img style={{maxWidth: '23.6rem', width: '23.6rem'}} src={ProfileIcon} alt="profile_icon" />
               </div>
-              <div className="ml-5 w-full">
-                <p style={{fontSize: '2.8rem', lineHeight: '0.7', marginBottom: '1.9375rem', marginRight: '1.75rem'}} className="font-robotoBold text-right">
+              <div style={{marginLeft: '2.4375rem'}} className="w-full">
+                <p style={{fontSize: '2.8rem', lineHeight: '0.7', marginBottom: '1.9375rem', marginRight: '1.75rem'}} className="font-robotoBold text-right text-gray-text">
                   LEVEL1
                 </p>
-                <p style={{fontSize: '2.8rem', lineHeight: '1.1', marginBottom: '1.9375rem', marginRight: '1.75rem'}} className="spoqaBold text-right text-blue-r1ca7ec font-semibold">
+                <p style={{fontSize: '3.375rem', lineHeight: '1.1', marginBottom: '1.375rem', marginRight: '1.75rem'}} className="font-spoqaBold text-right text-blue-r1ca7ec">
                   마이마이프로틴화이팅
-                  <span className="text-gray-a4b1b4 font-semibold">님</span>
+                  <span className="text-gray-a4b1b4 font-spoqaBold">님</span>
                 </p>
                 <div>
                   <div style={{borderTopRightRadius: '3.75rem', borderTopLeftRadius: '3.75rem', padding: '0.75rem', paddingRight: '1rem'}} className="flex w-full items-center bg-white rounded-t-2xl p-1.5 pr-4 border-b-2 border-blue-e8f3fd">
                     <div className="w-1/6 ">
                       <div className="flex justify-center items-center text-white h-24 w-24 rounded-full text-6xl bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2">
-                        ₩
+                        <img className="object-contain ml-1" style={{width: '3.8125rem', marginTop: '0.3125rem'}} src={W} alt="₩" />
                       </div>
                     </div>
-                    <p className="w-5/6 m-0 text-6xl spoqaBold text-right text-blue-r1ca7ec font-semibold">100,000,000 원</p>
+                    <p className="w-5/6 m-0 text-6xl text-right text-blue-gradLight font-robotoBold">100,000,000 <span className="font-spoqaBold mr-3">원</span></p>
                   </div>
                   <div style={{borderBottomRightRadius: '3.75rem', borderBottomLeftRadius: '3.75rem', padding: '0.75rem', paddingRight: '1rem'}} className="flex w-full items-center bg-white rounded-b-2xl p-1.5 pr-4">
                     <div className="w-1/6 ">
                       <div className="flex justify-center items-center text-white h-24 w-24 rounded-full text-6xl bg-orange-ff7e00 shadow-plain2">
-                        P
+                        <img className="object-contain mt-1" style={{width: '2.125rem', marginLeft: '0.3125rem'}} src={P} alt="P" />
                       </div>
                     </div>
-                    <p className="w-5/6 m-0 text-6xl spoqaBold text-right text-orange-ff7e00 font-semibold">12,500,000 P</p>
+                    <p className="w-5/6 m-0 text-6xl text-right text-orange-ff7e00 font-robotoBold"><span style={{marginRight: '0.5625rem'}} >12,500,000</span> <span style={{marginRight: '1.1875rem'}} className="font-spoqaBold">P</span></p>
                   </div>
                 </div>
               </div>
@@ -255,11 +270,11 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             <div style={{marginTop: '2.4375rem', padding: '2.4375rem', paddingTop: '0'}} className="flex w-full justify-end">
               {InboxButton}
               {ProfileButton}
-              <div className="flex items-center justify-center h-36 w-96 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-4px shadow-plain2 hover:opacity-75 pr-2 limit1600:pr-0 mr-5">
+              <div style={{height: '9.3125rem'}} className="flex items-center justify-center w-96 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 pr-2 mr-5">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mr-6">
-                  <img className="" src={Logout} alt="logout"></img>
+                  <img style={{marginTop: '0.0625rem'}} className="" src={Logout} alt="logout"></img>
                 </div>
-                <label className="text-5xl font-spoqaBold text-white cursor-pointer pt-px">
+                <label style={{marginTop: '0.1875rem'}} className="text-5xl font-spoqaBold text-white cursor-pointer">
                   로그아웃
                 </label>
               </div>
@@ -275,32 +290,32 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               </DropDownControls>
             </div>
           </div>
-          <div style={{borderBottomRightRadius: '3.75rem', borderBottomLeftRadius: '3.75rem'}} className="flex w-full justify-between items-center pt-16 -mt-14 h-52 rounded-3xl bg-gray-d9e6f2">
-            <div className="flex items-center space-x-2px pr-10px ml-24">
+          <div style={{borderBottomRightRadius: '3.75rem', borderBottomLeftRadius: '3.75rem', height: '18.875rem', marginTop: '-7.75rem', paddingTop: '9.3125rem'}} className="flex w-full justify-between items-center pt-16 rounded-3xl bg-gray-d9e6f2">
+            <div style={{marginTop: '-0.4375rem'}} className="flex items-center ml-24">
               <img
-                className="w-36 object-contain"
+                className="w-40 object-contain"
                 src={KakaoLogo}
                 alt="kakao-icon"
               />
-              <span className="text-brown-r351a1e font-roboto text-4xl leading-snug mb-6px tracking-wide">
+              <span style={{marginTop: '-0.5625rem', marginLeft: '0.3125rem'}} className="text-brown-r351a1e font-roboto text-4xl leading-snug tracking-wide">
                 test1234
               </span>
             </div>
-            <div className="h-16 w-2px bg-gray-c1cfdb" />
-            <div className="flex items-center space-x-2px mr-24">
+            <div style={{height: '6.25rem', width: '0.125rem', marginTop: '-1.3125rem'}} className="bg-gray-c1cfdb" />
+            <div style={{marginTop: '-0.4375rem'}} className="flex items-center mr-36">
               <img
-                className="w-36 object-contain"
+                className="w-40 object-contain"
                 src={TelegramLogo}
                 alt="kakao-icon"
               />
-              <span className="text-blue-r2aa1d5 font-roboto text-4xl leading-snug mb-6px tracking-wide">
+              <span style={{marginTop: '-0.5625rem', marginLeft: '0.3125rem'}} className="text-blue-r2aa1d5 font-roboto text-4xl leading-snug tracking-wide">
                 test1234
               </span>
             </div>
           </div>
         </div>
       </div>
-      <div style={{marginTop: '1.875rem'}} className="flex w-full">
+      <div style={{marginTop: '1.875rem', marginBottom: '36.375rem'}} className="flex w-full">
             <LeftMenu
               selectedTab={selectedTab}
               setSelectedTab={setSelectedTab}
@@ -308,6 +323,9 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
               setSelectedSubTab={setSelectedSubTab}
               array={LeftMenuArray}
             />
+        </div>
+        <div className="flex justify-center mb-40">
+          <img style={{width: '22.3125rem'}} className="object-contain" src={Logo} alt="logo" />
         </div>
     </>
   )
