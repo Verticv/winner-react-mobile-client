@@ -60,10 +60,10 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 }}
             >
                 <img 
-                    style={{height: `${item.id === 0 ? "9.3125rem" : "9.375rem"}`, width: `${item.id === 0 ? "9.3125rem" : "9.375rem"}`}}
-                    className={`absolute top-0 object-contain w-32 h-32 mb-4
+                    style={{height: `${item.id === 0 ? '9.375rem' : selectedTab === item.id ? "8.375rem" : "9.3125rem"}`, marginTop: `${selectedTab === item.id ? '0.6rem' : ''}` ,width: `${item.id === 0 ? "9.3125rem" : "9.375rem"}`}}
+                    className={`absolute top-0 object-contain w-32 h-32 mb-4ذ
                         ${item.id === 0 && "w-40px h-40px pt-4"}
-                        ${(selectedTab === item.id && item.id !== 0) ? "w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px -mt-2px` : ""} 
+                        ${(selectedTab === item.id && item.id !== 0) ? "w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px` : ""} 
                     `} 
                     src={item.id === 0 ? item.icon : selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
                 />
@@ -71,9 +71,8 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
             </button>
         ));
     }
-
     return (
-        <div id="container" className="flex justify-start items-start w-full">
+        <div style={{paddingLeft: '2.1875rem'}} id="container" className="flex justify-start items-start w-full">
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
         </div>

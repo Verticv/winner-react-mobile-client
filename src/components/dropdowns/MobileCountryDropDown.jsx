@@ -31,20 +31,19 @@ const CountryDropDown = ({setCountry, country}) => {
                     setCountry(item.text)}
                 }
             >
-                <div className={`${(selectedTab === item.id) && "shadow-plain3"} h-14px w-16 bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
+                <div style={{marginRight: '1.4375rem', width: '4.25rem', height: '3.375rem'}} className={`${(selectedTab === item.id) && "shadow-plain3"} w-16 bg-white rounded-full flex items-center justify-center flex-shrink-0`} >
                     <img src={item.icon} alt="flag"></img>
                 </div>
-                <div className="w-full flex justify-center mr-3">                
+                <div className="flex justify-center">             
                     <label 
-                    style={{fontSize: '2.5rem'}}
+                    style={{fontSize: '2.5rem', marginTop: '0.125rem'}}
                     className={`${(selectedTab === item.id) ? "text-white" : "text-gray-subNavbar"} font-spoqaBold cursor-pointer`}>{item.text}</label>
                 </div>
             </button>
         ));
     }
-    // style={{width: '1.4375rem', height: '0.75rem'}}
     return (
-        <div style={{width: '14.125rem', borderRadius: '2.3rem'}} className="p-1 relative flex flex-col items-center bg-white shadow-plain bg-white">
+        <div style={{width: '13.625rem', borderRadius: '2.3rem'}} className="p-1 relative flex flex-col items-center bg-white shadow-plain bg-white">
             <div style={{width: '4rem', height: '1.5rem', marginTop: '-1.5rem', marginLeft: '2rem'}} className="absolute top-0 -mt-2 w-4 overflow-hidden inline-block">
                 <div style={{width: '2rem', height: '2rem'}} className="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>

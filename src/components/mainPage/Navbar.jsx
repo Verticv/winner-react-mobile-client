@@ -20,19 +20,18 @@ const Navbar = () => {
     const DropdownArrow = ({isOpen, isWhite}) => (
         <>
         {isWhite ? (
-            <img className="-mr-8px w-4 object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
+            <img className="w-4 object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
         ) : (
             <img className="w-4 object-contain" src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
         )}
         </>
     )
-
     const CountryButton = (
-        <div style={{height: '5.25rem'}} className="flex items-center w-56 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2 shadow-plain2 hover:opacity-75">
-            <div className="mr-7 h-14px w-16 rounded-full flex items-center justify-center">
+        <div style={{height: '5.25rem', width: '13.625rem', paddingBottom: '0.375rem', paddingTop: '0.4375rem'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2 shadow-plain2 hover:opacity-75">
+            <div style={{width: '4.375rem', height: '4.375rem', marginRight: '1.4375rem'}} className="rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label style={{marginRight: '1.4375rem'}} className="font-spoqaBold text-white cursor-pointer pt-px text-4xl">{country}</label>
+            <label style={{marginRight: '1.4375rem', fontSize: '2.5rem', marginTop: '0.125rem'}} className="font-spoqaBold text-white cursor-pointer">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )
@@ -44,7 +43,7 @@ const Navbar = () => {
                     <img style={{marginBottom: '0'}} className=" object-contain w-80 cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />
                 </div>
                 
-                <div className="flex space-x-20px items-center flex-shrink-0">
+                <div className="flex items-center flex-shrink-0">
                     {/* BREAK */}
                     <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
                         <div className=""><CountryDropDown setCountry={setCountry} country={country} /></div>
