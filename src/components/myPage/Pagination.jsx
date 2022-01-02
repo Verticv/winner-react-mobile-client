@@ -35,7 +35,7 @@ const Pagination = ({page, setPage, withMarginBottom = true}) => {
                 className="flex items-center justify-center rounded-lg  hover:opacity-75"
                 onClick={() => setSelectedPage(1)}
             >
-                <img className="cursor-pointer object-contain max-w-none" src={DoubleLeftIcon} alt="" />
+                <img style={{width: '2.125rem', height: '2.125rem'}} className="cursor-pointer object-contain max-w-none" src={DoubleLeftIcon} alt="" />
             </button>
                 <LeftArrow />
                 <div className="space-x-px flex items-center">
@@ -93,7 +93,7 @@ const Pagination = ({page, setPage, withMarginBottom = true}) => {
                     className="flex items-center justify-center rounded-lg  hover:opacity-75"
                     onClick={() => setSelectedPage(5)}
                 >
-                    <img className=" cursor-pointer object-contain max-w-none" src={DoubleRightIcon} alt="" />
+                    <img style={{width: '2.125rem', height: '2.125rem'}} className=" cursor-pointer object-contain max-w-none" src={DoubleRightIcon} alt="" />
                 </button>
             </div>
     )
