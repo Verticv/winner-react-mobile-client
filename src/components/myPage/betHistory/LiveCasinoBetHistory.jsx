@@ -59,7 +59,7 @@ const tableArrayTitles = [
     },
     {
         id: 6,
-        text: "상태 : 패",
+        text: "상태",
         isRed: false,
 
     },

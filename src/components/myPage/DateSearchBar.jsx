@@ -17,64 +17,8 @@ const DateSearchBar = ({
     withBlackButton = false
 }) => {
 
-    // const LeagueExampleArray = [
-    //     {id: 0, text: "League1"},
-    //     {id: 1, text: "League2"},
-    //     {id: 2, text: "League3"},
-    //     {id: 3, text: "League4"},
-    //     {id: 4, text: "League5"},
-    //     {id: 5, text: "League6"},
-    //     {id: 6, text: "League7"},
-    //     {id: 7, text: "League8"},
-    //     {id: 8, text: "League9"},
-    //     {id: 9, text: "League10"},
-    // ]
-
-
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date())
-    // const [isDropdownOpen, setDropdownOpen] = useState(true)
-    // const [selectedCarrier, setSelectedCarrier] = useState("리그선택")
-
-
-    // const dropDownCellClass = "flex w-full h-30px py-2px bg-white items-center px-10px"
-
-    // const gameResultButton = (
-    //     <div className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c hover:text-gray-r585858" >
-    //         <p className="mt-px">{selectedCarrier}</p>
-    //         <img src={ArrowDownGray} alt="" />
-    //     </div>
-    // )
-
-    // function DropdownCells({ items }) {
-    //     return items.map(item => (
-    //         <button className={dropDownCellClass} onClick={() => {
-    //             setSelectedCarrier(item.text)
-    //             setDropdownOpen(false)
-    //         }}>
-    //             {item.text}
-    //         </button>
-    //     ));
-    // }
-
-
-    // const searchDropdown = (
-    //     <div style={{height:"249px"}} className="mt-4px flex flex-col items-center justify-center w-138px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r8c8c8c font-spoqaMedium text-14px tracking-tight">
-    //         <div style={{width:"134px"}} className="pt-4px mt-2px h-full overflow-y-scroll overflow-x-hidden">
-    //             <DropdownCells items={LeagueExampleArray} />
-    //         </div>
-    //     </div>
-    // )
-
-    // const InboxSearch = (
-    //     <DropDownControls
-    //         buttonChild={gameResultButton} 
-    //         isDropdownOpen={isDropdownOpen} 
-    //         setDropdownOpen={setDropdownOpen}
-    //     >
-    //         {searchDropdown}
-    //     </DropDownControls>
-    // )
 
 
     return (
@@ -93,8 +37,7 @@ const DateSearchBar = ({
                 )}
 
                 {isGameResultsSearch === true && (
-                    <div style={{marginTop: '1.875rem', marginBottom: '-1.125rem'}} className="flex">
-                        {/* <div className="pt-px">{InboxSearch}</div> */}
+                    <div style={{marginTop: '1.875rem', marginBottom: '-1.125rem'}} className="flex">                        
                         <input
                             style={{height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginLeft: '1.875rem'}}
                             placeholder="리그선택" 
@@ -110,7 +53,7 @@ const DateSearchBar = ({
                 <div className="flex items-center w-full h-full">
                     <div className="relative">
                         <DatePicker 
-                            className="place-color-grey left-input pt-px mt-px flex-shrink-0 outline-none rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r7b7b7b focus:ml-10px"
+                            className="place-color-grey left-input pt-px mt-px flex-shrink-0 outline-none rounded-md border border-gray-dddddd px-10px font-roboto text-15px tracking-tight text-gray-r7b7b7b focus:ml-10px"
                             locale="ko" 
                             selected={startDate} 
                             onChange={(date) => setStartDate(date)}
@@ -122,7 +65,7 @@ const DateSearchBar = ({
                     <span style={{fontSize: '2.6rem', marginTop: '1.875rem'}} className="w-8 text-center font-spoqaMedium text-gray-r454545 mt-px">~</span>
                     <div className="relative">
                         <DatePicker 
-                            className="place-color-grey right-input pt-px mt-px flex-shrink-0 outline-none h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r7b7b7b" 
+                            className="place-color-grey right-input pt-px mt-px flex-shrink-0 outline-none h-42px rounded-md border border-gray-dddddd px-10px font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
                             locale="ko"
                             selected={endDate} 
                             onChange={(date) => setEndDate(date)}
