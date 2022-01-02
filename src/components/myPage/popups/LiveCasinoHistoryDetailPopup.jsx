@@ -1,5 +1,5 @@
 import React from 'react'
-import CloseIcon from '../../../images/popups/close.png'
+import CloseIcon from '../../../images/newImages/mypage/live-casino/bet-history-popup.png'
 import Sample1 from '../../../images/myPage/betHistory/sample1.png'
 import Sample2 from '../../../images/myPage/betHistory/sample2.png'
 
@@ -23,7 +23,7 @@ const LiveCasinoHistoryDetailPopup = ({setPopupOpen}) => {
                         <p className="font-spoqaMedium">플레이어 이름:</p>
                         <p className="font-spoqaBold text-blue-r0056a6">WINlouie3</p>
                     </div>
-                    <div style={{backgroundColor:"#868686", height: '0.1875rem', minHeight: '2px', marginBottom: '44px', width: '45.4375rem'}} className=""></div>
+                    <div style={{backgroundColor:"#868686", height: '0.1875rem', minHeight: '0.1875rem', marginBottom: '44px', width: '45.4375rem'}} className=""></div>
                 </div>
                 <div 
                     style={{height:"", backgroundColor:"#ffffff", fontSize: '2.625rem'}} 

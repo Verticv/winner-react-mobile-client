@@ -18,10 +18,11 @@ const HorizontalMenu = ({
                 style={{
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
                     borderRadius:"1.625rem",
-                    width: '18.69rem',
+                    width: '18.68375rem',
                     height: '13.18rem',
-                    marginRight: '0.1875rem',
-                    padding: '0.1875rem'
+                    marginRight: '1px',
+                    // padding: '0.1875rem'
+                    padding: '1px'
                 }}
                 className={`${
                     pathname === item.path
@@ -62,9 +63,9 @@ const HorizontalMenu = ({
                             borderTopLeftRadius:"1.625rem 1.3rem",
                             borderTopRightRadius: "1.625rem 1.3rem",
                             borderColor: pathname === item.path ? "#1a73ce" : "#d6dfe8",
-                            boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset',
+                            boxShadow:'rgb(0 0 0 / 30%) 0.4375rem 0px 0.125rem -0.4375rem inset, rgb(0 0 0 / 30%) -0.4375rem 0px 0.125rem -0.4375rem inset, rgb(0 0 0 / 30%) 0px -0.4375rem 0.125rem -0.4375rem inset',
                         }}
-                        className={`mt-3px h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
+                        className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                     >
                         <img style={{width: '6.8rem'}} className="mt-4 ml-2px object-contain" src={item.icon} alt="" />
                         <span
