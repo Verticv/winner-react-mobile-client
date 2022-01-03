@@ -55,7 +55,7 @@ const BetHistory = () => {
                 <HomePageTopBanner pageTitle='베팅내역' />
             </div>
             
-            <div className="w-full relative top-0 z-40">
+            <div className="w-full relative top-0">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                 <div style={{padding: '1.875rem', paddingRight: '0'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">

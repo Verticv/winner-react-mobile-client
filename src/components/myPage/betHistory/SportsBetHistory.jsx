@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar';
 import SportsBetHistoryPanel from '../../common/cards/SportsBetHistoryPanel'
+import ScrollButton from 'components/common/ScrollButton'
 
 const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attachedArray, setAttachedArray, setPopupOpen}) => {
 
@@ -23,8 +24,11 @@ const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attac
             <DateSearchBar isGameResultsSearch={true} />
 
 
-            <div className="w-full h-full mt-20px">
-                <div className="space-y-15px">
+            <div className="w-full h-full">
+
+                <ScrollButton />
+
+                <div className="">
                     <SportsBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen}/>
                     <SportsBetHistoryPanel isPopup={!showSub} type={1} winAmount="+900,000,000" checkedState={checkedState} setCheckedState={setCheckedState} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen}/>
                     <SportsBetHistoryPanel isPopup={!showSub} type={2} checkedState={checkedState} setCheckedState={setCheckedState} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen}/>

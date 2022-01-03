@@ -36,7 +36,7 @@ const GameResults = () => {
                 <HomePageTopBanner pageTitle='경기결과' />
             </div>
             
-            <div className="w-full relative top-0 z-40">
+            <div className="w-full relative top-0">
                 <div style={{padding: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">
                         <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>

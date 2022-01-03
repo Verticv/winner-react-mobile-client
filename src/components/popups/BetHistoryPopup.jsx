@@ -131,7 +131,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
             
             <div style={{paddingBottom: '1.875rem'}} className="w-full h-full bg-white">
 
-            <div className="w-full relative top-0 z-40">
+            <div className="w-full relative top-0">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                 <div style={{padding: '1.875rem 0.625rem', paddingRight: '0', paddingBottom: 0}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">
