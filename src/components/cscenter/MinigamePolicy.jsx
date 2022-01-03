@@ -93,7 +93,7 @@ const MinigamePolicy = () => {
             <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
                 <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
             </div>
-            <div className="w-full relative top-0 z-40">
+            <div className="w-full relative top-0">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                 <div className="">
                     <div className=" flex flex-shrink-0 w-full font-spoqaMedium">

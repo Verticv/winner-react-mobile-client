@@ -150,7 +150,7 @@ const Faq = () => {
 
     return (
         <div>
-            <div className="w-full relative top-0 z-40">
+            <div className="w-full relative top-0">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                 <div style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">

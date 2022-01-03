@@ -89,7 +89,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <HomePageTopBanner pageTitle='고객센터' />
                             </div>
 
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0 z-40">
+                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                 <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                     <div className=" flex flex-shrink-0 w-full">
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
@@ -121,7 +121,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <HomePageTopBanner pageTitle='공지사항' />
                             </div>
 
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0 z-40">
+                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                 <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                     <div className=" flex flex-shrink-0 w-full">
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
@@ -145,7 +145,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <HomePageTopBanner pageTitle='고객센터' />
                             </div>
 
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0 z-40">
+                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                 <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                     <div className=" flex flex-shrink-0 w-full">
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
@@ -161,7 +161,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <HomePageTopBanner pageTitle='고객센터' />
                             </div>
 
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0 z-40">
+                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                 <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                     <div className=" flex flex-shrink-0 w-full">
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
@@ -177,7 +177,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <HomePageTopBanner pageTitle='고객센터' />
                             </div>
 
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0 z-40">
+                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                 <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                     <div className=" flex flex-shrink-0 w-full">
                                     <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
