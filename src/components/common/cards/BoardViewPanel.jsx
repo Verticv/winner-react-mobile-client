@@ -75,7 +75,7 @@ const BoardViewPanel = ({
                     style={{padding: '0.1875rem'}}
                     className={`${
                         bet === "left" 
-                        ? "text-white border-red-f99097 bg-gradient-to-b from-red-d7434f to-red-ff535f" 
+                        ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"} 
                         flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer`
                     }>
@@ -98,7 +98,7 @@ const BoardViewPanel = ({
                 >
                     <div className={`${
                         bet === "middle" 
-                        ? "text-white border-red-f99097 bg-gradient-to-b from-red-d7434f to-red-ff535f" 
+                        ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"}
                         pt-px flex items-center justify-center h-full w-full rounded-lg border border-white bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb cursor-pointer`}
                     >
@@ -120,7 +120,7 @@ const BoardViewPanel = ({
                     }} 
                     className={`${
                         bet === "right" 
-                        ? "text-white border-red-ff7982 bg-gradient-to-b from-red-d7434f to-red-ff535f" 
+                        ? "text-white border-red-ff7982 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb "} 
                         pt-px flex items-center justify-between h-full w-full rounded-lg border border-white cursor-pointer px-10px`}
                     >
@@ -419,7 +419,7 @@ const BoardViewPanel = ({
                                 style={{
                                     borderRadius: "3px"
                                 }}
-                                className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-cf254d to-red-f03a50 cursor-pointer"
+                                className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
                             >
                                 <img style={{width: '3.75rem', height: '3.75rem'}} className="object-contain" src={UploadIcon} alt="" />
                             </div>
@@ -437,7 +437,7 @@ const BoardViewPanel = ({
                                 style={{
                                     borderRadius: "3px"
                                 }}
-                                className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-cf254d to-red-f03a50 cursor-pointer"
+                                className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
                             >
                                 <img style={{width: '2.5rem', height: '2.5rem'}} className="object-contain" src={CloseIcon} alt="" />
                             </div>
@@ -471,7 +471,7 @@ const BoardViewPanel = ({
                                     style={{
                                         borderRadius: "3px"
                                     }}
-                                    className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-cf254d to-red-f03a50 cursor-pointer"
+                                    className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
                                 >
                                     <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">선택삭제</span>
                                 </div>
