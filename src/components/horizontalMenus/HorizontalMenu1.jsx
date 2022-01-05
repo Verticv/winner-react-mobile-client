@@ -33,7 +33,7 @@ const HorizontalMenu1 = ({
                         borderRadius:"1.625rem",
                         width: '60%',
                         height: '13.18rem',
-                        marginRight: items?.length - 1 === index ? '' : '0.1875rem',
+                        marginRight: items?.length - 1 === index ? '' : '1px',
                         padding: '0.1875rem'
                     }}
                     className={`${
@@ -76,9 +76,9 @@ const HorizontalMenu1 = ({
                                 borderColor: isSameLink ? "#1a73ce" : "#d6dfe8",
                                 boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset',
                             }}
-                            className={`mt-3px h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
+                            className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                         >
-                            <img style={{width: '6.8rem'}} className="mt-4 ml-2px object-contain" src={item.icon} alt="" />
+                            <img style={{width: '6.9rem'}} className="mt-5 object-contain" src={item.icon} alt="" />
                             <span
                                 className={`${
                                     isSameLink
