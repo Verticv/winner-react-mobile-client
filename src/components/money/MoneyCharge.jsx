@@ -38,8 +38,8 @@ const MoneyCharge = () => {
                 </div>
                 <div style={{marginTop: '1.625rem'}} className="flex flex-col text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
                     <span style={{color:"#8c5757", fontSize: '2.625rem'}} className=""><span className="font-bold">✓</span>  입금 시 반드시 회원님의 성함으로 입금 바랍니다.</span>
-                    <span style={{fontSize: '2.625rem', marginRight: '10.5rem', marginTop: '0.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.</span>
-                    <span style={{fontSize: '2.625rem', marginRight: '3.875rem', marginTop: '0.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.</span>
+                    <span style={{fontSize: '2.625rem', marginRight: '9.5rem', marginTop: '0.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.</span>
+                    <span style={{fontSize: '2.625rem', marginRight: '2.875rem', marginTop: '0.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.</span>
                     <span style={{fontSize: '2.625rem', marginTop: '0.875rem'}} className=""><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
                 </div>
             </div>
