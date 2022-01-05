@@ -63,7 +63,7 @@ const HorizontalMenu = ({
                             borderTopLeftRadius:"1.625rem 1.3rem",
                             borderTopRightRadius: "1.625rem 1.3rem",
                             borderColor: pathname === item.path ? "#1a73ce" : "#d6dfe8",
-                            boxShadow:'rgb(0 0 0 / 30%) 0.4375rem 0px 0.125rem -0.4375rem inset, rgb(0 0 0 / 30%) -0.4375rem 0px 0.125rem -0.4375rem inset, rgb(0 0 0 / 30%) 0px -0.4375rem 0.125rem -0.4375rem inset',
+                            boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset',
                         }}
                         className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                     >
