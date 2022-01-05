@@ -19,11 +19,11 @@ const SubHorizontalMenu = ({
             } else if (index === 3 ) {
                 imageWidth = '12.25rem';
             } else if (index === 4 ) {
-                imageWidth = '9rem';
-            } else if (index === 5 ) {
-                imageWidth = '11rem';
-            } else if (index === 6 ) {
                 imageWidth = '13rem';
+            } else if (index === 5 ) {
+                imageWidth = '12rem';
+            } else if (index === 6 ) {
+                imageWidth = '16rem';
             }
 
             return (
