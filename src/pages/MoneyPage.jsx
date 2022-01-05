@@ -16,8 +16,8 @@ import { Route } from 'react-router'
 // import Icon2 from '../images/money/leftMenu/icon_2.png'
 // import IconHighlight1 from '../images/money/leftMenu/icon_1_highlight.png'
 // import IconHighlight2 from '../images/money/leftMenu/icon_2_highlight.png'
-import Icon1 from '../images/newImages/mainPage/Recharge-application.png'
-import Icon2 from '../images/newImages/mainPage/Recharge-application1.png'
+import Icon1 from '../images/newImages/mainPage/icons/recharge-application.png';
+import Icon2 from '../images/newImages/mainPage/icons/charging-history.png';
 import HomePageTopBanner from '../components/common/HomePageTopBanner';
 import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
 
