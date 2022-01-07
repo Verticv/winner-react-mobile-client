@@ -50,14 +50,14 @@ const LeftMenu = ({
     }
       
     const EditProfileButton = ({path, text, icon, iconHighlight, selectedTab}) => (
-        <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className='w-full border-b border-gray-ececec'>
+        <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className='w-full border-b border-gray-ececec bg-gray-f7f7f7'>
             <button 
-            style={{height: '12.375rem'}}
+            style={{height: '12.375rem', padding: '1.3125rem', paddingRight: 0}}
             className={`${
                 pathname.includes(path)
                 ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                 : ""
-            } flex w-full items-center p-2.5 px-10 rounded-full group`} 
+            } flex w-full items-center rounded-full group`} 
             onClick={() => {
                 buttonPressed(path)
                 setPopupOpen(true)
@@ -74,7 +74,7 @@ const LeftMenu = ({
                     src={icon} 
                     alt="icon" />
             </div>
-            <div className="w-full flex mx-14px justify-between items-center">                
+            <div style={{marginLeft: '5rem', marginRight: '4.8125rem'}} className="w-full flex justify-between items-center">                
                 <label className={`${(pathname.includes(path)) ? "text-white group-hover:text-white" : "text-black group-hover:text-gray-r454545"} font-spoqaMedium text-5xl cursor-pointer tracking-tight`}>{text}</label>
             </div>
         </button>
@@ -103,14 +103,15 @@ const LeftMenu = ({
                         <ReauthenticatePopup setPopupOpen={setPopupOpen} setSelectedTab={setSelectedTab}/>
                     </PopupControls>  
                 ) : (
-                    <div style={{borderBottomWidth: '0.1875rem', height: '12.375rem'}} className={`${index % 2 === 0 ? "bg-gray-f7f7f7" : "bg-white"} border-b border-gray-ececec`}>
+                    <div style={{borderBottomWidth: '0.1875rem', height: '12.375rem'}} className={`${index % 2 === 0 ? "bg-white" : "bg-gray-f7f7f7"} border-b border-gray-ececec`}>
                         <div className='h-full' style={{padding: '0 1.875rem'}}>
                             <button 
+                                style={{padding: '1.3125rem', paddingRight: 0}}
                                 className={`${
                                     pathname.includes(item.mainPath)
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                     : ""
-                                } flex w-full h-full items-center focus:text-white p-2.5 px-10 rounded-full focus:bg-gradient-to-l focus:from-blue-gradDark focus:to-blue-r2088f0`} 
+                                } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l focus:from-blue-gradDark focus:to-blue-r2088f0`} 
                                 onClick={(e) => buttonPressed(item.text, item.path)}
                                 onMouseEnter={() => mouseHover(item.path)}
                                 onMouseLeave={() => mouseLeave(item.path)}
@@ -138,7 +139,7 @@ const LeftMenu = ({
                                         src={item.icon} 
                                         alt="icon" />
                                 </div>
-                                <div className="relative w-full flex mx-14px justify-between items-center">
+                                <div style={{marginLeft: '5rem', marginRight: '4.8125rem'}} className="relative w-full flex justify-between items-center">
                                     <div className="flex items-center">
                                         <label
                                             className={`${
@@ -159,7 +160,7 @@ const LeftMenu = ({
                                         {item.hasArrow && (
                                             <img 
                                             className="object-contain absolute right-1 top-1" 
-                                            style={{width: '1.3125rem', height: '3.1875rem'}}
+                                            style={{width: '1.9375rem', height: '3.1875rem'}}
                                             src={pathname?.includes(item?.mainPath) ? ArrowRightWhite : ArrowRight } 
                                             alt="icon" />
                                         )}
