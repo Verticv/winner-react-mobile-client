@@ -2,6 +2,7 @@ import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 import React from 'react'
 import AttendanceCalendar from 'components/attendance/AttendanceCalendar'
+import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
 
 
 const AttendPage = ({isAuthenticated, setAuthenticated}) => {
@@ -25,6 +26,7 @@ const AttendPage = ({isAuthenticated, setAuthenticated}) => {
 
 
             </div>
+            <BottomNavbar />
         </div>
     )
 }
