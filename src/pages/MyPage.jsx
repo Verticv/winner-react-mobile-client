@@ -45,7 +45,8 @@ import ProfileIcon from "../images/newImages/profile-image.png";
 import InboxIcon from "../images/newImages/mainPage/icons/mail.png";
 import Profile from "../images/newImages/mainPage/icons/profile.png";
 
-const MyPage = ({ isAuthenticated, setAuthenticated }) => {
+const MyPage = ({setAuthenticated }) => {
+  const isAuthenticated= true
   const history = useHistory();
   const location = useLocation();
   const [selectedTab, setSelectedTab] = useState(location.pathname);
@@ -166,15 +167,15 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const DropdownArrow = ({ isOpen, isWhite }) => (
     <>
       {isWhite ? (
-        <img style={{maxWidth: '1.68rem', width: '1.68rem'}} src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
+        <img style={{maxWidth: '1.68rem', width: '1.68rem', marginTop: '0.275rem'}} src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
       ) : (
-        <img style={{maxWidth: '1.68rem', width: '1.68rem'}} src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
+        <img style={{maxWidth: '1.68rem', width: '1.68rem', marginTop: '0.275rem'}} src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
       )}
     </>
   );
 
   const CountryButton = (
-    <div style={{height: '9.3125rem'}} className="flex items-center w-96 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 p-5">
+    <div style={{height: '9.3125rem', width: '23.75rem'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 p-5">
       <div className="rounded-full flex items-center justify-center">
         <img
           className="w-28 h-28"
@@ -182,7 +183,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
           alt="flag"
         />
       </div>
-      <label style={{marginTop: '0.1875rem'}} className="text-5xl mx-14 font-spoqaBold text-white cursor-pointer">
+      <label style={{marginTop: '0.525rem'}} className="text-5xl mx-14 font-spoqaBold text-white cursor-pointer">
         {country}
       </label>
       <DropdownArrow isWhite isOpen={isCountryOpen} />   
@@ -193,10 +194,10 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     <button
       onClick={() => history.push("/mypage/inbox")}
       style={{height: '9.3125rem'}}
-      className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 w-36 mr-5"
+      className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 w-36 mr-4"
     >
       <img
-        style={{width: '4.5rem'}}
+        style={{width: '4.5rem', marginTop: '0.4625rem'}}
         className="object-contain"
         src={InboxIcon}
         alt="inbox_icon"
@@ -210,11 +211,11 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
   const ProfileButton = (
     <button
       onClick={() => history.push("/mypage/inbox")}
-      style={{height: '9.3125rem'}}
-      className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 w-36 mr-5"
+      style={{height: '9.3125rem', marginRight: '0.9375rem'}}
+      className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 w-36"
     >
       <img
-        style={{width: '4.3125rem'}}
+        style={{width: '4.3125rem', marginTop: '0.4625rem'}}
         className="object-contain"
         src={Profile}
         alt="profile_icon"
@@ -225,7 +226,7 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
     <>
     <div className="w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
         <div style={{marginBottom: '1.875rem'}} className="relative flex w-full h-36 justify-center items-center border-b border-gray-ececec cursor-pointer">
-          <span style={{fontSize: '4rem'}} className="font-spoqaBold">마이 인포</span>
+          <span style={{fontSize: '4rem', marginTop: '0.65rem'}} className="font-spoqaBold">마이 인포</span>
           <img
             onClick={() => history.push( isAuthenticated ? "/main" : "/")}
             className="absolute right-12 top-12 w-14"
@@ -270,11 +271,11 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
             <div style={{marginTop: '2.4375rem', padding: '2.4375rem', paddingTop: '0'}} className="flex w-full justify-end">
               {InboxButton}
               {ProfileButton}
-              <div style={{height: '9.3125rem'}} className="flex items-center justify-center w-96 bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 pr-2 mr-5">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mr-6">
-                  <img style={{marginTop: '0.0625rem'}} className="" src={Logout} alt="logout"></img>
+              <div style={{height: '9.3125rem', width: '23.75rem', marginRight: '0.9375rem', paddingLeft: '2.6875rem'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 pr-2">
+                <div style={{marginRight: '2.6875rem', marginTop: '0.3375rem'}} className="w-16 h-16 rounded-full flex items-center justify-center">
+                  <img className="" src={Logout} alt="logout"></img>
                 </div>
-                <label style={{marginTop: '0.1875rem'}} className="text-5xl font-spoqaBold text-white cursor-pointer">
+                <label style={{marginTop: '0.525rem'}} className="text-5xl font-spoqaBold text-white cursor-pointer">
                   로그아웃
                 </label>
               </div>
@@ -293,22 +294,24 @@ const MyPage = ({ isAuthenticated, setAuthenticated }) => {
           <div style={{borderBottomRightRadius: '3.75rem', borderBottomLeftRadius: '3.75rem', height: '18.875rem', marginTop: '-7.75rem', paddingTop: '9.3125rem'}} className="flex w-full justify-between items-center pt-16 rounded-3xl bg-gray-d9e6f2">
             <div style={{marginTop: '-0.4375rem'}} className="flex items-center ml-24">
               <img
-                className="w-40 object-contain"
+                style={{width: '10.1875rem'}}
+                className="object-contain"
                 src={KakaoLogo}
                 alt="kakao-icon"
               />
-              <span style={{marginTop: '-0.5625rem', marginLeft: '0.3125rem'}} className="text-brown-r351a1e font-roboto text-4xl leading-snug tracking-wide">
+              <span style={{marginTop: '-0.5625rem', marginLeft: '0.4375rem'}} className="text-brown-r351a1e font-roboto text-4xl leading-snug tracking-wide">
                 test1234
               </span>
             </div>
-            <div style={{height: '6.25rem', width: '0.125rem', marginTop: '-1.3125rem'}} className="bg-gray-c1cfdb" />
-            <div style={{marginTop: '-0.4375rem'}} className="flex items-center mr-36">
+            <div style={{height: '6.25rem', width: '0.125rem', marginTop: '-1.3125rem', marginLeft: '2.4375rem'}} className="bg-gray-c1cfdb" />
+            <div style={{marginTop: '-0.4375rem', marginRight: '8.75rem'}} className="flex items-center">
               <img
-                className="w-40 object-contain"
+                style={{width: '10.1875rem'}}
+                className="object-contain"
                 src={TelegramLogo}
                 alt="kakao-icon"
               />
-              <span style={{marginTop: '-0.5625rem', marginLeft: '0.3125rem'}} className="text-blue-r2aa1d5 font-roboto text-4xl leading-snug tracking-wide">
+              <span style={{marginTop: '-0.5625rem', marginLeft: '0.4375rem'}} className="text-blue-r2aa1d5 font-roboto text-4xl leading-snug tracking-wide">
                 test1234
               </span>
             </div>
