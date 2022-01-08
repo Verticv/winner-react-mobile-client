@@ -7,8 +7,8 @@ import PointsPage from "pages/PointsPage";
 import WinLoseSettlement from "pages/WinLoseSettlement";
 import LeftMenu from "components/myPage/LeftMenu";
 import EditInfo from 'components/myPage/EditInfo'
-import CountryDropDown from "components/dropdowns/CountryDropDown";
-import DropDownControls from "components/dropdowns/DropDownControls";
+import CountryDropDown from "components/dropdowns/MyPageMobileCountryDropDown";
+import DropDownControls from "components/dropdowns/MyPageCountriesDropDownControls";
 import BetHistory from 'components/myPage/BetHistory'
 import CouponUsage from 'components/myPage/CouponUsage'
 import Inbox from 'components/myPage/Inbox'
@@ -164,31 +164,48 @@ const MyPage = ({setAuthenticated }) => {
     },
   ];
 
-  const DropdownArrow = ({ isOpen, isWhite }) => (
+  // const DropdownArrow = ({ isOpen, isWhite }) => (
+  //   <>
+  //     {isWhite ? (
+  //       <img style={{maxWidth: '1.68rem', width: '1.68rem', marginTop: '0.275rem'}} src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
+  //     ) : (
+  //       <img style={{maxWidth: '1.68rem', width: '1.68rem', marginTop: '0.275rem'}} src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
+  //     )}
+  //   </>
+  // );
+  const DropdownArrow = ({isOpen, isWhite}) => (
     <>
-      {isWhite ? (
-        <img style={{maxWidth: '1.68rem', width: '1.68rem', marginTop: '0.275rem'}} src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
-      ) : (
-        <img style={{maxWidth: '1.68rem', width: '1.68rem', marginTop: '0.275rem'}} src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
-      )}
+    {isWhite ? (
+        <img style={{width: '1.6875rem'}} className="object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
+    ) : (
+        <img style={{width: '1.6875rem'}} className="object-contain" src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
+    )}
     </>
-  );
-
+  )
+  // const CountryButton = (
+  //   <div style={{height: '9.3125rem', width: '23.75rem'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 p-5">
+  //     <div className="rounded-full flex items-center justify-center">
+  //       <img
+  //         className="w-28 h-28"
+  //         src={country === "KR" ? Koreaflag : UKflag}
+  //         alt="flag"
+  //       />
+  //     </div>
+  //     <label style={{marginTop: '0.525rem'}} className="text-5xl mx-14 font-spoqaBold text-white cursor-pointer">
+  //       {country}
+  //     </label>
+  //     <DropdownArrow isWhite isOpen={isCountryOpen} />   
+  //   </div>
+  // );
   const CountryButton = (
-    <div style={{height: '9.3125rem', width: '23.75rem'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner shadow-plain2 hover:opacity-75 p-5">
-      <div className="rounded-full flex items-center justify-center">
-        <img
-          className="w-28 h-28"
-          src={country === "KR" ? Koreaflag : UKflag}
-          alt="flag"
-        />
-      </div>
-      <label style={{marginTop: '0.525rem'}} className="text-5xl mx-14 font-spoqaBold text-white cursor-pointer">
-        {country}
-      </label>
-      <DropdownArrow isWhite isOpen={isCountryOpen} />   
+    <div style={{height: '9.375rem', width: '23.75rem', paddingBottom: '0.6875rem', paddingTop: '0.875rem'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-4 shadow-plain2">
+        <div style={{width: '7.75rem', height: '7.75rem', marginRight: '3.1875rem'}} className="rounded-full flex items-center justify-center">
+            <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
+        </div>
+        <label style={{marginRight: '3.25rem', fontSize: '3rem', marginTop: '0.125rem'}} className="font-spoqaBold text-white cursor-pointer">{country}</label>
+        <DropdownArrow isWhite isOpen={isCountryOpen}/>
     </div>
-  );
+)
 
   const InboxButton = (
     <button
@@ -279,7 +296,7 @@ const MyPage = ({setAuthenticated }) => {
                   로그아웃
                 </label>
               </div>
-              <DropDownControls
+              {/* <DropDownControls
                 isProfilePage
                 buttonChild={CountryButton}
                 onClick={() => setCountryOpen(!isCountryOpen)}
@@ -288,7 +305,10 @@ const MyPage = ({setAuthenticated }) => {
                 <div className="mt-20 sm:mt-12 lg:mt-4">
                   <CountryDropDown isProfilePage setCountry={setCountry} country={country} />
                 </div>
-              </DropDownControls>
+              </DropDownControls> */}
+                <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
+                    <div className=""><CountryDropDown setCountry={setCountry} country={country} /></div>
+                </DropDownControls>
             </div>
           </div>
           <div style={{borderBottomRightRadius: '3.75rem', borderBottomLeftRadius: '3.75rem', height: '18.875rem', marginTop: '-7.75rem', paddingTop: '9.3125rem'}} className="flex w-full justify-between items-center pt-16 rounded-3xl bg-gray-d9e6f2">

@@ -39,7 +39,7 @@ export default function DropDownControls({
                 }}
             >{buttonChild}</button>
             {open && (
-                <div style={{marginTop: '8.4rem', left: '-0.25rem'}} className="absolute text-copy-primary fixed top-0 justify-center z-30" ref={ref} >
+                <div style={{marginTop: '12.4375rem', left: '-0.5rem'}} className="absolute text-copy-primary fixed top-0 justify-center z-30" ref={ref} >
                     {children}
                 </div>
             )}
