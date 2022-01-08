@@ -17,7 +17,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
                 <Navbar /> 
             </div>
 
-            <div className="flex justify-center items-center w-full -mt-3px mb-10px">
+            <div style={{marginBottom: '1.875rem'}} className="flex justify-center items-center w-full -mt-3px">
                 <Carousel />
             </div>
 
@@ -33,7 +33,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
             
             
 
-            <div className="flex mt-10px h-full pb-24">
+            <div style={{marginTop: '1.875rem'}} className="flex h-full pb-24">
                 <GameBanner selection={isGameBanner}/>
             </div>
 
