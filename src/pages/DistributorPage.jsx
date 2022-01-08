@@ -149,7 +149,7 @@ const DistributorPage = ({
     const SummaryCard = ({text1, text2, img, count}) => (
         <div style={{width: '18rem', height: '16.5rem', paddingBottom: '1.375rem', marginBottom: '0.8125rem'}} className="rounded-lg border border-gray-dddddd bg-gray-f8f8fa flex flex-col items-center justify-between shadow-plain8">
             <div className='flex flex-col items-center justify-around'>
-                <img style={{marginTop: '1.3125rem'}} className="object-contain" src={img} alt="" />
+                <img style={{marginTop: '1.3125rem', width: '5.0625rem'}} className="object-contain" src={img} alt="" />
                 {text1 && <span style={{fontSize: '2.25rem', height: '2.34375rem'}} className="mt-2 font-spoqaMedium tracking-tight text-gray-r616161">{text1}</span>}
                 {text2 && <span style={{fontSize: '2.25rem', height: '2.34375rem'}} className="font-spoqaMedium tracking-tight text-gray-r616161">{text2}</span>}
             </div>
