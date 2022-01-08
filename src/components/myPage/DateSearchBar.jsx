@@ -14,7 +14,8 @@ const DateSearchBar = ({
     hasIdSearch = false,
     has3MonthSearch = false,
     isGameResultsSearch = false,
-    withBlackButton = false
+    withBlackButton = false,
+    withMargin = true,
 }) => {
 
     const [startDate, setStartDate] = useState(new Date())
@@ -22,7 +23,7 @@ const DateSearchBar = ({
 
 
     return (
-        <div style={{margin: '0 1.875rem'}} className="bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex flex-wrap items-center justify-center">
+        <div style={{margin: withMargin ? '0 1.875rem' : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem'}} className="bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex flex-wrap items-center justify-center">
                 
                 {isLeagueSearch === true && (
                     <div className="space-x-5px">
@@ -124,7 +125,16 @@ const DateSearchBar = ({
                     
                 </div>
 
-                <div style={{margin: '0.75rem 1.875rem', marginBottom: '1.875rem', marginTop: '0'}} className="flex w-full h-full items-center justify-between">
+                <div style={{margin: '0.75rem 1.875rem', marginBottom: withMargin ? '1.875rem' : '1.375rem', marginTop: '0'}} className="flex w-full h-full items-center justify-between">
+                    {withBlackButton && !withMargin && (
+                        <div>
+                            <input 
+                                style={{width: '41.625rem', height: '6.9375rem', fontSize: '2.625rem', paddingLeft: '2.25rem'}}
+                                className="mr-3.5 border border-gray-dddddd place-color-grey rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"
+                                placeholder="아이디"
+                            />
+                        </div>
+                    )}
                     {withBlackButton && (
                         <div style={{height: '7.3125rem', padding: '0.1875rem'}} className="flex w-full items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75">
                             <div className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
