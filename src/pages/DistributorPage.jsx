@@ -146,11 +146,14 @@ const DistributorPage = ({
         setArrowUp(updatedCheckedState);
     }; 
 
-    const SummaryCard = ({text, img, count}) => (
-        <div className="w-227px h-165px rounded-lg border border-gray-dddddd bg-gray-f8f8fa flex flex-col items-center justify-start shadow-plain8">
-            <img className="mt-20px object-none" src={img} alt="" />
-            <span className="mt-8px font-spoqaMedium tracking-tight text-18px text-gray-r616161">{text}</span>
-            <span className="font-spoqaBold tracking-tight text-26px text-blue-r0056a6">{count}</span>
+    const SummaryCard = ({text1, text2, img, count}) => (
+        <div style={{width: '18rem', height: '16.5rem', paddingBottom: '1.375rem', marginBottom: '0.8125rem'}} className="rounded-lg border border-gray-dddddd bg-gray-f8f8fa flex flex-col items-center justify-between shadow-plain8">
+            <div className='flex flex-col items-center justify-around'>
+                <img style={{marginTop: '1.3125rem', width: '5.0625rem'}} className="object-contain" src={img} alt="" />
+                {text1 && <span style={{fontSize: '2.25rem', height: '2.34375rem'}} className="mt-2 font-spoqaMedium tracking-tight text-gray-r616161">{text1}</span>}
+                {text2 && <span style={{fontSize: '2.25rem', height: '2.34375rem'}} className="font-spoqaMedium tracking-tight text-gray-r616161">{text2}</span>}
+            </div>
+            <span style={{fontSize: '2.25rem', lineHeight: '1.625rem'}} className="font-robotoBold tracking-tight text-blue-r0056a6">{count}</span>
         </div>
     )
 
@@ -158,7 +161,7 @@ const DistributorPage = ({
         <>
             <div className="w-full flex">
                 <div className="w-40px mt-10px flex justify-center items-start">
-                    {/* <img src={ReplyArrow} className="object-none" alt="" /> */}
+                    {/* <img src={ReplyArrow} className="object-contain" alt="" /> */}
                 </div>
                 <div className="h-112px w-full flex flex-col">
                     <div className="flex h-56px w-full border-b border-gray-dddddd items-center text-white font-spoqaMedium text-16px tracking-tight bg-gray-r687b8e">
@@ -232,7 +235,7 @@ const DistributorPage = ({
         <>
             <div className="w-full flex">
                 <div className="w-40px mt-10px flex justify-center items-start">
-                    {/* <img src={ReplyArrow} className="object-none" alt="" /> */}
+                    {/* <img src={ReplyArrow} className="object-contain" alt="" /> */}
                 </div>
                 <div className="w-full flex flex-col border-r border-gray-dddddd  bg-white  border-b">
                     <div className="flex h-56px w-full border-b border-gray-dddddd items-center bg-gray-cfd7e0">
@@ -489,7 +492,7 @@ const DistributorPage = ({
             >
                 {(isUserCountOpen[item.id] === true || isUserCountOpen[item.id + 1] === true || isUserCountOpen[item.id + 2] === true) &&
                     <div className="absolute w-40px mt-10px flex justify-center items-start">
-                        <img src={ReplyArrow} className="object-none" alt="" />
+                        <img src={ReplyArrow} className="object-contain" alt="" />
                     </div>
                 }
 
@@ -498,7 +501,7 @@ const DistributorPage = ({
                     <>
                     <div className="w-full flex" >
                         <div className="w-40px mt-10px flex justify-center items-start">
-                            {/* <img src={ReplyArrow} className="object-none" alt="" /> */}
+                            {/* <img src={ReplyArrow} className="object-contain" alt="" /> */}
                         </div>
                         <div className=" w-full flex flex-col ">
                             {/* === Header === */}
@@ -653,20 +656,33 @@ const DistributorPage = ({
 
                     <div className="flex flex-col items-start limit1920:items-center w-full h-full">
 
-                        <div className="mt-42px w-1836px">
-                            <div className="h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                                <img src={SummaryIcon} alt="" />
-                                <span>총판현황</span>
+                        <div style={{marginTop: ''}} className="w-1836px">
+                            <div style={{marginBottom: '1.25rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                                <img style={{width: '3rem', height: '3.1875rem'}} src={SummaryIcon} alt="" />
+                                <span style={{fontSize: '3rem'}}>총판현황</span>
                             </div>
-                            <div className="flex h-165px w-full mt-20px space-x-4px">
-                                <SummaryCard img={SummaryIcon1} text="전체 유저" count={5} />
-                                <SummaryCard img={SummaryIcon2} text="요율 설정 완료건" count={20} />
-                                <SummaryCard img={SummaryIcon3} text="요율 설정 미완료건" count={5} />
-                                <SummaryCard img={SummaryIcon4} text="전체 포인트" count={0} />
-                                <SummaryCard img={SummaryIcon5} text="현재까지 사용 포인트" count={0} />
-                                <SummaryCard img={SummaryIcon6} text="현재 나의 포인트" count={0} />
-                                <SummaryCard img={SummaryIcon7} text="진행중인 금액" count="78,307.50" />
-                                <SummaryCard img={SummaryIcon8} text="제휴 금액" count="117,515,875.76" />
+                            <div style={{width: '73.7rem'}} className="flex w-full flex-wrap">
+                                <div style={{marginRight: '0.5625rem'}}>
+                                    <SummaryCard img={SummaryIcon1} text1="전체 유저" text2="" count={5} />
+                                </div>
+                                <div style={{marginRight: '0.5625rem'}}>
+                                    <SummaryCard img={SummaryIcon2} text1="요율 설정" text2="완료건" count={20} />
+                                </div>
+                                <div style={{marginRight: '0.5625rem'}}>
+                                    <SummaryCard img={SummaryIcon3} text1="요율 설정" text2="미완료건" count={5} />
+                                </div>
+                                <SummaryCard img={SummaryIcon4} text1="전체 포인트" text2="" count={0} />
+
+                                <div style={{marginRight: '0.5625rem'}}>
+                                    <SummaryCard img={SummaryIcon5} text1="현재까지" text2="사용 포인트" count={0} />
+                                </div>
+                                <div style={{marginRight: '0.5625rem'}}>
+                                    <SummaryCard img={SummaryIcon6} text1="현재" text2="나의 포인트" count={0} />
+                                </div>
+                                <div style={{marginRight: '0.5625rem'}}>
+                                    <SummaryCard img={SummaryIcon7} text1="진행중인" text2="금액" count="78,307.50" />
+                                </div>
+                                <SummaryCard img={SummaryIcon8} text1="제휴 금액" text2="" count="117,515,875.76" />
                             </div>
 
                             <div className="mt-60px h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
