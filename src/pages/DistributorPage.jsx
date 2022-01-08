@@ -1,29 +1,30 @@
-import Footer from 'components/mainPage/Footer'
-import Footer2 from 'components/mainPage/Footer2'
 import Pagination from 'components/myPage/Pagination'
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
+import HomePageTopBanner from 'components/common/HomePageTopBanner';
 import React, { useState } from 'react'
-import DistributorBanner from '../images/myPage/distributor/distributor_banner.png'
-import SummaryIcon from '../images/myPage/distributor/summary_icon.png'
-import PieIcon from '../images/myPage/distributor/pie.png'
-import DetailIcon from '../images/myPage/distributor/detail.png'
-import MemberIcon from '../images/myPage/distributor/member.png'
-import RecommendIcon from '../images/myPage/distributor/recommend.png'
-import SummaryIcon1 from '../images/myPage/distributor/summary/img1.png'
-import SummaryIcon2 from '../images/myPage/distributor/summary/img2.png'
-import SummaryIcon3 from '../images/myPage/distributor/summary/img3.png'
-import SummaryIcon4 from '../images/myPage/distributor/summary/img4.png'
-import SummaryIcon5 from '../images/myPage/distributor/summary/img5.png'
-import SummaryIcon6 from '../images/myPage/distributor/summary/img6.png'
-import SummaryIcon7 from '../images/myPage/distributor/summary/img7.png'
-import SummaryIcon8 from '../images/myPage/distributor/summary/img8.png'
+
+import SummaryIcon from '../images/newImages/mainPage/icons/distributor/summary_icon.png'
+import PieIcon from '../images/newImages/mainPage/icons/distributor/pie.png'
+import DetailIcon from '../images/newImages/mainPage/icons/distributor/detail.png'
+import MemberIcon from '../images/newImages/mainPage/icons/distributor//member.png'
+import RecommendIcon from '../images/newImages/mainPage/icons/distributor/recommend.png'
+import SummaryIcon1 from '../images/newImages/mainPage/icons/distributor/summary-1.png'
+import SummaryIcon2 from '../images/newImages/mainPage/icons/distributor/summary-2.png'
+import SummaryIcon3 from '../images/newImages/mainPage/icons/distributor/summary-3.png'
+import SummaryIcon4 from '../images/newImages/mainPage/icons/distributor/summary-4.png'
+import SummaryIcon5 from '../images/newImages/mainPage/icons/distributor/summary-5.png'
+import SummaryIcon6 from '../images/newImages/mainPage/icons/distributor/summary-6.png'
+import SummaryIcon7 from '../images/newImages/mainPage/icons/distributor/summary-7.png'
+import SummaryIcon8 from '../images/newImages/mainPage/icons/distributor/summary-8.png'
+import DefaultUser from '../images/newImages/mainPage/icons/distributor/default.png'
+
+
 import DateSearchBar from 'components/myPage/DateSearchBar'
 import Diamond from '../images/myPage/diamond.png'
 import WhiteArrow from '../images/arrows/white_arrow.png'
 import ReplyArrow from '../images/arrows/reply_arrow.png'
 import BlueTriangle from '../images/blue_triangle.png'
-import DefaultUser from '../images/myPage/distributor/default.png'
 
 const DistributorPage = ({
     isAuthenticated,
@@ -631,407 +632,393 @@ const DistributorPage = ({
     )
 
     return (
-        <div className="relative flex flex-col justify-center">
+        <div className="relative flex flex-col h-full">
             
-             <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
+            <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
-                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                <Navbar /> 
+                <HomePageTopBanner pageTitle='총판페이지' />
             </div>
 
-            <div className="relative flex flex-col limit1600:mt-92px mt-122px items-start limit:items-center">
-                <div className="relative w-default h-225px mt-20px">
-                    <label style={{color:"#3a5f39"}} className="text-36px font-spoqaMedium absolute right-0 bottom-0 z-20 mb-86px mr-50px">총판페이지</label>
-                    <img className="z-10" src={DistributorBanner} alt="" />
+            <div style={{margin: '1.875rem', marginTop: '0.75rem'}} className="relative overflow-hidden flex flex-col h-full pb-24">
+                <div style={{height: '11.1875rem', fontSize: '3rem', paddingTop: '2.875rem'}} className='flex flex-col items-center'>
+                    <div style={{marginBottom: '0.4375rem'}} className="tracking-tight flex items-center">
+                        <p className="font-spoqaMedium text-blue-r0056a6">Louie3</p>
+                        <p className="font-spoqaMedium ml-2 text-gray-r454545">님의 총판 정보입니다.</p>
+                    </div>
+                    <div style={{backgroundColor:"#868686", height: '0.1875rem', minHeight: '0.1875rem', marginBottom: '2.75rem', width: '46.5625rem'}} className=""></div>
                 </div>
-            </div>
 
-            <div className="relative flex flex-col items-start limit734:items-center">
-                <div className="space-x-2px h-76px w-734px border-b border-gray-r868686 flex items-center justify-center text-24px tracking-tight text-gray-r454545">
-                    <span className="font-spoqaBold text-blue-r0056a6">
-                        Louie3
-                    </span>
-                    <span className="font-spoqaMedium">
-                        님의 총판 정보입니다.
-                    </span>
-                </div>
-            </div>
+                <div className="relative flex flex-col justify-start limit:justify-center">
 
-            <div className="relative flex flex-col justify-start limit:justify-center">
-                {/* <div className="relative w-default h-225px mt-20px">
-                    <label style={{color:"#3a5f39"}} className="text-36px font-spoqaMedium absolute right-0 bottom-0 z-20 mb-86px mr-50px">총판페이지</label>
-                    <img className="z-10" src={DistributorBanner} alt="" />
-                </div> */}
+                    <div className="flex flex-col items-start limit1920:items-center w-full h-full">
 
-                <div className="flex flex-col items-start limit1920:items-center w-full h-full">
+                        <div className="mt-42px w-1836px">
+                            <div className="h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                                <img src={SummaryIcon} alt="" />
+                                <span>총판현황</span>
+                            </div>
+                            <div className="flex h-165px w-full mt-20px space-x-4px">
+                                <SummaryCard img={SummaryIcon1} text="전체 유저" count={5} />
+                                <SummaryCard img={SummaryIcon2} text="요율 설정 완료건" count={20} />
+                                <SummaryCard img={SummaryIcon3} text="요율 설정 미완료건" count={5} />
+                                <SummaryCard img={SummaryIcon4} text="전체 포인트" count={0} />
+                                <SummaryCard img={SummaryIcon5} text="현재까지 사용 포인트" count={0} />
+                                <SummaryCard img={SummaryIcon6} text="현재 나의 포인트" count={0} />
+                                <SummaryCard img={SummaryIcon7} text="진행중인 금액" count="78,307.50" />
+                                <SummaryCard img={SummaryIcon8} text="제휴 금액" count="117,515,875.76" />
+                            </div>
 
-                    <div className="mt-42px w-1836px">
-                        <div className="h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                            <img src={SummaryIcon} alt="" />
-                            <span>총판현황</span>
-                        </div>
-                        <div className="flex h-165px w-full mt-20px space-x-4px">
-                            <SummaryCard img={SummaryIcon1} text="전체 유저" count={5} />
-                            <SummaryCard img={SummaryIcon2} text="요율 설정 완료건" count={20} />
-                            <SummaryCard img={SummaryIcon3} text="요율 설정 미완료건" count={5} />
-                            <SummaryCard img={SummaryIcon4} text="전체 포인트" count={0} />
-                            <SummaryCard img={SummaryIcon5} text="현재까지 사용 포인트" count={0} />
-                            <SummaryCard img={SummaryIcon6} text="현재 나의 포인트" count={0} />
-                            <SummaryCard img={SummaryIcon7} text="진행중인 금액" count="78,307.50" />
-                            <SummaryCard img={SummaryIcon8} text="제휴 금액" count="117,515,875.76" />
-                        </div>
+                            <div className="mt-60px h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                                <img src={PieIcon} alt="" />
+                                <span>롤링요율</span>
+                            </div>
 
-                        <div className="mt-60px h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                            <img src={PieIcon} alt="" />
-                            <span>롤링요율</span>
-                        </div>
-                        <div className="mt-20px h-112px w-full border-2 rounded-md border-gray-dddddd shadow-plain8 overflow-hidden">
-                            <table className="w-full overflow-hidden">
-                                <thead className="h-54px w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
-                                    <tr className="flex items-center h-54px">
-                                        <td className="w-91px text-center">스포츠</td>
-                                        <td className="w-91px text-center">미니게임</td>
-                                        <td className="w-91px text-center">에볼루션</td>
-                                        <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>아시아</span><span>게이밍</span></td>
-                                        <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>카지노</span></td>
-                                        <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>드림</span><span>게이밍</span></td>
-                                        <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>섹시</span><span>게이밍</span></td>
-                                        <td className="w-91px text-center">빅게이밍</td>
-                                        <td className="w-91px text-center">넷엔트</td>
-                                        <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>플레이</span></td>
-                                        <td className="w-91px text-center">퀵스핀</td>
-                                        <td className="w-91px text-center">스페이드</td>
-                                        <td className="w-91px text-center">하바네로</td>
-                                        <td className="w-91px text-center">월드매치</td>
-                                        <td className="w-91px text-center">메버릭</td>
-                                        <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>플레이</span><span>앤고</span></td>
-                                        <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
-                                        <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
-                                        <td className="w-91px text-center">e-스포츠</td>
-                                        <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>키론</span><span>가상게임</span></td>
-                                    </tr>
-                                </thead>
-                                <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                                    <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
-                                        <td className="w-91px text-center">1.00%</td>
-                                        <td className="w-91px text-center">1.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.70%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
-                                        <td className="w-91px text-center">0.00%</td>
+                            <div className="mt-20px h-112px w-full border-2 rounded-md border-gray-dddddd shadow-plain8 overflow-hidden">
+                                <table className="w-full overflow-hidden">
+                                    <thead className="h-54px w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
+                                        <tr className="flex items-center h-54px">
+                                            <td className="w-91px text-center">스포츠</td>
+                                            <td className="w-91px text-center">미니게임</td>
+                                            <td className="w-91px text-center">에볼루션</td>
+                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>아시아</span><span>게이밍</span></td>
+                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>카지노</span></td>
+                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>드림</span><span>게이밍</span></td>
+                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>섹시</span><span>게이밍</span></td>
+                                            <td className="w-91px text-center">빅게이밍</td>
+                                            <td className="w-91px text-center">넷엔트</td>
+                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>플레이</span></td>
+                                            <td className="w-91px text-center">퀵스핀</td>
+                                            <td className="w-91px text-center">스페이드</td>
+                                            <td className="w-91px text-center">하바네로</td>
+                                            <td className="w-91px text-center">월드매치</td>
+                                            <td className="w-91px text-center">메버릭</td>
+                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>플레이</span><span>앤고</span></td>
+                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
+                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
+                                            <td className="w-91px text-center">e-스포츠</td>
+                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>키론</span><span>가상게임</span></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
+                                        <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
+                                            <td className="w-91px text-center">1.00%</td>
+                                            <td className="w-91px text-center">1.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.70%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
+                                            <td className="w-91px text-center">0.00%</td>
 
-                                    </tr>
-                                </tbody>
-                            </table>   
-                        </div>
-                        <div className="mt-60px h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                            <img src={DetailIcon} alt="" />
-                            <span>나의 상세내역</span>
-                        </div>
+                                        </tr>
+                                    </tbody>
+                                </table>   
+                            </div>
 
-                        <DateSearchBar isLeagueSearch={false} hasIdSearch={true}/>
+                            <div className="mt-60px h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                                <img src={DetailIcon} alt="" />
+                                <span>나의 상세내역</span>
+                            </div>
 
-                        <div className="flex mt-30px w-full space-x-11px">
-                            <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
-                                <img className="mr-16px" src={Diamond} alt="" />
-                                <div className="flex items-center space-x-4px pt-2px">
-                                    <span className="text-white">입금:</span>
-                                    <span className="text-yellow-ffcc00">0</span>
+                            <DateSearchBar isLeagueSearch={false} hasIdSearch={true}/>
+
+                            <div className="flex mt-30px w-full space-x-11px">
+                                <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
+                                    <img className="mr-16px" src={Diamond} alt="" />
+                                    <div className="flex items-center space-x-4px pt-2px">
+                                        <span className="text-white">입금:</span>
+                                        <span className="text-yellow-ffcc00">0</span>
+                                    </div>
+                                </div>
+
+                                <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
+                                    <img className="mr-16px" src={Diamond} alt="" />
+                                    <div className="flex items-center space-x-4px pt-2px">
+                                        <span className="text-white">보너스:</span>
+                                        <span className="text-yellow-ffcc00">0</span>
+                                    </div>
+                                </div>
+
+                                <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
+                                    <img className="mr-16px" src={Diamond} alt="" />
+                                    <div className="flex items-center space-x-4px pt-2px">
+                                        <span className="text-white">출금:</span>
+                                        <span className="text-yellow-ffcc00">0</span>
+                                    </div>
+                                </div>
+
+                                <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
+                                    <img className="mr-16px" src={Diamond} alt="" />
+                                    <div className="flex items-center space-x-4px pt-2px">
+                                        <span className="text-white">입출금 합계:</span>
+                                        <span className="text-red-f47d7d">-3,200,000</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
-                                <img className="mr-16px" src={Diamond} alt="" />
-                                <div className="flex items-center space-x-4px pt-2px">
-                                    <span className="text-white">보너스:</span>
-                                    <span className="text-yellow-ffcc00">0</span>
-                                </div>
-                            </div>
+                            <div>
 
-                            <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
-                                <img className="mr-16px" src={Diamond} alt="" />
-                                <div className="flex items-center space-x-4px pt-2px">
-                                    <span className="text-white">출금:</span>
-                                    <span className="text-yellow-ffcc00">0</span>
-                                </div>
-                            </div>
-
-                            <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
-                                <img className="mr-16px" src={Diamond} alt="" />
-                                <div className="flex items-center space-x-4px pt-2px">
-                                    <span className="text-white">입출금 합계:</span>
-                                    <span className="text-red-f47d7d">-3,200,000</span>
-                                </div>
+                            <div className="mt-20px w-full border-2 rounded-md border-gray-dddddd shadow-plain8 overflow-hidden">
+                                <table className="w-full overflow-hidden">
+                                    <thead className="h-54px w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
+                                        <tr className="flex items-center h-54px border-b">
+                                            <td className="w-83px bg-gray-r676e76 h-full flex items-center justify-center">구분</td>
+                                            <td className="w-83px text-center">스포츠</td>
+                                            <td className="w-83px text-center">미니게임</td>
+                                            <td className="w-83px text-center">에볼루션</td>
+                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>아시아</span><span>게이밍</span></td>
+                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>카지노</span></td>
+                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>드림</span><span>게이밍</span></td>
+                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>섹시</span><span>게이밍</span></td>
+                                            <td className="w-83px text-center">빅게이밍</td>
+                                            <td className="w-83px text-center">넷엔트</td>
+                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>플레이</span></td>
+                                            <td className="w-83px text-center">퀵스핀</td>
+                                            <td className="w-83px text-center">스페이드</td>
+                                            <td className="w-83px text-center">하바네로</td>
+                                            <td className="w-83px text-center">월드매치</td>
+                                            <td className="w-83px text-center">메버릭</td>
+                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>플레이</span><span>앤고</span></td>
+                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
+                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
+                                            <td className="w-83px text-center">e-스포츠</td>
+                                            <td className="w-90px text-center flex flex-col pt-2px -space-y-4px"><span>키론</span><span>가상게임</span></td>
+                                            <td style={{backgroundColor:"#808387"}} className="w-83px text-center h-full flex items-center justify-center">합계</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
+                                        <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
+                                            <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">베팅금</td>
+                                            <td className="w-83px text-right">1.09M</td>
+                                            <td className="w-83px text-right">33K</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">3.06M</td>
+                                            <td className="w-90px text-right pr-7px">0</td>
+                                            <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">7.14M</td>
+                                        </tr>
+                                        <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
+                                            <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">승패</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-90px text-right pr-7px">0</td>
+                                            <td style={{backgroundColor:"#ebecee", color:"#d52e2e"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
+                                        </tr>
+                                        <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
+                                            <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">정산금액</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-83px text-right">0</td>
+                                            <td className="w-90px text-right pr-7px">0</td>
+                                            <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>   
                             </div>
                         </div>
 
-                        <div>
+                            <div className="mt-52px h-42px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                                <img src={MemberIcon} alt="" />
+                                <div>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight text-gray-r454545">2 명</span></div>
 
-                        <div className="mt-20px w-full border-2 rounded-md border-gray-dddddd shadow-plain8 overflow-hidden">
-                            <table className="w-full overflow-hidden">
-                                <thead className="h-54px w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
-                                    <tr className="flex items-center h-54px border-b">
-                                        <td className="w-83px bg-gray-r676e76 h-full flex items-center justify-center">구분</td>
-                                        <td className="w-83px text-center">스포츠</td>
-                                        <td className="w-83px text-center">미니게임</td>
-                                        <td className="w-83px text-center">에볼루션</td>
-                                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>아시아</span><span>게이밍</span></td>
-                                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>카지노</span></td>
-                                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>드림</span><span>게이밍</span></td>
-                                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>섹시</span><span>게이밍</span></td>
-                                        <td className="w-83px text-center">빅게이밍</td>
-                                        <td className="w-83px text-center">넷엔트</td>
-                                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>플레이</span></td>
-                                        <td className="w-83px text-center">퀵스핀</td>
-                                        <td className="w-83px text-center">스페이드</td>
-                                        <td className="w-83px text-center">하바네로</td>
-                                        <td className="w-83px text-center">월드매치</td>
-                                        <td className="w-83px text-center">메버릭</td>
-                                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>플레이</span><span>앤고</span></td>
-                                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
-                                        <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
-                                        <td className="w-83px text-center">e-스포츠</td>
-                                        <td className="w-90px text-center flex flex-col pt-2px -space-y-4px"><span>키론</span><span>가상게임</span></td>
-                                        <td style={{backgroundColor:"#808387"}} className="w-83px text-center h-full flex items-center justify-center">합계</td>
-                                    </tr>
-                                </thead>
-                                <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                                    <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
-                                        <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">베팅금</td>
-                                        <td className="w-83px text-right">1.09M</td>
-                                        <td className="w-83px text-right">33K</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">3.06M</td>
-                                        <td className="w-90px text-right pr-7px">0</td>
-                                        <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">7.14M</td>
-                                    </tr>
-                                    <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
-                                        <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">승패</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-90px text-right pr-7px">0</td>
-                                        <td style={{backgroundColor:"#ebecee", color:"#d52e2e"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
-                                    </tr>
-                                    <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
-                                        <td className="w-83px bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-16px text-white tracking-tight">정산금액</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-83px text-right">0</td>
-                                        <td className="w-90px text-right pr-7px">0</td>
-                                        <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e"}} className="w-83px text-right pr-7px h-full flex items-center justify-end">0</td>
-                                    </tr>
-                                </tbody>
-                            </table>   
-                        </div>
-                        </div>
-
-                        <div className="mt-52px h-42px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                            <img src={MemberIcon} alt="" />
-                            <div>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight text-gray-r454545">2 명</span></div>
-
-                            <div 
-                                style={{
-                                    width:"75px",
-                                    height:"42px",
-                                    borderRadius: "4px",
-                                    marginLeft: "14px"
-                                }} 
-                                className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
-                                onClick={() => setViewOnline(!viewOnline)}
-                            >
                                 <div 
                                     style={{
-                                        width:"73px", 
-                                        height:"40px",
-                                        background: "linear-gradient(to bottom, #585b5e, #303337)",
-                                        borderRadius: "3px"
+                                        width:"75px",
+                                        height:"42px",
+                                        borderRadius: "4px",
+                                        marginLeft: "14px"
                                     }} 
-                                    className="flex items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer"
+                                    className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
+                                    onClick={() => setViewOnline(!viewOnline)}
                                 >
-                                    <span className="font-spoqaMedium tracking-tight text-14px text-white">{viewOnline ? "닫기" : "보기"}</span>
+                                    <div 
+                                        style={{
+                                            width:"73px", 
+                                            height:"40px",
+                                            background: "linear-gradient(to bottom, #585b5e, #303337)",
+                                            borderRadius: "3px"
+                                        }} 
+                                        className="flex items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer"
+                                    >
+                                        <span className="font-spoqaMedium tracking-tight text-14px text-white">{viewOnline ? "닫기" : "보기"}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {viewOnline && (
-                            <div style={{height:"66px"}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-md mt-13px px-8px items-center space-x-10px">
-                                <UsersOnline />
-                                <UsersOnline name="tkskdl12" />
-                            </div>
-                        )}
+                            {viewOnline && (
+                                <div style={{height:"66px"}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-md mt-13px px-8px items-center space-x-10px">
+                                    <UsersOnline />
+                                    <UsersOnline name="tkskdl12" />
+                                </div>
+                            )}
 
-                        <div className="mt-60px h-29px w-full flex items-end justify-between text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                            <div className="flex items-center space-x-6px items-center h-27px flex">
-                                <img src={RecommendIcon} alt="" />
-                                <div>추천 회원내역</div>
-                            </div>
-                            
-                            <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
-                                <img className="mr-16px" src={Diamond} alt="" />
-                                <div className="flex items-center space-x-4px pt-2px">
-                                    <span className="text-white">보유금 총합계:</span>
-                                    <span className="text-yellow-ffcc00">75,000</span>
+                            <div className="mt-60px h-29px w-full flex items-end justify-between text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                                <div className="flex items-center space-x-6px items-center h-27px flex">
+                                    <img src={RecommendIcon} alt="" />
+                                    <div>추천 회원내역</div>
+                                </div>
+                                
+                                <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
+                                    <img className="mr-16px" src={Diamond} alt="" />
+                                    <div className="flex items-center space-x-4px pt-2px">
+                                        <span className="text-white">보유금 총합계:</span>
+                                        <span className="text-yellow-ffcc00">75,000</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* === 추천회원내역 표 === */}
-                        <div style={{filter: "drop-shadow(0px 0px 2px #00000050)"}} className="flex flex-col mt-21px w-full rounded-md border-t  border-gray-dddddd overflow-hidden">
-                            {/* === Header === */}
-                            <div className="h-67px w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqa text-16px text-white tracking-tight">
-                                <div className="w-114px text-center">번호</div>
-                                <button 
-                                    className="flex w-114px text-center items-center space-x-5px justify-center hover:font-spoqaBold hover:opacity-75"
-                                    onClick={() => handleOnChange(0)}
-                                >
-                                    <p>아이디</p>
-                                    <img src={WhiteArrow} className={`${isArrowUp[0] === true ? "transform rotate-180" : ""}`} alt=""/>
-                                </button>
-                                <div className="w-114px text-center">이름</div>
-                                <div className="w-114px text-center">별명</div>
-                                <button 
-                                    className="w-114px text-center flex items-center justify-center space-x-5px hover:opacity-75"
-                                    onClick={() => handleOnChange(1)}
-                                >
-                                    <div className="flex flex-col items-center justify-center space-y-3px ">
-                                        <div className="flex items-center h-16px">하부</div>
-                                        <div className="flex items-center h-16px">유저수</div>
-                                    </div>
-                                    <img src={WhiteArrow} className={`${isArrowUp[1] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                </button>
-                                <button 
-                                    className="w-114px text-center flex items-center justify-center space-x-5px hover:opacity-75 "
-                                    onClick={() => handleOnChange(2)}
-                                >
-                                    <div className="flex flex-col items-center justify-center space-y-3px">
-                                        <div className="flex items-center h-16px">추천일시</div>
-                                        <div className="flex items-center h-16px">로그인일시</div>
-                                        <div className="flex items-center h-16px">(미접속일수)</div>
-                                    </div>
-                                    <img src={WhiteArrow} className={`${isArrowUp[2] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                </button>
-                                <div className="w-114px text-center">요율보기</div>
-                                <div className="w-114px text-center">입금액</div>
-                                <div className="w-114px text-center">보너스</div>
-                                <button 
-                                    className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
-                                    onClick={() => handleOnChange(3)}
-                                >
-                                    <p>출금액</p>
-                                    <img src={WhiteArrow} className={`${isArrowUp[3] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                </button>
-                                <div className="w-114px text-center">입출금액</div>
-                                <button 
-                                    className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
-                                    onClick={() => handleOnChange(4)}
-                                >
-                                    <p>베팅액</p>
-                                    <img src={WhiteArrow} className={`${isArrowUp[4] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                </button>
-                                <button 
-                                    className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
-                                    onClick={() => handleOnChange(5)}
-                                >
-                                    <p>윈루즈</p>
-                                    <img src={WhiteArrow} className={`${isArrowUp[5] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                </button>
-                                <div className="w-114px text-center">상세내역</div>
-                                <button 
-                                    className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
-                                    onClick={() => handleOnChange(6)}
-                                >
-                                    <p>포인트</p>
-                                    <img src={WhiteArrow} className={`${isArrowUp[6] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                </button>
-                                <button 
-                                    className="w-114px text-center flex items-center justify-center space-x-5px hover:opacity-75"
-                                    onClick={() => handleOnChange(7)}
-                                >
-                                    <div className="flex flex-col items-center justify-center space-y-3px ">
-                                        <div className="flex items-center h-16px">보유</div>
-                                        <div className="flex items-center h-16px">금액</div>
-                                    </div>
-                                    <img src={WhiteArrow} className={`${isArrowUp[7] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                </button>
+                            {/* === 추천회원내역 표 === */}
+                            <div style={{filter: "drop-shadow(0px 0px 2px #00000050)"}} className="flex flex-col mt-21px w-full rounded-md border-t  border-gray-dddddd overflow-hidden">
+                                {/* === Header === */}
+                                <div className="h-67px w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqa text-16px text-white tracking-tight">
+                                    <div className="w-114px text-center">번호</div>
+                                    <button 
+                                        className="flex w-114px text-center items-center space-x-5px justify-center hover:font-spoqaBold hover:opacity-75"
+                                        onClick={() => handleOnChange(0)}
+                                    >
+                                        <p>아이디</p>
+                                        <img src={WhiteArrow} className={`${isArrowUp[0] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                    </button>
+                                    <div className="w-114px text-center">이름</div>
+                                    <div className="w-114px text-center">별명</div>
+                                    <button 
+                                        className="w-114px text-center flex items-center justify-center space-x-5px hover:opacity-75"
+                                        onClick={() => handleOnChange(1)}
+                                    >
+                                        <div className="flex flex-col items-center justify-center space-y-3px ">
+                                            <div className="flex items-center h-16px">하부</div>
+                                            <div className="flex items-center h-16px">유저수</div>
+                                        </div>
+                                        <img src={WhiteArrow} className={`${isArrowUp[1] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                    </button>
+                                    <button 
+                                        className="w-114px text-center flex items-center justify-center space-x-5px hover:opacity-75 "
+                                        onClick={() => handleOnChange(2)}
+                                    >
+                                        <div className="flex flex-col items-center justify-center space-y-3px">
+                                            <div className="flex items-center h-16px">추천일시</div>
+                                            <div className="flex items-center h-16px">로그인일시</div>
+                                            <div className="flex items-center h-16px">(미접속일수)</div>
+                                        </div>
+                                        <img src={WhiteArrow} className={`${isArrowUp[2] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                    </button>
+                                    <div className="w-114px text-center">요율보기</div>
+                                    <div className="w-114px text-center">입금액</div>
+                                    <div className="w-114px text-center">보너스</div>
+                                    <button 
+                                        className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
+                                        onClick={() => handleOnChange(3)}
+                                    >
+                                        <p>출금액</p>
+                                        <img src={WhiteArrow} className={`${isArrowUp[3] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                    </button>
+                                    <div className="w-114px text-center">입출금액</div>
+                                    <button 
+                                        className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
+                                        onClick={() => handleOnChange(4)}
+                                    >
+                                        <p>베팅액</p>
+                                        <img src={WhiteArrow} className={`${isArrowUp[4] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                    </button>
+                                    <button 
+                                        className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
+                                        onClick={() => handleOnChange(5)}
+                                    >
+                                        <p>윈루즈</p>
+                                        <img src={WhiteArrow} className={`${isArrowUp[5] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                    </button>
+                                    <div className="w-114px text-center">상세내역</div>
+                                    <button 
+                                        className="flex w-114px text-center items-center space-x-5px justify-center hover:opacity-75"
+                                        onClick={() => handleOnChange(6)}
+                                    >
+                                        <p>포인트</p>
+                                        <img src={WhiteArrow} className={`${isArrowUp[6] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                    </button>
+                                    <button 
+                                        className="w-114px text-center flex items-center justify-center space-x-5px hover:opacity-75"
+                                        onClick={() => handleOnChange(7)}
+                                    >
+                                        <div className="flex flex-col items-center justify-center space-y-3px ">
+                                            <div className="flex items-center h-16px">보유</div>
+                                            <div className="flex items-center h-16px">금액</div>
+                                        </div>
+                                        <img src={WhiteArrow} className={`${isArrowUp[7] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                    </button>
+                                </div>
+                                {/* === Body === */}
+                                <RecommendedUserCell items={RecommendedUserArray}/>
                             </div>
-                            {/* === Body === */}
-                            <RecommendedUserCell items={RecommendedUserArray}/>
+
                         </div>
-
-                    </div>
-    
-                    <div className="flex mt-60px justify-center w-full">
-                        <Pagination page={page} setPage={setPage}/>   
-                    </div>
-
-
-                    <div className="w-full">
-                        <Footer2  fullWidth={true}/>
-                        <Footer fullWidth={true} />
+        
+                        <div className="flex mt-60px justify-center w-full">
+                            <Pagination page={page} setPage={setPage}/>   
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
