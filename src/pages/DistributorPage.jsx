@@ -147,11 +147,11 @@ const DistributorPage = ({
     }; 
 
     const SummaryCard = ({text1, text2, img, count}) => (
-        <div style={{width: '18rem', height: '16.5rem', paddingBottom: '1.375rem', marginBottom: '0.8125rem'}} className="rounded-lg border border-gray-dddddd bg-gray-f8f8fa flex flex-col items-center justify-between shadow-plain8">
+        <div style={{width: '18rem', height: '16.5rem', paddingBottom: '1.5625rem', marginBottom: '0.8125rem'}} className="rounded-lg border border-gray-dddddd bg-gray-f8f8fa flex flex-col items-center justify-between shadow-plain10">
             <div className='flex flex-col items-center justify-around'>
                 <img style={{marginTop: '1.3125rem', width: '5.0625rem'}} className="object-contain" src={img} alt="" />
-                {text1 && <span style={{fontSize: '2.25rem', height: '2.34375rem'}} className="mt-2 font-spoqaMedium tracking-tight text-gray-r616161">{text1}</span>}
-                {text2 && <span style={{fontSize: '2.25rem', height: '2.34375rem'}} className="font-spoqaMedium tracking-tight text-gray-r616161">{text2}</span>}
+                {text1 && <span style={{fontSize: '2.25rem', height: '2.34375rem', marginTop: '0.0625rem'}} className="font-spoqaMedium tracking-tight text-gray-r616161">{text1}</span>}
+                {text2 && <span style={{fontSize: '2.25rem', height: '2.34375rem', marginTop: '0.375rem'}} className="font-spoqaMedium tracking-tight text-gray-r616161">{text2}</span>}
             </div>
             <span style={{fontSize: '2.25rem', lineHeight: '1.625rem'}} className="font-robotoBold tracking-tight text-blue-r0056a6">{count}</span>
         </div>
@@ -644,23 +644,24 @@ const DistributorPage = ({
             </div>
 
             <div style={{margin: '1.875rem', marginTop: '0.75rem'}} className="relative overflow-hidden flex flex-col h-full pb-24">
-                <div style={{height: '11.1875rem', fontSize: '3rem', paddingTop: '2.875rem'}} className='flex flex-col items-center'>
-                    <div style={{marginBottom: '0.4375rem'}} className="tracking-tight flex items-center">
+                <div style={{height: '11.1875rem', fontSize: '3rem', paddingTop: '2.75rem'}} className='flex flex-col items-center'>
+                    <div style={{marginBottom: '0.25rem'}} className="tracking-tight flex items-center">
                         <p className="font-spoqaMedium text-blue-r0056a6">Louie3</p>
                         <p className="font-spoqaMedium ml-2 text-gray-r454545">님의 총판 정보입니다.</p>
                     </div>
                     <div style={{backgroundColor:"#868686", height: '0.1875rem', minHeight: '0.1875rem', marginBottom: '2.75rem', width: '46.5625rem'}} className=""></div>
                 </div>
 
-                <div className="relative flex flex-col justify-start limit:justify-center">
+                <div style={{marginTop: '3.4375rem'}} className="relative flex flex-col justify-start limit:justify-center">
 
-                    <div className="flex flex-col items-start limit1920:items-center w-full h-full">
+                    <div className="flex flex-col items-start w-full h-full">
 
-                        <div style={{marginTop: ''}} className="w-1836px">
+                        <div className="w-1836px">
                             <div style={{marginBottom: '1.25rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                                <img style={{width: '3rem', height: '3.1875rem'}} src={SummaryIcon} alt="" />
+                                <img style={{width: '3rem', height: '3.1875rem', marginRight: '0.8125rem'}} src={SummaryIcon} alt="" />
                                 <span style={{fontSize: '3rem'}}>총판현황</span>
                             </div>
+
                             <div style={{width: '73.7rem'}} className="flex w-full flex-wrap">
                                 <div style={{marginRight: '0.5625rem'}}>
                                     <SummaryCard img={SummaryIcon1} text1="전체 유저" text2="" count={5} />
@@ -685,71 +686,77 @@ const DistributorPage = ({
                                 <SummaryCard img={SummaryIcon8} text1="제휴 금액" text2="" count="117,515,875.76" />
                             </div>
 
-                            <div className="mt-60px h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                                <img src={PieIcon} alt="" />
-                                <span>롤링요율</span>
+                            <div style={{marginBottom: '1rem', marginTop: '3.5625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                                <img style={{width: '3.1875rem', marginRight: '0.8125rem'}} src={PieIcon} alt="" />
+                                <span style={{fontSize: '3rem'}}>총판현황</span>
                             </div>
 
-                            <div className="mt-20px h-112px w-full border-2 rounded-md border-gray-dddddd shadow-plain8 overflow-hidden">
-                                <table className="w-full overflow-hidden">
-                                    <thead className="h-54px w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
-                                        <tr className="flex items-center h-54px">
-                                            <td className="w-91px text-center">스포츠</td>
-                                            <td className="w-91px text-center">미니게임</td>
-                                            <td className="w-91px text-center">에볼루션</td>
-                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>아시아</span><span>게이밍</span></td>
-                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>카지노</span></td>
-                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>드림</span><span>게이밍</span></td>
-                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>섹시</span><span>게이밍</span></td>
-                                            <td className="w-91px text-center">빅게이밍</td>
-                                            <td className="w-91px text-center">넷엔트</td>
-                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>플레이</span></td>
-                                            <td className="w-91px text-center">퀵스핀</td>
-                                            <td className="w-91px text-center">스페이드</td>
-                                            <td className="w-91px text-center">하바네로</td>
-                                            <td className="w-91px text-center">월드매치</td>
-                                            <td className="w-91px text-center">메버릭</td>
-                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>플레이</span><span>앤고</span></td>
-                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
-                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
-                                            <td className="w-91px text-center">e-스포츠</td>
-                                            <td className="w-91px text-center flex flex-col pt-2px -space-y-4px"><span>키론</span><span>가상게임</span></td>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
-                                        <tr className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 h-54px w-full border-b border-gray-dddddd">
-                                            <td className="w-91px text-center">1.00%</td>
-                                            <td className="w-91px text-center">1.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.70%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
-                                            <td className="w-91px text-center">0.00%</td>
+                            <div className='flex relative'>
+                                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '72rem'}} className="absolute h-full z-50"></div>
+                                <div style={{width: '75.75rem', borderWidth: '0.375rem'}} className="w-full border-2 rounded-md border-gray-dddddd shadow-plain10 overflow-scroll">
+                                    <table className="w-full overflow-hidden">
+                                        <thead style={{height: '8.8125rem'}} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
+                                            <tr style={{height: '8.8125rem'}} className="flex items-center">
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">스포츠</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">미니게임</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">에볼루션</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>아시아</span><span className='-mt-3.5'>게이밍</span></td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>프레그메틱</span><span className='-mt-3.5'>카지노</span></td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>드림</span><span className='-mt-3.5'>게이밍</span></td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>섹시</span><span className='-mt-3.5'>게이밍</span></td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">빅게이밍</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">넷엔트</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>프레그메틱</span><span className='-mt-3.5'>플레이</span></td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">퀵스핀</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">스페이드</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">하바네로</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">월드매치</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">메버릭</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>플레이</span><span className='-mt-3.5'>앤고</span></td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>YL</span><span className='-mt-3.5'>게이밍</span></td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>레드</span><span className='-mt-3.5'>타이거</span></td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">e-스포츠</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>키론</span><span className='-mt-3.5'>가상게임</span></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody style={{height: '8.8125rem'}} className="w-full text-585858 tracking-tight font-spoqaMedium">
+                                            <tr style={{height: '8.8125rem'}} className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">1.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">1.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.70%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
 
-                                        </tr>
-                                    </tbody>
-                                </table>   
+                                            </tr>
+                                        </tbody>
+                                    </table>   
+                                </div>
                             </div>
 
-                            <div className="mt-60px h-29px w-full flex items-center space-x-6px text-24px tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                                <img src={DetailIcon} alt="" />
-                                <span>나의 상세내역</span>
+                            <div style={{marginBottom: '0.875rem', marginTop: '4.625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                                <img style={{width: '3.1875rem', marginRight: '0.8125rem'}} src={DetailIcon} alt="" />
+                                <span style={{fontSize: '3rem'}}>나의 상세내역</span>
                             </div>
 
-                            <DateSearchBar isLeagueSearch={false} hasIdSearch={true}/>
+                            {/* <DateSearchBar isLeagueSearch={false} hasIdSearch={true}/> */}
+                            <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
+                                <DateSearchBar withMargin={false} isLeagueSearch={false} withBlackButton />
+                            </div>
 
                             <div className="flex mt-30px w-full space-x-11px">
                                 <div className="w-333px h-48px rounded-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium text-20px tracking-tight">
@@ -795,23 +802,23 @@ const DistributorPage = ({
                                             <td className="w-83px text-center">스포츠</td>
                                             <td className="w-83px text-center">미니게임</td>
                                             <td className="w-83px text-center">에볼루션</td>
-                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>아시아</span><span>게이밍</span></td>
-                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>카지노</span></td>
-                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>드림</span><span>게이밍</span></td>
-                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>섹시</span><span>게이밍</span></td>
+                                            <td className="w-83px text-center flex flex-col"><span>아시아</span><span className='-mt-3.5' >게이밍</span></td>
+                                            <td className="w-83px text-center flex flex-col"><span>프레그메틱</span><span className='-mt-3.5'>카지노</span></td>
+                                            <td className="w-83px text-center flex flex-col"><span>드림</span><span className='-mt-3.5'>게이밍</span></td>
+                                            <td className="w-83px text-center flex flex-col"><span>섹시</span><span className='-mt-3.5'>게이밍</span></td>
                                             <td className="w-83px text-center">빅게이밍</td>
                                             <td className="w-83px text-center">넷엔트</td>
-                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>프레그메틱</span><span>플레이</span></td>
+                                            <td className="w-83px text-center flex flex-col"><span>프레그메틱</span><span className='-mt-3.5'>플레이</span></td>
                                             <td className="w-83px text-center">퀵스핀</td>
                                             <td className="w-83px text-center">스페이드</td>
                                             <td className="w-83px text-center">하바네로</td>
                                             <td className="w-83px text-center">월드매치</td>
                                             <td className="w-83px text-center">메버릭</td>
-                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>플레이</span><span>앤고</span></td>
-                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>YL</span><span>게이밍</span></td>
-                                            <td className="w-83px text-center flex flex-col pt-2px -space-y-4px"><span>레드</span><span>타이거</span></td>
+                                            <td className="w-83px text-center flex flex-col"><span>플레이</span><span className='-mt-3.5'>앤고</span></td>
+                                            <td className="w-83px text-center flex flex-col"><span>YL</span><span className='-mt-3.5'>게이밍</span></td>
+                                            <td className="w-83px text-center flex flex-col"><span>레드</span><span className='-mt-3.5'>타이거</span></td>
                                             <td className="w-83px text-center">e-스포츠</td>
-                                            <td className="w-90px text-center flex flex-col pt-2px -space-y-4px"><span>키론</span><span>가상게임</span></td>
+                                            <td className="w-90px text-center flex flex-col"><span>키론</span><span className='-mt-3.5'>가상게임</span></td>
                                             <td style={{backgroundColor:"#808387"}} className="w-83px text-center h-full flex items-center justify-center">합계</td>
                                         </tr>
                                     </thead>
