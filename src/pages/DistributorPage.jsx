@@ -391,7 +391,7 @@ const DistributorPage = ({
                     ? <div className="">{item.added_amount}</div>
                     : 
                     <button 
-                        style={{width: "14.375rem", padding: '1px'}}
+                        style={{width: "14.5rem", padding: '1px', fontSize: '2.4375rem'}}
                         className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center rounded-lg hover:opacity-75`}
                         onClick={() => {
                             handleOnChange1(item.id)
@@ -402,7 +402,7 @@ const DistributorPage = ({
                                 isUserCountOpen[item.id] === true
                                 ? "border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db" 
                                 : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
-                                } flex items-center justify-center rounded-lg w-full h-full border cursor-pointer px-10 py-5`}
+                                } flex items-center justify-center rounded-lg w-full h-full border cursor-pointer px-8 py-5`}
                         >
                             <span className="font-spoqaMedium tracking-tight text-white ">
                                 {isUserCountOpen[item.id] === true ? "접기" : "보기"}  {item.user_count}
