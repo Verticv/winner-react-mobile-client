@@ -77,25 +77,25 @@ const FreeBoardView = () => {
                 <div style={{borderBottomWidth: '0.1875rem'}} className="bg-gray-fafafa border-b border-gray-dddddd flex flex-wrap  items-center">
                     <div style={{margin: '2.0625rem 0'}} className='flex w-full justify-center'>
                         <div 
-                            style={{backgroundColor:"#02569c", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', width: 'fit-content', marginRight: '1.125rem'}} 
+                            style={{backgroundColor:"#02569c", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', width: '8.4375rem', marginRight: '1.125rem', height: '4.5rem'}} 
                             className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                         >
-                            공지
+                            <span className='mt-1'>공지</span>
                         </div>
                         <div 
-                            style={{backgroundColor:"#00a1e9", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', width: 'fit-content'}} 
+                            style={{backgroundColor:"#00a1e9", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', width: '8.4375rem', height: '4.5rem'}} 
                             className="rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                         >
-                            안내
+                            <span className='mt-1'>안내</span>
                         </div>
                     </div>
-                    <div style={{marginBottom: '1.0625rem'}} className="text-5xl text-center w-full font-spoqaMedium tracking-tight text-gray-r454545">메신져 고객센터 사칭주의</div>
+                    <div style={{marginBottom: '1.0625rem'}} className="text-5xl text-center w-full font-spoqaMedium tracking-tight text-gray-r454545">메신저 고객센터 사칭주의</div>
                 </div>
 
                 <div style={{height: '7.3125rem', padding: '1.4375rem 1.875rem', borderBottomWidth: '0.1875rem' }} className="bg-gray-fafafa border-b border-gray-dddddd flex justify-between items-center">
                     <img style={{width: '12.0625rem'}} className="h-12 object-contain" src={WinnerSmall} alt="" />
                     <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem'}} className='flex justify-center align-center rounded-full border-b border-gray-b7b7b7'>
-                        <div style={{marginRight: '0.6875rem'}} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">댓글</div>
+                        <div style={{marginRight: '0.6875rem'}} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b mt-1">댓글</div>
                         <div className="text-red-d52e2e font-roboto flex items-center justify-center">2</div>
                     </div>
                 </div>
