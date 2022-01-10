@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import MobileBg from '../images/mobile_bg.png'
-import DownArrowIcon from '../images/down_arrow_icon.png'
+import DownArrowIcon from '../images/newImages/search-arrow-down.png'
 import KakaoLogo from '../images/footer/kakao.png'
 import TelegramLogo from '../images/footer/telegram.png'
 import DropDownControls from 'components/dropdowns/RegisterDropDownControls'

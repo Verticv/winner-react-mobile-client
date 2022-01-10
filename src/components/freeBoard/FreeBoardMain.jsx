@@ -2,16 +2,18 @@ import MobileDropDownControls from 'components/dropdowns/MobileDropDownControls'
 import Pagination from 'components/myPage/Pagination';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router';
-import DownArrowIcon from '../../images/down_arrow_icon.png'
-import SearchIcon from '../../images/myPage/search.png'
-import BlueSpeaker from '../../images/freeBoard/blue_speaker.png'
-import YellowSpeaker from '../../images/freeBoard/yellow_speaker.png'
-import WinnerLogo from '../../images/freeBoard/winner_logo.png'
-import Rank1 from '../../images/freeBoard/1.png'
-import Rank2 from '../../images/freeBoard/2.png'
-import Rank3 from '../../images/freeBoard/3.png'
-import Rank4 from '../../images/freeBoard/4.png'
-import Rank5 from '../../images/freeBoard/5.png'
+
+import DownArrowIcon from '../../images/newImages/search-arrow-down.png'
+
+import SearchIcon from '../../images/newImages/search-icon.png'
+import BlueSpeaker from '../../images/newImages/blue_speaker.png'
+import YellowSpeaker from '../../images/newImages/yellow_speaker.png'
+import WinnerLogo from '../../images/winner_small.png'
+import Rank1 from '../../images/newImages/freeboard/1.png'
+import Rank2 from '../../images/newImages/freeboard/2.png'
+import Rank3 from '../../images/newImages/freeboard/3.png'
+import Rank4 from '../../images/newImages/freeboard/4.png'
+import Rank5 from '../../images/newImages/freeboard/5.png'
 
 const FreeBoardMain = () => {
 
@@ -44,7 +46,7 @@ const FreeBoardMain = () => {
         { 
             id: 3,
             text: "진행중 이벤트 안내(2021.06.02)", 
-            isRead: true,
+            isRead: false,
             time: "2021.06.29 07:35",
             type: "이벤트",
             path: '/freeboard/view/3'
@@ -52,7 +54,7 @@ const FreeBoardMain = () => {
         { 
             id: 4,
             text: "스포츠 미니게임 충전 보너스 (21.04.24 변경)", 
-            isRead: true,
+            isRead: false,
             time: "2021.06.29 07:35",
             type: "이벤트",
             path: '/freeboard/view/4'
@@ -60,51 +62,51 @@ const FreeBoardMain = () => {
         { 
             id: 5,
             text: "라이브 카지노 충전 보너스", 
-            isRead: true,
+            isRead: false,
             time: "2021.06.29 07:35",
             type: "이벤트",
             path: '/freeboard/view/5'
         },
-        { 
-            id: 6,
-            text: "다폴더 적중 보너스 지금(변경 21.04.16)", 
-            isRead: true,
-            time: "2021.06.29 07:35",
-            type: "이벤트",
-            path: '/freeboard/view/6'
-        },
-        { 
-            id: 7,
-            text: "카지노 주간 낙첨 이벤트!(변경 21.06.07)", 
-            isRead: true,
-            time: "2021.06.29 07:35",
-            type: "이벤트",
-            path: '/freeboard/view/7'
-        },
-        { 
-            id: 8,
-            text: "슬롯 충전 남첨 이벤트(변경 21.06.07)", 
-            isRead: true,
-            time: "2021.06.29 07:35",
-            type: "이벤트",
-            path: '/freeboard/view/8'
-        },
-        { 
-            id: 9,
-            text: "신규 이벤트 가입", 
-            isRead: false,
-            time: "2021.06.29 07:35",
-            type: "이벤트",
-            path: '/freeboard/view/9'
-        },
-        { 
-            id: 10,
-            text: "슬롯 페이백 복구", 
-            isRead: false,
-            time: "2021.06.29 07:35",
-            type: "이벤트",
-            path: '/freeboard/view/10'
-        },
+        // { 
+        //     id: 6,
+        //     text: "다폴더 적중 보너스 지금(변경 21.04.16)", 
+        //     isRead: true,
+        //     time: "2021.06.29 07:35",
+        //     type: "이벤트",
+        //     path: '/freeboard/view/6'
+        // },
+        // { 
+        //     id: 7,
+        //     text: "카지노 주간 낙첨 이벤트!(변경 21.06.07)", 
+        //     isRead: true,
+        //     time: "2021.06.29 07:35",
+        //     type: "이벤트",
+        //     path: '/freeboard/view/7'
+        // },
+        // { 
+        //     id: 8,
+        //     text: "슬롯 충전 남첨 이벤트(변경 21.06.07)", 
+        //     isRead: true,
+        //     time: "2021.06.29 07:35",
+        //     type: "이벤트",
+        //     path: '/freeboard/view/8'
+        // },
+        // { 
+        //     id: 9,
+        //     text: "신규 이벤트 가입", 
+        //     isRead: false,
+        //     time: "2021.06.29 07:35",
+        //     type: "이벤트",
+        //     path: '/freeboard/view/9'
+        // },
+        // { 
+        //     id: 10,
+        //     text: "슬롯 페이백 복구", 
+        //     isRead: false,
+        //     time: "2021.06.29 07:35",
+        //     type: "이벤트",
+        //     path: '/freeboard/view/10'
+        // },
         { 
             id: 2805,
             text: "아챔 올플핸", 
@@ -307,7 +309,7 @@ const FreeBoardMain = () => {
     )
 
     const InboxSearch = (
-        <div style={{padding: '1.9375rem', height: '10.4375rem', borderWidth: '0.1875rem'}} className="w-full bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex items-center justify-center space-x-10px">
+        <div style={{padding: '1.75rem 1.625rem', paddingBottom: '1.5625rem', height: '10.4375rem', borderWidth: '0.1875rem'}} className="w-full bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex items-center justify-center">
             <MobileDropDownControls 
                 buttonChild={dropdownButton} 
                 isDropdownOpen={isDropdownOpen} 
@@ -317,13 +319,13 @@ const FreeBoardMain = () => {
                 {searchDropdown}
             </MobileDropDownControls>
 
-            <div style={{borderWidth: '0.1875rem'}} className="flex w-full h-full bg-white rounded-md border border-gray-dddddd">
+            <div style={{borderWidth: '0.1875rem', marginLeft: '0.6875rem'}} className="flex w-full h-full bg-white rounded-md border border-gray-dddddd">
                 <input 
                     style={{fontSize: '2.8125rem', paddingLeft: '1.5625rem'}}
                     className="rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"
                     placeholder="검색어를 입력해 주세요"
                 />
-                <button style={{width: '6.75rem'}} className="flex items-center justify-center h-full rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 -mt-px -mr-px flex-shrink-0 hover:opacity-75">
+                <button style={{width: '6.75rem', height: '6.75rem', marginTop: '-0.1875rem', marginRight: '-0.1875rem'}} className="flex items-center justify-center h-full rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 flex-shrink-0 hover:opacity-75">
                     <img style={{width: '3.125rem', height: '3.125rem'}} src={SearchIcon} alt=""/>
                 </button>
             </div>
@@ -333,7 +335,7 @@ const FreeBoardMain = () => {
     function InboxList({ items }) {
         return items.map(item => (
             <button 
-                style={{height: '11.625rem'}}
+                style={{height: '11.75rem'}}
                 key={item.id} 
                 className='relative font-spoqaMedium text-14px tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd'
                 onClick={() => history.push(item.path)}
@@ -371,9 +373,9 @@ const FreeBoardMain = () => {
                             className={`w-full flex items-center font-spoqaMedium text-gray-r585858 group`}>
                             {
                                 item.type === "안내" 
-                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2">안내</div> 
+                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2"><span className='mt-1.5'>안내</span></div> 
                                 : item.type === "이벤트" 
-                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2">이벤트</div> 
+                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='mt-1.5'>이벤트</span></div> 
                                 : <div></div>
                             }
                             <p  
@@ -392,11 +394,11 @@ const FreeBoardMain = () => {
                                 <div style={{width: '7.0625rem', height: '7.0625rem', borderWidth: '0.1875rem', fontSize: "2.25rem", top: '2.375rem', right: '2.375rem'}} className="absolute pl-7px pr-8px rounded-full flex items-center justify-center border text-red-d52e2e font-roboto">{item.replies}</div>
                             )}
                             {item.isBetHistory === true && (
-                                <div style={{backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', marginLeft: '1.1875rem'}} className="rounded-full flex items-center justify-center text-white font-spoqaMedium">베팅내역</div>
+                                <div style={{backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.0625rem 1.65rem', marginLeft: '1.1875rem'}} className="rounded-full flex items-center justify-center text-white font-spoqaMedium"><span className='mt-1.5'>베팅내역</span></div>
                             )}
                             {item.isRead === false && (
                                 <div style={{width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem'}} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4">
-                                    <p className="flex items-center pr-px pt-px">N</p>
+                                    <p className="flex items-center">N</p>
                                 </div>
                             )}
                         </div>
@@ -451,7 +453,7 @@ const FreeBoardMain = () => {
 
 
             <div style={{marginTop: '3.9375rem', marginBottom: '3.75rem'}} className="w-full flex justify-center">
-                <button style={{width: '36.4375rem', height: '7.3125rem', padding: '0.1875rem'}} onClick={() => history.push('/freeboard/compose')} className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75">
+                <button style={{width: '36.4375rem', height: '7.3125rem', padding: '1px'}} onClick={() => history.push('/freeboard/compose')} className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75">
                     <div className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                         <span style={{fontSize: "2.8125rem"}} className="font-spoqaMedium tracking-tight text-white">작성하기</span>
                     </div>
@@ -463,7 +465,7 @@ const FreeBoardMain = () => {
                 <Pagination withMarginBottom={false} page={page} setPage={setPage}/>   
             </div>
 
-            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '50rem'}} className="">
+            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '19.625rem'}} className="">
                 {InboxSearch}
             </div>
             
