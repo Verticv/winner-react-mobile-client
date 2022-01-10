@@ -263,7 +263,7 @@ const Inbox = () => {
                 <Pagination page={page} setPage={setPage} withMarginBottom={false}/>   
             </div>
 
-            <div style={{marginBottom: '50rem'}}>
+            <div style={{marginBottom: '19.625rem'}}>
                 {InboxSearch}
             </div>
             <BottomNavbar />

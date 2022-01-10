@@ -233,7 +233,7 @@ const Contact = () => {
                     <Pagination page={page} setPage={setPage} withMarginBottom={false}/>   
                 </div>
 
-                <div style={{margin:'0 1.875rem', marginBottom: '50rem'}}>
+                <div style={{margin:'0 1.875rem', marginBottom: '19.625rem'}}>
                     {InboxSearch}
                 </div>
                 <BottomNavbar />

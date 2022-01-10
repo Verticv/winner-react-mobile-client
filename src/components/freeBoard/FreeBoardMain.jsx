@@ -465,7 +465,7 @@ const FreeBoardMain = () => {
                 <Pagination withMarginBottom={false} page={page} setPage={setPage}/>   
             </div>
 
-            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '50rem'}} className="">
+            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '19.625rem'}} className="">
                 {InboxSearch}
             </div>
             
