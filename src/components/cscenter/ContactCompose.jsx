@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 import MobileDropDownControls from 'components/dropdowns/MobileDropDownControls';
-import DownArrowIcon from '../../images/down_arrow_icon.png'
+import DownArrowIcon from '../../images/newImages/search-arrow-down.png'
 
 const ContactCompose = () => {
 

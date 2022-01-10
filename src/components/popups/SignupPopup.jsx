@@ -6,7 +6,7 @@ import SignedUpPopup from './SignedUpPopup'
 import LoginPopup from './LoginPopup'
 import CloseIcon from '../../images/popups/close_icon.png'
 import DropDownControls from '../dropdowns/DropDownControls'
-import DownArrowIcon from '../../images/down_arrow_icon.png'
+import DownArrowIcon from '../../newImages/search-arrow-down.png'
 
 const SignupPopup = ({setAuth, setPopupOpen}) => {
 
