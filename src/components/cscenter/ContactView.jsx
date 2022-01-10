@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router';
-import Rank1 from '../../images/freeBoard/1.png'
+import Rank1 from '../../images/newImages/freeboard/1.png'
 import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 
 
