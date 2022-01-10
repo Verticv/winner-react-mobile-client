@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
-import CloseIcon from '../../images/popups/close_icon.png'
+import CloseIcon from '../../images/newImages/account-close.png'
 import LoginIcon from '../../images/popups/reauth.png'
 
 const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
@@ -11,11 +11,11 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
     return (
         <div style={{width: '70.8125rem', maxHeight: '60.625rem'}} className="relative bg-white rounded-xl shadow-popup">
             <button style={{margin: '2.3125rem'}} className="absolute top-0 right-0 cursor-pointer z-20" onClick={()=> setPopupOpen(false)}>
-                <img className='w-12' src={CloseIcon} alt="close_icon" />
+                <img style={{width: '3.1875rem', height: '3.1875rem'}} className='object-contain' src={CloseIcon} alt="close_icon" />
             </button>
             <div style={{width: '71rem'}} className="absolute flex justify-center">
                 <div className="flex items-center justify-center">
-                    <img style={{height: '15.5rem', width: '15.5rem', marginTop: '-7.75rem'}} src={LoginIcon} alt="login_icon"/>
+                    <img style={{height: '17.75rem', width: '17.75rem', marginTop: '-7.75rem'}} src={LoginIcon} alt="login_icon"/>
                 </div>
             </div>
             {/* BREAK */}
@@ -74,7 +74,7 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
                             setSelectedTab("/mypage/edit-info")
                         }}
                     >
-                        확인
+                        <span className='block mt-1.5'>확인</span>
                     </button>
                 </div>
             </div>

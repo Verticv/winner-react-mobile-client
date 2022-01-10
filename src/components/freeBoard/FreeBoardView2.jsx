@@ -1,12 +1,12 @@
 import BoardViewPanel from 'components/common/cards/BoardViewPanel';
 import React from 'react'
 import { useHistory } from 'react-router';
-import Rank1 from '../../images/freeBoard/1.png'
-import Rank2 from '../../images/freeBoard/2.png'
-import Rank3 from '../../images/freeBoard/3.png'
-import Rank4 from '../../images/freeBoard/4.png'
-import Rank5 from '../../images/freeBoard/5.png'
-import ReplyArrow from '../../images/freeBoard/reply.png'
+import Rank1 from '../../images/newImages/freeboard/1.png'
+import Rank2 from '../../images/newImages/freeboard/2.png'
+import Rank3 from '../../images/newImages/freeboard/3.png'
+import Rank4 from '../../images/newImages/freeboard/4.png'
+import Rank5 from '../../images/newImages/freeboard/5.png'
+import ReplyArrow from '../../images/newImages/reply.png'
 
 const FreeBoardView2 = () => {
 
@@ -22,7 +22,7 @@ const FreeBoardView2 = () => {
                         placeholder={placeholder}
                     />
 
-                    <button style={{borderRadius:"1.625rem", width: '10.5625rem', padding: '0.1875rem'}} className="right-0 absolute flex items-center justify-center h-full bg-blue-r2068b2 hover:opacity-75">
+                    <button style={{borderRadius:"1.625rem", width: '10.5625rem', padding: '1px'}} className="right-0 absolute flex items-center justify-center h-full bg-blue-r013d74 hover:opacity-75">
                         <div style={{borderRadius:"1.625rem"}} className="flex items-center justify-center h-full w-full bg-black rounded-xl border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-white">{buttonText}</span>
                         </div>
@@ -39,10 +39,10 @@ const FreeBoardView2 = () => {
         tag = null,
         isOneButton = false
     }) => (
-        <div style={{paddingTop: '2.51rem'}} className="w-full">
+        <div style={{paddingTop: '2.251rem'}} className="w-full">
             <div className="w-full flex items-center flex justify-between">
                 <div className="flex items-center">
-                    <img style={{width: '2.5625rem', height: '2.5625rem', marginRight: '2.3125rem'}} src={ReplyArrow} alt="" />
+                    <img style={{width: '2.25625rem', height: '2.25625rem', marginRight: '2.3125rem'}} src={ReplyArrow} alt="" />
                     <img style={{width: '3.625rem', height: '4.4375rem', marginRight: '0.8125rem'}} src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
                     <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858">{username}</p>
                     <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
@@ -63,7 +63,7 @@ const FreeBoardView2 = () => {
                 </div>
                 { !isOneButton && (
                     <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                        <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center">삭제</div>
+                        <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">삭제</div>
                     </div>
                 ) }
             </div>
@@ -151,7 +151,7 @@ const FreeBoardView2 = () => {
             </div>
 
             {/* second */}
-            <div style={{borderRadius:"3.1875rem", marginTop: '3.75rem', padding: '1.875rem 0', paddingTop: '2.5rem'}} className="w-full bg-gray-fafafa shadow-subNavbar">
+            <div style={{borderRadius:"3.1875rem", marginTop: '3.75rem', padding: '1.875rem 0', paddingTop: '2.25rem'}} className="w-full bg-gray-fafafa shadow-subNavbar">
                 <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd"> 
                     <div className="w-full flex items-center flex justify-between">
                         <div className="flex items-center">
@@ -167,10 +167,10 @@ const FreeBoardView2 = () => {
                     </div>
                     <div style={{marginBottom: '1.125rem'}} className='flex'>
                         <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center">수정</div>
+                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">수정</div>
                         </div>
                         <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center">삭제</div>
+                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">삭제</div>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@ const FreeBoardView2 = () => {
 
 
             {/* third */}
-            <div style={{borderRadius:"3.1875rem", marginTop: '3.75rem', padding: '1.875rem 0', paddingTop: '2.5rem'}} className="w-full bg-gray-fafafa shadow-subNavbar">
+            <div style={{borderRadius:"3.1875rem", marginTop: '3.75rem', padding: '1.875rem 0', paddingTop: '2.25rem'}} className="w-full bg-gray-fafafa shadow-subNavbar">
                 <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd"> 
                     <div className="w-full flex items-center flex justify-between">
                         <div className="flex items-center">
@@ -199,10 +199,10 @@ const FreeBoardView2 = () => {
                     </div>
                     <div style={{marginBottom: '1.125rem'}} className='flex'>
                         <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center">수정</div>
+                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">수정</div>
                         </div>
                         <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center">삭제</div>
+                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">삭제</div>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@ const FreeBoardView2 = () => {
             </div>
 
             {/* fourth */}
-            <div style={{borderRadius:"3.1875rem", marginTop: '3.75rem', padding: '1.875rem 0'}} className="w-full bg-gray-fafafa shadow-subNavbar">
+            <div style={{borderRadius:"3.1875rem", marginTop: '3.75rem', padding: '1.875rem 0', paddingTop: '2.25rem'}} className="w-full bg-gray-fafafa shadow-subNavbar">
                 <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd"> 
                         <div className="w-full flex items-center flex justify-between">
                             <div className="flex items-center">
@@ -229,7 +229,7 @@ const FreeBoardView2 = () => {
                         </div>
                         <div style={{marginBottom: '1.125rem'}} className='flex'>
                             <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                                <div className="text-gray-r7b7b7b font-spoqaMedium flex items-center justify-center">수정</div>
+                                <div className="text-gray-r7b7b7b font-spoqaMedium flex items-center justify-center">답글</div>
                             </div>
                         </div>
                     </div>
@@ -239,13 +239,13 @@ const FreeBoardView2 = () => {
                     </div>
             </div>
 
-            <div style={{marginTop: '3.75rem', marginBottom: '14rem'}} className="w-full flex items-start justify-between">
-                <button style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75">
+            <div style={{marginTop: '3.75rem', marginBottom: '19.625rem'}} className="w-full flex items-start justify-between">
+                <button style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-white">이전</span>
                     </div>
@@ -253,14 +253,14 @@ const FreeBoardView2 = () => {
 
                 <button 
                     style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
-                    className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
+                    className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard')}
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-white">목록보기</span>
                     </div>
@@ -268,14 +268,14 @@ const FreeBoardView2 = () => {
 
                 <button 
                     style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem'}} 
-                    className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
+                    className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard/view2')}
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-white">다음</span>
                     </div>
