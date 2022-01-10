@@ -2,98 +2,147 @@ import React, { useState } from 'react'
 import Diamond from '../../images/myPage/diamond.png'
 import Pagination from 'components/myPage/Pagination'
 import DateSearchBar from './DateSearchBar'
-import LiveCasinoBetHistoryTable from './tables/LiveCasinoBetHistoryTable';
+import HistoryTable from 'components/common/HistoryTable'
 import SelectAllButton from '../common/SelectAllButton'
 
-const tableArrayTitles = [
-    {
-        id: 0,
-        text: "정산시작일",
-        isRed: false,
-    },
-    {
-        id: 1,
-        text: "정산종료일",
-        isRed: false,
-    },
-    {
-        id: 2,
-        text: "분류",
-        isRed: false,
-    },
-    {
-        id: 3,
-        text: "금액",
-        isRed: true,
-    }
+const tableData = [
+    [          
+        {
+            0: {정산시작일: '2021-06-30'},
+        },
+        {
+            0: {정산종료일: "2021-07-29"}
+        },
+        {
+            0: {분류: "미니게임"}
+        },
+        {
+            0: {금액: "75,000"}
+        },
+        {
+            buttonColor: '#9ca3af',
+        }
+    ],
+    [          
+        {
+            0: {정산시작일: '2021-06-30'},
+        },
+        {
+            0: {정산종료일: "2021-07-29"}
+        },
+        {
+            0: {분류: "에볼루션"}
+        },
+        {
+            0: {금액: "+75,000"}
+        },
+        {
+            buttonColor: '#0056a6',
+        }
+    ],
+    [          
+        {
+            0: {정산시작일: '2021-06-30'},
+        },
+        {
+            0: {정산종료일: "2021-07-29"}
+        },
+        {
+            0: {분류: "미니게임"}
+        },
+        {
+            0: {금액: "+75,000"}
+        },
+        {
+            buttonColor: '#0056a6',
+        }
+    ],
+    [          
+        {
+            0: {정산시작일: '2021-06-30'},
+        },
+        {
+            0: {정산종료일: "2021-07-29"}
+        },
+        {
+            0: {분류: "스포츠"}
+        },
+        {
+            0: {금액: "-20,000"}
+        },
+        {
+            buttonColor: '#0056a6',
+        }
+    ],
+    [          
+        {
+            0: {정산시작일: '2021-06-30'},
+        },
+        {
+            0: {정산종료일: "2021-07-29"}
+        },
+        {
+            0: {분류: "미니게임"}
+        },
+        {
+            0: {금액: "+15,000"}
+        },
+        {
+            buttonColor: '#0056a6',
+        }
+    ],
+    [          
+        {
+            0: {정산시작일: '2021-06-30'},
+        },
+        {
+            0: {정산종료일: "2021-07-29"}
+        },
+        {
+            0: {분류: "스포츠"}
+        },
+        {
+            0: {금액: "-15,000"}
+        },
+        {
+            buttonColor: '#0056a6',
+        }
+    ],
+    [          
+        {
+            0: {정산시작일: '2021-06-30'},
+        },
+        {
+            0: {정산종료일: "2021-07-29"}
+        },
+        {
+            0: {분류: "미니게임"}
+        },
+        {
+            0: {금액: "-15,000"}
+        },
+        {
+            buttonColor: '#0056a6',
+        }
+    ],
+    [          
+        {
+            0: {정산시작일: '2021-06-30'},
+        },
+        {
+            0: {정산종료일: "2021-07-29"}
+        },
+        {
+            0: {분류: "미니게임"}
+        },
+        {
+            0: {금액: "-50,000"}
+        },
+        {
+            buttonColor: '#0056a6',
+        }
+    ],
 ]
-
-const tableArray = [
-    {
-        id: 0,
-        number: '2021-06-30',
-        time: "2021-07-29",
-        type: "미니게임",
-        name: "75,000",
-        buttonColor: '#9ca3af',
-    },
-    {
-        id: 1,
-        number: '2021-06-30',
-        time: "2021-07-29",
-        type: "미니게임",
-        name: "+75,000",
-        buttonColor: '#0056a6',
-    },
-    {
-        id: 2,
-        number: '2021-06-30',
-        time: "2021-07-29",
-        type: "미니게임",
-        name: "+75,000",
-        buttonColor: '#0056a6',
-    },
-    {
-        id: 3,
-        number: '2021-06-30',
-        time: "2021-07-29",
-        type: "미니게임",
-        name: "-20,000",
-        buttonColor: '#0056a6',
-    },
-    {
-        id: 4,
-        number: '2021-06-30',
-        time: "2021-07-29",
-        type: "미니게임",
-        name: "+15,000",
-        buttonColor: '#0056a6',
-    },
-    {
-        id: 5,
-        number: '2021-06-30',
-        time: "2021-07-29",
-        type: "미니게임",
-        name: "+15,000",
-        buttonColor: '#0056a6',
-    },
-    {
-        id: 6,
-        number: '2021-06-30',
-        time: "2021-07-29",
-        type: "미니게임",
-        name: "+15,000",
-        buttonColor: '#0056a6',
-    },
-    {
-        id: 7,
-        number: '2021-06-30',
-        time: "2021-07-29",
-        type: "미니게임",
-        name: "-50,000",
-        buttonColor: '#0056a6',
-    },
-];
 
 
 const WinLoseSettlement = () => {
@@ -126,10 +175,9 @@ const WinLoseSettlement = () => {
             </div>
 
             <div className="h-full">
-                <LiveCasinoBetHistoryTable 
+                <HistoryTable 
                     containerBackground= '#f7f9fc'
-                    array={tableArray} 
-                    titleArray={tableArrayTitles}
+                    tableData={tableData}
                     checkedState={checkedState} 
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}

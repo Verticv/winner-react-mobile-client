@@ -1,110 +1,156 @@
-// import MyPageTitle from 'components/myPage/MyPageTitle'
 import Pagination from 'components/myPage/Pagination'
 import React, { useState } from 'react'
-// import AlertIcon from '../../images/myPage/alert.png'
-// import BankTable from './BankTable'
-// import MoneyExchangeTable from './tables/MoneyExchangeTable'
 import DateSearchBar from '../myPage/DateSearchBar'
-import LiveCasinoBetHistoryTable from '../myPage/tables/LiveCasinoBetHistoryTable';
+import HistoryTable from 'components/common/HistoryTable'
 import SelectAllButton from '../common/SelectAllButton'
 
-const tableArrayTitles = [
-    {
-        id: 0,
-        text: "충전금액",
-        isRed: false,
-    },
-    {
-        id: 1,
-        text: "보너스금액",
-        isRed: true,
-    },
-    {
-        id: 2,
-        text: "신청일시",
-        isRed: false,
-    },
-    {
-        id: 3,
-        text: "처리일시",
-        isRed: false,
-    }
+const tableData = [
+    [          
+        {
+            0: {충전금액: '12,000'},
+        },
+        {
+            0: {보너스금액: "+12,000"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {충전금액: '12,000'},
+        },
+        {
+            0: {보너스금액: "+12,000"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#9ca3af',
+            buttonText: '취소'
+        }
+    ],
+    [          
+        {
+            0: {충전금액: '12,000'},
+        },
+        {
+            0: {보너스금액: "+12,000"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {충전금액: '12,000'},
+        },
+        {
+            0: {보너스금액: "+12,000"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {충전금액: '12,000'},
+        },
+        {
+            0: {보너스금액: "+12,000"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {충전금액: '12,000'},
+        },
+        {
+            0: {보너스금액: "+12,000"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {충전금액: '12,000'},
+        },
+        {
+            0: {보너스금액: "+12,000"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {충전금액: '12,000'},
+        },
+        {
+            0: {보너스금액: "+12,000"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
 ]
 
-const tableArray = [
-    {
-        id: 0,
-        number: '12,000',
-        time: "+12,000",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 1,
-        number: '12,000',
-        time: "+12,000",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#9ca3af',
-        buttonText: '취소',
-    },
-    {
-        id: 2,
-        number: '12,000',
-        time: "+12,000",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 3,
-        number: '12,000',
-        time: "+12,000",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 4,
-        number: '12,000',
-        time: "+12,000",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 5,
-        number: '12,000',
-        time: "+12,000",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 6,
-        number: '12,000',
-        time: "+12,000",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 7,
-        number: '12,000',
-        time: "+12,000",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-];
 
 
 const MoneyChargeHistory = () => {
@@ -125,10 +171,9 @@ const MoneyChargeHistory = () => {
             <DateSearchBar isLeagueSearch={false} withBlackButton />
 
             <div className="h-full">
-                <LiveCasinoBetHistoryTable 
+                <HistoryTable 
                     containerBackground= '#f7f9fc'
-                    array={tableArray} 
-                    titleArray={tableArrayTitles}
+                    tableData={tableData}
                     checkedState={checkedState} 
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}
