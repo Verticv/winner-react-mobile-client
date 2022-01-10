@@ -8,466 +8,738 @@ import HorizontalMenu1 from 'components/horizontalMenus/HorizontalMenu1'
 import PopupControls from 'components/popups/PopupControls'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 import HomePageTopBanner from 'components/common/HomePageTopBanner';
-import CouponUsageTable from 'components/myPage/tables/CouponUsageTable'
-import CouponGiftTable from 'components/myPage/tables/CouponGiftTable'
+import HistoryTable from 'components/common/HistoryTable'
 
 import Icon1 from '../../images/newImages/coupon1.png'
 import Icon2 from '../../images/newImages/coupon2.png'
 import Icon3 from '../../images/newImages/coupon3.png'
 
-const tableArrayTitles = [
-    {
-        id: 0,
-        text: "쿠폰명",
-        isRed: false,
-    },
-    {
-        id: 1,
-        text: "쿠폰금액",
-        isRed: true,
-
-    },
-    {
-        id: 2,
-        text: "보낸회원아이디",
-        isRed: false,
-
-    },
-    {
-        id: 3,
-        text: "처리상태",
-        isRed: false,
-
-    },
-    {
-        id: 4,
-        text: "발급일",
-        isRed: false,
-
-    },
-    {
-        id: 5,
-        text: "만료일",
-        isRed: false,
-
-    }
+const tableData = [
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {처리상태: "사용가능"},
+        },
+        {
+            0: {발급일: "2021-06-30"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#d43712'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {처리상태: "사용가능"},
+        },
+        {
+            0: {발급일: "2021-06-30"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#d43712'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {처리상태: "사용가능"},
+        },
+        {
+            0: {발급일: "2021-06-30"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#d43712'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {처리상태: "사용가능"},
+        },
+        {
+            0: {발급일: "2021-06-30"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#d43712'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {처리상태: "사용가능"},
+        },
+        {
+            0: {발급일: "2021-06-30"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#d43712'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {처리상태: "사용가능"},
+        },
+        {
+            0: {발급일: "2021-06-30"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#d43712'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {처리상태: "사용가능"},
+        },
+        {
+            0: {발급일: "2021-06-30"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#d43712'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {처리상태: "사용가능"},
+        },
+        {
+            0: {발급일: "2021-06-30"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#d43712'
+        }
+    ],
 ]
 
-const tableArray = [
-    {
-        id: 0,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: "사용가능",
-        amount: "2021-06-30",
-        profit: "2021-07-29",
-    },
-    {
-        id: 1,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: "사용가능",
-        amount: "2021-06-30",
-        profit: "2021-07-29",
-    },
-    {
-        id: 2,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: "사용가능",
-        amount: "2021-06-30",
-        profit: "2021-07-29",
-    },
-    {
-        id: 3,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: "사용가능",
-        amount: "2021-06-30",
-        profit: "2021-07-29",
-    },
-    {
-        id: 4,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: "사용가능",
-        amount: "2021-06-30",
-        profit: "2021-07-29",
-    },
-    {
-        id: 5,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: "사용가능",
-        amount: "2021-06-30",
-        profit: "2021-07-29",
-    },
-    {
-        id: 6,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: "사용가능",
-        amount: "2021-06-30",
-        profit: "2021-07-29",
-    },
-    {
-        id: 7,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: "사용가능",
-        amount: "2021-06-30",
-        profit: "2021-07-29",
-    },
-];
-
-const giftsTableArrayTitles = [
-    {
-        id: 0,
-        text: "쿠폰명",
-        isRed: false,
-    },
-    {
-        id: 1,
-        text: "쿠폰금액",
-        isRed: true,
-
-    },
-    {
-        id: 2,
-        text: "보낸회원아이디",
-        isRed: false,
-
-    },
-    {
-        id: 3,
-        text: "발급일",
-        isRed: false,
-
-    },
-    {
-        id: 4,
-        text: "만료일",
-        isRed: false,
-    }
+const giftsTableData = [
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
 ]
 
-const giftsTableArray = [
-    {
-        id: 0,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-        buttonText: '사용 가능'
-    },
-    {
-        id: 1,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-        buttonText: '사용 가능'
-    },
-    {
-        id: 2,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-        buttonText: '사용 가능'
-    },
-    {
-        id: 3,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-        buttonText: '사용 가능'
-    },
-    {
-        id: 4,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-        buttonText: '사용 가능'
-    },
-    {
-        id: 5,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-        buttonText: '사용 가능'
-    },
-    {
-        id: 6,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-        buttonText: '사용 가능'
-    },
-    {
-        id: 7,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-        buttonText: '사용 가능'
-    },
-];
 
-
-const historyTableArrayTitles = [
-    {
-        id: 0,
-        text: "쿠폰명",
-        isRed: false,
-    },
-    {
-        id: 1,
-        text: "쿠폰금액",
-        isRed: true,
-
-    },
-    {
-        id: 2,
-        text: "보낸회원아이디",
-        isRed: false,
-
-    },
-    {
-        id: 3,
-        text: "발급일",
-        isRed: false,
-
-    },
-    {
-        id: 4,
-        text: "만료일",
-        isRed: false,
-    }
+const historyTableData = [
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#454545',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#279140',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#ff1237',
+            buttonText: '사용 가능'
+        }
+    ],
 ]
 
-const historyTableArray = [
-    {
-        id: 0,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-    },
-    {
-        id: 1,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#0056a6',
-    },
-    {
-        id: 2,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#454545',
-    },
-    {
-        id: 3,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#279140',
-    },
-    {
-        id: 4,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-    },
-    {
-        id: 5,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-    },
-    {
-        id: 6,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-    },
-    {
-        id: 7,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#ff1237',
-    },
-];
 
-const sentHistoryTableArrayTitles = [
-    {
-        id: 0,
-        text: "쿠폰명",
-        isRed: false,
-    },
-    {
-        id: 1,
-        text: "쿠폰금액",
-        isRed: true,
-
-    },
-    {
-        id: 2,
-        text: "보낸회원아이디",
-        isRed: false,
-
-    },
-    {
-        id: 3,
-        text: "보낸일시",
-        isRed: false,
-
-    },
-    {
-        id: 4,
-        text: "발급일",
-        isRed: false,
-
-    },
-    {
-        id: 5,
-        text: "만료일",
-        isRed: false,
-    }
+const sentHistoryTableData = [
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {보낸일시: "2021-06-29 15:45"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료',
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {보낸일시: "2021-06-29 15:45"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {보낸일시: "2021-06-29 15:45"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {보낸일시: "2021-06-29 15:45"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {보낸일시: "2021-06-29 15:45"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {보낸일시: "2021-06-29 15:45"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {보낸일시: "2021-06-29 15:45"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
+    [          
+        {
+            0: {쿠폰명: '테스트쿠폰'},
+        },
+        {
+            0: {쿠폰금액: "5,000"}
+        },
+        {
+            0: {보낸회원아이디: "eric123"},
+        },
+        {
+            0: {보낸일시: "2021-06-29 15:45"},
+        },
+        {
+            0: {발급일: "2021-06-29"},
+        },
+        {
+            0: {만료일: "2021-07-29"},
+        },
+        {
+            buttonColor: '#92278f',
+            buttonText: '선물 완료'
+        }
+    ],
 ]
 
-const sentHistoryTableArray = [
-    {
-        id: 0,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#92278f',
-        profit: '2021-06-29 15:45',
-    },
-    {
-        id: 1,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#92278f',
-        profit: '2021-06-29 15:45',
-    },
-    {
-        id: 2,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#92278f',
-        profit: '2021-06-29 15:45',
-    },
-    {
-        id: 3,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#92278f',
-        profit: '2021-06-29 15:45',
-    },
-    {
-        id: 4,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#92278f',
-        profit: '2021-06-29 15:45',
-    },
-    {
-        id: 5,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#92278f',
-        profit: '2021-06-29 15:45',
-    },
-    {
-        id: 6,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#92278f',
-        profit: '2021-06-29 15:45',
-    },
-    {
-        id: 7,
-        number: '테스트쿠폰',
-        time: "5,000",
-        type: "eric123",
-        name: '2021-06-29',
-        amount: "2021-07-29",
-        buttonColor: '#92278f',
-        profit: '2021-06-29 15:45',
-    },
-];
 
 
 const HistoryMenu = ({
@@ -601,10 +873,10 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                                 <CouponTitle text='사용 가능한 쿠폰' number='10' />
                             </div>
                             <div className="">
-                                <CouponUsageTable
+                                <HistoryTable
                                     containerBackground= '#f7f9fc'
-                                    array={tableArray}
-                                    titleArray={tableArrayTitles}
+                                    tableData={tableData}
+                                    wideDetailButton
                                     checkedState={checkedState} 
                                     setCheckedState={setCheckedState}
                                     isPopupOpen={isPopupOpen}
@@ -623,10 +895,10 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                                 <CouponTitle text='사용 가능한 쿠폰' number='7' />
                             </div>
                             <div className="">
-                                <CouponGiftTable
+                                <HistoryTable
                                     containerBackground= '#f7f9fc'
-                                    array={giftsTableArray}
-                                    titleArray={giftsTableArrayTitles}
+                                    wrapButtonText
+                                    tableData={giftsTableData}
                                     checkedState={checkedState} 
                                     setCheckedState={setCheckedState}
                                     isPopupOpen={isPopupOpen}
@@ -667,11 +939,12 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                                 <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
                             </div>
                             <div className="">
-                                <CouponGiftTable
+                                <HistoryTable
                                     containerBackground= '#f7f9fc'
-                                    array={historyTableArray}
-                                    titleArray={historyTableArrayTitles}
+                                    wrapButtonText
+                                    tableData={historyTableData}
                                     checkedState={checkedState} 
+                                    hasLeftInput={false}
                                     setCheckedState={setCheckedState}
                                     isPopupOpen={isPopupOpen}
                                     setPopupOpen={setPopupOpen}
@@ -699,10 +972,11 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                                 <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
                             </div>
                             <div className="">
-                                <CouponGiftTable
+                                <HistoryTable
                                     containerBackground= '#f7f9fc'
-                                    array={sentHistoryTableArray}
-                                    titleArray={sentHistoryTableArrayTitles}
+                                    wrapButtonText
+                                    tableData={sentHistoryTableData}
+                                    hasLeftInput={false}
                                     checkedState={checkedState} 
                                     setCheckedState={setCheckedState}
                                     isPopupOpen={isPopupOpen}

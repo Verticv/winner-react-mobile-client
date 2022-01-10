@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import SubHorizontalMenu from './SubHorizontalMenu'
-import LiveCasinoBetHistoryTable from '../tables/LiveCasinoBetHistoryTable'
+import HistoryTable from 'components/common/HistoryTable'
 import SelectAllButton from '../../common/SelectAllButton'
 import Icon1 from '../../../images/newImages/mypage/live-casino/ico-1.png'
 import Icon2 from '../../../images/newImages/mypage/live-casino/ico-2.png'
@@ -21,82 +21,88 @@ const subTabsArray = [
     { text: "빅게이밍", icon: Icon9, id: 6 },
 ];
 
-const tableArrayTitles = [
-    {
-        id: 0,
-        text: "베팅번호",
-        isRed: false,
-    },
-    {
-        id: 1,
-        text: "베팅시간",
-        isRed: false,
+// 베팅번호 => number
+// 베팅시간 => time
+// 게임종류  => type
+// 게임구분 => name
+// 베팅금액  => amount
+// 적중/손실금액 => profit
+// 상태 => status
 
-    },
-    {
-        id: 2,
-        text: "게임종류",
-        isRed: false,
-
-    },
-    {
-        id: 3,
-        text: "게임구분",
-        isRed: false,
-
-    },
-    {
-        id: 4,
-        text: "베팅금액",
-        isRed: false,
-
-    },
-    {
-        id: 5,
-        text: "적중/손실금액",
-        isRed: false,
-
-    },
-    {
-        id: 6,
-        text: "상태",
-        isRed: false,
-
-    },
+const tableData = [
+    [          
+        {
+            0: {베팅번호: 7193915},
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:46:13"}
+        },
+        {
+            0: {게임종류: "에볼루션"}
+        },
+        {
+            0: {게임구분: "바카라"}
+        },
+        {
+            0: {베팅금액: "12,000"}
+        },
+        {
+            0: {'적중/손실금액': "-12,000"}
+        },
+        {
+            0: {상태: "패"}
+        },
+        {
+            buttonColor: '#0056a6'
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193914}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "에볼루션"}
+        },
+        {
+            0: {게임구분: "바카라"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {'적중/손실금액': "+900,000,000"}
+        },
+        {
+            0: {상태: "승"}
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193913}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "프레그메틱플레이"}
+        },
+        {
+            0: {게임구분: "블랙잭"}
+        },
+        {
+            0: {베팅금액: "800,000"}
+        },
+        {
+            0: {'적중/손실금액': "-800,000"}
+        },
+        {
+            0: {상태: "패"}
+        }
+    ],
 ]
-
-const tableArray = [
-    {
-        id: 0,
-        number: 7193915,
-        time: "2021-06-29 15:46:13",
-        type: "에볼루션",
-        name: "바카라",
-        amount: "12,000",
-        profit: "-12,000",
-        status: "패"
-    },
-    {
-        id: 1,
-        number: 7193914,
-        time: "2021-06-29 15:45:41",
-        type: "에볼루션",
-        name: "바카라",
-        amount: "900,000,000",
-        profit: "+900,000,000",
-        status: "승"
-    },
-    {
-        id: 2,
-        number: 7193913,
-        time: "2021-06-29 15:45:41",
-        type: "프레그메틱플레이",
-        name: "블랙잭",
-        amount: "800,000",
-        profit: "-800,000",
-        status: "패"
-    },
-];
 
 const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
 
@@ -118,8 +124,6 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
                         </div>
                     </div>
                     </div>
-
-                    {/* <DateSearchBar isLeagueSearch={false} /> */}
                 </>
 
             )}
@@ -127,10 +131,9 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
             <DateSearchBar isLeagueSearch={false} />
 
             <div className="h-full">
-                <LiveCasinoBetHistoryTable
+                <HistoryTable
                     containerBackground= '#f7f9fc'
-                    array={tableArray}
-                    titleArray={tableArrayTitles}
+                    tableData={tableData}
                     checkedState={checkedState} 
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}

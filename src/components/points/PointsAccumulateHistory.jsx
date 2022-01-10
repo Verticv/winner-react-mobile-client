@@ -1,102 +1,171 @@
 import Pagination from 'components/myPage/Pagination'
 import React, { useState } from 'react'
 import DateSearchBar from '../myPage/DateSearchBar'
-import LiveCasinoBetHistoryTable from '../myPage/tables/LiveCasinoBetHistoryTable';
+import HistoryTable from 'components/common/HistoryTable'
 
-const tableArrayTitles = [
-    {
-        id: 0,
-        text: "적립일",
-        isRed: false,
-    },
-    {
-        id: 1,
-        text: "제목",
-        isRed: false,
-    },
-    {
-        id: 2,
-        text: "아이디",
-        isRed: false,
-    },
-    {
-        id: 3,
-        text: "퍼센트",
-        isRed: false,
-    },
-    {
-        id: 4,
-        text: "베팅금액",
-        isRed: false,
-    }
+
+const tableData = [
+    [          
+        {
+            0: {적립일: '2021-06-30'},
+        },
+        {
+            0: {제목: "Rolling Bouns"}
+        },
+        {
+            0: {아이디: "eric123"},
+            1: {종류: "스포츠"}
+        },
+        {
+            0: {퍼센트: "1.00%"},
+            1: {보너스퍼센트: "100%"}
+        },
+        {
+            0: {베팅금액: "5,000"},
+            1: {적립포인트: "50P"}
+        }
+    ],
+    [          
+        {
+            0: {적립일: '2021-06-30'},
+        },
+        {
+            0: {제목: "Rolling Bouns"}
+        },
+        {
+            0: {아이디: "eric123"},
+            1: {종류: "스포츠"}
+        },
+        {
+            0: {퍼센트: "1.00%"},
+            1: {보너스퍼센트: "100%"}
+        },
+        {
+            0: {베팅금액: "5,000"},
+            1: {적립포인트: "50P"}
+        }
+    ],
+    [          
+        {
+            0: {적립일: '2021-06-30'},
+        },
+        {
+            0: {제목: "Rolling Bouns"}
+        },
+        {
+            0: {아이디: "eric123"},
+            1: {종류: "스포츠"}
+        },
+        {
+            0: {퍼센트: "1.00%"},
+            1: {보너스퍼센트: "100%"}
+        },
+        {
+            0: {베팅금액: "5,000"},
+            1: {적립포인트: "50P"}
+        }
+    ],
+    [          
+        {
+            0: {적립일: '2021-06-30'},
+        },
+        {
+            0: {제목: "Rolling Bouns"}
+        },
+        {
+            0: {아이디: "eric123"},
+            1: {종류: "스포츠"}
+        },
+        {
+            0: {퍼센트: "1.00%"},
+            1: {보너스퍼센트: "100%"}
+        },
+        {
+            0: {베팅금액: "5,000"},
+            1: {적립포인트: "50P"}
+        }
+    ],
+    [          
+        {
+            0: {적립일: '2021-06-30'},
+        },
+        {
+            0: {제목: "Rolling Bouns"}
+        },
+        {
+            0: {아이디: "eric123"},
+            1: {종류: "스포츠"}
+        },
+        {
+            0: {퍼센트: "1.00%"},
+            1: {보너스퍼센트: "100%"}
+        },
+        {
+            0: {베팅금액: "5,000"},
+            1: {적립포인트: "50P"}
+        }
+    ],
+    [          
+        {
+            0: {적립일: '2021-06-30'},
+        },
+        {
+            0: {제목: "Rolling Bouns"}
+        },
+        {
+            0: {아이디: "eric123"},
+            1: {종류: "스포츠"}
+        },
+        {
+            0: {퍼센트: "1.00%"},
+            1: {보너스퍼센트: "100%"}
+        },
+        {
+            0: {베팅금액: "5,000"},
+            1: {적립포인트: "50P"}
+        }
+    ],
+    [          
+        {
+            0: {적립일: '2021-06-30'},
+        },
+        {
+            0: {제목: "Rolling Bouns"}
+        },
+        {
+            0: {아이디: "eric123"},
+            1: {종류: "스포츠"}
+        },
+        {
+            0: {퍼센트: "1.00%"},
+            1: {보너스퍼센트: "100%"}
+        },
+        {
+            0: {베팅금액: "5,000"},
+            1: {적립포인트: "50P"}
+        }
+    ],
+    [          
+        {
+            0: {적립일: '2021-06-30'},
+        },
+        {
+            0: {제목: "Rolling Bouns"}
+        },
+        {
+            0: {아이디: "eric123"},
+            1: {종류: "스포츠"}
+        },
+        {
+            0: {퍼센트: "1.00%"},
+            1: {보너스퍼센트: "100%"}
+        },
+        {
+            0: {베팅금액: "5,000"},
+            1: {적립포인트: "50P"}
+        }
+    ],
 ]
-
-const tableArray = [
-    {
-        id: 0,
-        number: '2021-06-30',
-        time: "Rolling Bouns",
-        type: "eric123",
-        name: "1.00%",
-        amount: '5,000',
-    },
-    {
-        id: 1,
-        number: '2021-06-30',
-        time: "Rolling Bouns",
-        type: "eric123",
-        name: "1.00%",
-        amount: '5,000',
-    },
-    {
-        id: 2,
-        number: '2021-06-30',
-        time: "Rolling Bouns",
-        type: "eric123",
-        name: "1.00%",
-        amount: '5,000',
-    },
-    {
-        id: 3,
-        number: '2021-06-30',
-        time: "Rolling Bouns",
-        type: "eric123",
-        name: "1.00%",
-        amount: '5,000',
-    },
-    {
-        id: 4,
-        number: '2021-06-30',
-        time: "Rolling Bouns",
-        type: "eric123",
-        name: "1.00%",
-        amount: '5,000',
-    },
-    {
-        id: 5,
-        number: '2021-06-30',
-        time: "Rolling Bouns",
-        type: "eric123",
-        name: "1.00%",
-        amount: '5,000',
-    },
-    {
-        id: 6,
-        number: '2021-06-30',
-        time: "Rolling Bouns",
-        type: "eric123",
-        name: "1.00%",
-        amount: '5,000',
-    },
-    {
-        id: 7,
-        number: '2021-06-30',
-        time: "Rolling Bouns",
-        type: "eric123",
-        name: "1.00%",
-        amount: '5,000',
-    },
-];
 
 
 const PointsAccumulateHistory = () => {
@@ -160,10 +229,9 @@ const PointsAccumulateHistory = () => {
             <DateSearchBar isLeagueSearch={false} withBlackButton />
 
             <div className="h-full">
-                <LiveCasinoBetHistoryTable
+                <HistoryTable
                     containerBackground= '#f7f9fc'
-                    array={tableArray} 
-                    titleArray={tableArrayTitles}
+                    tableData={tableData}
                     checkedState={checkedState} 
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}
@@ -171,7 +239,6 @@ const PointsAccumulateHistory = () => {
                     cardHeight='25.25rem'
                     isButtonGradient={false}
                     hasLeftInput={false}
-                    hasExtraColumns={true}
                     hasButton={false}
                 />   
             </div>

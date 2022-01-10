@@ -1,105 +1,156 @@
 import Pagination from 'components/myPage/Pagination'
 import React, { useState } from 'react'
 import DateSearchBar from '../myPage/DateSearchBar'
-import LiveCasinoBetHistoryTable from '../myPage/tables/LiveCasinoBetHistoryTable';
+import HistoryTable from 'components/common/HistoryTable'
 
-const tableArrayTitles = [
-    {
-        id: 0,
-        text: "신청포인트",
-        isRed: false,
-    },
-    {
-        id: 1,
-        text: "사용구분",
-        isRed: false,
-    },
-    {
-        id: 2,
-        text: "신청일시",
-        isRed: false,
-    },
-    {
-        id: 3,
-        text: "처리일시",
-        isRed: false,
-    }
+const tableData = [
+    [          
+        {
+            0: {신청포인트: '100,000,000'},
+        },
+        {
+            0: {사용구분: "보유머니전환"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {신청포인트: '100,000,000'},
+        },
+        {
+            0: {사용구분: "보유머니전환"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#9ca3af',
+            buttonText: '취소'
+        }
+    ],
+    [          
+        {
+            0: {신청포인트: '100,000,000'},
+        },
+        {
+            0: {사용구분: "보유머니전환"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {신청포인트: '100,000,000'},
+        },
+        {
+            0: {사용구분: "보유머니전환"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {신청포인트: '100,000,000'},
+        },
+        {
+            0: {사용구분: "보유머니전환"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {신청포인트: '100,000,000'},
+        },
+        {
+            0: {사용구분: "보유머니전환"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {신청포인트: '100,000,000'},
+        },
+        {
+            0: {사용구분: "보유머니전환"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+    [          
+        {
+            0: {신청포인트: '100,000,000'},
+        },
+        {
+            0: {사용구분: "보유머니전환"}
+        },
+        {
+            0: {신청일시: "2021-06-30 14:45"}
+        },
+        {
+            0: {처리일시: "2021-06-30 14:45"}
+        },
+        {
+            buttonColor: '#0056a6',
+            buttonText: '완료'
+        }
+    ],
+
 ]
 
-const tableArray = [
-    {
-        id: 0,
-        number: '100,000,000',
-        time: "보유머니전환",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 1,
-        number: '100,000,000',
-        time: "보유머니전환",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#9ca3af',
-        buttonText: '취소',
-    },
-    {
-        id: 2,
-        number: '100,000,000',
-        time: "보유머니전환",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 3,
-        number: '100,000,000',
-        time: "보유머니전환",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 4,
-        number: '100,000,000',
-        time: "보유머니전환",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 5,
-        number: '100,000,000',
-        time: "보유머니전환",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 6,
-        number: '100,000,000',
-        time: "보유머니전환",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-    {
-        id: 7,
-        number: '100,000,000',
-        time: "보유머니전환",
-        type: "2021-06-30 14:45",
-        name: "2021-06-30 14:45",
-        buttonColor: '#0056a6',
-        buttonText: '완료',
-    },
-];
 
 
 const PointsTransactionHistory = () => {
@@ -163,10 +214,9 @@ const PointsTransactionHistory = () => {
             <DateSearchBar isLeagueSearch={false} withBlackButton />
 
             <div className="h-full">
-                <LiveCasinoBetHistoryTable
+                <HistoryTable
                     containerBackground= '#f7f9fc'
-                    array={tableArray} 
-                    titleArray={tableArrayTitles}
+                    tableData={tableData}
                     checkedState={checkedState} 
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}
