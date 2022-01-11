@@ -6,7 +6,7 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
 
     function Cells({ cards }) {
         const detailButton =  (
-            <button style={{width: '10.875rem', height: '10.875rem', padding: '1px'}} className="flex items-center justify-center rounded-xl bg-blue-r0070d9 hover:opacity-75">
+            <button style={{width: '10.875rem', height: '10.875rem', padding: '1px'}} className="flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75">
                 <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-xl p-10 border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                     <span style={{fontSize: '2.8125rem', lineHeight: '1.1'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white">상세 보기</span>                    
                 </div>
@@ -90,7 +90,7 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
                     </PopupControls> 
                 </div>) 
                 : hasButton &&
-                    <button style={{width: '10.875rem', height: '10.875rem',  padding: '1px', backgroundColor: card[card.length -1].buttonColor || 'red'}} className="flex items-center justify-center rounded-xl hover:opacity-75">
+                    <button style={{width: '10.875rem', height: '10.875rem',  padding: '1px', backgroundColor: card[card.length -1].buttonColor || 'red'}} className="flex items-center justify-center rounded-2xl hover:opacity-75">
                         <div style={{padding: `${wrapButtonText ? '2rem' : ''}`}} className="flex w-full h-full items-center justify-center flex-wrap rounded-xl cursor-pointer">
                             <span style={{fontSize: '2.8125rem', lineHeight: '1.1', width: '10.875rem', marginTop: '0.4375rem'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length -1].buttonColor === '#0056a6' ? <div> {card[card.length -1].buttonText ? card[card.length -1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length -1].buttonText ||'진행중'} </span>
                         </div>
