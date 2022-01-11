@@ -35,7 +35,7 @@ const MinigamesRightPanel = ({
             style={{
                 width:"24.375rem",
                 height: '7.5rem',
-                padding: '0.1875rem',
+                padding: '1px',
                 fontSize: '2.625rem',
                 borderColor: "#b3bac1",
                 borderRadius: '0.75rem'
@@ -59,7 +59,7 @@ const MinigamesRightPanel = ({
             style={{
                 width:"24.375rem",
                 height: '7.5rem',
-                // padding: '0.1875rem',
+                // padding: '1px',
                 fontSize: '2.625rem',
                 borderColor: "#171a1d",
                 borderRadius: '0.75rem'
@@ -87,7 +87,7 @@ const MinigamesRightPanel = ({
                         borderRadius:"0.75rem",
                         width: '36.375rem',
                         height: '7.5rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                     }}
                     className={`bg-white overflow-hidden rounded-lg flex items-end`} 
                 >
@@ -307,7 +307,7 @@ const MinigamesRightPanel = ({
 
                 
 
-                <button style={{width:"73.875rem", height: '9rem', padding: '0.1875rem', fontSize: '3.1875rem'}} className="flex items-center justify-center rounded-lg bg-blue-r2068b2 flex-shrink-0 hover:opacity-75">
+                <button style={{width:"73.875rem", height: '9rem', padding: '1px', fontSize: '3.1875rem'}} className="flex items-center justify-center rounded-lg bg-blue-r2068b2 flex-shrink-0 hover:opacity-75">
                     <div style={{borderRadius:"3px"}} className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                         <img src={BetIcon} alt="" />
                         <span style={{marginLeft: '1.3125rem'}} className="font-spoqaMedium tracking-tight text-white">베팅하기</span>

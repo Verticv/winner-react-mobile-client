@@ -64,7 +64,7 @@ const HorizontalMenu9 = ({
                             borderColor: pathname === item.path ? "#1a73ce" : "#d6dfe8",   
                             boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset'
                         }}
-                        className={`mt-3px w-full rounded-md flex items-center justify-center pt-3px`}
+                        className={`mt-3px w-full rounded-2xl flex items-center justify-center pt-3px`}
                     >
                         <span 
                             className={`${

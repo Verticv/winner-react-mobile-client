@@ -158,7 +158,7 @@ class Calendar extends React.Component {
             </div>
         </div>
         <button
-          style={{width: '26.3125rem', height: '7.3125rem', padding: '0.1875rem', marginTop: '3.8125rem', marginBottom: '32rem', fontSize: '2.625rem'}}
+          style={{width: '26.3125rem', height: '7.3125rem', padding: '1px', marginTop: '3.8125rem', marginBottom: '32rem', fontSize: '2.625rem'}}
           className="flex items-center justify-center rounded-lg bg-blue-r0070d9 hover:opacity-75"
           onClick={this.checkAttendance}
         >

@@ -49,7 +49,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                 height: height+ "rem",
                 background: "linear-gradient(to bottom, #b8d5e6, #b7c7d4)",
                 marginBottom: '0.375rem',
-                padding: '0.1875rem'
+                padding: '1px'
             }}
             className={`flex justify-center items-center flex-shrink-0`} 
         >
@@ -139,7 +139,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                 height: height+ "rem",
                 background: "linear-gradient(to bottom, #b8d5e6, #b7c7d4)",
                 marginBottom: '0.375rem',
-                padding: '0.1875rem'
+                padding: '1px'
             }}
             className={`flex justify-center items-center flex-shrink-0 border-b border-blue-abc7db`} 
         >

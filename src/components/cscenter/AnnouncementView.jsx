@@ -103,7 +103,7 @@ const AnnouncementView = () => {
             </div>
 
             <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '14rem'}} className="flex items-start justify-between">
-                <button style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75">
+                <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
@@ -115,7 +115,7 @@ const AnnouncementView = () => {
                 </button>
 
                 <button 
-                    style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
+                    style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
                     className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/cscenter/contact/all')}
                 >
@@ -130,7 +130,7 @@ const AnnouncementView = () => {
                 </button>
 
                 <button 
-                    style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem'}} 
+                    style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} 
                     className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard/view2')}
                 >

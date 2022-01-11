@@ -1,17 +1,28 @@
 import React, { useState } from 'react'
-import MobileDropDownControls from 'components/dropdowns/MobileDropDownControls';
 import DownArrowIcon from '../../images/newImages/search-arrow-down.png'
 import SearchIcon from '../../images/newImages/search-icon.png'
+import DropDownControls from 'components/dropdowns/RegisterDropDownControls'
 
 const Search = () => {
 
   const [selectedCarrier, setSelectedCarrier] = useState("제목")
   const [isDropdownOpen, setDropdownOpen] = useState(true)
 
-  const dropDownCellClass = "flex w-120px h-40px py-2px bg-white items-center px-14px"
+  const dropDownCellClass = "flex w-full h-40px p-8 bg-white justify-between items-center border-b border-gray-ececec"
+
+//   const carrierButton = (
+//         <div
+//             onFocus={() => setSelectedInput(4)}
+//             onBlur={(e) => setSelectedInput(false)}
+//             className="relative cursor-pointer flex w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-start items-center tracking-minus05" 
+//         >
+//             <label className="w-full group-hover:text-black cursor-pointer text-left">{selectedCarrier}</label>
+//             <img style={{marginRight: '20%', width: '1.5625rem'}} className="h-4 object-contain" src={DownArrowIcon} alt="arrow" /> 
+//         </div>
+//     )
 
   const dropdownButton = (
-      <div style={{width: '15rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-md border border-gray-dddddd group">
+      <div style={{width: '15rem', height: '6.75rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-2xl border border-gray-dddddd group">
           <input  className="w-0 text-16px"/>
           <div
               className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
@@ -21,47 +32,87 @@ const Search = () => {
           </div>
       </div>
   )
+
+  
   const searchDropdown = (
-      <div style={{width: '15rem'}} className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
-          <button style={{width: '15rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
-              setSelectedCarrier("제목")
-              setDropdownOpen(false)
-          }}>
-              제목
-          </button>
-          <button style={{width: '15rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
-              setSelectedCarrier("본문")
-              setDropdownOpen(false)
-          }}>
-              본문
-          </button>
-          <button style={{width: '15rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
-              setSelectedCarrier("작성자")
-              setDropdownOpen(false)
-          }}>
-              작성자
-          </button>
+    <div className="flex flex-col h-full items-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
+          
+          <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("제목")
+                setDropdownOpen(false)
+            }}>
+                <p>제목</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedCarrier === "제목"}
+                            name="제목"
+                        />
+                    </label>
+                </div>
+            </button>
+
+
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("본문")
+                setDropdownOpen(false)
+            }}>
+                <p>본문</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedCarrier === "본문"}
+                            name="본문"
+                        />
+                    </label>
+                </div>
+            </button>
+
+            <button style={{height: '8rem'}} className={dropDownCellClass} onClick={() => {
+                setSelectedCarrier("작성자")
+                setDropdownOpen(false)
+            }}>
+                <p>작성자</p>
+                <div>
+                    <label className="form-control">
+                        <input
+                            className='w-12 h-12 radio-input'
+                            type="radio"
+                            checked={selectedCarrier === "작성자"}
+                            name="작성자"
+                        />
+                    </label>
+                </div>
+            </button>
+
       </div>
   )
 
   const InboxSearch = (
     <div style={{padding: '1.75rem 1.625rem', paddingBottom: '1.5625rem', height: '10.4375rem', borderWidth: '0.1875rem'}} className="w-full bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex items-center justify-center">
-        <MobileDropDownControls 
+        {/* <MobileDropDownControls 
             buttonChild={dropdownButton} 
             isDropdownOpen={isDropdownOpen} 
             setDropdownOpen={setDropdownOpen}
             dropdownContainerStyle={{marginTop: '6.75rem'}}
         >
             {searchDropdown}
-        </MobileDropDownControls>
+        </MobileDropDownControls> */}
+        <DropDownControls  buttonChild={dropdownButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
+            {searchDropdown}
+        </DropDownControls>
 
-        <div style={{borderWidth: '0.1875rem', marginLeft: '0.6875rem'}} className="flex w-full h-full bg-white rounded-md border border-gray-dddddd">
+        <div style={{borderWidth: '0.1875rem', marginLeft: '0.6875rem'}} className="flex w-full h-full bg-white rounded-2xl border border-gray-dddddd">
             <input 
                 style={{fontSize: '2.8125rem', paddingLeft: '1.5625rem'}}
-                className="rounded-md placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"
+                className="rounded-2xl placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"
                 placeholder="검색어를 입력해 주세요"
             />
-            <button style={{width: '6.75rem', height: '6.75rem', marginTop: '-0.1875rem', marginRight: '-0.1875rem'}} className="flex items-center justify-center h-full rounded-md bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 flex-shrink-0 hover:opacity-75">
+            <button style={{width: '6.75rem', height: '6.75rem', marginTop: '-0.1875rem', marginRight: '-0.1875rem'}} className="flex items-center justify-center h-full rounded-2xl bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 flex-shrink-0 hover:opacity-75">
                 <img style={{width: '3.125rem', height: '3.125rem'}} src={SearchIcon} alt=""/>
             </button>
         </div>

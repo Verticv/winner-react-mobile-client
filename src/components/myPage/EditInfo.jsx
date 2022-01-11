@@ -186,7 +186,7 @@ const EditInfo = () => {
                 </div>
 
                 <div style={{marginTop: '3.75rem', marginBottom: '14rem'}} className="w-full flex items-center justify-center">
-                    <button style={{width: '36.4375rem', height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem'}} className="flex items-center justify-center rounded-md bg-red-cb4343 hover:opacity-75">
+                    <button style={{width: '36.4375rem', height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} className="flex items-center justify-center rounded-2xl bg-red-cb4343 hover:opacity-75">
                         <div className="flex items-center justify-center w-full h-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-white">수정하기</span>
                         </div>

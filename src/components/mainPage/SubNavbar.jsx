@@ -52,7 +52,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                     ? "text-white duration-150" 
                     : " space-x-2px text-gray-subNavbar duration-300"
                 } 
-                flex flex-col justify-start flex-shrink-0 items-center w-64 rounded-md z-20 transition ease-in-out tracking-tight relative`} 
+                flex flex-col justify-start flex-shrink-0 items-center w-64 rounded-2xl z-20 transition ease-in-out tracking-tight relative`} 
                 onClick={() => {
                     setSelectedTab(item.id)
                     setGameBanner(item.id)

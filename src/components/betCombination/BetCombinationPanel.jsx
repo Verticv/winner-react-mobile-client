@@ -338,7 +338,7 @@ const BetCombinationPanel = ({
                 borderWidth: '0.1875rem',
                 fontSize: '2.625rem'
             }}
-            className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-md border border-gray-cccccc font-spoqaMedium text-15px tracking-tight text-gray-r454545 group" 
+            className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-2xl border border-gray-cccccc font-spoqaMedium text-15px tracking-tight text-gray-r454545 group" 
         >
             <div className="flex">
                 <img style={{width: '3.75rem', marginLeft: '2.0625rem', marginRight: '0.9375rem'}} className="object-contain" src={GlobeIcon} alt="" />
@@ -383,7 +383,7 @@ const BetCombinationPanel = ({
                     style={{
                         backgroundColor: "#171a1d",
                         height:"7.3125rem",
-                        padding: '0.1875rem',
+                        padding: '1px',
                     }} 
                     className="relative w-1/2 flex mr-4 items-center justify-center rounded-lg hover:opacity-75"
                     onClick={() => setDropdownOpen(false)}
@@ -392,9 +392,8 @@ const BetCombinationPanel = ({
                         style={{
                             borderColor: "#737579",
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
-                            borderRadius:"4px"
                         }} 
-                        className="flex w-full h-full items-center justify-center border cursor-pointer"
+                        className="flex w-full h-full items-center rounded-lg justify-center border cursor-pointer"
                     >
                         <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
                             확인
@@ -405,7 +404,7 @@ const BetCombinationPanel = ({
                     style={{
                         backgroundColor: "#cb4343",
                         height:"7.3125rem",
-                        padding: '0.1875rem',
+                        padding: '1px',
                     }} 
                     className="relative w-1/2 flex items-center justify-center rounded-lg hover:opacity-75"
                     onClick={() => setCheckedState(filterArray.fill(false))}
@@ -414,9 +413,8 @@ const BetCombinationPanel = ({
                         style={{
                             borderColor: "#f36576",
                             background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-                            borderRadius:"4px"
                         }} 
-                        className="flex w-full h-full items-center justify-center border cursor-pointer"
+                        className="flex w-full h-full items-center justify-center rounded-lg border cursor-pointer"
                     >
                         <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
                             초기화
@@ -449,7 +447,7 @@ const BetCombinationPanel = ({
                 style={{
                     width:"29.6875rem", 
                     height: "7.4375rem",
-                    padding: '0.1875rem',
+                    padding: '1px',
                     fontSize: '2.625rem',
                     marginRight: '0.375rem',
                     backgroundColor: "#ad7b4e"
@@ -477,7 +475,7 @@ const BetCombinationPanel = ({
                 style={{
                     width:"10rem", 
                     height: "7.4375rem",
-                    padding: '0.1875rem',
+                    padding: '1px',
                     fontSize: '2.625rem',
                     marginRight: '0.375rem',
                     backgroundColor: "#ad7b4e"
@@ -501,7 +499,7 @@ const BetCombinationPanel = ({
                 style={{
                     width:"29.6875rem", 
                     height: "7.4375rem",
-                    padding: '0.1875rem',
+                    padding: '1px',
                     fontSize: '2.625rem',
                     backgroundColor: "#ad7b4e"
                 }}  
@@ -551,7 +549,7 @@ const BetCombinationPanel = ({
                     style={{
                         width:"29.6875rem", 
                         height: `${isSubButton? "9.9375rem" : "7.4375rem"}`,
-                        padding: '0.1875rem',
+                        padding: '1px',
                         fontSize: '2.625rem',
                         marginRight: '0.375rem',
                         backgroundColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#cb4343" : "#b3b3b3" 
@@ -597,7 +595,7 @@ const BetCombinationPanel = ({
                     style={{
                         width:"10rem", 
                         height: `${isSubButton? "9.9375rem" : "7.4375rem"}`,
-                        padding: '0.1875rem',
+                        padding: '1px',
                         fontSize: '2.625rem',
                         marginRight: '0.375rem',
                         backgroundColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#cb4343" : "#b3b3b3" 
@@ -631,7 +629,7 @@ const BetCombinationPanel = ({
                     style={{
                         width:"29.6875rem", 
                         height: `${isSubButton? "9.9375rem" : "7.4375rem"}`,
-                        padding: '0.1875rem',
+                        padding: '1px',
                         fontSize: '2.625rem',
                         marginRight: '0.375rem',
                         backgroundColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3" 
@@ -713,7 +711,7 @@ const BetCombinationPanel = ({
                                 style={{
                                     width:"5.625rem",
                                     height: "7.4375rem",
-                                    padding: '0.1875rem',
+                                    padding: '1px',
                                     backgroundColor: isOpen[items.id] === true ? "#5b646e" : "#171a1d"
                                 }} 
                                 className="relative flex items-center justify-center rounded-lg group hover:opacity-75"

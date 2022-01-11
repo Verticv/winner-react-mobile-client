@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import AlertIcon from '../../images/myPage/alert.png'
 import BankTable from './BankTable'
 import BottomNavbar from '../bottomNavbar/BottomNavbar'
+import WarningMessage from '../common/WarningMessage'
 
 const MoneyExchange = () => {
     const [inputValue, setInputValue] = useState(null)
@@ -19,17 +19,13 @@ const MoneyExchange = () => {
     return (
         <div style={{padding: '1.875rem', paddingTop: '0'}} className="flex flex-col items-center">
 
-            <div style={{paddingLeft: '1.875rem', paddingTop: '1.875rem', paddingBottom: '1.875rem', borderWidth: '0.1875rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de">
-                <div className="flex space-x-10px">
-                    <img style={{width: '3.375rem', height: '3.375rem'}} src={AlertIcon} alt="" />
-                    <span style={{fontSize: '2.8125rem', lineHeight: '1.2'}} className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
-                </div>
-                <div style={{marginTop: '1.625rem'}} className="flex flex-col text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
-                    <span style={{fontSize: '2.5rem', marginRight: '13.5rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을.</span>
-                    <span style={{fontSize: '2.5rem', marginRight: '6.875rem', marginTop: '0.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.</span>
-                    <span style={{fontSize: '2.5rem', marginTop: '0.875rem'}} className=""><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
-                </div>
-            </div>
+            <WarningMessage 
+                title='확인 / 필독사항'
+                message1='환전 신청 시 현재 보유머니에서 차감되며, 회원님의 계좌번호로 입금됩니다.'
+                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.'
+                mr2='7.8rem'
+                message3='자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
+            />
 
             <div style={{padding: '0.9375rem', paddingBottom: '2.0625rem', marginTop: '1.875rem'}} className="w-full rounded-2xl shadow-subNavbar">
                 <div style={{padding: '1.3125rem 2.0625rem'}} className="w-full rounded-2xl border border-gray-dddddd bg-gray-f9f9f9">
@@ -88,7 +84,7 @@ const MoneyExchange = () => {
                 <div style={{marginTop: '1.875rem', marginBottom: '3.8125rem'}} className="">
                     <div style={{marginBottom: '0.9375rem'}} className="flex w-full h-full items-center justify-between">
                         <button
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 10000)}
                         >
@@ -98,7 +94,7 @@ const MoneyExchange = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 30000)}
                         >
@@ -108,7 +104,7 @@ const MoneyExchange = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 50000)}
                         >
@@ -118,7 +114,7 @@ const MoneyExchange = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r2068b2 hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 100000)}
                         >
@@ -130,7 +126,7 @@ const MoneyExchange = () => {
 
                     <div className="flex w-full h-full items-center justify-between">
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 300000)}
                         >
@@ -140,7 +136,7 @@ const MoneyExchange = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 500000)}
                         >
@@ -150,7 +146,7 @@ const MoneyExchange = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 1000000)}
                         >
@@ -160,7 +156,7 @@ const MoneyExchange = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
                             onClick={() => setInputValue(0)}
                         >
@@ -194,7 +190,7 @@ const MoneyExchange = () => {
                     </div>
             </div>
 
-            <button style={{width: "36.4375rem", height: '7.3125rem', padding: '0.1875rem',  marginTop: '3.75rem', marginBottom: '5.8125rem'}} className="flex items-center justify-center h-52px rounded-lg bg-blue-r0070d9 hover:opacity-75">
+            <button style={{width: "36.4375rem", height: '7.3125rem', padding: '1px',  marginTop: '3.75rem', marginBottom: '5.8125rem'}} className="flex items-center justify-center h-52px rounded-lg bg-blue-r0070d9 hover:opacity-75">
                 <div className="flex items-center justify-center rounded-lg w-full h-full border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                     <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
                 </div>

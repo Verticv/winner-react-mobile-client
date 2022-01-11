@@ -14,7 +14,7 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
         )
 
         const wideDetailButtonComponent =  (
-            <button style={{width: '20.25rem', height: '14.0625rem', padding: '0.1875rem'}} className="flex items-center justify-center rounded-3xl bg-orange-d43712 hover:opacity-75">
+            <button style={{width: '20.25rem', height: '14.0625rem', padding: '1px'}} className="flex items-center justify-center rounded-3xl bg-orange-d43712 hover:opacity-75">
                 <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-3xl p-10 border border-orange-f07a5f bg-gradient-to-b from-orange-f4603d to-orange-e9451e cursor-pointer">
                     <span style={{fontSize: '2.8125rem', lineHeight: '1.1'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px">사용하기</span>
                 </div>

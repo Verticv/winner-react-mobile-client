@@ -34,14 +34,12 @@ const ChargeHistory = () => {
             <div className="mt-20px h-36px w-full flex items-center justify-between">
                 <div className="flex space-x-2px">
                     <button 
-                        style={{borderRadius:"4px"}}
                         className="flex items-center justify-center w-90px h-36px rounded-lg bg-gray-r171a1d hover:opacity-75"
                         onClick={() => AllSelectButtonPressed()}
                     >
                         <div 
                             style={{
                                 background: "linear-gradient(to bottom, #555555, #333333)",
-                                borderRadius: "3px"
                             }}
                             className="flex items-center justify-center h-34px w-88px rounded-lg border border-gray-r737579 cursor-pointer pt-px"
                         >
@@ -49,13 +47,11 @@ const ChargeHistory = () => {
                         </div>
                     </button>
                     <button 
-                        style={{borderRadius:"4px"}}
                         className="flex items-center justify-center w-90px h-36px rounded-lg bg-red-cb4343 hover:opacity-75"
                     >
                         <div 
                             style={{
                                 background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-                                borderRadius: "3px"
                             }}
                             className="flex items-center justify-center h-34px w-88px rounded-lg border border-red-f36576 cursor-pointer pt-px"
                         >

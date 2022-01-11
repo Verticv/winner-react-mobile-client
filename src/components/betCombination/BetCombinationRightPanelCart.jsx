@@ -84,7 +84,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
             style={{
                 width:"24.375rem",
                 height: '7.5rem',
-                padding: '0.1875rem',
+                padding: '1px',
                 fontSize: '2.625rem',
                 borderColor: "#b3bac1"
             }} 
@@ -94,10 +94,9 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
             <div 
                 style={{
                     background: "linear-gradient(to bottom, #feffff, #cedeed)",
-                    borderRadius: "3px",
                     borderWidth: '0.1875rem'
                 }}  
-                className="flex items-center justify-center border border-white cursor-pointer w-full h-full"
+                className="flex items-center justify-center rounded-lg border border-white cursor-pointer w-full h-full"
             >
                 <span className="font-roboto tracking-tight text-gray-r585858">{nf.format(amount)}</span>
             </div>
@@ -117,7 +116,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 )}
 
                 {!addedCard.length ? (
-                    <div style={{height: "6.3125rem", paddingLeft: '1.8125rem', marginBottom: '1.875rem', fontSize: '2.625rem', backgroundColor: "#e8e8e8", marginTop: '0.875rem'}} className="w-full rounded-md border border-gray-dddddd flex items-center">
+                    <div style={{height: "6.3125rem", paddingLeft: '1.8125rem', marginBottom: '1.875rem', fontSize: '2.625rem', backgroundColor: "#e8e8e8", marginTop: '0.875rem'}} className="w-full rounded-2xl border border-gray-dddddd flex items-center">
                         <p className="font-spoqaMedium tracking-tight text-gray-r454545">베팅을 선택하세요.</p>
                     </div>
                 ) : (
@@ -267,7 +266,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 </div>
 
                 <button 
-                    style={{height: '9rem', padding: '0.1875rem', fontSize: '3.1875rem'}}
+                    style={{height: '9rem', padding: '1px', fontSize: '3.1875rem'}}
                     className="flex items-center w-full justify-center rounded-lg bg-blue-r2068b2 hover:opacity-75"
                     onClick={() => {
                         setAddedCard([])

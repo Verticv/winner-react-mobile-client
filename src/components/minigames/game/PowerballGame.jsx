@@ -52,7 +52,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                     <div style={{height: '5.8125rem', borderWidth: '0.1875rem'}} className="border border-gray-c7b9a6 flex flex-shrink-0 items-center justify-center w-full">
                         <div 
                             style={{height:"3.9375rem",width: '15.9375rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
-                            className="flex-shrink-0 shadow-plain2 rounded-md border border-white flex flex-col items-center justify-center tracking-tight text-white"
+                            className="flex-shrink-0 shadow-plain2 rounded-2xl border border-white flex flex-col items-center justify-center tracking-tight text-white"
                         >
                             <p style={{marginTop: '0.4rem'}} className="font-spoqaMedium">[{titleNumber}게임] 파워볼</p>
                         </div>

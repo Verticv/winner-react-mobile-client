@@ -22,7 +22,7 @@ const HorizontalMenu3 = ({
                     width: '18.25rem',
                     height: '13.18rem',
                     marginRight: `${items.length - 1 !== index ? '0.5625rem' : '' }`, 
-                    padding: '0.1875rem'
+                    padding: '1px'
                 }}
                 className={`${
                     selectedTab === item.path

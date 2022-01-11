@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import BoardComposeViewPanel from 'components/common/cards/BoardComposeViewPanel';
-import CloseIcon from '../../images/popups/close.png'
+// import CloseIcon from '../../images/popups/close.png'
+import CloseIcon from '../../images/newImages/points-close.png'
 import Icon2 from '../../images/myPage/betHistory/ico_2.png'
 import Icon3 from '../../images/myPage/betHistory/ico_3.png'
 import Icon4 from '../../images/myPage/betHistory/ico_4.png'
@@ -123,7 +124,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
     return (
         <div style={{height:"100vh", width: '77.625rem' ,borderTopLeftRadius: '4rem', borderTopRightRadius: '4rem'}} className="flex flex-col rounded-lg overflow-hidden">
             <div style={{height: '9.5rem'}} className="relative bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
-                <label style={{fontSize: '3.75rem'}} className="font-spoqaBold text-white tracking-tight">베팅내역</label>
+                <label style={{fontSize: '3.75rem'}} className="font-spoqaBold text-white tracking-tight mt-2">베팅내역</label>
                 <button style={{marginRight: '4.625rem'}} className="absolute right-0 cursor-pointer z-20" onClick={() => setPopupOpen(false)}>
                     <img style={{width: '3.1875rem', height: '3.1875rem'}} src={CloseIcon} alt="close_icon" />
                 </button>
@@ -178,6 +179,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             <div style={{paddingBottom: '100rem'}}>
                                     <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true}/>
                                     <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={1} winAmount="0"  isAttached={true} noButtons={true}/>
+                                    <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true}/>
                                     {/* <SportsBetHistoryPanel type={3} isAttached={true} noButtons={true}/> */}
                                     {/* <SportsBetHistoryPanel type={4} id={0} noButtons={true} attachedArray={[0]} />
                                     <SportsBetHistoryPanel type={3} id={0} isAttached={true} noButtons={true} attachedArray={[2]} /> */}

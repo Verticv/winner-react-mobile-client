@@ -32,7 +32,7 @@ const DateSearchBar2 = () => {
     const dropDownCellClass = "flex w-full h-30px py-2px bg-white items-center px-10px"
 
     const gameResultButton = (
-        <div className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c hover:text-gray-r585858" >
+        <div className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c hover:text-gray-r585858" >
             <p className="mt-px">{selectedCarrier}</p>
             <img src={ArrowDownGray} alt="" />
         </div>
@@ -51,7 +51,7 @@ const DateSearchBar2 = () => {
 
 
     const searchDropdown = (
-        <div style={{height:"249px"}} className="mt-4px flex flex-col items-center justify-center w-138px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r8c8c8c font-spoqaMedium text-14px tracking-tight">
+        <div style={{height:"249px"}} className="mt-4px flex flex-col items-center justify-center w-138px overflow-hidden bg-white rounded-2xl border border-gray-dddddd text-gray-r8c8c8c font-spoqaMedium text-14px tracking-tight">
             <div style={{width:"134px"}} className="pt-4px mt-2px h-full overflow-y-scroll overflow-x-hidden">
                 <DropdownCells items={LeagueExampleArray} />
             </div>
@@ -75,7 +75,7 @@ const DateSearchBar2 = () => {
                 <div className="flex space-x-10px items-center  h-full justify-center">
                     <div className="relative">
                         <DatePicker 
-                            className="pt-px mt-px flex-shrink-0 outline-none w-138px h-42px rounded-md border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c focus:ml-10px"
+                            className="pt-px mt-px flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c focus:ml-10px"
                             locale="ko" 
                             selected={startDate} 
                             onChange={(date) => setStartDate(date)}

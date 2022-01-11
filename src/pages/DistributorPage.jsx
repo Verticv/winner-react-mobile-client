@@ -701,7 +701,7 @@ const DistributorPage = ({
 
                             <div className='flex relative'>
                                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '73rem'}} className="absolute h-full z-50"></div>
-                                <div style={{width: '75.75rem', borderWidth: '0.375rem', borderRightWidth: 0}} className="w-full border-2 rounded-md border-gray-dddddd shadow-plain10 overflow-scroll">
+                                <div style={{width: '75.75rem', borderWidth: '0.375rem', borderRightWidth: 0}} className="w-full border-2 rounded-2xl border-gray-dddddd shadow-plain10 overflow-scroll">
                                     <table className="w-full overflow-hidden">
                                         <thead style={{height: '8.8125rem', borderBottomWidth: '0.1875rem'}} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
                                             <tr style={{height: '8.8125rem'}} className="flex items-center">
@@ -818,7 +818,7 @@ const DistributorPage = ({
 
                             <div className='flex relative'> 
                                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '73rem'}} className="absolute h-full z-50"></div>
-                                <div style={{width: '75.75rem', borderWidth: '0.375rem', borderRightWidth: 0}} className="w-full border-2 rounded-md border-gray-dddddd shadow-plain10 overflow-scroll">
+                                <div style={{width: '75.75rem', borderWidth: '0.375rem', borderRightWidth: 0}} className="w-full border-2 rounded-2xl border-gray-dddddd shadow-plain10 overflow-scroll">
                                     <table className="w-full overflow-hidden">
                                         <thead style={{fontSize: '2.625rem'}} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-white tracking-tight">
                                             <tr style={{height: '8.625rem', borderBottomWidth: '0.1875rem'}} className="flex items-center border-b">
@@ -953,7 +953,7 @@ const DistributorPage = ({
                             </div>
 
                             {viewOnline && (
-                                <div style={{height:"9rem", padding: '0 1.125rem'}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-md items-center overflow-scroll">
+                                <div style={{height:"9rem", padding: '0 1.125rem'}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl items-center overflow-scroll">
                                     <UsersOnline />
                                     <UsersOnline name="tkskdl12" />
                                 </div>
@@ -990,8 +990,8 @@ const DistributorPage = ({
 
                             {/* === 추천회원내역 표 === */}
                             {/* w-1836px */}
-                            <div style={{filter: "drop-shadow(0px 0px 2px #00000050)", marginTop: '0.375rem', borderWidth: '0.375rem', width: '75.75rem', borderRightWidth: '0'}} className="flex flex-col w-full rounded-md border-t  border-gray-dddddd overflow-scroll">
-                                <div style={{ width: 'fit-content'}} className='flex flex-col w-full rounded-md border-t  border-gray-dddddd'>
+                            <div style={{filter: "drop-shadow(0px 0px 2px #00000050)", marginTop: '0.375rem', borderWidth: '0.375rem', width: '75.75rem', borderRightWidth: '0'}} className="flex flex-col w-full rounded-2xl border-t  border-gray-dddddd overflow-scroll">
+                                <div style={{ width: 'fit-content'}} className='flex flex-col w-full rounded-2xl border-t  border-gray-dddddd'>
                                     {/* === Header === */}
                                     <div style={{height: '8.5625rem', fontSize: '2.625rem'}} className="w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqaMedium text-white tracking-tight">
                                         <div style={{width: '18rem'}} className="text-center">번호</div>

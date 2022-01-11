@@ -64,7 +64,7 @@ const SportsPanel = ({
                     style={{
                         width: '26.875rem',
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                         textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "left" ? "#cb4343" : "#dddddd",                        
@@ -72,7 +72,7 @@ const SportsPanel = ({
                     className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
                 >
                     <div
-                    style={{padding: '0.1875rem'}}
+                    style={{padding: '1px'}}
                     className={`${
                         bet === "left" 
                         ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
@@ -91,7 +91,7 @@ const SportsPanel = ({
                     style={{
                         textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                     }} 
                     className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
@@ -110,7 +110,7 @@ const SportsPanel = ({
                     style={{
                             width: '26.875rem',
                             height: '7.4375rem',
-                            padding: '0.1875rem',
+                            padding: '1px',
                             marginRight: '0.375rem',
                         }} 
                     className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
@@ -174,7 +174,7 @@ const SportsPanel = ({
                      style={{
                         width: '26.875rem',
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                         textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "left" ? "#cb4343" : "#dddddd",                        
@@ -182,7 +182,7 @@ const SportsPanel = ({
                     className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
                 >
                     <div
-                    style={{padding: '0.1875rem'}}
+                    style={{padding: '1px'}}
                     className={`${
                         bet === "left" 
                         ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
@@ -200,7 +200,7 @@ const SportsPanel = ({
                     style={{
                         textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                     }} 
                     className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
@@ -219,7 +219,7 @@ const SportsPanel = ({
                     style={{
                         width: '26.875rem',
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                     }} 
                 className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>

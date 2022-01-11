@@ -97,13 +97,13 @@ const MenuCard = ({
     }
 
     return (
-        <div className="relative flex flex-col items-center w-300px h-307px border border-gray-ececec shadow-glow rounded-md bg-gradient-to-b from-white to-gray-f6f6f6 px-8px">
+        <div className="relative flex flex-col items-center w-300px h-307px border border-gray-ececec shadow-glow rounded-2xl bg-gradient-to-b from-white to-gray-f6f6f6 px-8px">
             <div className="flex flex-col h-308px justify-between pt-19px pb-10px">
                 <div className="flex flex-col space-y-4px items-center justify-center">
                     <img className={`object-none ${extraIconCss}`} src={mainIcon} alt="icon" />
                     <span className="text-18px text-gray-r667177 font-spoqaMedium pt-2px tracking-tight">{menuTitle}</span>
                 </div>
-                <div className="relative w-full border border-gray-d5d5d5 rounded-md">
+                <div className="relative w-full border border-gray-d5d5d5 rounded-2xl">
                     <MenuList items={menuArray} />
                     <div className="w-full h-10px rounded-lg absolute bottom-0 z-10 shadow-plain1"/>
                 </div>
@@ -116,5 +116,5 @@ const MenuCard = ({
         </div>
     )
 }
-// "w-full h-178px border border-gray-d5d5d5 rounded-md shadow-plain5"
+// "w-full h-178px border border-gray-d5d5d5 rounded-2xl shadow-plain5"
 export default MenuCard
