@@ -10,7 +10,6 @@ const HorizontalMenu1 = ({
     const history = useHistory();
     let pathname = window.location.pathname
    
-    const [isHover, setHover] = useState(null)
 
     function TabsList({ items }) {
         return items.map((item, index) => {
@@ -48,8 +47,6 @@ const HorizontalMenu1 = ({
                             setSelectedSubTab(0)
                         }
                     }}
-                    onMouseOver={() => setHover(item.id)}
-                    onMouseLeave={() => setHover(null)}
                 >
                     <div 
                         style={{
@@ -67,8 +64,6 @@ const HorizontalMenu1 = ({
                             style={{
                                 background: isSameLink
                                 ? "linear-gradient(to bottom, #2087f0, #1873cf)"
-                                : isHover === item.id 
-                                ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
                                 : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
                                 borderRadius:"1.625rem",
                                 borderTopLeftRadius:"1.625rem 1.3rem",

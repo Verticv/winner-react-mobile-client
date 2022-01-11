@@ -213,7 +213,7 @@ const PointsTransactionHistory = () => {
 
             <DateSearchBar isLeagueSearch={false} withBlackButton />
 
-            <div className="h-full">
+            <div className="h-full w-full">
                 <HistoryTable
                     containerBackground= '#f7f9fc'
                     tableData={tableData}
