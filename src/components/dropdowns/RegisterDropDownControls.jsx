@@ -10,6 +10,7 @@ export default function DropDownControls({
     setDropdownOpen,
     className,
     dropDownClasses,
+    left
 }) {
     const [open, setOpen] = useState(false);
     const ref = useRef();
@@ -41,7 +42,7 @@ export default function DropDownControls({
                 }}
             >{buttonChild}</button>
             {open && (
-                <div style={{width: '73vw', height: '80vh', minHeight: '80vh', top: '10%', zIndex: '1000'}} className={`text-copy-primary overflow-scroll rounded-3xl fixed justify-center ${dropDownClasses} top-0`} ref={ref} >
+                <div style={{width: '73vw', height: '80vh', minHeight: '80vh', top: '10%', zIndex: '1000', left: left ? left : ''}} className={`text-copy-primary overflow-scroll rounded-3xl fixed justify-center ${dropDownClasses} top-0`} ref={ref} >
                     {children}
                 </div>
             )}
