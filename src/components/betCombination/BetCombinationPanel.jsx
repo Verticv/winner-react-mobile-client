@@ -385,7 +385,7 @@ const BetCombinationPanel = ({
                         height:"7.3125rem",
                         padding: '1px',
                     }} 
-                    className="relative w-1/2 flex mr-4 items-center justify-center rounded-lg hover:opacity-75"
+                    className="relative w-1/2 flex mr-4 items-center justify-center rounded-xl hover:opacity-75"
                     onClick={() => setDropdownOpen(false)}
                 >
                     <div 
@@ -406,7 +406,7 @@ const BetCombinationPanel = ({
                         height:"7.3125rem",
                         padding: '1px',
                     }} 
-                    className="relative w-1/2 flex items-center justify-center rounded-lg hover:opacity-75"
+                    className="relative w-1/2 flex items-center justify-center rounded-xl hover:opacity-75"
                     onClick={() => setCheckedState(filterArray.fill(false))}
                 >
                     <div 
@@ -452,7 +452,7 @@ const BetCombinationPanel = ({
                     marginRight: '0.375rem',
                     backgroundColor: "#ad7b4e"
                 }}  
-                className="flex items-center justify-center rounded-lg"
+                className="flex items-center justify-center rounded-xl"
                 onMouseEnter={() => setHover1(0)}
                 onMouseLeave={() => setHover1(null)}
             >
@@ -480,7 +480,7 @@ const BetCombinationPanel = ({
                     marginRight: '0.375rem',
                     backgroundColor: "#ad7b4e"
                 }}  
-                className="flex items-center justify-center rounded-lg"              
+                className="flex items-center justify-center rounded-xl"              
             >
                 <div 
                     style={{
@@ -503,7 +503,7 @@ const BetCombinationPanel = ({
                     fontSize: '2.625rem',
                     backgroundColor: "#ad7b4e"
                 }}  
-                className="relative flex items-center justify-center rounded-lg"
+                className="relative flex items-center justify-center rounded-xl"
                 onMouseEnter={() => setHover1(1)}
                 onMouseLeave={() => setHover1(null)}
             >
@@ -554,7 +554,7 @@ const BetCombinationPanel = ({
                         marginRight: '0.375rem',
                         backgroundColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#cb4343" : "#b3b3b3" 
                     }}  
-                    className="flex items-center relative justify-center rounded-lg"
+                    className="flex items-center relative justify-center rounded-xl"
                     onClick={() => {
                         setButtonClicked(`${id}left`)
                         setAddedCard(prevArray => 
@@ -600,7 +600,7 @@ const BetCombinationPanel = ({
                         marginRight: '0.375rem',
                         backgroundColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#cb4343" : "#b3b3b3" 
                     }}  
-                    className="flex items-center justify-center rounded-lg"
+                    className="flex items-center justify-center rounded-xl"
                     onClick={() => {
                         setButtonClicked(`${id}middle`)
                         setAddedCard(prevArray => 
@@ -634,7 +634,7 @@ const BetCombinationPanel = ({
                         marginRight: '0.375rem',
                         backgroundColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3" 
                     }}  
-                    className="flex items-center justify-center rounded-lg"
+                    className="flex items-center justify-center rounded-xl"
                     onClick={() => {
                         setButtonClicked(`${id}right`)
                         setAddedCard(prevArray => 
@@ -714,7 +714,7 @@ const BetCombinationPanel = ({
                                     padding: '1px',
                                     backgroundColor: isOpen[items.id] === true ? "#5b646e" : "#171a1d"
                                 }} 
-                                className="relative flex items-center justify-center rounded-lg group hover:opacity-75"
+                                className="relative flex items-center justify-center rounded-xl group hover:opacity-75"
                                 onClick={() => handleOnChange(items.id)}
                                 onMouseOver={() => setHover2(items.id)}
                                 onMouseLeave={() => setHover2(null)}
