@@ -10,17 +10,6 @@ const Search = () => {
 
   const dropDownCellClass = "flex w-full h-40px p-8 bg-white justify-between items-center border-b border-gray-ececec"
 
-//   const carrierButton = (
-//         <div
-//             onFocus={() => setSelectedInput(4)}
-//             onBlur={(e) => setSelectedInput(false)}
-//             className="relative cursor-pointer flex w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-start items-center tracking-minus05" 
-//         >
-//             <label className="w-full group-hover:text-black cursor-pointer text-left">{selectedCarrier}</label>
-//             <img style={{marginRight: '20%', width: '1.5625rem'}} className="h-4 object-contain" src={DownArrowIcon} alt="arrow" /> 
-//         </div>
-//     )
-
   const dropdownButton = (
       <div style={{width: '15rem', height: '6.75rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-2xl border border-gray-dddddd group">
           <input  className="w-0 text-16px"/>
@@ -94,15 +83,7 @@ const Search = () => {
 
   const InboxSearch = (
     <div style={{padding: '1.75rem 1.625rem', paddingBottom: '1.5625rem', height: '10.4375rem', borderWidth: '0.1875rem'}} className="w-full bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex items-center justify-center">
-        {/* <MobileDropDownControls 
-            buttonChild={dropdownButton} 
-            isDropdownOpen={isDropdownOpen} 
-            setDropdownOpen={setDropdownOpen}
-            dropdownContainerStyle={{marginTop: '6.75rem'}}
-        >
-            {searchDropdown}
-        </MobileDropDownControls> */}
-        <DropDownControls  buttonChild={dropdownButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
+        <DropDownControls left='14%'  buttonChild={dropdownButton} isDropdownOpen={isDropdownOpen} setDropdownOpen={setDropdownOpen}>
             {searchDropdown}
         </DropDownControls>
 
