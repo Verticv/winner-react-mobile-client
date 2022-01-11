@@ -27,7 +27,7 @@ const MoneyCharge = () => {
         <div style={{padding: '1.875rem', paddingTop: '0'}} className="flex flex-col items-center">
             
             <WarningMessage 
-                title='확인/필독사항'
+                title='확인 / 필독사항'
                 message1='입금 시 반드시 회원님의 성함으로 입금 바랍니다.'
                 isFirstMessageDark
                 message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.'
@@ -129,7 +129,7 @@ const MoneyCharge = () => {
                 <div style={{marginTop: '1.875rem', marginBottom: '3.8125rem', padding: '0 1.125rem'}} className="">
                     <div style={{marginBottom: '0.9375rem'}} className="flex w-full h-full items-center justify-between">
                         <button
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 10000)}
                         >
@@ -139,7 +139,7 @@ const MoneyCharge = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 30000)}
                         >
@@ -149,7 +149,7 @@ const MoneyCharge = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 50000)}
                         >
@@ -159,7 +159,7 @@ const MoneyCharge = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r2068b2 hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 100000)}
                         >
@@ -171,7 +171,7 @@ const MoneyCharge = () => {
 
                     <div className="flex w-full h-full items-center justify-between">
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 300000)}
                         >
@@ -181,7 +181,7 @@ const MoneyCharge = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 500000)}
                         >
@@ -191,7 +191,7 @@ const MoneyCharge = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75"
                             onClick={() => setInputValue(inputValue + 1000000)}
                         >
@@ -201,7 +201,7 @@ const MoneyCharge = () => {
                         </button>
 
                         <button 
-                            style={{width: '16.75rem', height: '7.3125rem', padding: '0.1875rem'}}
+                            style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75"
                             onClick={() => setInputValue(0)}
                         >

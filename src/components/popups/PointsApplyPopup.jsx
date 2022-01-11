@@ -21,7 +21,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
             <div style={{padding: '1.875rem'}} className="w-full h-full bg-white">
 
                 <WarningMessage 
-                    title='확인/필독사항'
+                    title='확인 / 필독사항'
                     message1='포인트 전환 시 보유머니로 충전됩니다.'
                     mr1='13.5rem'
                     message2='최소 10,000P 이상 신청 가능합니다.'
@@ -43,7 +43,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                         <input 
                             placeholder="0"
                             style={{height: '6.75rem', width: '36.625rem', fontSize: '2.8125rem', padding: '0 1.875rem'}}
-                            className="flex-shrink-0 outline-none rounded-md border border-gray-dddddd font-spoqaMedium tracking-tight text-gray-r8c8c8c" 
+                            className="flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium tracking-tight text-gray-r8c8c8c" 
                             value={inputValue !==null ? nf.format(inputValue) : ""}
                             onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
                             onKeyPress={(event) => {
@@ -57,7 +57,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                 </div>
 
                 <div style={{marginTop: '3.75rem', marginBottom: '1.875rem'}} className="flex w-full">
-                    <button style={{padding: '0.1875rem', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center mr-4 w-1/2 rounded-lg bg-blue-r0070d9 hover:opacity-75">
+                    <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center mr-4 w-1/2 rounded-lg bg-blue-r0070d9 hover:opacity-75">
                         <div 
                             style={{background:"linear-gradient(to bottom, #1491fc, #0675db)"}} 
                             className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r3ba3fc cursor-pointer"
@@ -66,7 +66,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                         </div>
                     </button>
                     <button 
-                        style={{padding: '0.1875rem', height: '7.3125rem', fontSize: '2.8125rem'}}
+                        style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}}
                         className="flex items-center justify-center w-1/2 rounded-lg bg-blue-r004b8a hover:opacity-75"
                         onClick={() => history.push('/mypage/points/points-transaction-history')}
                     >

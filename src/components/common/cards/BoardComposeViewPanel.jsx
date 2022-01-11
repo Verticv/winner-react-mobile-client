@@ -29,16 +29,6 @@ const BoardComposeViewPanel = ({
     noButtons = false
 }) => {
 
-    console.log(`isAttached`, isAttached)
-
-    // using type 0
-    // const handleOnChange = (position) => {
-    //     const updatedCheckedState = checkedState.map((item, index) =>
-    //       index === position ? !item : item
-    //     );
-    //     setCheckedState(updatedCheckedState);
-    // }; 
-
     const addEntryClick = () => {
         setAttachedArray(oldArray => [...oldArray, id]);
     };
@@ -64,9 +54,9 @@ const BoardComposeViewPanel = ({
             <div className="flex">
                 <button 
                     style={{
-                        width: '25.125rem',
+                        width: '26.875rem',
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                         textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "left" ? "#cb4343" : "#dddddd",
@@ -75,16 +65,15 @@ const BoardComposeViewPanel = ({
                     className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
                 >
                     <div
-                    style={{padding: '0.1875rem'}}
                     className={`${
                         bet === "left" 
                         ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"} 
-                        flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer`
+                        flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer pl-4 pr-3.5`
                     }>
                         <span style={{fontSize: '2.625rem'}} className="truncate text-left font-spoqaMedium tracking-tight text-14px">{team1}</span>
-                        <div className="flex items-center space-x-5px">
-                            {hasUp && <img className="object-contain w-8 h-7" src={UpIcon} alt="" /> }
+                        <div className="flex items-center">
+                            {hasUp && <img style={{marginRight: '0.4375rem'}} className="object-contain w-8 h-7" src={UpIcon} alt="" /> }
                             <span  style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px">{stat1}</span>
                         </div>
                     </div>
@@ -94,7 +83,7 @@ const BoardComposeViewPanel = ({
                     style={{
                         textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                     }} 
                     className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
@@ -103,42 +92,38 @@ const BoardComposeViewPanel = ({
                         bet === "middle" 
                         ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"}
-                        pt-px flex items-center justify-center h-full w-full rounded-lg border border-white bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb cursor-pointer`}
+                        pt-px flex items-center justify-center h-full w-full rounded-lg border border-white bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb cursor-pointer pl-4 pr-3.5`}
                     >
                         <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px">{stat2}</span>
                     </div>
                 </button>
 
                 <button style={{
-                            width: '25.0625rem',
+                            width: '26.875rem',
                             height: '7.4375rem',
-                            padding: '0.1875rem',
-                            marginRight: '0.375rem',
+                            padding: '1px',
                         }} 
                     className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                     <div
                     style={{
                         textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
-                        // backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
                     }} 
                     className={`${
                         bet === "right" 
-                        ? "text-white border-red-ff7982 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
+                        ? "text-white border-red-ff7982 bg-gradient-to-b from-red-ff535f to-red-d7434f"
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb "} 
-                        pt-px flex items-center justify-between h-full w-full rounded-lg border border-white cursor-pointer px-10px`}
+                        pt-px flex items-center justify-between h-full w-full rounded-lg border border-white cursor-pointer pl-4 pr-3.5`}
                     >
-                        <div className="flex items-center space-x-5px">
+                        <div className="flex items-center">
                             <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight">{stat3}</span>
-                            {hasDown && <img className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
+                            {hasDown && <img style={{marginLeft: '0.4375rem'}} className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
                         </div>
                         <span style={{fontSize: '2.625rem'}} className="truncate font-spoqaMedium tracking-tight text-right">{team2}</span>
                     </div>
                 </button>
             </div>
 
-            <div style={{marginLeft: '0rem', fontSize: '2.625rem'}} className="w-full flex font-spoqaMedium tracking-tight text-center">
-                {/* <div style={{width: isAttached && "90px"}} className="font-roboto w-99px text-gray-r454545">{score}</div> */}
-                {/* <div style={{width: isAttached && "59px"}} className="w-61px text-gray-r454545">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div> */}
+            <div style={{marginLeft: '0rem', fontSize: '2.625rem'}} className="w-full flex font-spoqaMedium justify-center tracking-tight text-center">
                 <div 
                 style={{marginRight:isAttached && "5px", fontSize: '2.5rem'}}
                 className={`${
@@ -149,7 +134,7 @@ const BoardComposeViewPanel = ({
                     : result === "cancel" 
                     ? "text-blue-r0056a6" 
                     : "text-gray-r454545"} 
-                    w-full `}
+                    `}
                 >{
                     result === "win" 
                     ? <><p style={{marginBottom: '-1rem'}}>승</p> <p className='text-gray-subNavbar'>{score}</p></>
@@ -158,14 +143,13 @@ const BoardComposeViewPanel = ({
                     : result === "cancel" 
                     ? "취소"
                     : "결과없음"}
-                    {/* <p>{score}</p> */}
                     </div>
             </div>
         </div>
     )
 
     const Cards0 = ({bet = "right"}) => (
-        <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
+        <div className="w-full rounded-xl overflow-hidden shadow-subNavbar">
             <div style={{height: '7.5rem'}} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-8">
                 <div className="flex items-center">
                     <img style={{width: '4.25rem', height: '4.25rem'}} src={FootballIcon} alt="" />
@@ -176,24 +160,13 @@ const BoardComposeViewPanel = ({
                     <img style={{width: '2.875rem', height: '2.875rem'}} src={ClockIcon} alt="" />
                     <span 
                         style={{color: "#dae8f5", fontSize: '2.625rem', marginLeft: '0.5625rem'}}
-                        className="font-spoqa text-16px tracking-tight text-white"
+                        className="font-roboto text-16px tracking-tight text-white"
                     >
                         2021-06-29 15:45
                     </span>
                 </div>
             </div>
             <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
-            {/* <CardContent 
-                    bet="left" 
-                    result="lose" 
-                    choice="home" 
-                    score="1:2"
-                    team1="맨유"
-                    team2="첼시"
-                    stat1="2.95"
-                    stat2="4.62"
-                    stat3="1.39"
-                /> */}
                 <CardContent 
                     bet={bet} 
                     result="lose" 
@@ -205,25 +178,12 @@ const BoardComposeViewPanel = ({
                     stat2="2.96"
                     stat3="3.4"
                 />
-                {/* <CardContent 
-                    bet="right" 
-                    result="win" 
-                    choice="away"
-                    score="0:3"
-                    team1="아스널"
-                    team2="맨시티"
-                    stat1="2.95"
-                    stat2="3.32"
-                    stat3="2.5"
-                    hasDown={hasDown}
-                    hasUp={hasUp}
-                /> */}
             </div>
         </div>
     )
 
     const Cards1 = ({bet = "right"}) => (
-        <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
+        <div className="w-full rounded-xl overflow-hidden shadow-subNavbar">
             <div style={{height: '7.5rem'}} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-8">
                 <div className="flex items-center">
                     <img style={{width: '4.25rem', height: '4.25rem'}} src={FootballIcon} alt="" />
@@ -234,35 +194,13 @@ const BoardComposeViewPanel = ({
                     <img style={{width: '2.875rem', height: '2.875rem'}} src={ClockIcon} alt="" />
                     <span 
                         style={{color: "#dae8f5", fontSize: '2.625rem', marginLeft: '0.5625rem'}}
-                        className="font-spoqa text-16px tracking-tight text-white"
+                        className="font-roboto text-16px tracking-tight text-white"
                     >
                         2021-06-29 15:45
                     </span>
                 </div>
             </div>
             <div className="flex flex-col w-full bg-gray-fefefe border-gray-dddddd">
-            {/* <CardContent 
-                    bet="left" 
-                    result="cancel" 
-                    choice="home" 
-                    score="1:2"
-                    team1="맨유"
-                    team2="첼시"
-                    stat1="2.95"
-                    stat2="4.62"
-                    stat3="1.39"
-                /> */}
-                {/* <CardContent 
-                    bet="left" 
-                    result="win" 
-                    choice="home" 
-                    score="5:2"
-                    team1="맨유"
-                    team2="첼시"
-                    stat1="2.95"
-                    stat2="4.62"
-                    stat3="1.39"
-                /> */}
                 <CardContent 
                     bet="left" 
                     result="win" 
@@ -274,25 +212,12 @@ const BoardComposeViewPanel = ({
                     stat2="4.62"
                     stat3="1.39"
                 />
-                {/* <CardContent 
-                    bet="right" 
-                    result="win" 
-                    choice="away"
-                    score="0:3"
-                    team1="아스널"
-                    team2="맨시티"
-                    stat1="2.95"
-                    stat2="3.32"
-                    stat3="2.5"
-                    hasDown={hasDown}
-                    hasUp={hasUp}
-                /> */}
             </div>
         </div>
     )
 
     const Cards2 = () => (
-        <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
+        <div className="w-full rounded-xl overflow-hidden shadow-subNavbar">
             <div style={{height: '7.5rem'}} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-8">
                 <div className="flex items-center">
                     <img style={{width: '4.25rem', height: '4.25rem'}} src={FootballIcon} alt="" />
@@ -303,7 +228,7 @@ const BoardComposeViewPanel = ({
                     <img style={{width: '2.875rem', height: '2.875rem'}} src={ClockIcon} alt="" />
                     <span 
                         style={{color: "#dae8f5", fontSize: '2.625rem', marginLeft: '0.5625rem'}}
-                        className="font-spoqa text-16px tracking-tight text-white"
+                        className="font-roboto text-16px tracking-tight text-white"
                     >
                         2021-06-29 15:45
                     </span>
@@ -326,7 +251,7 @@ const BoardComposeViewPanel = ({
     )
 
     const Cards3 = () => (
-        <div className="w-full rounded-lg overflow-hidden shadow-subNavbar">
+        <div className="w-full rounded-xl overflow-hidden shadow-subNavbar">
             <div style={{height: '7.5rem'}} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-8">
                 <div className="flex items-center">
                     <img style={{width: '4.25rem', height: '4.25rem'}} src={FootballIcon} alt="" />
@@ -337,7 +262,7 @@ const BoardComposeViewPanel = ({
                     <img style={{width: '2.875rem', height: '2.875rem'}} src={ClockIcon} alt="" />
                     <span 
                         style={{color: "#dae8f5", fontSize: '2.625rem', marginLeft: '0.5625rem'}}
-                        className="font-spoqa text-16px tracking-tight text-white"
+                        className="font-roboto text-16px tracking-tight text-white"
                     >
                         2021-06-29 15:45
                     </span>
@@ -388,35 +313,18 @@ const BoardComposeViewPanel = ({
             
 
                     <div style={{margin: '1.875rem', marginBottom:'0'}} className="flex items-center justify-between h-full">
-                        {/* <div style={{width: '5.8125rem'}} className="relative text-left pt-7px">
-                        <label className="form-control">
-                        <input
-                                className='w-12 h-12'
-                                type="checkbox"
-                                checked={checkedState?.[type]}
-                                onChange={() => handleOnChange(type)}
-                            />
-                        </label>
-                            
-                        </div> */}
                         <div>
-                            <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅시간 :</span> 2021-06-29 15:45</div>
+                            <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅시간 :</span> <span className='font-spoqa'>2021-06-29 15:45</span></div>
                             <div className='flex'>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '5.3125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>게임종류 :</span> 5,000</div>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>게임구분 :</span> 4.34</div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '5.3125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅금액 :</span> <span className='font-spoqa'>5,000</span></div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>배당률 :</span> <span className='font-spoqa'>4.34</span></div>
                             </div>
                             <div className='flex'>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '5.3125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>예상적중금액 :</span> 20,000</div>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r585858"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>당첨금 :</span> 0</div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '5.3125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>예상적중금액 :</span> <span className='font-spoqa'>20,000</span></div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r585858"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>당첨금 :</span>  <span className='font-spoqa text-gray-r7b7b7b'>0</span></div>
                             </div>
                         </div>
 
-
-                        {/* <div style={{width: '13.25rem', height: '7.3125rem'}} className="flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75">
-                            <div style={{width: '12.875rem', height: '6.9375rem'}} className="flex items-center justify-center bg-black rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">1개월</span>
-                            </div>
-                        </div> */}
 
                         {isAttached === true && (
                             <button 
@@ -424,11 +332,11 @@ const BoardComposeViewPanel = ({
                                     setPopupOpen && setPopupOpen(false)
                                     setAttachedArray && addEntryClick()
                                 }} 
-                                style={{width: '9rem', height: '9rem',  padding: '0.1875rem'}}
-                                className="flex items-center bg-blue-r286fce justify-center rounded-lg hover:opacity-75"
+                                style={{width: '9rem', height: '9rem',  padding: '1px'}}
+                                className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
                                 >
-                                <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                                    <img style={{width: '3.75rem', height: '3.75rem'}} className="object-contain" src={UploadIcon} alt="" />
+                                <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
+                                    <img style={{width: '3.1875rem', height: '3.25rem'}} className="object-contain" src={UploadIcon} alt="" />
                                 </div>
                             </button>
                         )}
@@ -439,11 +347,10 @@ const BoardComposeViewPanel = ({
                              onClick={() => {
                                 setAttachedArray && handleRemoveItem(id)
                              }} 
-                             style={{width: '9rem', height: '9rem',  padding: '0.1875rem'}}
+                             style={{width: '9rem', height: '9rem',  padding: '1px'}}
                              className="flex items-center bg-blue-r286fce justify-center rounded-lg hover:opacity-75"
                              >
                              <div className="flex w-full h-full items-center justify-center flex-wrap rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                                 {/* <img style={{width: '3.75rem', height: '3.75rem'}} className="object-contain" src={UploadIcon} alt="" /> */}
                                  <p>내역삭제</p>
                              </div>
                          </button>
@@ -451,38 +358,6 @@ const BoardComposeViewPanel = ({
                         
                     </div>
 
-                    {/* <div style={{margin: '3.75rem 1.875rem', marginTop: '2.8125rem', marginBottom: '0'}} className="flex items-center justify-between">
-                        <div className="flex w-full space-x-2px">
-                            <button 
-                                style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem'}}
-                                className="flex flex-1 items-center justify-center mr-4 rounded-md bg-blue-r0070d9 hover:opacity-75"
-                                // onClick={() => allSelectButtonPressed()}
-                            >
-                                <div 
-                                    style={{
-                                        borderRadius: "3px"
-                                    }}
-                                    className="flex items-center justify-center h-full w-full rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db"
-                                >
-                                    <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">전체선택</span>
-                                </div>
-                            </button>
-                            <button 
-                                style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem', backgroundColor: '#7e3636'}}
-                                className="flex flex-1 items-center justify-center m-0 rounded-md bg-brown-7e3636 hover:opacity-75"
-                            >
-                                <div 
-                                    style={{
-                                        borderRadius: "3px"
-                                    }}
-                                    className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
-                                >
-                                    <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">선택삭제</span>
-                                </div>
-                            </button>
-                        </div>
-                    </div> */}
-                {/* </div> */}
         </div>
     )
 }

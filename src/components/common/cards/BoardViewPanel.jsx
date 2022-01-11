@@ -63,7 +63,7 @@ const BoardViewPanel = ({
                     style={{
                         width: '25.125rem',
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                         textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "left" ? "#cb4343" : "#dddddd",
@@ -72,16 +72,15 @@ const BoardViewPanel = ({
                     className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
                 >
                     <div
-                    style={{padding: '0.1875rem'}}
                     className={`${
                         bet === "left" 
                         ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"} 
-                        flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer`
+                        flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer pl-4 pr-3.5`
                     }>
                         <span style={{fontSize: '2.625rem'}} className="truncate text-left font-spoqaMedium tracking-tight text-14px">{team1}</span>
-                        <div className="flex items-center space-x-5px">
-                            {hasUp && <img className="object-contain w-8 h-7" src={UpIcon} alt="" /> }
+                        <div className="flex items-center">
+                            {hasUp && <img style={{marginRight: '0.4375rem'}} className="object-contain w-8 h-7" src={UpIcon} alt="" /> }
                             <span  style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px">{stat1}</span>
                         </div>
                     </div>
@@ -91,7 +90,7 @@ const BoardViewPanel = ({
                     style={{
                         textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                     }} 
                     className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
@@ -100,42 +99,38 @@ const BoardViewPanel = ({
                         bet === "middle" 
                         ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"}
-                        pt-px flex items-center justify-center h-full w-full rounded-lg border border-white bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb cursor-pointer`}
+                        pt-px flex items-center justify-center h-full w-full rounded-lg border border-white bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb cursor-pointer pl-4 pr-3.5`}
                     >
                         <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px">{stat2}</span>
                     </div>
                 </button>
 
                 <button style={{
-                            width: '25.0625rem',
+                            width: '25.125rem',
                             height: '7.4375rem',
-                            padding: '0.1875rem',
-                            marginRight: '0.375rem',
+                            padding: '1px',
                         }} 
                     className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
                     <div
                     style={{
                         textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
-                        // backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
                     }} 
                     className={`${
                         bet === "right" 
-                        ? "text-white border-red-ff7982 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
+                        ? "text-white border-red-ff7982 bg-gradient-to-b from-red-ff535f to-red-d7434f"
                         : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb "} 
-                        pt-px flex items-center justify-between h-full w-full rounded-lg border border-white cursor-pointer px-10px`}
+                        pt-px flex items-center justify-between h-full w-full rounded-lg border border-white cursor-pointer pl-4 pr-3.5`}
                     >
-                        <div className="flex items-center space-x-5px">
+                        <div className="flex items-center">
                             <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight">{stat3}</span>
-                            {hasDown && <img className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
+                            {hasDown && <img style={{marginLeft: '0.4375rem'}} className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
                         </div>
                         <span style={{fontSize: '2.625rem'}} className="truncate font-spoqaMedium tracking-tight text-right">{team2}</span>
                     </div>
                 </button>
             </div>
 
-            <div style={{marginLeft: '0rem', fontSize: '2.625rem'}} className="w-full flex font-spoqaMedium tracking-tight text-center">
-                {/* <div style={{width: isAttached && "90px"}} className="font-roboto w-99px text-gray-r454545">{score}</div> */}
-                {/* <div style={{width: isAttached && "59px"}} className="w-61px text-gray-r454545">{choice === "home" ? "홈팀 승" : "원정팀 승"}</div> */}
+            <div style={{marginLeft: '0rem', fontSize: '2.625rem'}} className="w-full flex font-spoqaMedium justify-center tracking-tight text-center">
                 <div 
                 style={{marginRight:isAttached && "5px", fontSize: '2.5rem'}}
                 className={`${
@@ -146,7 +141,7 @@ const BoardViewPanel = ({
                     : result === "cancel" 
                     ? "text-blue-r0056a6" 
                     : "text-gray-r454545"} 
-                    w-full `}
+                    `}
                 >{
                     result === "win" 
                     ? <><p style={{marginBottom: '-1rem'}}>승</p> <p className='text-gray-subNavbar'>{score}</p></>
@@ -155,7 +150,6 @@ const BoardViewPanel = ({
                     : result === "cancel" 
                     ? "취소"
                     : "결과없음"}
-                    {/* <p>{score}</p> */}
                     </div>
             </div>
         </div>
@@ -397,88 +391,34 @@ const BoardViewPanel = ({
                             
                         </div> */}
                         <div>
-                            <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅시간 :</span> 2021-06-29 15:45</div>
+                            <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅시간 :</span> <span className='font-spoqa'>2021-06-29 15:45</span></div>
                             <div className='flex'>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>게임종류 :</span> 5,000</div>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>게임구분 :</span> 4.34</div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>게임종류 :</span> <span className='font-spoqa'>5,000</span></div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>게임구분 :</span> <span className='font-spoqa'>4.34</span></div>
                             </div>
                             <div className='flex'>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>예상적중금액 :</span> 20,000</div>
-                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-red-500"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>당첨금 :</span> +900,000,000</div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>예상적중금액 :</span> <span className='font-spoqa'>20,000</span></div>
+                                <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-red-500"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>당첨금 :</span> <span className='font-spoqa'>+900,000,000</span></div>
                             </div>
                         </div>
 
-                        {/* <button 
-                            onClick={() => {
-                            setAttachedArray && handleRemoveItem(id)
-                            }} 
-                            style={{width: '9rem', height: '9rem',  padding: '0.1875rem'}}
-                            className="flex items-center bg-blue-r286fce justify-center rounded-lg hover:opacity-75 bg-brown-7e3636"
-                        >
-                            <div 
-                                style={{
-                                    borderRadius: "3px"
-                                }}
-                                className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
-                            >
-                                <img style={{width: '3.75rem', height: '3.75rem'}} className="object-contain" src={UploadIcon} alt="" />
-                            </div>
-                        </button> */}
 
                         {(isPopup === false && noButtons === false) && (
                             <button 
                             onClick={() => {
                             setAttachedArray && handleRemoveItem(id)
                             }} 
-                            style={{width: '9rem', height: '9rem',  padding: '0.1875rem'}}
-                            className="flex items-center justify-center rounded-lg hover:opacity-75 bg-brown-r7e3636"
+                            style={{width: '9rem', height: '9rem',  padding: '1px'}}
+                            className="flex items-center justify-center rounded-2xl hover:opacity-75 bg-brown-r7e3636"
                         >
                             <div 
-                                style={{
-                                    borderRadius: "3px"
-                                }}
-                                className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
+                                className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
                             >
                                 <img style={{width: '2.5rem', height: '2.5rem'}} className="object-contain" src={CloseIcon} alt="" />
                             </div>
                         </button>
                         )}
                     </div>
-
-                    
-
-                    {/* <div style={{margin: '3.75rem 1.875rem', marginTop: '2.8125rem', marginBottom: '0'}} className="flex items-center justify-between">
-                        <div className="flex w-full space-x-2px">
-                            <button 
-                                style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem'}}
-                                className="flex flex-1 items-center justify-center mr-4 rounded-md bg-blue-r0070d9 hover:opacity-75"
-                                // onClick={() => allSelectButtonPressed()}
-                            >
-                                <div 
-                                    style={{
-                                        borderRadius: "3px"
-                                    }}
-                                    className="flex items-center justify-center h-full w-full rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db"
-                                >
-                                    <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">전체선택</span>
-                                </div>
-                            </button>
-                            <button 
-                                style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem', backgroundColor: '#7e3636'}}
-                                className="flex flex-1 items-center justify-center m-0 rounded-md bg-brown-7e3636 hover:opacity-75"
-                            >
-                                <div 
-                                    style={{
-                                        borderRadius: "3px"
-                                    }}
-                                    className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
-                                >
-                                    <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">선택삭제</span>
-                                </div>
-                            </button>
-                        </div>
-                    </div> */}
-                {/* </div> */}
         </div>
     )
 }

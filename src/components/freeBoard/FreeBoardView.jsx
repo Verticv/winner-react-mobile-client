@@ -147,12 +147,12 @@ const FreeBoardView = () => {
             </div>
 
             <div style={{margin: '3.75rem 0'}} className="w-full flex justify-end">
-                <button style={{padding: '0.1875rem', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-red-cb4343 hover:opacity-75">
+                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-red-cb4343 hover:opacity-75">
                     <div className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">수정하기</span>
                     </div>
                 </button>
-                <button style={{padding: '0.1875rem', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 rounded-lg bg-gray-r171a1d hover:opacity-75" >
+                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 rounded-lg bg-gray-r171a1d hover:opacity-75" >
                     <div className="flex items-center justify-center h-full w-full rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">삭제하기</span>
                     </div>
@@ -264,7 +264,7 @@ const FreeBoardView = () => {
 
 
             <div style={{marginTop: '3.75rem', marginBottom: '19.625rem'}} className="w-full flex items-start justify-between">
-                <button style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75">
+                <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
@@ -276,7 +276,7 @@ const FreeBoardView = () => {
                 </button>
 
                 <button 
-                    style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
+                    style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
                     className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard')}
                 >
@@ -291,7 +291,7 @@ const FreeBoardView = () => {
                 </button>
 
                 <button 
-                    style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem'}} 
+                    style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} 
                     className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard/view2')}
                 >

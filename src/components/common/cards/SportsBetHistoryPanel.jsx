@@ -61,7 +61,7 @@ const SportsBetHistoryPanel = ({
                     style={{
                         width: '26.875rem',
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                         textShadow: bet === "left" ? "1px 1px 1px #00000070" : "",
                         backgroundColor: bet === "left" ? "#cb4343" : "#dddddd",
@@ -70,7 +70,7 @@ const SportsBetHistoryPanel = ({
                     className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
                 >
                     <div
-                    // style={{padding: '0.1875rem'}}
+                    // style={{padding: '1px'}}
                     className={`${
                         bet === "left" 
                         ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
@@ -89,7 +89,7 @@ const SportsBetHistoryPanel = ({
                     style={{
                         textShadow: bet === "middle" ? "1px 1px 1px #00000070" : "",
                         height: '7.4375rem',
-                        padding: '0.1875rem',
+                        padding: '1px',
                         marginRight: '0.375rem',
                     }} 
                     className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
@@ -107,7 +107,7 @@ const SportsBetHistoryPanel = ({
                 <button style={{
                             width: '26.875rem',
                             height: '7.4375rem',
-                            padding: '0.1875rem',
+                            padding: '1px',
                             // marginRight: '0.375rem',
                         }} 
                     className={`${bet === "right" ? "bg-red-cb4343" : "bg-gray-dddddd"} flex group items-center justify-center h-36px rounded-lg bg-gray-dddddd`}>
@@ -368,28 +368,22 @@ const SportsBetHistoryPanel = ({
                     <div style={{margin: '3.75rem 1.875rem', marginTop: '2.8125rem', marginBottom: '0'}} className="flex items-center justify-between">
                         <div className="flex w-full">
                             <button 
-                                style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem'}}
-                                className="flex flex-1 items-center justify-center mr-4 rounded-md bg-blue-r0070d9 hover:opacity-75"
+                                style={{padding: '1px', height: '7.3125rem'}}
+                                className="flex flex-1 items-center justify-center mr-4 rounded-2xl bg-blue-r0070d9 hover:opacity-75"
                                 // onClick={() => allSelectButtonPressed()}
                             >
                                 <div 
-                                    style={{
-                                        borderRadius: "3px"
-                                    }}
-                                    className="flex items-center justify-center h-full w-full rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db"
+                                    className="flex items-center justify-center h-full w-full rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db"
                                 >
                                     <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">내역올리기</span>
                                 </div>
                             </button>
                             <button 
-                                style={{borderRadius:"4px", padding: '0.1875rem', height: '7.3125rem', backgroundColor: '#7e3636'}}
-                                className="flex flex-1 items-center justify-center m-0 rounded-md bg-brown-7e3636 hover:opacity-75"
+                                style={{padding: '1px', height: '7.3125rem', backgroundColor: '#7e3636'}}
+                                className="flex flex-1 items-center justify-center m-0 rounded-2xl bg-brown-7e3636 hover:opacity-75"
                             >
                                 <div 
-                                    style={{
-                                        borderRadius: "3px"
-                                    }}
-                                    className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
+                                    className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"
                                 >
                                     <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-14px text-white pt-px">내역삭제</span>
                                 </div>

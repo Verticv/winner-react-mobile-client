@@ -23,7 +23,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
 
                 <div style={{height: '10.4375rem', fontSize: '2.8125rem', marginBottom: '7rem'}} className="w-full bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl flex items-center justify-center font-spoqaMedium tracking-tight ">
                     <span className="text-gray-r454545">선물할 쿠폰</span>
-                    <div style={{height: '6.75rem', width: '41.4375rem', marginLeft: '1.875rem'}} className="bg-white border border-gray-dddddd rounded-md flex items-center">
+                    <div style={{height: '6.75rem', width: '41.4375rem', marginLeft: '1.875rem'}} className="bg-white border border-gray-dddddd rounded-2xl flex items-center">
                         <span style={{paddingLeft: '1.5625rem'}} className="text-gray-r8c8c8c">쿠폰테스트</span>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                 </div>
 
                 <div className="w-full flex items-center justify-center">
-                    <button style={{height: '7.3125rem', width: '36.4375rem', padding: '0.1875rem', fontSize: '2.8125rem', marginTop: '3.75rem'}} className="flex items-center justify-center rounded-lg bg-blue-r0070d9" onClick={()=> setPopupOpen(false)}>
+                    <button style={{height: '7.3125rem', width: '36.4375rem', padding: '1px', fontSize: '2.8125rem', marginTop: '3.75rem'}} className="flex items-center justify-center rounded-lg bg-blue-r0070d9" onClick={()=> setPopupOpen(false)}>
                         <div 
                         style={{background:"linear-gradient(to bottom, #1491fc, #0675db)"}} 
                         className="flex w-full h-full items-center justify-center rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r1491fc to-blue-r0675db cursor-pointer"

@@ -24,7 +24,7 @@ const HorizontalMenu = ({
                     width: `${ width ? width : '18.69'}`,
                     height: '13.18rem',
                     marginRight: '0.1875rem',
-                    padding: '0.1875rem'
+                    padding: '1px'
                 }}
                 className={`${
                     pathname === item.path

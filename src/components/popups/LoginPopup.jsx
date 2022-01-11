@@ -57,7 +57,7 @@ const LoginPopup = ({setAuth, setPopupOpen}) => {
                         </div>
                         <div className="w-480px">
                             <button 
-                                className="w-full h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-27px font-spoqaMedium text-white hover:opacity-75"
+                                className="w-full h-74px rounded-2xl bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-xl text-27px font-spoqaMedium text-white hover:opacity-75"
                                 onClick={() => setAuth(true)}
                             >로그인</button>
                         </div>

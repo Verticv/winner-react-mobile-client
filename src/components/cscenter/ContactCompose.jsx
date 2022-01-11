@@ -10,7 +10,7 @@ const ContactCompose = () => {
     const dropDownCellClass = "flex w-120px h-30px py-2px bg-white items-center px-14px"
 
     const dropdownButton = (
-        <div style={{width: '26.25rem', height: '6.75rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-md border border-gray-dddddd group">
+        <div style={{width: '26.25rem', height: '6.75rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-2xl border border-gray-dddddd group">
             <input  className="w-0 text-16px"/>
             <div
                 className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
@@ -22,7 +22,7 @@ const ContactCompose = () => {
     )
 
     const searchDropdown = (
-        <div style={{width: '26.25rem'}} className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-md border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
+        <div style={{width: '26.25rem'}} className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-2xl border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
             <button style={{width: '26.25rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("제목")
                 setDropdownOpen(false)
@@ -83,12 +83,12 @@ const ContactCompose = () => {
 
 
             <div style={{marginTop: '3.75rem', marginBottom: '14rem', fontSize: '2.8125rem'}} className="flex w-full items-center justify-center">
-                <button style={{height: '7.3125rem', padding: '0.1875rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-blue-r0070d9">
+                <button style={{height: '7.3125rem', padding: '1px'}} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-blue-r0070d9">
                     <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">작성하기</span>
                     </div>
                 </button>
-                <button style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 rounded-md bg-gray-r171a1d">
+                <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">
                     <div className="flex items-center justify-center w-full h-full rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">취소하기</span>
                     </div>

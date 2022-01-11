@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router';
 
 const HorizontalMenu1 = ({
@@ -33,7 +33,7 @@ const HorizontalMenu1 = ({
                         width: '60%',
                         height: '13.18rem',
                         marginRight: items?.length - 1 === index ? '' : '1px',
-                        padding: '0.1875rem'
+                        padding: '1px'
                     }}
                     className={`${
                         isSameLink

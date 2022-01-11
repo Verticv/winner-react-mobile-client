@@ -21,7 +21,7 @@ const HorizontalMenu = ({
                     width: '18.68375rem',
                     height: '13.18rem',
                     marginRight: '1px',
-                    // padding: '0.1875rem'
+                    // padding: '1px'
                     padding: '1px'
                 }}
                 className={`${

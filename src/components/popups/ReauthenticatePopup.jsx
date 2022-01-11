@@ -68,7 +68,7 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
                 <div style={{width: '54rem'}}>
                     <button 
                         style={{height: '8.4375rem', fontSize: '3rem', borderRadius: '0.5625rem'}}
-                        className="w-full rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark font-spoqaMedium text-white hover:opacity-75"
+                        className="w-full rounded-2xl bg-gradient-to-r from-blue-gradLight to-blue-gradDark font-spoqaMedium text-white hover:opacity-75"
                         onClick={() => {
                             history.push("/mypage/edit-info")
                             setSelectedTab("/mypage/edit-info")

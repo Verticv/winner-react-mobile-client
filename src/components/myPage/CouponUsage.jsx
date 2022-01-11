@@ -797,7 +797,7 @@ const HistoryMenu = ({
 
 
 const GiftButton = (
-    <div style={{height: '7.3125rem', width: '36.4375rem', padding: '0.1875rem', marginBottom: '1.875rem'}} className="flex items-center justify-center rounded-4px bg-blue-r0070d9 hover:opacity-75">
+    <div style={{height: '7.3125rem', width: '36.4375rem', padding: '1px', marginBottom: '1.875rem'}} className="flex items-center justify-center rounded-4px bg-blue-r0070d9 hover:opacity-75">
         <div className="flex items-center justify-center h-full w-full bg-black rounded-4px border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
             <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white">쿠폰선물하기</span>
         </div>

@@ -24,7 +24,7 @@ const BetCartHorizontalMenu2 = ({
                     width: '36.75rem',
                     height: '9.8125rem',
                     marginRight: `${!index ? '0.375rem' : '' }`, 
-                    padding: '0.1875rem'
+                    padding: '1px'
                 }}
                 className={`${
                     pathname === item.path

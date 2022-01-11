@@ -56,7 +56,7 @@ const SignedUpPopup = ({setToLogin}) => {
                     </div>
                 </div>
                 {/* BREAK */}
-                <button className="w-480px h-74px rounded-md bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-27px font-spoqaMedium text-white hover:opacity-75" onClick={() => setToLogin(true)}>로그인</button>
+                <button className="w-480px h-74px rounded-2xl bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-27px font-spoqaMedium text-white hover:opacity-75" onClick={() => setToLogin(true)}>로그인</button>
             </div>
         </div>
     )

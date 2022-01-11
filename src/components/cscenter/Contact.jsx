@@ -146,12 +146,12 @@ const Contact = () => {
                 {/* <ContactTable array={inboxArray}/> */}
 
                 <div style={{margin:'1.875rem', marginTop: '3.75rem', marginBottom: '3.9375rem', fontSize: '2.8125rem'}} className="flex items-center justify-center">
-                    <button style={{height: '7.3125rem', padding: '0.1875rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-red-cb4343">
+                    <button style={{height: '7.3125rem', padding: '1px'}} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-red-cb4343">
                         <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-white">계좌문의</span>
                         </div>
                     </button>
-                    <button style={{height: '7.3125rem', padding: '0.1875rem', fontSize: '2.8125rem'}} onClick={() => history.push('/cscenter/contact/compose')} className="flex items-center justify-center w-1/2 rounded-md bg-blue-r0070d9">
+                    <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} onClick={() => history.push('/cscenter/contact/compose')} className="flex items-center justify-center w-1/2 rounded-2xl bg-blue-r0070d9">
                         <div className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-white">문의작성</span>
                         </div>
