@@ -29,20 +29,20 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                     message3='자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
                 />
 
-                <div style={{margin: '1.0625rem 0', fontSize: '2.5625rem'}} className="flex items-center justify-center font-spoqaMedium text-gray-r7c7c7c tracking-tight">
+                <div style={{margin: '1.0625rem 0', fontSize: '2.8125rem'}} className="flex items-center justify-center font-spoqaMedium text-gray-r7c7c7c tracking-tight">
                     <span>사용 가능한 포인트:</span>
-                    <span className="text-blue-r0056a6 ml-2px font-robotoBold">278</span>
-                    <span className="text-black">P</span>
+                    <span className="text-blue-r0056a6 ml-2px -mt-1 font-robotoBold">278</span>
+                    <span className="text-black -mt-1">P</span>
                 </div>
 
                 <div style={{padding: "4.75rem 0"}} className="w-full bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl flex flex-wrap flex-col items-center justify-center">
                     <div className='w-full text-center'>
-                        <span style={{fontSize: '2.5625rem'}} className="tracking-tight font-spoqaMedium">전환포인트 입력</span>
+                        <span style={{fontSize: '2.8125rem'}} className="tracking-tight font-spoqaMedium text-gray-r454545">전환포인트 입력</span>
                     </div>
                     <div className='w-full text-center mt-15px'>
                         <input 
                             placeholder="0"
-                            style={{height: '6.75rem', width: '36.625rem', fontSize: '2rem', padding: '0 1.875rem'}}
+                            style={{height: '6.75rem', width: '36.625rem', fontSize: '2.8125rem', padding: '0 1.875rem'}}
                             className="flex-shrink-0 outline-none rounded-md border border-gray-dddddd font-spoqaMedium tracking-tight text-gray-r8c8c8c" 
                             value={inputValue !==null ? nf.format(inputValue) : ""}
                             onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
