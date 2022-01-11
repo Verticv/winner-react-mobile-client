@@ -1,13 +1,10 @@
-// import MyPageTitle from 'components/myPage/MyPageTitle'
-// import Pagination from 'components/myPage/Pagination'
 import React, { useState } from 'react'
-import AlertIcon from '../../images/newImages/mainPage/icons/warning.png'
 import Step1 from '../../images/newImages/mainPage/icons/step-1.png'
 import Step2 from '../../images/newImages/mainPage/icons/step-2.png'
 import Step3 from '../../images/newImages/mainPage/icons/step-3.png'
-// import MoneyChargeTable from './tables/MoneyChargeTable'
 import BankTable from './BankTable'
 import BottomNavbar from '../bottomNavbar/BottomNavbar'
+import WarningMessage from '../common/WarningMessage'
 
 const MoneyCharge = () => {
 
@@ -29,22 +26,17 @@ const MoneyCharge = () => {
     return (
         <div style={{padding: '1.875rem', paddingTop: '0'}} className="flex flex-col items-center">
             
-            {/* <MyPageTitle title="보유머니 충전" /> */}
-
-            <div style={{paddingLeft: '1.875rem', paddingTop: '1.875rem', paddingBottom: '1.875rem', borderWidth: '0.1875rem', marginBottom: '0.625rem'}} className="w-full rounded-2xl border border-red-e8c2b3 bg-red-ffe9de px-19px pt-17px">
-                <div className="flex">
-                    <img style={{width: '3.375rem',height: '3.0625rem' ,marginRight: '1rem'}} src={AlertIcon} alt="" />
-                    <span style={{fontSize: '2.8125rem', lineHeight: '1.2'}} className="text-red-ee3c62 font-spoqaMedium text-20px tracking-tight">확인/필독사항</span>
-                </div>
-                <div style={{marginTop: '1.625rem'}} className="flex flex-col text-red-ac6d6d tracking-tight font-spoqaMedium text-16px">
-                    <span style={{color:"#8c5757", fontSize: '2.625rem'}} className=""><span className="font-bold">✓</span>  입금 시 반드시 회원님의 성함으로 입금 바랍니다.</span>
-                    <span style={{fontSize: '2.625rem', marginRight: '9.5rem', marginTop: '0.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.</span>
-                    <span style={{fontSize: '2.625rem', marginRight: '2.875rem', marginTop: '0.875rem'}} className="flex"><span style={{marginRight: '0.875rem'}} className="font-bold block">✓</span>  입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.</span>
-                    <span style={{fontSize: '2.625rem', marginTop: '0.875rem'}} className=""><span className="font-bold">✓</span>  자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</span>
-                </div>
-            </div>
+            <WarningMessage 
+                title='확인/필독사항'
+                message1='입금 시 반드시 회원님의 성함으로 입금 바랍니다.'
+                isFirstMessageDark
+                message2='입금이 지연될 수 있으니 은행 점검 시간을 확인하신 후 점검 시간을 피해 신청해 주시기 바랍니다.'
+                mr2='9.5rem'
+                message3='입금계좌는 수시로 변경되오니 반드시 계좌번호 문의 신청을 통해 계좌번호를 확인 후 입금하여 주시기 바랍니다.'
+                mr3='2.875rem'
+                message4='자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
+            />
             
-
             <div style={{padding: '0.9375rem', paddingBottom: '2.0625rem', marginTop: '1.875rem'}} className="w-full  ddddddddddddddddd rounded-2xl shadow-subNavbar">
                 <div style={{paddingRight: '2.0625rem', paddingTop: '1.375rem', paddingBottom: '1.1875rem', paddingLeft: '1.9375rem'}} className="w-full rounded-2xl border border-gray-dddddd bg-gray-f9f9f9">
                     <div 
