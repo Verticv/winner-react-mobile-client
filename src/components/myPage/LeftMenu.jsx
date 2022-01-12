@@ -108,7 +108,8 @@ const LeftMenu = ({
                             <button 
                                 style={{padding: '1.3125rem', paddingRight: 0}}
                                 className={`${
-                                    pathname.includes(item.mainPath)
+                                    // pathname.includes(item.mainPath)
+                                    false
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                     : ""
                                 } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l focus:from-blue-gradDark focus:to-blue-r2088f0`} 
@@ -130,7 +131,8 @@ const LeftMenu = ({
                             >
                                 <div 
                                     className={`${
-                                        pathname.includes(item.mainPath) && "shadow-plain9"
+                                        // pathname.includes(item.mainPath) && "shadow-plain9"
+                                        false && "shadow-plain9"
                                     } bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
                                 >
                                     <img 
@@ -143,7 +145,8 @@ const LeftMenu = ({
                                     <div className="flex items-center">
                                         <label
                                             className={`${
-                                                pathname.includes(item.mainPath)
+                                                // pathname.includes(item.mainPath)
+                                                false
                                                 ? "text-white" 
                                                 : isMouseHover === item.path
                                                 ? "text-gray-r454545"
@@ -161,14 +164,15 @@ const LeftMenu = ({
                                             <img 
                                             className="object-contain absolute right-1 top-1" 
                                             style={{width: '1.9375rem', height: '3.1875rem'}}
-                                            src={pathname?.includes(item?.mainPath) ? ArrowRightWhite : ArrowRight } 
+                                            // src={pathname?.includes(item?.mainPath) ? ArrowRightWhite : ArrowRight } 
+                                            src={ArrowRight}
                                             alt="icon" />
                                         )}
                                         </div>
                                 </div>
                             </button>
                                 
-                            <div className={`${
+                            {/* <div className={`${
                                 pathname.includes(item.mainPath) 
                                 && isExpanded !== item.path + "closed" 
                                 && isExpanded !== item.path2 + "closed"
@@ -176,7 +180,7 @@ const LeftMenu = ({
                                 ? "" : "hidden"
                                 } font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px`} 
                             >
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>
