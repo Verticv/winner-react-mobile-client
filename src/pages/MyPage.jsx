@@ -50,7 +50,7 @@ const MyPage = ({setAuthenticated }) => {
       text: "머니충전",
       icon: Icon2,
       id: 1,
-      path: "/mypage/money/charge",
+      path: "/mypage/money",
       mainPath: "#",
       hasArrow: true,
     },
@@ -66,7 +66,7 @@ const MyPage = ({setAuthenticated }) => {
       text: "포인트전환",
       icon: Icon4,
       id: 3,
-      path: "/mypage/points/points-apply",
+      path: "/mypage/points",
       mainPath: "#",
       hasArrow: true,
     },
@@ -110,7 +110,7 @@ const MyPage = ({setAuthenticated }) => {
       text: "쿠폰관리",
       icon: Icon10,
       id: 9,
-      path: "#",
+      path: "/mypage/coupon",
       inboxCount: "1",
       mainPath: "#",
       hasArrow: true,
@@ -127,7 +127,7 @@ const MyPage = ({setAuthenticated }) => {
       text: "고객센터",
       icon: Icon12,
       id: 11,
-      path: "#",
+      path: "/cscenter",
       mainPath: "#",
       hasArrow: true,
     },
@@ -178,7 +178,7 @@ const MyPage = ({setAuthenticated }) => {
         <Route path="/mypage/bet-history">
             <BetHistory isAuthenticated={isAuthenticated} />
         </Route>
-        <Route path="/mypage/money/charge">
+        <Route path="/mypage/money">
             <MoneyPage isAuthenticated={true} setAuthenticated={setAuthenticated} />
         </Route>
         <Route path="/mypage/money/exchange">

@@ -47,10 +47,10 @@ const Footer = ({fullWidth = false}) => {
                 <div className="flex flex-col space-y-18px w-297px pr-24px flex-shrink-0">
                     <img className="w-130px h-32px object-none" src={WinnerLogo} alt="winner logo" />
                     <div className="grid grid-cols-3 w-265px gap-x-13px gap-y-2px">
-                        <button className={buttonClass} onClick={() => history.push("/cscenter/contact/all")}>문의하기</button>
-                        <button className={buttonClass} onClick={() => history.push("/cscenter/announcement")}>공지사항</button>
-                        <button className={buttonClass} onClick={() => history.push("/cscenter/faq")}>자주묻는질문</button>
-                        <button className={buttonClass} onClick={() => history.push("/cscenter/policy/sportsgame/soccer")}>베팅규정</button>
+                        <button className={buttonClass} onClick={() => history.push("/cscenter/all/contact/all")}>문의하기</button>
+                        <button className={buttonClass} onClick={() => history.push("/cscenter/all/announcement")}>공지사항</button>
+                        <button className={buttonClass} onClick={() => history.push("/cscenter/all/faq")}>자주묻는질문</button>
+                        <button className={buttonClass} onClick={() => history.push("/cscenter/all/policy/sportsgame/soccer")}>베팅규정</button>
                         <button className={buttonClass} onClick={() => history.push("/gameresults/sports/win-draw-lose")}>경기결과</button>
                         <button className={buttonClass} onClick={() => history.push("/freeboard")}>게시판</button>
                     </div>

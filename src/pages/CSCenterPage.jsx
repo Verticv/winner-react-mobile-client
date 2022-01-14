@@ -4,22 +4,25 @@ import { Route, useLocation } from 'react-router';
 // import Footer2 from 'components/mainPage/Footer2';
 // import DirectoryComponent from 'components/myPage/DirectoryComponent';
 // import LeftMenu from 'components/myPage/LeftMenu';
+import AccountProfileComponent from 'components/common/AccountProfileComponent'
+import LeftMenu from "components/myPage/LeftMenu";
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 import HomePageTopBanner from 'components/common/HomePageTopBanner';
 // import HorizontalSubMenu from 'components/horizontalMenus/HorizontalSubMenu'
 import HorizontalMenu1 from 'components/horizontalMenus/HorizontalMenu1'
+import Logo from "../images/newImages/mainPage/icons/logo.png";
 import Icon1 from '../images/cscenter/leftMenu/icon_1.png'
 import Icon2 from '../images/cscenter/leftMenu/icon_2.png'
 import Icon3 from '../images/cscenter/leftMenu/icon_3.png'
 import Icon4 from '../images/cscenter/leftMenu/icon_4.png'
 import Icon5 from '../images/cscenter/leftMenu/icon_5.png'
-// import IconHighlight1 from '../images/cscenter/leftMenu/icon_1_highlight.png'
-// import IconHighlight2 from '../images/cscenter/leftMenu/icon_2_highlight.png'
-// import IconHighlight3 from '../images/cscenter/leftMenu/icon_3_highlight.png'
-// import IconHighlight4 from '../images/cscenter/leftMenu/icon_4_highlight.png'
-// import IconHighlight5 from '../images/cscenter/leftMenu/icon_5_highlight.png'
-// import CsPageBanner from '../images/cscenter/cscenter_banner.png'
+import subIcon1 from '../images/newImages/mainPage/cscenter/1.png';
+import subIcon2 from '../images/newImages/mainPage/cscenter/2.png';
+import subIcon3 from '../images/newImages/mainPage/cscenter/3.png';
+import subIcon4 from '../images/newImages/mainPage/cscenter/4.png';
+import subIcon5 from '../images/newImages/mainPage/cscenter/5.png';
+
 import Contact from 'components/cscenter/Contact';
 import ContactView from 'components/cscenter/ContactView';
 import ContactCompose from 'components/cscenter/ContactCompose';
@@ -32,15 +35,48 @@ import MinigamePolicy from 'components/cscenter/MinigamePolicy';
 const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
     const tabsArray = [
-        { text: "문의하기", icon: Icon1, id: 0, path: "/cscenter/contact/all", hasSameParent: true },
-        { text: "공지사항", icon: Icon2, id: 1, path: "/cscenter/announcement" },
-        { text: "자주묻는질문", icon: Icon3, id: 2, path: "/cscenter/faq", hasSameParent: true},
-        { text: "계좌문의", icon: Icon4, id: 3, path: "/cscenter/inquiry"},
-        { text: "베팅규정", icon: Icon5, id: 4, path: "/cscenter/policy/sportsgame/soccer"},
+        { text: "문의하기", icon: Icon1, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true },
+        { text: "공지사항", icon: Icon2, id: 1, path: "/cscenter/all/announcement" },
+        { text: "자주묻는질문", icon: Icon3, id: 2, path: "/cscenter/all/faq", hasSameParent: true},
+        { text: "계좌문의", icon: Icon4, id: 3, path: "/cscenter/all/inquiry"},
+        { text: "베팅규정", icon: Icon5, id: 4, path: "/cscenter/all/policy/sportsgame/soccer"},
     ];
 
+    const LeftMenuSubArray = [
+        {
+          text: "문의하기",
+          icon: subIcon1,
+          id: 0,
+          path: "/cscenter/all/contact/all",
+        },
+        {
+          text: "공지사항",
+          icon: subIcon2,
+          id: 1,
+          path: "/cscenter/all/announcement",
+        },
+        {
+          text: "자주묻는질문",
+          icon: subIcon3,
+          id: 2,
+          path: "/cscenter/all/faq",
+        },
+        {
+          text: "계좌문의",
+          icon: subIcon3,
+          id: 2,
+          path: "/cscenter/all/inquiry",
+        },
+        {
+          text: "베팅규정",
+          icon: subIcon3,
+          id: 2,
+          path: "/cscenter/all/policy/sportsgame/soccer",
+        }
+      ]
+
     // const LeftMenuArray = [
-    //     { text: "문의하기", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/cscenter/contact/all", mainPath: "/cscenter/contact" },
+    //     { text: "문의하기", icon: Icon1, iconHighlight: IconHighlight1, id: 0, path: "/cscenter/all/contact/all", mainPath: "/cscenter/contact" },
     //     { text: "공지사항", icon: Icon2, iconHighlight: IconHighlight2, id: 1, path: "/cscenter/announcement", mainPath: "/cscenter/announcement" },
     //     { text: "자주묻는질문", icon: Icon3, iconHighlight: IconHighlight3, id: 2, path: "/cscenter/faq/all", mainPath: "/cscenter/faq" },
     //     { text: "계좌문의", icon: Icon4, iconHighlight: IconHighlight4, id: 3, path: "/cscenter/inquiry", mainPath: "/cscenter/inquiry" },
@@ -76,127 +112,134 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
     return (
         <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
 
+            <Route exact path="/cscenter">
+                <AccountProfileComponent isAuthenticated={isAuthenticated} />
+                <div style={{marginTop: '1.875rem', marginBottom: '36.375rem'}} className="flex w-full">
+                    <LeftMenu
+                        selectedTab={selectedTab}
+                        setSelectedTab={setSelectedTab}
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        array={LeftMenuSubArray}
+                    />
+                </div>
+                <div className="flex justify-center mb-40">
+                    <img style={{width: '22.3125rem'}} className="object-contain" src={Logo} alt="logo" />
+                </div>
+            </Route>
 
-            <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
-                
+            <Route path="/cscenter/all">
+                <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
+                    <div className="flex w-full">
+                        <div className="w-full">
+                            <Route path="/cscenter/all/contact/all/">
+                                <div className="w-full z-30 flex flex-col items-center">
+                                    <NoticeBanner />
+                                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                    <HomePageTopBanner pageTitle='고객센터' />
+                                </div>
 
-                <div className="flex w-full">
-                    <div className="w-full">
-                        <Route path="/cscenter/contact/all/">
-                            <div className="w-full z-30 flex flex-col items-center">
-                                <NoticeBanner />
-                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                <HomePageTopBanner pageTitle='고객센터' />
-                            </div>
-
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
-                                <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                                    <div className=" flex flex-shrink-0 w-full">
-                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
+                                    <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                                        <div className=" flex flex-shrink-0 w-full">
+                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <Contact />
-                        </Route>
-                        <Route path="/cscenter/contact/view/*">
-                            <div className="w-full z-30 flex flex-col items-center">
-                                <NoticeBanner />
-                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                <HomePageTopBanner pageTitle='문의하기' />
-                            </div>
-                            <ContactView />
-                        </Route>
-                        <Route path="/cscenter/contact/compose">
-                            <div className="w-full z-30 flex flex-col items-center">
-                                <NoticeBanner />
-                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                <HomePageTopBanner pageTitle='문의하기' />
-                            </div>
-                            <ContactCompose />
-                        </Route>
-                        <Route exact path="/cscenter/announcement">
-                            <div className="w-full z-30 flex flex-col items-center">
-                                <NoticeBanner />
-                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                <HomePageTopBanner pageTitle='공지사항' />
-                            </div>
+                                <Contact />
+                            </Route>
+                            <Route path="/cscenter/all/contact/view/*">
+                                <div className="w-full z-30 flex flex-col items-center">
+                                    <NoticeBanner />
+                                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                    <HomePageTopBanner pageTitle='문의하기' />
+                                </div>
+                                <ContactView />
+                            </Route>
+                            <Route path="/cscenter/all/contact/compose">
+                                <div className="w-full z-30 flex flex-col items-center">
+                                    <NoticeBanner />
+                                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                    <HomePageTopBanner pageTitle='문의하기' />
+                                </div>
+                                <ContactCompose />
+                            </Route>
+                            <Route exact path="/cscenter/all/announcement">
+                                <div className="w-full z-30 flex flex-col items-center">
+                                    <NoticeBanner />
+                                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                    <HomePageTopBanner pageTitle='공지사항' />
+                                </div>
 
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
-                                <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                                    <div className=" flex flex-shrink-0 w-full">
-                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
+                                    <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                                        <div className=" flex flex-shrink-0 w-full">
+                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <Announcement />
-                        </Route>
-                        <Route exact path="/cscenter/announcement/view">
-                            <div className="w-full z-30 flex flex-col items-center">
-                                <NoticeBanner />
-                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                <HomePageTopBanner pageTitle='고객센터' />
-                            </div>
-                            <AnnouncementView />
-                        </Route>
-                        <Route path="/cscenter/faq">
-                            <div className="w-full z-30 flex flex-col items-center">
-                                <NoticeBanner />
-                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                <HomePageTopBanner pageTitle='고객센터' />
-                            </div>
+                                <Announcement />
+                            </Route>
+                            <Route exact path="/cscenter/all/announcement/view">
+                                <div className="w-full z-30 flex flex-col items-center">
+                                    <NoticeBanner />
+                                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                    <HomePageTopBanner pageTitle='고객센터' />
+                                </div>
+                                <AnnouncementView />
+                            </Route>
+                            <Route path="/cscenter/all/faq">
+                                <div className="w-full z-30 flex flex-col items-center">
+                                    <NoticeBanner />
+                                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                    <HomePageTopBanner pageTitle='고객센터' />
+                                </div>
 
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
-                                <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                                    <div className=" flex flex-shrink-0 w-full">
-                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
+                                    <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                                        <div className=" flex flex-shrink-0 w-full">
+                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <Faq />
-                        </Route>
-                        <Route path="/cscenter/policy/sportsgame">
-                            <div className="w-full z-30 flex flex-col items-center">
-                                <NoticeBanner />
-                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                <HomePageTopBanner pageTitle='고객센터' />
-                            </div>
+                                <Faq />
+                            </Route>
+                            <Route path="/cscenter/all/policy/sportsgame">
+                                <div className="w-full z-30 flex flex-col items-center">
+                                    <NoticeBanner />
+                                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                    <HomePageTopBanner pageTitle='고객센터' />
+                                </div>
 
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
-                                <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                                    <div className=" flex flex-shrink-0 w-full">
-                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
+                                    <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                                        <div className=" flex flex-shrink-0 w-full">
+                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <SportsGamePolicy setSelectedTab={setSelectedTab} />
-                        </Route>
-                        <Route path="/cscenter/policy/minigame">
-                            <div className="w-full z-30 flex flex-col items-center">
-                                <NoticeBanner />
-                                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                <HomePageTopBanner pageTitle='고객센터' />
-                            </div>
+                                <SportsGamePolicy setSelectedTab={setSelectedTab} />
+                            </Route>
+                            <Route path="/cscenter/all/policy/minigame">
+                                <div className="w-full z-30 flex flex-col items-center">
+                                    <NoticeBanner />
+                                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                                    <HomePageTopBanner pageTitle='고객센터' />
+                                </div>
 
-                            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
-                                <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                                    <div className=" flex flex-shrink-0 w-full">
-                                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
+                                    <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                                        <div className=" flex flex-shrink-0 w-full">
+                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <MinigamePolicy />
-                        </Route>
-                        <Route path="*">
-                        </Route>
+                                <MinigamePolicy />
+                            </Route>
+                        </div>
                     </div>
                 </div>
-
-                {/* <div>
-                    <Footer2 />
-                    <Footer />
-                </div> */}
-
-            </div>
+            </Route>
         </div>
     )
 }

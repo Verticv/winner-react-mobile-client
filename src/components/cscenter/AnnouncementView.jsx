@@ -117,7 +117,7 @@ const AnnouncementView = () => {
                 <button 
                     style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
                     className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
-                    onClick={() => history.push('/cscenter/contact/all')}
+                    onClick={() => history.push('/cscenter/all/contact/all')}
                 >
                     <div 
                         style={{

@@ -2,8 +2,9 @@
 // import Footer2 from 'components/mainPage/Footer2'
 import MoneyCharge from 'components/money/MoneyCharge'
 import MoneyChargeHistory from 'components/money/MoneyChargeHistory'
+import AccountProfileComponent from 'components/common/AccountProfileComponent'
+import LeftMenu from "components/myPage/LeftMenu";
 // import DirectoryComponent from 'components/myPage/DirectoryComponent'
-// import LeftMenu from 'components/myPage/LeftMenu'
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 // import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu'
@@ -18,6 +19,9 @@ import { Route } from 'react-router'
 // import IconHighlight2 from '../images/money/leftMenu/icon_2_highlight.png'
 import Icon1 from '../images/newImages/mainPage/icons/recharge-application.png';
 import Icon2 from '../images/newImages/mainPage/icons/charging-history.png';
+import subIcon1 from '../images/newImages/mainPage/money/1.png';
+import subIcon2 from '../images/newImages/mainPage/money/2.png';
+import Logo from "../images/newImages/mainPage/icons/logo.png";
 import HomePageTopBanner from '../components/common/HomePageTopBanner';
 import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
 
@@ -26,6 +30,24 @@ const tabsArray = [
     { text: "충전신청", icon: Icon1, id: 0, path: "/mypage/money/charge" },
     { text: "충전내역", icon: Icon2, id: 1, path: "/mypage/money/charge/history" },
 ];
+
+const LeftMenuSubArray = [
+    {
+      text: "충전신청",
+      icon: subIcon1,
+      id: 0,
+      path: "/mypage/money/charge",
+      mainPath: "/mypage/money",
+    },
+    {
+      text: "충전내역",
+      icon: subIcon2,
+      id: 1,
+      path: "/mypage/money/charge/history",
+      mainPath: "/mypage/money",
+    }
+  ];
+
 
 
 const MoneyPage = ({isAuthenticated, setAuthenticated}) => {
@@ -44,88 +66,55 @@ const MoneyPage = ({isAuthenticated, setAuthenticated}) => {
     return (
         <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
 
-            <div className="w-full z-30 flex flex-col items-center">
-                <NoticeBanner />
-                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                <HomePageTopBanner pageTitle='머니충전' />
-            </div>
- 
-            <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
+            <Route exact path="/mypage/money">
+                <AccountProfileComponent isAuthenticated={isAuthenticated} />
+                <div style={{marginTop: '1.875rem', marginBottom: '36.375rem'}} className="flex w-full">
+                    <LeftMenu
+                        selectedTab={selectedTab}
+                        setSelectedTab={setSelectedTab}
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        array={LeftMenuSubArray}
+                    />
+                </div>
+                <div className="flex justify-center mb-40">
+                    <img style={{width: '22.3125rem'}} className="object-contain" src={Logo} alt="logo" />
+                </div>
+            </Route>
 
-            <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
-                <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                    <div className=" flex flex-shrink-0 w-full">
-                    <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
-                        {/* {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
-                            <div style={{marginLeft: `${selectedTab * 116 + 49}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
-                                <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
+            <Route path="/mypage/money/charge">
+                <div className="w-full z-30 flex flex-col items-center">
+                    <NoticeBanner />
+                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                    <HomePageTopBanner pageTitle='머니충전' />
+                </div>
+    
+                <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
+                    <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
+                        <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                            <div className=" flex flex-shrink-0 w-full">
+                            <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                             </div>
-                        )} */}
+                        </div>
                     </div>
+
+                        <div className="flex w-full">
+
+                            <div className="w-full">
+                                
+                                <Route exact path="/mypage/money/charge">
+                                        <MoneyCharge />
+                                </Route>
+                                <Route exact path="/mypage/money/charge/history">
+                                    <MoneyChargeHistory />
+                                    <BottomNavbar />
+                                </Route>
+                            </div>
+                        </div>
                 </div>
-            </div>
+            </Route>
 
-                {/* <Route path="/mypage/money/charge">
-                    <DirectoryComponent 
-                        branch1="충전/환전"
-                        branch2="보유머니 충전" 
-                        mainPath="/mypage/money/charge"
-                        setSelectedTab={setSelectedTab}
-                    />
-                </Route>
-                <Route path="/mypage/money/exchange">
-                    <DirectoryComponent 
-                        branch1="충전/환전"
-                        branch2="보유머니 환전" 
-                        mainPath="/mypage/money/charge"
-                        setSelectedTab={setSelectedTab}
-                    />
-                </Route> */}
-
-                {/* <Route path="/mypage/money/charge">
-                    <div className="relative w-default h-225px">
-                        <label style={{color:"#9e4f8d"}} className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">보유머니 충전</label>
-                        <img className="z-10" src={MoneyChargeBanner} alt="" />
-                    </div>
-                </Route> */}
-                {/* <Route path="/mypage/money/exchange">
-                    <div className="relative w-default h-225px">
-                        <label className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">보유머니 환전</label>
-                        <img className="z-10" src={MoneyExchangeBanner} alt="" />
-                    </div>
-                </Route> */}
-                
-                <div className="flex w-full">
-                    {/* <div>
-                        <LeftMenu 
-                            selectedTab={selectedTab} 
-                            setSelectedTab={setSelectedTab}
-                            array={LeftMenuArray}
-                        />
-                    </div> */}
-
-                    <div className="w-full">
-                        
-                        <Route exact path="/mypage/money/charge">
-                                <MoneyCharge />
-                        </Route>
-                        <Route exact path="/mypage/money/charge/history">
-                            <MoneyChargeHistory />
-                            <BottomNavbar />
-                        </Route>
-                        
-                        {/* <Route path="*">
-                        </Route> */}
-                    </div>
-                </div>
-
-
-                {/* <div>
-                    <Footer2 />
-                    <Footer />
-                </div> */}
-
-            </div>
+            
         </div>
     )
 }

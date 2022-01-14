@@ -19,16 +19,16 @@ import Search from 'components/common/Search'
 const Contact = () => {
 
     const tabsArray = [
-        { text: "전체", icon: Icon1, id: 0, path: "/cscenter/contact/all" },
-        { text: "라이브카지노", icon: Icon2, id: 1, path: "/cscenter/contact/all/live-casino" },
-        { text: "슬롯", icon: Icon3, id: 2, path: "/cscenter/contact/all/slot" },
-        { text: "스포츠", icon: Icon4, id: 3, path: "/cscenter/contact/all/sports" },
-        { text: "e-스포츠", icon: Icon5, id: 4, path: "/cscenter/contact/all/e-sports" },
-        { text: "미니게임", icon: Icon6, id: 5, path: "/cscenter/contact/all/minigame" },
-        { text: "키론가상게임", icon: Icon7, id: 6, path: "/cscenter/contact/all/ar-game" },
-        { text: "충전/환전", icon: Icon8, id: 7, path: "/cscenter/contact/all/transaction" },
-        { text: "베팅관련", icon: Icon9, id: 8, path: "/cscenter/contact/all/about-betting" },
-        { text: "기타", icon: Icon10, id: 9, path: "/cscenter/contact/all/other" },
+        { text: "전체", icon: Icon1, id: 0, path: "/cscenter/all/contact/all" },
+        { text: "라이브카지노", icon: Icon2, id: 1, path: "/cscenter/all/contact/all/live-casino" },
+        { text: "슬롯", icon: Icon3, id: 2, path: "/cscenter/all/contact/all/slot" },
+        { text: "스포츠", icon: Icon4, id: 3, path: "/cscenter/all/contact/all/sports" },
+        { text: "e-스포츠", icon: Icon5, id: 4, path: "/cscenter/all/contact/all/e-sports" },
+        { text: "미니게임", icon: Icon6, id: 5, path: "/cscenter/all/contact/all/minigame" },
+        { text: "키론가상게임", icon: Icon7, id: 6, path: "/cscenter/all/contact/all/ar-game" },
+        { text: "충전/환전", icon: Icon8, id: 7, path: "/cscenter/all/contact/all/transaction" },
+        { text: "베팅관련", icon: Icon9, id: 8, path: "/cscenter/all/contact/all/about-betting" },
+        { text: "기타", icon: Icon10, id: 9, path: "/cscenter/all/contact/all/other" },
     ];
 
     const inboxArray = [
@@ -39,7 +39,7 @@ const Contact = () => {
             time: "2021.06.29 07:35",
             category: "계좌문의",
             isClicked: true,
-            path: '/cscenter/contact/view/1'
+            path: '/cscenter/all/contact/view/1'
         },
         { 
             id: 1,
@@ -47,7 +47,7 @@ const Contact = () => {
             isRead: true,
             time: "2021.06.29 07:35",
             category: "스포츠북",
-            path: '/cscenter/contact/view/2'
+            path: '/cscenter/all/contact/view/2'
         },
         { 
             id: 2,
@@ -55,7 +55,7 @@ const Contact = () => {
             isRead: true,
             time: "2021.06.29 07:35",
             category: "카지노",
-            path: '/cscenter/contact/view/3'
+            path: '/cscenter/all/contact/view/3'
         },
         { 
             id: 3,
@@ -63,7 +63,7 @@ const Contact = () => {
             isRead: true,
             time: "2021.06.29 07:35",
             category: "키론가상게임",
-            path: '/cscenter/contact/view/4'
+            path: '/cscenter/all/contact/view/4'
         },
         { 
             id: 4,
@@ -71,7 +71,7 @@ const Contact = () => {
             isRead: true,
             time: "2021.06.29 07:35",
             category: "미니게임",
-            path: '/cscenter/contact/view/5'
+            path: '/cscenter/all/contact/view/5'
         },
         { 
             id: 5,
@@ -79,7 +79,7 @@ const Contact = () => {
             isRead: true,
             time: "2021.06.29 07:35",
             category: "슬롯",
-            path: '/cscenter/contact/view/6'
+            path: '/cscenter/all/contact/view/6'
         },
         { 
             id: 6,
@@ -87,7 +87,7 @@ const Contact = () => {
             isRead: false,
             time: "2021.06.29 07:35",
             category: "충전환전",
-            path: '/cscenter/contact/view/7'
+            path: '/cscenter/all/contact/view/7'
         },
         { 
             id: 7,
@@ -95,7 +95,7 @@ const Contact = () => {
             isRead: true,
             time: "2021.06.29 07:35",
             category: "베팅관련",
-            path: '/cscenter/contact/view/8'
+            path: '/cscenter/all/contact/view/8'
         },
         { 
             id: 8,
@@ -103,7 +103,7 @@ const Contact = () => {
             isRead: true,
             time: "2021.06.29 07:35",
             category: "기타",
-            path: '/cscenter/contact/view/9'
+            path: '/cscenter/all/contact/view/9'
         },
         { 
             id: 9,
@@ -111,7 +111,7 @@ const Contact = () => {
             isRead: false,
             time: "2021.06.29 07:35",
             category: "기타",
-            path: '/cscenter/contact/view/10'
+            path: '/cscenter/all/contact/view/10'
         },
         
     ];
@@ -151,7 +151,7 @@ const Contact = () => {
                             <span className="font-spoqaMedium tracking-tight text-white">계좌문의</span>
                         </div>
                     </button>
-                    <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} onClick={() => history.push('/cscenter/contact/compose')} className="flex items-center justify-center w-1/2 rounded-2xl bg-blue-r0070d9">
+                    <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} onClick={() => history.push('/cscenter/all/contact/compose')} className="flex items-center justify-center w-1/2 rounded-2xl bg-blue-r0070d9">
                         <div className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-white">문의작성</span>
                         </div>

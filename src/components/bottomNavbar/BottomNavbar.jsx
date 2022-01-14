@@ -59,7 +59,7 @@ const BottomNavbar = () => {
                 <button 
                     style={{width: '13.3125rem'}}
                     className="flex flex-col"
-                    onClick={() => history.push('/cscenter/contact/all')}
+                    onClick={() => history.push('/cscenter/all/contact/all')}
                 >
                     <img style={{marginLeft: '0.75rem', paddingBottom: '0.4375rem'}} className="w-16 object-contain" src={isCustomerCenterPage ? QuestionActive : Question } alt="" />
                     <p style={{fontSize: '2.625rem', marginLeft: '0.375rem'}} className={`font-spoqaMedium ${isCustomerCenterPage ? 'text-blue-r009edf' : 'text-gray-r727272' }`}>문의</p>
