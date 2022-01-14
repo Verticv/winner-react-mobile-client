@@ -1,15 +1,5 @@
 import React, { useState } from 'react'
 import { useLocation, useHistory } from 'react-router';
-import Icon1 from '../../images/myPage/betHistory/ico_1.png'
-import Icon2 from '../../images/myPage/betHistory/ico_2.png'
-import Icon3 from '../../images/myPage/betHistory/ico_3.png'
-import Icon4 from '../../images/myPage/betHistory/ico_4.png'
-import Icon5 from '../../images/myPage/betHistory/ico_5.png'
-import Icon6 from '../../images/myPage/betHistory/ico_6.png'
-import Icon7 from '../../images/myPage/betHistory/ico_7.png'
-import Icon8 from '../../images/cscenter/8.png'
-import Icon9 from '../../images/cscenter/9.png'
-import Icon10 from '../../images/cscenter/10.png'
 import HorizontalSubMenu from 'components/horizontalMenus/HorizontalSubMenu'
 import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 import Pagination from 'components/myPage/Pagination';
