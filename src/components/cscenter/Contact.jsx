@@ -19,16 +19,16 @@ import Search from 'components/common/Search'
 const Contact = () => {
 
     const tabsArray = [
-        { text: "전체", icon: Icon1, id: 0, path: "/cscenter/all/contact/all" },
-        { text: "라이브카지노", icon: Icon2, id: 1, path: "/cscenter/all/contact/all/live-casino" },
-        { text: "슬롯", icon: Icon3, id: 2, path: "/cscenter/all/contact/all/slot" },
-        { text: "스포츠", icon: Icon4, id: 3, path: "/cscenter/all/contact/all/sports" },
-        { text: "e-스포츠", icon: Icon5, id: 4, path: "/cscenter/all/contact/all/e-sports" },
-        { text: "미니게임", icon: Icon6, id: 5, path: "/cscenter/all/contact/all/minigame" },
-        { text: "키론가상게임", icon: Icon7, id: 6, path: "/cscenter/all/contact/all/ar-game" },
-        { text: "충전/환전", icon: Icon8, id: 7, path: "/cscenter/all/contact/all/transaction" },
-        { text: "베팅관련", icon: Icon9, id: 8, path: "/cscenter/all/contact/all/about-betting" },
-        { text: "기타", icon: Icon10, id: 9, path: "/cscenter/all/contact/all/other" },
+        { text: "전체", id: 0, path: "/cscenter/all/contact/all" },
+        { text: "라이브카지노", id: 1, path: "/cscenter/all/contact/all/live-casino" },
+        { text: "슬롯", id: 2, path: "/cscenter/all/contact/all/slot" },
+        { text: "스포츠", id: 3, path: "/cscenter/all/contact/all/sports" },
+        { text: "e-스포츠", id: 4, path: "/cscenter/all/contact/all/e-sports" },
+        { text: "미니게임", id: 5, path: "/cscenter/all/contact/all/minigame" },
+        { text: "키론가상게임", id: 6, path: "/cscenter/all/contact/all/ar-game" },
+        { text: "충전/환전", id: 7, path: "/cscenter/all/contact/all/transaction" },
+        { text: "베팅관련", id: 8, path: "/cscenter/all/contact/all/about-betting" },
+        { text: "기타", id: 9, path: "/cscenter/all/contact/all/other" },
     ];
 
     const inboxArray = [

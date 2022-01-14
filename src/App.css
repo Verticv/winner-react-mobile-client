@@ -77,3 +77,8 @@ body {
 .text-white-border {
   -webkit-text-stroke: 0.125rem white;
 }
+
+.date-picker {
+  padding-left: 1.9375rem;
+  padding-right: 1.875rem;
+}

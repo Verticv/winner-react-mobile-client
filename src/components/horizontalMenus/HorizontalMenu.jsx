@@ -67,7 +67,7 @@ const HorizontalMenu = ({
                         }}
                         className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                     >
-                        <img style={{width: '6.8rem'}} className="mt-4 ml-2px object-contain" src={item.icon} alt="" />
+                        <img style={{width: '6.8rem', marginLeft: '0.5625rem'}} className="mt-4 object-contain" src={item.icon} alt="" />
                         <span
                             style={{marginTop: '0.625rem'}}
                             className={`${
