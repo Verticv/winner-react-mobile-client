@@ -6,7 +6,7 @@ import ArrowRightWhite from '../../images/newImages/mainPage/icons/right-arrow-w
 import { useHistory } from 'react-router-dom'
 import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from 'components/popups/ReauthenticatePopup'
-import { getCookie, setCookie } from '../../utils'
+import { getCookie } from '../../utils'
 
 
 const LeftMenu = ({
@@ -35,7 +35,7 @@ const LeftMenu = ({
             }
         }, 0)
         
-    }, [currentPathname])
+    }, [currentPathname, array])
 
     function buttonPressed(text, path) {
         if (text === "총판페이지") {
