@@ -148,7 +148,7 @@ const MyPage = ({setAuthenticated }) => {
   ];
 
 
-  const myInfo = () => {
+  const MyInfo = () => {
     console.log(`location.state`, location.state)
     return (
       <>
@@ -162,7 +162,7 @@ const MyPage = ({setAuthenticated }) => {
               array={LeftMenuArray}
             />
       </div>
-      <div className="flex justify-center mb-40">
+      <div className="w-full flex justify-center mb-40">
         <img style={{width: '22.3125rem'}} className="object-contain" src={Logo} alt="logo" />
       </div>
       </>
@@ -172,6 +172,9 @@ const MyPage = ({setAuthenticated }) => {
   return (
     <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
       <div className="flex flex-col items-start limit:items-center w-full h-full">
+        <Route exact path="/mypage">
+            <MyInfo />
+        </Route>
         <Route path="/mypage/bet-history">
             <BetHistory isAuthenticated={isAuthenticated} />
         </Route>
@@ -206,9 +209,6 @@ const MyPage = ({setAuthenticated }) => {
         </Route>
 
       </div>
-      <Route exact path="/mypage">
-          {myInfo}
-      </Route>
     </div>
   );
 };

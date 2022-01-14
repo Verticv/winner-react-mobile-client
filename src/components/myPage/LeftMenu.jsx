@@ -1,10 +1,12 @@
 // @ts-nocheck
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useLocation } from "react-router-dom";
 import ArrowRight from '../../images/newImages/mainPage/icons/right-arrow-gray.png'
 import ArrowRightWhite from '../../images/newImages/mainPage/icons/right-arrow-white.png'
 import { useHistory } from 'react-router-dom'
 import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from 'components/popups/ReauthenticatePopup'
+import { getCookie, setCookie } from '../../utils'
 
 
 const LeftMenu = ({
@@ -15,19 +17,38 @@ const LeftMenu = ({
     array
 }) => {
 
-    console.log('selectedTab', selectedTab)
+    const { currentPathname } = useLocation();
     const pathname = window.location.pathname
     const history = useHistory();
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [isExpanded, setExpanded] = useState(window.location.pathname)
     const [isMouseHover, setMouseHover] = useState("")
 
-    console.log(pathname)
+    const [activeButton, setActiveButton] = useState(array?.[0]?.path)
+    
+
+    useEffect(() => {
+        setTimeout(() => {
+            const isFromPreviousPage = array.find(ele => ele.path === getCookie('previousUrl'))
+            if (isFromPreviousPage) {
+                setActiveButton(getCookie('previousUrl'))
+            }
+        }, 0)
+        
+    }, [currentPathname])
+
     function buttonPressed(text, path) {
         if (text === "총판페이지") {
             window.open('/distributor-page');
         } else {
-            history.push(path)
+            console.log(`ddddddd`, {
+                pathname: path,
+                state: { fromPage: window.location.pathname }
+              })
+            history.push({
+                pathname: path,
+                state: { fromPage: window.location.pathname }
+              })
             setSelectedTab(path)
             if (setSelectedSubTab !== null) {
                 setSelectedSubTab(path)
@@ -108,8 +129,7 @@ const LeftMenu = ({
                             <button 
                                 style={{padding: '1.3125rem', paddingRight: 0}}
                                 className={`${
-                                    // pathname.includes(item.mainPath)
-                                    false
+                                    activeButton === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                     : ""
                                 } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l focus:from-blue-gradDark focus:to-blue-r2088f0`} 
@@ -131,8 +151,7 @@ const LeftMenu = ({
                             >
                                 <div 
                                     className={`${
-                                        // pathname.includes(item.mainPath) && "shadow-plain9"
-                                        false && "shadow-plain9"
+                                        activeButton === item?.path && "shadow-plain9"
                                     } bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
                                 >
                                     <img 
@@ -145,8 +164,7 @@ const LeftMenu = ({
                                     <div className="flex items-center">
                                         <label
                                             className={`${
-                                                // pathname.includes(item.mainPath)
-                                                false
+                                                activeButton === item?.path
                                                 ? "text-white" 
                                                 : isMouseHover === item.path
                                                 ? "text-gray-r454545"
@@ -164,8 +182,8 @@ const LeftMenu = ({
                                             <img 
                                             className="object-contain absolute right-1 top-1" 
                                             style={{width: '1.9375rem', height: '3.1875rem'}}
-                                            // src={pathname?.includes(item?.mainPath) ? ArrowRightWhite : ArrowRight } 
-                                            src={ArrowRight}
+                                            src={activeButton === item?.path ? ArrowRightWhite : ArrowRight } 
+                                            // src={ArrowRight}
                                             alt="icon" />
                                         )}
                                         </div>
