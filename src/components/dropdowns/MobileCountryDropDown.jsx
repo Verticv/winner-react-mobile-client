@@ -40,7 +40,7 @@ const CountryDropDown = ({setCountry, country}) => {
         ));
     }
     return (
-        <div style={{width: '14.125rem', borderRadius: '2.3rem'}} className="p-1 relative flex flex-col items-center bg-white shadow-plain bg-white">
+        <div style={{width: '14rem', borderRadius: '2.8rem'}} className="p-1 relative flex flex-col items-center bg-white shadow-plain bg-white">
             <div style={{width: '4rem', height: '1.5rem', marginTop: '-1.5rem', marginLeft: '1.3125rem'}} className="absolute top-0 -mt-2 w-4 overflow-hidden inline-block">
                 <div style={{width: '2rem', height: '2rem'}} className="h-2 w-2 bg-white rotate-45 transform origin-bottom-left shadow"></div>
             </div>

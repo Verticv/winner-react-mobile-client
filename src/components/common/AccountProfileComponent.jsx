@@ -69,11 +69,11 @@ const AccountProfileComponent = ({isAuthenticated}) => {
   )
   
   const CountryButton = (
-      <div style={{height: '9.375rem', width: '23.75rem', paddingBottom: '0.6875rem', paddingTop: '0.875rem'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-4 shadow-plain2">
-          <div style={{width: '7.75rem', height: '7.75rem', marginRight: '3.1875rem'}} className="rounded-full flex items-center justify-center">
-              <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
+      <div style={{height: '9.375rem', width: '23.75rem', paddingBottom: '0.6875rem', paddingTop: '0.875rem', paddingLeft: '0.9rem'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-4 shadow-plain2">
+          <div style={{marginRight: '3.1875rem', marginTop: '0.1rem'}} className="rounded-full h-full flex items-center justify-center">
+              <img style={{width: '7.6rem', height: '7.6rem'}} className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
           </div>
-          <label style={{marginRight: '3.25rem', fontSize: '3rem', marginTop: '0.125rem'}} className="font-spoqaBold text-white cursor-pointer">{country}</label>
+          <label style={{marginRight: '3.25rem', fontSize: '3rem', marginTop: '0.225rem'}} className="font-spoqaBold text-white cursor-pointer">{country}</label>
           <DropdownArrow isWhite isOpen={isCountryOpen}/>
       </div>
   )
@@ -156,7 +156,7 @@ const AccountProfileComponent = ({isAuthenticated}) => {
               </div>
             </div>
             <div style={{borderBottomRightRadius: '3.75rem', borderBottomLeftRadius: '3.75rem', height: '18.875rem', marginTop: '-7.75rem', paddingTop: '9.3125rem'}} className="flex w-full justify-between items-center pt-16 rounded-3xl bg-gray-d9e6f2">
-              <div style={{marginTop: '-0.4375rem'}} className="flex items-center ml-24">
+              <div style={{marginTop: '-0.4375rem'}} className="flex items-center ml-32">
                 <img
                   style={{width: '10.1875rem'}}
                   className="object-contain"
@@ -167,7 +167,7 @@ const AccountProfileComponent = ({isAuthenticated}) => {
                   test1234
                 </span>
               </div>
-              <div style={{height: '6.25rem', width: '0.125rem', marginTop: '-1.3125rem', marginLeft: '2.4375rem'}} className="bg-gray-c1cfdb" />
+              <div style={{height: '6.25rem', width: '0.125rem', marginTop: '-1.3125rem', marginLeft: '0.6rem'}} className="bg-gray-c1cfdb" />
               <div style={{marginTop: '-0.4375rem', marginRight: '8.75rem'}} className="flex items-center">
                 <img
                   style={{width: '10.1875rem'}}

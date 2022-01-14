@@ -74,7 +74,7 @@ const MyPage = ({setAuthenticated }) => {
       text: "총판페이지",
       icon: Icon5,
       id: 4,
-      path: "#",
+      path: "/distributor-page",
       mainPath: "#",
     },
     {
@@ -119,7 +119,7 @@ const MyPage = ({setAuthenticated }) => {
       text: "쪽지관리",
       icon: Icon11,
       id: 10,
-      path: "#",
+      path: "/mypage/inbox",
       inboxCount: "20",
       mainPath: "#",
     },
