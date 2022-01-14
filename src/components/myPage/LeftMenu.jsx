@@ -90,7 +90,7 @@ const LeftMenu = ({
                 } bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
             >
                 <img 
-                    style={{height: '9.4375rem', width: '9.4375rem', boxShadow: '4px 6.928px 5px 0px rgba(35, 60, 77, 0.3)'}}
+                    style={{height: '9.4375rem', width: '9.4375rem', boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)'}}
                     className="bg-white rounded-full flex items-center justify-center" 
                     src={icon} 
                     alt="icon" />
@@ -180,8 +180,8 @@ const LeftMenu = ({
                                         )}
                                         {item.hasArrow && (
                                             <img 
-                                            className="object-contain absolute right-1 top-1" 
-                                            style={{width: '1.9375rem', height: '3.1875rem'}}
+                                            className="object-contain absolute right-1" 
+                                            style={{width: '1.9375rem', height: '3.1875rem', top: '-0.1rem'}}
                                             src={activeButton === item?.path ? ArrowRightWhite : ArrowRight } 
                                             // src={ArrowRight}
                                             alt="icon" />
