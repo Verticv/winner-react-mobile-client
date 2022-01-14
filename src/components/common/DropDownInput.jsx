@@ -7,16 +7,16 @@ const DropDownInput = () => {
   const [selectedCarrier, setSelectedCarrier] = useState("전체")
   const [isDropdownOpen, setDropdownOpen] = useState(true)
 
-  const dropDownCellClass = "flex w-full h-40px p-8 bg-white justify-between items-center border-b border-gray-ececec"
+  const dropDownCellClass = "flex w-full p-8 bg-white justify-between items-center border-b border-gray-ececec"
   const dropdownButton = (
       <div style={{width: '34.06rem', height: '6.75rem', fontSize: '2.625rem', marginLeft: '1.875rem'}} className="flex h-full bg-white rounded-2xl border border-gray-dddddd group">
-          <input  className="w-0 text-16px"/>
+          <input  className="w-0"/>
           <div
-              style={{paddingLeft: '1.625rem', paddingRight: '1.875rem'}}
-              className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
+              style={{paddingLeft: '1.75rem', paddingRight: '1.875rem'}}
+              className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight" 
           >
               <label style={{fontSize: '2.8125rem'}} className="cursor-pointer text-gray-r7b7b7b">{selectedCarrier}</label>
-              <img style={{width: '1.5625rem', height: '1rem'}} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" /> 
+              <img style={{width: '1.5625rem', height: '1rem'}} className="object-contain" src={DownArrowIcon} alt="arrow" /> 
           </div>
       </div>
   )
