@@ -9,10 +9,17 @@ import PopupControls from 'components/popups/PopupControls'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 import HomePageTopBanner from 'components/common/HomePageTopBanner';
 import HistoryTable from 'components/common/HistoryTable'
+import AccountProfileComponent from 'components/common/AccountProfileComponent'
+import LeftMenu from "components/myPage/LeftMenu";
+import Logo from "../../images/newImages/mainPage/icons/logo.png";
 
 import Icon1 from '../../images/newImages/coupon1.png'
 import Icon2 from '../../images/newImages/coupon2.png'
 import Icon3 from '../../images/newImages/coupon3.png'
+
+import subIcon1 from '../../images/newImages/mainPage/coupon/1.png';
+import subIcon2 from '../../images/newImages/mainPage/coupon/2.png';
+import subIcon3 from '../../images/newImages/mainPage/coupon/3.png';
 
 const tableData = [
     [          
@@ -829,182 +836,214 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
     console.log(selectedTab, selectedSubTab)
 
     const tabsArray = [
-        { text: "쿠폰사용", icon: Icon1, id: 0, path: "/mypage/coupon" },
-        { text: "쿠폰선물", icon: Icon2, id: 1, path: "/mypage/coupon/coupon-gift" },
-        { text: "쿠폰내역", icon: Icon3, id: 2, path: "/mypage/coupon/coupon-history", hasSameParent: true },
+        { text: "쿠폰사용", icon: Icon1, id: 0, path: "/mypage/coupon/all" },
+        { text: "쿠폰선물", icon: Icon2, id: 1, path: "/mypage/coupon/all/coupon-gift" },
+        { text: "쿠폰내역", icon: Icon3, id: 2, path: "/mypage/coupon/all/coupon-history", hasSameParent: true },
     ];
 
+    const LeftMenuSubArray = [
+        {
+          text: "쿠폰사용",
+          icon: subIcon1,
+          id: 0,
+          path: "/mypage/coupon/all",
+        },
+        {
+          text: "쿠폰선물",
+          icon: subIcon2,
+          id: 1,
+          path: "/mypage/coupon/all/coupon-gift",
+        },
+        {
+          text: "쿠폰내역",
+          icon: subIcon3,
+          id: 2,
+          path: "/mypage/coupon/all/coupon-history",
+        }
+      ]
+
     const historyTabsArray = [
-        { text: "쿠폰발급내역", icon: Icon1, id: 0, path: "/mypage/coupon/coupon-history" },
-        { text: "쿠폰선물내역", icon: Icon2, id: 1, path: "/mypage/coupon/coupon-history/sent" }
+        { text: "쿠폰발급내역", icon: Icon1, id: 0, path: "/mypage/coupon/all/coupon-history" },
+        { text: "쿠폰선물내역", icon: Icon2, id: 1, path: "/mypage/coupon/all/coupon-history/sent" }
     ]
 
 
     return (
         <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
-            <div className="w-full z-30 flex flex-col items-center">
-                <NoticeBanner />
-                <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                <HomePageTopBanner pageTitle='쿠폰관리' />
-            </div>
+
+            <Route exact path="/mypage/coupon">
+                <AccountProfileComponent isAuthenticated={isAuthenticated} />
+                <div style={{marginTop: '1.875rem', marginBottom: '36.375rem'}} className="flex w-full">
+                    <LeftMenu
+                        selectedTab={selectedTab}
+                        setSelectedTab={setSelectedTab}
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        array={LeftMenuSubArray}
+                    />
+                </div>
+                <div className="flex justify-center mb-40">
+                    <img style={{width: '22.3125rem'}} className="object-contain" src={Logo} alt="logo" />
+                </div>
+            </Route>
+
+            <Route path="/mypage/coupon/all">
+                <div className="w-full z-30 flex flex-col items-center">
+                    <NoticeBanner />
+                    <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                    <HomePageTopBanner pageTitle='쿠폰관리' />
+                </div>
+
+                
+
+                <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
+
+                    <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
+                        <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                            <div className=" flex flex-shrink-0 w-full">
+                            <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                {/* {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
+                                    <div style={{marginLeft: `${selectedTab * 116 + 49}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
+                                        <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
+                                    </div>
+                                )} */}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex w-full">
+                        <div className="w-full">
+                        
+                            <Route exact path="/mypage/coupon/all">
+                                <div className='mt-4 flex justify-center'>
+                                    <CouponTitle text='사용 가능한 쿠폰' number='10' />
+                                </div>
+                                <div className="">
+                                    <HistoryTable
+                                        containerBackground= '#f7f9fc'
+                                        tableData={tableData}
+                                        wideDetailButton
+                                        checkedState={checkedState} 
+                                        setCheckedState={setCheckedState}
+                                        isPopupOpen={isPopupOpen}
+                                        setPopupOpen={setPopupOpen}
+                                        cardHeight='29.5625rem'
+                                        hasLeftInput={false}
+                                    />   
+                                </div>
+                                <div style={{marginTop: '1.875rem'}}>
+                                    <Pagination page={page} setPage={setPage}/>
+                                </div>
+                                <BottomNavbar />
+                            </Route>
+                            <Route exact path="/mypage/coupon/all/coupon-gift">
+                                <div className='mt-4 flex justify-center'>
+                                    <CouponTitle text='사용 가능한 쿠폰' number='7' />
+                                </div>
+                                <div className="">
+                                    <HistoryTable
+                                        containerBackground= '#f7f9fc'
+                                        wrapButtonText
+                                        tableData={giftsTableData}
+                                        checkedState={checkedState} 
+                                        setCheckedState={setCheckedState}
+                                        isPopupOpen={isPopupOpen}
+                                        setPopupOpen={setPopupOpen}
+                                        cardHeight='25.3125rem'
+                                        isButtonGradient={false}
+                                    />   
+                                </div>
+                                <div style={{marginBottom: '2.9375rem'}} className='mt-4'>
+                                    <p className='font-spoqaMedium text-gray-r7c7c7c text-center' style={{fontSize: '2.625rem'}}>
+                                        <span className='text-blue-r0056a6 font-spoqaBold'>쿠폰선물하기</span> 버튼을 클릭하여 쿠폰받을 회원을 선택하세요.
+                                    </p>
+                                </div>
+                                <div className="flex w-full justify-center">
+                                    <PopupControls buttonChild={GiftButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                                        <CouponGiftPopup setPopupOpen={setPopupOpen} />
+                                    </PopupControls> 
+                                </div>
+                                <div style={{marginTop: '1.875rem'}}>
+                                    <Pagination page={page} setPage={setPage}/>
+                                </div>
+                                <BottomNavbar />
+                                {/* <PointsAccumulateHistory />
+                                <BottomNavbar /> */}
+                            </Route>
+                            <Route exact path="/mypage/coupon/all/coupon-history">
+                                <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
+                                    <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
+                                </div>
+                                
+                                <div className='mt-4 flex justify-center'>
+                                    <CouponTitle text='사용가능' number='32' />
+                                    <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                    <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
+                                    <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                    <CouponTitle text='기간만료' number='0' numberColor='#000000' />
+                                    <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                    <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
+                                </div>
+                                <div className="">
+                                    <HistoryTable
+                                        containerBackground= '#f7f9fc'
+                                        wrapButtonText
+                                        tableData={historyTableData}
+                                        checkedState={checkedState} 
+                                        hasLeftInput={false}
+                                        setCheckedState={setCheckedState}
+                                        isPopupOpen={isPopupOpen}
+                                        setPopupOpen={setPopupOpen}
+                                        cardHeight='25.3125rem'
+                                        isButtonGradient={false}
+                                    />   
+                                </div>
+                                <div style={{marginTop: '1.875rem'}}>
+                                    <Pagination page={page} setPage={setPage}/>
+                                </div>
+                                <BottomNavbar />
+                            </Route>
+                            <Route exact path="/mypage/coupon/all/coupon-history/sent">
+                                <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
+                                    <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
+                                </div>
+                                
+                                <div className='mt-4 flex justify-center'>
+                                    <CouponTitle text='사용가능' number='32' />
+                                    <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                    <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
+                                    <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                    <CouponTitle text='기간만료' number='0' numberColor='#000000' />
+                                    <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
+                                    <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
+                                </div>
+                                <div className="">
+                                    <HistoryTable
+                                        containerBackground= '#f7f9fc'
+                                        wrapButtonText
+                                        tableData={sentHistoryTableData}
+                                        hasLeftInput={false}
+                                        checkedState={checkedState} 
+                                        setCheckedState={setCheckedState}
+                                        isPopupOpen={isPopupOpen}
+                                        setPopupOpen={setPopupOpen}
+                                        cardHeight='29.5rem'
+                                        isButtonGradient={false}
+                                    />   
+                                </div>
+                                <div style={{marginTop: '1.875rem'}}>
+                                    <Pagination page={page} setPage={setPage}/>
+                                </div>
+                                <BottomNavbar />
+                            </Route>
+                        </div>
+                    </div>
+
+                </div>
+            </Route>
 
             
 
-            <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
-
-                <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
-                    <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                        <div className=" flex flex-shrink-0 w-full">
-                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
-                            {/* {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
-                                <div style={{marginLeft: `${selectedTab * 116 + 49}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
-                                    <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
-                                </div>
-                            )} */}
-                        </div>
-                    </div>
-                </div>
-
-                <div className="flex w-full">
-                    <div className="w-full">
-                    
-                        <Route exact path="/mypage/coupon">
-                            <div className='mt-4 flex justify-center'>
-                                <CouponTitle text='사용 가능한 쿠폰' number='10' />
-                            </div>
-                            <div className="">
-                                <HistoryTable
-                                    containerBackground= '#f7f9fc'
-                                    tableData={tableData}
-                                    wideDetailButton
-                                    checkedState={checkedState} 
-                                    setCheckedState={setCheckedState}
-                                    isPopupOpen={isPopupOpen}
-                                    setPopupOpen={setPopupOpen}
-                                    cardHeight='29.5625rem'
-                                    hasLeftInput={false}
-                                />   
-                            </div>
-                            <div style={{marginTop: '1.875rem'}}>
-                                <Pagination page={page} setPage={setPage}/>
-                            </div>
-                            <BottomNavbar />
-                        </Route>
-                        <Route exact path="/mypage/coupon/coupon-gift">
-                            <div className='mt-4 flex justify-center'>
-                                <CouponTitle text='사용 가능한 쿠폰' number='7' />
-                            </div>
-                            <div className="">
-                                <HistoryTable
-                                    containerBackground= '#f7f9fc'
-                                    wrapButtonText
-                                    tableData={giftsTableData}
-                                    checkedState={checkedState} 
-                                    setCheckedState={setCheckedState}
-                                    isPopupOpen={isPopupOpen}
-                                    setPopupOpen={setPopupOpen}
-                                    cardHeight='25.3125rem'
-                                    isButtonGradient={false}
-                                />   
-                            </div>
-                            <div style={{marginBottom: '2.9375rem'}} className='mt-4'>
-                                <p className='font-spoqaMedium text-gray-r7c7c7c text-center' style={{fontSize: '2.625rem'}}>
-                                    <span className='text-blue-r0056a6 font-spoqaBold'>쿠폰선물하기</span> 버튼을 클릭하여 쿠폰받을 회원을 선택하세요.
-                                </p>
-                            </div>
-                            <div className="flex w-full justify-center">
-                                <PopupControls buttonChild={GiftButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                                    <CouponGiftPopup setPopupOpen={setPopupOpen} />
-                                </PopupControls> 
-                            </div>
-                            <div style={{marginTop: '1.875rem'}}>
-                                <Pagination page={page} setPage={setPage}/>
-                            </div>
-                            <BottomNavbar />
-                            {/* <PointsAccumulateHistory />
-                            <BottomNavbar /> */}
-                        </Route>
-                        <Route exact path="/mypage/coupon/coupon-history">
-                            <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
-                                <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
-                            </div>
-                            
-                            <div className='mt-4 flex justify-center'>
-                                <CouponTitle text='사용가능' number='32' />
-                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
-                                <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
-                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
-                                <CouponTitle text='기간만료' number='0' numberColor='#000000' />
-                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
-                                <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
-                            </div>
-                            <div className="">
-                                <HistoryTable
-                                    containerBackground= '#f7f9fc'
-                                    wrapButtonText
-                                    tableData={historyTableData}
-                                    checkedState={checkedState} 
-                                    hasLeftInput={false}
-                                    setCheckedState={setCheckedState}
-                                    isPopupOpen={isPopupOpen}
-                                    setPopupOpen={setPopupOpen}
-                                    cardHeight='25.3125rem'
-                                    isButtonGradient={false}
-                                />   
-                            </div>
-                            <div style={{marginTop: '1.875rem'}}>
-                                <Pagination page={page} setPage={setPage}/>
-                            </div>
-                            <BottomNavbar />
-                        </Route>
-                        <Route exact path="/mypage/coupon/coupon-history/sent">
-                            <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
-                                <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
-                            </div>
-                            
-                            <div className='mt-4 flex justify-center'>
-                                <CouponTitle text='사용가능' number='32' />
-                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
-                                <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
-                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
-                                <CouponTitle text='기간만료' number='0' numberColor='#000000' />
-                                <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
-                                <CouponTitle text='회수된쿠폰' number='0' numberColor='#279140' />
-                            </div>
-                            <div className="">
-                                <HistoryTable
-                                    containerBackground= '#f7f9fc'
-                                    wrapButtonText
-                                    tableData={sentHistoryTableData}
-                                    hasLeftInput={false}
-                                    checkedState={checkedState} 
-                                    setCheckedState={setCheckedState}
-                                    isPopupOpen={isPopupOpen}
-                                    setPopupOpen={setPopupOpen}
-                                    cardHeight='29.5rem'
-                                    isButtonGradient={false}
-                                />   
-                            </div>
-                            <div style={{marginTop: '1.875rem'}}>
-                                <Pagination page={page} setPage={setPage}/>
-                            </div>
-                            <BottomNavbar />
-                        </Route>
-                        
-                        <Route path="*">
-                        </Route>
-                    </div>
-                </div>
-
-            </div>
-
-            {/* <div className="mt-20px">
-                <CouponUsageTable />
-            </div>
-
-            <div className="mt-60px">
-                <Pagination page={page} setPage={setPage}/>   
-            </div> */}
         </div>
     )
 }

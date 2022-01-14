@@ -18,16 +18,16 @@ import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 const Faq = () => {
 
     const tabsArray = [
-        { text: "전체", icon: Icon1, id: 0, path: "/cscenter/faq" },
-        { text: "카지노", icon: Icon2, id: 1, path: "/cscenter/faq/live-casino" },
-        { text: "슬롯", icon: Icon3, id: 2, path: "/cscenter/faq/slot" },
-        { text: "스포츠", icon: Icon4, id: 3, path: "/cscenter/faq/sports" },
-        { text: "e-스포츠", icon: Icon5, id: 4, path: "/cscenter/faq/e-sports" },
-        { text: "미니게임", icon: Icon6, id: 5, path: "/cscenter/faq/minigame" },
-        { text: "키론가상게임", icon: Icon7, id: 6, path: "/cscenter/faq/ar-game" },
-        { text: "충전/환전", icon: Icon8, id: 7, path: "/cscenter/faq/transaction" },
-        { text: "베팅관련", icon: Icon9, id: 8, path: "/cscenter/faq/about-betting" },
-        { text: "기타", icon: Icon10, id: 9, path: "/cscenter/faq/other" },
+        { text: "전체", icon: Icon1, id: 0, path: "/cscenter/all/faq" },
+        { text: "카지노", icon: Icon2, id: 1, path: "/cscenter/all/faq/live-casino" },
+        { text: "슬롯", icon: Icon3, id: 2, path: "/cscenter/all/faq/slot" },
+        { text: "스포츠", icon: Icon4, id: 3, path: "/cscenter/all/faq/sports" },
+        { text: "e-스포츠", icon: Icon5, id: 4, path: "/cscenter/all/faq/e-sports" },
+        { text: "미니게임", icon: Icon6, id: 5, path: "/cscenter/all/faq/minigame" },
+        { text: "키론가상게임", icon: Icon7, id: 6, path: "/cscenter/all/faq/ar-game" },
+        { text: "충전/환전", icon: Icon8, id: 7, path: "/cscenter/all/faq/transaction" },
+        { text: "베팅관련", icon: Icon9, id: 8, path: "/cscenter/all/faq/about-betting" },
+        { text: "기타", icon: Icon10, id: 9, path: "/cscenter/all/faq/other" },
     ];
 
     const location = useLocation();

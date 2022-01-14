@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 import "./App.css";
+import { getCookie, setCookie } from './utils'
 import MainPage from "./pages/MainPage";
-import { Switch, Route } from "react-router-dom";
 import MyPage from "pages/MyPage";
 import DistributorPage from "pages/DistributorPage";
 import AttendPage from "pages/AttendPage";
@@ -16,7 +17,20 @@ import AuthenticationPage from "pages/AuthenticationPage";
 
 function App() {
 
-    const [isAuthenticated, setAuthenticated] = useState(false)
+    const [isAuthenticated, setAuthenticated] = useState(false);
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        const previousUrl = getCookie('previousUrl');
+        const currentUrl = getCookie('currentUrl');
+        if (!previousUrl) {
+            setCookie('previousUrl', pathname);
+            setCookie('currentUrl', pathname);
+        } else {
+            setCookie('previousUrl', currentUrl);
+            setCookie('currentUrl', pathname);
+        }
+    }, [pathname])
 
     useEffect(() => {
         const body = document.querySelector('body');

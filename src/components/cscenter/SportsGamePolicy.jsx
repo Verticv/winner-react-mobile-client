@@ -431,8 +431,8 @@ const HistoryMenu = ({
 }
 
 const historyTabsArray = [
-    { text: "스포츠게임", icon: Icon1, id: 0, path: "/cscenter/policy/sportsgame/soccer" },
-    { text: "미니게임", icon: Icon2, id: 1, path: "/cscenter/policy/minigame/powerball" },
+    { text: "스포츠게임", icon: Icon1, id: 0, path: "/cscenter/all/policy/sportsgame/soccer" },
+    { text: "미니게임", icon: Icon2, id: 1, path: "/cscenter/all/policy/minigame/powerball" },
     { text: "가상게임", icon: Icon2, id: 1, path: "#" }
 ]
 
@@ -444,15 +444,15 @@ const SportsGamePolicy = ({setSelectedTab}) => {
     console.log(`selectedSubTab`, selectedSubTab)
 
     const tabsArray = [
-        { text: "축구", icon: Icon1, id: 0, path: "/cscenter/policy/sportsgame/soccer" },
-        { text: "농구", icon: Icon2, id: 1, path: "/cscenter/policy/sportsgame/basketball" },
-        { text: "야구", icon: Icon3, id: 2, path: "/cscenter/policy/sportsgame/baseball" },
-        { text: "배구", icon: Icon4, id: 3, path: "/cscenter/policy/sportsgame/volleyball" },
-        { text: "테니스", icon: Icon5, id: 4, path: "/cscenter/policy/sportsgame/tennis" },
-        { text: "하키", icon: Icon6, id: 5, path: "/cscenter/policy/sportsgame/hockey" },
-        { text: "핸드볼", icon: Icon7, id: 6, path: "/cscenter/policy/sportsgame/handball" },
-        { text: "미식축구", icon: Icon8, id: 7, path: "/cscenter/policy/sportsgame/football" },
-        { text: "e-스포츠", icon: Icon9, id: 8, path: "/cscenter/policy/sportsgame/e-sports" }
+        { text: "축구", icon: Icon1, id: 0, path: "/cscenter/all/policy/sportsgame/soccer" },
+        { text: "농구", icon: Icon2, id: 1, path: "/cscenter/all/policy/sportsgame/basketball" },
+        { text: "야구", icon: Icon3, id: 2, path: "/cscenter/all/policy/sportsgame/baseball" },
+        { text: "배구", icon: Icon4, id: 3, path: "/cscenter/all/policy/sportsgame/volleyball" },
+        { text: "테니스", icon: Icon5, id: 4, path: "/cscenter/all/policy/sportsgame/tennis" },
+        { text: "하키", icon: Icon6, id: 5, path: "/cscenter/all/policy/sportsgame/hockey" },
+        { text: "핸드볼", icon: Icon7, id: 6, path: "/cscenter/all/policy/sportsgame/handball" },
+        { text: "미식축구", icon: Icon8, id: 7, path: "/cscenter/all/policy/sportsgame/football" },
+        { text: "e-스포츠", icon: Icon9, id: 8, path: "/cscenter/all/policy/sportsgame/e-sports" }
     ];
     
     return (
@@ -471,90 +471,90 @@ const SportsGamePolicy = ({setSelectedTab}) => {
 
 
             <div style={{margin: "0 12.8125rem", marginTop: '1.5rem', marginBottom: '2.9375rem'}} className="flex items-center justify-center tracking-tight font-spoqaMedium text-gray-r454545">
-                <Route path="/cscenter/policy/sportsgame/soccer">
+                <Route path="/cscenter/all/policy/sportsgame/soccer">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 프로축구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
-                <Route path="/cscenter/policy/sportsgame/basketball">
+                <Route path="/cscenter/all/policy/sportsgame/basketball">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 프로농구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
-                <Route path="/cscenter/policy/sportsgame/baseball">
+                <Route path="/cscenter/all/policy/sportsgame/baseball">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 프로야구 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
-                <Route path="/cscenter/policy/sportsgame/volleyball">
+                <Route path="/cscenter/all/policy/sportsgame/volleyball">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 프로배구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
-                <Route path="/cscenter/policy/sportsgame/tennis">
+                <Route path="/cscenter/all/policy/sportsgame/tennis">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 테니스 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
-                <Route path="/cscenter/policy/sportsgame/hockey">
+                <Route path="/cscenter/all/policy/sportsgame/hockey">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 아이스하키 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
-                <Route path="/cscenter/policy/sportsgame/handball">
+                <Route path="/cscenter/all/policy/sportsgame/handball">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 핸드볼 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
-                <Route path="/cscenter/policy/sportsgame/football">
+                <Route path="/cscenter/all/policy/sportsgame/football">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 미식축구 경기는 해당 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>
-                <Route path="/cscenter/policy/sportsgame/e-sports">
+                <Route path="/cscenter/all/policy/sportsgame/e-sports">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center">모든 e-스포츠 경기는 해당 리그의 공식협회가 인정하는 경기 결과대로 반영됩니다.</p>
                 </Route>        
             </div>
 
 
-            <Route path="/cscenter/policy/sportsgame/soccer">
+            <Route path="/cscenter/all/policy/sportsgame/soccer">
                 <SportsGamePolicyTable1 array={SoccerArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/basketball">
+            <Route path="/cscenter/all/policy/sportsgame/basketball">
                 <SportsGamePolicyTable1 array={BasketballArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/baseball">
+            <Route path="/cscenter/all/policy/sportsgame/baseball">
                 <SportsGamePolicyTable1 array={BaseballArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/volleyball">
+            <Route path="/cscenter/all/policy/sportsgame/volleyball">
                 <SportsGamePolicyTable1 array={VolleyballArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/tennis">
+            <Route path="/cscenter/all/policy/sportsgame/tennis">
                 <SportsGamePolicyTable1 array={TennisArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/hockey">
+            <Route path="/cscenter/all/policy/sportsgame/hockey">
                 <SportsGamePolicyTable1 array={HockeyArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/handball">
+            <Route path="/cscenter/all/policy/sportsgame/handball">
                 <SportsGamePolicyTable1 array={HandballArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/football">
+            <Route path="/cscenter/all/policy/sportsgame/football">
                 <SportsGamePolicyTable1 array={FootballArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/e-sports">
+            <Route path="/cscenter/all/policy/sportsgame/e-sports">
                 <SportsGamePolicyTable1 array={ESportsArray} />
             </Route>
 
 
-            <Route path="/cscenter/policy/sportsgame/soccer">
+            <Route path="/cscenter/all/policy/sportsgame/soccer">
                 <SportsGamePolicyTable2 array={SoccerSubArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/basketball">
+            <Route path="/cscenter/all/policy/sportsgame/basketball">
                 <SportsGamePolicyTable2 array={BasketballSubArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/baseball">
+            <Route path="/cscenter/all/policy/sportsgame/baseball">
                 <SportsGamePolicyTable2 array={BaseballSubArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/volleyball">
+            <Route path="/cscenter/all/policy/sportsgame/volleyball">
                 <SportsGamePolicyTable2 array={VolleyballSubArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/tennis">
+            <Route path="/cscenter/all/policy/sportsgame/tennis">
                 <SportsGamePolicyTable2 array={TennisSubArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/hockey">
+            <Route path="/cscenter/all/policy/sportsgame/hockey">
                 <SportsGamePolicyTable2 array={HockeySubArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/handball">
+            <Route path="/cscenter/all/policy/sportsgame/handball">
                 <SportsGamePolicyTable2 array={HandballSubArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/football">
+            <Route path="/cscenter/all/policy/sportsgame/football">
                 <SportsGamePolicyTable2 array={FootballSubArray} />
             </Route>
-            <Route path="/cscenter/policy/sportsgame/e-sports">
+            <Route path="/cscenter/all/policy/sportsgame/e-sports">
                 <SportsGamePolicyTable2 array={ESportsSubArray} />
             </Route>
 

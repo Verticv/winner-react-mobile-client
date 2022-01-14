@@ -26,8 +26,8 @@ const DirectoryComponent = ({
             history.push("/money/charge")
             setSelectedTab("/money/charge")
         } else if (branch1 === "고객센터") {
-            history.push("/cscenter/contact/all")
-            setSelectedTab("/cscenter/contact/all")
+            history.push("/cscenter/all/contact/all")
+            setSelectedTab("/cscenter/all/contact/all")
         } else if (branch1 === "경기결과") {
             history.push("/gameresults/sports/win-draw-lose")
             setSelectedTab("/gameresults/sports/win-draw-lose")

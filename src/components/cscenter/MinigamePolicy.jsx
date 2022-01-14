@@ -70,15 +70,15 @@ const MinigamePolicy = () => {
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     console.log(selectedSubTab, selectedTab)
     const tabsArray = [
-        { text: "파워볼", icon: Icon1, id: 0, path: "/cscenter/policy/minigame/powerball" },
-        { text: "파워사다리", icon: Icon2, id: 1, path: "/cscenter/policy/minigame/powerladder" },
-        { text: "스피드키노", icon: Icon3, id: 2, path: "/cscenter/policy/minigame/speedkino" },
-        { text: "키노사다리", icon: Icon4, id: 3, path: "/cscenter/policy/minigame/kinoladder" },
+        { text: "파워볼", icon: Icon1, id: 0, path: "/cscenter/all/policy/minigame/powerball" },
+        { text: "파워사다리", icon: Icon2, id: 1, path: "/cscenter/all/policy/minigame/powerladder" },
+        { text: "스피드키노", icon: Icon3, id: 2, path: "/cscenter/all/policy/minigame/speedkino" },
+        { text: "키노사다리", icon: Icon4, id: 3, path: "/cscenter/all/policy/minigame/kinoladder" },
     ];
 
     const historyTabsArray = [
-        { text: "스포츠게임", icon: Icon1, id: 0, path: "/cscenter/policy/sportsgame/soccer" },
-        { text: "미니게임", icon: Icon2, id: 1, path: "/cscenter/policy/minigame/powerball" },
+        { text: "스포츠게임", icon: Icon1, id: 0, path: "/cscenter/all/policy/sportsgame/soccer" },
+        { text: "미니게임", icon: Icon2, id: 1, path: "/cscenter/all/policy/minigame/powerball" },
         { text: "가상게임", icon: Icon2, id: 1, path: "#" }
     ]
     
@@ -106,16 +106,16 @@ const MinigamePolicy = () => {
 
             <div style={{padding: '1.875rem'}} className="flex justify-center">
 
-                <Route path="/cscenter/policy/minigame/powerball">
+                <Route path="/cscenter/all/policy/minigame/powerball">
                     <img src={PowerballPolicy} alt="" />
                 </Route>
-                <Route path="/cscenter/policy/minigame/powerladder">
+                <Route path="/cscenter/all/policy/minigame/powerladder">
                     <img src={PowerladderPolicy} alt="" />
                 </Route>
-                <Route path="/cscenter/policy/minigame/speedkino">
+                <Route path="/cscenter/all/policy/minigame/speedkino">
                     <img src={SpeedKinoPolicy} alt="" />
                 </Route>
-                <Route path="/cscenter/policy/minigame/kinoladder">
+                <Route path="/cscenter/all/policy/minigame/kinoladder">
                     <img src={PowerladderPolicy} alt="" />
                 </Route>
             </div>
