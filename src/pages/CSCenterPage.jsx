@@ -63,13 +63,13 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
         },
         {
           text: "계좌문의",
-          icon: subIcon3,
+          icon: subIcon4,
           id: 2,
           path: "/cscenter/all/inquiry",
         },
         {
           text: "베팅규정",
-          icon: subIcon3,
+          icon: subIcon5,
           id: 2,
           path: "/cscenter/all/policy/sportsgame/soccer",
         }
