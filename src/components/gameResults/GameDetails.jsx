@@ -37,7 +37,7 @@ const GameDetails = () => {
                     bet === "middle" 
                     ? "text-white border-red-ff7982 from-red-ff535f via-red-ff535f to-red-ee4e5a" 
                     : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"}
-                    pt-px flex items-center justify-center h-34px w-79px rounded-lg border border-white bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb cursor-pointer`}
+                    pt-px flex items-center justify-center h-34px w-79px rounded-lg border border-white bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf cursor-pointer`}
                 >
                     <span className="font-roboto tracking-tight text-14px">{stat2}</span>
                 </div>
@@ -51,7 +51,7 @@ const GameDetails = () => {
                     bet === "right" 
                     ? "text-white border-red-ff7982 from-red-ff535f via-red-f8515d to-red-ee4e5a" 
                     : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"} 
-                    pt-px flex items-center justify-between h-34px w-283px rounded-lg border border-white bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb cursor-pointer px-10px`}
+                    pt-px flex items-center justify-between h-34px w-283px rounded-lg border border-white bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf cursor-pointer px-10px`}
                 >
                     <span className="font-roboto tracking-tight text-14px">{stat3}</span>
                     <span className="truncate w-108px font-spoqaMedium tracking-tight text-14px text-right">{team2}</span>

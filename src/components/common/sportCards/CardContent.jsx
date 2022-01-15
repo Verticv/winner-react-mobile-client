@@ -24,9 +24,9 @@ const CardContent = ({
   }; 
   return (
     <>
-      <div style={{margin: '1.875rem', marginBottom: '0'}} className={`flex flex-wrap items-center h-full  ${ withUploadButton || withCancelButton ? 'justify-between' : 'w-full'}`}>
+      <div style={{margin: '1.9375rem', marginBottom: '0', marginTop: '2.0625rem'}} className={`flex flex-wrap items-center h-full  ${ withUploadButton || withCancelButton ? 'justify-between' : ''}`}>
           {withInput && (
-            <div style={{width: '5.8125rem'}} className="relative text-left pt-7px">
+            <div style={{width: '5.625rem'}} className="relative text-left">
                 <label className="form-control">
                     <input
                             className='w-12 h-12'
@@ -38,9 +38,10 @@ const CardContent = ({
             </div>
           )}
           <div style={{width: ''}}>
-              {showBetNumber && (<div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅번호 :</span> 1891241599</div>)}
-              <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅시간 :</span> 2021-06-29 15:45</div>
-              <div className='flex'>
+              {showBetNumber && (
+              <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginBottom: '0.375rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅번호 :</span> 1891241599</div>)}
+              <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginBottom: '0.375rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅시간 :</span> 2021-06-29 15:45</div>
+              <div style={{marginBottom: '0.375rem'}} className='flex'>
                   <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅금액 :</span> 5,000</div>
                   <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>배당률 :</span> 4.34</div>
               </div>
@@ -75,7 +76,7 @@ const CardContent = ({
             )}
       </div>
         {withButtons && (
-            <div style={{margin: '3.75rem 1.875rem', marginTop: '2.8125rem', marginBottom: '0'}} className="flex items-center justify-between">
+            <div style={{margin: '3.75rem 0.875rem', marginTop: '1.875rem', marginBottom: '0'}} className="flex items-center justify-between">
                 <div className="flex w-full">
                     <button 
                         style={{padding: '1px', height: '7.3125rem'}}

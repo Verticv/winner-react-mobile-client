@@ -60,7 +60,7 @@ const CardResults = ({
               <div className={`${
                   bet === "middle" 
                   ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
-                  : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb"}
+                  : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"}
                   pt-px flex items-center justify-center h-full w-full rounded-lg border border-white cursor-pointer pl-4 pr-3.5`}
               >
                   <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px">{stat2}</span>
@@ -84,7 +84,7 @@ const CardResults = ({
               className={`${
                   bet === "right" 
                   ? "text-white border-red-ff7982 bg-gradient-to-b from-red-ff535f to-red-d7434f"
-                  : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb "} 
+                  : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"} 
                   pt-px flex items-center justify-between h-full w-full rounded-lg border border-white cursor-pointer pl-4 pr-3.5`}
               >
                   <div className="flex items-center">
