@@ -187,7 +187,7 @@ const MoneyChargeHistory = () => {
                 <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
-            <div className="mt-20px">
+            <div style={{marginTop: '1.25rem'}}>
                 <Pagination page={page} setPage={setPage}/>   
             </div>
 

@@ -3,7 +3,7 @@ import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 import HomePageTopBanner from 'components/common/HomePageTopBanner';
 import React, { useState } from 'react'
-
+import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 import SummaryIcon from '../images/newImages/mainPage/icons/distributor/summary_icon.png'
 import PieIcon from '../images/newImages/mainPage/icons/distributor/pie.png'
 import DetailIcon from '../images/newImages/mainPage/icons/distributor/detail.png'
@@ -651,7 +651,7 @@ const DistributorPage = ({
                 <HomePageTopBanner pageTitle='총판페이지' />
             </div>
 
-            <div style={{margin: '1.875rem', marginTop: '0.75rem', marginRight: '0'}} className="relative overflow-hidden flex flex-col h-full pb-24">
+            <div style={{margin: '1.875rem', marginTop: '0.75rem', marginRight: '0', marginBottom: '0'}} className="relative overflow-hidden flex flex-col h-full">
                 <div style={{height: '11.1875rem', fontSize: '3rem', paddingTop: '2.75rem'}} className='flex flex-col items-center'>
                     <div style={{marginBottom: '0.25rem'}} className="tracking-tight flex items-center">
                         <p className="font-spoqaMedium text-blue-r0056a6">Louie3</p>
@@ -1085,12 +1085,13 @@ const DistributorPage = ({
 
                         </div>
         
-                        <div className="flex mt-60px justify-center w-full">
-                            <Pagination page={page} setPage={setPage}/>   
+                        <div style={{marginTop: '3.75rem'}} className="flex justify-center w-full">
+                            <Pagination withMarginBottom page={page} setPage={setPage}/>   
                         </div>
                     </div>
                 </div>
             </div>
+            <BottomNavbar />
 
         </div>
     )

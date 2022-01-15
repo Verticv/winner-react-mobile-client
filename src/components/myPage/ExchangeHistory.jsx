@@ -28,7 +28,7 @@ const ExchangeHistory = () => {
             <MyPageTitle title="환전내역" />
             <DateSearchBar has3MonthSearch={true} />
 
-            <div className="mt-20px">
+            <div>
                 <ExchangeHistoryTable checkedState={checkedState} setCheckedState={setCheckedState} />
             </div>
 

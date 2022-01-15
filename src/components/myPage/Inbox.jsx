@@ -117,7 +117,7 @@ const Inbox = () => {
                 <div style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r8c8c8c">
                     <span>{text} </span>
                     <span style={{color: numberColor}} className="font-robotoBold">{number}</span>
-                    <span>{endText}</span>
+                    <span>{endText}&nbsp;</span>
                 </div>
             </div>
         )
@@ -130,11 +130,11 @@ const Inbox = () => {
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar /> 
-                <HomePageTopBanner pageTitle='베팅내역' />
+                <HomePageTopBanner pageTitle='쪽지관리' />
             </div>
             {/* <MyPageTitle title="쪽지관리" inboxCount="7"/> */}
             <div style={{margin: '1.875rem', marginBottom: '1.25rem', marginTop: '1.1875rem'}} className='mt-4 flex justify-between'>
-                <CouponTitle text='전체 받은 쪽지' number='7' />
+                <CouponTitle text='전체 받은 쪽지' number='7' endText='건' />
                 <div className='flex'>
                     <CouponTitle text='쪽지보관은 최장' number='14' endText='일' numberColor='#0056a6' />
                     <CouponTitle text='최대' number='20' endText='개' numberColor='#0056a6' />

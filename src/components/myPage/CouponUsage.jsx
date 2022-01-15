@@ -767,7 +767,7 @@ const HistoryMenu = ({
                     pathname === item.path
                     ? "bg-blue-r0056a6" 
                     : "bg-white  border border-gray-rb7b7b7"
-                } w-1/2 rounded-full`}
+                } w-1/2 rounded-full font-spoqaMedium`}
                 style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
                 key={item.id} 
                 onClick={() => {
@@ -787,7 +787,7 @@ const HistoryMenu = ({
                                 pathname === item.path
                                 ? "text-white" 
                                 : "text-gray-r7b7b7b"
-                            }`}
+                            }` }
                         >{item.text}</span>
                     </div>
                 </div>
@@ -896,7 +896,7 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
 
                 
 
-                <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
+                <div className="flex flex-col items-start limit:items-center w-full h-full">
 
                     <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                         <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
@@ -915,7 +915,7 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                         <div className="w-full">
                         
                             <Route exact path="/mypage/coupon/all">
-                                <div className='mt-4 flex justify-center'>
+                                <div style={{marginBottom: '-0.8125rem'}} className='mt-4 flex justify-center'>
                                     <CouponTitle text='사용 가능한 쿠폰' number='10' />
                                 </div>
                                 <div className="">
@@ -937,8 +937,8 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                                 <BottomNavbar />
                             </Route>
                             <Route exact path="/mypage/coupon/all/coupon-gift">
-                                <div className='mt-4 flex justify-center'>
-                                    <CouponTitle text='사용 가능한 쿠폰' number='7' />
+                                <div style={{marginBottom: '-0.8125rem'}} className='mt-4 flex justify-center'>
+                                    <CouponTitle text='선물 가능한 쿠폰' number='7' />
                                 </div>
                                 <div className="">
                                     <HistoryTable
@@ -975,7 +975,7 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                                     <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
                                 </div>
                                 
-                                <div className='mt-4 flex justify-center'>
+                                <div style={{marginBottom: '-0.8125rem'}} className='mt-4 flex justify-center'>
                                     <CouponTitle text='사용가능' number='32' />
                                     <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
                                     <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />
@@ -1008,7 +1008,7 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                                     <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
                                 </div>
                                 
-                                <div className='mt-4 flex justify-center'>
+                                <div style={{marginBottom: '-0.8125rem'}} className='mt-4 flex justify-center'>
                                     <CouponTitle text='사용가능' number='32' />
                                     <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 0.9375rem'}} className='bg-gray-c5c5c5'></div>
                                     <CouponTitle text='사용완료' number='8' numberColor='#0056a6' />

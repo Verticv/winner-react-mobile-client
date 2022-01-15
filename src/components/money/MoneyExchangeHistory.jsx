@@ -162,7 +162,7 @@ const MoneyExchangeHistory = () => {
                 <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
-            <div className="mt-20px">
+            <div>
                 <Pagination page={page} setPage={setPage}/>   
             </div>
 

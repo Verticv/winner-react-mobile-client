@@ -67,9 +67,9 @@ const InboxTable = ({
                         >
                             {
                                 item.type === "안내" 
-                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="w-max rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'>안내</span></div> 
+                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="w-max rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'><span className='mt-1 block'>안내</span></span></div> 
                                 : item.type === "이벤트" 
-                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="w-max rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'>이벤트</span></div> 
+                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="w-max rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='-mb-1'><span className='mt-1 block'>이벤트</span></span></div> 
                                 : <div></div>
                             }
                             <p style={{textOverflow: 'ellipsis', maxWidth: '37rem'}} className="group-hover:text-gray-r585858 text-5xl text-ellipsis overflow-hidden whitespace-nowrap">{item.text}</p>
@@ -92,7 +92,9 @@ const InboxTable = ({
                     </div>
                     
                 </div>
-                <img className='absolute right-0 ' style={{width: '4rem', height: '4.375rem', marginRight: '4.6875rem', marginTop: '3.625rem'}} src={item.isRead ? Delete : DeleteDark } alt=""/>
+                <button className='absolute right-0 '>
+                    <img style={{width: '4rem', height: '4.375rem', marginRight: '4.6875rem', marginTop: '3.625rem'}} src={item.isRead ? Delete : DeleteDark } alt=""/>
+                </button>
             </div>
         ));
     }

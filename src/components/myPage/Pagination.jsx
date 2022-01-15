@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import LeftIcon from '../../images/newImages/mypage/live-casino/left-arrow.png'
-import RightIcon from '../../images/newImages/mypage/live-casino/right-arrow.png'
+import LeftIcon from '../../images/newImages/nav-left-arrow.png'
+import RightIcon from '../../images/newImages/nav-right-arrow.png'
 import DoubleLeftIcon from '../../images/newImages/mypage/live-casino/two-left-arrow.png'
 import DoubleRightIcon from '../../images/newImages/mypage/live-casino/two-right-arrow.png'
 import './Pagination.css'
@@ -13,7 +13,7 @@ const Pagination = ({page, setPage, withMarginBottom = true}) => {
             className="flex items-center justify-center rounded-lg  hover:opacity-75"
             onClick={() => selectedPage !== 1 && setSelectedPage(selectedPage - 1)}
         >
-            <img style={{width: '2.125rem', height: '2.125rem'}} className="cursor-pointer object-contain max-w-none" src={LeftIcon} alt="arrow" />
+            <img style={{width: '1.3125rem', height: '2.1875rem'}} className="cursor-pointer object-contain max-w-none ddddddddddddd" src={LeftIcon} alt="arrow" />
         </button>
     )
     const RightArrow = () => (
@@ -22,14 +22,14 @@ const Pagination = ({page, setPage, withMarginBottom = true}) => {
             className="flex items-center justify-center rounded-lg  hover:opacity-75"
             onClick={() => selectedPage !== 5 && setSelectedPage(selectedPage + 1)}
         >
-            <img style={{width: '2.125rem', height: '2.125rem'}} className="cursor-pointer max-w-none object-contain" src={RightIcon} alt="arrow" />
+            <img style={{width: '1.3125rem', height: '2.1875rem'}} className="cursor-pointer max-w-none object-contain" src={RightIcon} alt="arrow" />
         </button>
     )
 
     const [selectedPage, setSelectedPage] = useState(1)
 
     return (
-        <div style={{margin: '0 7.8125rem', marginBottom: withMarginBottom ? '19.625rem' : '0'}} className="relative flex mb-60px items-center justify-center">
+        <div style={{margin: '0 7.8125rem', marginBottom: withMarginBottom ? '19.625rem' : '0'}} className="relative flex items-center justify-center">
             <button 
                 style={{width: '2.125rem', height: '2.125rem', marginRight: '5.8125rem'}}
                 className="flex items-center justify-center rounded-lg  hover:opacity-75"

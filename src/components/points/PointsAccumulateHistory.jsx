@@ -202,7 +202,7 @@ const PointsAccumulateHistory = ({SubMenuList}) => {
             </div>
 
 
-            <div className="mt-20px">
+            <div>
                 <Pagination page={page} setPage={setPage}/>   
             </div>
 

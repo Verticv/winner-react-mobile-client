@@ -60,11 +60,10 @@ const PointsAccumulate = () => {
                 <DateSearchBar has3MonthSearch={true} />
             </div>
 
-            <div className="mt-20px">
+            <div>
                 <PointsAccumulateTable />
             </div>
 
-            <div className="mt-60px"></div>
             <Pagination page={page} setPage={setPage}/>   
 
         </div>

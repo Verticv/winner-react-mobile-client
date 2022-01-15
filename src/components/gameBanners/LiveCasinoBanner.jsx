@@ -6,11 +6,9 @@ import DgBg from '../../images/cardBg/4.png'
 import SexyBg from '../../images/cardBg/5.png'
 import BigBg from '../../images/cardBg/6.png'
 import './GameBanners.css'
-import { useHistory } from 'react-router-dom'
 
 const LiveCasinoBanner = () => {
 
-    const history = useHistory()
     const cardClass = "group relative flex justify-end w-full transition cursor-pointer overflow-hidden"
 
     const gamesArray = [
@@ -27,7 +25,6 @@ const LiveCasinoBanner = () => {
             <div 
                 key={item.id} 
                 className={`${cardClass} flex items-center`} 
-                onClick={() => item.id !==6 && item.id !==7 && history.push('/live-casino')}
                 style={{marginBottom: items.length - 1 === index ? '18rem' : '1.875rem'}}
             >
                 <img className="z-20 object-contain" src={item.img} alt="background" />

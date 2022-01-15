@@ -43,7 +43,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
 
 
     function TabsList({ items }) {
-        return items.map(item => (
+        return items.map((item, index) => (
             <button 
                 key={item.id}
                 style={{height: '13.4375rem'}}
@@ -64,7 +64,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 }}
             >
                 <img 
-                    style={{height: `${item.id === 0 ? '9.375rem' : selectedTab === item.id ? "8.375rem" : "9.3125rem"}`, marginTop: `${selectedTab === item.id ? '0.6rem' : ''}` ,width: `${item.id === 0 ? "9.3125rem" : "9.375rem"}`}}
+                    style={{height: `${item.id === 0 ? '9.375rem' : selectedTab === item.id ? "8.375rem" : "9.3125rem"}`, marginTop: `${selectedTab === item.id && index !== 0 ? '0.6rem' : ''}` ,width: `${item.id === 0 ? "9.3125rem" : "9.375rem"}`}}
                     className={`absolute top-0 object-contain w-32 h-32 mb-4ذ
                         ${item.id === 0 && "w-40px h-40px pt-4"}
                         ${(selectedTab === item.id && item.id !== 0) ? "w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px` : ""} 

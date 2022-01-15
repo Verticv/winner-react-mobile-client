@@ -97,15 +97,12 @@ const MoneyExchangePage = ({isAuthenticated, setAuthenticated}) => {
                         <div className="w-full">
                             
                             <Route exact path="/mypage/money/exchange/currency/history">
-                                {console.log(`'ssssssssssssssssssss'`)}
                                 <MoneyExchangeHistory />
                                 <BottomNavbar />
                             </Route>
                             <Route exact path="/mypage/money/exchange/currency">
                                 <MoneyExchange />
                             </Route>
-                            /mypage/money/exchange/history
-                            
                             <Route path="*">
                             </Route>
                         </div>

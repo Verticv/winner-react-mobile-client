@@ -60,7 +60,7 @@ const PointsTransaction = () => {
                 <DateSearchBar has3MonthSearch={true}/>
             </div>
 
-            <div className="mt-20px">
+            <div>
                 <PointsTransactionTable />
             </div>
 

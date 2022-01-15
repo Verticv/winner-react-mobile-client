@@ -27,7 +27,7 @@ const ChargeHistory = () => {
         <div className="w-full">
             <MyPageTitle title="충전내역" />
             <DateSearchBar has3MonthSearch={true}/>
-            <div className="mt-20px">
+            <div>
                 <ChargeHistoryTable checkedState={checkedState} setCheckedState={setCheckedState} />
             </div>
 

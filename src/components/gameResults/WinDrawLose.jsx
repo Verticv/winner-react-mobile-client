@@ -38,7 +38,6 @@ const WinDrawLose = ({pageTitle = "승무패"}) => {
 
             <DateSearchBar isGameResultsSearch={true} />
 
-            <div className="mt-20px"/>
             <GameDetails />
 
             <div className="flex w-full justify-center mt-60px">
