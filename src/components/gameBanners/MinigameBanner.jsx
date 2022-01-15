@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import MinigameBanner1 from '../../images/gameBanner/12.png'
 import MinigameBanner2 from '../../images/gameBanner/13.png'
 import MinigameBanner3 from '../../images/gameBanner/14.png'
@@ -6,6 +7,8 @@ import MinigameBanner4 from '../../images/gameBanner/15.png'
 import './GameBanners.css'
 
 const MinigameBanner = () => {
+
+    const history = useHistory()
     const cardClass = "group relative flex justify-end w-full transition cursor-pointer overflow-hidden"
 
     const gamesArray = [
@@ -20,6 +23,7 @@ const MinigameBanner = () => {
             <div 
                 key={item.id} 
                 className={`${cardClass} flex items-center`}
+                onClick={() => history.push(item.path)}
                 style={{marginBottom: items.length - 1 === index ? '18rem' : '1.875rem'}}
             >
                 <img className="z-20 object-contain" src={item.background} alt="background" />

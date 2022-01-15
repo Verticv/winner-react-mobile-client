@@ -40,14 +40,15 @@ const InboxView = () => {
                     </div>
                     <div style={{marginBottom: '1.3125rem'}} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
                         서버 점검 안내
-                        <div style={{width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem'}} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto">
+                        <div style={{width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem', marginTop: '-0.3rem'}} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto">
                             N
                         </div>
                     </div>
                 </div>
+                
 
                 <div style={{height: '7.3125rem', padding: '1.4375rem 1.875rem', borderBottomWidth: '0.1875rem' }} className="bg-gray-fafafa border-b border-gray-dddddd flex items-center">
-                    <img style={{width: '12.0625rem'}} className="h-12 object-contain" src={WinnerSmall} alt="" />
+                    <img style={{height: '3.4375rem'}} className="w-56 object-contain" src={WinnerSmall} alt="" />
                     <div className='flex mt-2'>
                         <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-dddddd'></div>
                         <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
@@ -71,13 +72,13 @@ const InboxView = () => {
                 </div>
             </div>
 
-            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '14rem'}} className="flex items-start justify-between">
-                <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75">
+            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '19.625rem'}} className="flex items-start justify-between">
+                <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-white">이전</span>
                     </div>
@@ -85,14 +86,14 @@ const InboxView = () => {
 
                 <button 
                     style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
-                    className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
+                    className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard')}
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-white">목록보기</span>
                     </div>
@@ -100,14 +101,14 @@ const InboxView = () => {
 
                 <button 
                     style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} 
-                    className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
+                    className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/freeboard/view2')}
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-white">다음</span>
                     </div>

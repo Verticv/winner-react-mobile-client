@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import EvolutionBg from '../../images/cardBg/1.png'
 import AsiaBg from '../../images/cardBg/2.png'
 import PragmaticBg from '../../images/cardBg/3.png'
@@ -6,7 +7,6 @@ import DgBg from '../../images/cardBg/4.png'
 import SexyBg from '../../images/cardBg/5.png'
 import BigBg from '../../images/cardBg/6.png'
 import './GameBanners.css'
-import { useHistory } from 'react-router-dom'
 
 const LiveCasinoBanner = () => {
 

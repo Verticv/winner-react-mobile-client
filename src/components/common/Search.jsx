@@ -16,7 +16,7 @@ const Search = () => {
           <div
               className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
           >
-              <label style={{fontSize: '2.8125rem', marginLeft: '1.6875rem'}} className="cursor-pointer group-hover:text-black">{selectedCarrier}</label>
+              <label style={{fontSize: '2.8125rem', marginLeft: '1.6875rem'}} className="cursor-pointer text-gray-r454545">{selectedCarrier}</label>
               <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" /> 
           </div>
       </div>

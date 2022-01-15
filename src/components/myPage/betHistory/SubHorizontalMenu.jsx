@@ -32,7 +32,7 @@ const SubHorizontalMenu = ({
                         borderRadius:"1.625rem",
                         width: '20.81rem',
                         height: '13.18rem',
-                        marginRight: '0.9375rem',
+                        marginRight: items.length -1 === index ? '1.875rem' : '0.9375rem',
                     }}
                     key={item.id} 
                     className={`${

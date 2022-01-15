@@ -116,13 +116,14 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
         <div className="w-full">
             {showSub === true && (
                 <>
-                    <div className="w-full relative top-0">
-                    <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
-                    <div style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                        <div className=" flex flex-shrink-0 w-full">
-                            <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
+                    <div className="w-full flex relative top-0">
+                        <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
+                        <div style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                            <div className=" flex flex-shrink-0 w-full">
+                                <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
+                            </div>
                         </div>
-                    </div>
+                        <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
                     </div>
                 </>
 
@@ -142,7 +143,7 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
                 />   
             </div>
 
-            <SelectAllButton count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+            <SelectAllButton buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
         </div>
     )
 }
