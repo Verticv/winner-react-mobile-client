@@ -34,7 +34,7 @@ const EditInfo = () => {
                     <div className="flex items-center h-14">아이디와 비밀번호 보안에 신경써주십시오.</div>
                 </div>
 
-                <div style={{padding: '2.8125rem'}} className="w-full rounded-2xl shadow-subNavbar border border-gray-dddddd">
+                <div style={{padding: '2.8125rem', borderWidth: '1px'}} className="w-full rounded-3xl shadow-subNavbar border border-gray-dddddd">
                     <div style={{marginTop: '0.375rem'}} className="flex">
                         <Title text="아이디" />
                         <div className="w-full">
@@ -47,7 +47,7 @@ const EditInfo = () => {
 
 
                     {/* BREAK */}
-                    <div style={{marginTop: '3.125rem'}} className="flex flex-wrap">
+                    <div style={{marginTop: '3.4375rem'}} className="flex flex-wrap">
                         <div className='w-full flex'>
                             <Title text="비밀번호" />
                             <div className="w-full">
@@ -68,7 +68,7 @@ const EditInfo = () => {
 
                     {/* BREAK */}
 
-                    <div style={{marginTop: '3.125rem'}} className="flex flex-wrap">
+                    <div style={{marginTop: '3.4375rem'}} className="flex flex-wrap">
                         <div className='w-full flex'>
                             <Title text="비밀번호 확인" />
                             <div className="w-full">
@@ -88,7 +88,7 @@ const EditInfo = () => {
 
                     {/* BREAK */}
 
-                    <div style={{marginTop: '3.125rem'}} className="flex flex-wrap">
+                    <div style={{marginTop: '3.4375rem'}} className="flex flex-wrap">
                         <div className='w-full flex'>
                             <Title text="환전비밀번호" />
                             <div className="w-full">
@@ -107,7 +107,7 @@ const EditInfo = () => {
 
                     {/* BREAK */}
 
-                    <div style={{marginTop: '3.125rem'}} className="flex flex-wrap">
+                    <div style={{marginTop: '3.4375rem'}} className="flex flex-wrap">
                         <div className='w-full flex'>
                             <Title text="환전 비밀번호 확인" />
                             <div className="w-full">
@@ -124,7 +124,7 @@ const EditInfo = () => {
                     </div>
 
 
-                    <div style={{marginTop: '6.75rem'}} className="w-full">
+                    <div style={{marginTop: '7.125rem'}} className="w-full">
 
 
                         <div className="flex">
@@ -139,7 +139,7 @@ const EditInfo = () => {
 
 
                         
-                        <div style={{marginTop: '3.125rem'}} className="flex">
+                        <div style={{marginTop: '3.4375rem'}} className="flex">
                             <Title text="스포츠" />
                             <div className="w-full">
                                 <label
@@ -150,7 +150,7 @@ const EditInfo = () => {
                         </div>
 
 
-                        <div style={{marginTop: '3.125rem'}} className="flex">
+                        <div style={{marginTop: '3.4375rem'}} className="flex">
                             <Title text="카지노" />
                             <div className="w-full">
                                 <label
@@ -161,7 +161,7 @@ const EditInfo = () => {
                         </div>
 
                         
-                        <div style={{marginTop: '3.125rem'}} className="flex">
+                        <div style={{marginTop: '3.4375rem'}} className="flex">
                             <Title text="슬롯" />
                             <div className="w-full">
                                 <label
@@ -171,7 +171,7 @@ const EditInfo = () => {
                             </div>
                         </div>
 
-                        <div style={{marginTop: '3.125rem'}} className="flex">
+                        <div style={{marginTop: '3.4375rem'}} className="flex">
                             <Title text="미니게임" />
                             <div className="w-full">
                                 <label
@@ -185,9 +185,9 @@ const EditInfo = () => {
 
                 </div>
 
-                <div style={{marginTop: '3.75rem', marginBottom: '14rem'}} className="w-full flex items-center justify-center">
-                    <button style={{width: '36.4375rem', height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} className="flex items-center justify-center rounded-2xl bg-red-cb4343 hover:opacity-75">
-                        <div className="flex items-center justify-center w-full h-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
+                <div style={{marginTop: '3.75rem', marginBottom: '19.625rem'}} className="w-full flex items-center justify-center">
+                    <button style={{width: '36.4375rem', height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} className="flex items-center justify-center rounded-2xl bg-brown-r7e3636 hover:opacity-75">
+                        <div className="flex items-center justify-center w-full h-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                             <span className="font-spoqaMedium tracking-tight text-white">수정하기</span>
                         </div>
                     </button>

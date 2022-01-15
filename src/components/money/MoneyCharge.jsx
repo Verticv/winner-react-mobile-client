@@ -37,7 +37,7 @@ const MoneyCharge = () => {
                 message4='자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.'
             />
             
-            <div style={{padding: '0.9375rem', paddingBottom: '2.0625rem', marginTop: '1.875rem'}} className="w-full  ddddddddddddddddd rounded-2xl shadow-subNavbar">
+            <div style={{padding: '0.9375rem', paddingBottom: '2.0625rem', marginTop: '1.875rem'}} className="w-full rounded-2xl shadow-subNavbar">
                 <div style={{paddingRight: '2.0625rem', paddingTop: '1.375rem', paddingBottom: '1.1875rem', paddingLeft: '1.9375rem'}} className="w-full rounded-2xl border border-gray-dddddd bg-gray-f9f9f9">
                     <div 
                         style={{fontSize: '2.8125rem'}}
@@ -269,20 +269,11 @@ const MoneyCharge = () => {
                 </div>
             </div>
 
-            <button style={{width: "36.4375rem", height: '7.3125rem', padding: '1px',  marginTop: '3.75rem', marginBottom: '5.8125rem'}} className="flex items-center justify-center h-52px rounded-lg bg-blue-r0070d9 hover:opacity-75">
-                <div className="flex items-center justify-center rounded-lg w-full h-full border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+            <button style={{width: "36.4375rem", height: '7.3125rem', padding: '1px',  marginTop: '3.75rem', marginBottom: '5.8125rem'}} className="flex items-center justify-center h-52px rounded-2xl bg-blue-r0070d9 hover:opacity-75">
+                <div className="flex items-center justify-center rounded-2xl w-full h-full border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                     <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
                 </div>
             </button>
-
-
-            {/* <div className="mt-40px">
-                <MoneyChargeTable />
-            </div>
-
-            <div className="mt-20px">
-                <Pagination page={page} setPage={setPage}/>   
-            </div> */}
 
             <BankTable />
             <BottomNavbar />

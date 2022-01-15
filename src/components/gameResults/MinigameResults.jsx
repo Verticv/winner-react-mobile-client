@@ -34,7 +34,6 @@ const MinigameResults = ({pageTitle = "미니게임"}) => {
 
             <DateSearchBar2 />
 
-            <div className="mt-20px"/>
 
             <Route path="/gameresults/minigame/powerball">
                 <PowerballResults />

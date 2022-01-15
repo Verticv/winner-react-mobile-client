@@ -68,6 +68,9 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
                                 if (firstRowKeysName[0] === '쿠폰금액') {
                                     firstColumnColor = '#d52e2e'
                                 }
+                                if (firstRowKeysName[0] === '처리상태') {
+                                    firstColumnColor = row[0][firstRowKeysName[0]] === '사용가능' ? "#ff1237" : "#7b7b7b"
+                                }
                                 return (
                                     <div key={index} style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginBottom: '0.375rem', color: firstColumnColor}} className="w-full font-spoqa text-left text-gray-r7b7b7b">
                                         <span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>{firstRowKeysName[0]} : </span>

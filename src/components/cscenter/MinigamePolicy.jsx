@@ -28,7 +28,7 @@ const HistoryMenu = ({
                     pathname === item.path
                     ? "bg-blue-r0056a6" 
                     : "bg-white border border-gray-rb7b7b7"
-                } w-1/2 rounded-full`}
+                } w-1/2 rounded-full font-spoqaMedium`}
                 style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
                 key={item.id} 
                 onClick={() => {
@@ -48,7 +48,7 @@ const HistoryMenu = ({
                                 pathname === item.path
                                 ? "text-white" 
                                 : "text-gray-r7b7b7b"
-                            }`}
+                            } font-spoqaMedium`}
                         >{item.text}</span>
                     </div>
                 </div>
@@ -84,12 +84,6 @@ const MinigamePolicy = () => {
     
     return (
         <div>
-            {/* <MyPageTitle title="미니게임" />
-
-
-            <div className="mt-20px" />
-            <HorizontalMenu7 itemsArray={tabsArray} /> */}
-
             <div style={{margin: '1.875rem', marginTop: '0', marginBottom: '2.875rem'}}>
                 <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
             </div>

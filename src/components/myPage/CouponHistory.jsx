@@ -53,7 +53,7 @@ const CouponHistory = () => {
                 </div>
             </div>
 
-            <div className="mt-20px">
+            <div>
                 {selectedTab === 0 ? (
                     <CouponRequestTable />
                 ) : (
@@ -61,7 +61,7 @@ const CouponHistory = () => {
                 )}
             </div>
             
-            <div className="mt-60px">
+            <div>
                 <Pagination page={page} setPage={setPage}/>   
             </div>
 

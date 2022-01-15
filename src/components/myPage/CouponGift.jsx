@@ -29,7 +29,7 @@ const CouponGift = () => {
 
                 
             </div>
-            <div className="mt-20px">
+            <div>
                 <CouponGiftTable />
             </div>
 
@@ -39,7 +39,7 @@ const CouponGift = () => {
                 </PopupControls> 
             </div>
 
-            <div className="mt-20px">
+            <div>
                 <Pagination page={page} setPage={setPage}/>   
             </div>
         </div>

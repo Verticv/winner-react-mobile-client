@@ -1,5 +1,4 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
 import EvolutionBg from '../../images/cardBg/1.png'
 import AsiaBg from '../../images/cardBg/2.png'
 import PragmaticBg from '../../images/cardBg/3.png'
@@ -10,7 +9,6 @@ import './GameBanners.css'
 
 const LiveCasinoBanner = () => {
 
-    const history = useHistory()
     const cardClass = "group relative flex justify-end w-full transition cursor-pointer overflow-hidden"
 
     const gamesArray = [
