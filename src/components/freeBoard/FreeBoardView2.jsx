@@ -1,4 +1,3 @@
-import BoardViewPanel from 'components/common/cards/BoardViewPanel';
 import React from 'react'
 import { useHistory } from 'react-router';
 import Rank1 from '../../images/newImages/freeboard/1.png'
@@ -7,6 +6,7 @@ import Rank3 from '../../images/newImages/freeboard/3.png'
 import Rank4 from '../../images/newImages/freeboard/4.png'
 import Rank5 from '../../images/newImages/freeboard/5.png'
 import ReplyArrow from '../../images/newImages/reply.png'
+import FreeBoardPanel from 'components/common/cards/FreeBoardPanel'
 
 const FreeBoardView2 = () => {
 
@@ -106,11 +106,7 @@ const FreeBoardView2 = () => {
 
                 <div style={{marginBottom:'5.625rem'}} className="w-full h-full">
                     <div className="">
-                        <BoardViewPanel type={0} winAmount="+900,000,000"  isAttached={true} noButtons={true}/>
-                        <BoardViewPanel type={1} winAmount="+900,000,000"  isAttached={true} noButtons={true}/>
-                        {/* <SportsBetHistoryPanel type={3} isAttached={true} noButtons={true}/> */}
-                        {/* <SportsBetHistoryPanel type={4} id={0} noButtons={true} attachedArray={[0]} />
-                        <SportsBetHistoryPanel type={3} id={0} isAttached={true} noButtons={true} attachedArray={[2]} /> */}
+                        <FreeBoardPanel />
                     </div>
                 </div>
 
