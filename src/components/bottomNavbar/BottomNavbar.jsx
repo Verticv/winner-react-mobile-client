@@ -17,14 +17,34 @@ const BottomNavbar = () => {
     const history = useHistory();
     const location = useLocation();
     const currentPath = location.pathname
-    console.log(`currentPath`, currentPath)
     const isAttendancePage = currentPath === '/attendance';
     const isBoardPage = currentPath?.includes('/freeboard');
+    const isDistributorPage = currentPath?.includes('/distributor-page');
+    const isInboxPage = currentPath?.includes('/inbox');
     const isCustomerCenterPage = currentPath?.includes('/cscenter');
+    const isBetHistoryPage = currentPath?.includes('/bet-history');
+    const isMoneyPage = currentPath?.includes('/money');
+    const isPointsPage = currentPath?.includes('/points');
+    const isSettlementPage = currentPath?.includes('/win-lose-settlement');
+    const isGameResultsPage = currentPath?.includes('/gameresults');
+    const isCouponPage = currentPath?.includes('/coupon');
+    const isEditInfoPage = currentPath?.includes('/edit-info');
 
     let isHomePage = true;
 
-    if (isAttendancePage || isBoardPage || isCustomerCenterPage) {
+    if (isAttendancePage || 
+        isBoardPage || 
+        isCustomerCenterPage || 
+        isBetHistoryPage || 
+        isMoneyPage || 
+        isPointsPage ||
+        isSettlementPage ||
+        isDistributorPage ||
+        isGameResultsPage ||
+        isInboxPage ||
+        isCouponPage ||
+        isEditInfoPage
+        ) {
         isHomePage = false
     }
     
@@ -45,8 +65,8 @@ const BottomNavbar = () => {
                     className="flex flex-col"
                     onClick={() => history.push('/freeboard')}
                     >
-                    <img style={{width: '4.625rem', marginLeft: '0.875rem', paddingBottom: '0.4375rem'}} className="object-contain" src={isBoardPage ? NoticeBoardActive : NoticeBoard } alt="" />
-                    <p style={{fontSize: '2.625rem', marginLeft: '-0.4375rem'}} className={`font-spoqaMedium ${isBoardPage ? 'text-blue-r009edf' : 'text-gray-r727272' }`}>게시판</p>
+                    <img style={{width: '4.625rem', marginLeft: '0.875rem', paddingBottom: '0.4375rem'}} className="object-contain" src={isBoardPage || isDistributorPage || isInboxPage ? NoticeBoardActive : NoticeBoard } alt="" />
+                    <p style={{fontSize: '2.625rem', marginLeft: '-0.4375rem'}} className={`font-spoqaMedium ${isBoardPage || isDistributorPage || isInboxPage ? 'text-blue-r009edf' : 'text-gray-r727272' }`}>게시판</p>
                 </button>
                 <button 
                     style={{width: '15.1rem'}}

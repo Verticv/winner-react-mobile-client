@@ -763,3 +763,33 @@
 .react-datepicker__portal .react-datepicker-time__header {
   font-size: 1.44rem;
 }
+
+/* date picker override styling */
+.react-datepicker__month-container {
+  width: 73.4rem;
+}
+
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+  width: 10rem;
+  line-height: 7rem;
+  font-size: 2.5rem;
+  font-family: RobotoMedium;
+}
+
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+  font-size: 2.5rem;
+}
+
+.react-datepicker__navigation--previous {
+  left: 23rem;
+  top: 1.9rem;
+}
+
+.react-datepicker__navigation--next {
+  right: 23rem;
+  top: 1.9rem;
+}
+
+.react-datepicker__current-month {
+  padding: 0.5rem 0;
+}

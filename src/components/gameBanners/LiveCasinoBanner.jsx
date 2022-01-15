@@ -27,7 +27,6 @@ const LiveCasinoBanner = () => {
             <div 
                 key={item.id} 
                 className={`${cardClass} flex items-center`} 
-                onClick={() => item.id !==6 && item.id !==7 && history.push('/live-casino')}
                 style={{marginBottom: items.length - 1 === index ? '18rem' : '1.875rem'}}
             >
                 <img className="z-20 object-contain" src={item.img} alt="background" />

@@ -29,7 +29,7 @@ const Pagination = ({page, setPage, withMarginBottom = true}) => {
     const [selectedPage, setSelectedPage] = useState(1)
 
     return (
-        <div style={{margin: '0 7.8125rem', marginBottom: withMarginBottom ? '19.625rem' : '0'}} className="relative flex mb-60px items-center justify-center">
+        <div style={{margin: '0 7.8125rem', marginBottom: withMarginBottom ? '19.625rem' : '0'}} className="relative flex items-center justify-center">
             <button 
                 style={{width: '2.125rem', height: '2.125rem', marginRight: '5.8125rem'}}
                 className="flex items-center justify-center rounded-lg  hover:opacity-75"
