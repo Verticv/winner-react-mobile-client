@@ -35,7 +35,7 @@ const Sports = ({paddingLeft}) => {
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                 <div style={{padding: '1.875rem', paddingRight: '0', paddingLeft: paddingLeft ? paddingLeft : '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">
-                        <HorizontalMenu2 width='13.625rem' imageWidth='6rem' itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
+                        <HorizontalMenu2 width='13.625rem' imageWidth='5.4375rem' itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
                 </div>
                 <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
