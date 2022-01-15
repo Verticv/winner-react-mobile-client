@@ -30,8 +30,8 @@ import Icon14 from "../images/newImages/mainPage/icons/14.png";
 import Logo from "../images/newImages/mainPage/icons/logo.png";
 
 
-const MyPage = ({setAuthenticated }) => {
-  const isAuthenticated= true
+const MyPage = ({setAuthenticated, isAuthenticated }) => {
+  
   const location = useLocation();
   const [selectedTab, setSelectedTab] = useState(location.pathname);
   const [selectedSubTab, setSelectedSubTab] = useState(location.pathname);
