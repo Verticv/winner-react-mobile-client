@@ -39,17 +39,11 @@ const FreeBoardCompose = () => {
                     
                 </div>
 
-                {attachedArray.map((id, index) => 
-                    <div 
-                        className={`${attachedArray.length - 1 === index ? "border-b border-gray-dddddd": ""}`}
-                        style={{paddingBottom: `${attachedArray.length - 1 === index ? "3.75rem": ""}`}}
-                        > 
-                        <BoardViewPanel type={id} id={id} isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray}/>
-                    </div>
-                )}
+
+                <BoardViewPanel isAttached={true} attachedArray={attachedArray} setAttachedArray={setAttachedArray}/>
                 
 
-                <div style={{height:"70.25rem",paddingTop: '3.125rem', paddingLeft: '2.6875rem', fontSize: '2.8125rem'}} className="w-full bg-white">
+                <div style={{height:"70.25rem",paddingTop: '1.8125rem', paddingLeft: '2.6875rem', fontSize: '2.8125rem'}} className="w-full bg-white">
                     <textarea 
                         style={{resize: "none"}}
                         className="outline-none w-full h-full font-spoqa tracking-tight placeholder-gray-r454545 place-color-grey-1"

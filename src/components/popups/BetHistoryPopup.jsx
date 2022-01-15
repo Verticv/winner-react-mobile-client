@@ -178,11 +178,6 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             <div style={{marginBottom:'5.625rem'}} className="w-full h-full">
                             <div style={{paddingBottom: '100rem'}}>
                                     <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true}/>
-                                    <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={1} winAmount="0"  isAttached={true} noButtons={true}/>
-                                    <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true}/>
-                                    {/* <SportsBetHistoryPanel type={3} isAttached={true} noButtons={true}/> */}
-                                    {/* <SportsBetHistoryPanel type={4} id={0} noButtons={true} attachedArray={[0]} />
-                                    <SportsBetHistoryPanel type={3} id={0} isAttached={true} noButtons={true} attachedArray={[2]} /> */}
                                 </div>
                             </div>
                         ) : selectedTab === 3 ? (

@@ -1,15 +1,5 @@
 import React, { useState } from 'react'
 import { useLocation, useHistory } from 'react-router';
-import Icon1 from '../../images/myPage/betHistory/ico_1.png'
-import Icon2 from '../../images/myPage/betHistory/ico_2.png'
-import Icon3 from '../../images/myPage/betHistory/ico_3.png'
-import Icon4 from '../../images/myPage/betHistory/ico_4.png'
-import Icon5 from '../../images/myPage/betHistory/ico_5.png'
-import Icon6 from '../../images/myPage/betHistory/ico_6.png'
-import Icon7 from '../../images/myPage/betHistory/ico_7.png'
-import Icon8 from '../../images/cscenter/8.png'
-import Icon9 from '../../images/cscenter/9.png'
-import Icon10 from '../../images/cscenter/10.png'
 import HorizontalSubMenu from 'components/horizontalMenus/HorizontalSubMenu'
 import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 import Pagination from 'components/myPage/Pagination';
@@ -19,16 +9,16 @@ import Search from 'components/common/Search'
 const Contact = () => {
 
     const tabsArray = [
-        { text: "전체", icon: Icon1, id: 0, path: "/cscenter/all/contact/all" },
-        { text: "라이브카지노", icon: Icon2, id: 1, path: "/cscenter/all/contact/all/live-casino" },
-        { text: "슬롯", icon: Icon3, id: 2, path: "/cscenter/all/contact/all/slot" },
-        { text: "스포츠", icon: Icon4, id: 3, path: "/cscenter/all/contact/all/sports" },
-        { text: "e-스포츠", icon: Icon5, id: 4, path: "/cscenter/all/contact/all/e-sports" },
-        { text: "미니게임", icon: Icon6, id: 5, path: "/cscenter/all/contact/all/minigame" },
-        { text: "키론가상게임", icon: Icon7, id: 6, path: "/cscenter/all/contact/all/ar-game" },
-        { text: "충전/환전", icon: Icon8, id: 7, path: "/cscenter/all/contact/all/transaction" },
-        { text: "베팅관련", icon: Icon9, id: 8, path: "/cscenter/all/contact/all/about-betting" },
-        { text: "기타", icon: Icon10, id: 9, path: "/cscenter/all/contact/all/other" },
+        { text: "전체", id: 0, path: "/cscenter/all/contact/all" },
+        { text: "라이브카지노", id: 1, path: "/cscenter/all/contact/all/live-casino" },
+        { text: "슬롯", id: 2, path: "/cscenter/all/contact/all/slot" },
+        { text: "스포츠", id: 3, path: "/cscenter/all/contact/all/sports" },
+        { text: "e-스포츠", id: 4, path: "/cscenter/all/contact/all/e-sports" },
+        { text: "미니게임", id: 5, path: "/cscenter/all/contact/all/minigame" },
+        { text: "키론가상게임", id: 6, path: "/cscenter/all/contact/all/ar-game" },
+        { text: "충전/환전", id: 7, path: "/cscenter/all/contact/all/transaction" },
+        { text: "베팅관련", id: 8, path: "/cscenter/all/contact/all/about-betting" },
+        { text: "기타", id: 9, path: "/cscenter/all/contact/all/other" },
     ];
 
     const inboxArray = [

@@ -3,6 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from  "react-datepicker";
 import ko from 'date-fns/locale/ko';
+import DropDownInput from 'components/common/DropDownInput'
 import CalendarIcon from '../../images/newImages/mypage/live-casino/date.png';
 // import DropDownControls from 'components/dropdowns/DropDownControls';
 // import ArrowDownGray from '../../images/arrows/arrow_down_gray.png'
@@ -39,22 +40,23 @@ const DateSearchBar = ({
 
                 {isGameResultsSearch === true && (
                     <div style={{marginTop: '1.875rem', marginBottom: '-1.125rem'}} className="flex">                        
-                        <input
+                        {/* <input
                             style={{height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginLeft: '1.875rem'}}
                             placeholder="리그선택" 
-                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
+                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" /> */}
+                            <DropDownInput />
                             <span style={{fontSize: '2.6rem', marginTop: '1.875rem', width: '1.880875rem'}} className="invisible text-center font-spoqaMedium text-gray-r454545 mt-px">~</span>
                         <input
-                            style={{height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginRight: '1.875rem'}}
+                            style={{height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginRight: '1.875rem', paddingLeft: '1.75rem', paddingRight: '1.875rem'}}
                             placeholder="팀명검색" 
-                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
+                            className="place-color-grey placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
                     </div>
                 )}
 
                 <div className="flex items-center w-full h-full">
                     <div className="relative">
                         <DatePicker 
-                            className="place-color-grey left-input pt-px mt-px flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd px-10px font-roboto text-15px tracking-tight text-gray-r7b7b7b focus:ml-10px"
+                            className="place-color-grey date-picker left-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b"
                             locale="ko" 
                             selected={startDate} 
                             onChange={(date) => setStartDate(date)}
@@ -66,7 +68,7 @@ const DateSearchBar = ({
                     <span style={{fontSize: '2.6rem', marginTop: '1.875rem'}} className="w-8 text-center font-spoqaMedium text-gray-r454545 mt-px">~</span>
                     <div className="relative">
                         <DatePicker 
-                            className="place-color-grey right-input pt-px mt-px flex-shrink-0 outline-none h-42px rounded-2xl border border-gray-dddddd px-10px font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
+                            className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
                             locale="ko"
                             selected={endDate} 
                             onChange={(date) => setEndDate(date)}
