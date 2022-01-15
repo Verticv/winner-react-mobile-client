@@ -21,7 +21,7 @@ import Logo from "../../images/newImages/mainPage/icons/logo.png";
 
 const tabsArray = [
     { text: "스포츠", icon: Icon1, id: 0, path: "/mypage/gameresults/all" },
-    { text: "미니게임", icon: Icon2, id: 1, path: "#" },
+    { text: "미니게임", icon: Icon2, id: 1, path: "/minigame/powerball" },
 ];
 
 const tabsSubArray = [
