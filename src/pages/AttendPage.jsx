@@ -1,5 +1,6 @@
 import Navbar from 'components/mainPage/Navbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
+import HomePageTopBanner from 'components/common/HomePageTopBanner';
 import React from 'react'
 import AttendanceCalendar from 'components/attendance/AttendanceCalendar'
 import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
@@ -14,6 +15,7 @@ const AttendPage = ({isAuthenticated, setAuthenticated}) => {
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
+                <HomePageTopBanner pageTitle='출석부' />
             </div>
 
 
