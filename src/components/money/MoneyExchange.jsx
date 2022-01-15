@@ -33,13 +33,13 @@ const MoneyExchange = () => {
                         style={{fontSize: '2.8125rem'}}
                         className="font-spoqaMedium tracking-tight text-gray-r393e41 flex items-center"
                     >
-                        입금 계좌 정보 확인
+                        환전금액 입력
                     </div>
                     <div 
-                        style={{fontSize: '2.625rem', marginRight: '0.875rem'}}
+                        style={{fontSize: '2.625rem', marginRight: '7.875remrem'}}
                         className="font-spoqaMedium tracking-tight text-gray-r7c7c7c flex items-center"
                     >
-                        입금 계좌번호는 쪽지로 발송되며, 발송된 계좌번호로 선입금 바랍니다.
+                        환전 신청을 완료하게 되면 보유머니에서 신청한 금액만큼 차감되며 고객님의 계좌번호로 입금됩니다.
                     </div>
                     
                 </div>
@@ -55,7 +55,7 @@ const MoneyExchange = () => {
                         </div>
                     </div>
                     <div style={{marginTop: '4.6875rem'}} className="flex">
-                        <Title text="충전금액 입력" />
+                        <Title text="환전금액 입력" />
                         <div className="w-full">
                             <input 
                                 className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
@@ -168,12 +168,12 @@ const MoneyExchange = () => {
                     
                 </div>
                     <div style={{marginTop: '3.8125rem'}} className="flex">
-                        <Title text="충전금액 입력" />
+                        <Title text="출금 비밀번호" />
                         <div className="w-full">
                             <input 
                                 className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                 style={{fontSize: '2.625rem', marginBottom: '0.9375rem'}}
-                                placeholder="직접 입력시 숫자만 입력해 주세요."
+                                placeholder="비밀번호를 입력하세요."
                                 value={inputValue !==null ? nf.format(inputValue) : ""}
                                 onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
                                 onFocus={() => setInputClicked(true)}
