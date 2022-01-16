@@ -632,7 +632,8 @@ const DistributorPage = ({
                 style={{
                     background: "linear-gradient(to bottom, #d0dbe4, #ffffff 60%)",
                     paddingLeft: '1.25rem',
-                    paddingRight: '2.0625rem'
+                    paddingRight: '2.0625rem',
+                    width: 'max-content'
                 }} 
                 className="h-full w-full rounded-full flex items-center"
             >
@@ -653,11 +654,11 @@ const DistributorPage = ({
 
             <div style={{margin: '1.875rem', marginTop: '0.75rem', marginRight: '0', marginBottom: '0'}} className="relative overflow-hidden flex flex-col h-full">
                 <div style={{height: '11.1875rem', fontSize: '3rem', paddingTop: '2.75rem'}} className='flex flex-col items-center'>
-                    <div style={{marginBottom: '0.25rem'}} className="tracking-tight flex items-center">
+                    <div style={{marginBottom: '0.25rem', marginLeft: '-1.7rem'}} className="tracking-tight flex items-center">
                         <p className="font-spoqaMedium text-blue-r0056a6">Louie3</p>
                         <p className="font-spoqaMedium ml-2 text-gray-r454545">님의 총판 정보입니다.</p>
                     </div>
-                    <div style={{backgroundColor:"#868686", height: '0.1875rem', minHeight: '0.1875rem', marginBottom: '2.75rem', width: '46.5625rem'}} className=""></div>
+                    <div style={{backgroundColor:"#868686", height: '0.1875rem', marginLeft: '-1.7rem', minHeight: '0.1875rem', marginBottom: '2.75rem', width: '46.5625rem'}} className=""></div>
                 </div>
 
                 <div style={{marginTop: '3.4375rem'}} className="relative flex flex-col justify-start limit:justify-center">
@@ -667,7 +668,7 @@ const DistributorPage = ({
                         <div className="w-1836px">
                             <div style={{marginBottom: '1.25rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3rem', height: '3.1875rem', marginRight: '0.8125rem'}} src={SummaryIcon} alt="" />
-                                <span style={{fontSize: '3rem'}}>총판현황</span>
+                                <span className='mt-1.5' style={{fontSize: '3rem'}}>총판현황</span>
                             </div>
 
                             <div style={{width: '73.7rem'}} className="flex w-full flex-wrap">
@@ -696,7 +697,7 @@ const DistributorPage = ({
 
                             <div style={{marginBottom: '1rem', marginTop: '3.5625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3.1875rem', marginRight: '0.8125rem'}} src={PieIcon} alt="" />
-                                <span style={{fontSize: '3rem'}}>총판현황</span>
+                                <span className='mt-1.5' style={{fontSize: '3rem'}}>롤링요율</span>
                             </div>
 
                             <div className='flex relative'>
@@ -758,7 +759,7 @@ const DistributorPage = ({
 
                             <div style={{marginBottom: '0.875rem', marginTop: '4.625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3.1875rem', marginRight: '0.8125rem'}} src={DetailIcon} alt="" />
-                                <span style={{fontSize: '3rem'}}>나의 상세내역</span>
+                                <span className='mt-1.5' style={{fontSize: '3rem'}}>나의 상세내역</span>
                             </div>
 
                             {/* <DateSearchBar isLeagueSearch={false} hasIdSearch={true}/> */}
@@ -767,9 +768,9 @@ const DistributorPage = ({
                             </div>
 
                             
-                            <div style={{width: '73.875rem', borderWidth: '0.1875rem' ,borderRadius: '3.1875rem', padding: '1.9375rem 2.75rem', margin: '1.875rem 0'}} className="flex flex-wrap w-full border-2 border-gray-b4b4b4 bg-gray-r5a6067">
+                            <div style={{width: '73.875rem', borderWidth: '0.1875rem' ,borderRadius: '3.1875rem', padding: '1.75rem 2.75rem', margin: '1.875rem 0'}} className="flex flex-wrap w-full border-2 border-gray-b4b4b4 bg-gray-r5a6067">
                                 <div className='w-1/2 flex flex-wrap items-center justify-center'>
-                                    <div style={{fontSize: '2.625rem'}} className="w-full font-spoqaMedium tracking-tight">
+                                    <div style={{fontSize: '2.625rem', marginBottom: '0.875rem'}} className="w-full font-spoqaMedium tracking-tight">
                                         <div className='flex items-center'>
                                             <img style={{width: '1.3125rem', height: '1.3125rem', marginRight: '1.3125rem'}} src={Diamond} alt="" />
                                             <div className="flex items-center">
@@ -792,7 +793,7 @@ const DistributorPage = ({
                                 
 
                                 <div className='w-1/2 flex flex-wrap items-center justify-center'>
-                                    <div style={{fontSize: '2.625rem'}} className="w-full font-spoqaMedium tracking-tight">
+                                    <div style={{fontSize: '2.625rem', marginBottom: '0.875rem'}} className="w-full font-spoqaMedium tracking-tight">
                                         <div className='flex items-center'>
                                             <img style={{width: '1.3125rem', height: '1.3125rem', marginRight: '1.3125rem'}} src={Diamond} alt="" />
                                             <div className="flex items-center">
@@ -926,7 +927,7 @@ const DistributorPage = ({
 
 
                             <div style={{marginTop: '4.3125rem', marginBottom: '0.75rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
-                                <img style={{width: '3.1875rem', height: '2.75rem', marginRight: '0.8125rem'}} className='object-contain' src={MemberIcon} alt="" />
+                                <img style={{width: '3.1875rem', height: '2.75rem', marginRight: '0.8125rem'}} className='object-contain -mt-1.5' src={MemberIcon} alt="" />
                                 <div style={{fontSize: '3rem'}}>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight text-gray-r454545">2 명</span></div>
 
                                 <div 
@@ -953,7 +954,7 @@ const DistributorPage = ({
                             </div>
 
                             {viewOnline && (
-                                <div style={{height:"9rem", padding: '0 1.125rem'}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl items-center overflow-scroll">
+                                <div style={{width: '75.75rem' ,height:"9rem", padding: '0 1.125rem', borderRadius: '1.25rem', borderTopRightRadius: '0', borderBottomRightRadius: '0', borderRightWidth: '0'}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl items-center overflow-scroll">
                                     <UsersOnline />
                                     <UsersOnline name="tkskdl12" />
                                 </div>
@@ -968,15 +969,15 @@ const DistributorPage = ({
 
                             <div style={{marginTop: '4.5625rem', fontSize: '3rem', width: '73.875rem'}} className="flex items-end justify-between tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <div className="flex items-center items-center flex">
-                                    <img style={{width: '3.1875rem', height: '2.9375rem', marginRight: '0.8125rem'}} className='object-contain' src={RecommendIcon} alt="" />
+                                    <img style={{width: '3.1875rem', height: '2.9375rem', marginRight: '0.8125rem'}} className='object-contain -mt-1.5' src={RecommendIcon} alt="" />
                                     <div>추천 회원내역</div>
                                 </div>
                                 
                                 <div style={{width:'30.6875rem', height: '5.3125rem', borderWidth: '0.1875rem', fontSize: '2.625rem', borderRadius: '1.625rem'}} className="border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                                     <img style={{width: '1.3125rem', height: '1.3125rem', marginRight: '1.0625rem'}} className="object-contain" src={Diamond} alt="" />
-                                    <div className="flex items-center space-x-4px pt-2px">
+                                    <div style={{marginTop: '0.15rem'}} className="flex items-center">
                                         <span className="text-white">보유금 총합계:</span>
-                                        <span className="text-yellow-ffcc00">75,000</span>
+                                        <span className="text-yellow-ffcc00 ml-3">75,000</span>
                                     </div>
                                 </div>
                             </div>
