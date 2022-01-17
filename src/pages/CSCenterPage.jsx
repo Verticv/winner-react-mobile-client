@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Route, useLocation } from 'react-router';
+import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 // import Footer from 'components/mainPage/Footer';
 // import Footer2 from 'components/mainPage/Footer2';
 // import DirectoryComponent from 'components/myPage/DirectoryComponent';
@@ -129,10 +130,10 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
             </Route>
 
             <Route path="/cscenter/all">
-                <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
+                <div className="flex flex-col items-start limit:items-center w-full h-full">
                     <div className="flex w-full">
                         <div className="w-full">
-                            <Route path="/cscenter/all/contact/all/">
+                            <Route path="/cscenter/all/contact/all">
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
@@ -142,7 +143,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full">
-                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +163,10 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
                                     <HomePageTopBanner pageTitle='문의하기' />
                                 </div>
-                                <ContactCompose />
+                                <div style={{marginBottom: '3.75rem'}}>
+                                    <ContactCompose />
+                                </div>
+                                <BottomNavbar />
                             </Route>
                             <Route exact path="/cscenter/all/announcement">
                                 <div className="w-full z-30 flex flex-col items-center">
@@ -174,7 +178,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full">
-                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +190,9 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
                                     <HomePageTopBanner pageTitle='고객센터' />
                                 </div>
-                                <AnnouncementView />
+                                <div style={{marginBottom: '19.625rem'}}>
+                                    <AnnouncementView />
+                                </div>
                             </Route>
                             <Route path="/cscenter/all/faq">
                                 <div className="w-full z-30 flex flex-col items-center">
@@ -198,11 +204,13 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full">
-                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                                         </div>
                                     </div>
                                 </div>
-                                <Faq />
+                                <div style={{marginBottom: '19.625rem'}}>
+                                    <Faq />
+                                </div>
                             </Route>
                             <Route path="/cscenter/all/policy/sportsgame">
                                 <div className="w-full z-30 flex flex-col items-center">
@@ -214,11 +222,13 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full">
-                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                                         </div>
                                     </div>
                                 </div>
-                                <SportsGamePolicy setSelectedTab={setSelectedTab} />
+                                <div style={{marginBottom: '19.625rem'}}>
+                                    <SportsGamePolicy setSelectedTab={setSelectedTab} />
+                                </div>
                             </Route>
                             <Route path="/cscenter/all/policy/minigame">
                                 <div className="w-full z-30 flex flex-col items-center">
@@ -230,7 +240,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full">
-                                        <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                                         </div>
                                     </div>
                                 </div>
