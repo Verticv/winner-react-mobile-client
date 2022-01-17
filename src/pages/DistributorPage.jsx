@@ -973,7 +973,7 @@ const DistributorPage = ({
                             <div style={{marginTop: '4.5625rem', fontSize: '3rem', width: '73.875rem'}} className="flex items-end justify-between tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <div className="flex items-center items-center flex">
                                     <img style={{width: '3.1875rem', height: '2.9375rem', marginRight: '0.8125rem'}} className='object-contain -mt-1.5' src={RecommendIcon} alt="" />
-                                    <div>추천 회원내역</div>
+                                    <div className='mt-1'>추천 회원내역</div>
                                 </div>
                                 
                                 <div style={{width:'30.6875rem', height: '5.3125rem', borderWidth: '0.1875rem', fontSize: '2.625rem', borderRadius: '1.625rem'}} className="border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
