@@ -211,8 +211,8 @@ const DistributorPage = ({
                         <div className="w-full h-full flex items-center justify-center">0.00%</div>
                         <div className="w-full h-full flex items-center justify-center">
                         <button 
-                            style={{width: "10.375rem", padding: '1px', fontSize: '2.625rem'}}
-                            className={`bg-blue-r2068b2 flex items-center justify-center rounded-lg hover:opacity-75`}
+                            style={{width: "11.5rem", fontSize: '2.625rem'}}
+                            className={`bg-blue-r2068b2 flex items-center justify-center rounded-lg hover:opacity-75 p-px small-padding`}
                         >
                             <div 
                                 className={`border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a flex items-center justify-center w-full h-full py-5 px-10 rounded-lg border  cursor-pointer`}
@@ -376,7 +376,7 @@ const DistributorPage = ({
             );
             setSubArrowClicked(updatedCheckedState);
         };
-    
+
         return items.map(item => (
             <>
             <div style={{fontSize: '2.625rem', height: '10.9375rem'}} className={`${item.id % 2 === 1 ? "bg-white" : "bg-gray-f8f9fb"} ${item.isLast ? "border-b" : "border-b"} w-full flex items-center justify-evenly font-roboto text-gray-r585858 tracking-tight border-l border-r border-gray-dddddd`}>
@@ -391,7 +391,7 @@ const DistributorPage = ({
                     ? <div className="">{item.added_amount}</div>
                     : 
                     <button 
-                        style={{width: "14.5rem", padding: '1px', fontSize: '2.4375rem'}}
+                        style={{width: "15.5rem", padding: '1px', fontSize: '2.4375rem'}}
                         className={`${isUserCountOpen ? "bg-blue-r0070d9" : "bg-blue-r2068b2"} flex items-center justify-center rounded-lg hover:opacity-75`}
                         onClick={() => {
                             handleOnChange1(item.id)
@@ -404,7 +404,7 @@ const DistributorPage = ({
                                 : "border-blue-r3975ad bg-gradient-to-b from-blue-r125a9e via-blue-r125a9e to-blue-r0b447a"
                                 } flex items-center justify-center rounded-lg w-full h-full border cursor-pointer px-8 py-5`}
                         >
-                            <span className="font-spoqaMedium tracking-tight text-white ">
+                            <span className="font-spoqaMedium tracking-tight text-white small-padding">
                                 {isUserCountOpen[item.id] === true ? "접기" : "보기"}  {item.user_count}
                             </span>
                             <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} className={isUserCountOpen[0] === false && " transform rotate-180"} src={WhiteArrow} alt=""/>
@@ -954,9 +954,12 @@ const DistributorPage = ({
                             </div>
 
                             {viewOnline && (
-                                <div style={{width: '75.75rem' ,height:"9rem", padding: '0 1.125rem', borderRadius: '1.25rem', borderTopRightRadius: '0', borderBottomRightRadius: '0', borderRightWidth: '0'}} className="flex bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl items-center overflow-scroll">
-                                    <UsersOnline />
-                                    <UsersOnline name="tkskdl12" />
+                                <div className='flex relative'>
+                                    <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '73rem'}} className="absolute h-full z-50"></div>
+                                    <div style={{width: '75.75rem' ,height:"9rem", padding: '0 1.125rem', borderRadius: '1.25rem', borderTopRightRadius: '0', borderBottomRightRadius: '0', borderRightWidth: '0'}} className="flex bg-gray-f9f9f9 relative border border-gray-dddddd rounded-2xl items-center overflow-scroll">
+                                        <UsersOnline />
+                                        <UsersOnline name="tkskdl12" />
+                                    </div>
                                 </div>
                             )}
 
@@ -991,95 +994,98 @@ const DistributorPage = ({
 
                             {/* === 추천회원내역 표 === */}
                             {/* w-1836px */}
-                            <div style={{filter: "drop-shadow(0px 0px 2px #00000050)", marginTop: '0.375rem', borderWidth: '0.375rem', width: '75.75rem', borderRightWidth: '0'}} className="flex flex-col w-full rounded-2xl border-t  border-gray-dddddd overflow-scroll">
-                                <div style={{ width: 'fit-content'}} className='flex flex-col w-full rounded-2xl border-t  border-gray-dddddd'>
-                                    {/* === Header === */}
-                                    <div style={{height: '8.5625rem', fontSize: '2.625rem'}} className="w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqaMedium text-white tracking-tight">
-                                        <div style={{width: '18rem'}} className="text-center">번호</div>
-                                        <button
-                                            style={{width: '18rem'}}
-                                            className="flex text-center items-center justify-center hover:opacity-75"
-                                            onClick={() => handleOnChange(0)}
-                                        >
-                                            <p>아이디</p>
-                                            <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[0] === true ? "transform rotate-180" : ""}`} alt=""/>
-                                        </button>
-                                        <div style={{width: '18rem'}} className="text-center">이름</div>
-                                        <div style={{width: '18rem'}} className="text-center -mt-3.5">별명</div>
-                                        <button 
-                                            style={{width: '18rem'}}
-                                            className="text-center flex items-center justify-center hover:opacity-75"
-                                            onClick={() => handleOnChange(1)}
-                                        >
-                                            <div className="flex flex-col items-center justify-center">
-                                                <div className="flex items-center">하부</div>
-                                                <div className="flex items-center -mt-3.5">유저수</div>
-                                            </div>
-                                            <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[1] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                        </button>
-                                        <button
-                                            style={{width: '18rem', fontSize: '2.4rem'}}
-                                            className="text-center flex items-center justify-center hover:opacity-75 "
-                                            onClick={() => handleOnChange(2)}
-                                        >
-                                            <div className="flex flex-col items-center justify-center">
-                                                <div style={{height: '3.29rem', marginTop: '0.2rem'}} className="flex items-center">추천일시</div>
-                                                <div style={{height: '3.29rem'}} className="flex items-center -mt-3.5">로그인일시</div>
-                                                <div style={{height: '3.29rem'}} className="flex items-center -mt-3.5">(미접속일수)</div>
-                                            </div>
-                                            <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', fontSize: '2.4rem'}} src={WhiteArrow} className={`${isArrowUp[2] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                        </button>
-                                        <div style={{width: '18rem'}} className="text-center">요율보기</div>
-                                        <div style={{width: '18rem'}} className="text-center -mt-3.5">입금액</div>
-                                        <div style={{width: '18rem'}} className="text-center -mt-3.5">보너스</div>
-                                        <button 
-                                            style={{width: '18rem'}}
-                                            className="flex text-center items-center justify-center hover:opacity-75"
-                                            onClick={() => handleOnChange(3)}
-                                        >
-                                            <p>출금액</p>
-                                            <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[3] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                        </button>
-                                        <div style={{width: '18rem'}} className="text-center">입출금액</div>
-                                        <button 
-                                            style={{width: '18rem'}}
-                                            className="flex text-center items-center justify-center hover:opacity-75"
-                                            onClick={() => handleOnChange(4)}
-                                        >
-                                            <p>베팅액</p>
-                                            <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[4] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                        </button>
-                                        <button 
-                                            style={{width: '18rem'}}
-                                            className="flex text-center items-center justify-center hover:opacity-75"
-                                            onClick={() => handleOnChange(5)}
-                                        >
-                                            <p>윈루즈</p>
-                                            <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[5] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                        </button>
-                                        <div style={{width: '18rem'}} className="text-center">상세내역</div>
-                                        <button 
-                                            style={{width: '18rem'}}
-                                            className="flex text-center items-center justify-center hover:opacity-75"
-                                            onClick={() => handleOnChange(6)}
-                                        >
-                                            <p>포인트</p>
-                                            <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[6] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                        </button>
-                                        <button 
-                                            style={{width: '18rem'}}
-                                            className="text-center flex items-center justify-center hover:opacity-75"
-                                            onClick={() => handleOnChange(7)}
-                                        >
-                                            <div className="flex flex-col items-center justify-center">
-                                                <div className="flex items-center">보유</div>
-                                                <div className="flex items-center -mt-3.5">금액</div>
-                                            </div>
-                                            <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[7] === false ? "transform rotate-180" : ""}`} alt=""/>
-                                        </button>
+                            <div className='flex relative'>
+                            <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '73rem'}} className="absolute h-full z-50"></div>
+                                <div style={{filter: "drop-shadow(0px 0px 2px #00000050)", marginTop: '0.375rem', borderWidth: '0.375rem', width: '75.75rem', borderRightWidth: '0'}} className="flex flex-col w-full rounded-2xl border-t relative border-gray-dddddd overflow-scroll">
+                                    <div style={{ width: 'fit-content'}} className='flex flex-col w-full rounded-2xl border-t  border-gray-dddddd'>
+                                        {/* === Header === */}
+                                        <div style={{height: '8.5625rem', fontSize: '2.625rem'}} className="w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqaMedium text-white tracking-tight">
+                                            <div style={{width: '18rem'}} className="text-center">번호</div>
+                                            <button
+                                                style={{width: '18rem'}}
+                                                className="flex text-center items-center justify-center hover:opacity-75"
+                                                onClick={() => handleOnChange(0)}
+                                            >
+                                                <p>아이디</p>
+                                                <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[0] === true ? "transform rotate-180" : ""}`} alt=""/>
+                                            </button>
+                                            <div style={{width: '18rem'}} className="text-center">이름</div>
+                                            <div style={{width: '18rem'}} className="text-center -mt-3.5">별명</div>
+                                            <button 
+                                                style={{width: '18rem'}}
+                                                className="text-center flex items-center justify-center hover:opacity-75"
+                                                onClick={() => handleOnChange(1)}
+                                            >
+                                                <div className="flex flex-col items-center justify-center">
+                                                    <div className="flex items-center">하부</div>
+                                                    <div className="flex items-center -mt-3.5">유저수</div>
+                                                </div>
+                                                <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[1] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                            </button>
+                                            <button
+                                                style={{width: '18rem', fontSize: '2.4rem'}}
+                                                className="text-center flex items-center justify-center hover:opacity-75 "
+                                                onClick={() => handleOnChange(2)}
+                                            >
+                                                <div className="flex flex-col items-center justify-center">
+                                                    <div style={{height: '3.29rem', marginTop: '0.2rem'}} className="flex items-center">추천일시</div>
+                                                    <div style={{height: '3.29rem'}} className="flex items-center -mt-3.5">로그인일시</div>
+                                                    <div style={{height: '3.29rem'}} className="flex items-center -mt-3.5">(미접속일수)</div>
+                                                </div>
+                                                <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem', fontSize: '2.4rem'}} src={WhiteArrow} className={`${isArrowUp[2] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                            </button>
+                                            <div style={{width: '18rem'}} className="text-center">요율보기</div>
+                                            <div style={{width: '18rem'}} className="text-center -mt-3.5">입금액</div>
+                                            <div style={{width: '18rem'}} className="text-center -mt-3.5">보너스</div>
+                                            <button 
+                                                style={{width: '18rem'}}
+                                                className="flex text-center items-center justify-center hover:opacity-75"
+                                                onClick={() => handleOnChange(3)}
+                                            >
+                                                <p>출금액</p>
+                                                <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[3] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                            </button>
+                                            <div style={{width: '18rem'}} className="text-center">입출금액</div>
+                                            <button 
+                                                style={{width: '18rem'}}
+                                                className="flex text-center items-center justify-center hover:opacity-75"
+                                                onClick={() => handleOnChange(4)}
+                                            >
+                                                <p>베팅액</p>
+                                                <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[4] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                            </button>
+                                            <button 
+                                                style={{width: '18rem'}}
+                                                className="flex text-center items-center justify-center hover:opacity-75"
+                                                onClick={() => handleOnChange(5)}
+                                            >
+                                                <p>윈루즈</p>
+                                                <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[5] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                            </button>
+                                            <div style={{width: '18rem'}} className="text-center">상세내역</div>
+                                            <button 
+                                                style={{width: '18rem'}}
+                                                className="flex text-center items-center justify-center hover:opacity-75"
+                                                onClick={() => handleOnChange(6)}
+                                            >
+                                                <p>포인트</p>
+                                                <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[6] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                            </button>
+                                            <button 
+                                                style={{width: '18rem'}}
+                                                className="text-center flex items-center justify-center hover:opacity-75"
+                                                onClick={() => handleOnChange(7)}
+                                            >
+                                                <div className="flex flex-col items-center justify-center">
+                                                    <div className="flex items-center">보유</div>
+                                                    <div className="flex items-center -mt-3.5">금액</div>
+                                                </div>
+                                                <img style={{width: '1.9375rem', height: '1.3125rem', marginLeft: '0.4375rem'}} src={WhiteArrow} className={`${isArrowUp[7] === false ? "transform rotate-180" : ""}`} alt=""/>
+                                            </button>
+                                        </div>
+                                        {/* === Body === */}
+                                        <RecommendedUserCell items={RecommendedUserArray}/>
                                     </div>
-                                    {/* === Body === */}
-                                    <RecommendedUserCell items={RecommendedUserArray}/>
                                 </div>
                             </div>
                            
