@@ -5,6 +5,7 @@ const HorizontalMenu1 = ({
     itemsArray, 
     setSelectedTab,
     setSelectedSubTab = null,
+    withSmallMarginTop = false
 }) => {
 
     const history = useHistory();
@@ -75,6 +76,7 @@ const HorizontalMenu1 = ({
                         >
                             <img style={{width: '6.9rem', marginLeft: '0.5625rem'}} className="mt-5 object-contain" src={item.icon} alt="" />
                             <span
+                                style={{marginTop: withSmallMarginTop ? '0.25rem' : ''}}
                                 className={`${
                                     isSameLink
                                     ? "text-white"

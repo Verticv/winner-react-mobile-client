@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 import MobileDropDownControls from 'components/dropdowns/MobileDropDownControls';
 import DownArrowIcon from '../../images/newImages/search-arrow-down.png'
 
@@ -22,7 +21,7 @@ const ContactCompose = () => {
     )
 
     const searchDropdown = (
-        <div style={{width: '26.25rem'}} className="mt-4px flex flex-col items-center justify-center w-120px overflow-hidden bg-white rounded-2xl border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
+        <div style={{width: '26.25rem', marginTop: '1.5rem'}} className="flex flex-col items-center justify-center overflow-hidden bg-white rounded-2xl border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
             <button style={{width: '26.25rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
                 setSelectedCarrier("제목")
                 setDropdownOpen(false)
@@ -83,19 +82,17 @@ const ContactCompose = () => {
 
 
             <div style={{marginTop: '3.75rem', marginBottom: '14rem', fontSize: '2.8125rem'}} className="flex w-full items-center justify-center">
-                <button style={{height: '7.3125rem', padding: '1px'}} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-blue-r0070d9">
-                    <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                <button style={{height: '7.3125rem', padding: '1px'}} className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-blue-r0070d9">
+                    <div className="flex items-center justify-center w-full h-full bg-black rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">작성하기</span>
                     </div>
                 </button>
                 <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">
-                    <div className="flex items-center justify-center w-full h-full rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
+                    <div className="flex items-center justify-center w-full h-full rounded-2xl border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">취소하기</span>
                     </div>
                 </button>
             </div>
-            
-            <BottomNavbar />
         </div>
     )
 }

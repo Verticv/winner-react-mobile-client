@@ -35,13 +35,13 @@ const ContactView = () => {
 
                 <div style={{height: '7.3125rem', padding: '1.4375rem 1.875rem', borderBottomWidth: '0.1875rem' }} className="relative bg-gray-fafafa border-b border-gray-dddddd flex items-center">
                     <img style={{width: "3.625rem", height: '4.4375rem'}} src={Rank1} alt="" />
-                    <p className='flex items-center text-gray-r585858 font-spoqaMedium' style={{fontSize: '2.4375rem', marginLeft: '0.875rem'}}>마이마이프로틴화이팅</p>
+                    <p className='flex mt-1.5 items-center text-gray-r585858 font-spoqaMedium' style={{fontSize: '2.4375rem', marginLeft: '0.875rem'}}>마이마이프로틴화이팅</p>
                     <div className='flex mt-2'>
-                        <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem', marginTop: '0.5rem'}} className='bg-gray-dddddd'></div>
-                        <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
+                        <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem', marginTop: '0.4rem'}} className='bg-gray-dddddd'></div>
+                        <p style={{fontSize: '2.25rem'}} className="-mt-1.5 text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
                     </div>
                     <div 
-                        style={{backgroundColor:"#02569c", fontSize: '2.4375rem', marginRight: '1.875rem', padding: '0.35rem 1.8rem', paddingBottom: '0', width: 'fit-content'}} 
+                        style={{backgroundColor:"#02569c", fontSize: '2.4375rem', marginRight: '1.875rem', padding: '0.35rem 1.8rem', paddingBottom: '0', width: 'fit-content', height: '4.125rem'}} 
                         className="absolute right-0 rounded-full flex items-center justify-center font-spoqaMedium tracking-tight text-white"
                     >
                         답변대기
@@ -77,13 +77,13 @@ const ContactView = () => {
                 </div>
             </div>
 
-            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '14rem'}} className="flex items-start justify-between">
-                <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75">
+            <div style={{margin: '1.875rem', marginTop: '3.75rem', marginBottom: '19.625rem'}} className="flex items-start justify-between">
+                <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75">
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-white">이전</span>
                     </div>
@@ -91,14 +91,14 @@ const ContactView = () => {
 
                 <button 
                     style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
-                    className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
+                    className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                     onClick={() => history.push('/cscenter/all/contact/all')}
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-white">목록보기</span>
                     </div>
@@ -106,13 +106,13 @@ const ContactView = () => {
 
                 <button 
                     style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} 
-                    className="flex items-center justify-center w-1/3 rounded-lg bg-gray-r171a1d hover:opacity-75"
+                    className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                 >
                     <div 
                         style={{
                             background: "linear-gradient(to bottom, #585b5e, #303337)",
                         }}
-                        className="flex items-center justify-center h-full w-full bg-black rounded-lg border border-gray-r737579 cursor-pointer"
+                        className="flex items-center justify-center h-full w-full bg-black rounded-2xl border border-gray-r737579 cursor-pointer"
                     >
                         <span className="font-spoqaMedium tracking-tight text-white">다음</span>
                     </div>
