@@ -107,9 +107,9 @@ const GameResults = ({isAuthenticated}) => {
 
                 <Route path="/mypage/gameresults/all">
                     <>
-                    <div style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div id='scroll-wrapper1' style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
-                        <HorizontalSubMenu isSameWidth itemsArray={tabsSubArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                            <HorizontalSubMenu isSameWidth itemsArray={tabsSubArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                         </div>
                     </div>
 

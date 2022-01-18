@@ -115,7 +115,6 @@ const BetHistory = ({isAuthenticated}) => {
         new Array(3).fill(false)
     );
 
-    console.log(selectedTab)
  
     return (
         <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">
@@ -151,9 +150,9 @@ const BetHistory = ({isAuthenticated}) => {
                 
                 <div className="w-full flex relative top-0">
                     <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
-                    <div style={{padding: '1.875rem', paddingRight: '0'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div id='scroll-wrapper' style={{padding: '1.875rem', paddingRight: '0'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
-                        <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                            <HorizontalMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                         </div>
                     </div>
                     <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>

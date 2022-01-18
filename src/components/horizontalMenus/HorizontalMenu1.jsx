@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useHistory } from 'react-router';
+import horizontalsScroll from '../../utils/horizontalsScroll';
 
 const HorizontalMenu1 = ({
     itemsArray, 
@@ -10,6 +11,10 @@ const HorizontalMenu1 = ({
 
     const history = useHistory();
     let pathname = window.location.pathname
+
+    useEffect(() => {
+        horizontalsScroll(itemsArray, 't', 'scroll-wrapper')
+    }, [itemsArray])
    
 
     function TabsList({ items }) {
@@ -31,6 +36,7 @@ const HorizontalMenu1 = ({
 
            return (
                 <button 
+                    id={`t${index}`}
                     key={item.id} 
                     style={{
                         background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
@@ -46,6 +52,7 @@ const HorizontalMenu1 = ({
                         : "bg-white"
                     } overflow-hidden flex items-end w-1/2`} 
                     onClick={() => {
+                        horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
                         history.push(item.path)
                         setSelectedTab(item.id)
                         if (setSelectedSubTab !== null) {
