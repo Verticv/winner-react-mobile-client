@@ -7,6 +7,7 @@ import Minigame from '../../images/subNavbar/5_1.png'
 import AugmentedGame from '../../images/subNavbar/6_1.png'
 import Fishing from '../../images/subNavbar/7_1.png'
 import Lottery from '../../images/subNavbar/8_1.png'
+import horizontalsScroll from '../../utils/horizontalsScroll';
 
 import CardDefualt from '../../images/subNavbar/1.png'
 import SlotDefault from '../../images/subNavbar/2.png'
@@ -45,6 +46,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
     function TabsList({ items }) {
         return items.map((item, index) => (
             <button 
+                id={`t${index}`}
                 key={item.id}
                 style={{height: '13.4375rem'}}
                 className={`
@@ -54,6 +56,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 } 
                 flex flex-col justify-start flex-shrink-0 items-center w-64 rounded-2xl z-20 transition ease-in-out tracking-tight relative`} 
                 onClick={() => {
+                    horizontalsScroll(items, 't', 'scroll-wrapper', index)
                     if (item.text === 'e-스포츠') {
                         window.location.href = 'http://222.239.127.198:7458/sub_recent.html';
                     } else {
