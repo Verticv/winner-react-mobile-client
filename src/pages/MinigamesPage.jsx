@@ -88,20 +88,20 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
                     <div className="flex w-full">
                         <div 
-                            style={{backgroundColor:"#e8e8e8", height: `${iFrameHeight}px`}}
+                            style={{backgroundColor:"#e8e8e8", height: "60rem"}}
                             className="rounded-xl  flex justify-center overflow-hidden border border-gray-dddddd"
                         >
                             <Route path="/minigame/powerball">
-                                <iframe src="https://ntry.com/scores/powerball/live.php" width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1)"}} title="powerball"></iframe>
+                                <iframe src="https://ntry.com/scores/powerball/live.php" width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
                             </Route>
                             <Route path="/minigame/powerladder">
-                                <iframe src="https://ntry.com/scores/power_ladder/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1)"}} title="powerball"></iframe>
+                                <iframe src="https://ntry.com/scores/power_ladder/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
                             </Route>
                             <Route path="/minigame/speedkino">
-                                <iframe src="https://ntry.com/scores/speedkeno/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1)"}} title="powerball"></iframe>
+                                <iframe src="https://ntry.com/scores/speedkeno/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
                             </Route>
                             <Route path="/minigame/kinoladder">
-                                <iframe src="https://ntry.com/scores/keno_ladder/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1)"}} title="kinoladder"></iframe>                            
+                                <iframe src="https://ntry.com/scores/keno_ladder/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="kinoladder"></iframe>                            
                             </Route>
                         </div>
                         {/* <MinigamesRightPanel selectedGame={selectedGame} selectedOption={selectedOption}/> */}
