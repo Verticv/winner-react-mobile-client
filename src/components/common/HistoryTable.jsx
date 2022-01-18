@@ -29,7 +29,7 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
         }; 
 
         return cards.map((card, index) => (
-            <div style={{height: cardHeight, width: `${!hasButton ? '73.875rem' : ''}` , paddingRight: '1.875rem', margin: '1.875rem', marginTop: `${index ? '0': '1.875rem'}`, padding: '2.125rem', paddingTop: '2.25rem',background: `${containerBackground && index % 2 ? containerBackground : ''}`}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
+            <div style={{height: cardHeight, width: `${!hasButton ? '73.875rem' : ''}` , paddingRight: '1.875rem', margin: '1.875rem', marginTop: `${index ? '0': '1.875rem'}`, padding: '2.125rem', paddingLeft: '2.8125rem', paddingTop: '2.25rem',background: `${containerBackground && index % 2 ? containerBackground : ''}`}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
                 <div style={{marginTop: '-0.5rem'}} className="flex flex-wrap items-center w-full h-full">
                     {hasLeftInput && (
                         <div style={{width: '5.8125rem'}} className="relative text-left">
@@ -43,7 +43,7 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
                             </label>
                         </div>
                     )}
-                    <div style={{width: wideDetailButton ? '' : '52.3125rem'}}>
+                    <div style={{width: wideDetailButton ? '' : '52rem'}}>
                         {card.map((row, index) => {
                             let firstColumnColor = '#7b7b7b';
                             let secondColumnColor = '#7b7b7b';

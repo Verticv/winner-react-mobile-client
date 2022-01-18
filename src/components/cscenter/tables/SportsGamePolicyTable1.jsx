@@ -10,7 +10,11 @@ const SportsGamePolicyTable1 = ({array}) => {
         ruleText2 = null
     }) => (
         <tr style={{borderBottomWidth: "0.1875rem"}} className={`bg-gray-fefefe font-spoqa tracking-tight text-gray-r585858  w-full border-b border-gray-dddddd`}>
-            <td style={{padding: '0.875rem 0', width: "14.8125rem", paddingLeft: '2.5rem', paddingRight: '1.5rem', color: typeColor}} className="font-spoqaMedium text-center">{type}</td>
+            <td style={{padding: '0.875rem 0', width: "14.8125rem", paddingLeft: '0rem', paddingRight: '0rem', color: typeColor}} className="font-spoqaMedium text-center">
+                {type.split('\n').map((item, i) => 
+                    <p style={{marginRight: '-1.5rem'}} key={i}>{item}</p>
+                )}
+            </td>
             <td style={{padding: '0.875rem 0', width: "14.1875rem", color: overtime === null ? "#FF0000" : overtime === true ? "#dbae00" : "#585858"}} className="font-spoqaMedium text-center">{overtime === null ? "연장포함" : overtime === true ? "연장제외" : "연장없음"}</td>
             <td style={{padding: '0.875rem 0', WebkitTextStroke:"0.2px"}} className="">
                 <p>{ruleText}</p>

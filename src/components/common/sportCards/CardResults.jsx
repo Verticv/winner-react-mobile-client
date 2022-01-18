@@ -33,17 +33,17 @@ const CardResults = ({
               className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
           >
               <div
-              // style={{padding: '1px'}}
+              style={{paddingLeft: '0.875rem'}}
               className={`${
                   bet === "left" 
                   ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
-                  : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545"} 
-                  flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer pl-4 pr-3.5`
+                  : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"} 
+                  flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer pr-3.5`
               }>
-                  <span style={{fontSize: '2.625rem'}} className="truncate text-left font-spoqaMedium tracking-tight text-14px">{team1}</span>
+                  <span style={{fontSize: '2.625rem'}} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{team1}</span>
                   <div className="flex items-center">
                       {hasUp && <img style={{marginRight: '0.4375rem'}} className="object-contain w-8 h-7" src={UpIcon} alt="" /> }
-                      <span  style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px">{stat1}</span>
+                      <span  style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px mt-1">{stat1}</span>
                   </div>
               </div>
           </button>
@@ -57,11 +57,13 @@ const CardResults = ({
               }} 
               className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
           >
-              <div className={`${
+              <div
+                  style={{paddingLeft: '0.875rem'}} 
+                  className={`${
                   bet === "middle" 
                   ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
                   : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"}
-                  pt-px flex items-center justify-center h-full w-full rounded-lg border border-white cursor-pointer pl-4 pr-3.5`}
+                  pt-px flex items-center justify-center h-full w-full rounded-lg border border-white cursor-pointer pr-3.5`}
               >
                   <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px">{stat2}</span>
               </div>
@@ -78,6 +80,7 @@ const CardResults = ({
               style={{
                   textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
                   paddingRight: team2?.length > 8 ? '0' : '',
+                  paddingLeft: '0.875rem'
                   // paddingRight: '1.125rem',
                   // backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
               }} 
@@ -85,7 +88,7 @@ const CardResults = ({
                   bet === "right" 
                   ? "text-white border-red-ff7982 bg-gradient-to-b from-red-ff535f to-red-d7434f"
                   : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"} 
-                  pt-px flex items-center justify-between h-full w-full rounded-lg border border-white cursor-pointer pl-4 pr-3.5`}
+                  pt-px flex items-center justify-between h-full w-full rounded-lg border border-white cursor-pointer pr-3.5`}
               >
                   <div className="flex items-center">
                       <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight">{stat3}</span>
@@ -105,7 +108,7 @@ const CardResults = ({
               : result === "lose" 
               ? "text-gray-subNavbar" 
               : result === "cancel" 
-              ? "text-blue-r0056a6"
+              ? "text-blue-r0056a6 mt-3"
               : result === 'equality'
               ? 'text-green-r279140' :
               "text-gray-r454545"} 

@@ -15,7 +15,7 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
             </button>
             <div style={{width: '71rem'}} className="absolute flex justify-center">
                 <div className="flex items-center justify-center">
-                    <img style={{height: '17.75rem', width: '17.75rem', marginTop: '-7.75rem'}} src={LoginIcon} alt="login_icon"/>
+                    <img style={{height: '17.75rem', width: '17.75rem', marginTop: '-9rem'}} src={LoginIcon} alt="login_icon"/>
                 </div>
             </div>
             {/* BREAK */}
@@ -43,7 +43,7 @@ const ReauthenticatePopup = ({setPopupOpen, setSelectedTab}) => {
                         }}
                     >louie3</div>
                     <div className='h-1.5'>
-                        <div className={`${selectedInput !== 1 ? "bg-blue-r1ca7ec h-1.5" : "bg-gray-bebebe h-0.75"} w-full`} />
+                        <div className={`${selectedInput !== 1 ? "bg-gray-bebebe h-1.5" : "bg-gray-bebebe h-0.75"} w-full`} />
                     </div>
                 </div>
                 <div style={{width: '54rem', marginBottom: '3.6875rem'}}>

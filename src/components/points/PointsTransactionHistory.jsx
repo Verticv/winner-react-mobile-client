@@ -187,7 +187,7 @@ const PointsTransactionHistory = ({SubMenuList}) => {
             </div>
 
 
-            <div>
+            <div style={{marginTop: '1.875rem'}}>
                 <Pagination page={page} setPage={setPage}/>   
             </div>
 

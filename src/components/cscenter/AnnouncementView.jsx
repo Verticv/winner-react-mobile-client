@@ -40,10 +40,10 @@ const AnnouncementView = () => {
                 </div>
 
                 <div style={{height: '7.3125rem', padding: '1.4375rem 1.875rem', borderBottomWidth: '0.1875rem' }} className="relative bg-gray-fafafa border-b border-gray-dddddd flex items-center">
-                    <img style={{width: '12.0625rem'}} className="h-12 object-contain" src={WinnerLogo} alt="" />
+                    <img style={{width: '14rem', height: '3.4375rem'}} className="h-12 object-contain" src={WinnerLogo} alt="" />
                     <div className='flex mt-5'>
                         <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem', marginTop: '0.5rem'}} className='bg-gray-dddddd'></div>
-                        <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28</p>
+                        <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight -mt-1 font-spoqa">2021.06.28</p>
                     </div>
                 </div>
 

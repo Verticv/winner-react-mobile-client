@@ -56,17 +56,17 @@ const PointsPage = ({isAuthenticated, setAuthenticated}) => {
         <>
             <div style={{padding: '1.875rem', paddingBottom: '0.9375rem'}} className='w-full flex'>
                 <div style={{borderRadius:"1.625rem", padding: '2px', marginRight: '0.46875rem', height: '13.125rem'}} className="flex items-center justify-center w-1/2 bg-gradient-to-b from-blue-r01a0ea to-blue-r0779de">
-                    <div style={{borderRadius:"1.5rem"}} className="w-full h-full pt-9 bg-white flex items-center flex-col">
+                    <div style={{borderRadius:"1.5rem", paddingTop: '2.5625rem'}} className="w-full h-full bg-white flex items-center flex-col">
                         <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">잔여 포인트</div>
-                        <div style={{fontSize: '4.125rem', marginTop: '1.125rem'}} className="tracking-tight flex items-center">
+                        <div style={{fontSize: '4.125rem', marginTop: '0.5625rem'}} className="tracking-tight flex items-center">
                             <span className="font-spoqaBold text-blue-r0056a6">278</span>
                             <span className="font-spoqa text-gray-r616161">P</span>
                         </div>
                     </div>
                 </div>
-                <div style={{borderRadius:"1.625rem", marginLeft: '0.46875rem', height: '13.125rem'}} className="items-center pt-9 flex-col flex w-1/2 bg-white border-2 border-gray-dddddd">
+                <div style={{borderRadius:"1.625rem", marginLeft: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem'}} className="items-center flex-col flex w-1/2 bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">당월 적립포인트</div>
-                    <div style={{fontSize: '4.125rem', marginTop: '1.125rem'}} className="tracking-tight flex items-center text-gray-r616161">
+                    <div style={{fontSize: '4.125rem', marginTop: '0.5625rem'}} className="tracking-tight flex items-center text-gray-r616161">
                         <span className="font-spoqaBold">50</span>
                         <span className="font-spoqa">P</span>
                     </div>
@@ -75,23 +75,23 @@ const PointsPage = ({isAuthenticated, setAuthenticated}) => {
 
             
             <div style={{padding: '1.875rem', paddingTop: '0'}} className='w-full flex'>
-                <div style={{borderRadius:"1.625rem", marginRight: '0.46875rem', height: '13.125rem'}} className="items-center pt-9 flex-col flex w-1/3 bg-white border-2 border-gray-dddddd">
+                <div style={{borderRadius:"1.625rem", marginRight: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem'}} className="items-center flex-col flex w-1/3 bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">전월 적립포인트</div>
-                    <div style={{fontSize: '4.125rem', marginTop: '1.125rem'}} className="tracking-tight flex items-center text-gray-r616161">
+                    <div style={{fontSize: '4.125rem', marginTop: '0.5625rem'}} className="tracking-tight flex items-center text-gray-r616161">
                         <span className="font-spoqaBold">228</span>
                         <span className="font-spoqa">P</span>
                     </div>
                 </div>
-                <div style={{borderRadius:"1.625rem", marginRight: '0.46875rem',  marginLeft: '0.46875rem', height: '13.125rem'}} className="items-center pt-9 flex-col flex w-1/3 bg-white border-2 border-gray-dddddd">
+                <div style={{borderRadius:"1.625rem", marginRight: '0.46875rem',  marginLeft: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem'}} className="items-center flex-col flex w-1/3 bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">총 누적포인트</div>
-                    <div style={{fontSize: '4.125rem', marginTop: '1.125rem'}} className="tracking-tight flex items-center text-gray-r616161">
+                    <div style={{fontSize: '4.125rem', marginTop: '0.5625rem'}} className="tracking-tight flex items-center text-gray-r616161">
                         <span className="font-spoqaBold">278</span>
                         <span className="font-spoqa">P</span>
                     </div>
                 </div>
-                <div style={{borderRadius:"1.625rem", marginLeft: '0.46875rem', height: '13.125rem'}} className="items-center pt-9 flex-col flex w-1/3 bg-white border-2 border-gray-dddddd">
+                <div style={{borderRadius:"1.625rem", marginLeft: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem'}} className="items-center flex-col flex w-1/3 bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">총 사용포인트</div>
-                    <div style={{fontSize: '4.125rem', marginTop: '1.125rem'}} className="tracking-tight flex items-center text-gray-r616161">
+                    <div style={{fontSize: '4.125rem', marginTop: '0.5625rem'}} className="tracking-tight flex items-center text-gray-r616161">
                         <span className="font-spoqaBold">0</span>
                         <span className="font-spoqa">P</span>
                     </div>
@@ -101,7 +101,7 @@ const PointsPage = ({isAuthenticated, setAuthenticated}) => {
     )
 
     return (
-        <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
+        <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center overflow-hidden overflow-hidden">
 
             <Route exact path="/mypage/points">
                 <AccountProfileComponent isAuthenticated={isAuthenticated} />
@@ -126,12 +126,12 @@ const PointsPage = ({isAuthenticated, setAuthenticated}) => {
                     <HomePageTopBanner pageTitle='포인트' /> 
                 </div>
     
-                <div style={{paddingBottom: '3.75rem'}} className="flex flex-col items-start limit:items-center w-full h-full">
+                <div className="flex flex-col items-start limit:items-center w-full h-full">
 
                     <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                         <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                             <div className=" flex flex-shrink-0 w-full">
-                            <HorizontalMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                            <HorizontalMenu1 withSmallMarginTop itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                             </div>
                         </div>
                     </div>

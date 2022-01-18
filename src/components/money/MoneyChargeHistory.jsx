@@ -184,7 +184,7 @@ const MoneyChargeHistory = () => {
             </div>
 
             <div className='w-full'>
-                <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+                <SelectAllButton buttonsNumber={3} count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
             <div style={{marginTop: '1.25rem'}}>

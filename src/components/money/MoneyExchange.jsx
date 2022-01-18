@@ -36,7 +36,7 @@ const MoneyExchange = () => {
                         환전금액 입력
                     </div>
                     <div 
-                        style={{fontSize: '2.625rem', marginRight: '7.875remrem'}}
+                        style={{fontSize: '2.625rem', marginRight: '7.875rem'}}
                         className="font-spoqaMedium tracking-tight text-gray-r7c7c7c flex items-center"
                     >
                         환전 신청을 완료하게 되면 보유머니에서 신청한 금액만큼 차감되며 고객님의 계좌번호로 입금됩니다.

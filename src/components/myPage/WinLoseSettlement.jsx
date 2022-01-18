@@ -162,14 +162,14 @@ const WinLoseSettlement = () => {
                     <img style={{width: '1.3125rem', height: '1.3125rem', marginRight: '1.3125rem'}} src={Diamond} alt="" />
                     <div className="flex items-center space-x-4px pt-2px">
                         <span className="text-white">진행중인 금액:</span>
-                        <span className="text-yellow-ffcc00">2,520,000</span>
+                        <span className="text-yellow-ffcc00 font-spoqaBold">2,520,000</span>
                     </div>
                 </div>
                 <div className='w-1/2 flex items-center justify-center'>
                     <img style={{width: '1.3125rem', height: '1.3125rem', marginRight: '1.3125rem'}} src={Diamond} alt="" />
                     <div className="flex items-center space-x-4px pt-2px">
                         <span className="text-white">진행중인 금액:</span>
-                        <span className="text-yellow-ffcc00">500,000</span>
+                        <span className="text-yellow-ffcc00 font-spoqaBold">500,000</span>
                     </div>
                 </div>
             </div>
@@ -193,7 +193,7 @@ const WinLoseSettlement = () => {
             </div>
 
             <div className='w-full'>
-                <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+                <SelectAllButton buttonsNumber={3} count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
             <div style={{marginTop: '1.4375rem'}} className="">

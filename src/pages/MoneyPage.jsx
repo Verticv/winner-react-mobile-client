@@ -64,7 +64,7 @@ const MoneyPage = ({isAuthenticated, setAuthenticated}) => {
     console.log(selectedSubTab, selectedTab)
 
     return (
-        <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
+        <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center overflow-hidden">
 
             <Route exact path="/mypage/money">
                 <AccountProfileComponent isAuthenticated={isAuthenticated} />

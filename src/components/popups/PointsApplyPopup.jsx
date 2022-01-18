@@ -37,7 +37,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
 
                 <div style={{padding: "4.75rem 0"}} className="w-full bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl flex flex-wrap flex-col items-center justify-center">
                     <div className='w-full text-center'>
-                        <span style={{fontSize: '2.8125rem'}} className="tracking-tight font-spoqaMedium text-gray-r454545">전환포인트 입력</span>
+                        <span style={{fontSize: '2.8125rem'}} className="tracking-tight font-spoqaMedium text-gray-r454545">전환 포인트 입력</span>
                     </div>
                     <div className='w-full text-center mt-15px'>
                         <input 

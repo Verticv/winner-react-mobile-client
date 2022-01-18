@@ -15,9 +15,9 @@ const CardHeader = ({flag = 'us', name = 'MLS', date = '2021-06-29 15:45'}) => {
   return (
     <div style={{height: '7.5rem'}} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-8">
       <div className="flex items-center">
-          <img style={{width: '4.25rem', height: '4.25rem'}} src={FootballIcon} alt="" />
-          <img style={{width: '5.625', height: '3.3125rem'}} className="ml-4" src={headerFlag} alt="" />
-          <span style={{fontSize: '2.625rem'}} className="ml-4 font-spoqaMedium text-20px tracking-tight text-white pt-3px">{name}</span>
+          <img style={{width: '3.9375rem', height: '3.9375rem'}} src={FootballIcon} alt="" />
+          <img style={{width: '5.625', height: '3.3125rem', marginLeft: '1.0625rem'}} src={headerFlag} alt="" />
+          <span style={{fontSize: '2.625rem', paddingTop: '0.1875rem', marginLeft: '1.125rem'}} className="ml-4 font-spoqaMedium text-20px tracking-tight text-white">{name}</span>
       </div>
       <div className="flex items-center">
           <img style={{width: '2.875rem', height: '2.875rem'}} src={ClockIcon} alt="" />

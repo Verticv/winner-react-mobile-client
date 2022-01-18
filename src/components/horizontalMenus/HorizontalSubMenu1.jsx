@@ -18,10 +18,10 @@ const HorizontalSubMenu1 = ({
             <button 
             className={`${
                 pathname === item.path
-                ? "text-black" 
+                ? "text-gray-r454545" 
                 : "text-gray-b7b7b7"
             } rounded-full min-w-fit bg-white text-black flex items-center`}
-            style={{height: '6.375rem', minWidth: 'fit-content' , fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`}} 
+            style={{height: '6.375rem', minWidth: 'fit-content' , fontSize: '2.625rem', marginRight: `${!index ? '0.9375rem' : '' }`}} 
             key={item.id} 
             onClick={() => {
                 history.push(item.path)
@@ -38,9 +38,9 @@ const HorizontalSubMenu1 = ({
                         <span
                             className={`${
                                 pathname === item.path
-                                ? "text-black" 
+                                ? "text-gray-r454545" 
                                 : "text-gray-b7b7b7 hover:text-black"
-                            }`}
+                            } font-spoqa `}
                         >{item.text}</span>
                     </div>
                 </div>
