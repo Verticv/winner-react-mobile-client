@@ -30,7 +30,6 @@ const ContactTable = ({
                 <div style={{width: '7.375rem', marginLeft: '1.875rem'}} className="flex justify-start items-center cursor-pointer" onClick={() => history.push(item.path)}>
                     <img style={{width: '5.625rem', height: '5.625rem'}} src={item.isRead === true ? MailOpenedIcon : MailIcon} alt=""/>
                 </div>
-                {console.log(`item`, item)}
                  <div 
                     style={{
                         maxWidth: '56.25rem',

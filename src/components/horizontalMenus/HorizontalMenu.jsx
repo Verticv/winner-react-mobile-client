@@ -1,19 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router';
+import { useLocation } from "react-router-dom";
+import horizontalsScroll from '../../utils/horizontalsScroll';
 
 const HorizontalMenu = ({
     itemsArray, 
     setSelectedTab,
-    setSelectedSubTab = null
+    setSelectedSubTab = null,
+    withoutFirst = true
 }) => {
 
     const history = useHistory();
-    const pathname = window.location.pathname
     const [isHover, setHover] = useState(null)
+    const { pathname } = useLocation();
+        
+    useEffect(() => {
+        if (withoutFirst) {
+            horizontalsScroll(itemsArray, 't', 'scroll-wrapper')
+        }
+    }, [itemsArray, withoutFirst])
 
     function TabsList({ items }) {
         return items.map((item, index) => (
             <button 
+                id={`t${index}`}
                 key={item.id} 
                 style={{
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
@@ -30,6 +40,7 @@ const HorizontalMenu = ({
                     : "bg-white"
                 } overflow-hidden flex items-end`} 
                 onClick={() => {
+                    horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
                     history.push(item.path)
                     setSelectedTab(item.id)
                     if (setSelectedSubTab !== null) {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import horizontalsScroll from '../../../utils/horizontalsScroll';
 
 const SubHorizontalMenu = ({
     itemsArray, 
@@ -28,6 +29,7 @@ const SubHorizontalMenu = ({
 
             return (
                 <button 
+                    id={`t-sub${index}`}
                     style={{
                         borderRadius:"1.625rem",
                         width: '20.81rem',
@@ -40,7 +42,11 @@ const SubHorizontalMenu = ({
                         ? "bg-d0e8ff" 
                         : "bg-white"
                     } overflow-hidden flex items-end`} 
-                    onClick={() => setState(item.id)}
+                    onClick={() =>  {
+                            setState(item.id)
+                            horizontalsScroll(itemsArray, 't-sub', 'scroll-wrapper1', index)
+                        }
+                    }
                     onMouseOver={() => setHover(item.id)}
                     onMouseLeave={() => setHover(null)}
                 >

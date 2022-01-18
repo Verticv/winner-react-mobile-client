@@ -41,10 +41,6 @@ const LeftMenu = ({
         if (text === "총판페이지") {
             window.open('/distributor-page');
         } else {
-            console.log(`ddddddd`, {
-                pathname: path,
-                state: { fromPage: window.location.pathname }
-              })
             history.push({
                 pathname: path,
                 state: { fromPage: window.location.pathname }
