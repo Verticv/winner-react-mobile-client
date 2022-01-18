@@ -11,7 +11,7 @@ const ScrollButton = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 75 && document.documentElement.scrollTop + window.pageYOffset < 1290) {
+            if (window.pageYOffset > 75) {
                 setShowUpButton(true);
             } else {
                 setShowUpButton(false);
@@ -21,7 +21,7 @@ const ScrollButton = () => {
     })
 
     return showUpButton &&
-        <div onClick={scrollHandler} style={{zIndex: '200', right: '1rem', top: '118rem'}} className='fixed cursor-pointer'>
+        <div onClick={scrollHandler} style={{zIndex: '200', right: '1rem', top: '75rem'}} className='fixed cursor-pointer'>
             <div className=''>
                 <img className='object-contain' style={{width: '8.375rem', height: '8.375rem'}} src={upButton} alt='up-button' />
             </div>

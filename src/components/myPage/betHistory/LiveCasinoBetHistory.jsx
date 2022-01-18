@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar'
 import SubHorizontalMenu from './SubHorizontalMenu'
 import HistoryTable from 'components/common/HistoryTable'
-import SelectAllButton from '../../common/SelectAllButton'
+import ScrollButton from 'components/common/ScrollButton'
+import SelectAllButton from 'components/common/SelectAllButton'
 import Icon1 from '../../../images/newImages/mypage/live-casino/ico-1.png'
 import Icon2 from '../../../images/newImages/mypage/live-casino/ico-2.png'
 import Icon3 from '../../../images/newImages/mypage/live-casino/ico-3.png'
@@ -130,6 +131,8 @@ const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
             )}
             
             <DateSearchBar isLeagueSearch={false} />
+
+            <ScrollButton />
 
             <div className="h-full">
                 <HistoryTable

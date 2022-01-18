@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import DateSearchBar from '../myPage/DateSearchBar'
 import HistoryTable from 'components/common/HistoryTable'
 import SelectAllButton from '../common/SelectAllButton'
+import ScrollButton from 'components/common/ScrollButton'
 
 const tableData = [
     [          
@@ -144,7 +145,7 @@ const MoneyExchangeHistory = () => {
         <div className="flex flex-col items-center">         
 
             <DateSearchBar isLeagueSearch={false} withBlackButton />
-
+            <ScrollButton />
             <div className="h-full">
                 <HistoryTable 
                     containerBackground= '#f7f9fc'

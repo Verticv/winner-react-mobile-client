@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Route, useHistory } from 'react-router'
 import Pagination from 'components/myPage/Pagination'
 import CouponGiftPopup from 'components/popups/CouponGiftPopup'
+import ScrollButton from 'components/common/ScrollButton'
 import Navbar from 'components/mainPage/Navbar'
 import BottomNavbar from '../bottomNavbar/BottomNavbar'
 import HorizontalMenu1 from 'components/horizontalMenus/HorizontalMenu1'
@@ -893,6 +894,7 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
                     <HomePageTopBanner pageTitle='쿠폰관리' />
                 </div>
+                <ScrollButton />
 
                 
 

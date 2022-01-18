@@ -2,6 +2,7 @@ import Pagination from 'components/myPage/Pagination'
 import React, { useState } from 'react'
 import DateSearchBar from '../myPage/DateSearchBar'
 import HistoryTable from 'components/common/HistoryTable'
+import ScrollButton from 'components/common/ScrollButton'
 
 
 const tableData = [
@@ -185,7 +186,7 @@ const PointsAccumulateHistory = ({SubMenuList}) => {
             {SubMenuList}
 
             <DateSearchBar isLeagueSearch={false} withBlackButton />
-
+            <ScrollButton />
             <div className="h-full">
                 <HistoryTable
                     containerBackground= '#f7f9fc'
