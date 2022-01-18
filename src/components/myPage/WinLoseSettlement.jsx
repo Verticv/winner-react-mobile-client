@@ -4,6 +4,7 @@ import Pagination from 'components/myPage/Pagination'
 import DateSearchBar from './DateSearchBar'
 import HistoryTable from 'components/common/HistoryTable'
 import SelectAllButton from '../common/SelectAllButton'
+import ScrollButton from 'components/common/ScrollButton'
 
 const tableData = [
     [          
@@ -156,7 +157,7 @@ const WinLoseSettlement = () => {
     return (
         <div style={{paddingTop: '1.875rem'}} className="flex flex-col items-center ffffffffffff">         
             <DateSearchBar isLeagueSearch={false} withBlackButton />
-            
+            <ScrollButton />
             <div style={{width: '73.875rem', height: '7.3125rem', marginTop: '1.875rem', fontSize: '2.625rem', borderRadius: '3.5rem', borderWidth: '0.1875rem'}} className="flex w-full border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                 <div className='w-1/2 flex items-center justify-center'>
                     <img style={{width: '1.3125rem', height: '1.3125rem', marginRight: '1.3125rem'}} src={Diamond} alt="" />
