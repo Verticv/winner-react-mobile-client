@@ -15,7 +15,7 @@ const AnnouncementTable = ({
             <div 
                 onClick={() => history.push('/cscenter/all/announcement/view')}
                 key={item.id} 
-                style={{height: '11.625rem', borderBottomWidth: '0.1875rem'}}
+                style={{height: '11.8125rem', borderBottomWidth: '0.1875rem'}}
                 className={`${
                     item.isRead === false
                     ? "bg-gray-e8eff6" :
@@ -27,9 +27,9 @@ const AnnouncementTable = ({
                  <div 
                     style={{
                         maxWidth: '56.25rem',
-                        padding: '1.75rem 2.2rem',
+                        padding: '2.15625rem 2.2rem',
                         paddingLeft: '0',
-                        paddingBottom: "1.5rem",
+                        paddingBottom: "1.09375rem",
                         marginLeft: '2.5625rem'
                     }}
                     className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full" >     

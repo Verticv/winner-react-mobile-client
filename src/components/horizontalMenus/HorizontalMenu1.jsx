@@ -25,6 +25,10 @@ const HorizontalMenu1 = ({
                 }
             }
 
+            if (window.location.pathname.includes('/cscenter/all/policy/')  && item.path.includes('/cscenter/all/policy/')) {
+                isSameLink = true
+            }
+
            return (
                 <button 
                     key={item.id} 
@@ -81,7 +85,7 @@ const HorizontalMenu1 = ({
                                     isSameLink
                                     ? "text-white"
                                     : "text-gray-r616161" 
-                                } text-4xl font-spoqaMedium tracking-tight mt-2`}
+                                } text-4xl font-spoqaMedium tracking-tight`}
                             >{item.text}</span>
                         </div>
                     </div>

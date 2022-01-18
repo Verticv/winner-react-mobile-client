@@ -23,7 +23,7 @@ const PointsTransaction = () => {
                     </div>
                 </div>
 
-                <div style={{borderRadius:"10px"}} className="pt-21px items-center flex-col flex w-204px h-100px bg-white border-2 border-gray-dddddd">
+                <div style={{borderRadius:"10px"}} className="pt-21px items-center flex-col flex w-204px h-100px bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r616161 font-spoqaMedium text-14px tracking-tight h-13px flex items-center">당월 적립포인트</div>
                     <div className="text-30px tracking-tight flex items-center h-23px mt-17px text-gray-r616161">
                         <span className="font-spoqaBold">50</span>
@@ -31,7 +31,7 @@ const PointsTransaction = () => {
                     </div>
                 </div>
 
-                <div style={{borderRadius:"10px"}} className="pt-21px items-center flex-col flex w-204px h-100px bg-white border-2 border-gray-dddddd">
+                <div style={{borderRadius:"10px"}} className="pt-21px items-center flex-col flex w-204px h-100px bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r616161 font-spoqaMedium text-14px tracking-tight h-13px flex items-center">전월 적립포인트</div>
                     <div className="text-30px tracking-tight flex items-center h-23px mt-17px text-gray-r616161">
                         <span className="font-spoqaBold">228</span>
@@ -39,7 +39,7 @@ const PointsTransaction = () => {
                     </div>
                 </div>
 
-                <div style={{borderRadius:"10px"}} className="pt-21px items-center flex-col flex w-204px h-100px bg-white border-2 border-gray-dddddd">
+                <div style={{borderRadius:"10px"}} className="pt-21px items-center flex-col flex w-204px h-100px bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r616161 font-spoqaMedium text-14px tracking-tight h-13px flex items-center">총 누적포인트</div>
                     <div className="text-30px tracking-tight flex items-center h-23px mt-17px text-gray-r616161">
                         <span className="font-spoqaBold">278</span>
@@ -47,7 +47,7 @@ const PointsTransaction = () => {
                     </div>
                 </div>
 
-                <div style={{borderRadius:"10px"}} className="pt-21px items-center flex-col flex w-204px h-100px bg-white border-2 border-gray-dddddd">
+                <div style={{borderRadius:"10px"}} className="pt-21px items-center flex-col flex w-204px h-100px bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r616161 font-spoqaMedium text-14px tracking-tight h-13px flex items-center">총 사용포인트</div>
                     <div className="text-30px tracking-tight flex items-center h-23px mt-17px text-gray-r616161">
                         <span className="font-spoqaBold">0</span>

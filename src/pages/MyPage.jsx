@@ -170,7 +170,7 @@ const MyPage = ({setAuthenticated, isAuthenticated }) => {
   }
 
   return (
-    <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
+    <div className="relative flex flex-col justify-center overflow-hidden">
       <div className="flex flex-col items-start limit:items-center w-full h-full">
         <Route exact path="/mypage">
             <MyInfo />

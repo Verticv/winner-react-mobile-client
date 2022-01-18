@@ -90,8 +90,8 @@ const CardContent = ({
                         </div>
                     </button>
                     <button 
-                        style={{padding: '1px', height: '7.3125rem', backgroundColor: '#7e3636'}}
-                        className="flex flex-1 items-center justify-center m-0 rounded-2xl bg-brown-7e3636 hover:opacity-75"
+                        style={{padding: '1px', height: '7.3125rem'}}
+                        className="flex flex-1 items-center justify-center m-0 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
                     >
                         <div 
                             className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 to-red-cf254d cursor-pointer"

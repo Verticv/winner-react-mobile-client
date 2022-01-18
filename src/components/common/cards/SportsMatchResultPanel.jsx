@@ -15,7 +15,7 @@ const SportsMatchResultPanel = ({
                 <TableHeader />
                 <div style={{padding: '0 1rem' }} className="w-full">
                     <div className="w-full rounded-lg overflow-hidden">
-                        <div style={{marginBottom: '1.875rem'}} className='rounded-lg shadow-subNavbar w-full'>
+                        <div style={{marginBottom: '1.875rem'}} className='rounded-lg shadow-plain10 w-full'>
                             <CardHeader flag = 'us' name = 'MLS' date = '2021-06-29 15:45' />
                             <CardResults 
                                 bet = "middle"
@@ -31,7 +31,7 @@ const SportsMatchResultPanel = ({
                                 hasDown={false}
                             />
                         </div>
-                        <div style={{marginBottom: '1.875rem'}} className='rounded-lg shadow-subNavbar w-full'>
+                        <div style={{marginBottom: '1.875rem'}} className='rounded-lg shadow-plain10 w-full'>
                             <CardHeader flag = 'uk' name = 'EPL' date = '2021-06-29 15:45' />
                             <CardResults 
                                 bet="left" 
@@ -64,7 +64,7 @@ const SportsMatchResultPanel = ({
                             />
                         </div>
 
-                        <div style={{marginBottom: '1.875rem'}} className='rounded-lg shadow-subNavbar w-full'>
+                        <div style={{marginBottom: '1.875rem'}} className='rounded-lg shadow-plain10 w-full'>
                             <CardHeader flag = 'uk' name = 'EPL' date = '2021-06-29 15:45' />
                             <CardResults 
                                 bet = "left"
@@ -81,7 +81,7 @@ const SportsMatchResultPanel = ({
                             />
                         </div>
 
-                        <div className='rounded-lg shadow-subNavbar w-full'>
+                        <div className='rounded-lg shadow-plain10 w-full'>
                             <CardHeader flag = 'spain' name = '라리가' date = '2021-06-29 15:45' />
                             <CardResults 
                                 bet = "left"

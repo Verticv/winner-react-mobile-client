@@ -10,7 +10,7 @@ const PointsApply = () => {
     var nf = new Intl.NumberFormat();
 
     const detailButton =  (
-        <button style={{width: "36.4375rem", height: '7.3125rem', padding: '1px',  marginTop: '3.75rem', marginBottom: '14.0625rem'}} className="flex items-center justify-center h-52px rounded-2xl bg-blue-r0070d9 hover:opacity-75">
+        <button style={{width: "36.4375rem", height: '7.3125rem', padding: '1px',  marginTop: '3.75rem', marginBottom: '17.75rem'}} className="flex items-center justify-center h-52px rounded-2xl bg-blue-r0070d9 hover:opacity-75">
             <div className="flex items-center justify-center rounded-2xl w-full h-full border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
                 <span style={{fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-16px text-white">신청하기</span>
             </div>

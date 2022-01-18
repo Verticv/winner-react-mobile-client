@@ -39,8 +39,8 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
         { text: "문의하기", icon: Icon1, id: 0, path: "/cscenter/all/contact/all", hasSameParent: true },
         { text: "공지사항", icon: Icon2, id: 1, path: "/cscenter/all/announcement" },
         { text: "자주묻는질문", icon: Icon3, id: 2, path: "/cscenter/all/faq", hasSameParent: true},
-        { text: "계좌문의", icon: Icon4, id: 3, path: "/cscenter/all/inquiry"},
-        { text: "베팅규정", icon: Icon5, id: 4, path: "/cscenter/all/policy/sportsgame/soccer"},
+        { text: "계좌문의", icon: Icon4, id: 3, path: "#"},
+        { text: "베팅규정", icon: Icon5, id: 4, path: "/cscenter/all/policy/sportsgame/soccer", hasSameParent: true},
     ];
 
     const LeftMenuSubArray = [
@@ -111,7 +111,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
     const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
     console.log(selectedSubTab, selectedTab)
     return (
-        <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center limit:overflow-x-hidden">
+        <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center overflow-hidden">
 
             <Route exact path="/cscenter">
                 <AccountProfileComponent isAuthenticated={isAuthenticated} />
@@ -143,7 +143,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full">
-                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                                         </div>
                                     </div>
                                 </div>
@@ -172,7 +172,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='공지사항' />
+                                    <HomePageTopBanner pageTitle='고객센터' />
                                 </div>
 
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
@@ -188,7 +188,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='고객센터' />
+                                    <HomePageTopBanner pageTitle='공지사항' />
                                 </div>
                                 <div style={{marginBottom: '19.625rem'}}>
                                     <AnnouncementView />
@@ -222,7 +222,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full">
-                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                                         </div>
                                     </div>
                                 </div>

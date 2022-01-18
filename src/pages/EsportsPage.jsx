@@ -21,7 +21,7 @@ const EsportsPage = ({isAuthenticated, setAuthenticated}) => {
     const [, setSelectedTab] = useState(0)
 
     return (
-        <div className="relative flex flex-col justify-center limit:overflow-x-hidden">
+        <div className="relative flex flex-col justify-center overflow-hidden">
 
             <div className="fixed w-full top-0 z-50 flex flex-col items-start limit1920:items-center">
                 <NoticeBanner />

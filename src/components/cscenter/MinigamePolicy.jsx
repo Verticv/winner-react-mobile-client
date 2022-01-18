@@ -79,7 +79,6 @@ const MinigamePolicy = () => {
     const historyTabsArray = [
         { text: "스포츠게임", icon: Icon1, id: 0, path: "/cscenter/all/policy/sportsgame/soccer" },
         { text: "미니게임", icon: Icon2, id: 1, path: "/cscenter/all/policy/minigame/powerball" },
-        { text: "가상게임", icon: Icon2, id: 1, path: "#" }
     ]
     
     return (

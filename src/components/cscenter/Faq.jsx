@@ -69,16 +69,16 @@ const Faq = () => {
                 }}
             >
                 <img style={{width: '5.5625rem', height: '5.0625rem', marginLeft: '2.375rem'}} className="object-contain" src={QIcon} alt="" />
-                <div className="w-full h-full flex-col flex flex-wrap justify-center items-start ml-8"> 
+                <div style={{marginLeft: '1.875rem'}} className="w-full h-full flex-col flex flex-wrap justify-center items-start"> 
                     <div 
-                        style={{backgroundColor:"#8494a4", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', paddingBottom: '0', width: 'fit-content', marginBottom: '0.7rem'}} 
+                        style={{backgroundColor:"#8494a4", fontSize: '2.4375rem', padding: '0.35rem 1.8rem', paddingBottom: '0.125rem', width: '13.5rem', marginBottom: '0.7rem'}} 
                         className="rounded-full flex items-center w-full justify-center text-white font-spoqaMedium tracking-tight"
                     > 
                         {type}
                     </div>
                     <p style={{fontSize: '2.625rem', lineHeight: '1.2'}} className="font-spoqaMedium w-full text-left tracking-tight text-gray-r585858 group-hover:text-black">{text}</p>
                 </div>
-                <img style={{width: '3.1875rem', marginRight: '4.5rem', marginLeft: '3.125rem'}} className={`${openedCell === cellId && "transform rotate-180"} h-8`} src={openedCell === cellId ? ArrowDown : ArrowDown} alt="" />
+                <img style={{width: '3.1875rem', marginRight: '4.1875rem', marginLeft: '3.125rem'}} className={`${openedCell === cellId && "transform rotate-180"} h-8 object-contain`} src={openedCell === cellId ? ArrowDown : ArrowDown} alt="" />
             </button>
             {openedCell === cellId && (
                 <div 
@@ -150,13 +150,14 @@ const Faq = () => {
 
     return (
         <div>
-            <div className="w-full relative top-0">
+            <div className="w-full flex relative top-0">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                 <div style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">
-                    <HorizontalSubMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                        <HorizontalSubMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                     </div>
                 </div>
+                <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '2.3rem'}} className="absolute h-full left-0 z-50"></div>
             </div>
 
             <div style={{margin: '1.875rem', marginBottom: '14rem'}} className="">

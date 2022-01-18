@@ -118,13 +118,14 @@ const Contact = () => {
 
     return (
         <div>
-                <div className="w-full relative top-0">
+                <div className="w-full flex relative top-0">
                     <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                     <div style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
                         <HorizontalSubMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                         </div>
                     </div>
+                    <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '2.3rem'}} className="absolute h-full left-0 z-50"></div>
                 </div>
 
                 <div style={{borderRadius:"1em", margin: '1.875rem', marginTop: '1.875rem'}} className="shadow-subNavbar overflow-hidden">
