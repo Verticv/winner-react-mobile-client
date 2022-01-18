@@ -83,7 +83,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
         })
     }, [])
     return (
-        <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">
+        <div style={{maxWidth: '1242px'}} className="w-full flex flex-col overflow-hidden">
 
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
