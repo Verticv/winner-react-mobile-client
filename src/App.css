@@ -12,6 +12,16 @@ body {
   margin: auto;
 }
 
+html,body{
+  height:100%;
+}
+
+#root {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 14.075rem;
+}
+
 .App {
   text-align: center;
   font-family: "spoqa_han_sans_neo";
