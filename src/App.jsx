@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
+import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 import {Helmet} from "react-helmet";
 import "./App.css";
 import { getCookie, setCookie } from './utils'
@@ -73,6 +74,7 @@ function App() {
               */}
                 <Route path="/mypage">
                     <MyPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+                    <BottomNavbar />
                 </Route>
                 <Route path="/live-casino">
                     <LiveCasinoPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
