@@ -24,6 +24,15 @@ function App() {
 
     const { pathname } = useLocation();
 
+    useEffect(() => {
+        setTimeout(() => {
+            const htmlHeight = document.querySelector('html')?.scrollHeight
+            console.log('htmlHeight', htmlHeight);
+            const body = document.querySelector('body')
+            body.style.height = `${htmlHeight}px`;
+        }, 0)
+    }, [])
+
 
     useEffect(() => {
         if (pathname?.includes('/minigame')) {
