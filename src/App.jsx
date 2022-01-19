@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
+import {Helmet} from "react-helmet";
 import "./App.css";
 import { getCookie, setCookie } from './utils'
 import MainPage from "./pages/MainPage";
@@ -18,7 +19,16 @@ import AuthenticationPage from "pages/AuthenticationPage";
 function App() {
 
     const [isAuthenticated, setAuthenticated] = useState(false);
+    const [viewportContent, setViewportContent] = useState("width=device-width, initial-scale=1");
+
     const { pathname } = useLocation();
+
+
+    useEffect(() => {
+        if (pathname?.includes('/minigame')) {
+            setViewportContent('maximum-scale=1.0, user-scalable=no')
+        }
+    }, [pathname])
 
     useEffect(() => {
         const previousUrl = getCookie('previousUrl');
@@ -51,6 +61,9 @@ function App() {
 
     return (
         <>
+            <Helmet>
+                <meta name="viewport" content={viewportContent} />
+            </Helmet>
             <Switch>
                 {/*   
                 Example to pass props to a route.
