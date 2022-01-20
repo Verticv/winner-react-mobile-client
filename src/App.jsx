@@ -23,14 +23,14 @@ function App() {
 
     const { pathname } = useLocation();
 
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            const menu = document.querySelector('#main-menu')
-            if (menu) {
-                menu.style.display = 'block';
-            }
-        })
-    }, [])
+    // useEffect(() => {
+    //     window.addEventListener('scroll', () => {
+    //         const menu = document.querySelector('#main-menu')
+    //         if (menu) {
+    //             menu.style.marginBottom = '0';
+    //         }
+    //     })
+    // }, [])
 
 
     useEffect(() => {

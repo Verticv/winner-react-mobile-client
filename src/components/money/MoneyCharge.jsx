@@ -110,12 +110,12 @@ const MoneyCharge = () => {
                                 onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
                                 onFocus={() => {
                                     const menu = document.querySelector('#main-menu');
-                                    menu.style.display = 'none'
+                                    menu.style.marginBottom  = '-14.075rem'
                                     setInputClicked(true)
                                 }}
                                 onBlur={() => {
                                     const menu = document.querySelector('#main-menu');
-                                    menu.style.display = 'block'
+                                    menu.style.marginBottom = '0'
                                     setInputClicked(false)
                                 }}
                                 onKeyPress={(event) => {
