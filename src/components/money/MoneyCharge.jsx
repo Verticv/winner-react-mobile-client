@@ -108,8 +108,16 @@ const MoneyCharge = () => {
                                 placeholder="직접 입력시 숫자만 입력해 주세요."
                                 value={inputValue !==null ? nf.format(inputValue) : ""}
                                 onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
-                                onFocus={() => setInputClicked(true)}
-                                onBlur={() => setInputClicked(false)}
+                                onFocus={() => {
+                                    const menu = document.querySelector('#main-menu');
+                                    menu.style.display = 'none'
+                                    setInputClicked(true)
+                                }}
+                                onBlur={() => {
+                                    const menu = document.querySelector('#main-menu');
+                                    menu.style.display = 'block'
+                                    setInputClicked(false)
+                                }}
                                 onKeyPress={(event) => {
                                     if (!/[0-9]/.test(event.key)) {
                                         event.preventDefault();
