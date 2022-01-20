@@ -120,13 +120,13 @@ const FreeBoardView2 = () => {
             </div>
 
             <div style={{margin: '3.75rem 0'}} className="w-full flex justify-end">
-                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-lg bg-red-cb4343 hover:opacity-75">
-                    <div className="flex items-center justify-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
+                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-red-cb4343 hover:opacity-75">
+                    <div className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">수정하기</span>
                     </div>
                 </button>
-                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 rounded-lg bg-gray-r171a1d hover:opacity-75" >
-                    <div className="flex items-center justify-center h-full w-full rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
+                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d hover:opacity-75" >
+                    <div className="flex items-center justify-center h-full w-full rounded-2xl border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">삭제하기</span>
                     </div>
                 </button>

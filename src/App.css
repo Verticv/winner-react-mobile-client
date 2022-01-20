@@ -93,3 +93,23 @@ body {
     width: 12rem !important;
   }
 }
+
+
+.common-button {
+  padding: 1px;
+}
+
+.common-button > div {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+}
+
+@media only screen and (max-width: 450px) {
+  .common-button {
+    padding: 0.3px;
+  }
+  .common-button > div {
+    width: calc(100% - 1.5px); 
+    height: calc(100% - 1.5px);
+  }
+ }
