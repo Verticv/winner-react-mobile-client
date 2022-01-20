@@ -25,8 +25,8 @@ const SelectAllButton = (
             <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem', marginBottom: '2.5rem'}} className="flex items-center justify-between">
                 <div className="flex w-full">
                     <button 
-                        style={{padding: '1px', height: '7.3125rem'}}
-                        className="flex flex-1 items-center justify-center mr-4 rounded-2xl bg-gray-r171a1d hover:opacity-75"
+                        style={{height: '7.3125rem'}}
+                        className="common-button flex flex-1 items-center justify-center mr-4 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                         onClick={() => allSelectButtonPressed()}
                     >
                         <div 
@@ -39,8 +39,8 @@ const SelectAllButton = (
                         </div>
                     </button>
                     <button 
-                        style={{padding: '1px', height: '7.3125rem'}}
-                        className="flex flex-1 items-center justify-center mr-4 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
+                        style={{height: '7.3125rem'}}
+                        className="common-button flex flex-1 items-center justify-center mr-4 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
                     >
                         <div 
                             style={{
@@ -52,8 +52,8 @@ const SelectAllButton = (
                         </div>
                     </button>
                     <button 
-                        style={{padding: '1px', height: '7.3125rem'}}
-                        className="flex flex-1 items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
+                        style={{height: '7.3125rem'}}
+                        className="common-button flex flex-1 items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
                         onClick={() => allSelectButtonPressed()}
                     >
                         <div 
@@ -71,8 +71,8 @@ const SelectAllButton = (
         <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem', marginBottom: '2.5rem'}} className="flex items-center justify-between">
                 <div className="flex w-full space-x-2px">
                     <button 
-                        style={{padding: '1px', height: '7.3125rem'}}
-                        className="flex flex-1 items-center justify-center mr-4 rounded-2xl bg-gray-r171a1d hover:opacity-75"
+                        style={{height: '7.3125rem'}}
+                        className="common-button flex flex-1 items-center justify-center mr-4 rounded-2xl bg-gray-r171a1d hover:opacity-75"
                         onClick={() => allSelectButtonPressed()}
                     >
                         <div 
@@ -85,8 +85,8 @@ const SelectAllButton = (
                         </div>
                     </button>
                     <button 
-                        style={{padding: '1px', height: '7.3125rem'}}
-                        className="flex flex-1 items-center justify-center m-0 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
+                        style={{height: '7.3125rem'}}
+                        className="common-button flex flex-1 items-center justify-center m-0 rounded-2xl bg-brown-r7e3636 hover:opacity-75"
                     >
                         <div 
                             style={{

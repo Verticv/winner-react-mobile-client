@@ -6,17 +6,17 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
 
     function Cells({ cards }) {
         const detailButton =  (
-            <button style={{width: '10.875rem', height: '10.875rem', padding: '1px'}} className="flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75">
-                <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-xl p-10 border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                    <span style={{fontSize: '2.8125rem', lineHeight: '1.1'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white">상세 보기</span>                    
+            <button style={{width: '10.875rem', height: '10.875rem'}} className="common-button flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75">
+                <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-2xl p-10 border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
+                    <span style={{fontSize: '2.7rem', lineHeight: '1.1'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white">상세 보기</span>                    
                 </div>
             </button>
         )
 
         const wideDetailButtonComponent =  (
-            <button style={{width: '20.25rem', height: '14.0625rem', padding: '1px'}} className="flex items-center justify-center rounded-3xl bg-orange-d43712 hover:opacity-75">
+            <button style={{width: '20.25rem', height: '14.0625rem'}} className="common-button flex items-center justify-center rounded-3xl bg-orange-d43712 hover:opacity-75">
                 <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-3xl p-10 border border-orange-f07a5f bg-gradient-to-b from-orange-f4603d to-orange-e9451e cursor-pointer">
-                    <span style={{fontSize: '2.8125rem', lineHeight: '1.1'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px">사용하기</span>
+                    <span style={{fontSize: '2.7rem', lineHeight: '1.1'}} className="w-full font-font-spoqaMedium tracking-tight text-white pt-px">사용하기</span>
                 </div>
             </button>
         )
@@ -29,7 +29,7 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
         }; 
 
         return cards.map((card, index) => (
-            <div style={{height: cardHeight, width: `${!hasButton ? '73.875rem' : ''}` , paddingRight: '1.875rem', margin: '1.875rem', marginTop: `${index ? '0': '1.875rem'}`, padding: '2.125rem', paddingLeft: '2.8125rem', paddingTop: '2.25rem',background: `${containerBackground && index % 2 ? containerBackground : ''}`}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
+            <div style={{height: cardHeight, width: `${!hasButton ? '73.875rem' : ''}` , paddingRight: '1.875rem', margin: '1.875rem', marginTop: `${index ? '0': '1.875rem'}`, padding: '2.125rem', paddingLeft: '2.7rem', paddingTop: '2.25rem',background: `${containerBackground && index % 2 ? containerBackground : ''}`}} className="p-12 bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 h-56px border-b border-gray-dddddd flex items-center justify-between shadow-subNavbar rounded-2xl">
                 <div style={{marginTop: '-0.5rem'}} className="flex flex-wrap items-center w-full h-full">
                     {hasLeftInput && (
                         <div style={{width: '5.8125rem'}} className="relative text-left">
@@ -93,9 +93,9 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
                     </PopupControls> 
                 </div>) 
                 : hasButton &&
-                    <button style={{width: '10.875rem', height: '10.875rem',  padding: '1px', backgroundColor: card[card.length -1].buttonColor || 'red'}} className="flex items-center justify-center rounded-2xl hover:opacity-75">
-                        <div style={{padding: `${wrapButtonText ? '2rem' : ''}`}} className="flex w-full h-full items-center justify-center flex-wrap rounded-xl cursor-pointer">
-                            <span style={{fontSize: '2.8125rem', lineHeight: '1.1', width: '10.875rem', marginTop: '0.4375rem'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length -1].buttonColor === '#0056a6' ? <div> {card[card.length -1].buttonText ? card[card.length -1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length -1].buttonText ||'진행중'} </span>
+                    <button style={{width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length -1].buttonColor || 'red'}} className="common-button flex items-center justify-center rounded-2xl hover:opacity-75">
+                        <div style={{padding: `${wrapButtonText ? '2rem' : ''}`}} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
+                            <span style={{fontSize: '2.7rem', lineHeight: '1.1', width: '10.875rem', marginTop: '0.4375rem'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length -1].buttonColor === '#0056a6' ? <div> {card[card.length -1].buttonText ? card[card.length -1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length -1].buttonText ||'진행중'} </span>
                         </div>
                     </button>
                 }
