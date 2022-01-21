@@ -379,8 +379,8 @@ const DistributorPage = ({
 
         return items.map(item => (
             <>
-            <div style={{fontSize: '2.625rem', height: '10.9375rem'}} className={`${item.id % 2 === 1 ? "bg-white" : "bg-gray-f8f9fb"} ${item.isLast ? "border-b" : "border-b"} w-full flex items-center justify-evenly font-roboto text-gray-r585858 tracking-tight border-l border-r border-gray-dddddd`}>
-                <div className="w-full h-full flex items-center justify-center">{item.number}</div>
+            <div style={{fontSize: '2.625rem', height: '10.9375rem', paddingLeft: '1.875rem', paddingRight: '1.875rem'}} className={`${item.id % 2 === 1 ? "bg-white" : "bg-gray-f8f9fb"} ${item.isLast ? "border-b" : "border-b"} w-full flex items-center justify-evenly font-roboto text-gray-r585858 tracking-tight border-l border-r border-gray-dddddd`}>
+                <div  className="w-full h-full flex items-center justify-center">{item.number}</div>
                 <div className="w-full h-full flex items-center justify-center">{item.username}</div>
                 {item.name && (
                     <div className="w-full h-full flex items-center justify-center font-spoqaMedium">{item.name}</div>
@@ -654,8 +654,8 @@ const DistributorPage = ({
                 <HomePageTopBanner pageTitle='총판페이지' />
             </div>
 
-            <div style={{margin: '1.875rem', marginTop: '0.75rem', marginRight: '0', marginBottom: '0'}} className="relative overflow-hidden flex flex-col h-full">
-                <div style={{height: '11.1875rem', fontSize: '3rem', paddingTop: '2.75rem'}} className='flex flex-col items-center'>
+            <div style={{margin: '0', marginTop: '0.75rem', marginRight: '0', marginBottom: '0'}} className="relative overflow-hidden flex flex-col h-full">
+                <div style={{marginLeft: '1.875rem' ,height: '11.1875rem', fontSize: '3rem', paddingTop: '2.75rem'}} className='flex flex-col items-center'>
                     <div style={{marginBottom: '0.25rem', marginLeft: '-1.7rem'}} className="tracking-tight flex items-center">
                         <p className="font-spoqaMedium text-blue-r0056a6">Louie3</p>
                         <p className="font-spoqaMedium ml-2 text-gray-r454545">님의 총판 정보입니다.</p>
@@ -668,12 +668,12 @@ const DistributorPage = ({
                     <div className="flex flex-col items-start w-full h-full">
 
                         <div className="w-1836px">
-                            <div style={{marginBottom: '1.25rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                            <div style={{marginLeft: '1.875rem', marginBottom: '1.25rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3rem', height: '3.1875rem', marginRight: '0.8125rem'}} src={SummaryIcon} alt="" />
                                 <span style={{fontSize: '3rem', marginTop: '0.4rem'}}>총판현황</span>
                             </div>
 
-                            <div style={{width: '73.7rem'}} className="flex w-full flex-wrap">
+                            <div style={{marginLeft: '1.875rem', width: '73.7rem'}} className="flex w-full flex-wrap">
                                 <div style={{marginRight: '0.5625rem'}}>
                                     <SummaryCard img={SummaryIcon1} text1="전체 유저" text2="" count={5} />
                                 </div>
@@ -697,18 +697,18 @@ const DistributorPage = ({
                                     <SummaryCard img={SummaryIcon8} text1="제휴 금액" text2="" count="117,515,875.76" />
                             </div>
 
-                            <div style={{marginBottom: '1rem', marginTop: '3.5625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                            <div style={{marginLeft: '1.875rem', marginBottom: '1rem', marginTop: '3.5625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3.1875rem', marginRight: '0.8125rem'}} src={PieIcon} alt="" />
                                 <span style={{fontSize: '3rem', marginTop: '0.4rem'}}>롤링요율</span>
                             </div>
 
                             <div className='flex relative'>
-                                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '73rem'}} className="absolute h-full z-50"></div>
-                                <div style={{width: '75.75rem'}} className="w-full rounded-2xl shadow-plain10 overflow-scroll">
+                                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '74.5rem'}} className="absolute h-full z-50"></div>
+                                <div style={{width: '77.625rem'}} className="w-full shadow-plain10 overflow-scroll">
                                     <table style={{borderWidth: '0.375rem', borderRightWidth: 0}} className="border-2 border-gray-dddddd w-full overflow-hidden">
                                         <thead style={{height: '8.8125rem', borderBottomWidth: '0.1875rem'}} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-16px text-white tracking-tight">
                                             <tr style={{height: '8.8125rem'}} className="flex items-center">
-                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">스포츠</td>
+                                                <td style={{width: '16.375rem', fontSize: '2.625rem', paddingLeft: '1.875rem'}} className="text-center">스포츠</td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">미니게임</td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">에볼루션</td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>아시아</span><span className='-mt-3.5'>게이밍</span></td>
@@ -727,12 +727,12 @@ const DistributorPage = ({
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>YL</span><span className='-mt-3.5'>게이밍</span></td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>레드</span><span className='-mt-3.5'>타이거</span></td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center">e-스포츠</td>
-                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className="text-center flex flex-col"><span>키론</span><span className='-mt-3.5'>가상게임</span></td>
+                                                <td style={{width: '16.375rem', fontSize: '2.625rem', paddingRight: '1.875rem'}} className="text-center flex flex-col"><span>키론</span><span className='-mt-3.5'>가상게임</span></td>
                                             </tr>
                                         </thead>
                                         <tbody style={{height: '8.8125rem'}} className="w-full text-585858 tracking-tight font-spoqaMedium">
                                             <tr style={{height: '8.8125rem'}} className="flex items-center bg-gray-fefefe font-spoqaMedium text-14px tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
-                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">1.00%</td>
+                                                <td style={{width: '16.375rem', fontSize: '2.625rem', paddingLeft: '1.875rem'}} className=" text-center">1.00%</td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">1.00%</td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.70%</td>
@@ -751,7 +751,7 @@ const DistributorPage = ({
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
                                                 <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
-                                                <td style={{width: '14.5rem', fontSize: '2.625rem'}} className=" text-center">0.00%</td>
+                                                <td style={{width: '16.375rem', fontSize: '2.625rem', paddingRight: '1.875rem'}} className=" text-center">0.00%</td>
 
                                             </tr>
                                         </tbody>
@@ -760,18 +760,18 @@ const DistributorPage = ({
                                 <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem', left: '0'}} className="absolute h-full z-50"></div>
                             </div>
 
-                            <div style={{marginBottom: '0.875rem', marginTop: '4.625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                            <div style={{marginLeft: '1.875rem', marginBottom: '0.875rem', marginTop: '4.625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3.1875rem', marginRight: '0.8125rem'}} src={DetailIcon} alt="" />
                                 <span style={{fontSize: '3rem', marginTop: '0.4rem'}}>나의 상세내역</span>
                             </div>
 
                             {/* <DateSearchBar isLeagueSearch={false} hasIdSearch={true}/> */}
-                            <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center overflow-visible">
+                            <div style={{marginLeft: '1.875rem',  maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center overflow-visible">
                                 <DateSearchBar withMargin={false} isLeagueSearch={false} withBlackButton />
                             </div>
 
                             
-                            <div style={{width: '73.875rem', borderWidth: '0.1875rem' ,borderRadius: '3.1875rem', padding: '1.75rem 2.75rem', margin: '1.875rem 0'}} className="flex flex-wrap w-full border-2 border-gray-b4b4b4 bg-gray-r5a6067">
+                            <div style={{marginLeft: '1.875rem', width: '73.875rem', borderWidth: '0.1875rem' ,borderRadius: '3.1875rem', padding: '1.75rem 2.75rem', margin: '1.875rem 0'}} className="flex flex-wrap w-full border-2 border-gray-b4b4b4 bg-gray-r5a6067">
                                 <div className='w-1/2 flex flex-wrap items-center justify-center'>
                                     <div style={{fontSize: '2.625rem', marginBottom: '0.875rem'}} className="w-full font-spoqaMedium tracking-tight">
                                         <div className='flex items-center'>
@@ -821,12 +821,12 @@ const DistributorPage = ({
 
 
                             <div className='flex relative'> 
-                                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '73rem'}} className="absolute h-full z-50"></div>
-                                <div style={{width: '75.75rem'}} className="w-full rounded-2xl shadow-plain10 overflow-scroll">
+                                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '74.5rem'}} className="absolute h-full z-50"></div>
+                                <div style={{width: '77.625rem'}} className="w-full shadow-plain10 overflow-scroll">
                                     <table style={{borderWidth: '0.375rem', borderRightWidth: 0}} className="border-2 border-gray-dddddd w-full overflow-hidden">
                                         <thead style={{fontSize: '2.625rem'}} className="w-full border-b border-gray-dddddd bg-gray-r8e9296 font-spoqaMedium text-white tracking-tight">
                                             <tr style={{height: '8.625rem', borderBottomWidth: '0.1875rem'}} className="flex items-center border-b">
-                                                <td style={{width: '13.8125rem'}} className="bg-gray-r676e76 h-full flex items-center justify-center">구분</td>
+                                                <td style={{width: '15.6875rem', paddingLeft: '1.875rem'}} className="bg-gray-r676e76 h-full flex items-center justify-center">구분</td>
                                                 <td style={{width: '13.8125rem'}} className="text-center">스포츠</td>
                                                 <td style={{width: '13.8125rem'}} className="text-center">미니게임</td>
                                                 <td style={{width: '13.8125rem'}} className="text-center">에볼루션</td>
@@ -847,12 +847,12 @@ const DistributorPage = ({
                                                 <td style={{width: '13.8125rem'}} className="text-center flex flex-col"><span>레드</span><span className='-mt-3.5'>타이거</span></td>
                                                 <td style={{width: '13.8125rem'}} className="text-center">e-스포츠</td>
                                                 <td style={{width: '13.8125rem'}} className="text-center flex flex-col"><span>키론</span><span className='-mt-3.5'>가상게임</span></td>
-                                                <td style={{backgroundColor:"#808387", width: '13.8125rem'}} className="text-center h-full flex items-center justify-center">합계</td>
+                                                <td style={{backgroundColor:"#808387", width: '15.6875rem', paddingRight: '1.875rem'}} className="text-center h-full flex items-center justify-center">합계</td>
                                             </tr>
                                         </thead>
                                         <tbody style={{fontSize: '2.625rem'}} className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
                                             <tr style={{height: '8.625rem', borderBottomWidth: '0.1875rem'}} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
-                                                <td style={{width: '13.8125rem'}} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">베팅금</td>
+                                                <td style={{width: '15.6875rem', paddingLeft: '1.875rem'}} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">베팅금</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">1.09M</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">33K</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
@@ -873,10 +873,10 @@ const DistributorPage = ({
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">3.06M</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right pr-4">0</td>
-                                                <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e", width: '13.8125rem'}} className="text-right pr-4 h-full flex items-center justify-end">7.14M</td>
+                                                <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e", width: '15.6875rem', paddingRight: '1.875rem'}} className="text-right pr-4 h-full flex items-center justify-end">7.14M</td>
                                             </tr>
                                             <tr style={{height: '8.625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
-                                                <td style={{width: '13.8125rem'}} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">승패</td>
+                                                <td style={{width: '15.6875rem', paddingLeft: '1.875rem'}} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">승패</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
@@ -897,10 +897,10 @@ const DistributorPage = ({
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right pr-4">0</td>
-                                                <td style={{backgroundColor:"#ebecee", color:"#d52e2e", width: '13.8125rem'}} className="text-right pr-4 h-full flex items-center justify-end">0</td>
+                                                <td style={{backgroundColor:"#ebecee", color:"#d52e2e", width: '15.6875rem', paddingRight: '1.875rem'}} className="text-right pr-4 h-full flex items-center justify-end">0</td>
                                             </tr>
                                             <tr style={{height: '8.625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="flex items-center bg-gray-fefefe font-spoqaMedium tracking-tight text-gray-r454545 w-full border-b border-gray-dddddd">
-                                                <td style={{width: '13.8125rem'}} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">정산금액</td>
+                                                <td style={{width: '15.6875rem', paddingLeft: '1.875rem'}} className="bg-gray-r7a848f h-full flex items-center justify-center font-spoqaMedium text-white tracking-tight">정산금액</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
@@ -921,7 +921,7 @@ const DistributorPage = ({
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right">0</td>
                                                 <td style={{width: '13.8125rem'}} className="text-right pr-4">0</td>
-                                                <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e", width: '13.8125rem'}} className="text-right pr-4 h-full flex items-center justify-end">0</td>
+                                                <td style={{backgroundColor:"#f2f2f2", color:"#d52e2e", width: '15.6875rem', paddingRight: '1.875rem'}} className="text-right pr-4 h-full flex items-center justify-end">0</td>
                                             </tr>
                                         </tbody>
                                     </table>   
@@ -930,7 +930,7 @@ const DistributorPage = ({
                             </div>
 
 
-                            <div style={{marginTop: '4.3125rem', marginBottom: '0.75rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                            <div style={{marginLeft: '1.875rem', marginTop: '4.3125rem', marginBottom: '0.75rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3.1875rem', height: '2.75rem', marginRight: '0.8125rem'}} className='object-contain -mt-1.5' src={MemberIcon} alt="" />
                                 <div style={{fontSize: '3rem'}}>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight text-gray-r454545">2 명</span></div>
 
@@ -958,8 +958,8 @@ const DistributorPage = ({
                             </div>
 
                             {viewOnline && (
-                                <div className='flex relative'>
-                                    <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '73rem'}} className="absolute h-full z-50"></div>
+                                <div style={{marginLeft: '1.875rem'}} className='flex relative'>
+                                    <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '74.5rem'}} className="absolute h-full z-50"></div>
                                     <div style={{width: '75.75rem' ,height:"9rem", padding: '0 1.125rem', borderRadius: '1.25rem', borderTopRightRadius: '0', borderBottomRightRadius: '0', borderRightWidth: '0'}} className="flex bg-gray-f9f9f9 relative border border-gray-dddddd rounded-2xl items-center overflow-scroll">
                                         <UsersOnline />
                                         <UsersOnline name="tkskdl12" />
@@ -974,7 +974,7 @@ const DistributorPage = ({
                                 <span style={{fontSize: '3rem'}}>총판현황</span>
                             </div> */}
 
-                            <div style={{marginTop: '4.5625rem', fontSize: '3rem', width: '73.875rem'}} className="flex items-end justify-between tracking-tight text-gray-r7b7b7b font-spoqaMedium">
+                            <div style={{marginLeft: '1.875rem', marginTop: '4.5625rem', fontSize: '3rem', width: '73.875rem'}} className="flex items-end justify-between tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <div className="flex items-center items-center flex">
                                     <img style={{width: '3.1875rem', height: '2.9375rem', marginRight: '0.8125rem'}} className='object-contain -mt-1.5' src={RecommendIcon} alt="" />
                                     <div className='mt-1'>추천 회원내역</div>
@@ -999,12 +999,12 @@ const DistributorPage = ({
                             {/* === 추천회원내역 표 === */}
                             {/* w-1836px */}
                             <div className='flex relative'>
-                                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '73rem'}} className="absolute h-full z-50"></div>
-                                <div style={{filter: "drop-shadow(0px 0px 2px #00000050)", marginTop: '0.375rem', borderWidth: '0.375rem', width: '75.75rem', borderRightWidth: '0'}} className="flex flex-col w-full rounded-2xl border-t relative border-gray-dddddd overflow-scroll">
-                                    <div style={{ width: 'fit-content'}} className='flex flex-col w-full rounded-2xl border-t  border-gray-dddddd'>
+                                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem', left: '74.5rem'}} className="absolute h-full z-50"></div>
+                                <div style={{filter: "drop-shadow(0px 0px 2px #00000050)", marginTop: '0.375rem', borderWidth: '0.375rem', width: '77.625rem', borderRightWidth: '0'}} className="flex flex-col w-full border-t relative border-gray-dddddd overflow-scroll">
+                                    <div style={{ width: 'fit-content'}} className='flex flex-col w-full border-t  border-gray-dddddd'>
                                         {/* === Header === */}
                                         <div style={{height: '8.5625rem', fontSize: '2.625rem'}} className="w-full bg-gray-r8e9296 border-b border-r-2 border-l-2 border-gray-dddddd flex items-center justify-evenly font-spoqaMedium text-white tracking-tight">
-                                            <div style={{width: '18rem'}} className="text-center">번호</div>
+                                            <div style={{width: '19.875rem', paddingLeft: '1.875rem'}} className="text-center">번호</div>
                                             <button
                                                 style={{width: '18rem'}}
                                                 className="flex text-center items-center justify-center hover:opacity-75"
