@@ -54,7 +54,7 @@ const DateSearchBar = ({
                 )}
 
                 <div className="flex items-center w-full h-full">
-                    <div className="relative">
+                    <div className="left-date-picker relative">
                         <DatePicker 
                             className="place-color-grey date-picker left-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b"
                             locale="ko" 
@@ -66,7 +66,7 @@ const DateSearchBar = ({
                         <img style={{top: '3.44rem'}} src={CalendarIcon} alt="" className="w-14 absolute right-8" />
                     </div>
                     <span style={{fontSize: '2.6rem', marginTop: '1.875rem'}} className="w-8 text-center font-spoqaMedium text-gray-r454545 mt-px">~</span>
-                    <div className="relative">
+                    <div className="right-date-picker relative">
                         <DatePicker 
                             className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
                             locale="ko"
