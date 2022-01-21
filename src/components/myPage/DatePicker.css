@@ -823,3 +823,12 @@
 .react-datepicker__current-month {
   padding: 0.5rem 0;
 }
+
+.right-date-picker .react-datepicker-popper {
+  transform: translate(-37.8125rem, 9.5rem) !important;
+}
+
+
+.left-date-picker .react-datepicker-popper {
+  transform: translate(-0.0625rem, 9.5rem) !important;
+}
