@@ -74,7 +74,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                     `} 
                     src={item.id === 0 ? item.icon : selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
                 />
-                <label style={{fontSize: '2.4375rem', marginBottom: '1rem'}} className={"absolute mb-7  bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-4xl pt-px pr-2px" }>{item.text}</label>
+                <label style={{fontSize: '2.4375rem', marginBottom: '1rem', paddingLeft: index === 1 ? '0.3rem' : '',  paddingRight: index === 0 && selectedTab !== item.id ? '0.55rem' : index === 1 && selectedTab !== item.id ? '0' : '', marginLeft: selectedTab === item.id && index !== 0 ? '0.4rem' : selectedTab === item.id && index === 0 ? '0.2rem' : ''}} className={"absolute mb-7  bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-4xl pt-px pr-2px" }>{item.text}</label>
             </button>
         ));
     }
