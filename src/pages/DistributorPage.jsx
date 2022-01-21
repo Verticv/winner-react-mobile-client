@@ -637,8 +637,10 @@ const DistributorPage = ({
                 }} 
                 className="h-full w-full rounded-full flex items-center"
             >
-                    <img style={{width: '3.9375rem', height: '3.9375rem'}} className='mr-3' src={DefaultUser} alt="" />
-                    <span style={{fontSize: '2.8125rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium pt-2">{name}</span>
+                    <div style={{marginBottom: '0.28125rem'}} className="h-full w-full rounded-full flex items-center">
+                        <img style={{width: '3.9375rem', height: '3.9375rem'}} className='mr-3' src={DefaultUser} alt="" />
+                        <span style={{fontSize: '2.8125rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium pt-2">{name}</span>
+                    </div>
             </div>
         </div>
     )
@@ -668,7 +670,7 @@ const DistributorPage = ({
                         <div className="w-1836px">
                             <div style={{marginBottom: '1.25rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3rem', height: '3.1875rem', marginRight: '0.8125rem'}} src={SummaryIcon} alt="" />
-                                <span className='mt-1.5' style={{fontSize: '3rem'}}>총판현황</span>
+                                <span style={{fontSize: '3rem', marginTop: '0.4rem'}}>총판현황</span>
                             </div>
 
                             <div style={{width: '73.7rem'}} className="flex w-full flex-wrap">
@@ -697,7 +699,7 @@ const DistributorPage = ({
 
                             <div style={{marginBottom: '1rem', marginTop: '3.5625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3.1875rem', marginRight: '0.8125rem'}} src={PieIcon} alt="" />
-                                <span className='mt-1.5' style={{fontSize: '3rem'}}>롤링요율</span>
+                                <span style={{fontSize: '3rem', marginTop: '0.4rem'}}>롤링요율</span>
                             </div>
 
                             <div className='flex relative'>
@@ -759,11 +761,11 @@ const DistributorPage = ({
 
                             <div style={{marginBottom: '0.875rem', marginTop: '4.625rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3.1875rem', marginRight: '0.8125rem'}} src={DetailIcon} alt="" />
-                                <span className='mt-1.5' style={{fontSize: '3rem'}}>나의 상세내역</span>
+                                <span style={{fontSize: '3rem', marginTop: '0.4rem'}}>나의 상세내역</span>
                             </div>
 
                             {/* <DateSearchBar isLeagueSearch={false} hasIdSearch={true}/> */}
-                            <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center overflow-hidden">
+                            <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center overflow-visible">
                                 <DateSearchBar withMargin={false} isLeagueSearch={false} withBlackButton />
                             </div>
 

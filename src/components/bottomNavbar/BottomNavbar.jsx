@@ -65,8 +65,8 @@ const BottomNavbar = () => {
                     className="flex flex-col"
                     onClick={() => history.push('/freeboard')}
                     >
-                    <img style={{width: '4.625rem', marginLeft: '0.875rem', paddingBottom: '0.4375rem'}} className="object-contain" src={isBoardPage || isDistributorPage || isInboxPage ? NoticeBoardActive : NoticeBoard } alt="" />
-                    <p style={{fontSize: '2.625rem', marginLeft: '-0.4375rem'}} className={`font-spoqaMedium ${isBoardPage || isDistributorPage || isInboxPage ? 'text-blue-r009edf' : 'text-gray-r727272' }`}>게시판</p>
+                    <img style={{width: '4.625rem', marginLeft: '0.875rem', paddingBottom: '0.4375rem'}} className="object-contain" src={isBoardPage || isInboxPage ? NoticeBoardActive : NoticeBoard } alt="" />
+                    <p style={{fontSize: '2.625rem', marginLeft: '-0.4375rem'}} className={`font-spoqaMedium ${isBoardPage || isInboxPage ? 'text-blue-r009edf' : 'text-gray-r727272' }`}>게시판</p>
                 </button>
                 <button 
                     style={{width: '15.1rem'}}
