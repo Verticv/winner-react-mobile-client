@@ -150,8 +150,8 @@ const AccountProfileComponent = ({isAuthenticated}) => {
                     로그아웃
                   </label>
                 </div>
-                  <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
-                      <div className=""><CountryDropDown setCountry={setCountry} country={country} /></div>
+                  <DropDownControls buttonChild={CountryButton} isDropdownOpen={isCountryOpen} setDropdownOpen={setCountryOpen} >
+                  <div className=""><CountryDropDown setCountry={setCountry} country={country} /></div>
                   </DropDownControls>
               </div>
             </div>
