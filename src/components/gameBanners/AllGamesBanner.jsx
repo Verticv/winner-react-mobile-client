@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import EvolutionBg from '../../images/cardBg/1.png'
 import AsiaBg from '../../images/cardBg/2.png'
 import PragmaticBg from '../../images/cardBg/3.png'
@@ -18,6 +19,8 @@ import VirtualBanner from '../../images/gameBanner/16.png'
 import FishingBanner from '../../images/gameBanner/17.png'
 
 const AllGamesBanner = () => {
+
+    const history = useHistory();
 
     const cardClass = "group relative flex justify-end w-full transition cursor-pointer overflow-hidden"
 
@@ -46,7 +49,8 @@ const AllGamesBanner = () => {
             <div 
                 key={item.id} 
                 className={`${cardClass} flex items-center`}
-                style={{marginBottom: items.length - 1 === index ? '18rem' : '1.875rem'}}
+                style={{marginBottom: items.length - 1 === index ? '13.625rem' : '1.875rem'}}
+                onClick={() => item.path && history.push(item.path)}
             >
                 <img className="z-20 object-contain" src={item.img} alt="background" />
                 <div style={{fontSize: '2.625rem', marginRight: item.textMarginBottom, marginTop: item.textMarginTop}} className={`mr-72 text-4xl absolute z-20 right-0 justify-center text-black font-spoqaMedium`}>{item.imgText}</div>
