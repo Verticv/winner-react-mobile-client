@@ -48,7 +48,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
             <button 
                 id={`t${index}`}
                 key={item.id}
-                style={{height: '13.4375rem'}}
+                style={{height: '13.4375rem', width: items.length - 1 === index ? '18.1875rem' : '', paddingRight: items.length - 1 === index ? '2.1875rem' : ''}}
                 className={`
                 ${selectedTab === item.id 
                     ? "text-white duration-150" 
