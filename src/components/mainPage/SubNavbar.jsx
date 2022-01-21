@@ -57,13 +57,9 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 flex flex-col justify-start flex-shrink-0 items-center w-64 rounded-2xl z-20 transition ease-in-out tracking-tight relative`} 
                 onClick={() => {
                     horizontalsScroll(items, 't', 'scroll-wrapper', index)
-                    if (item.text === 'e-스포츠') {
-                        window.location.href = 'http://222.239.127.198:7458/sub_recent.html';
-                    } else {
-                        setSelectedTab(item.id)
-                        setGameBanner(item.id)
-                        onClickHandle(item.id)
-                    }
+                    setSelectedTab(item.id)
+                    setGameBanner(item.id)
+                    onClickHandle(item.id)
                 }}
             >
                 <img 
