@@ -49,7 +49,7 @@ const AllGamesBanner = () => {
             <div 
                 key={item.id} 
                 className={`${cardClass} flex items-center`}
-                style={{marginBottom: items.length - 1 === index ? '13.625rem' : '1.875rem'}}
+                style={{marginBottom: items.length - 1 === index ? '9.9375rem' : '1.875rem'}}
                 onClick={() => item.path && history.push(item.path)}
             >
                 <img className="z-20 object-contain" src={item.img} alt="background" />

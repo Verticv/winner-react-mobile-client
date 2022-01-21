@@ -13,7 +13,7 @@ const ARgameBanner = () => {
             <div 
                 key={item.id} 
                 className={`${cardClass} flex items-center`}
-                style={{marginBottom: items.length - 1 === index ? '13.625rem' : '1.875rem'}}
+                style={{marginBottom: items.length - 1 === index ? '9.9375rem' : '1.875rem'}}
             >
                 <img className="z-20 object-contain" src={item.background} alt="background" />
                 <div style={{fontSize: '2.625rem', marginRight: item.textMarginBottom, marginTop: item.textMarginTop}} className={`mr-72 text-4xl absolute z-20 right-0 justify-center text-black font-spoqaMedium`}>{item.imgText}</div>

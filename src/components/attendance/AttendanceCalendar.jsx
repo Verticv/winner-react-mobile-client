@@ -32,7 +32,7 @@ class Calendar extends React.Component {
             <img style={{height: '2.125rem', width: '1.3125rem'}} className={`cursor-pointer transform rotate-180 hover:opacity-75`} onClick={this.prevMonth} src={Arrow} alt="" />
             <div style={{fontSize: '2.625rem', margin: '0 2.8125rem'}} className="flex items-center text-blue-r0056a6">
                 <div style={{fontSize: '3.375rem'}} className="flex items-center font-roboto">{format(this.state.currentMonth, dateFormat1)}</div>
-                <div className="flex items-center font-spoqaMedium">년</div>
+                <div className="flex items-center font-spoqaMedium">년 &nbsp;</div>
                 <div style={{fontSize: '3.375rem'}} className="flex items-center font-roboto">{format(this.state.currentMonth, dateFormat2)}</div>
                 <div className="flex items-center font-spoqaMedium">월</div>
             </div>
