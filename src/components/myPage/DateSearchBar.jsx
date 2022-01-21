@@ -62,7 +62,8 @@ const DateSearchBar = ({
                             onChange={(date) => setStartDate(date)}
                             dateFormat="yyyy-MM-dd"
                             dateFormatCalendar="yyyy년 MM월"
-                            disabledKeyboardNavigation
+                            disabledKeyboardNavigation={true}
+                            readOnly={true}
                         />
                         <img style={{top: '3.44rem'}} src={CalendarIcon} alt="" className="w-14 absolute right-8" />
                     </div>
@@ -75,7 +76,8 @@ const DateSearchBar = ({
                             onChange={(date) => setEndDate(date)}
                             dateFormat="yyyy-MM-dd"
                             dateFormatCalendar="yyyy년 MM월"
-                            disabledKeyboardNavigation
+                            disabledKeyboardNavigation={true}
+                            readOnly={true}
                         />
                         <img style={{top: '3.44rem', right: '3.94rem'}} src={CalendarIcon} alt="" className="w-14 absolute" />
                     </div>
