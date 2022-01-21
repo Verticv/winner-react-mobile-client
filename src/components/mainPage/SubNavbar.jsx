@@ -48,7 +48,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
             <button 
                 id={`t${index}`}
                 key={item.id}
-                style={{height: '13.4375rem'}}
+                style={{height: '13.4375rem', width: items.length - 1 === index ? '18.1875rem' : '', paddingRight: items.length - 1 === index ? '2.1875rem' : ''}}
                 className={`
                 ${selectedTab === item.id 
                     ? "text-white duration-150" 
@@ -57,13 +57,9 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 flex flex-col justify-start flex-shrink-0 items-center w-64 rounded-2xl z-20 transition ease-in-out tracking-tight relative`} 
                 onClick={() => {
                     horizontalsScroll(items, 't', 'scroll-wrapper', index)
-                    if (item.text === 'e-스포츠') {
-                        window.location.href = 'http://222.239.127.198:7458/sub_recent.html';
-                    } else {
-                        setSelectedTab(item.id)
-                        setGameBanner(item.id)
-                        onClickHandle(item.id)
-                    }
+                    setSelectedTab(item.id)
+                    setGameBanner(item.id)
+                    onClickHandle(item.id)
                 }}
             >
                 <img 
@@ -74,7 +70,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                     `} 
                     src={item.id === 0 ? item.icon : selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
                 />
-                <label style={{fontSize: '2.4375rem', marginBottom: '1rem'}} className={"absolute mb-7  bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-4xl pt-px pr-2px" }>{item.text}</label>
+                <label style={{fontSize: '2.4375rem', marginBottom: '1rem', paddingLeft: index === 1 ? '0.3rem' : '',  paddingRight: index === 0 && selectedTab !== item.id ? '0.55rem' : index === 1 && selectedTab !== item.id ? '0' : '', marginLeft: selectedTab === item.id && index !== 0 ? '0.4rem' : selectedTab === item.id && index === 0 ? '0.2rem' : ''}} className={"absolute mb-7  bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-4xl pt-px pr-2px" }>{item.text}</label>
             </button>
         ));
     }

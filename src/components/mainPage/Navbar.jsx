@@ -45,7 +45,7 @@ const Navbar = () => {
                 
                 <div className="flex items-center flex-shrink-0">
                     {/* BREAK */}
-                    <DropDownControls buttonChild={CountryButton} onClick={() => setCountryOpen(!isCountryOpen)} onClose={() => setCountryOpen(false)}>
+                    <DropDownControls buttonChild={CountryButton} isDropdownOpen={isCountryOpen} setDropdownOpen={setCountryOpen} >
                         <div className=""><CountryDropDown setCountry={setCountry} country={country} /></div>
                     </DropDownControls>
                 </div>
