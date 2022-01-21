@@ -389,38 +389,44 @@ const HistoryMenu = ({
     console.log(isHover)
 
     function TabsList({ items }) {
-        return items.map((item, index) => (
-            <button 
-                className={`${
-                    pathname === item.path
-                    ? "bg-blue-r0056a6" 
-                    : "bg-white border border-gray-b7b7b7"
-                } w-1/2 rounded-full font-spoqaMedium`}
-                style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
-                key={item.id} 
-                onClick={() => {
-                    history.push(item.path)
-                    setSelectedTab(item.id)
-                    if (setSelectedSubTab !== null) {
-                        setSelectedSubTab(0)
-                    }
-                }}
-                onMouseOver={() => setHover(item.id)}
-                onMouseLeave={() => setHover(null)}
-            >
-                <div >
-                    <div className='mt-2'>
-                        <span
-                            className={`${
-                                pathname === item.path
-                                ? "text-white" 
-                                : "text-gray-r7b7b7b"
-                            }`}
-                        >{item.text}</span>
+        return items.map((item, index) => {
+            let isActive = pathname === item.path
+            if (item.path.includes('/cscenter/all/policy/sportsgame')) {
+                isActive = true
+            }
+            return (
+                <button 
+                    className={`${
+                        isActive
+                        ? "bg-blue-r0056a6" 
+                        : "bg-white border border-gray-b7b7b7"
+                    } w-1/2 rounded-full font-spoqaMedium`}
+                    style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
+                    key={item.id} 
+                    onClick={() => {
+                        history.push(item.path)
+                        setSelectedTab(item.id)
+                        if (setSelectedSubTab !== null) {
+                            setSelectedSubTab(0)
+                        }
+                    }}
+                    onMouseOver={() => setHover(item.id)}
+                    onMouseLeave={() => setHover(null)}
+                >
+                    <div >
+                        <div className='mt-2'>
+                            <span
+                                className={`${
+                                    isActive
+                                    ? "text-white" 
+                                    : "text-gray-r7b7b7b"
+                                }`}
+                            >{item.text}</span>
+                        </div>
                     </div>
-                </div>
-            </button>
-        ));
+                </button>
+            )
+        });
     }
 
     return (
@@ -470,7 +476,7 @@ const SportsGamePolicy = ({setSelectedTab}) => {
             </div>
 
 
-            <div style={{margin: "0 13.8125rem", marginTop: '1.5rem', marginBottom: '2.9375rem'}} className="flex flex-wrap items-center justify-center tracking-tight font-spoqa text-gray-r454545">
+            <div style={{margin: "0 5.8125rem", marginTop: '1.5rem', marginBottom: '2.9375rem'}} className="flex flex-wrap items-center justify-center tracking-tight font-spoqa text-gray-r454545">
                 <Route path="/cscenter/all/policy/sportsgame/soccer">
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center w-full">모든 프로축구 경기는 해당 리그의 공식협회가 인정하는.</p>
                     <p style={{fontSize: '2.625rem'}} className="text-gray-r7b7b7b text-center w-full">경기 결과대로 반영됩니다.</p>

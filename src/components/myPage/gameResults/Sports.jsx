@@ -7,8 +7,8 @@ import Icon3 from '../../../images/newImages/mainPage/icons/gameresults/icon_3.p
 import Icon4 from '../../../images/newImages/mainPage/icons/gameresults/icon_4.png'
 import Icon5 from '../../../images/newImages/mainPage/icons/gameresults/icon_5.png'
 import Icon6 from '../../../images/newImages/mainPage/icons/gameresults/icon_6.png'
-import Icon7 from '../../../images/gameResults/horizontalMenu/icon_7.png'
-import Icon8 from '../../../images/gameResults/horizontalMenu/icon_8.png'
+import Icon7 from '../../../images/newImages/mainPage/icons/gameresults/icon_7.png'
+import Icon8 from '../../../images/newImages/mainPage/icons/gameresults/icon_8.png'
 
 const tabsArray = [
   { text: "전체", icon: Icon1, id: 0, number: 854 },

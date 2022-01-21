@@ -7,7 +7,7 @@ import Icon3 from '../../images/cscenter/minigame/3.png'
 import Icon4 from '../../images/cscenter/minigame/4.png'
 import PowerballPolicy from '../../images/cscenter/minigame/powerball_policy.png'
 import PowerladderPolicy from '../../images/cscenter/minigame/powerladder_policy.png'
-import SpeedKinoPolicy from '../../images/cscenter/minigame/speedkino_policy.png'
+import SpeedKinoPolicy from '../../images/newImages/new_speedkino_policy.png'
 import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 
 
@@ -22,38 +22,46 @@ const HistoryMenu = ({
     console.log(isHover)
 
     function TabsList({ items }) {
-        return items.map((item, index) => (
-            <button 
-                className={`${
-                    pathname === item.path
-                    ? "bg-blue-r0056a6" 
-                    : "bg-white border border-gray-b7b7b7"
-                } w-1/2 rounded-full font-spoqaMedium`}
-                style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
-                key={item.id} 
-                onClick={() => {
-                    history.push(item.path)
-                    setSelectedTab(item.id)
-                    if (setSelectedSubTab !== null) {
-                        setSelectedSubTab(0)
-                    }
-                }}
-                onMouseOver={() => setHover(item.id)}
-                onMouseLeave={() => setHover(null)}
-            >
-                <div >
-                    <div>
-                        <span
-                            className={`${
-                                pathname === item.path
-                                ? "text-white" 
-                                : "text-gray-r7b7b7b"
-                            } font-spoqaMedium`}
-                        >{item.text}</span>
+
+        
+        return items.map((item, index) => {
+            let isActive = pathname === item.path
+            if (item.path.includes('/cscenter/all/policy/minigame')) {
+                isActive = true
+            }
+           return (
+                <button 
+                    className={`${
+                        isActive
+                        ? "bg-blue-r0056a6" 
+                        : "bg-white border border-gray-b7b7b7"
+                    } w-1/2 rounded-full font-spoqaMedium`}
+                    style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
+                    key={item.id} 
+                    onClick={() => {
+                        history.push(item.path)
+                        setSelectedTab(item.id)
+                        if (setSelectedSubTab !== null) {
+                            setSelectedSubTab(0)
+                        }
+                    }}
+                    onMouseOver={() => setHover(item.id)}
+                    onMouseLeave={() => setHover(null)}
+                >
+                    <div >
+                        <div>
+                            <span
+                                className={`${
+                                    isActive
+                                    ? "text-white" 
+                                    : "text-gray-r7b7b7b"
+                                } font-spoqaMedium`}
+                            >{item.text}</span>
+                        </div>
                     </div>
-                </div>
-            </button>
-        ));
+                </button>
+            )
+        });
     }
 
     return (
@@ -89,8 +97,8 @@ const MinigamePolicy = () => {
             <div className="w-full relative top-0">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                 <div className="">
-                    <div className=" flex flex-shrink-0 w-full font-spoqaMedium">
-                    <HorizontalSubMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                    <div style={{marginLeft: '4.8rem'}} className=" flex flex-shrink-0 w-full font-spoqaMedium">
+                        <HorizontalSubMenu1 itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                     </div>
                 </div>
             </div>

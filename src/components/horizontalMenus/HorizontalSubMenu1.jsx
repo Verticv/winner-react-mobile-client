@@ -20,7 +20,7 @@ const HorizontalSubMenu1 = ({
                 pathname === item.path
                 ? "text-gray-r454545" 
                 : "text-gray-b7b7b7"
-            } rounded-full min-w-fit bg-white text-black flex items-center`}
+            } rounded-full min-w-fit text-black flex items-center`}
             style={{height: '6.375rem', minWidth: 'fit-content' , fontSize: '2.625rem', marginRight: `${!index ? '0.9375rem' : '' }`}} 
             key={item.id} 
             onClick={() => {

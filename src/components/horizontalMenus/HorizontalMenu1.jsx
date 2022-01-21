@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router';
 import horizontalsScroll from '../../utils/horizontalsScroll';
 
@@ -11,12 +11,12 @@ const HorizontalMenu1 = ({
 
     const history = useHistory();
     let pathname = window.location.pathname
+    const [isHover, setHover] = useState(null)
 
     useEffect(() => {
         horizontalsScroll(itemsArray, 't', 'scroll-wrapper')
     }, [itemsArray])
    
-
     function TabsList({ items }) {
         return items.map((item, index) => {
             let isSameLink = pathname === item.path
@@ -59,12 +59,14 @@ const HorizontalMenu1 = ({
                             setSelectedSubTab(0)
                         }
                     }}
+                    onMouseOver={() => setHover(item.id)}
+                    onMouseLeave={() => setHover(null)}
                 >
                     <div 
                         style={{
                             width:"100%", 
                             borderRadius:"1.625rem",
-                            paddingTop: '0.5rem'
+                            paddingTop: '0.5rem',
                         }} 
                         className={`flex w-full justify-end h-full items-end bg-white ${
                             isSameLink
@@ -76,6 +78,7 @@ const HorizontalMenu1 = ({
                             style={{
                                 background: isSameLink
                                 ? "linear-gradient(to bottom, #2087f0, #1873cf)"
+                                : isHover === item.id ? "#d0e8ff"
                                 : "linear-gradient(to bottom, #c4d6e6, #e8f3fd 26%, #ffffff)",
                                 borderRadius:"1.625rem",
                                 borderTopLeftRadius:"1.625rem 1.3rem",
