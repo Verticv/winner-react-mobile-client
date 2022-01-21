@@ -14,9 +14,7 @@ import Navbar from '../mainPage/Navbar'
 import NoticeBanner from '../mainPage/NoticeBanner'
 import Sports from './gameResults/Sports'
 import subIcon1 from '../../images/newImages/mainPage/results/1.png';
-import subIcon2 from '../../images/newImages/mainPage/results/2.png';
 import subIcon3 from '../../images/newImages/mainPage/results/3.png';
-import subIcon4 from '../../images/newImages/mainPage/results/4.png';
 import Logo from "../../images/newImages/mainPage/icons/logo.png";
 
 const tabsArray = [
@@ -39,21 +37,9 @@ const LeftMenuSubArray = [
       path: "/mypage/gameresults/all",
     },
     {
-      text: "e-스포츠",
-      icon: subIcon2,
-      id: 1,
-      path: "#",
-    },
-    {
       text: "미니게임",
       icon: subIcon3,
-      id: 2,
-      path: "#",
-    },
-    {
-      text: "가상게임",
-      icon: subIcon4,
-      id: 3,
+      id: 1,
       path: "#",
     }
   ]

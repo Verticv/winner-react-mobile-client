@@ -8,7 +8,6 @@ import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from 'components/popups/ReauthenticatePopup'
 import { getCookie } from '../../utils'
 
-
 const LeftMenu = ({
     selectedTab,
     setSelectedTab,
@@ -24,8 +23,7 @@ const LeftMenu = ({
     const [isExpanded, setExpanded] = useState(window.location.pathname)
     const [isMouseHover, setMouseHover] = useState("")
 
-    const [activeButton, setActiveButton] = useState(array?.[0]?.path)
-    
+    const [activeButton, setActiveButton] = useState()
 
     useEffect(() => {
         setTimeout(() => {
@@ -66,37 +64,40 @@ const LeftMenu = ({
         setMouseHover("")
     }
       
-    const EditProfileButton = ({path, text, icon, iconHighlight, selectedTab}) => (
-        <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className='w-full border-b border-gray-ececec bg-gray-f7f7f7'>
-            <button 
-            style={{height: '12.375rem', padding: '1.3125rem', paddingRight: 0}}
-            className={`${
-                pathname.includes(path)
-                ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
-                : ""
-            } flex w-full items-center rounded-full group`} 
-            onClick={() => {
-                buttonPressed(path)
-                setPopupOpen(true)
-            }}
-        >
-            <div 
+    const EditProfileButton = ({path, text, icon, iconHighlight, selectedTab}) => {
+        const isProfileActive = pathname.includes(path);
+        return (
+            <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className='w-full border-b border-gray-ececec bg-gray-f7f7f7'>
+                <button 
+                style={{height: '12.375rem', padding: '1.3125rem', paddingRight: 0}}
                 className={`${
-                    (pathname.includes(path)) && "shadow-plain9"
-                } bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
+                    isProfileActive
+                    ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
+                    : ""
+                } flex w-full items-center rounded-full group`} 
+                onClick={() => {
+                    buttonPressed(path)
+                    setPopupOpen(true)
+                }}
             >
-                <img 
-                    style={{height: '9.4375rem', width: '9.4375rem', boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)'}}
-                    className="bg-white rounded-full flex items-center justify-center" 
-                    src={icon} 
-                    alt="icon" />
+                <div 
+                    className={`${
+                        isProfileActive && "shadow-plain9"
+                    } bg-white rounded-full flex items-center justify-center flex-shrink-0`} 
+                >
+                    <img 
+                        style={{height: '9.4375rem', width: '9.4375rem', boxShadow: '0.25rem 0.433rem 0.3125rem 0px rgba(35, 60, 77, 0.3)'}}
+                        className="bg-white rounded-full flex items-center justify-center" 
+                        src={icon} 
+                        alt="icon" />
+                </div>
+                <div style={{marginLeft: '5rem', marginRight: '4.8125rem'}} className="w-full flex justify-between items-center">                
+                    <label className={`${isProfileActive ? "text-white group-hover:text-white" : "text-black group-hover:text-gray-r454545"} font-spoqaMedium text-5xl cursor-pointer tracking-tight`}>{text}</label>
+                </div>
+            </button>
             </div>
-            <div style={{marginLeft: '5rem', marginRight: '4.8125rem'}} className="w-full flex justify-between items-center">                
-                <label className={`${(pathname.includes(path)) ? "text-white group-hover:text-white" : "text-black group-hover:text-gray-r454545"} font-spoqaMedium text-5xl cursor-pointer tracking-tight`}>{text}</label>
-            </div>
-        </button>
-        </div>
-    )
+        )
+    }
 
     function MenuList({ items }) {
         
@@ -107,7 +108,7 @@ const LeftMenu = ({
                     <PopupControls 
                         buttonChild={(
                             <EditProfileButton 
-                                path={item.path} 
+                                path='/edit'
                                 text={item.text} 
                                 icon={item.icon} 
                                 iconHighlight={item.iconHighlight} 
@@ -128,7 +129,7 @@ const LeftMenu = ({
                                     activeButton === item?.path
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                     : ""
-                                } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l focus:from-blue-gradDark focus:to-blue-r2088f0`} 
+                                } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l hover:opacity-75 focus:from-blue-gradDark focus:to-blue-r2088f0`} 
                                 onClick={(e) => buttonPressed(item.text, item.path)}
                                 onMouseEnter={() => mouseHover(item.path)}
                                 onMouseLeave={() => mouseLeave(item.path)}
@@ -179,22 +180,11 @@ const LeftMenu = ({
                                             className="object-contain absolute right-1" 
                                             style={{width: '1.9375rem', height: '3.1875rem', top: '-0.1rem'}}
                                             src={activeButton === item?.path ? ArrowRightWhite : ArrowRight } 
-                                            // src={ArrowRight}
                                             alt="icon" />
                                         )}
                                         </div>
                                 </div>
                             </button>
-                                
-                            {/* <div className={`${
-                                pathname.includes(item.mainPath) 
-                                && isExpanded !== item.path + "closed" 
-                                && isExpanded !== item.path2 + "closed"
-                                && isExpanded !== item.path3 + "closed" 
-                                ? "" : "hidden"
-                                } font-spoqaMedium text-16px cursor-pointer tracking-tight mt-px`} 
-                            >
-                            </div> */}
                         </div>
 
                     </div>

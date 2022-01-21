@@ -88,8 +88,8 @@ const MyPage = ({setAuthenticated, isAuthenticated }) => {
       text: "라이브영상",
       icon: Icon7,
       id: 6,
-      path: "#",
-      mainPath: "#",
+      path: "",
+      mainPath: "",
     },
     {
       text: "경기결과",
@@ -135,14 +135,14 @@ const MyPage = ({setAuthenticated, isAuthenticated }) => {
       text: "계좌문의",
       icon: Icon13,
       id: 12,
-      path: "#",
+      path: "",
       mainPath: "#",
     },
     {
       text: "회원정보수정",
       icon: Icon14,
       id: 13,
-      path: "#",
+      path: "",
       mainPath: "#",
     },
   ];

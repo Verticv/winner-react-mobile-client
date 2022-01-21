@@ -21,7 +21,6 @@ import Icon5 from '../images/cscenter/leftMenu/icon_5.png'
 import subIcon1 from '../images/newImages/mainPage/cscenter/1.png';
 import subIcon2 from '../images/newImages/mainPage/cscenter/2.png';
 import subIcon3 from '../images/newImages/mainPage/cscenter/3.png';
-import subIcon4 from '../images/newImages/mainPage/cscenter/4.png';
 import subIcon5 from '../images/newImages/mainPage/cscenter/5.png';
 
 import Contact from 'components/cscenter/Contact';
@@ -63,15 +62,9 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
           path: "/cscenter/all/faq",
         },
         {
-          text: "계좌문의",
-          icon: subIcon4,
-          id: 2,
-          path: "/cscenter/all/inquiry",
-        },
-        {
           text: "베팅규정",
           icon: subIcon5,
-          id: 2,
+          id: 3,
           path: "/cscenter/all/policy/sportsgame/soccer",
         }
       ]

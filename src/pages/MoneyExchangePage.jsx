@@ -30,14 +30,14 @@ const tabsArray = [
 
 const LeftMenuSubArray = [
     {
-      text: "충전신청",
+      text: "환전신청",
       icon: subIcon1,
       id: 0,
       path: "/mypage/money/exchange/currency",
       mainPath: "/mypage/money/exchange",
     },
     {
-      text: "충전내역",
+      text: "환전내역",
       icon: subIcon2,
       id: 1,
       path: "/mypage/money/exchange/currency/history",
