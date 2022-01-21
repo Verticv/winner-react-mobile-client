@@ -241,7 +241,7 @@ const MoneyCharge = () => {
                             >
                                 <div className="flex items-center h-full w-full rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
                                     <div className='flex justify-end' style={{paddingLeft: '1.6875rem'}}>
-                                    <label className="form-control">
+                                    <label className="form-control mt-1.5">
                                         <input
                                                 className='w-12 h-12'
                                                 type="checkbox"
@@ -250,7 +250,7 @@ const MoneyCharge = () => {
                                             />
                                     </label>
                                     </div>
-                                    <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white w-full text-center">받기</span>
+                                    <span style={{fontSize: '2.625rem'}} className="mt-1.5 font-spoqaMedium tracking-tight text-white w-full text-center">받기</span>
                                 </div>
                             </button>
                             <button 
@@ -260,7 +260,7 @@ const MoneyCharge = () => {
                             >
                                 <div className="flex items-center h-full w-full rounded-lg border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                                     <div className='flex justify-end' style={{paddingLeft: '1.6875rem'}}>
-                                        <label className="">
+                                        <label className="mt-1.5">
                                             <input
                                                     className='w-12 h-12'
                                                     type="checkbox"
@@ -269,7 +269,7 @@ const MoneyCharge = () => {
                                                 />
                                         </label>
                                     </div>
-                                    <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white w-full text-center">받지않기</span>
+                                    <span style={{fontSize: '2.625rem'}} className="mt-1.5 font-spoqaMedium tracking-tight text-white w-full text-center">받지않기</span>
                                 </div>
                             </button>        
                         </div>
