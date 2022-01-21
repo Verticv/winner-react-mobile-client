@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useHistory } from "react-router-dom";
 import DropDownControls from "components/dropdowns/MyPageCountriesDropDownControls";
 import CountryDropDown from "components/dropdowns/MyPageMobileCountryDropDown";
 import CloseIcon from "../../images/newImages/close-gray.png";
-import ProfileIcon from "../../images/newImages/profile-image.png";
+import ProfileIcon from "../../images/newImages/pure_profile_icon.png";
+import big_1 from "../../images/newImages/big_1.png";
 import Logout from "../../images/newImages/logout.png";
 import InboxIcon from "../../images/newImages/mainPage/icons/mail.png";
 import Profile from "../../images/newImages/mainPage/icons/profile.png";
@@ -23,8 +24,13 @@ const AccountProfileComponent = ({isAuthenticated}) => {
 
   const history = useHistory();
   const [isCountryOpen, setCountryOpen] = useState();
+  const [winImage, setWinImage] = useState(big_1);
   const [country, setCountry] = useState("KR");
 
+  useEffect(() => {
+    setWinImage(big_1)
+  }, []);
+  
   const InboxButton = (
     <button
       onClick={() => history.push("/mypage/inbox")}
@@ -45,7 +51,7 @@ const AccountProfileComponent = ({isAuthenticated}) => {
 
   const ProfileButton = (
     <button
-      onClick={() => history.push("/mypage/inbox")}
+      onClick={() => history.push("/attendance")}
       style={{height: '9.3125rem', marginRight: '0.9375rem'}}
       className="flex-shrink-0 relative flex items-center justify-center text-white rounded-full bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2 hover:opacity-75 w-36"
     >
@@ -108,8 +114,10 @@ const AccountProfileComponent = ({isAuthenticated}) => {
           <div style={{padding: '0 1.875rem'}} className="w-full">
             <div style={{borderRadius: '3.75rem'}} className="relative flex w-full z-10 flex-wrap bg-blue-e8f3fd">
               {isAuthenticated && (<div style={{padding: '2.4375rem', paddingBottom: '1.3125rem'}} className="flex w-full">
-                <div style={{width: '23.6rem'}}>
+                <div className='relative' style={{width: '23.6rem'}}>
                   <img style={{maxWidth: '23.6rem', width: '23.6rem'}} src={ProfileIcon} alt="profile_icon" />
+                  <img style={{height: '8.375rem', width: '6.8125rem'}} className='absolute top-2 left-2' src={winImage} alt="big_1" />
+                  
                 </div>
                 <div style={{marginLeft: '2.4375rem'}} className="w-full">
                   <p style={{fontSize: '2.8rem', lineHeight: '0.7', marginBottom: '1.9375rem', marginRight: '1.75rem'}} className="font-robotoBold text-right text-gray-text">
