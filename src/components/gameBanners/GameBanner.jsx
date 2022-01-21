@@ -7,6 +7,7 @@ import MinigameBanner from './MinigameBanner'
 import ARgameBanner from './ARgameBanner'
 import FishingGameBanner from './FishingGameBanner'
 import AllGamesBanner from './AllGamesBanner'
+import LotteryGame from './LotteryGame'
 
 const GameBanner = ({selection}) => {
     return (
@@ -26,9 +27,10 @@ const GameBanner = ({selection}) => {
                 <MinigameBanner />
             ) : selection === 6 ? (
                 <ARgameBanner />
-            ) : selection !== 8 ? (
-                <FishingGameBanner />
-            ) : <></>}
+            ) : selection === 8 ? (
+                <LotteryGame />
+            ) : <FishingGameBanner />
+            }
         </div>
     )
 }
