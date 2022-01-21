@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
 import MobileBg from '../images/mobile_bg.png'
 import DownArrowIcon from '../images/newImages/search-arrow-down.png'
@@ -11,6 +11,15 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     const [selectedInput, setSelectedInput] = useState(null)
     const [toSignup, setSignup] = useState(false)
     const history = useHistory()
+
+    useEffect(() => {
+        const html = document.querySelector('html')
+        if (toSignup) {
+            html.style.background = '#bcd4e6';
+        } else {
+            html.style.background = 'white';
+        }
+    }, [toSignup])
 
     const [selectedCarrier, setSelectedCarrier] = useState("LGU+")
     const [selectedBank, setSelectedBank] = useState("은행선택")

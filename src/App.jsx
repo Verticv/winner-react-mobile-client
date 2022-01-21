@@ -37,6 +37,10 @@ function App() {
         if (pathname?.includes('/minigame')) {
             setViewportContent('maximum-scale=1.0, user-scalable=no')
         }
+        if (pathname !== '/') {
+            const html = document.querySelector('html')            
+            html.style.background = 'white';
+        } 
     }, [pathname])
 
     useEffect(() => {
