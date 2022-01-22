@@ -178,7 +178,9 @@ const BetHistory = ({isAuthenticated}) => {
                 <Route path="/mypage/bet-history/all/sports">
                     <>
                         <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
-                        <Pagination page={page} setPage={setPage}/>
+                        <div style={{marginTop: '1.25rem'}}>
+                            <Pagination page={page} setPage={setPage}/>
+                        </div>
                         <BottomNavbar />
                     </>
                 </Route>
