@@ -33,7 +33,7 @@ const CardResults = ({
               className="flex items-center justify-center h-36px rounded-lg bg-gray-dddddd"
           >
               <div
-              style={{paddingLeft: '0.875rem'}}
+              style={{paddingLeft: '0.6rem'}}
               className={`${
                   bet === "left" 
                   ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
@@ -58,7 +58,7 @@ const CardResults = ({
               className={`flex group items-center justify-center w-40 rounded-lg bg-gray-dddddd ${bet === "middle" ? "bg-red-cb4343" : "bg-gray-dddddd"}`}
           >
               <div
-                  style={{paddingLeft: '0.875rem'}} 
+                  style={{paddingLeft: '0.6rem'}} 
                   className={`${
                   bet === "middle" 
                   ? "text-white border-red-f99097 bg-gradient-to-b from-red-ff535f to-red-d7434f" 
@@ -80,7 +80,7 @@ const CardResults = ({
               style={{
                   textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
                   paddingRight: team2?.length > 8 ? '0' : '',
-                  paddingLeft: '0.875rem'
+                  paddingLeft: '0.6rem'
                   // paddingRight: '1.125rem',
                   // backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
               }} 

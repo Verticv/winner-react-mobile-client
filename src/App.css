@@ -104,7 +104,7 @@ body {
   height: calc(100% - 2px);
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 767px) {
   .common-button {
     padding: 0.3px;
   }

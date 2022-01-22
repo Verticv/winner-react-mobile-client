@@ -11,7 +11,7 @@ import Icon7 from '../../images/myPage/betHistory/ico_7.png'
 import Icon8 from '../../images/myPage/betHistory/ico_8.png'
 import Icon9 from '../../images/myPage/betHistory/ico_9.png'
 // import SportsBetHistory from 'components/myPage/betHistory/SportsBetHistory'
-import HorizontalMenu from 'components/horizontalMenus/HorizontalMenu'
+import HorizontalMenu from 'components/horizontalMenus/FreeboardCompose'
 // import SubHorizontalMenu from 'components/myPage/betHistory/SubHorizontalMenu'
 // import AllIcon from '../../images/myPage/betHistory/all.png'
 // import EvoIcon from '../../images/myPage/betHistory/evolution.png'
@@ -116,7 +116,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
     // ];
 
     const [selectedTab, setSelectedTab] = useState(2)
-    const [selectedSubTab, setSelectedSubTab] = useState(0)
+    const [selectedSubTab, setSelectedSubTab] = useState(2)
     
 
     console.log(`selectedSubTab`, selectedSubTab)
@@ -134,10 +134,10 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
             <div className="w-full relative top-0">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
-                <div id='scroll-wrapper' style={{padding: '1.875rem 0.625rem', paddingRight: '0', paddingBottom: 0}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                <div id='scroll-wrapper' style={{padding: '1.875rem 1.875rem', paddingRight: '0', paddingBottom: 0}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                     <div className=" flex flex-shrink-0 w-full">
                     {/* <HorizontalMenu itemsArray={tabsArray} selectedTab={selectedTab} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab} /> */}
-                    <HorizontalMenu withoutFirst={false} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                    <HorizontalMenu withoutFirst={false} setSelectedTab={setSelectedTab} itemsArray={tabsArray} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab}/>
                     {/* {(selectedTab !== 0 && selectedTab !== 3 && selectedTab !== 4 && selectedTab !== 7 && selectedTab !== 8) && (
                         <div style={{marginLeft: `${selectedTab * 116 + 49}px`}} className={`absolute bottom-0 w-20px -mb-10px overflow-hidden inline-block `}>
                             <div className="h-10px w-10px bg-gradient-to-br from-gray-d2dfea via-gray-eff3f6 to-gray-eff3f6 rotate-45 transform origin-bottom-left"></div>
@@ -176,7 +176,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             //     <Pagination page={page} setPage={setPage}/>   
                             // </div>
                             <div style={{marginBottom:'5.625rem'}} className="w-full h-full">
-                            <div style={{paddingBottom: '100rem'}}>
+                            <div style={{paddingBottom: '27.625rem'}}>
                                     <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true}/>
                                 </div>
                             </div>

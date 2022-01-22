@@ -45,6 +45,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                             style={{height: '6.75rem', width: '36.625rem', fontSize: '2.8125rem', padding: '0 1.875rem'}}
                             className="flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium tracking-tight text-gray-r8c8c8c" 
                             value={inputValue !==null ? nf.format(inputValue) : ""}
+                            type='number'
                             onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
                             onKeyPress={(event) => {
                                 if (!/[0-9]/.test(event.key)) {
@@ -68,7 +69,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                     <button 
                         style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}}
                         className="flex items-center justify-center w-1/2 rounded-lg bg-blue-r004b8a hover:opacity-75"
-                        onClick={() => history.push('/mypage/points/points-transaction-history')}
+                        onClick={() => history.push('/mypage/points/all/points-transaction-history')}
                     >
                         <div 
                             style={{background:"linear-gradient(to bottom, #004b8a, #012d53)"}} 

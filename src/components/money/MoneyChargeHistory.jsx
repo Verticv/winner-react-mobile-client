@@ -8,10 +8,7 @@ import ScrollButton from 'components/common/ScrollButton'
 const tableData = [
     [          
         {
-            0: {충전금액: '12,000'},
-        },
-        {
-            0: {보너스금액: "+12,000"}
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -26,10 +23,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
-        },
-        {
-            0: {보너스금액: "+12,000"}
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -44,10 +38,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
-        },
-        {
-            0: {보너스금액: "+12,000"}
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -62,10 +53,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
-        },
-        {
-            0: {보너스금액: "+12,000"}
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -80,10 +68,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
-        },
-        {
-            0: {보너스금액: "+12,000"}
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -98,10 +83,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
-        },
-        {
-            0: {보너스금액: "+12,000"}
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -116,10 +98,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
-        },
-        {
-            0: {보너스금액: "+12,000"}
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -134,10 +113,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
-        },
-        {
-            0: {보너스금액: "+12,000"}
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -179,13 +155,13 @@ const MoneyChargeHistory = () => {
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}
                     setPopupOpen={setPopupOpen}
-                    cardHeight='20.9375rem'
+                    cardHeight='16.625rem'
                     isButtonGradient={false}
                 />   
             </div>
 
             <div className='w-full'>
-                <SelectAllButton buttonsNumber={3} count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+                <SelectAllButton count={8} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
             </div>
 
             <div style={{marginTop: '1.25rem'}}>

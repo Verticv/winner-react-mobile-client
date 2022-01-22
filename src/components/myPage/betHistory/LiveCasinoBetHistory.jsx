@@ -8,9 +8,9 @@ import Icon1 from '../../../images/newImages/mypage/live-casino/ico-1.png'
 import Icon2 from '../../../images/newImages/mypage/live-casino/ico-2.png'
 import Icon3 from '../../../images/newImages/mypage/live-casino/ico-3.png'
 import Icon4 from '../../../images/newImages/mypage/live-casino/ico-4.png'
-import Icon7 from '../../../images/newImages/mainPage/icons/Dream_Gaming.png'
-import Icon8 from '../../../images/newImages/mainPage/icons/SX-logo.png'
-import Icon9 from '../../../images/newImages/mainPage/icons/Big_Gaming.png'
+import Icon7 from '../../../images/newImages/Dream_Gaming.png'
+import Icon8 from '../../../images/newImages/SX-logo.png'
+import Icon9 from '../../../images/newImages/Big_Gaming.png'
 
 const subTabsArray = [
     { text: "전체", icon: Icon1, id: 0 },
@@ -105,7 +105,7 @@ const tableData = [
     ],
 ]
 
-const LiveCasinoBetHistory = ({isState, setState, showSub = true}) => {
+const LiveCasinoBetHistory = ({isState = 0, setState, showSub = true}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)

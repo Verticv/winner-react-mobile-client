@@ -421,7 +421,7 @@ const historyTableData = [
         },
         {
             buttonColor: '#0056a6',
-            buttonText: '사용 가능'
+            buttonText: '사용 완료'
         }
     ],
     [          
@@ -442,7 +442,7 @@ const historyTableData = [
         },
         {
             buttonColor: '#454545',
-            buttonText: '사용 가능'
+            buttonText: '기간 만료'
         }
     ],
     [          
@@ -463,7 +463,7 @@ const historyTableData = [
         },
         {
             buttonColor: '#279140',
-            buttonText: '사용 가능'
+            buttonText: '회수 쿠폰'
         }
     ],
     [          
@@ -931,6 +931,7 @@ const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
                                         setPopupOpen={setPopupOpen}
                                         cardHeight='29.5625rem'
                                         hasLeftInput={false}
+                                        isCouponUsage={true}
                                     />   
                                 </div>
                                 <div style={{marginTop: '1.875rem'}}>
