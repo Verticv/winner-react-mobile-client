@@ -51,7 +51,7 @@ const FreeBoardView = () => {
                 </div>
             </div> 
             <div style={{marginLeft: '4.125rem', marginTop: '2.43rem', height: '8.625rem'}} className="">
-                <div style={{borderRadius:"1rem", fontSize: '2.8125rem', paddingLeft: '3.5625rem', borderWidth: '0.1875rem'}} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
+                <div style={{borderRadius:"1.625rem", fontSize: '2.8125rem', paddingLeft: '3.5625rem', borderWidth: '0.1875rem'}} className="h-full w-full bg-white border border-gray-dddddd flex items-center justify-between">
                     <div className="flex font-spoqa">
                     {tag && ( <p style={{fontSize: '2.8125rem'}} className="text-blue-r0056a6 font-spoqa mr-4">@{tag}</p>)}
                     <p style={{WebkitTextStroke:"0.2px", fontSize: '2.8125rem'}} className="text-gray-r585858 font-spoqa">{text}</p>
@@ -147,7 +147,7 @@ const FreeBoardView = () => {
             </div>
 
             <div style={{margin: '3.75rem 0'}} className="w-full flex justify-end">
-                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-red-cb4343 hover:opacity-75">
+                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-brown-r7e3636 hover:opacity-75">
                     <div className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">수정하기</span>
                     </div>
@@ -164,7 +164,7 @@ const FreeBoardView = () => {
                 <div  className="flex items-center justify-between">
                     <p style={{fontSize: '2.625rem', marginTop: '1rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545">댓글 작성하기</p>
                     <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem'}} className='flex justify-center mt-3 align-center rounded-full border-b border-gray-b7b7b7'>
-                        <div style={{marginRight: '0.6875rem'}} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">댓글</div>
+                        <div style={{marginRight: '0.6875rem'}} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b mt-1">댓글</div>
                         <div className="text-red-d52e2e font-roboto flex items-center justify-center">2</div>
                     </div>
                 </div>
@@ -185,7 +185,7 @@ const FreeBoardView = () => {
                         </div>
                     </div>
                     
-                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '2.25rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full h-full bg-white border border-gray-dddddd flex items-center justify-between">
+                    <div style={{borderRadius:"1.625rem", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '2.25rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full h-full bg-white border border-gray-dddddd flex items-center justify-between">
                         <p style={{fontSize: '2.8125rem', paddingLeft: '3.6875rem'}} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                     </div>
                     <div style={{marginBottom: '1.125rem'}} className='flex'>
@@ -217,7 +217,7 @@ const FreeBoardView = () => {
                         </div>
                     </div>
                     
-                    <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '2.25rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
+                    <div style={{borderRadius:"1.625rem", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '2.25rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
                         <p style={{fontSize: '2.8125rem', marginLeft: '3.6875rem'}} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                     </div>
                     <div style={{marginBottom: '1.125rem'}} className='flex'>
@@ -247,7 +247,7 @@ const FreeBoardView = () => {
                             </div>
                         </div>
                         
-                        <div style={{borderRadius:"1em", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '2.25rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
+                        <div style={{borderRadius:"1.625rem", WebkitTextStroke:"0.2px", height: '8.5625rem', marginTop: '2.25rem', marginBottom: '1.1875rem', borderWidth: '0.1875rem'}} className="w-full bg-white border border-gray-dddddd flex items-center justify-between">
                             <p style={{fontSize: '2.8125rem', paddingLeft: '3.0625rem'}} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         </div>
                         <div style={{marginBottom: '1.125rem'}} className='flex'>

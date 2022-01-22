@@ -268,7 +268,7 @@ const FreeBoardMain = () => {
                                 item.type === "안내" 
                                 ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="rounded-full bg-blue-r00a1e9 flex items-center justify-center text-white mr-4 mb-2"><span className='mt-1.5'>안내</span></div> 
                                 : item.type === "이벤트" 
-                                ? <div style={{fontSize: '2.4375rem', padding: '0.35rem 1.8rem'}} className="rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='mt-1.5'>이벤트</span></div> 
+                                ? <div style={{fontSize: '2.4375rem', padding: '0.0625rem 1.65rem'}} className="rounded-full bg-yellow-ffab39 flex items-center justify-center text-white mr-4 mb-2"><span className='mt-1.5'>이벤트</span></div> 
                                 : <div></div>
                             }
                             <p  

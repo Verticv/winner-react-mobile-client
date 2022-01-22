@@ -17,7 +17,7 @@ const Search = () => {
               className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
           >
               <label style={{fontSize: '2.8125rem', marginLeft: '1.6875rem'}} className="cursor-pointer text-gray-r454545">{selectedCarrier}</label>
-              <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" /> 
+              <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="object-contain" src={DownArrowIcon} alt="arrow" /> 
           </div>
       </div>
   )
@@ -93,7 +93,7 @@ const Search = () => {
                 className="rounded-2xl placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"
                 placeholder="검색어를 입력해 주세요"
             />
-            <button style={{width: '6.75rem', height: '6.75rem', marginTop: '-0.1875rem', marginRight: '-0.1875rem'}} className="flex items-center justify-center h-full rounded-2xl bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 flex-shrink-0 hover:opacity-75">
+            <button style={{width: '6.65rem', height: '6.65rem', marginTop: '-0.1875rem', marginRight: '-0.1875rem'}} className="flex items-center justify-center h-full rounded-2xl bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 flex-shrink-0 hover:opacity-75">
                 <img style={{width: '3.125rem', height: '3.125rem'}} src={SearchIcon} alt=""/>
             </button>
         </div>

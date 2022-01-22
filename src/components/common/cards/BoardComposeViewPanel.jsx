@@ -25,6 +25,7 @@ const BoardComposeViewPanel = ({
             stat1:"2.26",
             stat2:"2.96",
             stat3:"3.40",
+            winAmount: '+900,000,000',
             hasUp: false,
             hasDown:false,
         },
@@ -46,6 +47,38 @@ const BoardComposeViewPanel = ({
         },
         {
             id:2,
+            flag: 'us',
+            name: 'MLS',
+            date: '2021-06-29 15:45',
+            bet: "right",
+            result:"lose",
+            score:"1:2",
+            team1:"CF파추카",
+            team2:"과달하라 차바extra text",
+            stat1:"2.26",
+            stat2:"2.96",
+            stat3:"3.40",
+            hasUp: false,
+            hasDown:false,
+        },
+        {
+            id:3,
+            flag: 'us',
+            name: 'MLS',
+            date: '2021-06-29 15:45',
+            bet: "right",
+            result:"lose",
+            score:"1:2",
+            team1:"CF파추카",
+            team2:"과달하라 차바extra text",
+            stat1:"2.26",
+            stat2:"2.96",
+            stat3:"3.40",
+            hasUp: false,
+            hasDown:false,
+        },
+        {
+            id:4,
             flag: 'us',
             name: 'MLS',
             date: '2021-06-29 15:45',
@@ -90,7 +123,7 @@ const BoardComposeViewPanel = ({
                                     hasDown={card.hasDown}
                                 />
                             </div>
-                            <CardContent withButtons={false} withInput={false} withUploadButton={true} id={card.id} uploadHandler={addEntryClick} checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
+                            <CardContent {...card} withButtons={false} withInput={false} withUploadButton={true} id={card.id} uploadHandler={addEntryClick} checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
                         </div>
                     </div>
                 </div>
