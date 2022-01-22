@@ -110,6 +110,8 @@ const LeftMenuBetHistoryArray = [
 const BetHistory = ({isAuthenticated}) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
+    const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
+
     const [page, setPage] = useState(0)
     const [checkedState, setCheckedState] = useState(
         new Array(3).fill(false)
@@ -160,7 +162,7 @@ const BetHistory = ({isAuthenticated}) => {
 
                 <Route path="/mypage/bet-history/all/live-casino">
                 <>
-                    <LiveCasinoBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                    <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
                     <div style={{marginTop: '1.25rem'}}>
                         <Pagination page={page} setPage={setPage}/>
                     </div>
