@@ -1,8 +1,9 @@
 import React from 'react'
 import PopupControls from 'components/popups/PopupControls';
 import LiveCasinoHistoryDetailPopup from '../myPage/popups/LiveCasinoHistoryDetailPopup';
+import CouponGiftPopup from 'components/popups/CouponGiftPopup.jsx'
 
-const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wrapButtonText = false, setPopupOpen, cardHeight = '33.75rem', isButtonGradient = true, hasLeftInput = true, wideDetailButton = false, hasButton = true, containerBackground}) => {
+const HistoryTable = ({tableData, checkedState, isCouponUsage = false, setCheckedState, isPopupOpen, wrapButtonText = false, setPopupOpen, cardHeight = '33.75rem', isButtonGradient = true, hasLeftInput = true, wideDetailButton = false, hasButton = true, containerBackground}) => {
 
     function Cells({ cards }) {
         const detailButton =  (
@@ -89,7 +90,11 @@ const HistoryTable = ({tableData, checkedState, setCheckedState, isPopupOpen, wr
                 {isButtonGradient ? 
                     hasButton && (<div className="text-center">
                     <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent :detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                        <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
+                        {isCouponUsage ? (
+                            <CouponGiftPopup setPopupOpen={setPopupOpen} />
+                        ): (
+                            <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
+                        )}
                     </PopupControls> 
                 </div>) 
                 : hasButton &&
