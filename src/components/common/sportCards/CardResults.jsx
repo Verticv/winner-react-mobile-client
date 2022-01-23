@@ -18,7 +18,7 @@ const CardResults = ({
   smallCard=false,
   withoutRadius
 }) => (
-  <div className={`flex items-center w-full p-3 pr-0 bg-gray-fefefe ${withoutRadius ? '' : 'rounded-lg'} border-b border-gray-dddddd`}>
+  <div style={{borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem'}} className={`flex items-center w-full p-3 pr-0 bg-gray-fefefe`}>
       <div className="flex">
           <button 
               style={{
