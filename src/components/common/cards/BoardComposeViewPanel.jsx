@@ -106,8 +106,8 @@ const BoardComposeViewPanel = ({
                 <div key={card.id} style={{borderRadius:"1em", margin: '1.875rem', paddingBottom: '2.0625rem', marginTop: data?.length -1 === index ? '3.75rem': '1.875rem'}} className="shadow-subNavbar bg-gray-fafafa">
                     <TableHeader />
                     <div style={{padding: '0 1rem' }} className="w-full">
-                        <div className="w-full rounded-lg overflow-hidden">
-                            <div className='rounded-lg shadow-plain10 w-full'>
+                        <div className="w-full rounded-lg">
+                            <div className='rounded-lg w-full'>
                                 <CardHeader flag = {card.flag} name = {card.name} date = '2021-06-29 15:45' />
                                 <CardResults 
                                     bet = {card.bet}

@@ -13,7 +13,7 @@ const CardHeader = ({flag = 'us', name = 'MLS', date = '2021-06-29 15:45'}) => {
   }
   const headerFlag = flags[flag]
   return (
-    <div style={{height: '7.5rem'}} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-8">
+    <div style={{height: '7.5rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem'}} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-8">
       <div className="flex items-center">
           <img style={{width: '3.9375rem', height: '3.9375rem'}} src={FootballIcon} alt="" />
           <img style={{width: '5.625', height: '3.3125rem', marginLeft: '1.0625rem'}} src={headerFlag} alt="" />
