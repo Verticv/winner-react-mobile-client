@@ -20,6 +20,14 @@ const FreeBoardView2 = () => {
                         style={{width: "60.9375rem", padding: '3.5625rem', paddingTop: '2.6875rem', paddingLeft: '3.75rem', paddingRight: '6.5625rem', resize: "none", lineHeight: '1.3', WebkitTextStroke:"0.2px"}}
                         className="place-color-grey overflow-hidden outline-none w-full font-spoqa tracking-tight placeholder-gray-r8f8f8f"
                         placeholder={placeholder}
+                        onFocus={() => {
+                            const menu = document.querySelector('#main-menu');
+                            menu.style.marginBottom  = '-14.075rem'
+                        }}
+                        onBlur={() => {
+                            const menu = document.querySelector('#main-menu');
+                            menu.style.marginBottom = '0'
+                        }}
                     />
 
                     <button style={{borderRadius:"1.625rem", width: '10.5625rem', padding: '1px'}} className="right-0 absolute flex items-center justify-center h-full bg-blue-r013d74 hover:opacity-75">

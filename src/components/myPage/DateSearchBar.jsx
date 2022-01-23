@@ -30,11 +30,29 @@ const DateSearchBar = ({
                     <div className="space-x-5px">
                         <input 
                             placeholder="리그선택"
-                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" 
+                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
+                            onFocus={() => {
+                                const menu = document.querySelector('#main-menu');
+                                menu.style.marginBottom  = '-14.075rem'
+                            }}
+                            onBlur={() => {
+                                const menu = document.querySelector('#main-menu');
+                                menu.style.marginBottom = '0'
+                            }} 
                         />
                         <input
                             placeholder="팀명검색" 
-                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
+                            className="place-color-grey pt-px mt-px placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
+                            onFocus={() => {
+                                const menu = document.querySelector('#main-menu');
+                                menu.style.marginBottom  = '-14.075rem'
+                            }}
+                            onBlur={() => {
+                                const menu = document.querySelector('#main-menu');
+                                menu.style.marginBottom = '0'
+                            }}
+                            />
+                                                            
                     </div>
                 )}
 
@@ -49,7 +67,16 @@ const DateSearchBar = ({
                         <input
                             style={{height: '6.75rem', width: '34.06rem', fontSize: '2.625rem', marginRight: '1.875rem', paddingLeft: '1.75rem', paddingRight: '1.875rem'}}
                             placeholder="팀명검색" 
-                            className="place-color-grey placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c" />
+                            className="place-color-grey placeholder:text-gray-r7b7b7b flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c"
+                            onFocus={() => {
+                                const menu = document.querySelector('#main-menu');
+                                menu.style.marginBottom  = '-14.075rem'
+                            }}
+                            onBlur={() => {
+                                const menu = document.querySelector('#main-menu');
+                                menu.style.marginBottom = '0'
+                            }}
+                            />
                     </div>
                 )}
 
@@ -136,6 +163,14 @@ const DateSearchBar = ({
                                 style={{width: '41.625rem', height: '6.9375rem', fontSize: '2.625rem', paddingLeft: '2.25rem'}}
                                 className="mr-3.5 border border-gray-dddddd place-color-grey rounded-2xl placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"
                                 placeholder="아이디"
+                                onFocus={() => {
+                                    const menu = document.querySelector('#main-menu');
+                                    menu.style.marginBottom  = '-14.075rem'
+                                }}
+                                onBlur={() => {
+                                    const menu = document.querySelector('#main-menu');
+                                    menu.style.marginBottom = '0'
+                                }}
                             />
                         </div>
                     )}

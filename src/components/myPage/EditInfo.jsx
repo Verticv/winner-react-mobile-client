@@ -54,9 +54,17 @@ const EditInfo = () => {
                                 <input 
                                     className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                     style={{fontSize: '2.625rem', marginBottom: '1.1875rem'}}
-                                    onFocus={(e) => setSelectedInput(0)}
-                                        onBlur={(e) => setSelectedInput(false)}
-                                        type="password"
+                                    onFocus={(e) => {
+                                        const menu = document.querySelector('#main-menu');
+                                        menu.style.marginBottom  = '-14.075rem'
+                                        setSelectedInput(0)
+                                    }}
+                                    onBlur={(e) => {
+                                        const menu = document.querySelector('#main-menu');
+                                        menu.style.marginBottom = '0'
+                                        setSelectedInput(false)
+                                    }}
+                                    type="password"
                                 />
                                 <div style={{height: '0.1875rem'}} className={`${selectedInput === 0 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                             </div>
@@ -75,9 +83,17 @@ const EditInfo = () => {
                                 <input 
                                     className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                     style={{fontSize: '2.625rem', marginBottom: '1.1875rem'}}
-                                    onFocus={(e) => setSelectedInput(1)}
-                                        onBlur={(e) => setSelectedInput(false)}
-                                        type="password"
+                                    onFocus={(e) => {
+                                        const menu = document.querySelector('#main-menu');
+                                        menu.style.marginBottom  = '-14.075rem'
+                                        setSelectedInput(1)
+                                    }}
+                                    onBlur={(e) => {
+                                        const menu = document.querySelector('#main-menu');
+                                        menu.style.marginBottom = '0'
+                                        setSelectedInput(false)
+                                    }}
+                                    type="password"
                                 />
                                 <div style={{height: '0.1875rem'}} className={`${selectedInput === 1 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                             </div>
@@ -95,10 +111,18 @@ const EditInfo = () => {
                                 <input 
                                     className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                     style={{fontSize: '2.625rem', marginBottom: '1.1875rem'}}
-                                    onFocus={(e) => setSelectedInput(2)}
-                                        onBlur={(e) => setSelectedInput(false)}
-                                        type="password"
-                                />
+                                    onFocus={(e) => {
+                                        const menu = document.querySelector('#main-menu');
+                                        menu.style.marginBottom  = '-14.075rem'
+                                        setSelectedInput(2)
+                                    }}
+                                    onBlur={(e) => {
+                                        const menu = document.querySelector('#main-menu');
+                                        menu.style.marginBottom = '0'
+                                        setSelectedInput(false)
+                                    }}
+                                    type="password"
+                            />
                                 <div style={{height: '0.1875rem'}} className={`${selectedInput === 2 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                             </div>
                         </div>
@@ -114,9 +138,17 @@ const EditInfo = () => {
                                 <input 
                                     className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                     style={{fontSize: '2.625rem', marginBottom: '1.1875rem'}}
-                                    onFocus={(e) => setSelectedInput(2)}
-                                        onBlur={(e) => setSelectedInput(false)}
-                                        type="password"
+                                    onFocus={(e) => {
+                                        const menu = document.querySelector('#main-menu');
+                                        menu.style.marginBottom  = '-14.075rem'
+                                        setSelectedInput(3)
+                                    }}
+                                    onBlur={(e) => {
+                                        const menu = document.querySelector('#main-menu');
+                                        menu.style.marginBottom = '0'
+                                        setSelectedInput(false)
+                                    }}
+                                    type="password"
                                 />
                                 <div style={{height: '0.1875rem'}} className={`${selectedInput === 2 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                             </div>

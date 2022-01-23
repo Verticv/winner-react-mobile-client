@@ -23,6 +23,19 @@ function App() {
 
     const { pathname } = useLocation();
 
+    useEffect(() => {
+        const datePickerInput = document.querySelectorAll('.react-datepicker__input-container input')
+        const menu = document.querySelector('#main-menu');
+        datePickerInput.forEach((input) => {
+            input.addEventListener('focus', () => {
+                menu.style.marginBottom  = '-14.075rem'
+            });
+            input.addEventListener('blur', () => {
+                menu.style.marginBottom = '0'
+            });
+        })
+    }, [])
+
     // useEffect(() => {
     //     window.addEventListener('scroll', () => {
     //         const menu = document.querySelector('#main-menu')

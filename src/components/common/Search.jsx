@@ -92,6 +92,14 @@ const Search = () => {
                 style={{fontSize: '2.8125rem', paddingLeft: '1.5625rem'}}
                 className="rounded-2xl placeholder-gray-r7c7c7c w-full text-gray-r393e41 font-spoqaMedium outline-none h-full justify-between items-center tracking-tight"
                 placeholder="검색어를 입력해 주세요"
+                onFocus={() => {
+                    const menu = document.querySelector('#main-menu');
+                    menu.style.marginBottom  = '-14.075rem'
+                }}
+                onBlur={() => {
+                    const menu = document.querySelector('#main-menu');
+                    menu.style.marginBottom = '0'
+                }}
             />
             <button style={{width: '6.65rem', height: '6.65rem', marginTop: '-0.1875rem', marginRight: '-0.1875rem'}} className="flex items-center justify-center h-full rounded-2xl bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 flex-shrink-0 hover:opacity-75">
                 <img style={{width: '3.125rem', height: '3.125rem'}} src={SearchIcon} alt=""/>

@@ -45,7 +45,7 @@ const PointsApplyPopup = ({setPopupOpen}) => {
                             style={{height: '6.75rem', width: '36.625rem', fontSize: '2.8125rem', padding: '0 1.875rem'}}
                             className="flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-spoqaMedium tracking-tight text-gray-r8c8c8c" 
                             value={inputValue !==null ? nf.format(inputValue) : ""}
-                            type='number'
+                            type = "tel"
                             onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
                             onKeyPress={(event) => {
                                 if (!/[0-9]/.test(event.key)) {
