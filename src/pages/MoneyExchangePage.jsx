@@ -24,8 +24,8 @@ import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
 
 // currency exchange
 const tabsArray = [
-    { text: "충전신청", icon: Icon1, id: 0, path: "/mypage/money/exchange/currency" },
-    { text: "충전내역", icon: Icon2, id: 1, path: "/mypage/money/exchange/currency/history" },
+    { text: "환전신청", icon: Icon1, id: 0, path: "/mypage/money/exchange/currency" },
+    { text: "환전내역", icon: Icon2, id: 1, path: "/mypage/money/exchange/currency/history" },
 ];
 
 const LeftMenuSubArray = [
