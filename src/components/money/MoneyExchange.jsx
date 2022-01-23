@@ -5,7 +5,11 @@ import WarningMessage from '../common/WarningMessage'
 
 const MoneyExchange = () => {
     const [inputValue, setInputValue] = useState(null)
+    const [secondInputValue, setSecondInputValue] = useState(null)
+
     const [inputClicked, setInputClicked] = useState(false)
+    const [secondInputClicked, SecondInputClicked] = useState(false)
+
     var nf = new Intl.NumberFormat();
 
 
@@ -63,8 +67,16 @@ const MoneyExchange = () => {
                                 placeholder="직접 입력시 숫자만 입력해 주세요."
                                 value={inputValue !==null ? nf.format(inputValue) : ""}
                                 onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
-                                onFocus={() => setInputClicked(true)}
-                                onBlur={() => setInputClicked(false)}
+                                onFocus={() => {
+                                    const menu = document.querySelector('#main-menu');
+                                    menu.style.marginBottom  = '-14.075rem'
+                                    setInputClicked(true)
+                                }}
+                                onBlur={() => {
+                                    const menu = document.querySelector('#main-menu');
+                                    menu.style.marginBottom = '0'
+                                    setInputClicked(false)
+                                }}
                                 onKeyPress={(event) => {
                                     if (!/[0-9]/.test(event.key)) {
                                         event.preventDefault();
@@ -174,10 +186,18 @@ const MoneyExchange = () => {
                                 className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                 style={{fontSize: '2.625rem', marginBottom: '0.9375rem'}}
                                 placeholder="비밀번호를 입력하세요."
-                                value={inputValue !==null ? nf.format(inputValue) : ""}
-                                onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
-                                onFocus={() => setInputClicked(true)}
-                                onBlur={() => setInputClicked(false)}
+                                value={secondInputValue !==null ? nf.format(secondInputValue) : ""}
+                                onChange={e => setSecondInputValue(e.target.value.replace(/,/g, ''))}
+                                onFocus={() => {
+                                    const menu = document.querySelector('#main-menu');
+                                    menu.style.marginBottom  = '-14.075rem'
+                                    SecondInputClicked(true)
+                                }}
+                                onBlur={() => {
+                                    const menu = document.querySelector('#main-menu');
+                                    menu.style.marginBottom = '0'
+                                    SecondInputClicked(false)
+                                }}
                                 onKeyPress={(event) => {
                                     if (!/[0-9]/.test(event.key)) {
                                         event.preventDefault();
@@ -185,7 +205,7 @@ const MoneyExchange = () => {
                                 }}
                                 type = "tel"
                             />
-                            <div style={{height: '0.1875rem'}} className={`${inputClicked ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
+                            <div style={{height: '0.1875rem'}} className={`${secondInputClicked ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                         </div>
                     </div>
             </div>

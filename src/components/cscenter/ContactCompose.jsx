@@ -65,6 +65,14 @@ const ContactCompose = () => {
                     <input 
                         className="bg-white outline-none w-full h-full font-spoqa tracking-tight place-color-grey-1"
                         placeholder="제목을 입력하세요."
+                        onFocus={() => {
+                            const menu = document.querySelector('#main-menu');
+                            menu.style.marginBottom  = '-14.075rem'
+                        }}
+                        onBlur={() => {
+                            const menu = document.querySelector('#main-menu');
+                            menu.style.marginBottom = '0'
+                        }}
                     />
                 </div>
 

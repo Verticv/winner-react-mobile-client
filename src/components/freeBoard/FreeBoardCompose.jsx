@@ -28,6 +28,14 @@ const FreeBoardCompose = () => {
                     <input 
                         className="bg-gray-fafafa outline-none w-full h-full font-spoqaMedium tracking-tight place-color-grey-1"
                         placeholder="제목을 입력하세요."
+                        onFocus={() => {
+                            const menu = document.querySelector('#main-menu');
+                            menu.style.marginBottom  = '-14.075rem'
+                        }}
+                        onBlur={() => {
+                            const menu = document.querySelector('#main-menu');
+                            menu.style.marginBottom = '0'
+                        }}
                     />
                 </div>
 
@@ -48,6 +56,14 @@ const FreeBoardCompose = () => {
                         style={{resize: "none"}}
                         className="outline-none w-full h-full font-spoqa tracking-tight placeholder-gray-r454545 place-color-grey-1"
                         placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
+                        onFocus={() => {
+                            const menu = document.querySelector('#main-menu');
+                            menu.style.marginBottom  = '-14.075rem'
+                        }}
+                        onBlur={() => {
+                            const menu = document.querySelector('#main-menu');
+                            menu.style.marginBottom = '0'
+                        }}
                     />
                 </div>
             </div>
