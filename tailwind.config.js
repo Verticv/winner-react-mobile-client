@@ -260,6 +260,7 @@ module.exports = {
         plain8: '0 4px 3.5px 0px rgba(0, 0, 0, 0.15)',
         plain9: '2px 2px 2px 0px rgba(0, 0, 0, 0.3)',
         plain10: '0 1px 0.9px 0px rgba(0, 0, 0, 0.15)',
+        plain11: '0 1px 1.9px 0px rgba(0, 0, 0, 0.15)',
         subNavbar: '0 0px 6px 0 rgba(0, 0, 0, 0.2)',
         popup: '0 6px 10px 4px rgba(0, 0, 0, 0.3)',
         glow: '0 0 3px 2px rgba(0, 0, 0, 0.1)',
