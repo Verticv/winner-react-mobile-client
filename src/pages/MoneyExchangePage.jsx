@@ -75,7 +75,7 @@ const MoneyExchangePage = ({isAuthenticated, setAuthenticated}) => {
                 <div className="w-full z-30 flex flex-col items-center">
                     <NoticeBanner />
                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                    <HomePageTopBanner pageTitle='베팅내역' />
+                    <HomePageTopBanner pageTitle='머니환전' />
                 </div>
     
                 <div className="flex flex-col items-start limit:items-center w-full h-full">
