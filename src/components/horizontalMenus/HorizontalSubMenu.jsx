@@ -47,8 +47,6 @@ const HorizontalSubMenu = ({
                             </div>
                         </div>
                     </button>
-
-                    {console.log(`items?.length - 1 === index`, items?.length - 1 === index)}
                     {items?.length - 1 === index && (
                         <div style={{minWidth: '0.8rem', height: '6.375rem'}}></div>
                     )}
