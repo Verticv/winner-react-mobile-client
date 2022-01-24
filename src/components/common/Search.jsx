@@ -102,7 +102,7 @@ const Search = () => {
                 }}
             />
             <button style={{width: '6.65rem', height: '6.65rem', marginTop: '-0.1875rem', marginRight: '-0.1875rem'}} className="flex items-center justify-center h-full rounded-2xl bg-gradient-to-b from-gray-r555555 via-gray-r555555 to-gray-r333333 flex-shrink-0 hover:opacity-75">
-                <img style={{width: '3.125rem', height: '3.125rem'}} src={SearchIcon} alt=""/>
+                <img style={{width: '2.6rem', height: '2.6rem'}} src={SearchIcon} alt=""/>
             </button>
         </div>
     </div>

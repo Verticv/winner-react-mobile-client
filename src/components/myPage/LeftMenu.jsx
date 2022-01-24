@@ -6,7 +6,7 @@ import ArrowRightWhite from '../../images/newImages/mainPage/icons/right-arrow-w
 import { useHistory } from 'react-router-dom'
 import PopupControls from '../popups/PopupControls'
 import ReauthenticatePopup from 'components/popups/ReauthenticatePopup'
-import { getCookie } from '../../utils'
+import { getCookie, setCookie } from '../../utils'
 
 const LeftMenu = ({
     selectedTab,
@@ -130,7 +130,13 @@ const LeftMenu = ({
                                     ? "bg-gradient-to-br from-blue-gradLight to-blue-gradDark shadow-plain2" 
                                     : ""
                                 } flex w-full h-full items-center focus:text-white rounded-full focus:bg-gradient-to-l hover:opacity-75 focus:from-blue-gradDark focus:to-blue-r2088f0`} 
-                                onClick={(e) => buttonPressed(item.text, item.path)}
+                                onClick={(e) => {
+                                    if (item.text === '총판페이지') {
+                                        setCookie('previousUrl', '/distributor-page');
+                                        setActiveButton('/distributor-page')
+                                    }
+                                    buttonPressed(item.text, item.path)
+                                }}
                                 onMouseEnter={() => mouseHover(item.path)}
                                 onMouseLeave={() => mouseLeave(item.path)}
                                 onFocus={(e) => {
