@@ -111,5 +111,7 @@ body {
   .common-button > div {
     width: calc(100% - 1.5px); 
     height: calc(100% - 1.5px);
+    padding: 1.5rem;
+    padding-top: 2rem;
   }
  }

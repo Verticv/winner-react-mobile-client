@@ -93,7 +93,7 @@ const MoneyExchange = () => {
 
 
 
-                <div style={{marginTop: '1.875rem', marginBottom: '3.8125rem'}} className="">
+                <div style={{margin: '0 0.9375rem', marginTop: '1.875rem', marginBottom: '3.8125rem'}} className="">
                     <div style={{marginBottom: '0.9375rem'}} className="flex w-full h-full items-center justify-between">
                         <button
                             style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
@@ -180,7 +180,9 @@ const MoneyExchange = () => {
                     
                 </div>
                     <div style={{marginTop: '3.8125rem'}} className="flex">
-                        <Title text="출금 비밀번호" />
+                        <div style={{paddingLeft: '1.125rem'}}>
+                            <Title text="출금 비밀번호" />
+                        </div>
                         <div className="w-full">
                             <input 
                                 className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"

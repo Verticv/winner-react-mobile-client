@@ -815,7 +815,7 @@ const GiftButton = (
 
 const CouponUsage = ({isAuthenticated, setAuthenticated}) => {
 
-    const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
+    const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
     
     const CouponTitle = ({text = '사용 가능한 쿠폰', number = '10', numberColor = '#ed2f59'}) => {
         return (
