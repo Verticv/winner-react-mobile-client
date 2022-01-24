@@ -27,7 +27,7 @@ const SortBy = ({ children, options, value, onChange, onClick }) => (
   </div>
 );
 
-const Dropdown = ({options, children}) => {
+const Dropdown = ({options, children, labelStyle}) => {
   const [sortValue, setSortValue] = useState(options?.[0])
 
   const onChange = e => setSortValue(e.currentTarget.value);
@@ -41,7 +41,7 @@ const Dropdown = ({options, children}) => {
         onClick={() => console.log('on click!')}
       >
         <div className="flex w-full items-center justify-between">
-          <div>{sortValue}</div>
+          <div style={labelStyle}>{sortValue}</div>
           {children}
         </div>
         {/* <FontAwesomeIcon icon={faSort} /> */}
