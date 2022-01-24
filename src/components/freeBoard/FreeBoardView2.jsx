@@ -66,13 +66,13 @@ const FreeBoardView2 = () => {
                 </div>
             </div>
             <div style={{marginTop: '1.1875rem', marginLeft: '4.125rem'}} className='flex'>
-                <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                    <div className={`${isOneButton ? "text-gray-r7b7b7b" : "text-red-d52e2e"} font-spoqaMedium flex items-center justify-center`}>{isOneButton ? "답글" : "수정"}</div>
-                </div>
+                <button style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                    <div className={`${isOneButton ? "text-gray-r7b7b7b" : "text-red-d52e2e"} font-spoqaMedium flex items-center justify-center mt-2`}>{isOneButton ? "답글" : "수정"}</div>
+                </button>
                 { !isOneButton && (
-                    <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                        <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">삭제</div>
-                    </div>
+                    <button  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                        <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2">삭제</div>
+                    </button>
                 ) }
             </div>
         </div>
@@ -128,7 +128,7 @@ const FreeBoardView2 = () => {
             </div>
 
             <div style={{margin: '3.75rem 0'}} className="w-full flex justify-end">
-                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-red-cb4343 hover:opacity-75">
+                <button style={{padding: '1px', height: '7.3125rem', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-brown-r7e3636 hover:opacity-75">
                     <div className="flex items-center justify-center h-full w-full rounded-2xl border border-red-f36576 bg-gradient-to-b from-red-f03a50 via-red-e2314f to-red-cf254d cursor-pointer">
                         <span className="font-spoqaMedium tracking-tight text-white">수정하기</span>
                     </div>
@@ -145,7 +145,7 @@ const FreeBoardView2 = () => {
                 <div  className="flex items-center justify-between">
                     <p style={{fontSize: '2.625rem', marginTop: '1rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545">댓글 작성하기</p>
                     <div  style={{width: '10.375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.4375rem'}} className='flex justify-center mt-3 align-center rounded-full border-b border-gray-b7b7b7'>
-                        <div style={{marginRight: '0.6875rem'}} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">댓글</div>
+                        <div style={{marginRight: '0.6875rem'}} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b mt-1">댓글</div>
                         <div className="text-red-d52e2e font-roboto flex items-center justify-center">2</div>
                     </div>
                 </div>
@@ -170,12 +170,12 @@ const FreeBoardView2 = () => {
                         <p style={{fontSize: '2.8125rem', paddingLeft: '3.6875rem'}} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                     </div>
                     <div style={{marginBottom: '1.125rem'}} className='flex'>
-                        <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">수정</div>
-                        </div>
-                        <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">삭제</div>
-                        </div>
+                        <button  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2">수정</div>
+                        </button>
+                        <button  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2">삭제</div>
+                        </button>
                     </div>
                 </div>
 
@@ -202,12 +202,12 @@ const FreeBoardView2 = () => {
                         <p style={{fontSize: '2.8125rem', marginLeft: '3.6875rem'}} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                     </div>
                     <div style={{marginBottom: '1.125rem'}} className='flex'>
-                        <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">수정</div>
-                        </div>
-                        <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-1.5">삭제</div>
-                        </div>
+                        <button  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2">수정</div>
+                        </button>
+                        <button  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                            <div className="text-red-d52e2e font-spoqaMedium flex items-center justify-center mt-2">삭제</div>
+                        </button>
                     </div>
                 </div>
 
@@ -232,9 +232,9 @@ const FreeBoardView2 = () => {
                             <p style={{fontSize: '2.8125rem', paddingLeft: '3.0625rem'}} className="font-spoqa text-gray-r585858">두개의 이벤트 모두 참여하였습니다</p>
                         </div>
                         <div style={{marginBottom: '1.125rem'}} className='flex'>
-                            <div  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
-                                <div className="text-gray-r7b7b7b font-spoqaMedium flex items-center justify-center">답글</div>
-                            </div>
+                            <button  style={{width: '8.9375rem', height: '4.4375rem', borderWidth: '0.1875rem', fontSize: '2.25rem', marginRight: '0.75rem'}} className='flex justify-center align-center rounded-lg border-b border-gray-b7b7b7'>
+                                <div className="text-gray-r7b7b7b font-spoqaMedium flex items-center justify-center mt-2">답글</div>
+                            </button>
                         </div>
                     </div>
 
