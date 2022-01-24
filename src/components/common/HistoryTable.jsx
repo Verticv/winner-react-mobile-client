@@ -9,7 +9,7 @@ const HistoryTable = ({tableData, checkedState, isCouponUsage = false, setChecke
         const detailButton =  (
             <button style={{width: '10.875rem', height: '10.875rem'}} className="common-button flex items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75">
                 <div className="flex w-full h-full items-center justify-center flex-wrap bg-black rounded-2xl p-10 border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                    <span style={{fontSize: '2.7rem', lineHeight: '1.1'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white">상세 보기</span>                    
+                    <span style={{fontSize: '2.7rem', lineHeight: '1.1'}} className="w-full font-font-spoqaMedium tracking-tight text-white">상세 보기</span>                    
                 </div>
             </button>
         )

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import HorizontalMenu1 from '../horizontalMenus/HorizontalMenu1'
 import AccountProfileComponent from 'components/common/AccountProfileComponent'
 import LeftMenu from "components/myPage/LeftMenu";
-import HorizontalSubMenu from 'components/horizontalMenus/HorizontalSubMenu'
+import HorizontalSubMenu from 'components/horizontalMenus/HorizontalSubMenu2'
 import Icon1 from '../../images/newImages/mainPage/sports-1.png'
 import Icon2 from '../../images/newImages/mainPage/sports-2.png'
 import HomePageTopBanner from '../common/HomePageTopBanner'
@@ -95,7 +95,7 @@ const GameResults = ({isAuthenticated}) => {
                     <>
                     <div id='scroll-wrapper1' style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
-                            <HorizontalSubMenu isSameWidth itemsArray={tabsSubArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                            <HorizontalSubMenu selectedTab={selectedTab} isSameWidth itemsArray={tabsSubArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                         </div>
                     </div>
 

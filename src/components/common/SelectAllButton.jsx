@@ -54,7 +54,7 @@ const SelectAllButton = (
                     <button 
                         style={{height: '7.3125rem'}}
                         className="common-button flex flex-1 items-center justify-center rounded-2xl bg-blue-r0070d9 hover:opacity-75"
-                        onClick={() => allSelectButtonPressed()}
+                        // onClick={() => allSelectButtonPressed()}
                     >
                         <div 
                             className="flex items-center justify-center h-full w-full rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db"

@@ -22,7 +22,10 @@ const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attac
                     <SportsBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} attachedArray={attachedArray} setAttachedArray={setAttachedArray} setPopupOpen={setPopupOpen}/>
                 </div>
                 
-                <SelectAllButton btn2Text='내역올리기' buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+                <div style={{marginTop: '3.75rem'}}>
+                    <SelectAllButton btn2Text='내역올리기' buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+                </div>
+
             </div>
             
         </div>

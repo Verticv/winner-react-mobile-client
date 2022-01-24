@@ -16,7 +16,8 @@ const CardResults = ({
   hasUp = false,
   hasDown = false,
   smallCard=false,
-  withoutRadius
+  withoutRadius,
+  smallContent = false
 }) => (
   <div style={{borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem'}} className={`flex items-center w-full p-3 pr-0 bg-gray-fefefe shadow-plain11`}>
       <div className="flex">
@@ -94,7 +95,7 @@ const CardResults = ({
                       <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight">{stat3}</span>
                       {hasDown && <img style={{marginLeft: '0.4375rem'}} className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
                   </div>
-                  <span style={{fontSize: '2.625rem', maxWidth: '17.875rem'}} className="truncate truncate-override font-spoqaMedium tracking-tight text-right">{team2}</span>
+                  <span style={{fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem'}} className="truncate truncate-override font-spoqaMedium tracking-tight text-right">{team2}</span>
               </div>
           </button>
       </div>

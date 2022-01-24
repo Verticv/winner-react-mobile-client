@@ -1,15 +1,15 @@
 import CouponGiftPopupTable from 'components/myPage/tables/CouponGiftPopupTable'
 import React from 'react'
 import CloseIcon from '../../images/popups/close.png'
-import Step1 from '../../images/popups/step1.png'
-import Step2 from '../../images/popups/step2.png'
+import Step1 from '../../images/newImages/step-1.png'
+import Step2 from '../../images/newImages/step-2.png'
 import './Scrollbars.css'
 
 const CouponGiftPopup = ({setPopupOpen}) => {
     return (
         <div style={{height:"100vh", width: '77.625rem' ,borderTopLeftRadius: '4rem', borderTopRightRadius: '4rem'}} className="flex flex-col rounded-lg overflow-hidden">
             <div style={{height: '9.5rem'}} className="relative bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
-                <label style={{fontSize: '3.75rem'}} className="font-spoqaBold text-white tracking-tight">베팅내역</label>
+                <label style={{fontSize: '3.75rem'}} className="font-spoqaBold text-white tracking-tight">쿠폰 선물하기</label>
                 <button style={{marginRight: '4.625rem'}} className="absolute right-0 cursor-pointer z-20" onClick={() => setPopupOpen(false)}>
                     <img style={{width: '3.1875rem', height: '3.1875rem'}} src={CloseIcon} alt="close_icon" />
                 </button>
@@ -33,7 +33,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                     <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r7c7c7c">쿠폰받을 회원을 선택하세요.</span>
                 </div>
 
-                <div style={{borderRadius:"0.5rem"}} className="w-full rounded-2xl shadow-subNavbar overflow-hidden">
+                <div style={{borderRadius:"1.2rem"}} className="w-full rounded-2xl shadow-subNavbar overflow-hidden">
                     <CouponGiftPopupTable />
                 </div>
 

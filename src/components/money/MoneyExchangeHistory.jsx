@@ -8,7 +8,7 @@ import ScrollButton from 'components/common/ScrollButton'
 const tableData = [
     [          
         {
-            0: {충전금액: '12,000'},
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -23,7 +23,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -38,7 +38,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -53,7 +53,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -68,7 +68,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -83,7 +83,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -98,7 +98,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -113,7 +113,7 @@ const tableData = [
     ],
     [          
         {
-            0: {충전금액: '12,000'},
+            0: {환전금액: '12,000'},
         },
         {
             0: {신청일시: "2021-06-30 14:45"}
@@ -136,7 +136,7 @@ const MoneyExchangeHistory = () => {
     // const [passwordValue, setPasswordValue] = useState("")
     // const [inputClicked, setInputClicked] = useState(null)
     const [isPopupOpen, setPopupOpen] = useState(true)
-    const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
+    const [checkedState, setCheckedState] = useState(new Array(8).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
     // var nf = new Intl.NumberFormat();
 

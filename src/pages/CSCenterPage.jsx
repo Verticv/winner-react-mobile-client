@@ -233,7 +233,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
                                     <div className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                                         <div className=" flex flex-shrink-0 w-full">
-                                        <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                                            <HorizontalMenu1 withSmallMarginTop={true} itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                                         </div>
                                     </div>
                                 </div>

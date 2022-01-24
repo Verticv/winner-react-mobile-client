@@ -14,7 +14,7 @@ import { Route } from 'react-router'
 // import Icon2 from '../images/money/leftMenu/icon_2.png'
 // import IconHighlight1 from '../images/money/leftMenu/icon_1_highlight.png'
 // import IconHighlight2 from '../images/money/leftMenu/icon_2_highlight.png'
-import Icon1 from '../images/newImages/mainPage/Application-for-currency-exchange.png'
+import Icon1 from '../images/newImages/exchange.png'
 import Icon2 from '../images/newImages/mainPage/Recharge-application3.png'
 import subIcon1 from '../images/newImages/mainPage/money/3.png';
 import subIcon2 from '../images/newImages/mainPage/money/4.png';

@@ -36,7 +36,7 @@ const HistoryMenu = ({
                         ? "bg-blue-r0056a6" 
                         : "bg-white border border-gray-b7b7b7"
                     } w-1/2 rounded-full font-spoqaMedium`}
-                    style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
+                    style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path && !isActive ? '0.1875rem' : ''}`}} 
                     key={item.id} 
                     onClick={() => {
                         history.push(item.path)

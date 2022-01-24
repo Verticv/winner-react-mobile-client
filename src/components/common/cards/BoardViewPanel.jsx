@@ -39,6 +39,7 @@ const BoardViewPanel = ({
                                         hasUp={card.hasUp}
                                         hasDown={card.hasDown}
                                         smallCard
+                                        smallContent
                                     />
                                 </div>
                                 <CardContent id={card.id} withButtons={false} withInput={false} withCancelButton={true} cancelHandler={handleRemoveItem} checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
