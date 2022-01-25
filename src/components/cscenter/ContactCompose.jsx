@@ -1,48 +1,10 @@
-import React, { useState } from 'react'
-import MobileDropDownControls from 'components/dropdowns/MobileDropDownControls';
+import React from 'react'
 import DownArrowIcon from '../../images/newImages/search-arrow-down.png'
+import Dropdown from 'components/common/Dropdown/Dropdown';
 
 const ContactCompose = () => {
 
-    const [selectedCarrier, setSelectedCarrier] = useState("선택")
-    const [isDropdownOpen, setDropdownOpen] = useState(true)
-    const dropDownCellClass = "flex w-120px h-30px py-2px bg-white items-center px-14px"
-
-    const dropdownButton = (
-        <div style={{width: '26.25rem', height: '6.75rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-2xl border border-gray-dddddd group">
-            <input  className="w-0 text-16px"/>
-            <div
-                className="flex w-full text-gray-r393e41 font-spoqaMedium text-14px outline-none h-full justify-between items-center tracking-tight" 
-            >
-                <label style={{fontSize: '2.8125rem', marginLeft: '1.6875rem'}} className="cursor-pointer group-hover:text-black">{selectedCarrier}</label>
-                <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" /> 
-            </div>
-        </div>
-    )
-
-    const searchDropdown = (
-        <div style={{width: '26.25rem', marginTop: '1.5rem'}} className="flex flex-col items-center justify-center overflow-hidden bg-white rounded-2xl border border-gray-dddddd text-gray-r393e41 font-spoqaMedium text-14px tracking-tight">
-            <button style={{width: '26.25rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("제목")
-                setDropdownOpen(false)
-            }}>
-                제목
-            </button>
-            <button style={{width: '26.25rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("본문")
-                setDropdownOpen(false)
-            }}>
-                본문
-            </button>
-            <button style={{width: '26.25rem', height: '6.75rem', fontSize: '2.8125rem'}} className={dropDownCellClass} onClick={() => {
-                setSelectedCarrier("작성자")
-                setDropdownOpen(false)
-            }}>
-                작성자
-            </button>
-        </div>
-    )
-
+    const carrierOptions = ["제목", "본문", "작성자"]
     return (
         <div style={{padding: '1.875rem'}}>
             
@@ -50,14 +12,16 @@ const ContactCompose = () => {
 
                 <div style={{height: '9.1875rem', paddingLeft: '2.8125rem',  borderBottomWidth: '0.1875rem'}} className="w-full bg-gray-fafafa border-b border-gray-ededed flex items-center">
 
-                    <MobileDropDownControls 
-                        buttonChild={dropdownButton} 
-                        isDropdownOpen={isDropdownOpen} 
-                        setDropdownOpen={setDropdownOpen}
-                        dropdownContainerStyle={{marginTop: '6.75rem'}}
+                <div style={{width: '26.25rem', height: '6.75rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-2xl border border-gray-dddddd group">
+                    <div
+                        style={{ width:'26.25rem'}}
+                        className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight" 
                     >
-                        {searchDropdown}
-                    </MobileDropDownControls>
+                        <Dropdown labelClasses="group-hover:text-black" labelStyle={{marginLeft: '1.6875rem', color: '#393e41'}} options={carrierOptions} >
+                            <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" /> 
+                        </Dropdown>
+                    </div>
+                </div>
 
                 </div>
 

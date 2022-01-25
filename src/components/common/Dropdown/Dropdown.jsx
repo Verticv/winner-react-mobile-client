@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faSort } from "@fortawesome/free-solid-svg-icons";
 
 import "./style.css";
 
-// const options = ["A-Z", "Z-A", "Newest", "Most popular"];
 
 const SortBy = ({ children, options, value, onChange, onClick }) => (
   <div className="container">
@@ -27,7 +24,7 @@ const SortBy = ({ children, options, value, onChange, onClick }) => (
   </div>
 );
 
-const Dropdown = ({options, children, labelStyle}) => {
+const Dropdown = ({options, children, labelStyle, labelClasses}) => {
   const [sortValue, setSortValue] = useState(options?.[0])
 
   const onChange = e => setSortValue(e.currentTarget.value);
@@ -41,10 +38,9 @@ const Dropdown = ({options, children, labelStyle}) => {
         onClick={() => console.log('on click!')}
       >
         <div className="flex w-full items-center justify-between">
-          <div style={labelStyle}>{sortValue}</div>
+          <div className={labelClasses} style={labelStyle}>{sortValue}</div>
           {children}
         </div>
-        {/* <FontAwesomeIcon icon={faSort} /> */}
       </SortBy>
     </form>
   )
