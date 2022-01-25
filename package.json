@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "clsx": "^1.1.1",
+    "cross-env": "^7.0.3",
     "date-fns": "^2.23.0",
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",
@@ -24,7 +25,7 @@
     "zustand": "^3.5.9"
   },
   "scripts": {
-    "start": "TAILWIND_MODE=watch craco start",
+    "start": "cross-env TAILWIND_MODE=watch craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"

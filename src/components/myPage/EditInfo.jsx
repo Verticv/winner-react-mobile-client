@@ -133,7 +133,7 @@ const EditInfo = () => {
 
                     <div style={{marginTop: '3.4375rem'}} className="flex flex-wrap">
                         <div className='w-full flex'>
-                            <Title text="환전 비밀번호 확인" />
+                            <Title text="환전비밀번호 확인" />
                             <div className="w-full">
                                 <input 
                                     className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
@@ -150,7 +150,7 @@ const EditInfo = () => {
                                     }}
                                     type="password"
                                 />
-                                <div style={{height: '0.1875rem'}} className={`${selectedInput === 2 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
+                                <div style={{height: '0.1875rem'}} className={`${selectedInput === 3 ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                             </div>
                         </div>
                     </div>
