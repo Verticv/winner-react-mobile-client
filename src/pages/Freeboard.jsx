@@ -9,11 +9,14 @@ import BottomNavbar from '../components/bottomNavbar/BottomNavbar'
 import React from 'react'
 import { Route } from 'react-router'
 import FreeBoardView2 from 'components/freeBoard/FreeBoardView2'
+import ScrollButton from 'components/common/ScrollButton'
 
 const Freeboard = ({isAuthenticated, setAuthenticated}) => {
 
     return (
         <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">
+
+            <ScrollButton />
 
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />

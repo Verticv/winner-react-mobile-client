@@ -31,6 +31,7 @@ import AnnouncementView from 'components/cscenter/AnnouncementView';
 import Faq from 'components/cscenter/Faq';
 import SportsGamePolicy from 'components/cscenter/SportsGamePolicy';
 import MinigamePolicy from 'components/cscenter/MinigamePolicy';
+import ScrollButton from 'components/common/ScrollButton';
 
 const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -243,6 +244,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                     </div>
                 </div>
             </Route>
+            <ScrollButton />
         </div>
     )
 }

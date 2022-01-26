@@ -16,6 +16,7 @@ import Sports from './gameResults/Sports'
 import subIcon1 from '../../images/newImages/mainPage/results/1.png';
 import subIcon3 from '../../images/newImages/mainPage/results/3.png';
 import Logo from "../../images/newImages/mainPage/icons/logo.png";
+import ScrollButton from 'components/common/ScrollButton';
 
 const tabsArray = [
     { text: "스포츠", icon: Icon1, id: 0, path: "/mypage/gameresults/all" },
@@ -58,6 +59,7 @@ const GameResults = ({isAuthenticated}) => {
  
     return (
         <div style={{maxWidth: '1242px'}} className="w-full flex flex-col">
+            <ScrollButton />
 
             <Route exact path="/mypage/gameresults">
                 <AccountProfileComponent isAuthenticated={isAuthenticated} />

@@ -6,6 +6,7 @@ import BottomNavbar from 'components/bottomNavbar/BottomNavbar'
 import NoticeBanner from 'components/mainPage/NoticeBanner'
 import HomePageTopBanner from 'components/common/HomePageTopBanner'
 import Search from 'components/common/Search'
+import ScrollButton from 'components/common/ScrollButton'
 
 const Inbox = () => {
 
@@ -195,6 +196,7 @@ const Inbox = () => {
             </div>
 
             <Search />
+            <ScrollButton />
             <BottomNavbar />
         </div>
     )
