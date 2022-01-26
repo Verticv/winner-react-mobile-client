@@ -24,8 +24,8 @@ const SortBy = ({ children, options, value, onChange, onClick }) => (
   </div>
 );
 
-const Dropdown = ({options, children, labelStyle, labelClasses}) => {
-  const [sortValue, setSortValue] = useState(options?.[0])
+const Dropdown = ({options, children, labelStyle, labelClasses, isLeagueSelection}) => {
+  const [sortValue, setSortValue] = useState(isLeagueSelection ? options?.[0] : "전체회차")
 
   const onChange = e => setSortValue(e.currentTarget.value);
 

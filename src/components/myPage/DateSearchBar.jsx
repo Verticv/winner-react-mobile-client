@@ -17,6 +17,7 @@ const DateSearchBar = ({
     isGameResultsSearch = false,
     withBlackButton = false,
     withMargin = true,
+    hasDateSuggestion = true
 }) => {
 
     const [startDate, setStartDate] = useState(new Date())
@@ -51,7 +52,7 @@ const DateSearchBar = ({
                                 const menu = document.querySelector('#main-menu');
                                 menu.style.marginBottom = '0'
                             }}
-                            />
+                        />
                                                             
                     </div>
                 )}
@@ -93,68 +94,79 @@ const DateSearchBar = ({
                         />
                         <img style={{top: '3.44rem'}} src={CalendarIcon} alt="" className="w-14 absolute right-8" />
                     </div>
-                    <span style={{fontSize: '2.6rem', marginTop: '1.875rem'}} className="w-8 text-center font-spoqaMedium text-gray-r454545 mt-px">~</span>
+                    <span style={{fontSize: '2.6rem', marginTop: '1.875rem'}} className={`w-8 text-center font-spoqaMedium text-gray-r454545 mt-px  ${!hasDateSuggestion && "opacity-0"}`}>~</span>
                     <div className="right-date-picker relative">
-                        <DatePicker 
-                            className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
-                            locale="ko"
-                            selected={endDate} 
-                            onChange={(date) => setEndDate(date)}
-                            dateFormat="yyyy-MM-dd"
-                            dateFormatCalendar="yyyy년 MM월"
-                            disabledKeyboardNavigation={true}
-                        />
-                        <img style={{top: '3.44rem', right: '3.94rem'}} src={CalendarIcon} alt="" className="w-14 absolute" />
+                        {hasDateSuggestion ? (
+                            <>
+                                <DatePicker 
+                                    className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
+                                    locale="ko"
+                                    selected={endDate} 
+                                    onChange={(date) => setEndDate(date)}
+                                    dateFormat="yyyy-MM-dd"
+                                    dateFormatCalendar="yyyy년 MM월"
+                                    disabledKeyboardNavigation={true}
+                                />
+                                <img style={{top: '3.44rem', right: '3.94rem'}} src={CalendarIcon} alt="" className="w-14 absolute" />
+                            </>
+                        ) : (
+                            <div className='mt-7 -ml-8 text-15px'>
+                                <DropDownInput isLeagueSelection={false} />
+                            </div>
+                        )}                    
                     </div>
                 </div>
-                <div style={{margin: '0.75rem 1.875rem', marginBottom: withBlackButton ? '0.75rem' : '0'}} className="flex w-full h-full items-center justify-between">
-                    <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75">
-                        <div className="flex items-center w-full h-full justify-center rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
-                            <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">오늘</span>
-                        </div>
-                    </div>
-
-                    <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r2068b2 hover:opacity-75">
-                        <div className="flex items-center w-full h-full justify-center bg-black rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-                            <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">1주일</span>
-                        </div>
-                    </div>
-
-                    <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75">
-                        <div className="flex items-center w-full h-full justify-center bg-black rounded-lg border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
-                            <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">15일</span>
-                        </div>
-                    </div>
-
-                    <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75">
-                        <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                            <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">1개월</span>
-                        </div>
-                    </div>
-
-                    {has3MonthSearch && (
-                        <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75">
-                            <div className="flex items-center w-full h-full justify-center bg-black rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">3개월</span>
+                {hasDateSuggestion ? (
+                    <div style={{margin: '0.75rem 1.875rem', marginBottom: withBlackButton ? '0.75rem' : '0'}} className="flex w-full h-full items-center justify-between">
+                        <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75">
+                            <div className="flex items-center w-full h-full justify-center rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">오늘</span>
                             </div>
                         </div>
-                    )}
 
-                    {!hasIdSearch ? (
-                        <div style={{width: '13.25rem', height: '7.3125rem'}} className={`common-button flex items-center justify-center rounded-lg ${withBlackButton? "bg-blue-r177cce" : "bg-gray-r171a1d"}  hover:opacity-75`}>
-                            <div className={`flex items-center justify-center w-full h-full bg-black rounded-lg border ${withBlackButton ? "border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8" : "border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337"}  cursor-pointer`}>
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">{withBlackButton ? "3개월" : "검색"}</span>
+                        <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r2068b2 hover:opacity-75">
+                            <div className="flex items-center w-full h-full justify-center bg-black rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">1주일</span>
                             </div>
                         </div>
-                    ) : (
-                        <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75">
-                            <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">3개월</span>
+
+                        <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75">
+                            <div className="flex items-center w-full h-full justify-center bg-black rounded-lg border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">15일</span>
                             </div>
                         </div>
-                    )}
-                    
-                </div>
+
+                        <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75">
+                            <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">1개월</span>
+                            </div>
+                        </div>
+
+                        {has3MonthSearch && (
+                            <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75">
+                                <div className="flex items-center w-full h-full justify-center bg-black rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
+                                    <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">3개월</span>
+                                </div>
+                            </div>
+                        )}
+
+                        {!hasIdSearch ? (
+                            <div style={{width: '13.25rem', height: '7.3125rem'}} className={`common-button flex items-center justify-center rounded-lg ${withBlackButton? "bg-blue-r177cce" : "bg-gray-r171a1d"}  hover:opacity-75`}>
+                                <div className={`flex items-center justify-center w-full h-full bg-black rounded-lg border ${withBlackButton ? "border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8" : "border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337"}  cursor-pointer`}>
+                                    <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">{withBlackButton ? "3개월" : "검색"}</span>
+                                </div>
+                            </div>
+                        ) : (
+                            <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75">
+                                <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
+                                    <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">3개월</span>
+                                </div>
+                            </div>
+                        )}
+                        
+                    </div>
+                ) : (<div style={{margin: '0.45rem'}}></div>)}
+                
 
                 <div style={{margin: '0.75rem 1.875rem', marginBottom: withMargin ? '1.875rem' : '1.375rem', marginTop: '0'}} className="flex w-full h-full items-center justify-between">
                     {withBlackButton && !withMargin && (

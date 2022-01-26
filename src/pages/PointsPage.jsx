@@ -101,7 +101,7 @@ const PointsPage = ({isAuthenticated, setAuthenticated}) => {
     )
 
     return (
-        <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center overflow-hidden overflow-hidden">
+        <div style={{maxWidth: '1242px'}} className="relative w-full flex flex-col justify-center overflow-hidden">
 
             <Route exact path="/mypage/points">
                 <AccountProfileComponent isAuthenticated={isAuthenticated} />

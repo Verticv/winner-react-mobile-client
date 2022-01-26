@@ -15,7 +15,7 @@ const Search = () => {
                 style={{ width:'15rem'}}
                 className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight" 
             >
-                <Dropdown labelStyle={{marginLeft: '1.6875rem', color: '#454545'}} options={carrierOptions} >
+                <Dropdown labelStyle={{marginLeft: '1.6875rem', color: '#454545'}} options={carrierOptions} isLeagueSelection={true}>
                     <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="object-contain" src={DownArrowIcon} alt="arrow" /> 
                 </Dropdown>
             </div>
