@@ -21,9 +21,9 @@ const PowerballResultsTable = ({
                  <div 
                     style={{
                         maxWidth: '56.25rem',
-                        padding: '2.15625rem 2.2rem',
+                        padding: '2rem',
                         paddingLeft: '0',
-                        paddingBottom: "1.3rem",
+                        paddingBottom: "1.4rem",
                         marginLeft: '2.5625rem'
                     }}
                     className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full" >     
