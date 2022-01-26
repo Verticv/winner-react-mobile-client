@@ -154,7 +154,7 @@ const AccountProfileComponent = ({isAuthenticated}) => {
                   <div style={{marginRight: '2.6875rem', marginTop: '0.3375rem'}} className="w-16 h-16 rounded-full flex items-center justify-center">
                     <img className="" src={Logout} alt="logout"></img>
                   </div>
-                  <label style={{marginTop: '0.525rem'}} className="text-5xl font-spoqaBold text-white cursor-pointer">
+                  <label style={{marginTop: '0.525rem'}} className="text-5xl font-spoqaBold text-white cursor-pointer" onClick={() => history.push("/")}>
                     로그아웃
                   </label>
                 </div>

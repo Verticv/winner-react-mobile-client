@@ -6,11 +6,13 @@ import KakaoLogo from '../images/footer/kakao.png'
 import TelegramLogo from '../images/footer/telegram.png'
 // import DropDownControls from 'components/dropdowns/RegisterDropDownControls'
 import Dropdown from 'components/common/Dropdown/Dropdown'
+import SignedUpPopup from 'components/popups/SignedUpPopup'
 
 const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
 
     const [selectedInput, setSelectedInput] = useState(null)
     const [toSignup, setSignup] = useState(false)
+    const [showCompletePopup, setCompletePopup] = useState(false)
     const history = useHistory()
     
     useEffect(() => {
@@ -299,7 +301,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                     {carrierDropdown}
                                 </DropDownControls> */}
                                 <div className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-between items-center tracking-minus05" >
-                                    <Dropdown options={carrierOptions} >
+                                    <Dropdown options={carrierOptions} isLeagueSelection={true}>
                                         <img style={{marginRight: '20%', width: '1.5625rem'}} className="h-4 object-contain" src={DownArrowIcon} alt="arrow" /> 
                                     </Dropdown>
                                 </div>
@@ -357,7 +359,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                             // onBlur={(e) => setSelectedInput(false)}
                                             className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-between items-center tracking-minus05" 
                                         >
-                                            <Dropdown options={banksOptions} >
+                                            <Dropdown options={banksOptions} isLeagueSelection={true} >
                                                 <img style={{marginRight: '20%', width: '1.5625rem'}} className="h-4 object-contain" src={DownArrowIcon} alt="arrow" />
                                             </Dropdown>
                                         </div>
@@ -406,7 +408,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                     <div style={{marginTop: '3.4375rem'}} className={`w-full flex flex-col items-center`}>
                         <button 
                             className="mb-32 w-full h-48 rounded-full bg-gradient-to-r from-blue-gradLight to-blue-gradDark text-5xl  font-spoqaBold text-white hover:opacity-75 pt-2px"
-                            onClick={() => history.push("/main")}
+                            onClick={() => setCompletePopup(true)}
                         >
                             회원가입
                         </button>
@@ -423,12 +425,17 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                             </div>
                         </div>
                     </div>
+                    
                 </div>
 
                 </div>
             )}
 
-            
+            {showCompletePopup === true && (
+                <div className=' flex w-screen h-screen bg-black bg-opacity-60 z-50 top-0 fixed justify-center items-center px-10'>
+                    <SignedUpPopup setCompletePopup={setCompletePopup} setSignup={setSignup} />
+                </div>
+            )}
         </div>
     )
 }
