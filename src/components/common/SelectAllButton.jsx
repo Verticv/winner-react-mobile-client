@@ -22,7 +22,7 @@ const SelectAllButton = (
     
     if (buttonsNumber === 3) {
         return (
-            <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem', marginBottom: '2.5rem'}} className="flex items-center justify-between">
+            <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem', marginBottom: '2.5rem'}} className="flex items-center justify-between flex-shrink-0">
                 <div className="flex w-full">
                     <button 
                         style={{height: '7.3125rem'}}
@@ -68,7 +68,7 @@ const SelectAllButton = (
     }
 
     return (
-        <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem', marginBottom: '2.5rem'}} className="flex items-center justify-between">
+        <div style={{margin: '3.75rem 1.875rem', marginTop: '1.875rem', marginBottom: '2.5rem'}} className="flex items-center justify-between flex-shrink-0">
                 <div className="flex w-full space-x-2px">
                     <button 
                         style={{height: '7.3125rem'}}
