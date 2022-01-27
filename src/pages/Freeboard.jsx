@@ -26,37 +26,6 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
 
 
             <div className="flex flex-col items-start limit:items-center w-full h-full">
-                {/* <Route exact path="/freeboard">
-                    <DirectoryComponent 
-                        branch1="게시판" 
-                        mainPath="/freeboard"
-                    />
-                </Route>
-                <Route path="/freeboard/view">
-                    <DirectoryComponent 
-                        branch1="게시판" 
-                        branch2="뷰"
-                        mainPath="/freeboard/view"
-                    />
-                </Route>
-                <Route path="/freeboard/view2">
-                    <DirectoryComponent 
-                        branch1="게시판" 
-                        branch2="뷰"
-                        mainPath="/freeboard/view"
-                    />
-                </Route>
-                <Route path="/freeboard/compose">
-                    <DirectoryComponent 
-                        branch1="게시판" 
-                        branch2="작성하기"
-                        mainPath="/freeboard/compose"
-                    />
-                </Route>
-                <div className="relative w-default h-225px">
-                    <label style={{color: "#39674c"}} className="text-36px font-spoqaMedium text-blue-r325685 absolute right-0 bottom-0 z-20 mb-86px mr-50px">게시판</label>
-                    <img className="z-10" src={FreeBoardBanner} alt="" />
-                </div> */}
                 <div className="w-full">
                     <Route exact path="/freeboard">
                         <FreeBoardMain />

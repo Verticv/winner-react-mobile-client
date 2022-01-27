@@ -53,9 +53,9 @@ const FreeBoardCompose = () => {
 
                 <div style={{height:"70.25rem",paddingTop: '1.8125rem', paddingLeft: '2.6875rem', fontSize: '2.8125rem'}} className="w-full bg-white">
                     <textarea 
-                        style={{resize: "none"}}
+                        style={{resize: "none", wordBreak: "keep-all"}}
                         className="outline-none w-full h-full font-spoqa tracking-tight placeholder-gray-r454545 place-color-grey-1"
-                        placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제되며 사이트 이용에 제한을 받을 수 있습니다."
+                        placeholder="욕설, 상대방 비방글, 타사이트 언급, 홍보 등은 경고없이 삭제 되며 사이트 이용에 제한을 받을 수 있습니다."
                         onFocus={() => {
                             const menu = document.querySelector('#main-menu');
                             menu.style.marginBottom  = '-14.075rem'

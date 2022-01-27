@@ -42,7 +42,7 @@ const BoardViewPanel = ({
                                         smallContent
                                     />
                                 </div>
-                                <CardContent id={card.id} withButtons={false} withInput={false} withCancelButton={true} cancelHandler={handleRemoveItem} checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
+                                <CardContent winAmount={card.winAmount} id={card.id} withButtons={false} withInput={false} withCancelButton={true} cancelHandler={handleRemoveItem} checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
                             </div>
                         </div>
                     </div>

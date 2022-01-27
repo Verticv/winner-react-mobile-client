@@ -7,7 +7,6 @@ const Search = () => {
 
   const carrierOptions = ["제목", "본문", "작성자"]
 
-
   const InboxSearch = (
     <div style={{padding: '1.75rem 1.625rem', paddingBottom: '1.5625rem', height: '10.4375rem', borderWidth: '0.1875rem'}} className="w-full bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex items-center justify-center">
         <div style={{width: '15rem', height: '6.75rem', borderWidth: '0.1875rem'}} className="flex h-full bg-white rounded-2xl border border-gray-dddddd group">
@@ -15,7 +14,7 @@ const Search = () => {
                 style={{ width:'15rem'}}
                 className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight" 
             >
-                <Dropdown labelStyle={{marginLeft: '1.6875rem', color: '#454545'}} options={carrierOptions} isLeagueSelection={true}>
+                <Dropdown labelStyle={{marginLeft: '1.6875rem', color: '#454545', fontSize: '2.8125rem'}} options={carrierOptions} isLeagueSelection={true} labelClasses="pt-1">
                     <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="object-contain" src={DownArrowIcon} alt="arrow" /> 
                 </Dropdown>
             </div>

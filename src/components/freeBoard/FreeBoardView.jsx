@@ -184,7 +184,7 @@ const FreeBoardView = () => {
             {/* second */}
             <div style={{borderRadius:"3.1875rem", marginTop: '3.75rem', padding: '1.875rem 0', paddingTop: '2.25rem'}} className="w-full bg-gray-fafafa shadow-subNavbar">
                 <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd"> 
-                    <div className="w-full flex items-center flex justify-between">
+                    <div className="w-full flex items-center justify-between">
                         <div className="flex items-center">
                             <img style={{width: '3.625rem', height: '4.4375rem', marginRight: '0.5625rem'}} src={Rank2} alt="" />
                             <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
@@ -246,7 +246,7 @@ const FreeBoardView = () => {
             {/* fourth */}
             <div style={{borderRadius:"3.1875rem", marginTop: '3.75rem', padding: '1.875rem 0', paddingTop: '2.25rem'}} className="w-full bg-gray-fafafa shadow-subNavbar">
                 <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd"> 
-                        <div className="w-full flex items-center flex justify-between">
+                        <div className="w-full flex items-center justify-between">
                             <div className="flex items-center">
                                 <img style={{width: '3.625rem', height: '4.4375rem'}} src={Rank2} alt="" />
                                 <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
