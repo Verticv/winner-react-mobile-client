@@ -313,11 +313,11 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                     placeholder="휴대폰번호(숫자만 입력)"
                                     type='number'
                                     onFocus={(e) => {
-                                        e.target.placeholder = ""
+                                        // e.target.placeholder = ""
                                         setSelectedInput(5)
                                     }} 
                                     onBlur={(e) => {
-                                        e.target.placeholder = "휴대폰번호(숫자만 입력)"
+                                        // e.target.placeholder = "휴대폰번호(숫자만 입력)"
                                         setSelectedInput(false)
                                     }}
                                 />
@@ -333,11 +333,11 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                     className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe" 
                                     placeholder="가입코드"
                                     onFocus={(e) => {
-                                        e.target.placeholder = ""
+                                        // e.target.placeholder = ""
                                         setSelectedInput(6)
                                     }} 
                                     onBlur={(e) => {
-                                        e.target.placeholder = "가입코드"
+                                        // e.target.placeholder = "가입코드"
                                         setSelectedInput(false)
                                     }}
                                 />
@@ -370,11 +370,11 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                             className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe" 
                                             placeholder="예금주"
                                             onFocus={(e) => {
-                                                e.target.placeholder = ""
+                                                // e.target.placeholder = ""
                                                 setSelectedInput(8)
                                             }} 
                                             onBlur={(e) => {
-                                                e.target.placeholder = "예금주"
+                                                // e.target.placeholder = "예금주"
                                                 setSelectedInput(false)
                                             }}
                                         />
@@ -389,11 +389,11 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                         type='number'
                                         placeholder="계좌번호 (숫자만 입력)"
                                         onFocus={(e) => {
-                                            e.target.placeholder = ""
+                                            // e.target.placeholder = ""
                                             setSelectedInput(9)
                                         }} 
                                         onBlur={(e) => {
-                                            e.target.placeholder = "계좌번호 (숫자만 입력)"
+                                            // e.target.placeholder = "계좌번호 (숫자만 입력)"
                                             setSelectedInput(false)
                                         }}
                                     />
@@ -432,7 +432,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
             )}
 
             {showCompletePopup === true && (
-                <div className=' flex w-screen h-screen bg-black bg-opacity-60 z-50 top-0 fixed justify-center items-center px-10'>
+                <div className=' flex w-screen h-screen bg-black bg-opacity-60 z-50 top-0 fixed justify-center items-center px-12'>
                     <SignedUpPopup setCompletePopup={setCompletePopup} setSignup={setSignup} />
                 </div>
             )}

@@ -1,7 +1,6 @@
 import React from 'react'
 import PopupControls from 'components/popups/PopupControls';
 import LiveCasinoHistoryDetailPopup from '../myPage/popups/LiveCasinoHistoryDetailPopup';
-import CouponGiftPopup from 'components/popups/CouponGiftPopup.jsx'
 
 const HistoryTable = ({tableData, checkedState, isCouponUsage = false, setCheckedState, isPopupOpen, wrapButtonText = false, setPopupOpen, cardHeight = '33.75rem', isButtonGradient = true, hasLeftInput = true, wideDetailButton = false, hasButton = true, containerBackground}) => {
 
@@ -89,13 +88,14 @@ const HistoryTable = ({tableData, checkedState, isCouponUsage = false, setChecke
                 </div>
                 {isButtonGradient ? 
                     hasButton && (<div className="text-center">
-                    <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent :detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                        {isCouponUsage ? (
-                            <CouponGiftPopup setPopupOpen={setPopupOpen} />
-                        ): (
-                            <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
-                        )}
-                    </PopupControls> 
+                        {!isCouponUsage ? (
+                            <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent :detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                                <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
+                            </PopupControls> 
+                        ) : (
+                            <>{wideDetailButtonComponent}</>
+                        ) }
+                    
                 </div>) 
                 : hasButton &&
                     <button style={{width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length -1].buttonColor || 'red'}} className="common-button flex items-center justify-center rounded-2xl hover:opacity-75">

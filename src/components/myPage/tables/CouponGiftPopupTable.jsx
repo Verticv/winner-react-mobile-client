@@ -16,7 +16,7 @@ const CouponGiftPopupTable = () => {
     )
 
     return (
-        <div style={{borderRadius:"0.5rem"}} className="shadow-subNavbar overflow-y-scroll">
+        <div style={{borderRadius:"0.5rem"}} className="shadow-subNavbar overflow-y-scroll h-full">
             <div style={{height: '7.125rem'}} className="bg-gray-fafafa font-spoqaMedium w-full tracking-tight text-gray-r585858 border-b border-gray-dddddd flex items-center">
                 <div style={{fontSize: '2.625rem'}} className='w-full flex justify-between'>
                     <td className="w-1/3 text-center">선택</td>
@@ -62,6 +62,31 @@ const CouponGiftPopupTable = () => {
                 </div>
                 <div style={{height: '8.625rem', fontSize: '2.625rem'}} className="bg-gray-f7f9fc font-spoqa text-14px tracking-tight text-gray-r585858 justify-between w-full border-b border-gray-dddddd flex items-center">
                     <td className="w-1/3 text-center flex justify-center"><RadioButton id={7}/></td>
+                    <td className="w-1/3 text-center">louie32</td>
+                    <td className="w-1/3 text-center">위너테스트2</td>
+                </div>
+                <div style={{height: '8.625rem', fontSize: '2.625rem'}} className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 justify-between w-full border-b border-gray-dddddd flex items-center">
+                    <td className="w-1/3 text-center flex justify-center"><RadioButton id={8}/></td>
+                    <td className="w-1/3 text-center">louie32</td>
+                    <td className="w-1/3 text-center">위너테스트2</td>
+                </div>
+                <div style={{height: '8.625rem', fontSize: '2.625rem'}} className="bg-gray-f7f9fc font-spoqa text-14px tracking-tight text-gray-r585858 justify-between w-full border-b border-gray-dddddd flex items-center">
+                    <td className="w-1/3 text-center flex justify-center"><RadioButton id={9}/></td>
+                    <td className="w-1/3 text-center">louie32</td>
+                    <td className="w-1/3 text-center">위너테스트2</td>
+                </div>
+                <div style={{height: '8.625rem', fontSize: '2.625rem'}} className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 justify-between w-full border-b border-gray-dddddd flex items-center">
+                    <td className="w-1/3 text-center flex justify-center"><RadioButton id={10}/></td>
+                    <td className="w-1/3 text-center">louie32</td>
+                    <td className="w-1/3 text-center">위너테스트2</td>
+                </div>
+                <div style={{height: '8.625rem', fontSize: '2.625rem'}} className="bg-gray-f7f9fc font-spoqa text-14px tracking-tight text-gray-r585858 justify-between w-full border-b border-gray-dddddd flex items-center">
+                    <td className="w-1/3 text-center flex justify-center"><RadioButton id={11}/></td>
+                    <td className="w-1/3 text-center">louie32</td>
+                    <td className="w-1/3 text-center">위너테스트2</td>
+                </div>
+                <div style={{height: '8.625rem', fontSize: '2.625rem'}} className="bg-gray-fefefe font-spoqa text-14px tracking-tight text-gray-r585858 justify-between w-full border-b border-gray-dddddd flex items-center">
+                    <td className="w-1/3 text-center flex justify-center"><RadioButton id={12}/></td>
                     <td className="w-1/3 text-center">louie32</td>
                     <td className="w-1/3 text-center">위너테스트2</td>
                 </div>

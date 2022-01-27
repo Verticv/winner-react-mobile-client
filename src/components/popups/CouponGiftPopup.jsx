@@ -1,6 +1,6 @@
 import CouponGiftPopupTable from 'components/myPage/tables/CouponGiftPopupTable'
 import React from 'react'
-import CloseIcon from '../../images/popups/close.png'
+import CloseIcon from '../../images/newImages/mypage/live-casino/bet-history-popup.png'
 import Step1 from '../../images/newImages/step-1.png'
 import Step2 from '../../images/newImages/step-2.png'
 import './Scrollbars.css'
@@ -15,7 +15,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                 </button>
             </div>
 
-            <div style={{padding: '0 1.875rem'}} className="w-full h-full bg-white">
+            <div style={{padding: '0 1.875rem'}} className="w-full h-full bg-white flex flex-col justify-end ">
                 <div style={{marginTop: '3.125rem', marginBottom: '1.125rem'}} className="flex items-start">
                     <img style={{width: '7.9375rem', height: '2.875rem', marginLeft: '0.4375rem', marginRight: '1.875rem'}} src={Step1} alt="" />
                     <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r7c7c7c">선물로 보낼 쿠폰을 확인하세요.</span>
@@ -33,11 +33,11 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                     <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r7c7c7c">쿠폰받을 회원을 선택하세요.</span>
                 </div>
 
-                <div style={{borderRadius:"1.2rem"}} className="w-full rounded-2xl shadow-subNavbar overflow-hidden">
+                <div style={{borderRadius:"1.2rem"}} className="w-full h-full rounded-2xl shadow-subNavbar overflow-hidden">
                     <CouponGiftPopupTable />
                 </div>
 
-                <div className="w-full flex items-center justify-center">
+                <div className="w-full flex items-center justify-center mb-16">
                     <button style={{height: '7.3125rem', width: '36.4375rem', padding: '1px', fontSize: '2.8125rem', marginTop: '3.75rem'}} className="flex items-center justify-center rounded-2xl bg-blue-r0070d9" onClick={()=> setPopupOpen(false)}>
                         <div 
                         style={{background:"linear-gradient(to bottom, #1491fc, #0675db)"}} 

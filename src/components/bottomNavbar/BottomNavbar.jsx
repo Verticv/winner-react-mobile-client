@@ -57,7 +57,7 @@ const BottomNavbar = () => {
                     className="flex flex-col"
                     onClick={() => history.push('/attendance')}
                     >
-                    <img style={{width: '4.25rem', marginLeft: '1.1875rem', paddingBottom: '0.4375rem'}} className="w-16 object-contain" src={isAttendancePage ? AttendanceActive : Attendance } alt="" />
+                    <img style={{width: '5rem', marginLeft: '1.1875rem', paddingBottom: '0.4375rem'}} className="object-contain" src={isAttendancePage ? AttendanceActive : Attendance } alt="" />
                     <p style={{fontSize: '2.625rem', marginLeft: '-0.25rem'}} className={`font-spoqaMedium ${isAttendancePage ? 'text-blue-r009edf' : 'text-gray-r727272' }`}>출석부</p>
                 </button>
                 <button 
@@ -65,7 +65,7 @@ const BottomNavbar = () => {
                     className="flex flex-col"
                     onClick={() => history.push('/freeboard')}
                     >
-                    <img style={{width: '4.625rem', marginLeft: '0.875rem', paddingBottom: '0.4375rem'}} className="object-contain" src={isBoardPage ? NoticeBoardActive : NoticeBoard } alt="" />
+                    <img style={{width: '5rem', marginLeft: '0.875rem', paddingBottom: '0.4375rem'}} className="object-contain" src={isBoardPage ? NoticeBoardActive : NoticeBoard } alt="" />
                     <p style={{fontSize: '2.625rem', marginLeft: '-0.4375rem'}} className={`font-spoqaMedium ${isBoardPage ? 'text-blue-r009edf' : 'text-gray-r727272' }`}>게시판</p>
                 </button>
                 <button 
@@ -73,7 +73,7 @@ const BottomNavbar = () => {
                     className="flex flex-col"
                     onClick={() => history.push('/main')}
                 >
-                    <img style={{paddingBottom: '0.4375rem', width: '4.5625rem'}} className="w-20 object-contain" src={isHomePage ? HomeActive : Home} alt="" />
+                    <img style={{paddingBottom: '0.4375rem', width: '5rem'}} className="object-contain" src={isHomePage ? HomeActive : Home} alt="" />
                     <p style={{fontSize: '2.625rem', marginLeft: '1.0625rem'}} className={`font-spoqaMedium ${isHomePage ? 'text-blue-r009edf' : 'text-gray-r727272' }`}>홈</p>
                 </button>
                 <button 
@@ -81,14 +81,14 @@ const BottomNavbar = () => {
                     className="flex flex-col"
                     onClick={() => history.push('/cscenter/all/contact/all')}
                 >
-                    <img style={{marginLeft: '0.75rem', paddingBottom: '0.4375rem'}} className="w-16 object-contain" src={isCustomerCenterPage ? QuestionActive : Question } alt="" />
+                    <img style={{marginLeft: '0.75rem', paddingBottom: '0.4375rem', width: '5rem'}} className="object-contain" src={isCustomerCenterPage ? QuestionActive : Question } alt="" />
                     <p style={{fontSize: '2.625rem', marginLeft: '0.375rem'}} className={`font-spoqaMedium ${isCustomerCenterPage ? 'text-blue-r009edf' : 'text-gray-r727272' }`}>문의</p>
                 </button>
                 <button 
                     className="flex flex-col"
                     onClick={() => history.push('/mypage')}
                     >
-                    <img style={{marginLeft: '3.0625rem', paddingBottom: '0.4375rem'}} className="w-16 object-contain" src={MyInfo} alt="" />
+                    <img style={{marginLeft: '3.0625rem', paddingBottom: '0.4375rem', width: '5rem'}} className="object-contain" src={MyInfo} alt="" />
                     <p style={{color:"#727272", fontSize: '2.625rem', marginLeft: '0.1875rem'}} className="font-spoqaMedium">마이인포</p>
                 </button>
 

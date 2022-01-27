@@ -40,7 +40,7 @@ const InboxView = () => {
                     </div>
                     <div style={{marginBottom: '1.3125rem'}} className="flex justify-center text-5xl w-full font-spoqaMedium tracking-tight text-gray-r454545">
                         서버 점검 안내
-                        <div style={{width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem', marginTop: '-0.3rem'}} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto">
+                        <div style={{width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem', marginTop: '-0.3rem'}} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 pt-px">
                             N
                         </div>
                     </div>

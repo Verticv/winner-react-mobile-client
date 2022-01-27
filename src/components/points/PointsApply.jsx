@@ -65,10 +65,10 @@ const PointsApply = () => {
                         </div>
                     </div>
                     <div style={{marginTop: '4.6875rem'}} className="flex">
-                        <Title text="현재 잔여 포인트" />
+                        <Title text="전환 예정 포인트" />
                         <div className="w-full">
                             <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
-                                <span className="font-robotoBold text-blue-r0056a6">0</span>P
+                                <span className="font-robotoBold text-gray-r585858">0</span>P
                             </div>
                             <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
                         </div>
@@ -77,7 +77,7 @@ const PointsApply = () => {
                         <Title text="전환 후 잔여 포인트" />
                         <div className="w-full">
                             <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium text-gray-r585858">
-                                <span className="font-robotoBold text-blue-r0056a6">278</span>P
+                                <span className="font-robotoBold text-gray-r585858">0</span>P
                             </div>
                             <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
                         </div>
@@ -164,7 +164,7 @@ const PointsApply = () => {
                             onClick={() => setInputValue(inputValue + 100000)}
                         >
                             <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white">10만P</span>
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-1">10만P</span>
                             </div>
                         </button>
 
@@ -174,7 +174,7 @@ const PointsApply = () => {
                             onClick={() => setInputValue(inputValue + 500000)}
                         >
                             <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white">50만P</span>
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-1">50만P</span>
                             </div>
                         </button>
 
@@ -184,7 +184,7 @@ const PointsApply = () => {
                             onClick={() => setInputValue(inputValue + 1000000)}
                         >
                             <div className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white">100만P</span>
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-1">100만P</span>
                             </div>
                         </button>
 
@@ -194,7 +194,7 @@ const PointsApply = () => {
                             onClick={() => setInputValue(0)}
                         >
                             <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white">정정</span>
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-1">정정</span>
                             </div>
                         </button>
                     </div>

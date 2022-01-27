@@ -65,7 +65,7 @@ const PointsApply = () => {
                         <Title text="전환 예정 포인트" />
                         <div className="space-y-14px w-full">
                             <div className="h-16px text-gray-r393e41 font-spoqaMedium text-16px text-gray-r585858 pl-9px">
-                                <span className="font-spoqaBold">0</span>
+                                <span className="font-spoqaBold text-gray-r585858">0</span>
                                 <span>P</span>
                             </div>
                             <div className="h-px w-full bg-gray-bebebe"></div>

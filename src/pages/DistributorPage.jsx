@@ -946,7 +946,7 @@ const DistributorPage = ({
 
                             <div style={{marginLeft: '1.875rem', marginTop: '4.3125rem', marginBottom: '0.75rem'}} className="w-full flex items-center tracking-tight text-gray-r7b7b7b font-spoqaMedium">
                                 <img style={{width: '3.1875rem', height: '2.75rem', marginRight: '0.8125rem'}} className='object-contain -mt-1.5' src={MemberIcon} alt="" />
-                                <div style={{fontSize: '3rem'}}>접속중인 회원수: <span className="font-spoqaBold text-black tracking-tight text-gray-r454545">2 명</span></div>
+                                <div style={{fontSize: '3rem'}}>접속중인 회원수: <span className="font-spoqaBold tracking-tight text-gray-r454545">2 명</span></div>
 
                                 <div 
                                     style={{
@@ -966,7 +966,7 @@ const DistributorPage = ({
                                         }} 
                                         className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r585b5e to-gray-r303337 cursor-pointer"
                                     >
-                                        <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white">{viewOnline ? "닫기" : "보기"}</span>
+                                        <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pt-px">{viewOnline ? "닫기" : "보기"}</span>
                                     </div>
                                 </div>
                             </div>
