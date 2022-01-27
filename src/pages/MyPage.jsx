@@ -152,7 +152,7 @@ const MyPage = ({setAuthenticated, isAuthenticated }) => {
     console.log(`location.state`, location.state)
     return (
       <>
-      <AccountProfileComponent isAuthenticated={isAuthenticated} />
+      <AccountProfileComponent isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
       <div style={{marginTop: '1.875rem', marginBottom: '36.375rem'}} className="flex w-full">
             <LeftMenu
               selectedTab={selectedTab}

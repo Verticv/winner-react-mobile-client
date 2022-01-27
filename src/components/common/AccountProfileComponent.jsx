@@ -5,6 +5,8 @@ import CountryDropDown from "components/dropdowns/MyPageMobileCountryDropDown";
 import CloseIcon from "../../images/newImages/close-gray.png";
 import ProfileIcon from "../../images/newImages/pure_profile_icon.png";
 import big_1 from "../../images/newImages/big_1.png";
+import big_2 from '../../images/newImages/freeboard/2.png'
+import big_3 from '../../images/newImages/freeboard/3.png'
 import Logout from "../../images/newImages/logout.png";
 import InboxIcon from "../../images/newImages/mainPage/icons/mail.png";
 import Profile from "../../images/newImages/mainPage/icons/profile.png";
@@ -20,15 +22,15 @@ import ArrowUp from "../../images/arrows/arrow_up.png";
 import ArrowDownWhite from "../../images/arrows/arrow_down_white.png";
 import LeftArrowIcon from '../../images/newImages/mainPageLeftArrow.png'
 
-const AccountProfileComponent = ({isAuthenticated}) => {
+const AccountProfileComponent = ({isAuthenticated,setAuthenticated}) => {
 
   const history = useHistory();
   const [isCountryOpen, setCountryOpen] = useState();
-  const [winImage, setWinImage] = useState(big_1);
+  const [winImage, setWinImage] = useState(big_1 || big_2);
   const [country, setCountry] = useState("KR");
 
   useEffect(() => {
-    setWinImage(big_1)
+    setWinImage(big_3)
   }, []);
   
   const InboxButton = (
@@ -154,7 +156,10 @@ const AccountProfileComponent = ({isAuthenticated}) => {
                   <div style={{marginRight: '2.6875rem', marginTop: '0.3375rem'}} className="w-16 h-16 rounded-full flex items-center justify-center">
                     <img className="" src={Logout} alt="logout"></img>
                   </div>
-                  <label style={{marginTop: '0.525rem'}} className="text-5xl font-spoqaBold text-white cursor-pointer" onClick={() => history.push("/")}>
+                  <label style={{marginTop: '0.525rem'}} className="text-5xl font-spoqaBold text-white cursor-pointer" onClick={() => {
+                    history.push("/")
+                    setAuthenticated(false)
+                  }}>
                     로그아웃
                   </label>
                 </div>
