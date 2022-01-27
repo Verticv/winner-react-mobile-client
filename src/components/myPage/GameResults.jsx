@@ -33,13 +33,6 @@ const tabsArray = [
     { text: "미니게임", icon: Icon2, id: 1, path: "/mypage/gameresults/powerball" },
 ];
 
-const tabsSubArray = [
-    { text: "승무패", id: 0, path: "/mypage/gameresults/all" },
-    { text: "핸디캡", id: 1, path: "/mypage/gameresults/all1" },
-    { text: "언오버", id: 2, path: "/mypage/gameresults/all2" },
-    { text: "스페셜", id: 3, path: "/mypage/gameresults/all3" },
-];
-
 const LeftMenuSubArray = [
     {
       text: "스포츠",
@@ -158,7 +151,7 @@ const GameResults = ({isAuthenticated}) => {
                     <>
                     <div id='scroll-wrapper1' style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
-                            <HorizontalSubMenu selectedTab={selectedTab} isSameWidth itemsArray={tabsSubArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
+                            <HorizontalSubMenu isSameWidth setSelectedSubTab={setSelectedSubTab}/>
                         </div>
                     </div>
 
@@ -191,7 +184,7 @@ const GameResults = ({isAuthenticated}) => {
                     <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                     <div id='scroll-wrapper1' style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
-                            <SubHorizontalMenu2 itemsArray={subTabsArray} isState={isState} setState={setState} />
+                            <SubHorizontalMenu2 itemsArray={subTabsArray} isState={isState} setState={setState} isMinigame={true}/>
                         </div>
                     </div>
                     <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>

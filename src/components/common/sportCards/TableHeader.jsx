@@ -5,9 +5,9 @@ const TableHeader = ({smallCard = false, isMinigame = false}) => {
   if (isMinigame === true) return (
     <div style={{paddingTop: '1.5625rem', paddingBottom: '1.375rem'}} className="flex w-full pb-8 font-spoqaMedium text-14px tracking-tight text-gray-r454545">
         <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '11rem' : '2rem'}} className="h-full flex items-center justify-end">회차</div>
-        <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '13.5rem' : '13.45rem'}} className="h-full flex items-center justify-end">승</div>
-        <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '12.25rem' : '15.2rem'}} className="h-full flex items-center justify-end">VS</div>
-        <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '9rem' : '15.45rem'}} className="h-full flex items-center justify-end">패</div>
+        <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '13.5rem' : '13.3rem'}} className="h-full flex items-center justify-end">승</div>
+        <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '12.25rem' : '16rem'}} className="h-full flex items-center justify-end">VS</div>
+        <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '9rem' : '16rem'}} className="h-full flex items-center justify-end">패</div>
     </div>
   ) 
   else return (

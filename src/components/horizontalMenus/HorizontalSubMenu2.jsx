@@ -2,15 +2,19 @@ import React, { useState } from 'react'
 
 
 const HorizontalSubMenu = ({
-    itemsArray, 
-    setSelectedTab,
-    selectedTab,
     setSelectedSubTab = null,
     isSameWidth = false,
 }) => {
 
+    const tabsSubArray = [
+        { text: "승무패", id: 0, path: "/mypage/gameresults/all" },
+        { text: "핸디캡", id: 1, path: "/mypage/gameresults/all1" },
+        { text: "언오버", id: 2, path: "/mypage/gameresults/all2" },
+        { text: "스페셜", id: 3, path: "/mypage/gameresults/all3" },
+    ];
     const pathname = window.location.pathname
     const [isHover, setHover] = useState(null)
+    const [selectedTab, setSelectedTab] = useState(0)
     console.log(`isHover`, isHover)
     
     
@@ -52,14 +56,14 @@ const HorizontalSubMenu = ({
                         {items?.length - 1 === index && (
                             <div style={{minWidth: '0.8rem', height: '6.375rem'}}></div>
                         )}
-                        </>
+                    </>
                     )
         });
             }
 
     return (
         <div id="container" className="flex justify-start items-start mr-8">
-            <TabsList items={itemsArray} />
+            <TabsList items={tabsSubArray} />
         </div>
     )
 }

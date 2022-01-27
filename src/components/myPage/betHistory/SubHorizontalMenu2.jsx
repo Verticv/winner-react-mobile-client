@@ -4,7 +4,8 @@ import horizontalsScroll from '../../../utils/horizontalsScroll';
 const SubHorizontalMenu2 = ({
     itemsArray, 
     isState = 0, 
-    setState
+    setState,
+    isMinigame=false
 }) => {
 
     const [isHover, setHover] = useState(null)
@@ -62,7 +63,7 @@ const SubHorizontalMenu2 = ({
                         }}
                         className={`h-full w-full rounded-b-md rounded-t-lg flex flex-col items-center justify-center border-gray-b7b7b7`}
                     >
-                        <img style={{ width: imageWidth, marginTop: '0.6rem'}} className="h-full ml-2px w-10 object-contain" src={item.icon} alt="" />
+                        <img style={{ width: !isMinigame ? imageWidth : "8rem", marginTop: '0.6rem'}} className={`h-full ml-2px object-contain`} src={item.icon} alt="" />
                         <div style={{marginTop: '-0.75rem'}} className='h-28'>
                             <span  className={`text-4xl font-spoqaMedium tracking-tight text-gray-r7b7b7b ${item.custom}`} >{item.text}</span>
                         </div>

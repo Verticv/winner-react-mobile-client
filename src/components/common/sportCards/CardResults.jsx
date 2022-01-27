@@ -92,7 +92,7 @@ const CardResults = ({
                     <div
                     style={{
                         textShadow: bet === "right" ? "1px 1px 1px #00000070" : "",
-                        paddingRight: team2?.length > 8 ? '0' : '',
+                        // paddingRight: team2?.length > 8 ? '0' : '',
                         paddingLeft: '0.6rem'
                         // paddingRight: '1.125rem',
                         // backgroundColor: bet === "right" ? "#cb4343" : "#dddddd"
