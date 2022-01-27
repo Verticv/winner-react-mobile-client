@@ -189,7 +189,7 @@ const DateSearchBar = ({
                     {withBlackButton && (
                         <div style={{minWidth: '27.4375rem', height: '7.3125rem'}} className="common-button flex w-full items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75">
                             <div className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-px">검색</span>
+                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-2">검색</span>
                             </div>
                         </div>
                     )}

@@ -51,7 +51,17 @@ const HorizontalMenu1 = ({
                         ? "bg-blue-r58baf7" 
                         : "bg-white"
                     } overflow-hidden flex items-end w-1/2`} 
-                    onClick={() => {
+                    // onClick={() => {
+                    //     horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
+                    //     history.push(item.path)
+                    //     setSelectedTab(item.id)
+                    //     if (setSelectedSubTab !== null) {
+                    //         setSelectedSubTab(0)
+                    //     }
+                    // }}
+                    onPointerDown={() => setHover(item.id)}
+                    onPointerUp={() => {
+                        setHover(null)
                         horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
                         history.push(item.path)
                         setSelectedTab(item.id)
@@ -59,8 +69,6 @@ const HorizontalMenu1 = ({
                             setSelectedSubTab(0)
                         }
                     }}
-                    onPointerDown={() => setHover(item.id)}
-                    onPointerUp={() => setHover(null)}
                 >
                     <div 
                         style={{
