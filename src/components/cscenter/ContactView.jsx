@@ -43,7 +43,7 @@ const ContactView = () => {
                     <p className='flex mt-1.5 items-center text-gray-r585858 font-spoqaMedium' style={{fontSize: '2.4375rem', marginLeft: '0.875rem'}}>마이마이프로틴화이팅</p>
                     <div className='flex mt-2'>
                         <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem', marginTop: '0.4rem'}} className='bg-gray-dddddd'></div>
-                        <p style={{fontSize: '2.25rem'}} className="-mt-1.5 text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
+                        <p style={{fontSize: '2.25rem'}} className="-mt-1 text-gray-r7b7b7b tracking-tight font-spoqa">2021.06.28 15:36</p>
                     </div>
                     <div 
                         style={{backgroundColor:"#02569c", fontSize: '2.4375rem', marginRight: '1.875rem', padding: '0.35rem 1.8rem', paddingBottom: '0', width: 'fit-content', height: '4.125rem'}} 

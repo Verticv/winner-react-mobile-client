@@ -60,7 +60,7 @@ const HorizontalMenu1 = ({
                         }
                     }}
                     onMouseOver={() => setHover(item.id)}
-                    onMouseLeave={() => setHover(null)}
+                    onMouseOut={() => setHover(null)}
                 >
                     <div 
                         style={{
