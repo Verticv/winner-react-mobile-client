@@ -59,8 +59,8 @@ const HorizontalMenu1 = ({
                             setSelectedSubTab(0)
                         }
                     }}
-                    onMouseOver={() => setHover(item.id)}
-                    onMouseOut={() => setHover(null)}
+                    onPointerDown={() => setHover(item.id)}
+                    onPointerUp={() => setHover(null)}
                 >
                     <div 
                         style={{
