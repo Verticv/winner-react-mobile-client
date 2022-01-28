@@ -98,14 +98,14 @@ const HorizontalMenu1 = ({
                             }}
                             className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                         >
-                            <img style={{width: '6.9rem', marginLeft: '0.5625rem'}} className="mt-5 object-contain" src={item.icon} alt="" />
+                            <img style={{width: '6.9rem', marginLeft: '0.5625rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className="mt-5 object-contain select-none" src={item.icon} alt="" />
                             <span
                                 style={{marginTop: withSmallMarginTop ? '0.25rem' : ''}}
                                 className={`${
                                     isSameLink
                                     ? "text-white"
                                     : "text-gray-r616161" 
-                                } text-4xl font-spoqaMedium tracking-tight`}
+                                } text-4xl font-spoqaMedium tracking-tight select-none`}
                             >{item.text}</span>
                         </div>
                     </div>
