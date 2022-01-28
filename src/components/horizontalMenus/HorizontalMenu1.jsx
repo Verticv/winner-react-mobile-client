@@ -13,6 +13,10 @@ const HorizontalMenu1 = ({
     let pathname = window.location.pathname
     const [isHover, setHover] = useState(null)
 
+    const Image = React.memo(function Image({ src }) {
+        return <img style={{width: '6.9rem', marginLeft: '0.5625rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className="mt-5 object-contain select-none" src={src} alt="" />
+    });
+
     useEffect(() => {
         horizontalsScroll(itemsArray, 't', 'scroll-wrapper')
     }, [itemsArray])
@@ -98,7 +102,8 @@ const HorizontalMenu1 = ({
                             }}
                             className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                         >
-                            <img style={{width: '6.9rem', marginLeft: '0.5625rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className="mt-5 object-contain select-none" src={item.icon} alt="" />
+                            <Image src={item.icon} />
+                            {/* <img style={{width: '6.9rem', marginLeft: '0.5625rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className="mt-5 object-contain select-none" src={item.icon} alt="" /> */}
                             <span
                                 style={{marginTop: withSmallMarginTop ? '0.25rem' : ''}}
                                 className={`${
