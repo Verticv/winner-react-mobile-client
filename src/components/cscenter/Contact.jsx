@@ -12,13 +12,14 @@ const Contact = () => {
         { text: "전체", id: 0, width: '11.5625rem', path: "/cscenter/all/contact/all" },
         { text: "카지노", id: 1, width: '13.4375rem', path: "/cscenter/all/contact/all/live-casino" },
         { text: "슬롯", id: 2, width: '11.5625rem', path: "/cscenter/all/contact/all/slot" },
+
         { text: "스포츠", id: 3, width: '13.4375rem', path: "/cscenter/all/contact/all/sports" },
         { text: "e-스포츠", id: 4, width: '15.3125rem', path: "/cscenter/all/contact/all/e-sports" },
         { text: "미니게임", id: 5, width: '15.3125rem', path: "/cscenter/all/contact/all/minigame" },
-        { text: "키론가상게임", id: 6, path: "/cscenter/all/contact/all/ar-game" },
-        { text: "충전/환전", id: 7, path: "/cscenter/all/contact/all/transaction" },
-        { text: "베팅관련", id: 8, path: "/cscenter/all/contact/all/about-betting" },
-        { text: "기타", id: 9, path: "/cscenter/all/contact/all/other" },
+        { text: "키론가상게임", width: '20.3125rem', id: 6, path: "/cscenter/all/contact/all/ar-game" },
+        { text: "충전/환전", width: '16.3125rem', id: 7, path: "/cscenter/all/contact/all/transaction" },
+        { text: "베팅관련", width: '15.3125rem', id: 8, path: "/cscenter/all/contact/all/about-betting" },
+        { text: "기타", width: '10.3125rem', id: 9, path: "/cscenter/all/contact/all/other" },
     ];
 
     const inboxArray = [
@@ -108,19 +109,18 @@ const Contact = () => {
     const location = useLocation();
     const [, setSelectedTab] = useState(0)
     const [page, setPage] = useState(0)
-    const [selectedSubTab, setSelectedSubTab] = useState(location.pathname)
+    const [, setSelectedSubTab] = useState(location.pathname)
     const [checkedState, setCheckedState] = useState(
         new Array(inboxArray.length).fill(false)
     );
     const history = useHistory();
-    console.log(`selectedSubTab`, selectedSubTab)
 
     return (
         <div>
                 <div className="w-full flex relative top-0">
                     <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
 
-                    <div style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                    <div id='scroll-wrapper12' style={{paddingLeft: '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
                             <HorizontalSubMenu itemsArray={tabsArray} setSelectedTab={setSelectedTab} setSelectedSubTab={setSelectedSubTab}/>
                         </div>
