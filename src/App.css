@@ -106,7 +106,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   .common-button {
-    padding: 0.2px;
+    padding: 0.3px;
   }
   .common-button > div {
     width: calc(100% - 1.5px); 

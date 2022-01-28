@@ -248,7 +248,7 @@ const FreeBoardView = () => {
                 <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd"> 
                         <div className="w-full flex items-center justify-between">
                             <div className="flex items-center">
-                                <img style={{width: '3.825rem', height: '4.6375rem'}} className='object-contain' src={Rank2} alt="" />
+                                <img style={{width: '3.825rem', height: '4.6375rem', marginRight: '0.5625rem'}} className='object-contain' src={Rank2} alt="" />
                                 <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
                                 <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
                                 <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
