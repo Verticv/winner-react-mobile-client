@@ -50,8 +50,8 @@ const FreeBoardView2 = () => {
         <div style={{paddingTop: '2.251rem'}} className="w-full">
             <div className="w-full items-center flex justify-between">
                 <div className="flex items-center">
-                    <img style={{width: '2.25625rem', height: '2.25625rem', marginRight: '2.3125rem'}} src={ReplyArrow} alt="" />
-                    <img style={{width: '3.625rem', height: '4.4375rem', marginRight: '0.8125rem'}} className='object-contain' src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
+                    <img style={{width: '2.25625rem', height: '2.25625rem', marginRight: '2rem'}} src={ReplyArrow} alt="" />
+                    <img style={{width: '3.825rem', height: '4.6375rem', marginRight: '0.8125rem'}} className='object-contain' src={rank === 1 ? Rank1 : rank === 2 ? Rank2 : rank === 3 ? Rank3 : rank === 4 ? Rank4 : Rank5} alt="" />
                     <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858">{username}</p>
                     <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
                     <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
@@ -88,7 +88,7 @@ const FreeBoardView2 = () => {
                 <div style={{height: '7.3125rem', padding: '1.4375rem 1.875rem', borderBottomWidth: '0.1875rem', marginBottom: '3.75rem'}} className="bg-gray-fafafa border-b border-gray-dddddd flex justify-between items-center">
                     <div className="w-full flex items-center justify-between">
                         <div className="flex items-center">
-                            <img style={{width: '3.625rem', height: '4.4375rem', marginRight: '0.9rem'}} className='object-contain' src={Rank1} alt="" />
+                            <img style={{width: '3.825rem', height: '4.6375rem', marginRight: '0.9rem'}} className='object-contain' src={Rank1} alt="" />
                             <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">하이도1207</p>
                             <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-dddddd'></div>
                             <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:49</p>
@@ -159,7 +159,7 @@ const FreeBoardView2 = () => {
                 <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd"> 
                     <div className="w-full flex items-center justify-between">
                         <div className="flex items-center">
-                            <img style={{width: '3.625rem', height: '4.4375rem', marginRight: '0.5625rem'}} className='object-contain' src={Rank2} alt="" />
+                            <img style={{width: '3.825rem', height: '4.6375rem', marginRight: '0.5625rem'}} className='object-contain' src={Rank2} alt="" />
                             <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
                             <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
                             <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
@@ -191,7 +191,7 @@ const FreeBoardView2 = () => {
                 <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd"> 
                     <div className="w-full flex items-center justify-between">
                         <div className="flex items-center">
-                            <img style={{width: '3.625rem', height: '4.4375rem', marginRight: '0.5625rem'}} className='object-contain' src={Rank2} alt="" />
+                            <img style={{width: '3.825rem', height: '4.6375rem', marginRight: '0.5625rem'}} className='object-contain' src={Rank2} alt="" />
                             <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
                             <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
                             <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
@@ -221,7 +221,7 @@ const FreeBoardView2 = () => {
                 <div style={{padding: '0 1.875rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd"> 
                         <div className="w-full items-center flex justify-between">
                             <div className="flex items-center">
-                                <img style={{width: '3.625rem', height: '4.4375rem'}} className='object-contain' src={Rank2} alt="" />
+                                <img style={{width: '3.825rem', height: '4.6375rem',}} className='object-contain' src={Rank2} alt="" />
                                 <p style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858">신풍사우나</p>
                                 <div style={{height: '1.75rem', width: '0.1875rem', margin: 'auto 1.1875rem'}} className='bg-gray-c5c5c5'></div>
                                 <p style={{fontSize: '2.25rem'}} className="text-gray-r7b7b7b tracking-tight font-spoqaMedium">2021.06.28 15:36</p>
