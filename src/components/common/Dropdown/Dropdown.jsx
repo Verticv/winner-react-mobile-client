@@ -18,7 +18,7 @@ const SortBy = ({ children, options, value, onChange, onClick }) => (
         </option>
       ))}
     </select>
-    <label className="custom" htmlFor="filter-select">
+    <label style={{fontSize: '2.625rem'}} className="custom" htmlFor="filter-select">
       {children}
     </label>
   </div>
@@ -38,7 +38,7 @@ const Dropdown = ({options, children, labelStyle, labelClasses, isLeagueSelectio
         onClick={() => console.log('on click!')}
       >
         <div className="flex w-full items-center justify-between">
-          <div className={labelClasses} style={labelStyle}>{sortValue}</div>
+          <div className={labelClasses} style={labelStyle}><p style={{marginTop:"0.5rem"}}>{sortValue}</p></div>
           {children}
         </div>
       </SortBy>

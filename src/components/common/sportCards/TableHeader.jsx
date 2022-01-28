@@ -7,7 +7,7 @@ const TableHeader = ({smallCard = false, isMinigame = false}) => {
         <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '11rem' : '2rem'}} className="h-full flex items-center justify-end">회차</div>
         <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '13.5rem' : '13.3rem'}} className="h-full flex items-center justify-end">승</div>
         <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '12.25rem' : '16rem'}} className="h-full flex items-center justify-end">VS</div>
-        <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '9rem' : '16rem'}} className="h-full flex items-center justify-end">패</div>
+        <div style={{fontSize: '2.625rem', marginLeft: smallCard ? '9rem' : '16.2rem'}} className="h-full flex items-center justify-end">패</div>
     </div>
   ) 
   else return (

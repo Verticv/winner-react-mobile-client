@@ -4,7 +4,7 @@ import Dropdown from 'components/common/Dropdown/Dropdown';
 
 const ContactCompose = () => {
 
-    const carrierOptions = ["제목", "본문", "작성자"]
+    const carrierOptions = ["라이브카지노", "슬롯게임", "스포츠", "e-스포츠", "미니게임", "키론가상게임", "충전/환전", "베팅관련", "기타"]
     return (
         <div style={{padding: '1.875rem'}}>
             

@@ -69,6 +69,8 @@ const HorizontalMenu1 = ({
                             setSelectedSubTab(0)
                         }
                     }}
+                    onPointerOut={() => setHover(null)}
+                    onPointerCancel={() => setHover(null)}
                 >
                     <div 
                         style={{
