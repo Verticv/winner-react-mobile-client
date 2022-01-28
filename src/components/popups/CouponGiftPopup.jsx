@@ -21,7 +21,7 @@ const CouponGiftPopup = ({setPopupOpen}) => {
                     <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-gray-r7c7c7c">선물로 보낼 쿠폰을 확인하세요.</span>
                 </div>
 
-                <div style={{height: '10.4375rem', fontSize: '2.8125rem', marginBottom: '7rem'}} className="w-full bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl flex items-center justify-center font-spoqaMedium tracking-tight ">
+                <div style={{height: '10.4375rem', fontSize: '2.8125rem', marginBottom: '7rem'}} className="w-full bg-gray-f9f9f9 border border-gray-dddddd rounded-2xl flex items-center justify-center font-spoqaMedium tracking-tight py-6">
                     <span className="text-gray-r454545">선물할 쿠폰</span>
                     <div style={{height: '6.75rem', width: '41.4375rem', marginLeft: '1.875rem'}} className="bg-white border border-gray-dddddd rounded-2xl flex items-center">
                         <span style={{paddingLeft: '1.5625rem'}} className="text-gray-r8c8c8c">쿠폰테스트</span>

@@ -120,32 +120,32 @@ const DateSearchBar = ({
                     <div style={{margin: '0.75rem 1.875rem', marginBottom: withBlackButton ? '0.75rem' : '0'}} className="flex w-full h-full items-center justify-between">
                         <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75">
                             <div className="flex items-center w-full h-full justify-center rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-px">오늘</span>
+                                <span style={{fontSize: '2.625rem', paddingBottom:'3px'}} className="font-spoqaMedium tracking-tight text-white pb-px">오늘</span>
                             </div>
                         </div>
 
                         <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r2068b2 hover:opacity-75">
                             <div className="flex items-center w-full h-full justify-center bg-black rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-px">1주일</span>
+                                <span style={{fontSize: '2.625rem', paddingBottom:'3px'}} className="font-spoqaMedium tracking-tight text-white pb-px">1주일</span>
                             </div>
                         </div>
 
                         <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75">
                             <div className="flex items-center w-full h-full justify-center bg-black rounded-lg border border-blue-r538dcf bg-gradient-to-b from-blue-r3176c5 via-blue-r286bb7 to-blue-r1c5ca5 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-px">15일</span>
+                                <span style={{fontSize: '2.625rem', paddingBottom:'3px'}} className="font-spoqaMedium tracking-tight text-white pb-px">15일</span>
                             </div>
                         </div>
 
                         <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r286fce hover:opacity-75">
                             <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r70a8f5 bg-gradient-to-b from-blue-r5497f4 via-blue-r4985d8 to-blue-r3d71b8 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-px">1개월</span>
+                                <span style={{fontSize: '2.625rem', paddingBottom:'3px'}} className="font-spoqaMedium tracking-tight text-white pb-px">1개월</span>
                             </div>
                         </div>
 
                         {has3MonthSearch && (
                             <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75">
                                 <div className="flex items-center w-full h-full justify-center bg-black rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
-                                    <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-px">3개월</span>
+                                    <span style={{fontSize: '2.625rem', paddingBottom:'3px'}} className="font-spoqaMedium tracking-tight text-white pb-px">3개월</span>
                                 </div>
                             </div>
                         )}
@@ -153,13 +153,13 @@ const DateSearchBar = ({
                         {!hasIdSearch ? (
                             <div style={{width: '13.25rem', height: '7.3125rem'}} className={`common-button flex items-center justify-center rounded-lg ${withBlackButton? "bg-blue-r177cce" : "bg-gray-r171a1d"}  hover:opacity-75`}>
                                 <div className={`flex items-center justify-center w-full h-full bg-black rounded-lg border ${withBlackButton ? "border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8" : "border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337"}  cursor-pointer`}>
-                                    <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-px">{withBlackButton ? "3개월" : "검색"}</span>
+                                    <span style={{fontSize: '2.625rem', paddingBottom:'3px'}} className="font-spoqaMedium tracking-tight text-white pb-px">{withBlackButton ? "3개월" : "검색"}</span>
                                 </div>
                             </div>
                         ) : (
                             <div style={{width: '13.25rem', height: '7.3125rem'}} className="common-button flex items-center justify-center rounded-lg bg-blue-r177cce hover:opacity-75">
                                 <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r62b3f7 bg-gradient-to-b from-blue-r5497f4 via-blue-r3a93dd to-blue-r3d71b8 cursor-pointer">
-                                    <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-px">3개월</span>
+                                    <span style={{fontSize: '2.625rem', paddingBottom:'3px'}} className="font-spoqaMedium tracking-tight text-white pb-px">3개월</span>
                                 </div>
                             </div>
                         )}
@@ -189,7 +189,7 @@ const DateSearchBar = ({
                     {withBlackButton && (
                         <div style={{minWidth: '27.4375rem', height: '7.3125rem'}} className="common-button flex w-full items-center justify-center rounded-lg bg-gray-r171a1d hover:opacity-75">
                             <div className="flex w-full h-full items-center justify-center bg-black rounded-lg border border-gray-r737579 bg-gradient-to-b from-gray-r585b5e via-gray-r45484c to-gray-r303337 cursor-pointer">
-                                <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white pb-2">검색</span>
+                                <span style={{fontSize: '2.625rem', paddingBottom: '2px'}} className="font-spoqaMedium tracking-tight text-white">검색</span>
                             </div>
                         </div>
                     )}

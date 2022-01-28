@@ -10,12 +10,14 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
     const history = useHistory()
 
     return (
-        <div style={{borderRadius: "0.75rem", paddingBottom:"6rem"}}  className="relative w-full bg-white rounded-lg shadow-popup">
-            <div className="absolute w-full -mt-50px flex justify-center">
-                <div className="flex items-center justify-center rounded-full">
-                    <img style={{height: '17.75rem', width: '17.75rem'}} src={SignedUpIcon} alt="login_icon"/>
+        <div style={{width: '70.8125rem', borderRadius: "0.75rem", paddingBottom:"6rem"}} className="relative bg-white rounded-xl shadow-popup">
+
+            <div style={{width: '71rem'}} className="absolute flex justify-center">
+                <div className="flex items-center justify-center">
+                    <img style={{height: '17.75rem', width: '17.75rem', marginTop: '-9rem'}} src={SignedUpIcon} alt="login_icon"/>
                 </div>
             </div>
+
             {/* BREAK */}
             <div style={{marginTop: "8.8rem"}} className="w-full h-full flex flex-col items-center">
                 {/* BREAK */}
@@ -23,7 +25,7 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
                     <label style={{fontSize: '2.8rem'}} className="text-gray-r393e41 font-spoqaBold">가입 신청이 완료 되었습니다.</label>
                     <div style={{fontSize: '2.8rem'}} className="flex text-gray-r393e41 font-spoqaMedium space-x-2">
                         <label>관리자</label>
-                        <label className="text-blue-r1ca7ec font-spoqaBold">승인 대기중</label>
+                        <label style={{color:'#2087f0'}} className="font-spoqaBold">승인 대기중</label>
                         <label>입니다.</label>
                     </div>
                 </div>
@@ -72,7 +74,7 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
                             setSignup(false)
                         }}
                     >
-                        <span className='block mt-1.5'>확인</span>
+                        <span className='block mt-1.5'>로그인</span>
                     </button>
                 </div>
             </div>
