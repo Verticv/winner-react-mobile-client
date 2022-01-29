@@ -40,7 +40,7 @@ const AllGamesBanner = () => {
         { id: 12, img: MinigameBanner2, imgText: '파워사다리', textMarginBottom: '26.5rem', textMarginTop: '4.5rem', color: "bg-blue-r77a4e0", btnText: "게임시작", class: "", path: "/minigame/powerladder" },
         { id: 13, img: MinigameBanner3, imgText: '스피드키노', textMarginBottom: '27rem', textMarginTop: '5rem', color: "bg-orange-e39e90", btnText: "게임시작", class: "", path: "/minigame/speedkino" },
         { id: 14, img: MinigameBanner4, imgText: '키노사다리', textMarginBottom: '27rem', textMarginTop: '4.5rem', color: "bg-green-e3ba3c", btnText: "게임시작", class: "", path: "/minigame/kinoladder" },
-        { id: 15, img: VirtualBanner, imgText: '키론가상게임', textMarginBottom: '25rem', textMarginTop: '5rem', color: "bg-green-r7bd26a", btnText: "게임시작", class: "", path: "/minigame/powerball" },
+        { id: 15, img: VirtualBanner, imgText: '키론가상게임', textMarginBottom: '25rem', textMarginTop: '5rem', color: "bg-green-r7bd26a", btnText: "게임시작", class: ""},
         { id: 16, img: FishingBanner, imgText: '케이플레이피싱', textMarginBottom: '24.5rem', textMarginTop: '5rem', color: "bg-blue-r3384ca", btnText: "게임시작", class: "" },
     ];
 

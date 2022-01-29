@@ -19,9 +19,9 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
             </div>
 
             {/* BREAK */}
-            <div style={{marginTop: "8.8rem"}} className="w-full h-full flex flex-col items-center">
+            <div style={{marginTop: "8.6rem"}} className="w-full h-full flex flex-col items-center">
                 {/* BREAK */}
-                <div className="flex flex-col items-center justify-center space-y-4">
+                <div className="flex flex-col items-center justify-center -space-y-3">
                     <label style={{fontSize: '2.8rem'}} className="text-gray-r393e41 font-spoqaBold">가입 신청이 완료 되었습니다.</label>
                     <div style={{fontSize: '2.8rem'}} className="flex text-gray-r393e41 font-spoqaMedium space-x-2">
                         <label>관리자</label>
@@ -30,10 +30,10 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
                     </div>
                 </div>
                 {/* BREAK */}
-                <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium flex flex-col items-center justify-center pt-12 tracking-tighter">
+                <div style={{fontSize: '2.625rem'}} className="text-gray-r393e41 font-spoqaMedium flex flex-col items-center justify-center pt-14 tracking-tighter">
                     <span style={{fontSize: '2.625rem'}}>관리자 승인 후 로그인 하시면</span>
-                    <span style={{fontSize: '2.625rem'}} className=''>정상적으로 서비스 이용이 가능합니다.</span>
-                    <span style={{fontSize: '2.625rem'}} className="mt-12 text-center">당사 사이트는 깨끗하고 안전한 운영을 자랑합니다. </span>
+                    <span style={{fontSize: '2.625rem'}} className='-mt-3'>정상적으로 서비스 이용이 가능합니다.</span>
+                    <span style={{fontSize: '2.625rem'}} className="mt-10 text-center">당사 사이트는 깨끗하고 안전한 운영을 자랑합니다. </span>
                 </div>
                 {/* BREAK */}
                 <div style={{paddingLeft:"3rem", paddingRight:"3rem"}} className="relative flex w-full mt-30px">
