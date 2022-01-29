@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
-// import {Helmet} from "react-helmet";
+import {Helmet} from "react-helmet";
 import "./App.css";
 import { getCookie, setCookie } from './utils'
 import MainPage from "./pages/MainPage";
@@ -47,9 +47,9 @@ function App() {
 
 
     useEffect(() => {
-        if (pathname?.includes('/minigame')) {
-            // setViewportContent('maximum-scale=1.0, user-scalable=no')
-        }
+        // if (pathname?.includes('/minigame')) {
+        //     setViewportContent('maximum-scale=1.0, user-scalable=no')
+        // }
         if (pathname !== '/') {
             const html = document.querySelector('html')            
             html.style.background = 'white';
@@ -87,9 +87,9 @@ function App() {
 
     return (
         <>
-            {/* <Helmet>
-                <meta name="viewport" content={viewportContent} />
-            </Helmet> */}
+            <Helmet>
+                <meta name="viewport" content="width=device-width, initial-scale=1"  />
+            </Helmet>
             <Switch>
                 {/*   
                 Example to pass props to a route.
