@@ -4,9 +4,11 @@ import DropDownControls from "components/dropdowns/MyPageCountriesDropDownContro
 import CountryDropDown from "components/dropdowns/MyPageMobileCountryDropDown";
 import CloseIcon from "../../images/newImages/close-gray.png";
 import ProfileIcon from "../../images/newImages/pure_profile_icon.png";
-import big_1 from "../../images/newImages/big_1.png";
-import big_2 from '../../images/newImages/freeboard/2.png'
-import big_3 from '../../images/newImages/freeboard/3.png'
+import big_1 from "../../images/newImages/lv_1.png";
+import big_2 from "../../images/newImages/lv_2.png";
+import big_3 from "../../images/newImages/lv_3.png";
+// import big_4 from "../../images/newImages/lv_4.png";
+// import big_5 from "../../images/newImages/lv_5.png";
 import Logout from "../../images/newImages/logout.png";
 import InboxIcon from "../../images/newImages/mainPage/icons/mail.png";
 import Profile from "../../images/newImages/mainPage/icons/profile.png";
@@ -118,7 +120,7 @@ const AccountProfileComponent = ({isAuthenticated,setAuthenticated}) => {
               {isAuthenticated && (<div style={{padding: '2.4375rem', paddingBottom: '1.3125rem'}} className="flex w-full">
                 <div className='relative' style={{width: '23.6rem'}}>
                   <img style={{maxWidth: '23.6rem', width: '23.6rem'}} src={ProfileIcon} alt="profile_icon" />
-                  <img style={{height: '8.375rem', width: '6.8125rem'}} className='absolute top-2 left-2' src={winImage} alt="big_1" />
+                  <img style={{height: '8.375rem'}} className='absolute top-1 left-0 -ml-2' src={winImage} alt="big_1" />
                   
                 </div>
                 <div style={{marginLeft: '2.4375rem'}} className="w-full">
