@@ -43,13 +43,15 @@ const SubHorizontalMenu2 = ({
                         ? "bg-d0e8ff" 
                         : "bg-white"
                     } overflow-hidden flex items-end w-full`} 
-                    onClick={() =>  {
-                            setState(item.id)
-                            horizontalsScroll(itemsArray, 't-sub', 'scroll-wrapper1', index)
-                        }
-                    }
-                    onMouseOver={() => setHover(item.id)}
-                    onMouseLeave={() => setHover(null)}
+
+
+                    onPointerDown={() => setHover(item.id)}
+                    onPointerUp={() => {
+                        setState(item.id)
+                        horizontalsScroll(itemsArray, 't-sub', 'scroll-wrapper1', index)
+                    }}
+                    onPointerOut={() => setHover(null)}
+                    onPointerCancel={() => setHover(null)}
                 >
                     <div 
                         style={{
@@ -63,7 +65,7 @@ const SubHorizontalMenu2 = ({
                         }}
                         className={`h-full w-full rounded-b-md rounded-t-lg flex flex-col items-center justify-center border-gray-b7b7b7`}
                     >
-                        <img style={{ width: !isMinigame ? imageWidth : "8rem", marginTop: '0.6rem'}} className={`h-full ml-2px object-contain`} src={item.icon} alt="" />
+                        <img style={{ width: !isMinigame ? imageWidth : "8rem", marginTop: '0.6rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className={`h-full ml-2px object-contain`} src={item.icon} alt="" />
                         <div style={{marginTop: '-0.75rem'}} className='h-28'>
                             <span  className={`text-4xl font-spoqaMedium tracking-tight text-gray-r7b7b7b ${item.custom}`} >{item.text}</span>
                         </div>

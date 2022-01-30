@@ -39,7 +39,10 @@ const HorizontalSubMenu = ({
                         borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`
                     }} 
                     key={item.id} 
-                    onClick={() => {
+
+                    onPointerDown={() => setHover(item.id)}
+                    onPointerUp={() => {
+                        setHover(null)
                         if (pathname !== item.path) {
                             horizontalsScroll(itemsArray, 't', 'scroll-wrapper12', index)
                             history.push(item.path)
@@ -48,10 +51,9 @@ const HorizontalSubMenu = ({
                                 setSelectedSubTab(0)
                             }
                         }
-                        
                     }}
-                    onMouseOver={() => setHover(item.id)}
-                    onMouseLeave={() => setHover(null)}
+                    onPointerOut={() => setHover(null)}
+                    onPointerCancel={() => setHover(null)}
                     >
                         <div style={{margin: item?.width ? '0' : '0 2.6875rem'}} >
                             <div>

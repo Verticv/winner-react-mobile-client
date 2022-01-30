@@ -31,14 +31,16 @@ const HorizontalMenu = ({
                     width: '18.68375rem',
                     height: '13.18rem',
                     marginRight: items.length -1 === index ? '1.875rem' : '1px',
-                    padding: '1px'
+                    padding: '1px', 
                 }}
                 className={`${
                     pathname === item.path
                     ? "bg-blue-r58baf7" 
                     : "bg-white"
                 } overflow-hidden flex items-end`} 
-                onClick={() => {
+                onPointerDown={() => setHover(item.id)}
+                onPointerUp={() => {
+                    setHover(null)
                     horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
                     history.push(item.path)
                     setSelectedTab(item.id)
@@ -46,8 +48,8 @@ const HorizontalMenu = ({
                         setSelectedSubTab(0)
                     }
                 }}
-                onMouseOver={() => setHover(item.id)}
-                onMouseLeave={() => setHover(null)}
+                onPointerOut={() => setHover(null)}
+                onPointerCancel={() => setHover(null)}
             >
                 <div 
                     style={{
@@ -77,7 +79,7 @@ const HorizontalMenu = ({
                         }}
                         className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                     >
-                        <img style={{width: '6.8rem', marginLeft: '0.5625rem'}} className="mt-4 object-contain" src={item.icon} alt="" />
+                        <img style={{width: '6.8rem', marginLeft: '0.5625rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className="mt-4 object-contain select-none" src={item.icon} alt="" />
                         <span
                             style={{marginTop: '0.625rem'}}
                             className={`${

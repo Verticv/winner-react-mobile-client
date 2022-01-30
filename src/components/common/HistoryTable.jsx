@@ -100,7 +100,7 @@ const HistoryTable = ({tableData, checkedState, isCouponUsage = false, setChecke
                 : hasButton &&
                     <button style={{width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length -1].buttonColor || 'red'}} className="common-button flex items-center justify-center rounded-2xl hover:opacity-75">
                         <div style={{padding: `${wrapButtonText ? '2rem' : ''}`}} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
-                            <span style={{fontSize: '2.7rem', lineHeight: '1.1', width: '10.875rem', marginTop: '0.4375rem'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length -1].buttonColor === '#0056a6' ? <div> {card[card.length -1].buttonText ? card[card.length -1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length -1].buttonText ||'진행중'} </span>
+                            <span style={{fontSize: '2.7rem', lineHeight: '1.1', width: '10.875rem', marginTop: '0.2375rem'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length -1].buttonColor === '#0056a6' ? <div> {card[card.length -1].buttonText ? card[card.length -1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length -1].buttonText ||'진행중'} </span>
                         </div>
                     </button>
                 }
