@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 import {Helmet} from "react-helmet";
+import "scroll-behavior-polyfill";
 import "./App.css";
 import { getCookie, setCookie } from './utils'
 import MainPage from "./pages/MainPage";
@@ -16,7 +17,18 @@ import LiveCasinoPage from "pages/LiveCasinoPage";
 import AuthenticationPage from "pages/AuthenticationPage";
 
 
-function App() {
+
+function  App() {
+
+    useEffect(() => {
+        const scrollSupport = async () => {
+            if (!("scrollBehavior" in document.documentElement.style)) {
+                await import("scroll-behavior-polyfill");
+            }
+        }
+        scrollSupport();
+    }, [])
+
 
     const [isAuthenticated, setAuthenticated] = useState(false);
     // const [viewportContent, setViewportContent] = useState("width=device-width, initial-scale=1");

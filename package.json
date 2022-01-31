@@ -21,6 +21,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-sticky": "^6.0.3",
+    "scroll-behavior-polyfill": "^2.0.13",
     "web-vitals": "^1.1.2",
     "zustand": "^3.5.9"
   },
