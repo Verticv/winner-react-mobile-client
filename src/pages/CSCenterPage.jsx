@@ -131,7 +131,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='고객센터' />
+                                    <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter' />
                                 </div>
 
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
@@ -147,7 +147,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='문의하기' />
+                                    <HomePageTopBanner pageTitle='문의하기' toPath='/cscenter/all/contact/all' />
                                 </div>
                                 <ContactView />
                             </Route>
@@ -155,7 +155,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='문의하기' />
+                                    <HomePageTopBanner pageTitle='문의하기' toPath='/cscenter/all/contact/all' />
                                 </div>
                                 <div style={{marginBottom: '3.75rem'}}>
                                     <ContactCompose />
@@ -166,7 +166,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='고객센터' />
+                                    <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter'/>
                                 </div>
 
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
@@ -182,7 +182,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='공지사항' />
+                                    <HomePageTopBanner pageTitle='공지사항' toPath='/cscenter/all/announcement' />
                                 </div>
                                 <div style={{marginBottom: '19.625rem'}}>
                                     <AnnouncementView />
@@ -192,7 +192,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='고객센터' />
+                                    <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter'/>
                                 </div>
 
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
@@ -210,7 +210,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='고객센터' />
+                                    <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter'/>
                                 </div>
 
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">
@@ -228,7 +228,7 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div className="w-full z-30 flex flex-col items-center">
                                     <NoticeBanner />
                                     <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                                    <HomePageTopBanner pageTitle='고객센터' />
+                                    <HomePageTopBanner pageTitle='고객센터' toPath='/cscenter'/>
                                 </div>
 
                                 <div style={{padding: '1.875rem', paddingBottom : '1.875rem'}} className="w-full relative top-0">

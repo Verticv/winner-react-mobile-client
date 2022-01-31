@@ -10,7 +10,7 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
     const history = useHistory()
 
     return (
-        <div style={{width: '70.8125rem', borderRadius: "0.75rem", paddingBottom:"6rem"}} className="relative bg-white rounded-xl shadow-popup">
+        <div style={{width: '70.8125rem', borderRadius: "0.75rem", paddingBottom:"7rem"}} className="relative bg-white rounded-xl shadow-popup">
 
             <div style={{width: '71rem'}} className="absolute flex justify-center">
                 <div className="flex items-center justify-center">
@@ -22,8 +22,8 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
             <div style={{marginTop: "8.6rem"}} className="w-full h-full flex flex-col items-center">
                 {/* BREAK */}
                 <div className="flex flex-col items-center justify-center -space-y-3">
-                    <label style={{fontSize: '2.8rem', marginTop:"2rem"}} className="text-gray-r393e41 font-spoqaBold">가입 신청이 완료 되었습니다.</label>
-                    <div style={{fontSize: '2.8rem'}} className="flex text-gray-r393e41 font-spoqaMedium space-x-2">
+                    <label style={{fontSize: '3rem', marginTop:"3rem"}} className="text-gray-r393e41 font-spoqaBold">가입 신청이 완료 되었습니다.</label>
+                    <div style={{fontSize: '3rem'}} className="flex text-gray-r393e41 font-spoqaMedium space-x-2">
                         <label>관리자</label>
                         <label style={{color:'#2087f0'}} className="font-spoqaBold">승인 대기중</label>
                         <label>입니다.</label>
@@ -40,25 +40,25 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
                     <div className="w-1/3 flex-shrink-0 flex flex-col items-center">
                         <img className="h-26px object-contain" src={img1} alt=""/>
                         <div className="w-full text-center mt-16px">
-                            <div style={{fontSize: '2rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium tracking-tight">회원님의 모든 데이터는</div>
-                            <div style={{fontSize: '2rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium tracking-tight leading-tight pt-2px">암호화되어 안전하게 </div>
-                            <div style={{fontSize: '2rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium tracking-tight leading-tight pt-2px">보관됩니다.</div>
+                            <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">회원님의 모든 데이터는</div>
+                            <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">암호화되어 안전하게 </div>
+                            <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">보관됩니다.</div>
                         </div>
                     </div>
                     <div className="w-1/3 flex-shrink-0 flex flex-col items-center border-l border-r">
                         <img className="h-26px object-contain" src={img2} alt=""/>
                         <div className="w-full text-center mt-20px">
-                            <div style={{fontSize: '2rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">아이디/비밀번호를</div>
-                            <div style={{fontSize: '2rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">분실되지 않도록 보안에 </div>
-                            <div style={{fontSize: '2rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">신경 써 주세요.</div>
+                            <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">아이디/비밀번호를</div>
+                            <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">분실되지 않도록 보안에 </div>
+                            <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">신경 써 주세요.</div>
                         </div>
                     </div>
                     <div className="w-1/3 flex-shrink-0 flex flex-col items-center">
                         <img className="mt-2px h-23px object-contain" src={img3} alt=""/>
                         <div className="w-full text-center mt-21px">
-                            <div style={{fontSize: '2rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">회원 탈퇴 후</div>
-                            <div style={{fontSize: '2rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">회원님의 정보는 </div>
-                            <div style={{fontSize: '2rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">완전히 삭제됩니다.</div>
+                            <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">회원 탈퇴 후</div>
+                            <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">회원님의 정보는 </div>
+                            <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">완전히 삭제됩니다.</div>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
 
                 <div style={{width: '54rem'}}>
                     <button 
-                        style={{height: '8.4375rem', fontSize: '3rem', borderRadius: '0.5625rem', marginTop: '4rem'}}
+                        style={{height: '8.4375rem', fontSize: '3rem', borderRadius: '0.5625rem', marginTop: '7rem'}}
                         className="w-full rounded-2xl bg-gradient-to-r from-blue-gradLight to-blue-gradDark font-spoqaMedium text-white hover:opacity-75"
                         onClick={() => {
                             history.push('/')

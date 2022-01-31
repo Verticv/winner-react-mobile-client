@@ -24,7 +24,7 @@ const InboxView = () => {
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar /> 
-                <HomePageTopBanner pageTitle='쪽지관리' />
+                <HomePageTopBanner pageTitle='쪽지관리' toPath='/mypage/inbox' />
             </div>
 
             <div style={{margin: '1.875rem'}} className="rounded-2xl overflow-hidden shadow-subNavbar border border-gray-dddddd mt-20px">

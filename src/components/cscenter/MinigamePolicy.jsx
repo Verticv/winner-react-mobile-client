@@ -38,15 +38,17 @@ const HistoryMenu = ({
                     } w-1/2 rounded-full font-spoqaMedium`}
                     style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path && !isActive ? '0.1875rem' : ''}`}} 
                     key={item.id} 
-                    onClick={() => {
+
+                    onPointerDown={() => setHover(item.id)}
+                    onPointerUp={() => {
                         history.push(item.path)
                         setSelectedTab(item.id)
                         if (setSelectedSubTab !== null) {
                             setSelectedSubTab(0)
                         }
                     }}
-                    onMouseOver={() => setHover(item.id)}
-                    onMouseLeave={() => setHover(null)}
+                    onPointerOut={() => setHover(null)}
+                    onPointerCancel={() => setHover(null)}
                 >
                     <div >
                         <div>

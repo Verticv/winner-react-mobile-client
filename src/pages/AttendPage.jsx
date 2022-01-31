@@ -15,7 +15,7 @@ const AttendPage = ({isAuthenticated, setAuthenticated}) => {
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                <HomePageTopBanner pageTitle='출석부' />
+                <HomePageTopBanner pageTitle='출석부' toPath='/main' />
             </div>
 
 

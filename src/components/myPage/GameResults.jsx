@@ -135,7 +135,7 @@ const GameResults = ({isAuthenticated}) => {
                 <div className="w-full z-30 flex flex-col items-center">
                     <NoticeBanner />
                     <Navbar /> 
-                    <HomePageTopBanner pageTitle='경기결과' />
+                    <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
                 </div>
                 
                 <div className="w-full relative top-0">
@@ -170,7 +170,7 @@ const GameResults = ({isAuthenticated}) => {
                 <div className="w-full z-30 flex flex-col items-center">
                     <NoticeBanner />
                     <Navbar /> 
-                    <HomePageTopBanner pageTitle='경기결과' />
+                    <HomePageTopBanner pageTitle='경기결과' toPath='/mypage/gameresults' />
                 </div>
                 
                 <div className="w-full relative top-0">

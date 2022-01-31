@@ -23,15 +23,17 @@ const HorizontalSubMenu1 = ({
             } rounded-full min-w-fit text-black flex items-center`}
             style={{height: '6.375rem', minWidth: 'fit-content' , fontSize: '2.625rem', marginRight: `${!index ? '0.9375rem' : '' }`}} 
             key={item.id} 
-            onClick={() => {
+
+            onPointerDown={() => setHover(item.id)}
+            onPointerUp={() => {
                 history.push(item.path)
                 setSelectedTab(item.id)
                 if (setSelectedSubTab !== null) {
                     setSelectedSubTab(0)
                 }
             }}
-            onMouseOver={() => setHover(item.id)}
-            onMouseLeave={() => setHover(null)}
+            onPointerOut={() => setHover(null)}
+            onPointerCancel={() => setHover(null)}
             >
                 <div style={{margin: '0 3.39rem'}} >
                     <div>
