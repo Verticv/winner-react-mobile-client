@@ -39,7 +39,7 @@ const SignedUpPopup = ({setCompletePopup, setSignup}) => {
                 <div style={{paddingLeft:"3rem", paddingRight:"3rem"}} className="relative flex w-full mt-30px">
                     <div className="w-1/3 flex-shrink-0 flex flex-col items-center">
                         <img className="h-26px object-contain" src={img1} alt=""/>
-                        <div className="w-full text-center mt-16px">
+                        <div className="w-full text-center mt-20px">
                             <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight">회원님의 모든 데이터는</div>
                             <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">암호화되어 안전하게 </div>
                             <div style={{fontSize: '1.7rem', wordBreak:"keep-all"}} className="text-gray-r667177 font-spoqaMedium text-xl tracking-tight leading-tight pt-2px">보관됩니다.</div>
