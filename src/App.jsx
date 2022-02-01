@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
-import smoothscroll from 'smoothscroll-polyfill';
 import {Helmet} from "react-helmet";
 import "./App.css";
 import { getCookie, setCookie } from './utils'
@@ -15,8 +14,6 @@ import MinigamesPage from "pages/MinigamesPage";
 // import EsportsPage from "pages/EsportsPage";
 import LiveCasinoPage from "pages/LiveCasinoPage";
 import AuthenticationPage from "pages/AuthenticationPage";
-
-smoothscroll.polyfill();
 
 function App() {
 
