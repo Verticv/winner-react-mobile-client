@@ -1,13 +1,13 @@
 import React, {StrictMode} from 'react';
 import ReactDOM from 'react-dom';
-import smoothscroll from 'smoothscroll-polyfill';
+// import smoothscroll from 'smoothscroll-polyfill';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import ScrollToTop from 'helpers/scrollToTop';
 
-smoothscroll.polyfill();
+// smoothscroll.polyfill();
 
 ReactDOM.render(
   <StrictMode>

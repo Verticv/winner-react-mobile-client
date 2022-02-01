@@ -12,6 +12,8 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
     return (
         <div className="relative flex flex-col h-full">
 
+            {'scroll-behavior' in document.documentElement.style ? 'true' : false}
+
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar /> 

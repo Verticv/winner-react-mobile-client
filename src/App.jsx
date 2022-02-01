@@ -22,6 +22,11 @@ function App() {
 
     const { pathname } = useLocation();
 
+    // useEffect(() => {
+    //     var scrollBehaviorSupported = 'scroll-behavior' in document.documentElement.style;
+    //     console.log('scroll-behavior supported:', scrollBehaviorSupported);
+    // }, [])
+
     useEffect(() => {
         const datePickerInput = document.querySelectorAll('.react-datepicker__input-container input')
         const menu = document.querySelector('#main-menu');
