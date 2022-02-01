@@ -10,19 +10,15 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
         scrollWrapper.scrollLeft = Number(leftScrollValue);
       } else {
         let leftScrollValueAmount = Number(leftScrollValue);
-        console.log('leftScrollValueAmount', leftScrollValueAmount);
         const myInterval = setInterval(() => {
           const scrolledValue = leftScrollValueAmount / 20
-          console.log('scrolledValue', scrolledValue);
           scrollWrapper.scrollLeft += scrolledValue
           leftScrollValueAmount = leftScrollValueAmount - scrolledValue
           if (leftScrollValueAmount < 1) {
-            console.log('inside if?!', leftScrollValueAmount);
             clearInterval(myInterval);
           }
         }, 15);
       }
-
     } else {
       scrollWrapper.scrollLeft = 0;
     }
