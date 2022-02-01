@@ -12,7 +12,7 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
         let leftScrollValueAmount = Number(leftScrollValue);
         console.log('leftScrollValueAmount', leftScrollValueAmount);
         const myInterval = setInterval(() => {
-          const scrolledValue = leftScrollValueAmount / 8
+          const scrolledValue = leftScrollValueAmount / 20
           console.log('scrolledValue', scrolledValue);
           scrollWrapper.scrollLeft += scrolledValue
           leftScrollValueAmount = leftScrollValueAmount - scrolledValue
@@ -20,7 +20,7 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
             console.log('inside if?!', leftScrollValueAmount);
             clearInterval(myInterval);
           }
-        }, 30);
+        }, 15);
       }
 
     } else {
