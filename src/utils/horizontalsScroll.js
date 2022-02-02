@@ -6,7 +6,7 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
     if (activeTapId > 2) {
       const elementWidth = window.document.querySelector(`#${tapIdPrefix}${activeTapId}`)?.offsetWidth;
       const leftScrollValue = ((activeTapId - 1.5) * elementWidth)
-      if ('scroll-behavior' in document.documentElement.style) {
+      if (false) {
         scrollWrapper.scrollLeft = Number(leftScrollValue);
       } else {
         let leftScrollValueAmount = Number(leftScrollValue);
