@@ -17,7 +17,7 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
           if (leftScrollValueAmount < 1) {
             clearInterval(myInterval);
           }
-        }, 10);
+        }, 20);
       }
     } else {
       scrollWrapper.scrollLeft = 0;
