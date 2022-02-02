@@ -11,7 +11,7 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
       } else {
         let leftScrollValueAmount = Number(leftScrollValue);
         const myInterval = setInterval(() => {
-          const scrolledValue = leftScrollValueAmount / 20
+          const scrolledValue = leftScrollValueAmount / 40
           scrollWrapper.scrollLeft += scrolledValue
           leftScrollValueAmount = leftScrollValueAmount - scrolledValue
           if (leftScrollValueAmount < 1) {
