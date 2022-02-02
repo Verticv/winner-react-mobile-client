@@ -6,8 +6,19 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
     if (activeTapId > 2) {
       const elementWidth = window.document.querySelector(`#${tapIdPrefix}${activeTapId}`)?.offsetWidth;
       const leftScrollValue = ((activeTapId - 1.5) * elementWidth)
-      console.log(leftScrollValue)
-      scrollWrapper.scrollLeft = Number(leftScrollValue);
+      if ('scroll-behavior' in document.documentElement.style) {
+        scrollWrapper.scrollLeft = Number(leftScrollValue);
+      } else {
+        let leftScrollValueAmount = Number(leftScrollValue);
+        const myInterval = setInterval(() => {
+          const scrolledValue = leftScrollValueAmount / 4
+          scrollWrapper.scrollLeft += scrolledValue
+          leftScrollValueAmount = leftScrollValueAmount - scrolledValue
+          if (leftScrollValueAmount < 1) {
+            clearInterval(myInterval);
+          }
+        }, 16);
+      }
     } else {
       scrollWrapper.scrollLeft = 0;
     }
