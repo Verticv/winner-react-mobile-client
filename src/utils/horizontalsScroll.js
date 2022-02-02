@@ -6,7 +6,7 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
     if (activeTapId > 2) {
       const elementWidth = window.document.querySelector(`#${tapIdPrefix}${activeTapId}`)?.offsetWidth;
       const leftScrollValue = ((activeTapId - 1.5) * elementWidth)
-      if (false) {
+      if ('scroll-behavior' in document.documentElement.style) {
         scrollWrapper.scrollLeft = Number(leftScrollValue);
       } else {
         let leftScrollValueAmount = Number(leftScrollValue);
@@ -17,7 +17,7 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
           if (leftScrollValueAmount < 1) {
             clearInterval(myInterval);
           }
-        }, 20);
+        }, 16);
       }
     } else {
       scrollWrapper.scrollLeft = 0;
