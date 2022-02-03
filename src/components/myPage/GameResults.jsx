@@ -209,9 +209,13 @@ const GameResults = ({isAuthenticated}) => {
                         <MinigamesMatchResultPanel />
                     </>
                 ) : isState === 2 ? (
-                    <></>
+                    <>
+                        <MinigamesMatchResultPanel type="speedkino" />
+                    </>
                 ) : (
-                    <></>
+                    <>
+                        <MinigamesMatchResultPanel type="kinoladder" />
+                    </>
                 )}
 
                 <div style={{marginTop: '1.875rem'}}>
