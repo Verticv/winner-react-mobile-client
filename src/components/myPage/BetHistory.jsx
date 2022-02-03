@@ -28,12 +28,13 @@ import LiveCasinoBetHistory from './betHistory/LiveCasinoBetHistory'
 import SportsBetHistory from './betHistory/SportsBetHistory'
 // import AllBetHistory from './betHistory/AllBetHistory'
 // import SlotBetHistory from './betHistory/SlotBetHistory'
-// import MinigameBetHistory from './betHistory/MinigameBetHistory'
 // import ARGameBetHistory from './betHistory/ARGameBetHistory'
 import { Route } from 'react-router'
-// import ESportsBetHistory from './betHistory/ESportsBetHistory'
 import Navbar from '../mainPage/Navbar'
 import NoticeBanner from '../mainPage/NoticeBanner'
+import SlotBetHistory from './betHistory/SlotBetHistory'
+import ESportsBetHistory from './betHistory/ESportsBetHistory'
+import MinigameBetHistory from './betHistory/MinigameBetHistory'
 
 const tabsArray = [
     { text: "전체", icon: Icon1, id: 0, path: "/mypage/bet-history/all" },
@@ -125,8 +126,6 @@ const BetHistory = ({isAuthenticated}) => {
 
             <Route exact path="/mypage/bet-history">
                 <>
-                    {/* <AllBetHistory />
-                    <Pagination page={page} setPage={setPage}/>    */}
                     <AccountProfileComponent isAuthenticated={isAuthenticated} />
                     <div style={{marginTop: '1.875rem', marginBottom: '36.375rem'}} className="flex w-full">
                         <LeftMenu
@@ -160,6 +159,16 @@ const BetHistory = ({isAuthenticated}) => {
                     <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
                 </div>
 
+                <Route exact path="/mypage/bet-history/all">
+                <>
+                    <LiveCasinoBetHistory showSub={false} isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                    <div style={{marginTop: '1.25rem'}}>
+                        <Pagination page={page} setPage={setPage}/>
+                    </div>
+                    <BottomNavbar />
+                </>
+                </Route>
+
                 <Route path="/mypage/bet-history/all/live-casino">
                 <>
                     <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
@@ -168,16 +177,40 @@ const BetHistory = ({isAuthenticated}) => {
                     </div>
                     <BottomNavbar />
                 </>
-            </Route>
-                {/* <Route path="/mypage/bet-history/all/slot-game">
+                </Route>
+
+                <Route path="/mypage/bet-history/all/slot-game">
                     <>
                         <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-                        <Pagination page={page} setPage={setPage}/>   
+                        <div style={{marginTop: '1.25rem'}}>
+                            <Pagination page={page} setPage={setPage}/>
+                        </div>
+                        <BottomNavbar />
                     </>
-                </Route> */}
+                </Route>
                 <Route path="/mypage/bet-history/all/sports">
                     <>
                         <SportsBetHistory checkedState={checkedState} setCheckedState={setCheckedState} />
+                        <div style={{marginTop: '1.25rem'}}>
+                            <Pagination page={page} setPage={setPage}/>
+                        </div>
+                        <BottomNavbar />
+                    </>
+                </Route>
+
+                <Route path="/mypage/bet-history/all/e-sports">
+                    <>
+                        <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                        <div style={{marginTop: '1.25rem'}}>
+                            <Pagination page={page} setPage={setPage}/>
+                        </div>
+                        <BottomNavbar />
+                    </>
+                </Route>
+
+                <Route path="/mypage/bet-history/all/minigame">
+                    <>
+                        <MinigameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
                         <div style={{marginTop: '1.25rem'}}>
                             <Pagination page={page} setPage={setPage}/>
                         </div>

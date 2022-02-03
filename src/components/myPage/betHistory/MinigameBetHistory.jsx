@@ -1,225 +1,311 @@
 import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar'
-import SubHorizontalMenu from './SubHorizontalMenu'
-import AllIcon from '../../../images/myPage/betHistory/all.png'
-import Sub1 from '../../../images/myPage/betHistory/minigame/sub1.png'
-import Sub2 from '../../../images/myPage/betHistory/minigame/sub2.png'
-import Sub3 from '../../../images/myPage/betHistory/minigame/sub3.png'
-import Sub4 from '../../../images/myPage/betHistory/minigame/sub4.png'
-import MinigameBetHistoryPanel from './MinigameBetHistoryPanel'
-import MinigameBetHistoryTable from '../tables/MinigameBetHistoryTable'
-import MinigameBetHistoryPowerballTable from '../tables/MinigameBetHistoryPowerballTable'
+import HistoryTable from 'components/common/HistoryTable'
+import ScrollButton from 'components/common/ScrollButton'
+import SelectAllButton from 'components/common/SelectAllButton'
+import Icon1 from '../../../images/newImages/mypage/live-casino/ico-1.png'
+import Icon3 from '../../../images/newImages/minigameResults/1.png'
+import Icon4 from '../../../images/newImages/minigameResults/2.png'
+import Icon5 from '../../../images/newImages/minigameResults/3.png'
+import Icon6 from '../../../images/newImages/minigameResults/4.png'
+import SubHorizontalMenu4 from './SubHorizontalMenu4'
 
 const subTabsArray = [
-    { text: "전체", icon: AllIcon, id: 0 },
-    { text: "파워볼", icon: Sub1, id: 1 },
-    { text: "파워사다리", icon: Sub2, id: 2 },
-    { text: "스피드키노", icon: Sub3, id: 3, custom: "mt-8px" },
-    { text: "키노사다리", icon: Sub4, id: 4 },
+    { text: "전체", icon: Icon1, id: 0 },
+    { text: "YGG드라실", icon: Icon3, id: 1 },
+    { text: "드라군소프트", icon: Icon4, id: 2 },
+    { text: "분고", icon: Icon5, id: 3, custom: "mt-8px" },
+    { text: "플레이슨", icon: Icon6, id: 4 },
 ];
 
-const tableArray = [
-    {
-        id: 0,
-        number: 7193915,
-        time: "2021-06-29 15:46:13",
-        type: "파워볼",
-        name: "파워볼 언오버",
-        history: "언더",
-        amount: "12,000",
-        percentage: "1.95",
-        profit: "-12,000",
-        status: "패",
-    },
-    {
-        id: 1,
-        number: 7193914,
-        time: "2021-06-29 15:45:41",
-        type: "파워사다리",
-        name: "홀/짝",
-        history: "짝",
-        amount: "900,000,000",
-        percentage: "1.95",
-        profit: "+900,000,000",
-        status: "승"
-    },
-    {
-        id: 2,
-        number: 7193913,
-        time: "2021-06-29 15:45:41",
-        type: "파워사다리",
-        name: "홀/짝",
-        history: "홀",
-        amount: "800,000",
-        percentage: "1.95",
-        profit: "-800,000",
-        status: "패"
-    },
-];
+// 베팅번호 => number
+// 베팅시간 => time
+// 게임종류  => type
+// 게임구분 => name
+// 베팅금액  => amount
+// 적중/손실금액 => profit
+// 상태 => status
 
-const MinigameBetHistory = ({isState, setState, showSub = true, attachedArray, setAttachedArray, setPopupOpen1}) => {
+const tableData = [
+    [          
+        {
+            0: {베팅번호: 7193915},
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:46:13"}
+        },
+        {
+            0: {게임종류: "파워볼"}
+        },
+        {
+            0: {게임구분: "파워볼 언오버"}
+        },
+        {
+            0: {베팅내역: "언더"}
+        },
+        {
+            0: {베팅금액: "12,000"}
+        },
+        {
+            0: {배당률: "1.95"}
+        },
+        {
+            0: {'적중/손실금액': "-12,000"}
+        },
+        {
+            0: {상태: "패"}
+        },
+        {
+            buttonColor: '#0056a6'
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193914}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "파워사다리"}
+        },
+        {
+            0: {게임구분: "파워볼 언오버"}
+        },
+        {
+            0: {베팅내역: "언더"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {베당률: "1.95"}
+        },
+        {
+            0: {'적중/손실금액': "+900,000,000"}
+        },
+        {
+            0: {상태: "승"}
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193913}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "파워사다리"}
+        },
+        {
+            0: {게임구분: "파워볼 언오버"}
+        },
+        {
+            0: {베팅내역: "언더"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {베당률: "1.95"}
+        },
+        {
+            0: {'적중/손실금액': "-800,000"}
+        },
+        {
+            0: {상태: "패"}
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193913}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "파워사다리"}
+        },
+        {
+            0: {게임구분: "파워볼 언오버"}
+        },
+        {
+            0: {베팅내역: "언더"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {베당률: "1.95"}
+        },
+        {
+            0: {'적중/손실금액': "-800,000"}
+        },
+        {
+            0: {상태: "패"}
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193913}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "파워사다리"}
+        },
+        {
+            0: {게임구분: "파워볼 언오버"}
+        },
+        {
+            0: {베팅내역: "언더"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {베당률: "1.95"}
+        },
+        {
+            0: {'적중/손실금액': "-800,000"}
+        },
+        {
+            0: {상태: "패"}
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193913}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "파워사다리"}
+        },
+        {
+            0: {게임구분: "파워볼 언오버"}
+        },
+        {
+            0: {베팅내역: "언더"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {베당률: "1.95"}
+        },
+        {
+            0: {'적중/손실금액': "-800,000"}
+        },
+        {
+            0: {상태: "패"}
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193913}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "파워사다리"}
+        },
+        {
+            0: {게임구분: "파워볼 언오버"}
+        },
+        {
+            0: {베팅내역: "언더"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {베당률: "1.95"}
+        },
+        {
+            0: {'적중/손실금액': "-800,000"}
+        },
+        {
+            0: {상태: "패"}
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193913}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "파워사다리"}
+        },
+        {
+            0: {게임구분: "파워볼 언오버"}
+        },
+        {
+            0: {베팅내역: "언더"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {베당률: "1.95"}
+        },
+        {
+            0: {'적중/손실금액': "-800,000"}
+        },
+        {
+            0: {상태: "패"}
+        }
+    ],
+]
+
+const MinigameBetHistory = ({isState = 0, setState, showSub = true}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
-    const [isPopupOpen, setPopupOpen] = useState(false)
+    const [isPopupOpen, setPopupOpen] = useState(true)
 
-    function allSelectButtonPressed() {
-        if (isAllSelected) {
-            setCheckedState(Array(3).fill(false))
-        } else {
-            setCheckedState(Array(3).fill(true))
-        }
-        setAllSelected(!isAllSelected)
-    }
+   
 
     return (
         <div className="w-full">
             {showSub === true && (
-                <div className="mt-10px h-88px w-full bg-gray-eff3f6 rounded-xl p-4px">
-                    <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
-                </div>
+                <>
+                    <div className="w-full flex relative top-0">
+                        <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
+                        <div id='scroll-wrapper1' style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                            <div className=" flex flex-shrink-0 w-full">
+                                <SubHorizontalMenu4 itemsArray={subTabsArray} isState={isState} setState={setState} />
+                            </div>
+                        </div>
+                        <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
+                    </div>
+                </>
+
             )}
             
-
             <DateSearchBar isLeagueSearch={false} />
 
-            <div className="w-full h-full mt-20px">
+            <ScrollButton />
 
-                {isState === 0 ? (
-                    <MinigameBetHistoryTable 
-                        array={tableArray} 
-                        checkedState={checkedState} 
-                        setCheckedState={setCheckedState}
-                        isPopupOpen={isPopupOpen}
-                        setPopupOpen={setPopupOpen}
-                    />   
-                ) : isState === 1 ? (
-                    <MinigameBetHistoryPowerballTable 
-                        array={tableArray} 
-                        checkedState={checkedState} 
-                        setCheckedState={setCheckedState}
-                        isPopupOpen={isPopupOpen}
-                        setPopupOpen={setPopupOpen}
-                    /> 
-                ) : isState === 2 ? (
-                    <div className="space-y-15px">
-                        <MinigameBetHistoryPanel 
-                            id={0} 
-                            checkedState={checkedState} 
-                            setCheckedState={setCheckedState}
-                            isPopup={!showSub}
-                            attachedArray={attachedArray} 
-                            setAttachedArray={setAttachedArray}
-                            setPopupOpen={setPopupOpen1}
-                        />
-                        <MinigameBetHistoryPanel 
-                            id={1} 
-                            checkedState={checkedState} 
-                            setCheckedState={setCheckedState}
-                            team1="우3홀 [200회]"
-                            team2="[200회] 좌3짝"
-                            choice="odd"
-                            result="win"
-                            winAmount="+900,000,000"
-                            isPopup={!showSub}
-                            attachedArray={attachedArray} 
-                            setAttachedArray={setAttachedArray}
-                            setPopupOpen={setPopupOpen1}
-                        />
-                    </div>           
-                ) : isState === 3 ? (
-                    <div className="space-y-15px">
-                        <MinigameBetHistoryPanel 
-                            id={0} 
-                            checkedState={checkedState} 
-                            setCheckedState={setCheckedState}
-                            game="스피드키노"
-                            isPopup={!showSub}
-                            attachedArray={attachedArray} 
-                            setAttachedArray={setAttachedArray}
-                            setPopupOpen={setPopupOpen1}
-                        />
-                        <MinigameBetHistoryPanel 
-                            id={1} 
-                            checkedState={checkedState} 
-                            setCheckedState={setCheckedState}
-                            result="win"
-                            winAmount="+900,000,000"
-                            game="스피드키노"
-                            isPopup={!showSub}
-                            attachedArray={attachedArray} 
-                            setAttachedArray={setAttachedArray}
-                            setPopupOpen={setPopupOpen1}
-                        />
-                    </div> 
-                ) : isState === 4 ? (
-                    <div className="space-y-15px">
-                        <MinigameBetHistoryPanel 
-                            id={0} 
-                            checkedState={checkedState} 
-                            setCheckedState={setCheckedState}
-                            game="키노사다리"
-                            isPopup={!showSub}
-                            attachedArray={attachedArray} 
-                            setAttachedArray={setAttachedArray}
-                            setPopupOpen={setPopupOpen1}
-                        />
-                        <MinigameBetHistoryPanel 
-                            id={1} 
-                            checkedState={checkedState} 
-                            setCheckedState={setCheckedState}
-                            team1="우3홀 [200회]"
-                            team2="[200회] 좌3짝"
-                            choice="odd"
-                            result="win"
-                            winAmount="+900,000,000"
-                            game="키노사다리"
-                            isPopup={!showSub}
-                            attachedArray={attachedArray} 
-                            setAttachedArray={setAttachedArray}
-                            setPopupOpen={setPopupOpen1}
-                        />
-                    </div>
-                ) : (
-                    <></>
-                )}
-                
+            <div className="h-full">
+                <HistoryTable
+                    containerBackground= '#f7f9fc'
+                    tableData={tableData}
+                    checkedState={checkedState} 
+                    setCheckedState={setCheckedState}
+                    isPopupOpen={isPopupOpen}
+                    setPopupOpen={setPopupOpen}
+                    cardHeight='42.15rem'
+                />   
             </div>
 
-            <div className="mt-40px h-36px w-full flex items-center justify-between">
-                <div className="flex space-x-2px">
-                    <button 
-                        className="flex items-center justify-center w-90px h-36px rounded-2xl bg-gray-r171a1d hover:opacity-75"
-                        onClick={() => allSelectButtonPressed()}
-                    >
-                        <div 
-                            style={{
-                                background: "linear-gradient(to bottom, #555555, #333333)",
-                            }}
-                            className="flex items-center justify-center h-34px w-88px rounded-2xl border border-gray-r737579 cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">{isAllSelected ? "선택해제" : "전체선택"}</span>
-                        </div>
-                    </button>
-                <button 
-                    className="flex items-center justify-center w-90px h-36px rounded-2xl bg-red-cb4343 hover:opacity-75"
-                >
-                    <div 
-                        style={{
-                            background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-                        }}
-                        className="flex items-center justify-center h-34px w-88px rounded-2xl border border-red-f36576 cursor-pointer"
-                    >
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">선택삭제</span>
-                    </div>
-                </button>
-                </div>
-                <button className="flex items-center justify-center w-159px h-36px rounded-lg bg-blue-r0070d9 hover:opacity-75">
-                    <div className="flex items-center justify-center h-34px w-157px rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">게시판에 내역올리기</span>
-                    </div>
-                </button>
-            </div>
+            <SelectAllButton buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
         </div>
     )
 }
