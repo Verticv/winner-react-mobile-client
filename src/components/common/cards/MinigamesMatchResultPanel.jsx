@@ -61,7 +61,7 @@ const MinigamesMatchResultPanel = ({
                     
                 </div>
                 <div style={{marginBottom: '1.875rem'}} className='rounded-lg w-full'>
-                    <CardHeader flag = 'us' name = {type === "speedkino" ? '스피드키노' : '파워사다리'} date = '2021-06-29 15:45' isMinigame={true} minigameType={type} />
+                    <CardHeader flag = 'us' name = {type === "powerladder" ? '파워사다리' : type === "speedkino" ? '스피드키노' : '키노사다리'} date = '2021-06-29 15:45' isMinigame={true} minigameType={type} />
                     <CardResults 
                         bet = "right"
                         result="equality"
@@ -108,7 +108,7 @@ const MinigamesMatchResultPanel = ({
                     )}
                 </div>
                 <div style={{marginBottom: '1.875rem'}} className='rounded-lg w-full'>
-                    <CardHeader flag = 'us' name = {type === "speedkino" ? '스피드키노' : '파워사다리'} date = '2021-06-29 15:45' isMinigame={true} minigameType={type} />
+                    <CardHeader flag = 'us' name = {type === "powerladder" ? '파워사다리' : type === "speedkino" ? '스피드키노' : '키노사다리'} date = '2021-06-29 15:45' isMinigame={true} minigameType={type} />
                     <CardResults 
                         bet = "left"
                         result="equality"
@@ -156,7 +156,7 @@ const MinigamesMatchResultPanel = ({
                 </div>
                 {type !== "speedkino" && (
                     <div style={{marginBottom: '1.875rem'}} className='rounded-lg w-full'>
-                        <CardHeader flag = 'us' name = '파워사다리' date = '2021-06-29 15:45' isMinigame={true} minigameType={type} />
+                        <CardHeader flag = 'us' name =  {type === "powerladder" ? '파워사다리' : type === "speedkino" ? '스피드키노' : '키노사다리'} date = '2021-06-29 15:45' isMinigame={true} minigameType={type} />
                         <CardResults 
                             bet = "right"
                             result="equality"
