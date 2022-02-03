@@ -1,131 +1,155 @@
 import React, { useState } from 'react'
 import DateSearchBar from '../DateSearchBar'
-import SubHorizontalMenu from './SubHorizontalMenu'
-import LiveCasinoBetHistoryTable from '../tables/LiveCasinoBetHistoryTable'
-import AllIcon from '../../../images/myPage/betHistory/all.png'
-import Sub1 from '../../../images/myPage/betHistory/ARGame/sub1.png'
-import Sub2 from '../../../images/myPage/betHistory/ARGame/sub2.png'
-import Sub3 from '../../../images/myPage/betHistory/ARGame/sub3.png'
-import Sub4 from '../../../images/myPage/betHistory/ARGame/sub4.png'
-import Sub5 from '../../../images/myPage/betHistory/ARGame/sub5.png'
-import Sub6 from '../../../images/myPage/betHistory/ARGame/sub6.png'
-import Sub7 from '../../../images/myPage/betHistory/ARGame/sub7.png'
+import HistoryTable from 'components/common/HistoryTable'
+import ScrollButton from 'components/common/ScrollButton'
+import SelectAllButton from 'components/common/SelectAllButton'
+import Icon1 from '../../../images/newImages/mypage/live-casino/ico-1.png'
+import Icon2 from '../../../images/newImages/mypage/ar/1.png'
+import Icon3 from '../../../images/newImages/mypage/ar/2.png'
+import Icon4 from '../../../images/newImages/mypage/ar/3.png'
+import Icon5 from '../../../images/newImages/mypage/ar/4.png'
+import Icon6 from '../../../images/newImages/mypage/ar/5.png'
+import Icon7 from '../../../images/newImages/mypage/ar/6.png'
+import Icon8 from '../../../images/newImages/mypage/ar/7.png'
 
+import SubHorizontalMenu4 from './SubHorizontalMenu4'
 
 const subTabsArray = [
-    { text: "전체", icon: AllIcon, id: 0 },
-    { text: "축구", icon: Sub1, id: 1 },
-    { text: "경마", icon: Sub2, id: 2 },
-    { text: "개경주", icon: Sub3, id: 3 },
-    { text: "레이싱", icon: Sub4, id: 4 },
-    { text: "탁구", icon: Sub5, id: 5 },
-    { text: "배드민턴", icon: Sub6, id: 6 },
-    { text: "양궁", icon: Sub7, id: 7 },
+    { text: "전체", icon: Icon1, id: 0 },
+    { text: "축구", icon: Icon2, id: 1 },
+    { text: "경마", icon: Icon3, id: 2 },
+    { text: "개경주", icon: Icon4, id: 3, custom: "mt-8px" },
+    { text: "레이싱", icon: Icon5, id: 4 },
+    { text: "탁구", icon: Icon6, id: 5 },
+    { text: "배드민턴", icon: Icon7, id: 6 },
+    { text: "양궁", icon: Icon8, id: 8 },
 ];
 
-const tableArray = [
-    {
-        id: 0,
-        number: 7193915,
-        time: "2021-06-29 15:46:13",
-        type: "탁구",
-        name: "승패",
-        amount: "12,000",
-        profit: "-12,000",
-        status: "패"
-    },
-    {
-        id: 1,
-        number: 7193914,
-        time: "2021-06-29 15:45:41",
-        type: "개경주",
-        name: "승리",
-        amount: "900,000,000",
-        profit: "+900,000,000",
-        status: "승"
-    },
-    {
-        id: 2,
-        number: 7193913,
-        time: "2021-06-29 15:45:41",
-        type: "축구",
-        name: "경기결과",
-        amount: "800,000",
-        profit: "-800,000",
-        status: "패"
-    },
-];
+// 베팅번호 => number
+// 베팅시간 => time
+// 게임종류  => type
+// 게임구분 => name
+// 베팅금액  => amount
+// 적중/손실금액 => profit
+// 상태 => status
 
-const ARGameBetHistory = ({isState, setState, showSub = true}) => {
+const tableData = [
+    [          
+        {
+            0: {베팅번호: 7193915},
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:46:13"}
+        },
+        {
+            0: {게임종류: "탁구"}
+        },
+        {
+            0: {게임구분: "승패"}
+        },
+        {
+            0: {베팅금액: "12,000"}
+        },
+        {
+            0: {'적중/손실금액': "-12,000"}
+        },
+        {
+            0: {상태: "패"}
+        },
+        {
+            buttonColor: '#0056a6'
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193914}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "개경주"}
+        },
+        {
+            0: {게임구분: "승리"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {'적중/손실금액': "+900,000,000"}
+        },
+        {
+            0: {상태: "승"}
+        }
+    ],
+    [          
+        {
+            0: {베팅번호: 7193913}
+        },
+        {
+            0: {베팅시간: "2021-06-29 15:45:41"}
+        },
+        {
+            0: {게임종류: "축구"}
+        },
+        {
+            0: {게임구분: "경기결과"}
+        },
+        {
+            0: {베팅금액: "900,000,000"}
+        },
+        {
+            0: {'적중/손실금액': "-800,000"}
+        },
+        {
+            0: {상태: "패"}
+        }
+    ],
+]
+
+const ARGameBetHistory = ({isState = 0, setState, showSub = true}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
     const [isPopupOpen, setPopupOpen] = useState(true)
 
-    function allSelectButtonPressed() {
-        if (isAllSelected) {
-            setCheckedState(Array(3).fill(false))
-        } else {
-            setCheckedState(Array(3).fill(true))
-        }
-        setAllSelected(!isAllSelected)
-    }
+   
 
     return (
         <div className="w-full">
             {showSub === true && (
-                <div className="mt-10px h-88px w-full bg-gray-eff3f6 rounded-xl p-4px">
-                    <SubHorizontalMenu itemsArray={subTabsArray} isState={isState} setState={setState} />
-                </div>
+                <>
+                    <div className="w-full flex relative top-0">
+                        <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
+                        <div id='scroll-wrapper1' style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                            <div className=" flex flex-shrink-0 w-full">
+                                <SubHorizontalMenu4 itemsArray={subTabsArray} isState={isState} setState={setState} />
+                            </div>
+                        </div>
+                        <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
+                    </div>
+                </>
+
             )}
             
+            <DateSearchBar isLeagueSearch={false} />
 
-            <DateSearchBar isGameResultsSearch={true} />
+            <ScrollButton />
 
-            <div className="w-full h-full mt-20px">
-                <LiveCasinoBetHistoryTable 
-                    array={tableArray} 
+            <div className="h-full">
+                <HistoryTable
+                    containerBackground= '#f7f9fc'
+                    tableData={tableData}
                     checkedState={checkedState} 
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}
                     setPopupOpen={setPopupOpen}
+                    cardHeight='34.15rem'
                 />   
             </div>
 
-            <div className="mt-40px h-36px w-full flex items-center justify-between">
-                <div className="flex space-x-2px">
-                    <button 
-                        className="flex items-center justify-center w-90px h-36px rounded-2xl bg-gray-r171a1d hover:opacity-75"
-                        onClick={() => allSelectButtonPressed()}
-                    >
-                        <div 
-                            style={{
-                                background: "linear-gradient(to bottom, #555555, #333333)",
-                            }}
-                            className="flex items-center justify-center h-34px w-88px rounded-2xl border border-gray-r737579 cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">{isAllSelected ? "선택해제" : "전체선택"}</span>
-                        </div>
-                    </button>
-                    <button 
-                        className="flex items-center justify-center w-90px h-36px rounded-2xl bg-red-cb4343 hover:opacity-75"
-                    >
-                        <div 
-                            style={{
-                                background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-                            }}
-                            className="flex items-center justify-center h-34px w-88px rounded-2xl border border-red-f36576 cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">선택삭제</span>
-                        </div>
-                    </button>
-                </div>
-                <button className="flex items-center justify-center w-159px h-36px rounded-lg bg-blue-r0070d9 hover:opacity-75">
-                    <div className="flex items-center justify-center h-34px w-157px rounded-lg border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                        <span className="font-spoqaMedium tracking-tight text-14px text-white pt-px">게시판에 내역올리기</span>
-                    </div>
-                </button>
-            </div>
+            <SelectAllButton buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
         </div>
     )
 }

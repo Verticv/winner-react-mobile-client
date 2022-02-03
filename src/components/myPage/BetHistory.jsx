@@ -35,6 +35,7 @@ import NoticeBanner from '../mainPage/NoticeBanner'
 import SlotBetHistory from './betHistory/SlotBetHistory'
 import ESportsBetHistory from './betHistory/ESportsBetHistory'
 import MinigameBetHistory from './betHistory/MinigameBetHistory'
+import ARGameBetHistory from './betHistory/ARGameBetHistory'
 
 const tabsArray = [
     { text: "전체", icon: Icon1, id: 0, path: "/mypage/bet-history/all" },
@@ -211,6 +212,16 @@ const BetHistory = ({isAuthenticated}) => {
                 <Route path="/mypage/bet-history/all/minigame">
                     <>
                         <MinigameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                        <div style={{marginTop: '1.25rem'}}>
+                            <Pagination page={page} setPage={setPage}/>
+                        </div>
+                        <BottomNavbar />
+                    </>
+                </Route>
+
+                <Route path="/mypage/bet-history/all/ar-game">
+                    <>
+                        <ARGameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
                         <div style={{marginTop: '1.25rem'}}>
                             <Pagination page={page} setPage={setPage}/>
                         </div>

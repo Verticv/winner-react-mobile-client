@@ -14,17 +14,19 @@ const SubHorizontalMenu4 = ({
             // TODO: remove this
             let imageWidth = '5.81rem'
             if (index === 1) {
-                imageWidth = '9rem';
+                imageWidth = '18rem';
             } else if (index === 2 ) {
-                imageWidth = '9rem';
+                imageWidth = '18rem';
             } else if (index === 3 ) {
-                imageWidth = '9rem';
+                imageWidth = '18rem';
             } else if (index === 4 ) {
-                imageWidth = '9rem';
+                imageWidth = '18rem';
             } else if (index === 5 ) {
-                imageWidth = '12rem';
+                imageWidth = '18rem';
             } else if (index === 6 ) {
-                imageWidth = '16rem';
+                imageWidth = '18rem';
+            } else if (index === 7 ) {
+                imageWidth = '18rem';
             }
 
             return (
