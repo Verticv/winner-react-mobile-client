@@ -145,7 +145,7 @@ const ARGameBetHistory = ({isState = 0, setState, showSub = true}) => {
                     setCheckedState={setCheckedState}
                     isPopupOpen={isPopupOpen}
                     setPopupOpen={setPopupOpen}
-                    cardHeight='34.15rem'
+                    cardHeight='33.75rem'
                 />   
             </div>
 
