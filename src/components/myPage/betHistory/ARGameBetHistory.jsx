@@ -108,7 +108,7 @@ const tableData = [
     ],
 ]
 
-const ARGameBetHistory = ({isState = 0, setState, showSub = true}) => {
+const ARGameBetHistory = ({isState = 0, setState, showSub = true, isPopup=false}) => {
 
     const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
@@ -146,6 +146,7 @@ const ARGameBetHistory = ({isState = 0, setState, showSub = true}) => {
                     isPopupOpen={isPopupOpen}
                     setPopupOpen={setPopupOpen}
                     cardHeight='33.75rem'
+                    isPopup={isPopup}
                 />   
             </div>
 

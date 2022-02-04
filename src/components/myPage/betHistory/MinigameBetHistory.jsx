@@ -480,9 +480,9 @@ const tableData1 = [
     ],
 ]
 
-const MinigameBetHistory = ({isState = 0, setState, showSub = true}) => {
+const MinigameBetHistory = ({isState = 0, setState, showSub = true, isPopup=false}) => {
 
-    const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
+    const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
     const [isPopupOpen, setPopupOpen] = useState(true)
 
@@ -519,6 +519,7 @@ const MinigameBetHistory = ({isState = 0, setState, showSub = true}) => {
                     isPopupOpen={isPopupOpen}
                     setPopupOpen={setPopupOpen}
                     cardHeight='42.15rem'
+                    isPopup={isPopup}
                 />   
                 ) : isState === 1 ? (
                     <HistoryTable
@@ -529,6 +530,7 @@ const MinigameBetHistory = ({isState = 0, setState, showSub = true}) => {
                     isPopupOpen={isPopupOpen}
                     setPopupOpen={setPopupOpen}
                     cardHeight='37.75rem'
+                    isPopup={isPopup}
                     />   
                 ) : isState === 2 ? (
                     <PowerLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen}/>

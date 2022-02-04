@@ -13,7 +13,6 @@ import Icon9 from '../../images/myPage/betHistory/ico_9.png'
 import HorizontalMenu from 'components/horizontalMenus/FreeboardCompose'
 import LiveCasinoBetHistory from 'components/myPage/betHistory/LiveCasinoBetHistory';
 import Pagination from 'components/myPage/Pagination';
-import BottomNavbar from 'components/bottomNavbar/BottomNavbar';
 import SlotBetHistory from 'components/myPage/betHistory/SlotBetHistory';
 import ESportsBetHistory from 'components/myPage/betHistory/ESportsBetHistory';
 import MinigameBetHistory from 'components/myPage/betHistory/MinigameBetHistory';
@@ -35,14 +34,21 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
+    const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
 
     const [page, setPage] = useState(0)
 
     useEffect(() => {
       setHistorySelectedSubTab(0);
-    
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return () => {};
     }, [selectedSubTab]);
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      return () => {};
+    }, [selectedSubTab,selectedTab, historySelectedSubTab]);
+    
     
 
     console.log(`selectedSubTab`, selectedSubTab)
@@ -56,23 +62,9 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                 </button>
             </div>
             
-            <div style={{paddingBottom: '1.875rem'}} className="w-full h-full bg-white">
+            <div className="w-full h-full bg-white">
 
-            <div className="w-full relative top-0">
-                <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
-                <div id='scroll-wrapper' style={{padding: '1.875rem 1.875rem', paddingRight: '0', paddingBottom: 0}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                    <div className=" flex flex-shrink-0 w-full">
-                        <HorizontalMenu withoutFirst={false} setSelectedTab={setSelectedTab} itemsArray={tabsArray} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab}/>
-                    </div>
-                </div>
-                <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full top-0 left-0 z-50"></div>
-            </div>
-                
-               
-
-                
-
-                <div style={{padding: '1.25rem 0'}} className="w-full">
+                <div className="w-full">
                     <div 
                         style={{
                             height: '100vh',
@@ -80,21 +72,30 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                         }} 
                         className="overflow-y-auto hide-scrollbar"
                     >
+
+                        <div style={{paddingBottom: '1.875rem'}}  className="w-full relative top-0">
+                            <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
+                            <div id='scroll-wrapper' style={{padding: '1.875rem 1.875rem', paddingRight: '0', paddingBottom: 0}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
+                                <div className=" flex flex-shrink-0 w-full">
+                                    <HorizontalMenu withoutFirst={false} setSelectedTab={setSelectedTab} itemsArray={tabsArray} selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab}/>
+                                </div>
+                            </div>
+                            <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full top-0 left-0 z-50"></div>
+                        </div>
+
                         {selectedTab === 0 ? (
                             <>
-                                <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                <LiveCasinoBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} isPopup={true} checkedState={checkedState} setCheckedState={setCheckedState} />
                                 <div style={{marginTop: '1.25rem'}}>
                                     <Pagination page={page} setPage={setPage}/>
                                 </div>
-                                <BottomNavbar />
                             </>
                         ) : selectedTab === 1 ? (
                             <>
-                                <SlotBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                <SlotBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}  isPopup={true} />
                                 <div style={{marginTop: '1.25rem'}}>
                                     <Pagination page={page} setPage={setPage}/>
                                 </div>
-                                <BottomNavbar />
                             </>
                         ) : selectedTab === 2 ? (
                             // <div className="-mt-20px space-y-20px">
@@ -103,40 +104,36 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             // </div>
                             <div style={{marginBottom:'5.625rem'}} className="w-full h-full">
                             <div style={{paddingBottom: '27.625rem'}}>
-                                    <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true}/>
+                                    <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true} checkedState={checkedState} setCheckedState={setCheckedState}/>
                                 </div>
                             </div>
                         ) : selectedTab === 3 ? (
                             <>
-                                <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}  isPopup={true} />
                                 <div style={{marginTop: '1.25rem'}}>
                                     <Pagination page={page} setPage={setPage}/>
                                 </div>
-                                <BottomNavbar />
                             </>
                         ) : selectedTab === 4 ? (
                             <>
-                                <MinigameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                <MinigameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}  isPopup={true} />
                                 <div style={{marginTop: '1.25rem'}}>
                                     <Pagination page={page} setPage={setPage}/>
                                 </div>
-                                <BottomNavbar />
                             </>
                         ) : selectedTab === 5 ? (
                             <>
-                                <ARGameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                                <ARGameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}  isPopup={true} />
                                 <div style={{marginTop: '1.25rem'}}>
                                     <Pagination page={page} setPage={setPage}/>
                                 </div>
-                                <BottomNavbar />
                             </>
                         ) : selectedTab === 6 ? (
                             <>
-                                <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
+                                <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab}  isPopup={true} />
                                 <div style={{marginTop: '1.25rem'}}>
                                     <Pagination page={page} setPage={setPage}/>
                                 </div>
-                                <BottomNavbar />
                             </>
                         ) : (
                             <>

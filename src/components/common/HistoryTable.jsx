@@ -1,8 +1,24 @@
 import React from 'react'
 import PopupControls from 'components/popups/PopupControls';
 import LiveCasinoHistoryDetailPopup from '../myPage/popups/LiveCasinoHistoryDetailPopup';
+import UploadIcon from '../../images/newImages/upload.png'
 
-const HistoryTable = ({tableData, checkedState, isCouponUsage = false, setCheckedState, isPopupOpen, wrapButtonText = false, setPopupOpen, cardHeight = '33.75rem', isButtonGradient = true, hasLeftInput = true, wideDetailButton = false, hasButton = true, containerBackground}) => {
+const HistoryTable = ({
+    isPopup,  
+    tableData, 
+    checkedState, 
+    isCouponUsage = false, 
+    setCheckedState, 
+    isPopupOpen, 
+    wrapButtonText = false, 
+    setPopupOpen, 
+    cardHeight = '33.75rem', 
+    isButtonGradient = true, 
+    hasLeftInput = true, 
+    wideDetailButton = false, 
+    hasButton = true, 
+    containerBackground
+}) => {
 
     function Cells({ cards }) {
         const detailButton =  (
@@ -87,17 +103,30 @@ const HistoryTable = ({tableData, checkedState, isCouponUsage = false, setChecke
                     </div>
                 </div>
                 {isButtonGradient ? 
-                    hasButton && (<div className="text-center">
-                        {!isCouponUsage ? (
-                            <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent :detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                                <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
-                            </PopupControls> 
+                    hasButton && (
+                    <div className="text-center">
+                        {isPopup ? (
+                            <button 
+                            style={{width: '9rem', height: '9rem',  padding: '1px'}}
+                            className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
+                            >
+                            <div className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl border border-blue-r70a8f5 bg-gradient-to-b from-blue-r1491fc to-blue-r0675db cursor-pointer">
+                                <img style={{width: '3.1875rem', height: '3.25rem'}} className="object-contain" src={UploadIcon} alt="" />
+                            </div>
+                            </button>
                         ) : (
-                            <>{wideDetailButtonComponent}</>
-                        ) }
-                    
-                </div>) 
-                : hasButton &&
+                            <>
+                            {!isCouponUsage ? (
+                                <PopupControls isNotFullScreen buttonChild={wideDetailButton ? wideDetailButtonComponent :detailButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
+                                    <LiveCasinoHistoryDetailPopup setPopupOpen={setPopupOpen} />
+                                </PopupControls> 
+                            ) : (
+                                <>{wideDetailButtonComponent}</>
+                            ) }
+                            </>
+                        )}   
+                    </div>
+                ) : hasButton &&
                     <button style={{width: '10.875rem', height: '10.875rem', backgroundColor: card[card.length -1].buttonColor || 'red'}} className="common-button flex items-center justify-center rounded-2xl hover:opacity-75">
                         <div style={{padding: `${wrapButtonText ? '2rem' : ''}`}} className="flex w-full h-full items-center justify-center flex-wrap rounded-2xl cursor-pointer">
                             <span style={{fontSize: '2.7rem', lineHeight: '1.1', width: '10.875rem', marginTop: '0.2375rem'}} className="w-full -mt-2 font-font-spoqaMedium tracking-tight text-white"> {card[card.length -1].buttonColor === '#0056a6' ? <div> {card[card.length -1].buttonText ? card[card.length -1].buttonText : <><p>정산</p> <p>완료</p></>} </div> : card[card.length -1].buttonText ||'진행중'} </span>

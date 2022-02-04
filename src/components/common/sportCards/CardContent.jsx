@@ -4,7 +4,7 @@ import CloseIcon from '../../../images/newImages/close-white.png'
 
 const CardContent = ({
     checkedState = null,
-    type = 0,
+    index = null,
     winAmount= '0',
     withButtons=true,
     withInput=true,
@@ -16,30 +16,42 @@ const CardContent = ({
     cancelHandler=null,
     id=0,
     hasHistory = null,
-    time = " 2021-06-29 15:45"
+    time = " 2021-06-29 15:45",
+    isPopup = true,
   }) => {
+
     const handleOnChange = (position) => {
-      const updatedCheckedState = checkedState.map((item, index) =>
+        const updatedCheckedState = checkedState.map((item, index) =>
         index === position ? !item : item
-      );
-      setCheckedState(updatedCheckedState);
-  }; 
+        );
+
+        setCheckedState(updatedCheckedState);
+
+        console.log(checkedState)
+        console.log("INDEX : ", index)
+        console.log("Position : ", position)
+
+    }; 
+
   return (
     <>
       <div style={{margin: '1.9375rem', marginBottom: '0', marginTop: '2.0625rem'}} className={`flex flex-wrap items-center h-full  ${ withUploadButton || withCancelButton ? 'justify-between' : ''}`}>
-          {withInput && (
-            <div style={{width: '5.625rem'}} className="relative text-left">
-                <label className="form-control">
-                    <input
+          
+          <div style={{width: ''}} className='flex items-center'>
+            {withInput && (
+                <div style={{marginRight: "3rem"}} className="relative text-left z-50">
+                    <label className="form-control">
+                        <input
+                            key={Math.random()}
                             className='w-12 h-12'
                             type="checkbox"
-                            checked={checkedState?.[type]}
-                            onChange={() => handleOnChange(type)}
+                            checked={checkedState[index]}
+                            onChange={() => handleOnChange(index)}
                         />
-                </label>
-            </div>
-          )}
-          <div style={{width: ''}}>
+                    </label>
+                </div>
+            )}
+            <div>
               {showBetNumber && (
               <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginBottom: '0.375rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅번호 :</span> 1891241599</div>)}
               <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginBottom: '0.375rem'}} className="w-full font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅시간 :</span>{time}</div>
@@ -50,10 +62,19 @@ const CardContent = ({
                   <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>베팅금액 :</span> 5,000</div>
                   <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>배당률 :</span> 4.34</div>
               </div>
-              <div className='flex'>
-                  <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>예상적중금액 :</span> 20,000</div>
+              {isPopup ? (
+                  <>
+                  <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem', marginBottom: '0.375rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>예상적중금액 :</span> 20,000</div>
                   <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>당첨금 :</span> <span className={`${winAmount.includes("+") && "text-red-d52e2e"}`}>{winAmount}</span></div>
-              </div>
+                  </>
+              ) : (
+                <div className='flex'>
+                    <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', marginRight: '3.8125rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>예상적중금액 :</span> 20,000</div>
+                    <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem'}} className="font-spoqa text-left text-gray-r7b7b7b"><span className='font-spoqaMedium text-gray-r585858' style={{fontSize: '2.625rem'}}>당첨금 :</span> <span className={`${winAmount.includes("+") && "text-red-d52e2e"}`}>{winAmount}</span></div>
+                </div>
+              )}
+              
+            </div>
           </div>
             {withUploadButton === true && (
                 <button 

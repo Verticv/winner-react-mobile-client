@@ -29,7 +29,7 @@ const subTabsArray = [
 // 적중/손실금액 => profit
 // 상태 => status
 
-const ESportsBetHistory = ({isState = 0, setState, showSub = true}) => {
+const ESportsBetHistory = ({isState = 0, setState, showSub = true, isPopup=false}) => {
 
     const [,setCheckedState] = useState(new Array(3).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)

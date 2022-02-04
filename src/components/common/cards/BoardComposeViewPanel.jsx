@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './RadioButton.css'
 import TableHeader from 'components/common/sportCards/TableHeader'
 import CardHeader from 'components/common/sportCards/CardHeader'
@@ -6,8 +6,8 @@ import CardResults from 'components/common/sportCards/CardResults'
 import CardContent from 'components/common/sportCards/CardContent'
 
 const BoardComposeViewPanel = ({
-    checkedState = null,
-    setCheckedState = null,
+    // checkedState,
+    // setCheckedState,
     setAttachedArray = null,
 }) => {
 
@@ -103,12 +103,19 @@ const BoardComposeViewPanel = ({
         const currentObject = data?.filter(card => card?.id === id)?.[0]
         setAttachedArray(oldArray => [...oldArray, currentObject]);
     };
-
+    const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+          index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);
+      }; 
     return (
         <>
             {data?.map((card, index) => (
                 <div key={card.id} style={{borderRadius:"1em", margin: '1.875rem', paddingBottom: '2.0625rem', marginTop: data?.length -1 === index ? '3.75rem': '1.875rem'}} className="shadow-subNavbar bg-gray-fafafa">
                     <TableHeader />
+                    
                     <div style={{padding: '0 1rem' }} className="w-full">
                         <div className="w-full rounded-lg">
                             <div className='rounded-lg w-full'>
@@ -127,7 +134,7 @@ const BoardComposeViewPanel = ({
                                     hasDown={card.hasDown}
                                 />
                             </div>
-                            <CardContent {...card} withButtons={false} withInput={false} withUploadButton={true} id={card.id} uploadHandler={addEntryClick} checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
+                            <CardContent {...card} isPopup={true} withButtons={false} withInput={true} withUploadButton={true} id={card.id} handleOnChange={handleOnChange} uploadHandler={addEntryClick} checkedState={checkedState} index={index} setCheckedState={setCheckedState} />
                         </div>
                     </div>
                 </div>

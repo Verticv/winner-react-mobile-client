@@ -220,9 +220,9 @@ const tableData = [
     ],
 ]
 
-const LiveCasinoBetHistory = ({isState = 0, setState, showSub = true}) => {
+const LiveCasinoBetHistory = ({isState = 0, setState, showSub = true, isPopup = false}) => {
 
-    const [checkedState, setCheckedState] = useState(new Array(3).fill(false))
+    const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)
     const [isPopupOpen, setPopupOpen] = useState(true)
 
@@ -258,6 +258,7 @@ const LiveCasinoBetHistory = ({isState = 0, setState, showSub = true}) => {
                     isPopupOpen={isPopupOpen}
                     setPopupOpen={setPopupOpen}
                     cardHeight='33.75rem'
+                    isPopup={isPopup}
                 />   
             </div>
 
