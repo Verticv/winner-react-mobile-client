@@ -9,6 +9,7 @@ const HorizontalMenu3 = ({
     setSelectedTab,
     setSelectedTab1,
     setSelectedOption,
+    hasAnimation = true
 }) => {
 
     const history = useHistory();

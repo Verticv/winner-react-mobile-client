@@ -66,14 +66,13 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>
 
-            <div className="w-full flex flex-col items-center">
+            <div style={{marginBottom: "7rem"}} className="w-full flex flex-col items-center">
                 <div className="w-full">
                 
                 <div style={{padding: '0 2.0625rem'}}>
-                    <Route path="/minigame/powerball">
-                        <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerball"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
-                    </Route>
-                </div>
+                <Route path="/minigame/powerball">
+                    <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerball"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
+                </Route>
                 <Route path="/minigame/powerladder">
                     <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerladder"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
                 </Route>
@@ -84,7 +83,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                     <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/kinoladder"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
                 </Route>
                     {/* <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} /> */}
-
+                </div>
 
                     <div className="flex w-full">
                         <div 
