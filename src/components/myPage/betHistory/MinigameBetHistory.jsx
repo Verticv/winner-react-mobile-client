@@ -8,7 +8,9 @@ import Icon3 from '../../../images/newImages/minigameResults/1.png'
 import Icon4 from '../../../images/newImages/minigameResults/2.png'
 import Icon5 from '../../../images/newImages/minigameResults/3.png'
 import Icon6 from '../../../images/newImages/minigameResults/4.png'
-import SubHorizontalMenu4 from './SubHorizontalMenu4'
+import SubHorizontalMenu5 from './SubHorizontalMenu5'
+import PowerLadderBetHistoryPanel from 'components/common/cards/PowerLadderBetHistoryPanel'
+import KinoLadderBetHistoryPanel from '../../common/cards/KinoLadderBetHistoryPanel'
 
 const subTabsArray = [
     { text: "전체", icon: Icon1, id: 0 },
@@ -494,7 +496,7 @@ const MinigameBetHistory = ({isState = 0, setState, showSub = true}) => {
                         <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                         <div id='scroll-wrapper1' style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                             <div className=" flex flex-shrink-0 w-full">
-                                <SubHorizontalMenu4 itemsArray={subTabsArray} isState={isState} setState={setState} />
+                                <SubHorizontalMenu5 itemsArray={subTabsArray} isState={isState} setState={setState} />
                             </div>
                         </div>
                         <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
@@ -518,7 +520,7 @@ const MinigameBetHistory = ({isState = 0, setState, showSub = true}) => {
                     setPopupOpen={setPopupOpen}
                     cardHeight='42.15rem'
                 />   
-                ) : (
+                ) : isState === 1 ? (
                     <HistoryTable
                     containerBackground= '#f7f9fc'
                     tableData={tableData1}
@@ -528,6 +530,10 @@ const MinigameBetHistory = ({isState = 0, setState, showSub = true}) => {
                     setPopupOpen={setPopupOpen}
                     cardHeight='37.75rem'
                     />   
+                ) : isState === 2 ? (
+                    <PowerLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen}/>
+                ) : (
+                    <KinoLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} />
                 )}
                 
             </div>

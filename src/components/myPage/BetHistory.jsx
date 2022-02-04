@@ -228,36 +228,16 @@ const BetHistory = ({isAuthenticated}) => {
                         <BottomNavbar />
                     </>
                 </Route>
-                {/*  <Route path="/mypage/bet-history/all/e-sports">
-                    <>
-                        <ESportsBetHistory />
-                    </>
-                </Route>
-                <Route path="/mypage/bet-history/all/minigame">
-                    <>
-                        <MinigameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-                        <Pagination page={page} setPage={setPage}/>   
-                    </>
-                </Route>
-                <Route path="/mypage/bet-history/all/ar-game">
-                    <>
-                        <ARGameBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-                        <Pagination page={page} setPage={setPage}/>   
-                    </>
-                </Route>
                 <Route path="/mypage/bet-history/all/fishing-game">
                     <>
                         <SlotBetHistory isState={selectedSubTab} setState={setSelectedSubTab} />
-                        <Pagination page={page} setPage={setPage}/>   
+                        <div style={{marginTop: '1.25rem'}}>
+                            <Pagination page={page} setPage={setPage}/>
+                        </div>
+                        <BottomNavbar />
                     </>
                 </Route>
-                <Route path="/mypage/bet-history/all/lottery-game">
-                    <div className="mt-40px"/>
-                </Route> */}
             </Route>
-
-
-
         </div>
     )
 }
