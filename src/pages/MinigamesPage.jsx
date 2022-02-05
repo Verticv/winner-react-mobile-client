@@ -10,8 +10,6 @@ import KinoLadder from '../images/minigames/kinoladder.png'
 // import MinigamesRightPanel from 'components/minigames/MinigamesRightPanel'
 import MinigamesPanel from 'components/minigames/MinigamesPanel'
 import { Route, useLocation } from 'react-router'
-import { Helmet } from 'react-helmet'
-
 
 const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -61,9 +59,6 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
     return (
         <div style={{maxWidth: '1242px'}} className="relative flex flex-col justify-center">
-            <Helmet>
-                <meta name="viewport" content="width=device-width, initial-scale=1"  />
-            </Helmet>
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
