@@ -107,7 +107,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                         {/* <MinigamesRightPanel selectedGame={selectedGame} selectedOption={selectedOption}/> */}
                     </div>
 
-                    <div className="mb-28">
+                    <div className="mb-10">
                         <MinigamesPanel selectedGame={selectedGame} setSelectedGame={setSelectedGame} setSelectedOption={setSelectedOption} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
 
