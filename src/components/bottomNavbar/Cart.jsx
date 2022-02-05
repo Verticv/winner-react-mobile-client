@@ -10,39 +10,28 @@ const Cart = ({selectedOption}) => {
     useEffect(() => {
       setSelectedGame(window.location.pathname)
     }, [])
-  //   const [selectedOption, setSelectedOption] = useState([
-  //     {
-  //         type: "",
-  //         name: "",
-  //         selection: "",
-  //         buttonType: "",
-  //         subtitle: null
-  //     }
-  // ])
-    
-  // <div style={{width: '3.1875rem', height: '3.1875rem', fontSize: '2.4375rem'}} className="bg-red-notification rounded-full text-white flex items-center justify-center font-roboto ml-4 font-roboto">
-  //   1
-  // </div>
-    
+
     return (
         <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className="transition-all w-full z-50 rounded-t-3xl shadow-plain bg-white fixed bottom-0">
-            <div style={{height: openedCart ? '97.75rem' : '9.0625rem' ,padding: openedCart ? '0' : '0 3.6875rem'}} className="flex items-center h-full">
+            <div style={{height: openedCart ? '97.75rem' : '9.0625rem' , padding: openedCart ? '0' : '0 3.6875rem'}} className="flex items-center h-full">
                 {!openedCart ? (
-                   <div className='flex w-full items-center'>
-                      <div style={{marginRight: '7.25rem'}} className='flex items-center'>
-                          <img style={{width: '4.0625rem', marginLeft: '', paddingBottom: ''}} className="object-contain" src={CartIcon} alt="" />
-                          <div style={{width: '3.5625rem', height: '3.5625rem', marginRight: '1.125rem'}} className="bg-red-notification text-4xl rounded-full text-white flex items-center justify-center font-roboto">
-                              1
-                          </div>
-                          <p className='text-5xl font-spoqaMedium text-gray-r727272'>베팅카트 열기</p>
-                      </div>
-                      <div style={{width: '37rem'}} className='flex justify-between'>
-                          <button
-                              onClick={() => setOpenedCart(true)}
-                              style={{width: '15.625rem'}}
-                              className="flex flex-col">
-                              <img style={{width: '4.5rem', marginLeft: '', paddingBottom: ''}} className="w-16 object-contain" src={ArrowUp} alt="" />
-                          </button>
+                   <div className='flex w-full items-center justify-between'>
+                        <div style={{width: '30rem'}} className='flex items-center'>
+                            <img style={{width: '4.0625rem', marginLeft: '', paddingBottom: ''}} className="object-contain" src={CartIcon} alt="" />
+                            <div 
+                            style={{width: '3.5625rem', height: '3.5625rem', marginRight: '1.125rem', background: "linear-gradient(to bottom right, #fb3e67, #d4184c)", boxShadow: "1px 1px 1px #00000060"}} 
+                            className="text-4xl rounded-full text-white flex items-center justify-center font-roboto pt-px">
+                                1
+                            </div>
+                            <p className='text-5xl font-spoqaMedium text-gray-r727272'>베팅카트 열기</p>
+                        </div>
+
+                        <button onClick={() => setOpenedCart(true)} >
+                            <img style={{width: '4.5rem', marginLeft: '', paddingBottom: '1rem'}} className="w-16 object-contain" src={ArrowUp} alt="" />
+                        </button>
+
+                      <div style={{width: '30rem'}} className='flex justify-end'>
+                          
                           <div className='flex text-5xl items-center font-spoqaMedium text-gray-r727272'>
                             <p>배당률 <span className='text-red-d52e2e'>3.76</span></p>
                           </div>

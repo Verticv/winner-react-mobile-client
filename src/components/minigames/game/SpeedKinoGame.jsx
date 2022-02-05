@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import BlueButton from '../../../images/minigames/blue_sq.png'
 import RedButton from '../../../images/minigames/red_sq.png'
-import BlueSMButton from '../../../images/minigames/blue_sm.png'
-import RedSMButton from '../../../images/minigames/red_sm.png'
+import BlueSMButton from '../../../images/minigames/blue.png'
+import RedSMButton from '../../../images/minigames/red.png'
 import BlueButtonPressed from '../../../images/minigames/blue_sq_pressed.png'
 import RedButtonPressed from '../../../images/minigames/red_sq_pressed.png'
 import RedSMButtonPressed from '../../../images/minigames/red_pressed.png'
@@ -15,7 +15,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
     const PanelTitle = ({title, titleNumber, subText, subText2, titleBg, isTopBorder = false}) => (
         <div style={{height: '5.8125rem', borderTopColor: '#b8d5e6'}} className={`border-b ${isTopBorder ? 'border-t' : '' } border-red-cf9494 flex flex-shrink-0 items-center justify-center w-full`}>
             <div 
-                style={{height:"3.9375rem",width: '8.4375rem', borderRadius: '0.5625rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
+                style={{height:"4.3rem",width: '8.4375rem', borderRadius: '0.5625rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
                 className="flex-shrink-0 shadow-plain2 border border-white flex flex-col items-center justify-center tracking-tight text-white"
             >
                 <p style={{marginTop: '0.4rem'}} className="font-spoqaMedium">{titleNumber}{title}</p>
@@ -85,8 +85,8 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 style={{height: '11.375rem'}}
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
-                                <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
+                                <img style={{width: '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
@@ -108,8 +108,8 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 
-                                <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
+                                <img style={{width: '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
@@ -176,8 +176,8 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 style={{height: '11.375rem'}}
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
-                                <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">홀언더</p>
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
+                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">홀언더</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
@@ -198,8 +198,8 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 
-                                <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">홀오버</p>
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">홀오버</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
@@ -209,7 +209,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                         <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {
-                                    setState(`${titleNumber}-1`)
+                                    setState(`${titleNumber}-3`)
                                     if (titleNumber === 1) {
                                         setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
                                     } else {
@@ -220,8 +220,8 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 style={{height: '11.375rem'}}
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
-                                <img style={{width: state === `${titleNumber}-1` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">짝언더</p>
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? RedSMButtonPressed : RedSMButton} alt="" />
+                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">짝언더</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
@@ -231,7 +231,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                         <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {
-                                    setState(`${titleNumber}-2`)
+                                    setState(`${titleNumber}-4`)
                                     if (titleNumber === 1) {
                                         setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
                                     } else {
@@ -242,8 +242,8 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 
-                                <img style={{width: state === `${titleNumber}-2` ? '11.375rem' : '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000050", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">짝오버</p>
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">짝오버</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>

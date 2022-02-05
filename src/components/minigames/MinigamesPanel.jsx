@@ -61,8 +61,9 @@ const MinigamesPanel = ({
                     height: '8.5rem',
                     margin: '0.9375rem 0'
                 }} 
-                className="w-full rounded-lg flex justify-between items-center"
+                className="w-full flex justify-between items-center"
             >
+                <div style={{width: '6.5rem', marginRight: '0.9375rem'}}></div>
                 <div className="flex w-full justify-center">
                     <div style={{fontSize: '2.8125rem', marginRight:'1.6875rem'}} className="font-spoqaMedium tracking-tight text-white flex items-center">
                         {format(time, dateFormat, { locale : ko })} {format(time, dateFormat1, { locale : ko })} <p style={{color:"#ffea00", marginLeft: '0.875rem'}} className="">[216회차]</p>

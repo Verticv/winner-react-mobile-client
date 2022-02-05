@@ -10,6 +10,7 @@ import KinoLadder from '../images/minigames/kinoladder.png'
 // import MinigamesRightPanel from 'components/minigames/MinigamesRightPanel'
 import MinigamesPanel from 'components/minigames/MinigamesPanel'
 import { Route, useLocation } from 'react-router'
+import { Helmet } from 'react-helmet'
 
 
 const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
@@ -18,7 +19,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
         { id: 0, img: PowerballIcon, text:"파워볼", textColor: '#d75bc3', time: "02:16", path: "/minigame/powerball" },
         { id: 1, img: PowerLadder, text:"파워사다리", textColor: '#4479be', time: "02:50", path: "/minigame/powerladder" },
         { id: 2, img: SpeedKino, text:"스피드키노", textColor: '#da644c', time: "02:50", path: "/minigame/speedkino" },
-        { id: 3, img: KinoLadder, text:"키노사다리", textColor: '#키노사다리', time: "02:50", path: "/minigame/kinoladder" },
+        { id: 3, img: KinoLadder, text:"키노사다리", textColor: '#d5a53f', time: "02:50", path: "/minigame/kinoladder" },
     ]
 
     const [selectedGame, setSelectedGame] = useState(window.location.pathname)
@@ -60,7 +61,9 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
     return (
         <div style={{maxWidth: '1242px'}} className="relative flex flex-col justify-center">
-
+            <Helmet>
+                <meta name="viewport" content="width=device-width, initial-scale=1"  />
+            </Helmet>
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
@@ -90,6 +93,9 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                             style={{backgroundColor:"#e8e8e8", height: "60rem"}}
                             className="rounded-xl  flex justify-center overflow-hidden border border-gray-dddddd"
                         >
+                            <Helmet>
+                                <meta name="viewport" content="maximum-scale=1.0, user-scalable=no"  />
+                            </Helmet>
                             <Route path="/minigame/powerball">
                                 <iframe src="https://ntry.com/scores/powerball/live.php" width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
                             </Route>
@@ -106,7 +112,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                         {/* <MinigamesRightPanel selectedGame={selectedGame} selectedOption={selectedOption}/> */}
                     </div>
 
-                    <div className="mb-10">
+                    <div className="mb-28">
                         <MinigamesPanel selectedGame={selectedGame} setSelectedGame={setSelectedGame} setSelectedOption={setSelectedOption} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
 

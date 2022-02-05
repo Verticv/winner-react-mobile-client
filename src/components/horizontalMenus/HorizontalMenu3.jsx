@@ -74,7 +74,7 @@ const HorizontalMenu3 = ({
                     >
                         <div className={`flex items-center -ml-px`}>
                             <span 
-                                style={{fontSize: '3.1875rem' ,color: item.textColor}} 
+                                style={{fontSize: '3.1875rem', color: item.textColor, textShadow: "-1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff"}} 
                                 className={`
                                 ${
                                     item.id === 0 
@@ -84,14 +84,14 @@ const HorizontalMenu3 = ({
                                     : item.id === 2
                                     ? "ml-8px"
                                     : "ml-7px"
-                                } text-20px tracking-tight font-spoqaBold text-white-border`}
+                                } text-20px tracking-tight font-spoqaBold`}
                             >
                                 {item.text}
                             </span>
                         </div>
                         
                         <div className="flex items-center">
-                            <img style={{width: '3.1875rem', marginRight: '0.6875rem'}} className="object-contain" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
+                            <img style={{width: '3.1875rem', marginRight: '0.6875rem', marginBottom: "1rem"}} className="object-contain" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
                             <div 
                                 style={{fontSize: '3.875rem', color: selectedTab === item.path ? "#ffffff" : "#748496"}}
                                 className="tracking-tight font-swagger -mt-1 flex items-center"
