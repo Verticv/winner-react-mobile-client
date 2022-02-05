@@ -93,9 +93,9 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                             style={{backgroundColor:"#e8e8e8", height: "60rem"}}
                             className="rounded-xl  flex justify-center overflow-hidden border border-gray-dddddd"
                         >
-                            <Helmet>
+                            {/* <Helmet>
                                 <meta name="viewport" content="maximum-scale=1.0, user-scalable=no"  />
-                            </Helmet>
+                            </Helmet> */}
                             <Route path="/minigame/powerball">
                                 <iframe src="https://ntry.com/scores/powerball/live.php" width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
                             </Route>
