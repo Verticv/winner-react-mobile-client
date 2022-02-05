@@ -80,7 +80,6 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                 <Route path="/minigame/kinoladder">
                     <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/kinoladder"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
                 </Route>
-                    {/* <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={selectedGame} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} /> */}
                 </div>
 
                     <div className="flex w-full">
@@ -88,9 +87,6 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                             style={{backgroundColor:"#e8e8e8", height: "60rem"}}
                             className="rounded-xl  flex justify-center overflow-hidden border border-gray-dddddd"
                         >
-                            {/* <Helmet>
-                                <meta name="viewport" content="maximum-scale=1.0, user-scalable=no"  />
-                            </Helmet> */}
                             <Route path="/minigame/powerball">
                                 <iframe src="https://ntry.com/scores/powerball/live.php" width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
                             </Route>
@@ -107,7 +103,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                         {/* <MinigamesRightPanel selectedGame={selectedGame} selectedOption={selectedOption}/> */}
                     </div>
 
-                    <div className="mb-10">
+                    <div className="mb-28">
                         <MinigamesPanel selectedGame={selectedGame} setSelectedGame={setSelectedGame} setSelectedOption={setSelectedOption} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
 
