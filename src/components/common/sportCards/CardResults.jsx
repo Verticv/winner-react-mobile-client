@@ -29,7 +29,7 @@ const CardResults = ({
                     style={{marginRight:isAttached && "5px", fontSize: '2.5rem'}}
                     className={`text-gray-r454545 font-spoqaMedium `}
                 >
-                    <p className='text-gray-subNavbar font-roboto mt-1'>{score}</p>
+                    <p style={{marginTop:"0.31rem"}} className='text-gray-subNavbar font-roboto'>{score}</p>
                 </div>
             </div>
             <div className="flex w-full justify-end pr-3">
