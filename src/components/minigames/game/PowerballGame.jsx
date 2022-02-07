@@ -143,7 +143,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white">언더</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
                                                 {titleNumber === 2 ? "4.5" : "72.5"}
                                             </p>
                                         </div>
@@ -171,7 +171,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white">오버</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
                                                 {titleNumber === 2 ? "4.5" : "72.5"}
                                             </p>
                                         </div>
@@ -210,7 +210,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white">홀언더</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
                                                 {titleNumber === 3 ? "4.5" : "72.5"}
                                             </p>
                                         </div>
@@ -238,7 +238,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">홀오버</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
                                                 {titleNumber === 3 ? "4.5" : "72.5"}
                                             </p>
                                         </div>
@@ -266,7 +266,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center  absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝언더</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
                                                 {titleNumber === 3 ? "4.5" : "72.5"}
                                             </p>
                                         </div>
@@ -294,7 +294,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center  absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝오버</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">
                                                 {titleNumber === 3 ? "4.5" : "72.5"}
                                             </p>
                                         </div>
@@ -329,7 +329,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">A</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(0~2)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(0~2)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -351,7 +351,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">B</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(3~4)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(3~4)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -373,7 +373,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">C</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(5~6)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(5~6)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -395,7 +395,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">D</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(7~9)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(7~9)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -619,7 +619,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">소</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(15~64)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(15~64)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -641,7 +641,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">중</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(65~80)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(65~80)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -663,7 +663,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">대</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(81~130)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(81~130)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -696,7 +696,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">홀소</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(15~64)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(15~64)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -718,7 +718,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">홀중</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(65~80)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(65~80)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -740,7 +740,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">홀대</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(81~130)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(81~130)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -762,7 +762,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝소</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(15~64)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(15~64)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -784,7 +784,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝중</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(65~80)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(65~80)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -806,7 +806,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                     <div className="flex flex-col items-center    absolute">
                                         <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white ">짝대</p>
                                         <div className='h-10'>
-                                            <p style={{fontSize:"1rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(81~130)</p>
+                                            <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight -mt-4">(81~130)</p>
                                         </div>
                                     </div>
                                 </div>
