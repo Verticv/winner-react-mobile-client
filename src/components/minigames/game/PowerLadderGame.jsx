@@ -13,15 +13,15 @@ const PowerLadderGame = ({setSelectedOption}) => {
     const [state, setState] = useState("")
 
     const PanelTitle = ({title, titleNumber, subText, subText2, titleBg, isTopBorder = false}) => (
-        <div style={{height: '5.8125rem', borderTopColor: '#b8d5e6'}} className={`border-b ${isTopBorder ? 'border-t' : '' } border-blue-abc7db flex flex-shrink-0 items-center justify-center w-full`}>
+        <div style={{height: '5.8125rem', borderTopColor: '#b8d5e6'}} className={`border-b ${isTopBorder ? 'border-t' : '' } border-blue-abc7db flex flex-shrink-0 items-center justify-center w-full pb-px`}>
             <div 
-                style={{height:"4.3rem",width: '8.4375rem', borderRadius: '0.5625rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
-                className="flex-shrink-0 shadow-plain2 border border-white flex flex-col items-center justify-center tracking-tight text-white"
+                style={{height:"4.3rem",width: '8.4375rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
+                className="flex-shrink-0 shadow-plain2 border rounded-2xl border-white flex flex-col items-center justify-center tracking-tight text-white"
             >
                 <p style={{marginTop: '0.4rem'}} className="font-spoqaMedium">{titleNumber}{title}</p>
             </div>
 
-            <div style={{fontSize: '2.625rem', marginLeft: '0.75rem'}} className="h-full flex flex-col items-center justify-center">
+            <div style={{fontSize: '2.625rem', marginLeft: '0.75rem'}} className="h-full flex flex-col items-center justify-center pb-1">
                 <div className="tracking-tight text-gray-r585858 font-spoqaMedium flex items-center mt-2">{subText} {subText2 ? `/${subText2}` : ''} </div>
             </div>
         </div>
@@ -70,7 +70,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                     <PanelTitle title={title} titleNumber={titleNumber} subText={subText} subText2={subText2} titleBg={titleBg} />
 
                     <div style={{height: '17.375rem', borderTopWidth: '0.1875rem', borderTopColor: 'white', padding: '0 3.875rem', paddingLeft: `${extraLeftPadding + 3.875}rem`, paddingRight: `${extraRightPadding + 3.875}rem`}} className="flex justify-center w-full items-center">
-                        <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
+                        <div style={{marginRight: '1.375rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
@@ -84,11 +84,11 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 style={{height: '11.375rem'}}
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
-                                <img style={{width:'9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
+                                <img style={{width:'10.2rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
+                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
                             </div>
                         </div>
 
@@ -106,11 +106,11 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 
-                                <img style={{width: '9.5rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
+                                <img style={{width: '10.2rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
+                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
                             </div>
                         </div>
                     </div>               

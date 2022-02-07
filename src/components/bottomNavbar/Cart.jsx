@@ -13,7 +13,7 @@ const Cart = ({selectedOption}) => {
 
     return (
         <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className="transition-all w-full z-50 rounded-t-3xl shadow-plain bg-white fixed bottom-0">
-            <div style={{height: openedCart ? '97.75rem' : '9.0625rem' , padding: openedCart ? '0' : '0 3.6875rem'}} className="flex items-center h-full">
+            <div style={{height: openedCart ? '96.5rem' : '9.0625rem' , padding: openedCart ? '0' : '0 3.6875rem'}} className="flex items-center h-full">
                 {!openedCart ? (
                    <div className='flex w-full items-center justify-between'>
                         <div style={{width: '30rem'}} className='flex items-center'>
@@ -23,21 +23,21 @@ const Cart = ({selectedOption}) => {
                             className="text-4xl rounded-full text-white flex items-center justify-center font-roboto pt-px">
                                 1
                             </div>
-                            <p className='text-5xl font-spoqaMedium text-gray-r727272'>베팅카트 열기</p>
+                            <p className='text-5xl font-spoqaMedium text-gray-r727272 pt-2'>베팅카트 열기</p>
                         </div>
 
                         <button onClick={() => setOpenedCart(true)} >
-                            <img style={{width: '4.5rem', marginLeft: '', paddingBottom: '1rem'}} className="w-16 object-contain" src={ArrowUp} alt="" />
+                            <img style={{width: '4.5rem', marginLeft: '', paddingBottom: '1rem'}} className="w-16 object-contain mt-2" src={ArrowUp} alt="" />
                         </button>
 
                       <div style={{width: '30rem'}} className='flex justify-end'>
                           
-                          <div className='flex text-5xl items-center font-spoqaMedium text-gray-r727272'>
+                          <div className='flex text-5xl items-center font-spoqaMedium text-gray-r727272 mt-1'>
                             <p>배당률 <span className='text-red-d52e2e'>3.76</span></p>
                           </div>
                       </div>
                    </div>
-                ): <div className='w-full' style={{height: '97.75rem', padding: '1.875rem'}}>
+                ): <div className='w-full' style={{height: '96.5rem', padding: '1.875rem'}}>
                     <MinigamesRightPanel selectedGame={selectedGame} setOpenedCart={setOpenedCart} selectedOption={selectedOption} />
                   </div>}
                 

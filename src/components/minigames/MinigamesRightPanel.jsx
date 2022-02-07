@@ -139,7 +139,6 @@ const MinigamesRightPanel = ({
         <div 
                     style={{
                         background: "linear-gradient(to right, #2087f0, #1873cf", 
-                        boxShadow:'inset 1px 2px 1px 0px rgba(0, 0, 0, 0.2)',
                         height: '8.5625rem',
                         padding: '0 1.125rem',
                         marginBottom: '0.9375rem',
@@ -152,7 +151,7 @@ const MinigamesRightPanel = ({
                             {format(time, dateFormat, { locale : ko })} {format(time, dateFormat1, { locale : ko })} <p style={{color:"#ffea00", marginLeft: '0.8125rem'}} className=""> [216회차]</p>
                         </div>
                         <div style={{color:"#bffff5"}} className="flex font-spoqaBold tracking-tight items-center">
-                            <img style={{width: '2.875rem', marginRight: '0.75rem'}} className="object-contain" src={ClockIcon} alt="" />
+                            <img style={{width: '2.875rem', marginRight: '0.75rem'}} className="object-contain mb-1" src={ClockIcon} alt="" />
                             <p style={{fontSize: '3.375rem'}}>02:16</p>
                         </div>
                     </div>
@@ -183,7 +182,7 @@ const MinigamesRightPanel = ({
                         <img style={{width:"3.5rem"}} className="object-contain mr-1" src={CheckIcon} alt="" />
                         <p style={{color:"#7a5a37", fontSize: '2.625rem', marginTop: '2px'}} className="tracking-tight font-spoqaBold">게임선택</p>
                     </div>
-                    <div style={{width:"29rem", fontSize: '1.875rem', marginLeft: '1rem'}} className="flex h-full z-20 items-center justify-center flex-col -space-y-3">
+                    <div style={{width:"30rem", fontSize: '1.875rem', marginLeft: '1rem'}} className="flex h-full z-20 items-center justify-center flex-col -space-y-3">
                         {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") && (
                             <p style={{color:"#3e83b3"}} className="tracking-tight font-spoqaMedium flex items-center">{selectedOption[0].type}</p>
                         )}
@@ -196,7 +195,7 @@ const MinigamesRightPanel = ({
                     <div style={{width:"17.5rem"}} className="flex h-full z-20 items-center justify-end">
                         {selectedOption[0].buttonType && (
                             <div 
-                                style={{width:"9rem"}} 
+                                style={{width:"11.375rem"}} 
                                 className="relative flex items-center justify-center cursor-pointer"
                             >
                                 <img 

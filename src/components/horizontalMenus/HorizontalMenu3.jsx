@@ -21,7 +21,7 @@ const HorizontalMenu3 = ({
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
                     borderRadius:"1.625rem",
                     width: '18.25rem',
-                    height: '13.18rem',
+                    height: '12.5rem',
                     marginRight: `${items.length - 1 !== index ? '0.5625rem' : '' }`, 
                     padding: '1px'
                 }}
@@ -68,7 +68,8 @@ const HorizontalMenu3 = ({
                             borderTopLeftRadius:"1.625rem 1.3rem",
                             borderTopRightRadius: "1.625rem 1.3rem",
                             borderColor: selectedTab === item.path ? "#1a73ce" : "#d6dfe8",
-                            boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset'
+                            boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset',
+                            paddingTop: '0.6rem'
                         }}
                         className={`mt-3px h-full w-full rounded-b-lg rounded-t-md flex flex-col justify-center items-center`}
                     >
@@ -78,12 +79,12 @@ const HorizontalMenu3 = ({
                                 className={`
                                 ${
                                     item.id === 0 
-                                    ? "ml-4px"
+                                    ? "ml-2px"
                                     : item.id === 1 
-                                    ? "ml-6px"
+                                    ? "ml-2px"
                                     : item.id === 2
-                                    ? "ml-8px"
-                                    : "ml-7px"
+                                    ? "ml-2px"
+                                    : "ml-2px"
                                 } text-20px tracking-tight font-spoqaBold`}
                             >
                                 {item.text}

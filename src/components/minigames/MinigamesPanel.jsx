@@ -57,7 +57,7 @@ const MinigamesPanel = ({
             <div 
                 style={{
                     background: "linear-gradient(to right, #2087f0, #1873cf", 
-                    boxShadow:'inset 1px 2px 1px 0px rgba(0, 0, 0, 0.2)',
+                    boxShadow:'inset 0px 1px 0px 0px rgba(0, 0, 0, 0.2)',
                     height: '8.5rem',
                     margin: '0.9375rem 0'
                 }} 
@@ -69,7 +69,7 @@ const MinigamesPanel = ({
                         {format(time, dateFormat, { locale : ko })} {format(time, dateFormat1, { locale : ko })} <p style={{color:"#ffea00", marginLeft: '0.875rem'}} className="">[216회차]</p>
                     </div>
                     <div style={{color:"#bffff5"}} className="flex font-spoqaBold tracking-tight items-center">
-                        <img style={{width: '4rem', marginRight:'0.75rem'}} className="object-contain" src={ClockIcon} alt="" />
+                        <img style={{width: '3rem', marginRight:'0.75rem'}} className="object-contain pb-px" src={ClockIcon} alt="" />
                         <p style={{fontSize: '3.375rem'}}>02:16</p>
                     </div>
                 </div>
