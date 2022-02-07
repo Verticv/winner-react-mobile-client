@@ -69,7 +69,7 @@ const MinigamesMatchResultPanel = ({
                         result="equality"
                         score="211"
                         team1={type === "speedkino" ? '언더 [211회]' : "홀 [211회]"}
-                        team2={type === "speedkino" ? '[211회] 오버' : "[211회] 4줄"}
+                        team2={type === "speedkino" ? '[211회] 오버' : "[211회] 짝"}
                         stat1="1.95"
                         stat2="VS"
                         stat3="1.95"
