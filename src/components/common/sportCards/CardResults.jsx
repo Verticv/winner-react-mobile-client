@@ -22,7 +22,7 @@ const CardResults = ({
 }) => {
 
     if (isMinigame === true) return (
-        <div style={{borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem'}} className={`flex items-center w-full p-3 pr-0 bg-gray-fefefe shadow-plain11`}>
+        <div style={{borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem'}} className={`${withoutRadius && "border-b"} flex items-center w-full p-3 pr-0 bg-gray-fefefe shadow-plain11`}>
             
             <div style={{marginLeft: '-0.5rem', fontSize: '2.625rem'}} className="flex px-5 font-spoqaMedium justify-center tracking-tight text-center">
                 <div 

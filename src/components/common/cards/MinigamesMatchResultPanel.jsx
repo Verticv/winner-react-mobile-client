@@ -27,9 +27,10 @@ const MinigamesMatchResultPanel = ({
                         hasUp={false}
                         hasDown={false}
                         isMinigame={true}
+                        withoutRadius={true}
                     />
                     <CardResults 
-                        bet = "right"
+                        bet = "left"
                         result="equality"
                         score="211"
                         team1={type === "speedkino" ? '홀 [211회]' : "3줄 [211회]"}
@@ -41,6 +42,7 @@ const MinigamesMatchResultPanel = ({
                         hasUp={false}
                         hasDown={false}
                         isMinigame={true}
+                        withoutRadius={type !== "speedkino" && true}
                     />
                     {type !== "speedkino" && (
                         <CardResults 
@@ -75,6 +77,7 @@ const MinigamesMatchResultPanel = ({
                         hasUp={false}
                         hasDown={false}
                         isMinigame={true}
+                        withoutRadius={true}
                     />
                     <CardResults 
                         bet = "left"
@@ -89,6 +92,7 @@ const MinigamesMatchResultPanel = ({
                         hasUp={false}
                         hasDown={false}
                         isMinigame={true}
+                        withoutRadius={type !== "speedkino" && true}
                     />
                     {type !== "speedkino" && (
                         <CardResults 
@@ -103,7 +107,7 @@ const MinigamesMatchResultPanel = ({
                             isAttached={false}
                             hasUp={false}
                             hasDown={false}
-                            isMinigame={true}
+                            isMinigame={type !== "speedkino" && true}
                         />
                     )}
                 </div>
@@ -122,6 +126,7 @@ const MinigamesMatchResultPanel = ({
                         hasUp={false}
                         hasDown={false}
                         isMinigame={true}
+                        withoutRadius={true}
                     />
                     <CardResults 
                         bet = "left"
@@ -136,6 +141,7 @@ const MinigamesMatchResultPanel = ({
                         hasUp={false}
                         hasDown={false}
                         isMinigame={true}
+                        withoutRadius={type !== "speedkino" && true}
                     />
                     {type !== "speedkino" && (
                         <CardResults 
@@ -170,6 +176,7 @@ const MinigamesMatchResultPanel = ({
                             hasUp={false}
                             hasDown={false}
                             isMinigame={true}
+                            withoutRadius={true}
                         />
                         <CardResults 
                             bet = "left"
@@ -184,6 +191,7 @@ const MinigamesMatchResultPanel = ({
                             hasUp={false}
                             hasDown={false}
                             isMinigame={true}
+                            withoutRadius={true}
                         />
                         <CardResults 
                             bet = "right"
