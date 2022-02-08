@@ -50,7 +50,7 @@ const BottomNavbar = () => {
     
     
     return (
-        <div style={{maxWidth: '1242px', borderTopLeftRadius: '3.5rem', borderTopRightRadius: '3.5rem'}} id='main-menu' className="w-full z-50 shadow-plain bg-white fixed bottom-0">
+        <div style={{maxWidth: '1242px', borderTopLeftRadius: '20px', borderTopRightRadius: '20px'}} id='main-menu' className="w-full z-50 shadow-plain bg-white fixed bottom-0">
             <div style={{paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '1.875rem', height: '70px', paddingTop:"2rem"}} className="flex items-center h-full space-x-10">
                 <button
                     // style={{width: '15.625rem'}}
