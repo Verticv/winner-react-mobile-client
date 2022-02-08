@@ -141,7 +141,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
     )
 
     const ThreeCard = ({
-        width = 81.125, 
+        width = 77.825, 
         height = 23.375,
         extraLeftPadding = 0,
         extraRightPadding = 0,
@@ -192,7 +192,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                         // borderTop: `0.1875rem solid #cf9494`,
                         borderBottom: `0.1875rem solid #cf9494`,
                         borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #cf9494` : '',
-                        }} className="flex justify-center w-full items-center space-x-16">
+                        }} className="flex justify-center w-full items-center space-x-18">
                         <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {
@@ -207,7 +207,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 style={{height: '11.375rem'}}
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
-                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">홀언더</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
@@ -273,7 +273,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 
-                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">짝오버</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
@@ -294,16 +294,16 @@ const SpeedKinoGame = ({setSelectedOption}) => {
             <div className="w-full flex flex-col">
                 <div className="flex flex-col">
                     <div className="flex">
-                        <div style={{marginRight: '0.2rem'}} className="flex">
-                            <SingleCard button1Text='홀' button2Text='짝' width={39} height={23.375} extraLeftPadding={1.875} titleNumber={1} title = '게임' subText = "홀짝" />
+                        <div style={{marginRight: '0.35rem'}} className="flex">
+                            <SingleCard button1Text='홀' button2Text='짝' width={39} height={23.375} titleNumber={1} title = '게임' subText = "홀짝" />
                         </div>
                         <div>
-                            <SingleCard button1Text='언더' button2Text='오버' width={39} height={23.375} extraRightPadding={1.875} titleNumber={2} title = '게임' subText = "언더/오버" missingBorder='right' />
+                            <SingleCard button1Text='언더' button2Text='오버' width={39} height={23.375} titleNumber={2} title = '게임' subText = "언더/오버" missingBorder='right' />
                         </div>
                     </div>
                 </div>
                 <div>
-                    <ThreeCard extraLeftPadding={1.75} extraRightPadding={1.75} titleNumber={3} title = '게임' subText = "홀짝/언오버" missingBorder='both' />
+                    <ThreeCard titleNumber={3} title = '게임' subText = "홀짝/언오버" missingBorder='both' />
                 </div>
             </div>
         </div>

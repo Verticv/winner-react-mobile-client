@@ -77,7 +77,7 @@ const SpeedKinoRoundResult = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '홀',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
@@ -91,7 +91,7 @@ const SpeedKinoRoundResult = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '홀',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
@@ -105,7 +105,7 @@ const SpeedKinoRoundResult = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '홀',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
@@ -119,7 +119,7 @@ const SpeedKinoRoundResult = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '홀',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
@@ -133,7 +133,63 @@ const SpeedKinoRoundResult = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
+            departureText: '홀',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
             departureText: '짝',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '홀',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '짝',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '홀',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '짝',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '홀',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '짝',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '홀',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
@@ -143,98 +199,126 @@ const SpeedKinoRoundResult = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '오',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '언',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '오',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '언',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '오',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '언',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '오',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '언',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '오',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '언',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '오',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '언',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '오',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '언',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '오',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '언',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '오',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '언',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
         },
@@ -263,12 +347,12 @@ const SpeedKinoRoundResult = () => {
     }
 
     return (
-        <div className="w-full p-12 pb-0">
+        <div className="w-full px-12 py-8 h-screen pb-64 overflow-y-scroll">
             <div style={{margin: '0'}}>
                 <HistoryMenu itemsArray={historyTabsArray} setSelectedTab={setSelectedTab} />
             </div>
             <Route exact path="/minigame/speedkino">
-                <div style={{marginTop: '2.875rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545">
+                <div className="font-spoqaMedium tracking-tight text-gray-r454545 mt-8">
                     <div style={{fontSize: '2.25rem'}} className='flex w-full'>
                         <div style={{height: '5.25rem', marginRight:'0.1875rem', borderTopLeftRadius: '0.625rem', borderBottomLeftRadius: '0.625rem'}} className="flex w-1/2 justify-center items-center bg-gray-efefef">회차</div>
                         <div style={{height: '5.25rem'}} className="flex w-1/2 justify-center items-center bg-gray-efefef">홀/짝</div>
@@ -279,7 +363,7 @@ const SpeedKinoRoundResult = () => {
                 </div>
             </Route>
             <Route path="/minigame/speedkino/sum">
-                <div style={{marginTop: '2.875rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545">
+                <div className="font-spoqaMedium tracking-tight text-gray-r454545 mt-8">
                     <div style={{fontSize: '2.25rem'}} className='flex w-full'>
                         <div style={{height: '5.25rem', marginRight:'0.1875rem', borderTopLeftRadius: '0.625rem', borderBottomLeftRadius: '0.625rem'}} className="flex w-1/2 justify-center items-center bg-gray-efefef">회차</div>
                         <div style={{height: '5.25rem'}} className="flex w-1/2 justify-center items-center bg-gray-efefef">언오버</div>

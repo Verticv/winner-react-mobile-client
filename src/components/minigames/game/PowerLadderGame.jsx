@@ -53,13 +53,13 @@ const PowerLadderGame = ({setSelectedOption}) => {
     }) => (
         <div
             style={{
-                width: width + "rem", 
+                // width: width + "rem", 
                 height: height+ "rem",
                 // background: "linear-gradient(to bottom, #b8d5e6, #b7c7d4)",
                 marginBottom: '0.2rem',
-                padding: '1px'
+                // padding: '1px'
             }}
-            className={`flex justify-center items-center flex-shrink-0`} 
+            className={`flex justify-center items-center flex-shrink-0 w-full`} 
         >
             <div
                 style={{
@@ -71,8 +71,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
             >
                 <div 
                     style={{
-                        background: `linear-gradient(to bottom, ${gradient1}, ${gradient2})`,
-                        
+                        background: `linear-gradient(to bottom, ${gradient1}, ${gradient2})`,  
                     }}
                     className="w-full h-full flex flex-wrap items-start justify-start"
                 >
@@ -139,7 +138,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
     )
 
     const ThreeCard = ({
-        width = 81.125, 
+        width = 77.825, 
         height = 23.375,
         extraLeftPadding = 0,
         extraRightPadding = 0,
@@ -189,7 +188,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                         borderRight: (missingBorder !== "both" && missingBorder === "left") || missingBorder === 'none' ? `0.1875rem solid #abc7db` : '',
                         borderBottom: `0.1875rem solid #abc7db`,
                         borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #abc7db` : '',
-                         }} className="flex justify-center w-full items-center space-x-16">
+                         }} className="flex justify-center w-full items-center space-x-18">
                         <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {
@@ -206,7 +205,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                             >
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">짝</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 left-0 top-2 flex items-center justify-center">
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black pt-1 flex-shrink-0 z-20 left-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
                                 </div>
                             </div>
@@ -231,7 +230,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">홀</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 right-0 top-2 flex items-center justify-center">
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black pt-1 flex-shrink-0 z-20 right-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
                                 </div>
                             </div>
@@ -254,9 +253,9 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 style={{height: '11.375rem'}}
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
-                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? RedSMButtonPressed : RedSMButton} alt="" />
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">홀</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 left-0 top-2 flex items-center justify-center">
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black pt-1 flex-shrink-0 z-20 left-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">4</div>
                                 </div>
                             </div>
@@ -279,9 +278,9 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 
-                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">짝</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 right-0 top-2 flex items-center justify-center">
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black pt-1 flex-shrink-0 z-20 right-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">4</div>
                                 </div>
                             </div>
@@ -303,19 +302,19 @@ const PowerLadderGame = ({setSelectedOption}) => {
             <div className="w-full flex flex-col">
                 <div className="flex flex-col">
                     <div className="flex">
-                        <div style={{marginRight: '0.2rem', marginLeft: '-1.625rem'}} className="flex">
-                            <SingleCard width={27.1875} height={23.375} extraLeftPadding={1.875} titleNumber={1} title = '게임' subText = "홀짝" />
+                        <div style={{marginRight: '0.35rem'}} >
+                            <SingleCard width={25.82} height={23.375} titleNumber={1} title = '게임' subText = "홀짝" />
                         </div>
-                        <div style={{marginRight: '0.2rem'}} className="flex">
-                            <SingleCard button1Text='좌' button2Text='우' width={25.5625} height={23.375} titleNumber={2} title = '게임' subText = "출발점" missingBorder='none' />
+                        <div style={{marginRight: '0.35rem'}}>
+                            <SingleCard button1Text='좌' button2Text='우' width={25.82} height={23.375} titleNumber={2} title = '게임' subText = "출발점" missingBorder='none' />
                         </div>
                         <div>
-                            <SingleCard button1Text='3줄' button2Text='4줄' width={27.1875} height={23.375} extraRightPadding={1.875} titleNumber={3} title = '게임' subText = "줄갯수" missingBorder='right' />
+                            <SingleCard button1Text='3줄' button2Text='4줄' width={25.82} height={23.375} titleNumber={3} title = '게임' subText = "줄갯수" missingBorder='right' />
                         </div>
                     </div>
                 </div>
                 <div>
-                    <ThreeCard title='게임' subText='좌우 출발 3/4줄' titleNumber={4} extraLeftPadding={1.75} extraRightPadding={1.75} />
+                    <ThreeCard title='게임' subText='좌우 출발 3/4줄' titleNumber={4} missingBorder="both"/>
                 </div>
             </div>
         </div>

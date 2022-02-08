@@ -8,6 +8,7 @@ module.exports = {
         112: '28rem',
         124: '32rem',
         15: '3.75rem',
+        18: '4.5rem',
         'default': '1260px',
         1300: '1300px',
         1920: '1912px',

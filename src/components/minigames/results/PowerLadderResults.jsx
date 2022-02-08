@@ -14,7 +14,7 @@ const PowerLadderResults = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '홀',
             departureNumber: '3',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
@@ -30,7 +30,7 @@ const PowerLadderResults = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '홀',
             departureNumber: '3',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
@@ -46,7 +46,7 @@ const PowerLadderResults = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '홀',
             departureNumber: '3',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
@@ -62,7 +62,7 @@ const PowerLadderResults = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
-            departureText: '짝',
+            departureText: '홀',
             departureNumber: '3',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
@@ -78,7 +78,87 @@ const PowerLadderResults = () => {
         {
             month: '10월 15일',
             roundNumber: '288',
+            departureText: '홀',
+            departureNumber: '3',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
             departureText: '짝',
+            departureNumber: '4',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '홀',
+            departureNumber: '3',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '짝',
+            departureNumber: '4',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '홀',
+            departureNumber: '3',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '짝',
+            departureNumber: '4',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '홀',
+            departureNumber: '3',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '짝',
+            departureNumber: '4',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '홀',
+            departureNumber: '3',
+            departureNumberColor: '#2e6dd5',
+            departureNumberDirection: 'right',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '짝',
+            departureNumber: '4',
+            departureNumberColor: '#d52e2e',
+            departureNumberDirection: 'left',
+        },
+        {
+            month: '10월 15일',
+            roundNumber: '288',
+            departureText: '홀',
             departureNumber: '3',
             departureNumberColor: '#2e6dd5',
             departureNumberDirection: 'right',
@@ -108,14 +188,14 @@ const PowerLadderResults = () => {
     }
 
     return (
-        <div className="w-full p-12 pb-0">
+        <div className="w-full p-12 overflow-y-scroll h-screen pb-64">
             <div className="font-spoqaMedium tracking-tight text-gray-r454545">
                 <div style={{fontSize: '2.25rem'}} className='flex w-full'>
                     <div style={{height: '5.25rem', marginRight:'0.1875rem', borderTopLeftRadius: '0.625rem', borderBottomLeftRadius: '0.625rem'}} className="flex w-1/2 justify-center items-center bg-gray-efefef">회차</div>
                     <div style={{height: '5.25rem'}} className="flex w-1/2 justify-center items-center bg-gray-efefef">좌우 출발 3/4줄</div>
                 </div>
             </div>
-            <div className="w-full text-585858 text-14px tracking-tight font-spoqaMedium">
+            <div className="w-full  text-585858 text-14px tracking-tight font-spoqaMedium ">
                 <Cells items={array} />
             </div>
         </div>      

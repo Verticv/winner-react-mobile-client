@@ -53,8 +53,14 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                         borderLeft: (missingBorder !== "both" && missingBorder === "right") ? `0.1875rem solid ${borderColor}` : '',
                     }} className="flex flex-shrink-0 items-center justify-center w-full pb-px">
                         <div 
-                            style={{height:"4.3rem",width: '15.9375rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
-                            className="flex-shrink-0 shadow-plain2 rounded-2xl border border-white flex flex-col items-center justify-center tracking-tight text-white"
+                            style={{
+                                height:"4.3rem",
+                                // width: '15.9375rem', 
+                                borderWidth: '0.1875rem' , 
+                                backgroundColor: titleBg, 
+                                fontSize: '2.25rem'
+                            }} 
+                            className="flex-shrink-0 shadow-plain2 rounded-2xl border border-white flex flex-col items-center justify-center tracking-tight text-white px-4"
                         >
                             <p style={{marginTop: '0.4rem'}} className="font-spoqaMedium">[{titleNumber}게임] 파워볼</p>
                         </div>
@@ -410,14 +416,14 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                         </div>
                     ) : titleNumber === 5 ? (
                         <div style={{
-                            height: '31.5rem' ,
+                            height: '31.7rem' ,
                             borderRight: missingBorder !== "both" && missingBorder === "left" ? `0.1875rem solid ${borderColor}` : '',
                             borderTop: `0.1875rem solid ${borderColor}`,
                             borderBottom: `0.1875rem solid ${borderColor}`,
                             borderLeft:missingBorder !== "both" &&  missingBorder === "right" ? `0.1875rem solid ${borderColor}` : '',
                             borderTopColor: 'white', 
-                            }} className="flex flex-wrap justify-center w-full items-center">
-                            <div className="flex justify-center w-full items-center space-x-15 pl-px">
+                            }} className="flex flex-col justify-center w-full items-center">
+                            <div className="flex justify-center w-full items-center space-x-15 pl-px mt-3">
                                 <div className="flex flex-col items-center">
                                     <div 
                                         onClick={() => {
@@ -844,7 +850,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                         <BetOptions titleNumber={4} width={48.8}  subText="구간" missingBorder='right'  />
                     </div>
                     <div style={{marginBottom: '1.5rem'}} className="flex mt-0">
-                        <BetOptions titleNumber={5} width={77.625} height={37.5} subText="숫자" missingBorder='both'/>
+                        <BetOptions titleNumber={5} width={77.625} height={37.7} subText="숫자" missingBorder='both'/>
                     </div>
                 </div>
             </div>
