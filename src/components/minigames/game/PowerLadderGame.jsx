@@ -303,7 +303,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
             <div className="w-full flex flex-col">
                 <div className="flex flex-col">
                     <div className="flex">
-                        <div style={{marginRight: '0.2rem'}} className="flex">
+                        <div style={{marginRight: '0.2rem', marginLeft: '-1.625rem'}} className="flex">
                             <SingleCard width={27.1875} height={23.375} extraLeftPadding={1.875} titleNumber={1} title = '게임' subText = "홀짝" />
                         </div>
                         <div style={{marginRight: '0.2rem'}} className="flex">

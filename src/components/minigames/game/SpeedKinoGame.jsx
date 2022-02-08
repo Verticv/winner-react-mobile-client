@@ -108,7 +108,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
+                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
                             </div>
                         </div>
 
@@ -131,7 +131,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
+                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
                             </div>
                         </div>
                     </div>               

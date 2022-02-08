@@ -108,7 +108,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
+                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
                             </div>
                         </div>
 
@@ -130,7 +130,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
-                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
+                                <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
                             </div>
                         </div>
                     </div>               
@@ -309,10 +309,10 @@ const KinoLadderGame = ({setSelectedOption}) => {
                             <SingleCard width={27.1875} height={23.375} extraLeftPadding={1.875} titleNumber={1} title = '게임' subText = "홀짝" />
                         </div>
                         <div style={{marginRight: '0.2rem'}} className="flex">
-                            <SingleCard width={25.5625} button1Text='좌' button2Text='우' height={23.375} titleNumber={2} title = '게임' subText = "출발점" />
+                            <SingleCard width={25.5625} button1Text='좌' button2Text='우' height={23.375} titleNumber={2} title = '게임' subText = "출발점" missingBorder='none' />
                         </div>
                         <div>
-                            <SingleCard width={27.1875} button1Text='3줄' button2Text='4줄' height={23.375} extraRightPadding={1.875} titleNumber={3} title = '게임' subText = "줄갯수" />
+                            <SingleCard width={27.1875} button1Text='3줄' button2Text='4줄' height={23.375} extraRightPadding={1.875} titleNumber={3} title = '게임' subText = "줄갯수" missingBorder='right' />
                         </div>
                     </div>
                 </div>
