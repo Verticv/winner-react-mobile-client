@@ -12,8 +12,15 @@ const KinoLadderGame = ({setSelectedOption}) => {
 
     const [state, setState] = useState("")
 
-    const PanelTitle = ({title, titleNumber, subText, subText2, titleBg, isTopBorder = false}) => (
-        <div style={{height: '5.8125rem', borderTopColor: '#b8d5e6'}} className={`border-b ${isTopBorder ? 'border-t' : '' } border-brown-c7b8a4 flex flex-shrink-0 items-center justify-center w-full pb-px`}>
+    const PanelTitle = ({title, titleNumber, subText, subText2, titleBg, isTopBorder = false, missingBorder}) => (
+        <div style={{
+            height: '5.8125rem', 
+            borderTopColor: '#b8d5e6',
+            borderRight: (missingBorder !== "both" && missingBorder === "left") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
+            borderTop: `0.1875rem solid #c7b8a4`,
+            borderBottom: `0.1875rem solid #c7b8a4`,
+            borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
+            }} className={`flex flex-shrink-0 items-center justify-center w-full pb-px`}>
             <div 
                 style={{height:"4.3rem",width: '8.4375rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
                 className="flex-shrink-0 shadow-plain2 border border-white rounded-2xl flex flex-col items-center justify-center tracking-tight text-white"
@@ -43,13 +50,14 @@ const KinoLadderGame = ({setSelectedOption}) => {
         dividerColor = "#c7b9a6",
         button1Text = "홀",
         button2Text = "짝",
+        missingBorder ="left"
     }) => (
         <div
             style={{
                 width: width + "rem", 
                 height: height+ "rem",
-                background: "#c7b8a4",
-                marginBottom: '0.375rem',
+                // background: "#c7b8a4",
+                marginBottom: '0.2rem',
                 padding: '1px'
             }}
             className={`flex justify-center items-center flex-shrink-0`} 
@@ -68,9 +76,20 @@ const KinoLadderGame = ({setSelectedOption}) => {
                     }}
                     className="w-full h-full flex flex-wrap items-start justify-start"
                 >
-                    <PanelTitle title={title} titleNumber={titleNumber} subText={subText} subText2={subText2} titleBg={titleBg} />
+                    <PanelTitle title={title} titleNumber={titleNumber} subText={subText} subText2={subText2} titleBg={titleBg} missingBorder={missingBorder} />
 
-                    <div style={{height: '17.375rem', borderTopWidth: '0.1875rem', borderTopColor: 'white', padding: '0 3.875rem', paddingLeft: `${extraLeftPadding + 3.875}rem`, paddingRight: `${extraRightPadding + 3.875}rem`}} className="flex justify-center w-full items-center">
+                    <div style={{
+                        height: '17.375rem', 
+                        borderTopWidth: '0.1875rem', 
+                        borderTopColor: 'white', 
+                        padding: '0 3.875rem', 
+                        paddingLeft: `${extraLeftPadding + 3.875}rem`, 
+                        paddingRight: `${extraRightPadding + 3.875}rem`,
+                        borderRight: (missingBorder !== "both" && missingBorder === "left") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
+                        // borderTop: `0.1875rem solid #c7b8a4`,
+                        borderBottom: `0.1875rem solid #c7b8a4`,
+                        borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
+                        }} className="flex justify-center w-full items-center">
                         <div style={{marginRight: '1.375rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {
@@ -86,7 +105,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 <img style={{width: '10.2rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
@@ -108,7 +127,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                             >
                                 
                                 <img style={{width: '10.2rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 mt-0">1.95</p>
@@ -133,12 +152,13 @@ const KinoLadderGame = ({setSelectedOption}) => {
         subText = "홀짝",
         subText2 = null,
         dividerColor = "#c7b9a6",
+        missingBorder="left"
     }) => (
         <div
             style={{
                 width: width + "rem", 
                 height: height+ "rem",
-                background: "#c7b8a4",
+                // background: "#c7b8a4",
                 marginBottom: '0.375rem',
                 padding: '1px'
             }}
@@ -158,9 +178,20 @@ const KinoLadderGame = ({setSelectedOption}) => {
                     }}
                     className="w-full h-full flex flex-wrap items-start justify-start"
                 >
-                    <PanelTitle isTopBorder title={title} titleNumber={titleNumber} subText={subText} subText2={subText2} titleBg={titleBg} />
+                    <PanelTitle isTopBorder title={title} titleNumber={titleNumber} subText={subText} subText2={subText2} titleBg={titleBg} missingBorder={missingBorder} />
 
-                    <div style={{height: '17.375rem', borderTopWidth: '0.1875rem', borderTopColor: 'white', padding: '0 3.875rem', paddingLeft: `${extraLeftPadding + 3.875}rem`, paddingRight: `${extraRightPadding + 3.875}rem`}} className="flex justify-between w-full items-center">
+                    <div style={{
+                        height: '17.375rem', 
+                        borderTopWidth: '0.1875rem', 
+                        borderTopColor: 'white', 
+                        padding: '0 3.875rem', 
+                        paddingLeft: `${extraLeftPadding + 3.875}rem`, 
+                        paddingRight: `${extraRightPadding + 3.875}rem`,
+                        borderRight: (missingBorder !== "both" && missingBorder === "left") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
+                        // borderTop: `0.1875rem solid #c7b8a4`,
+                        borderBottom: `0.1875rem solid #c7b8a4`,
+                        borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
+                        }} className="flex justify-center w-full items-center space-x-16">
                         <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {
@@ -176,8 +207,8 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">짝</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black z-20 left-0 top-2 flex items-center justify-center">
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">짝</p>
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black  flex-shrink-0 z-20 left-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
                                 </div>
                             </div>
@@ -201,8 +232,8 @@ const KinoLadderGame = ({setSelectedOption}) => {
                             >
                                 
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">홀</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black z-20 right-0 top-2 flex items-center justify-center">
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">홀</p>
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black  flex-shrink-0 z-20 right-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
                                 </div>
                             </div>
@@ -226,8 +257,8 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? RedSMButtonPressed : RedSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">홀</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black z-20 left-0 top-2 flex items-center justify-center">
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">홀</p>
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black  flex-shrink-0 z-20 left-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">4</div>
                                 </div>
                             </div>
@@ -251,8 +282,8 @@ const KinoLadderGame = ({setSelectedOption}) => {
                             >
                                 
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? BlueSMButtonPressed : BlueSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px #00000060", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">짝</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black z-20 right-0 top-2 flex items-center justify-center">
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">짝</p>
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black  flex-shrink-0 z-20 right-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">4</div>
                                 </div>
                             </div>
@@ -274,13 +305,13 @@ const KinoLadderGame = ({setSelectedOption}) => {
             <div className="w-full flex flex-col">
                 <div className="flex flex-col">
                     <div className="flex">
-                        <div style={{marginRight: '0.375rem', marginLeft: '-1.625rem'}} className="flex">
+                        <div style={{marginRight: '0.2rem', marginLeft: '-1.625rem'}} className="flex">
                             <SingleCard width={27.1875} height={23.375} extraLeftPadding={1.875} titleNumber={1} title = '게임' subText = "홀짝" />
                         </div>
-                        <div style={{marginRight: '0.375rem'}} className="flex">
+                        <div style={{marginRight: '0.2rem'}} className="flex">
                             <SingleCard width={25.5625} button1Text='좌' button2Text='우' height={23.375} titleNumber={2} title = '게임' subText = "출발점" />
                         </div>
-                        <div style={{marginRight: '-1.625rem'}}>
+                        <div>
                             <SingleCard width={27.1875} button1Text='3줄' button2Text='4줄' height={23.375} extraRightPadding={1.875} titleNumber={3} title = '게임' subText = "줄갯수" />
                         </div>
                     </div>

@@ -69,7 +69,7 @@ const HorizontalMenu3 = ({
                             borderTopRightRadius: "1.625rem 1.3rem",
                             borderColor: selectedTab === item.path ? "#1a73ce" : "#d6dfe8",
                             boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset',
-                            paddingTop: '0.6rem'
+                            paddingTop: '1rem'
                         }}
                         className={`mt-3px h-full w-full rounded-b-lg rounded-t-md flex flex-col justify-center items-center`}
                     >
@@ -95,7 +95,7 @@ const HorizontalMenu3 = ({
                             <img style={{width: '3.1875rem', marginRight: '0.6875rem', marginBottom: "1rem"}} className="object-contain" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
                             <div 
                                 style={{fontSize: '3.875rem', color: selectedTab === item.path ? "#ffffff" : "#748496"}}
-                                className="tracking-tight font-swagger -mt-1 flex items-center"
+                                className="tracking-tight font-swagger flex items-center"
                             >
                                 {item.time}
                             </div>

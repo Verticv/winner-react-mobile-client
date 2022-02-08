@@ -36,7 +36,7 @@ const MinigamesRightPanel = ({
             style={{
                 width:"24.375rem",
                 height: '7.5rem',
-                padding: '0.1rem',
+                // padding: '0.2rem',
                 fontSize: '2.625rem',
                 borderColor: "#b3bac1",
                 borderRadius: '0.75rem'
@@ -48,6 +48,8 @@ const MinigamesRightPanel = ({
                 style={{
                     borderRadius:"0.75rem",
                     background: "linear-gradient(to bottom, #feffff, #cedeed)",
+                    borderWidth: "0.1875rem",
+                    borderColor: "#fff",
                     // borderWidth: '0.1875rem'
                 }} 
                 className="flex items-center justify-center w-full h-full cursor-pointer">
@@ -64,17 +66,20 @@ const MinigamesRightPanel = ({
                 borderColor: "#171a1d",
                 borderRadius: '0.75rem',
                 backgroundColor: '#747679',
-                padding: '0.1rem'
+                // padding: '0.2rem',
             }} 
-            className="flex items-center justify-center rounded-lg flex-shrink-0 border hover:opacity-75"
+            className="flex rounded-lg flex-shrink-0 border hover:opacity-75"
             onClick={() => setInputValue(amount)}
         >
             <div 
                 style={{
+                    width: "100%",
                     borderRadius:"0.75rem",
+                    borderWidth: "0.1875rem",
+                    borderColor: "#747679",
                     background: "linear-gradient(to bottom, #585b5e, #303337)",
                 }} 
-                className="flex items-center justify-center w-full h-full cursor-pointer">
+                className="flex items-center justify-center h-full cursor-pointer">
                 <span className="font-spoqaMedium tracking-tight text-white">{text}</span>
             </div>
         </button>
@@ -192,7 +197,7 @@ const MinigamesRightPanel = ({
                             <p style={{color:"#365b7e"}} className="tracking-tight font-spoqaBold flex items-center">{selectedOption[0].name}</p>
                         )} 
                     </div>
-                    <div style={{width:"17.5rem"}} className="flex h-full z-20 items-center justify-end">
+                    <div style={{width:"16rem"}} className="flex h-full z-20 items-center justify-end">
                         {selectedOption[0].buttonType && (
                             <div 
                                 style={{width:"11.375rem"}} 
@@ -293,13 +298,15 @@ const MinigamesRightPanel = ({
                         <BetAmountButton amount={1000000}/>
                     </div>
                     <div style={{marginBottom: '0.375rem'}} className="flex">
-                        <div style={{marginRight: '0.375rem'}}>
+                        <div style={{marginRight: '0.375rem'}} className="flex-shrink-0">
                             <BetFixedAmountButton amount={22170} text="잔돈" />
                         </div>
-                        <div style={{marginRight: '0.375rem'}}>
+                        <div style={{marginRight: '0.375rem'}} className="flex-shrink-0">
                             <BetFixedAmountButton amount={null} text="초기화" />
                         </div>
-                        <BetFixedAmountButton amount={3522170} text="최대" />
+                        <div className="flex-shrink-0">
+                            <BetFixedAmountButton amount={3522170} text="최대" />
+                        </div>
                     </div>
                 </div>
 
@@ -363,7 +370,9 @@ const MinigamesRightPanel = ({
         
                 
             </div>
-            <div onPointerUp={() => history.push('/mypage/bet-history/all/minigame')}>
+            <div onPointerUp={() => {
+                history.push('/mypage/bet-history/all/minigame')
+            }}>
                 <GrayButton text='전체베팅내역' />
             </div>
         </div>
