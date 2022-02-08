@@ -177,7 +177,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                     }}
                     className="w-full h-full flex flex-wrap items-start justify-start"
                 >
-                    <PanelTitle isTopBorder title={title} titleNumber={titleNumber} subText={subText} subText2={subText2} titleBg={titleBg} />
+                    <PanelTitle isTopBorder title={title} titleNumber={titleNumber} subText={subText} subText2={subText2} titleBg={titleBg} missingBorder={missingBorder} />
 
                     <div style={{
                         height: '17.375rem', 
@@ -315,7 +315,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                     </div>
                 </div>
                 <div>
-                    <ThreeCard title='게임' subText='좌우 출발 3/4줄' titleNumber={4} extraLeftPadding={1.75} extraRightPadding={1.75} missingBorder="both" />
+                    <ThreeCard title='게임' subText='좌우 출발 3/4줄' titleNumber={4} extraLeftPadding={1.75} extraRightPadding={1.75} />
                 </div>
             </div>
         </div>

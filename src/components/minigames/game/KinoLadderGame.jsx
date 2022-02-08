@@ -159,7 +159,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                 width: width + "rem", 
                 height: height+ "rem",
                 // background: "#c7b8a4",
-                marginBottom: '0.375rem',
+                marginBottom: '0.2rem',
                 padding: '1px'
             }}
             className={`flex justify-center items-center flex-shrink-0`} 
@@ -170,7 +170,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                     height: height - 0.1875 + "rem",
                     backgroundColor: "#fdfdf8",
                 }}
-                className={`flex items-center border-b border-brown-c7b8a4`} 
+                className={`flex items-center`} 
             >
                 <div 
                     style={{
