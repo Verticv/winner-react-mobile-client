@@ -39,7 +39,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
 
     function onClickHandle(id) {
         var circle = document.getElementsByClassName("highlight")[0]
-        circle.style.transform = "translate3d(" + (id * 16) + "rem, 0px, 0)"
+        circle.style.transform = "translate3d(" + (id * 110) + "px, 0px, 0)"
     }
 
 
@@ -48,13 +48,17 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
             <button 
                 id={`t${index}`}
                 key={item.id}
-                style={{height: '13.4375rem', width: items.length - 1 === index ? '18.1875rem' : '', paddingRight: items.length - 1 === index ? '2.1875rem' : ''}}
+                style={{
+                    height: '87px', 
+                    width: items.length - 1 === index ? '125px' : '110px',
+                    paddingRight: items.length - 1 === index ? '15px' : ''
+                }}
                 className={`
                 ${selectedTab === item.id 
                     ? "text-white duration-150" 
                     : " space-x-2px text-gray-subNavbar duration-300"
                 } 
-                flex flex-col justify-start flex-shrink-0 items-center w-64 rounded-2xl z-20 transition ease-in-out tracking-tight relative`} 
+                flex flex-col justify-start flex-shrink-0 items-center rounded-2xl z-20 transition ease-in-out tracking-tight relative `} 
                 onClick={() => {
                     horizontalsScroll(items, 't', 'scroll-wrapper', index)
                     setSelectedTab(item.id)
@@ -63,19 +67,33 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 }}
             >
                 <img 
-                    style={{height: `${item.id === 0 ? '9.375rem' : selectedTab === item.id ? "8.375rem" : "9.3125rem"}`, marginTop: `${selectedTab === item.id && index !== 0 ? '0.6rem' : ''}` ,width: `${item.id === 0 ? "9.3125rem" : "9.375rem"}`}}
-                    className={`absolute top-0 object-contain w-32 h-32 mb-4ذ
-                        ${item.id === 0 && "w-40px h-40px pt-4"}
+                    style={{
+                        height: `${item.id === 0 ? '60px' : selectedTab === item.id ? "60px" : "60px"}`, 
+                        marginTop: `${selectedTab === item.id && index !== 0 ? '' : ''}` ,
+                        width: `${item.id === 0 ? "60px" : "60px"}`,
+                        paddingTop: item.id === 0 ? "7px" : ""
+                    }}
+                    className={`absolute top-0 object-contain
+                        ${item.id === 0 && "w-40px h-40px"}
                         ${(selectedTab === item.id && item.id !== 0) ? "w-36px h-40px" : item.id !== 0 ? `${item.classDefault} w-48px h-48px` : ""} 
                     `} 
                     src={item.id === 0 ? item.icon : selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
                 />
-                <label style={{fontSize: '2.4375rem', marginBottom: '1rem', paddingLeft: index === 1 ? '0.3rem' : '',  paddingRight: index === 0 && selectedTab !== item.id ? '0.55rem' : index === 1 && selectedTab !== item.id ? '0' : '', marginLeft: selectedTab === item.id && index !== 0 ? '0.4rem' : selectedTab === item.id && index === 0 ? '0.2rem' : ''}} className={"absolute mb-7  bottom-px cursor-pointer flex-shrink-0 font-spoqaMedium text-4xl pt-px pr-2px" }>{item.text}</label>
+                <p style={{
+                    fontSize: '16px', 
+                    // marginBottom: '5px', 
+                    marginRight: item.id === 0 ? "3px" : "",
+                    height: '20px',
+                    marginBottom: "5px"
+                    }} className={"absolute bottom-0 cursor-pointer flex-shrink-0 font-spoqaMedium text-4xl flex items-center justify-center" }
+                >
+                    {item.text}
+                </p>
             </button>
         ));
     }
     return (
-        <div style={{paddingLeft: '2.1875rem'}} id="container" className="flex justify-start items-start w-full">
+        <div style={{paddingLeft: '15px'}} id="container" className="flex justify-start items-start w-screen">
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
         </div>

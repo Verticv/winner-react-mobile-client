@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import visual from '../../images/carousel/visual.png'
-import visual2 from '../../images/carousel/visual2.png'
+import visual from '../../images/carousel/visual_1.png'
+import visual2 from '../../images/carousel/visual_2.png'
 import LeftArrow from '../../images/arrows/left_arrow.png'
 import RightArrow from '../../images/arrows/right_arrow.png'
 
@@ -84,11 +84,15 @@ const Carousel = () => {
                     onMouseLeave={() => setHover(false)} 
                     key={i} 
                     src={images[i]} 
+                    style={{
+                        height:"230px",
+                        width: "702px"
+                    }}
                     className={`${
                         currentImage === i ? "opacity-100" : "opacity-0"
                     } ${
                         img === visual2 && ""
-                    } absolute top-0 w-full h-full object-contain transition duration-300`} 
+                    } absolute top-0 w-full object-cover transition duration-300`} 
                     alt={"banner_images"} 
                  />
 
@@ -116,9 +120,9 @@ const Carousel = () => {
     );
 
     return (
-        <div className="relative w-full h-full flex items-center">
+        <div style={{height:"230px"}} className="relative w-full h-full flex items-center">
             {sliderControl(true)}
-            <div>
+            <div style={{height:'230px'}} className="flex items-center w-full justify-center">
                 {imagesDisplay}
                 <img 
                     onMouseEnter={() => setHover(true)} 

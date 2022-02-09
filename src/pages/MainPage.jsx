@@ -17,11 +17,11 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
                 <Navbar /> 
             </div>
 
-            <div style={{marginBottom: '1.875rem'}} className="flex justify-center items-center w-full -mt-3px">
+            <div style={{marginBottom: '10px'}} className="flex justify-center items-center w-full">
                 <Carousel />
             </div>
 
-            <div className="relative flex sticky top-0 z-40">
+            <div className="relative flex sticky top-0 z-40 w-screen">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                 <div id='scroll-wrapper' style={{borderTopWidth: '0.1875rem'}} className=" sticky overflow-x-scroll hide-scrollbar overflow-y-hidden shadow-subNavbar bg-gradient-to-b from-blue-lightGradLight to-white border-t border-white">
                     <div className=" flex flex-shrink-0 justify-around w-full">
