@@ -106,7 +106,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 <img style={{width: '10.2rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
@@ -129,7 +129,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                             >
                                 
                                 <img style={{width: '10.2rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
@@ -209,7 +209,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueSMButtonPressed : BlueSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">홀언더</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">홀언더</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
@@ -231,7 +231,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                             >
                                 
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">홀오버</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">홀오버</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
@@ -253,7 +253,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? RedSMButtonPressed : RedSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">짝언더</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">짝언더</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>
@@ -275,7 +275,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                             >
                                 
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">짝오버</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">짝오버</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">3.75</p>

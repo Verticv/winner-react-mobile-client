@@ -204,6 +204,10 @@ const MinigamesRightPanel = ({
                                 className="relative flex items-center justify-center cursor-pointer h-full"
                             >
                                 <img 
+                                    style={{
+                                        paddingTop: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "0.2rem" : "",
+                                        width: (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "10.375rem" : ""
+                                    }}
                                     className={`${
                                         (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "pt-3" : ""
                                     } absolute object-contain`} 
@@ -231,8 +235,8 @@ const MinigamesRightPanel = ({
                                     )}
                                 </div> 
                                 {selectedOption[0].tailSide && (
-                                    <div className={`${selectedOption[0].tailSide === "left" ? "left-6px" : "right-6px"} absolute w-22px h-22px rounded-full bg-black z-20 top-8px flex items-center justify-center`}>
-                                        <div className="text-white text-12px tracking-tight font-spoqaMedium">{selectedOption[0].tail}</div>
+                                    <div style={{width: '3.75rem', height: '3.75rem'}} className={`${selectedOption[0].tailSide === "left" ? "left-0" : "right-0"} absolute w-22px h-22px rounded-full bg-black z-20 top-8px flex items-center justify-center`}>
+                                        <div style={{fontSize: '2.0625rem'}} className="text-white text-12px tracking-tight font-spoqaMedium mt-1">{selectedOption[0].tail}</div>
                                     </div>
                                 )}   
                             </div>

@@ -107,7 +107,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 <img style={{width: '10.2rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? BlueButtonPressed : BlueButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">{button1Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
@@ -123,7 +123,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                     } else if (titleNumber === 2) {
                                         setSelectedOption([{type:"키노사다리", name:"출발점", selection:"우", buttonType:"red_sq"}])
                                     } else {
-                                        setSelectedOption([{type:"키노사다리", name:"줄갯수", selection:"4wnf", buttonType:"red_sq"}])
+                                        setSelectedOption([{type:"키노사다리", name:"줄갯수", selection:"4줄", buttonType:"red_sq"}])
 
                                     }
                                 }} 
@@ -132,7 +132,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                             >
                                 
                                 <img style={{width: '10.2rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? RedButtonPressed : RedButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">{button2Text}</p>
                             </div>
                             <div style={{height: '3.65rem'}}>
                                 <p style={{fontSize: '2.4375rem'}} className="font-robotoRegular tracking-tight text-gray-r585858 -mt-3">1.95</p>
@@ -201,9 +201,9 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red", tailSide: "left", tail: "3"}])
                                     } else {
-                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red", tailSide: "left", tail: "3"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -211,7 +211,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">짝</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">짝</p>
                                 <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black  pt-1  flex-shrink-0 z-20 left-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
                                 </div>
@@ -226,9 +226,9 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-2`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue", tailSide: "right", tail: "3"}])
                                     } else {
-                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue", tailSide: "right", tail: "3"}])
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}
@@ -236,7 +236,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                             >
                                 
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">홀</p>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">홀</p>
                                 <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black  pt-1  flex-shrink-0 z-20 right-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
                                 </div>
@@ -251,17 +251,17 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-3`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue", tailSide: "left", tail: "4"}])
                                     } else {
-                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue", tailSide: "left", tail: "4"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
                                 style={{height: '11.375rem'}}
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
-                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? RedSMButtonPressed : RedSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white  absolute">홀</p>
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">홀</p>
                                 <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black  pt-1  flex-shrink-0 z-20 left-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">4</div>
                                 </div>
@@ -276,17 +276,17 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-4`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red", tailSide: "right", tail: "4"}])
                                     } else {
-                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red", tailSide: "right", tail: "4"}])
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 
-                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? BlueSMButtonPressed : BlueSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.625rem'}} className="z-20 font-swagger text-white absolute">짝</p>
+                                <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ?  RedSMButtonPressed : RedSMButton } alt="" />
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">짝</p>
                                 <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black  pt-1  flex-shrink-0 z-20 right-0 top-2 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">4</div>
                                 </div>
