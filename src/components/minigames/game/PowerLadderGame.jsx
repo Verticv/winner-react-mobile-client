@@ -93,9 +93,11 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"파워사다리", name:"홀짝", selection:"홀", buttonType:"blue_sq"}])
+                                    } else if (titleNumber === 2) {
+                                        setSelectedOption([{type:"파워사다리", name:"출발점", selection:"좌", buttonType:"blue_sq"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"파워사다리", name:"줄갯수", selection:"3줄", buttonType:"blue_sq"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -115,9 +117,11 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-2`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"파워사다리", name:"홀짝", selection:"짝", buttonType:"red_sq"}])
+                                    } else if (titleNumber === 2) {
+                                        setSelectedOption([{type:"파워사다리", name:"출발점", selection:"우", buttonType:"red_sq"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"파워사다리", name:"줄갯수", selection:"4줄", buttonType:"red_sq"}])
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}
@@ -187,15 +191,15 @@ const PowerLadderGame = ({setSelectedOption}) => {
                         borderRight: (missingBorder !== "both" && missingBorder === "left") || missingBorder === 'none' ? `0.1875rem solid #abc7db` : '',
                         borderBottom: `0.1875rem solid #abc7db`,
                         borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #abc7db` : '',
-                         }} className="flex justify-center w-full items-center space-x-19 ml-4">
-                        <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
+                         }} className="flex justify-center w-full items-center space-x-20 ">
+                        <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center ml-5">
                             <div 
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"파워사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red", tailSide: "left", tail: "3"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"파워사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red", tailSide: "left", tail: "3"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -218,9 +222,9 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-2`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"파워사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue", tailSide: "right", tail: "3"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"파워사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue", tailSide: "right", tail: "3"}])
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}
@@ -243,9 +247,9 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-3`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"파워사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue", tailSide: "left", tail: "4"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"파워사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue", tailSide: "left", tail: "4"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -268,9 +272,9 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-4`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"파워사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red", tailSide: "right", tail: "4"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"파워사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red", tailSide: "right", tail: "4"}])
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}

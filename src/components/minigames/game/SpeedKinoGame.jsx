@@ -96,9 +96,9 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝", selection:"홀", buttonType:"blue_sq"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"스피드키노", name:"언더/오버", selection:"언더", buttonType:"blue_sq"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -118,9 +118,9 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-2`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝", selection:"짝", buttonType:"red_sq"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"스피드키노", name:"언더/오버", selection:"오버", buttonType:"red_sq"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -193,15 +193,15 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                         // borderTop: `0.1875rem solid #cf9494`,
                         borderBottom: `0.1875rem solid #cf9494`,
                         borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #cf9494` : '',
-                        }} className="flex justify-center w-full items-center space-x-19 ml-4">
-                        <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
+                        }} className="flex justify-center w-full items-center space-x-20 ">
+                        <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center ml-5">
                             <div 
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection:"홀언더", buttonType:"blue"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection:"홀언더", buttonType:"blue"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -221,9 +221,9 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-2`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection:"홀오버", buttonType:"blue"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection:"홀오버", buttonType:"blue"}])
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}
@@ -243,9 +243,9 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-3`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection:"짝언더", buttonType:"red"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection:"짝언더", buttonType:"red"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -265,9 +265,9 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-4`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection:"짝오버", buttonType:"red"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"스피드키노", name:"홀짝/언오버", selection:"짝오버", buttonType:"red"}])
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}

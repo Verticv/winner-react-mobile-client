@@ -95,9 +95,11 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"홀짝", selection:"홀", buttonType:"blue_sq"}])
+                                    } else if (titleNumber === 2) {
+                                        setSelectedOption([{type:"키노사다리", name:"출발점", selection:"좌", buttonType:"blue_sq"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"줄갯수", selection:"3줄", buttonType:"blue_sq"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -117,9 +119,12 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-2`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"홀짝", selection:"짝", buttonType:"red_sq"}])
+                                    } else if (titleNumber === 2) {
+                                        setSelectedOption([{type:"키노사다리", name:"출발점", selection:"우", buttonType:"red_sq"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"줄갯수", selection:"4wnf", buttonType:"red_sq"}])
+
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}
@@ -190,15 +195,15 @@ const KinoLadderGame = ({setSelectedOption}) => {
                         borderRight: (missingBorder !== "both" && missingBorder === "left") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
                         borderBottom: `0.1875rem solid #c7b8a4`,
                         borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
-                        }} className="flex justify-center w-full items-center  space-x-19 ml-4">
-                        <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
+                        }} className="flex justify-center w-full items-center  space-x-20">
+                        <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center ml-5">
                             <div 
                                 onClick={() => {
                                     setState(`${titleNumber}-1`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"red"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -221,9 +226,9 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-2`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"blue"}])
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}
@@ -246,9 +251,9 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-3`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"red"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"홀", buttonType:"blue"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"홀", buttonType:"red"}])
                                     }
                                 }} 
                                 // style={{paddingTop: "3px"}} 
@@ -271,9 +276,9 @@ const KinoLadderGame = ({setSelectedOption}) => {
                                 onClick={() => {
                                     setState(`${titleNumber}-4`)
                                     if (titleNumber === 1) {
-                                        setSelectedOption([{type:"파워볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"blue"}])
                                     } else {
-                                        setSelectedOption([{type:"일반볼", name:"홀짝", selection:"짝", buttonType:"red"}])
+                                        setSelectedOption([{type:"키노사다리", name:"좌우 출발 3/4줄", selection:"짝", buttonType:"blue"}])
                                     }
                                 }} 
                                 style={{height: '11.375rem'}}

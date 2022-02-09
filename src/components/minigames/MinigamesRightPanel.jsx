@@ -194,18 +194,18 @@ const MinigamesRightPanel = ({
                         {(selectedOption[0].type === "일반볼" || selectedOption[0].type === "파워볼") ? (
                             <p style={{color:"#365b7e", fontSize: '2.25rem'}} className="tracking-tight font-spoqaBold flex items-center">{selectedOption[0].name}</p>
                         ) :(
-                            <p style={{color:"#365b7e"}} className="tracking-tight font-spoqaBold flex items-center">{selectedOption[0].name}</p>
+                            <p style={{color:"#365b7e", fontSize: '2.25rem'}} className="tracking-tight font-spoqaBold flex items-center">{selectedOption[0].name}</p>
                         )} 
                     </div>
                     <div style={{width:"16rem"}} className="flex h-full z-20 items-center justify-end">
                         {selectedOption[0].buttonType && (
                             <div 
                                 style={{width:"11.375rem"}} 
-                                className="relative flex items-center justify-center cursor-pointer"
+                                className="relative flex items-center justify-center cursor-pointer h-full"
                             >
                                 <img 
                                     className={`${
-                                        (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "" : ""
+                                        (selectedOption[0].buttonType === "blue_sq" || selectedOption[0].buttonType === "red_sq") ? "pt-3" : ""
                                     } absolute object-contain`} 
                                     src={
                                         selectedOption[0].buttonType === "blue" 
@@ -222,8 +222,8 @@ const MinigamesRightPanel = ({
                                     } 
                                     alt="" 
                                 />
-                                <div className="flex flex-col items-center -space-y-3 -mb-2">
-                                    <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">{selectedOption[0].selection}</p>
+                                <div className="flex flex-col items-center -space-y-5 -mb-2">
+                                    <p style={{textShadow: "2px 2px 2px #00000050", fontSize:"3.75rem"}} className="z-20 font-swagger text-white text-20px">{selectedOption[0].selection}</p>
                                     {selectedOption[0].subtitle && (
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
                                             {selectedOption[0].subtitle}
@@ -231,7 +231,7 @@ const MinigamesRightPanel = ({
                                     )}
                                 </div> 
                                 {selectedOption[0].tailSide && (
-                                    <div className={`${selectedOption[0].tailSide === "left" ? "left-6px" : "right-6px"} absolute w-22px h-22px rounded-full bg-black z-20 top-0 flex items-center justify-center`}>
+                                    <div className={`${selectedOption[0].tailSide === "left" ? "left-6px" : "right-6px"} absolute w-22px h-22px rounded-full bg-black z-20 top-8px flex items-center justify-center`}>
                                         <div className="text-white text-12px tracking-tight font-spoqaMedium">{selectedOption[0].tail}</div>
                                     </div>
                                 )}   
