@@ -246,7 +246,7 @@ const FreeBoardMain = () => {
                         ? "#f7f9fc"
                         : ""
                     }}
-                    className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full border-b border-gray-dddddd" >     
+                    className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full " >     
                     
                     {item.type === "안내" || item.type === "이벤트" ? (
                         <div style={{marginRight: '2.375rem'}} className="font-spoqaMedium tracking-tight text-gray-r585858 flex items-center justify-center">

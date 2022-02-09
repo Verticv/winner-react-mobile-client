@@ -20,27 +20,27 @@ const Navbar = () => {
     const DropdownArrow = ({isOpen, isWhite}) => (
         <>
         {isWhite ? (
-            <img style={{width:"8px"}} className="object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
+            <img style={{width:"6px"}} className="object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
         ) : (
-            <img style={{width:"8px"}} className="w-4 object-contain" src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
+            <img style={{width:"6px"}} className="w-4 object-contain" src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
         )}
         </>
     )
     const CountryButton = (
-        <div style={{height: '34px', width: '88px', padding: '3px'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2 shadow-plain2 hover:opacity-75">
-            <div style={{width: '28px', height: '28px', marginRight: '9px'}} className="rounded-full flex items-center justify-center">
+        <div style={{height: '30px', width: '80px', padding: '3px'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2 shadow-plain2 hover:opacity-75">
+            <div style={{width: '24px', height: '24px', marginRight: '9px'}} className="rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label style={{marginRight: '10px', fontSize: '16px', marginTop: '1px'}} className="font-spoqaBold text-white cursor-pointer">{country}</label>
+            <label style={{marginRight: '10px', fontSize: '14px', marginTop: '1px'}} className="font-spoqaBold text-white cursor-pointer">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )
 
     return (
         <div className="w-full z-50 relative">
-            <header style={{height: '56px', paddingLeft:"14px", paddingRight: "14px"}} className=" items-center justify-between h-32 shadow-plain bg-white flex flex-shrink-0">
+            <header style={{height: '42px', paddingLeft:"14px", paddingRight: "14px"}} className=" items-center justify-between h-32 shadow-plain bg-white flex flex-shrink-0">
                 <div className="flex items-center flex-shrink-0">
-                    <img style={{marginBottom: '0', height: "30px"}} className=" object-contain cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />
+                    <img style={{marginBottom: '0', height: "22px"}} className=" object-contain cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />
                 </div>
                 
                 <div className="flex items-center">

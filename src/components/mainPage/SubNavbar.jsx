@@ -39,7 +39,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
 
     function onClickHandle(id) {
         var circle = document.getElementsByClassName("highlight")[0]
-        circle.style.transform = "translate3d(" + (id * 110) + "px, 0px, 0)"
+        circle.style.transform = "translate3d(" + (id * 76) + "px, 0px, 0)"
     }
 
 
@@ -49,8 +49,8 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 id={`t${index}`}
                 key={item.id}
                 style={{
-                    height: '87px', 
-                    width: items.length - 1 === index ? '125px' : '110px',
+                    height: '62px', 
+                    width: items.length - 1 === index ? 'calc(76px + 1.75rem)' : '76px',
                     paddingRight: items.length - 1 === index ? '15px' : ''
                 }}
                 className={`
@@ -68,10 +68,10 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
             >
                 <img 
                     style={{
-                        height: `${item.id === 0 ? '60px' : selectedTab === item.id ? "60px" : "60px"}`, 
+                        height: `${item.id === 0 ? '44px' : selectedTab === item.id ? "44px" : "44px"}`, 
                         marginTop: `${selectedTab === item.id && index !== 0 ? '' : ''}` ,
-                        width: `${item.id === 0 ? "60px" : "60px"}`,
-                        paddingTop: item.id === 0 ? "7px" : ""
+                        width: `${item.id === 0 ? "44px" : "44px"}`,
+                        paddingTop: item.id === 0 ? "5px" : ""
                     }}
                     className={`absolute top-0 object-contain
                         ${item.id === 0 && "w-40px h-40px"}
@@ -80,10 +80,10 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                     src={item.id === 0 ? item.icon : selectedTab === item.id ? item.icon : item.iconDefault} alt="icon" 
                 />
                 <p style={{
-                    fontSize: '16px', 
+                    fontSize: '12px', 
                     // marginBottom: '5px', 
                     marginRight: item.id === 0 ? "3px" : "",
-                    height: '20px',
+                    height: '12px',
                     marginBottom: "5px"
                     }} className={"absolute bottom-0 cursor-pointer flex-shrink-0 font-spoqaMedium text-4xl flex items-center justify-center" }
                 >
@@ -93,7 +93,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
         ));
     }
     return (
-        <div style={{paddingLeft: '15px'}} id="container" className="flex justify-start items-start w-screen">
+        <div style={{paddingLeft: '1.75rem'}} id="container" className="flex justify-start items-start w-screen">
                 <div className="highlight" />
                 <TabsList items={tabsArray}/>
         </div>
