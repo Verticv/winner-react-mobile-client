@@ -59,12 +59,13 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                 // background: "#cf9494",
                 marginBottom: '0.2rem',
                 // padding: '1px'
+                paddingRight: button1Text === "언더" ? '0.35rem' : ""
             }}
             className={`flex justify-center items-center flex-shrink-0`} 
         >
             <div
                 style={{
-                    width: width - 0.1875 + "rem", 
+                    // width: width - 0.1875 + "rem", 
                     height: height - 0.1875 + "rem",
                     backgroundColor: "#fdfdf8",
                 }}
@@ -161,13 +162,13 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                 height: height+ "rem",
                 // background: "#cf9494",
                 marginBottom: '0.2rem',
-                padding: '1px'
+                // padding: '1px'
             }}
             className={`flex justify-center items-center flex-shrink-0`} 
         >
             <div
                 style={{
-                    width: width - 0.1875 + "rem", 
+                    // width: width - 0.1875 + "rem", 
                     height: height - 0.1875 + "rem",
                     backgroundColor: "#fdfdf8",
                 }}
@@ -192,7 +193,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                         // borderTop: `0.1875rem solid #cf9494`,
                         borderBottom: `0.1875rem solid #cf9494`,
                         borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #cf9494` : '',
-                        }} className="flex justify-center w-full items-center space-x-18">
+                        }} className="flex justify-center w-full items-center space-x-19 ml-4">
                         <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {

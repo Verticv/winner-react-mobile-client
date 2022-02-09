@@ -158,13 +158,12 @@ const PowerLadderGame = ({setSelectedOption}) => {
                 height: height+ "rem",
                 // background: "linear-gradient(to bottom, #b8d5e6, #b7c7d4)",
                 marginBottom: '0.2rem',
-                padding: '1px'
             }}
             className={`flex justify-center items-center flex-shrink-0`} 
         >
             <div
                 style={{
-                    width: width - 0.1875 + "rem", 
+                    // width: width - 0.1875 + "rem", 
                     height: height - 0.1875 + "rem",
                     backgroundColor: "#fdfdf8",
                 }}
@@ -188,7 +187,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                         borderRight: (missingBorder !== "both" && missingBorder === "left") || missingBorder === 'none' ? `0.1875rem solid #abc7db` : '',
                         borderBottom: `0.1875rem solid #abc7db`,
                         borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #abc7db` : '',
-                         }} className="flex justify-center w-full items-center space-x-18">
+                         }} className="flex justify-center w-full items-center space-x-19 ml-4">
                         <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {

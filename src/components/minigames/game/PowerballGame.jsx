@@ -58,9 +58,11 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                                 // width: '15.9375rem', 
                                 borderWidth: '0.1875rem' , 
                                 backgroundColor: titleBg, 
-                                fontSize: '2.25rem'
+                                fontSize: '2.25rem',
+                                paddingLeft: "1.5rem",
+                                paddingRight: "1.5rem"
                             }} 
-                            className="flex-shrink-0 shadow-plain2 rounded-2xl border border-white flex flex-col items-center justify-center tracking-tight text-white px-4"
+                            className="flex-shrink-0 shadow-plain2 rounded-2xl border border-white flex flex-col items-center justify-center tracking-tight text-white"
                         >
                             <p style={{marginTop: '0.4rem'}} className="font-spoqaMedium">[{titleNumber}게임] 파워볼</p>
                         </div>
@@ -422,8 +424,8 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             borderBottom: `0.1875rem solid ${borderColor}`,
                             borderLeft:missingBorder !== "both" &&  missingBorder === "right" ? `0.1875rem solid ${borderColor}` : '',
                             borderTopColor: 'white', 
-                            }} className="flex flex-col justify-center w-full items-center">
-                            <div className="flex justify-center w-full items-center space-x-15 pl-px mt-3">
+                            }} className="flex flex-col justify-center w-full items-center -space-y-3">
+                            <div className="flex justify-center w-full items-center space-x-15 pl-px">
                                 <div className="flex flex-col items-center">
                                     <div 
                                         onClick={() => {

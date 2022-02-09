@@ -166,7 +166,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
         >
             <div
                 style={{
-                    width: width - 0.1875 + "rem", 
+                    // width: width - 0.1875 + "rem", 
                     height: height - 0.1875 + "rem",
                     backgroundColor: "#fdfdf8",
                 }}
@@ -190,7 +190,7 @@ const KinoLadderGame = ({setSelectedOption}) => {
                         borderRight: (missingBorder !== "both" && missingBorder === "left") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
                         borderBottom: `0.1875rem solid #c7b8a4`,
                         borderLeft: (missingBorder !== "both" && missingBorder === "right") || missingBorder === 'none' ? `0.1875rem solid #c7b8a4` : '',
-                        }} className="flex justify-center w-full items-center space-x-18">
+                        }} className="flex justify-center w-full items-center  space-x-19 ml-4">
                         <div style={{marginRight: '1.875rem'}} className="flex flex-col items-center">
                             <div 
                                 onClick={() => {

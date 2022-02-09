@@ -222,7 +222,7 @@ const MinigamesRightPanel = ({
                                     } 
                                     alt="" 
                                 />
-                                <div className="flex flex-col items-center">
+                                <div className="flex flex-col items-center -space-y-3 -mb-2">
                                     <p style={{textShadow: "2px 2px 2px #00000050"}} className="z-20 font-swagger text-white text-20px">{selectedOption[0].selection}</p>
                                     {selectedOption[0].subtitle && (
                                         <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
@@ -279,29 +279,29 @@ const MinigamesRightPanel = ({
             <div style={{height:"", paddingTop: '1.875rem'}} className="w-full">
 
                 <div className="flex flex-col">
-                    <div style={{marginBottom: '0.35rem'}} className="flex">
-                        <div style={{marginRight: '0.35rem'}}>
+                    <div style={{marginBottom: '0.3rem'}} className="flex">
+                        <div style={{marginRight: '0.3rem'}}>
                             <BetAmountButton amount={5000}/>
                         </div>
-                        <div style={{marginRight: '0.35rem'}}>
+                        <div style={{marginRight: '0.3rem'}}>
                             <BetAmountButton amount={10000}/>
                         </div>
                         <BetAmountButton amount={50000}/>
                     </div>
-                    <div style={{marginBottom: '0.35rem'}} className="flex">
-                        <div style={{marginRight: '0.35rem'}}>
+                    <div style={{marginBottom: '0.3rem'}} className="flex">
+                        <div style={{marginRight: '0.3rem'}}>
                             <BetAmountButton amount={100000}/>
                         </div>
-                        <div style={{marginRight: '0.35rem'}}>
+                        <div style={{marginRight: '0.3rem'}}>
                             <BetAmountButton amount={500000}/>
                         </div>
                         <BetAmountButton amount={1000000}/>
                     </div>
-                    <div style={{marginBottom: '0.35rem'}} className="flex">
-                        <div style={{marginRight: '0.35rem'}} className="flex-shrink-0">
+                    <div style={{marginBottom: '0.6rem'}} className="flex">
+                        <div style={{marginRight: '0.3rem'}} className="flex-shrink-0">
                             <BetFixedAmountButton amount={22170} text="잔돈" />
                         </div>
-                        <div style={{marginRight: '0.35rem'}} className="flex-shrink-0">
+                        <div style={{marginRight: '0.3rem'}} className="flex-shrink-0">
                             <BetFixedAmountButton amount={null} text="초기화" />
                         </div>
                         <div className="flex-shrink-0">
@@ -328,7 +328,7 @@ const MinigamesRightPanel = ({
 
 
 
-            { (selectedGame === "/minigame/speedkino" || selectedGame === "/minigame/kinoladder") && (
+            { (window.location.pathname === "/minigame/speedkino" || window.location.pathname === "/minigame/kinoladder") && (
                 <div className="absolute w-full h-full bg-black bg-opacity-70 z-20 flex justify-center"> 
                     <div className="flex flex-col items-center justify-center">
                         <img style={{width: '20.5rem'}} className="object-contain" src={LockIcon} alt="" />
@@ -342,7 +342,7 @@ const MinigamesRightPanel = ({
         </div>
 
         
-        <div style={{marginTop: '0.35rem'}} className='flex'>
+        <div style={{marginTop: '0.6rem'}} className='flex'>
             <div style={{marginRight: '0.75rem'}}>
             <Route path="/minigame/powerball">
                 <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
