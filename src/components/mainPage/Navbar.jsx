@@ -20,18 +20,18 @@ const Navbar = () => {
     const DropdownArrow = ({isOpen, isWhite}) => (
         <>
         {isWhite ? (
-            <img style={{width:"6px"}} className="object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
+            <img style={{width:"5px"}} className="object-contain" src={isOpen ? ArrowUpWhite : ArrowDownWhite} alt="arrow" />
         ) : (
-            <img style={{width:"6px"}} className="w-4 object-contain" src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
+            <img style={{width:"5px"}} className="w-4 object-contain" src={isOpen ? ArrowUp : ArrowDown} alt="arrow" />
         )}
         </>
     )
     const CountryButton = (
-        <div style={{height: '30px', width: '80px', padding: '3px'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2 shadow-plain2 hover:opacity-75">
-            <div style={{width: '24px', height: '24px', marginRight: '9px'}} className="rounded-full flex items-center justify-center">
+        <div style={{height: '25px', width: '63px', padding: '2px'}} className="flex items-center bg-gradient-to-br from-blue-gradLight to-blue-gradDark rounded-full shadow-inner p-2 shadow-plain2 hover:opacity-75">
+            <div style={{width: '21px', height: '21px', marginRight: '7px'}} className="rounded-full flex items-center justify-center">
                 <img className="" src={country === "KR" ? Koreaflag : UKflag} alt="flag"></img>
             </div>
-            <label style={{marginRight: '10px', fontSize: '14px', marginTop: '1px'}} className="font-spoqaBold text-white cursor-pointer">{country}</label>
+            <label style={{marginRight: '6px', fontSize: '10px', marginTop: '1px'}} className="font-spoqaBold text-white cursor-pointer">{country}</label>
             <DropdownArrow isWhite isOpen={isCountryOpen}/>
         </div>
     )

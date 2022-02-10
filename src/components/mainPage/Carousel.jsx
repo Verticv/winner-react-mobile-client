@@ -85,8 +85,8 @@ const Carousel = () => {
                     key={i} 
                     src={images[i]} 
                     style={{
-                        height:"230px",
-                        width: "702px"
+                        height:"172px",
+                        width: "524px"
                     }}
                     className={`${
                         currentImage === i ? "opacity-100" : "opacity-0"
@@ -120,9 +120,9 @@ const Carousel = () => {
     );
 
     return (
-        <div style={{height:"230px"}} className="relative w-full h-full flex items-center">
+        <div style={{height:"172px"}} className="relative w-full h-full flex items-center">
             {sliderControl(true)}
-            <div style={{height:'230px'}} className="flex items-center w-full justify-center">
+            <div style={{height:'172px'}} className="flex items-center w-full justify-center">
                 {imagesDisplay}
                 <img 
                     onMouseEnter={() => setHover(true)} 

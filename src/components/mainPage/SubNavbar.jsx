@@ -39,7 +39,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
 
     function onClickHandle(id) {
         var circle = document.getElementsByClassName("highlight")[0]
-        circle.style.transform = "translate3d(" + (id * 76) + "px, 0px, 0)"
+        circle.style.transform = "translate3d(" + (id * 74) + "px, 0px, 0)"
     }
 
 
@@ -50,7 +50,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 key={item.id}
                 style={{
                     height: '62px', 
-                    width: items.length - 1 === index ? 'calc(76px + 1.75rem)' : '76px',
+                    width: items.length - 1 === index ? 'calc(74px + 1.75rem)' : '74px',
                     paddingRight: items.length - 1 === index ? '15px' : ''
                 }}
                 className={`
