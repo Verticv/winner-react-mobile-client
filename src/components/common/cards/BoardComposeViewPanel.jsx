@@ -116,6 +116,7 @@ const BoardComposeViewPanel = ({
                 <div key={card.id} style={{borderRadius:"1em", margin: '1.875rem', paddingBottom: '2.0625rem', marginTop: data?.length -1 === index ? '3.75rem': '1.875rem'}} className="shadow-subNavbar bg-gray-fafafa">
                     <TableHeader />
                     
+
                     <div style={{padding: '0 1rem' }} className="w-full">
                         <div className="w-full rounded-lg">
                             <div className='rounded-lg w-full'>

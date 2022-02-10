@@ -15,22 +15,25 @@ const CardContent = ({
     withCancelButton=false,
     cancelHandler=null,
     id=0,
+    number="1",
     hasHistory = null,
     time = " 2021-06-29 15:45",
     isPopup = true,
   }) => {
 
-    const handleOnChange = (position) => {
-        const updatedCheckedState = checkedState.map((item, index) =>
-        index === position ? !item : item
-        );
+    const handleOnChange = () => {
 
-        setCheckedState(updatedCheckedState);
+        setCheckedState(checkedState => {
+            return checkedState.map((item, j) => {
+                console.log(j)
+              return `${j}` === number ? !item : item
+            })
+          })
 
         console.log(checkedState)
-        console.log("INDEX : ", index)
-        console.log("Position : ", position)
-
+        // console.log(updatedCheckedState)
+        
+        console.log("Position : ", number)
     }; 
 
   return (
@@ -45,8 +48,8 @@ const CardContent = ({
                             key={Math.random()}
                             className='w-12 h-12'
                             type="checkbox"
-                            checked={checkedState[index]}
-                            onChange={() => handleOnChange(index)}
+                            checked={checkedState[number]}
+                            onChange={() => handleOnChange()}
                         />
                     </label>
                 </div>

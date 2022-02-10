@@ -23,7 +23,7 @@ const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attac
                 </div>
                 
                 <div style={{marginTop: '3.75rem'}}></div>
-                <SelectAllButton btn2Text='내역올리기' buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+                <SelectAllButton btn2Text='내역올리기' buttonsNumber={3} count={20} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
                 
 
             </div>

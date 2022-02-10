@@ -33,7 +33,7 @@ const SportsBetHistoryPanel = ({
                                 hasDown={false}
                             />
                         </div>
-                        <CardContent checkedState={checkedState} type={0} setCheckedState={setCheckedState} />
+                        <CardContent checkedState={checkedState} number="0" setCheckedState={setCheckedState} />
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@ const SportsBetHistoryPanel = ({
                                 hasDown={true}
                             />
                         </div>
-                        <CardContent winAmount="+900,000,000" checkedState={checkedState} type={1} setCheckedState={setCheckedState} />
+                        <CardContent winAmount="+900,000,000" checkedState={checkedState} number="1" setCheckedState={setCheckedState} />
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ const SportsBetHistoryPanel = ({
                                 hasDown={false}
                             />
                         </div>
-                        <CardContent winAmount="0" checkedState={checkedState} type={2} setCheckedState={setCheckedState} />
+                        <CardContent winAmount="0" checkedState={checkedState} number="2" setCheckedState={setCheckedState} />
                     </div>
                 </div>
             </div>

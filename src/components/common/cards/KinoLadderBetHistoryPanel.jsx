@@ -8,6 +8,7 @@ import CardContent from 'components/common/sportCards/CardContent'
 const KinoLadderBetHistoryPanel = ({
     checkedState = null,
     setCheckedState = null,
+    gameType
 }) => {
 
     return (
@@ -17,7 +18,7 @@ const KinoLadderBetHistoryPanel = ({
                 <div style={{padding: '0 1rem' }} className="w-full">
                     <div className="w-full rounded-lg">
                         <div className='rounded-lg w-full'>
-                            <CardHeader flag = 'us' name = '스피드키노' date = '2021-06-29 15:45'  isMinigame={true} minigameType="kinoladder"/>
+                            <CardHeader flag = 'us' name = '스피드키노' date = '2021-06-29 15:45'  isMinigame={true} minigameType={gameType}/>
                             <CardResults 
                                 bet = "right"
                                 result="lose"
@@ -42,13 +43,13 @@ const KinoLadderBetHistoryPanel = ({
                 <div style={{padding: '0 1rem' }} className="w-full">
                     <div className="w-full rounded-lg">
                         <div className='rounded-lg w-full'>
-                            <CardHeader flag = 'us' name = '스피드키노' date = '2021-06-29 15:45'  isMinigame={true} minigameType="kinoladder"/>
+                            <CardHeader flag = 'us' name = '스피드키노' date = '2021-06-29 15:45'  isMinigame={true} minigameType={gameType}/>
                             <CardResults 
                                 bet="left" 
                                 result="win" 
                                 // choice="home"
-                                team1="우3홀 [200회]"
-                                team2="[200회] 좌3짝"
+                                team1="홀 [200회]"
+                                team2="[200회] 짝"
                                 stat1="1.95"
                                 stat2="VS"
                                 stat3="1.95"

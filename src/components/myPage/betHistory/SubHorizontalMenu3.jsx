@@ -12,19 +12,9 @@ const SubHorizontalMenu3 = ({
     function TabsList({ items }) {
         return items.map((item, index) => {
             // TODO: remove this
-            let imageWidth = '16rem'
-            if (index === 1) {
-                imageWidth = '15rem';
-            } else if (index === 2 ) {
-                imageWidth = '14.3rem';
-            } else if (index === 3 ) {
-                imageWidth = '12.25rem';
-            } else if (index === 4 ) {
-                imageWidth = '13rem';
-            } else if (index === 5 ) {
-                imageWidth = '12rem';
-            } else if (index === 6 ) {
-                imageWidth = '16rem';
+            let imageWidth = '5.81rem'
+            if (index > 0) {
+                imageWidth = '21rem';
             }
 
             return (

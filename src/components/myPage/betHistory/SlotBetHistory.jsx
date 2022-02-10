@@ -3,6 +3,7 @@ import DateSearchBar from '../DateSearchBar'
 import HistoryTable from 'components/common/HistoryTable'
 import ScrollButton from 'components/common/ScrollButton'
 import SelectAllButton from 'components/common/SelectAllButton'
+import Icon0 from '../../../images/newImages/mypage/live-casino/ico-1.png'
 import Icon1 from '../../../images/newImages/mypage/slots/1.png'
 import Icon2 from '../../../images/newImages/mypage/slots/2.png'
 import Icon3 from '../../../images/newImages/mypage/slots/3.png'
@@ -21,21 +22,23 @@ import Icon15 from '../../../images/newImages/mypage/slots/15.png'
 import SubHorizontalMenu3 from './SubHorizontalMenu3'
 
 const subTabsArray = [
-    { text: "마이크로게이밍", icon: Icon1, id: 0 },
-    { text: "YGG드라실", icon: Icon2, id: 1 },
-    { text: "드라군소프트", icon: Icon3, id: 2 },
-    { text: "분고", icon: Icon4, id: 3, custom: "mt-8px" },
-    { text: "플레이슨", icon: Icon5, id: 4 },
-    { text: "넷엔트", icon: Icon6, id: 5 },
-    { text: "프레그메틱플레이", icon: Icon7, id: 6 },
-    { text: "퀵스핀", icon: Icon8, id: 6 },
-    { text: "스페이드", icon: Icon9, id: 6 },
-    { text: "하바네로", icon: Icon10, id: 6 },
-    { text: "월드매치", icon: Icon11, id: 6 },
-    { text: "메버릭", icon: Icon12, id: 6 },
-    { text: "플레인앤고", icon: Icon13, id: 6 },
-    { text: "YL게이밍", icon: Icon14, id: 6 },
-    { text: "레드타이거", icon: Icon15, id: 6 },
+    
+    { text: "전체", icon: Icon0, id: 0 },
+    { text: "마이크로게이밍", icon: Icon1, id: 1 },
+    { text: "YGG드라실", icon: Icon2, id: 2 },
+    { text: "드라군소프트", icon: Icon3, id: 3 },
+    { text: "분고", icon: Icon4, id: 4, custom: "mt-8px" },
+    { text: "플레이슨", icon: Icon5, id: 5 },
+    { text: "넷엔트", icon: Icon6, id: 6 },
+    { text: "프레그메틱플레이", icon: Icon7, id: 7 },
+    { text: "퀵스핀", icon: Icon8, id: 8 },
+    { text: "스페이드", icon: Icon9, id: 9 },
+    { text: "하바네로", icon: Icon10, id: 10 },
+    { text: "월드매치", icon: Icon11, id: 11 },
+    { text: "메버릭", icon: Icon12, id: 12 },
+    { text: "플레인앤고", icon: Icon13, id: 13 },
+    { text: "YL게이밍", icon: Icon14, id: 14 },
+    { text: "레드타이거", icon: Icon15, id: 15 },
 ];
 
 // 베팅번호 => number
@@ -278,7 +281,7 @@ const SlotBetHistory = ({isState = 0, setState, showSub = true, isPopup = false}
                 />   
             </div>
 
-            <SelectAllButton buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+            <SelectAllButton buttonsNumber={3} count={20} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
         </div>
     )
 }

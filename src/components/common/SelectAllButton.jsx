@@ -5,7 +5,7 @@ const SelectAllButton = (
         isAllSelected,
         setCheckedState,
         setAllSelected,
-        count = 3,
+        count = 30,
         buttonsNumber = 2,
         btn1Text = '선택삭제',
         btn2Text = '내역올리기',

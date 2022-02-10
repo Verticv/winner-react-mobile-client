@@ -17,6 +17,8 @@ import SlotBetHistory from 'components/myPage/betHistory/SlotBetHistory';
 import ESportsBetHistory from 'components/myPage/betHistory/ESportsBetHistory';
 import MinigameBetHistory from 'components/myPage/betHistory/MinigameBetHistory';
 import ARGameBetHistory from 'components/myPage/betHistory/ARGameBetHistory';
+import DateSearchBar from 'components/myPage/DateSearchBar';
+import SelectAllButton from 'components/common/SelectAllButton';
 
 const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
@@ -35,6 +37,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
     const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
+    const [isAllSelected, setAllSelected] = useState(false)
 
     const [page, setPage] = useState(0)
 
@@ -103,9 +106,11 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             //     <Pagination page={page} setPage={setPage}/>   
                             // </div>
                             <div style={{marginBottom:'5.625rem'}} className="w-full h-full">
-                            <div style={{paddingBottom: '27.625rem'}}>
+                                <DateSearchBar isGameResultsSearch={true} />
+                                <div style={{paddingBottom: '27.625rem'}}>
                                     <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true} checkedState={checkedState} setCheckedState={setCheckedState}/>
                                 </div>
+                                <SelectAllButton btn2Text='내역올리기' buttonsNumber={3} count={20} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
                             </div>
                         ) : selectedTab === 3 ? (
                             <>

@@ -203,7 +203,7 @@ const BetHistory = ({isAuthenticated}) => {
                     <>
                         <ESportsBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
                         <div style={{marginTop: '1.25rem'}}>
-                            <Pagination page={page} setPage={setPage}/>
+                            {/* <Pagination page={page} setPage={setPage}/> */}
                         </div>
                         <BottomNavbar />
                     </>

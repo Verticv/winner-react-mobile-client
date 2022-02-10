@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import DateSearchBar from '../DateSearchBar'
 import SubHorizontalMenu from './SubHorizontalMenu'
 import ScrollButton from 'components/common/ScrollButton'
-import SelectAllButton from 'components/common/SelectAllButton'
 import Icon1 from '../../../images/newImages/mypage/live-casino/ico-1.png'
 import Icon2 from '../../../images/newImages/mypage/live-casino/ico-2.png'
 import Icon3 from '../../../images/newImages/mypage/live-casino/ico-3.png'
@@ -29,10 +28,7 @@ const subTabsArray = [
 // 적중/손실금액 => profit
 // 상태 => status
 
-const ESportsBetHistory = ({isState = 0, setState, showSub = true, isPopup=false}) => {
-
-    const [,setCheckedState] = useState(new Array(3).fill(false))
-    const [isAllSelected, setAllSelected] = useState(false)
+const ESportsBetHistory = ({isState = 0, setState, showSub = false, isPopup=false}) => {
 
     return (
         <div className="w-full">
@@ -59,7 +55,7 @@ const ESportsBetHistory = ({isState = 0, setState, showSub = true, isPopup=false
                 베팅내역이 없습니다. 
             </div>
 
-            <SelectAllButton buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+            {/* <SelectAllButton buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} /> */}
         </div>
     )
 }

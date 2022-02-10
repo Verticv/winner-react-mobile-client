@@ -534,13 +534,15 @@ const MinigameBetHistory = ({isState = 0, setState, showSub = true, isPopup=fals
                     />   
                 ) : isState === 2 ? (
                     <PowerLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen}/>
+                ) : isState === 3 ? (
+                    <KinoLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} isMinigame={true} gameType="speedkino" />
                 ) : (
-                    <KinoLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} />
+                    <KinoLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} isMinigame={true} gameType="kinoladder" />
                 )}
                 
             </div>
 
-            <SelectAllButton buttonsNumber={3} count={3} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
+            <SelectAllButton buttonsNumber={3} count={20} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
         </div>
     )
 }
