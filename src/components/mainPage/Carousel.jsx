@@ -86,7 +86,7 @@ const Carousel = () => {
                     src={images[i]} 
                     style={{
                         height:"172px",
-                        width: "524px"
+                        width: "590px"
                     }}
                     className={`${
                         currentImage === i ? "opacity-100" : "opacity-0"
