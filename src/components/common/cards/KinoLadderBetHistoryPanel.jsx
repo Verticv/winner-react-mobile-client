@@ -48,8 +48,8 @@ const KinoLadderBetHistoryPanel = ({
                                 bet="left" 
                                 result="win" 
                                 // choice="home"
-                                team1="홀 [200회]"
-                                team2="[200회] 짝"
+                                team1={gameType === 'kinoladder' ? "우3홀 [200회]" : "홀 [200회]"}
+                                team2={gameType === 'kinoladder' ? "[200회] 좌3짝" : "좌 [200회]"}
                                 stat1="1.95"
                                 stat2="VS"
                                 stat3="1.95"
