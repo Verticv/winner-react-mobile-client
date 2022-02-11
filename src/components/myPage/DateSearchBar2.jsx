@@ -81,6 +81,9 @@ const DateSearchBar2 = () => {
                             onChange={(date) => setStartDate(date)}
                             dateFormat="yyyy-MM-dd"
                             dateFormatCalendar="yyyy년 MM월"
+                            onKeyDown={(e) => {
+                                e.preventDefault();
+                            }}
                         />
                         <img src={CalendarIcon} alt="" className="absolute top-0 right-0 mt-14px mr-10px" />
                     </div>
