@@ -113,6 +113,8 @@ const BetHistory = ({isAuthenticated}) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [historySelectedSubTab, setHistorySelectedSubTab] = useState(0)
+    const [historySelectedSubTab2, setHistorySelectedSubTab2] = useState(0)
+    const [historySelectedSubTab3, setHistorySelectedSubTab3] = useState(0)
 
     const [page, setPage] = useState(0)
     const [checkedState, setCheckedState] = useState(
@@ -211,7 +213,7 @@ const BetHistory = ({isAuthenticated}) => {
 
                 <Route path="/mypage/bet-history/all/minigame">
                     <>
-                        <MinigameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                        <MinigameBetHistory isState={historySelectedSubTab2} setState={setHistorySelectedSubTab2} />
                         <div style={{marginTop: '1.25rem'}}>
                             <Pagination page={page} setPage={setPage}/>
                         </div>
@@ -221,7 +223,7 @@ const BetHistory = ({isAuthenticated}) => {
 
                 <Route path="/mypage/bet-history/all/ar-game">
                     <>
-                        <ARGameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab} />
+                        <ARGameBetHistory isState={historySelectedSubTab3} setState={setHistorySelectedSubTab3} />
                         <div style={{marginTop: '1.25rem'}}>
                             <Pagination page={page} setPage={setPage}/>
                         </div>

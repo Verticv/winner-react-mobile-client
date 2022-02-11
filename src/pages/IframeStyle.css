@@ -1,0 +1,389 @@
+.powerball_top {
+  position: relative;
+}
+@media screen and (min-width: 325px){
+.powerball_top {
+  height: 251px;
+}}
+@media screen and (min-width: 335px) {
+.powerball_top {
+  height: 265px;
+}}
+@media screen and (min-width: 345px){
+.powerball_top {
+  height: 270px;
+}}
+@media screen and (min-width: 355px){
+.powerball_top {
+  height: 278px;
+}}
+@media screen and (min-width: 360px){
+.powerball_top {
+  height: 278px;
+}}
+@media screen and (min-width: 390px){
+.powerball_top {
+  height: 295px;
+}}
+@media screen and (min-width: 378px){
+.powerball_top {
+  height: 285px;
+}}
+@media screen and (min-width: 480px){
+.powerball_top {
+  height: 320px;
+}}
+
+@media screen and (min-width: 820px){
+  .powerball_top {
+    height: 600px;
+  }}
+.powerball_top {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  height: 440px;
+  margin: 0 0px 0 0px;
+  background: #e4e8f3;
+}
+.powerball_top {
+  position: relative;
+}
+
+
+.powerball_top .powerball_area {
+}
+.powerball_top .powerball_area {
+    position: relative !important;
+    width: 100%;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+}
+.powerball_top .powerball_area {
+}
+
+@media screen and (max-width: 325px) {
+  .powerball_area {
+      width: 100%;
+      top: -206px !important;
+      margin-left: -285px !important;
+      -ms-zoom: 0.39;
+      -moz-transform: scale(0.39, 0.39);
+      -webkit-transform: scale(0.39, 0.39);
+      -o-transform: scale(0.39, 0.39);
+      -ms-transform: scale(0.39, 0.39);
+      transform: scale(0.39, 0.39);
+      -moz-transform-origin: top left;
+      -webkit-transform-origin: top left;
+      -o-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+  }}
+@media screen and (min-width: 325px) {
+.powerball_area {
+    width: 100%;
+    top: -206px !important;
+    margin-left: -285px !important;
+    -ms-zoom: 0.39;
+    -moz-transform: scale(0.39, 0.39);
+    -webkit-transform: scale(0.39, 0.39);
+    -o-transform: scale(0.39, 0.39);
+    -ms-transform: scale(0.39, 0.39);
+    transform: scale(0.39, 0.39);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}}
+@media screen and (min-width: 335px) and (min-width: 324px) {
+.powerball_area {
+    width: 100%;
+    top: -206px !important;
+    margin-left: -200px !important;
+    -ms-zoom: 0.41;
+    -moz-transform: scale(0.41, 0.41);
+    -webkit-transform: scale(0.41, 0.41);
+    -o-transform: scale(0.41, 0.41);
+    -ms-transform: scale(0.41, 0.41);
+    transform: scale(0.41, 0.41);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}}
+@media screen and (min-width: 345px) {
+.powerball_area {
+    width: 100%;
+    top: -206px !important;
+    margin-left: -200px !important;
+    -ms-zoom: 0.42;
+    -moz-transform: scale(0.42, 0.42);
+    -webkit-transform: scale(0.42, 0.42);
+    -o-transform: scale(0.42, 0.42);
+    -ms-transform: scale(0.42, 0.42);
+    transform: scale(0.42, 0.42);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}}
+@media screen and (min-width: 355px) {
+.powerball_area {
+    width: 100%;
+    top: -206px !important;
+    margin-left: -200px !important;
+    -ms-zoom: 0.43;
+    -moz-transform: scale(0.43, 0.43);
+    -webkit-transform: scale(0.43, 0.43);
+    -o-transform: scale(0.43, 0.43);
+    -ms-transform: scale(0.43, 0.43);
+    transform: scale(0.43, 0.43);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}}
+@media screen and (min-width: 360px) {
+.powerball_area {
+    width: 100%;
+    top: -206px !important;
+    -ms-zoom: 0.44;
+    -moz-transform: scale(0.44, 0.44);
+    -webkit-transform: scale(0.44, 0.44);
+    -o-transform: scale(0.44, 0.44);
+    -ms-transform: scale(0.44, 0.44);
+    transform: scale(0.44, 0.44);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}}
+@media screen and (min-width: 390px) {
+.powerball_area {
+    width: 100%;
+    top: -206px !important;
+    margin-left: -225px !important;
+    -ms-zoom: 0.48;
+    -moz-transform: scale(0.48, 0.48);
+    -webkit-transform: scale(0.48, 0.48);
+    -o-transform: scale(0.48, 0.48);
+    -ms-transform: scale(0.48, 0.48);
+    transform: scale(0.48, 0.48);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}}
+@media screen and (min-width: 378px) {
+.powerball_area {
+    width: 100%;
+    top: -206px !important;
+    margin-left: -200px !important;
+    -ms-zoom: 0.5;
+    -moz-transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}}
+@media screen and (min-width: 410px) {
+  .powerball_area {
+      width: 100%;
+      top: -206px !important;
+      margin-left: -200px !important;
+      -ms-zoom: 0.51;
+      -moz-transform: scale(0.51, 0.51);
+      -webkit-transform: scale(0.51, 0.51);
+      -o-transform: scale(0.51, 0.51);
+      -ms-transform: scale(0.51, 0.51);
+      transform: scale(0.51, 0.51);
+      -moz-transform-origin: top left;
+      -webkit-transform-origin: top left;
+      -o-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+  }}
+
+  @media screen and (min-width: 430px) {
+    .powerball_area {
+        width: 100%;
+        top: -206px !important;
+        margin-left: -200px !important;
+        -ms-zoom: 0.53;
+        -moz-transform: scale(0.53, 0.53);
+        -webkit-transform: scale(0.53, 0.53);
+        -o-transform: scale(0.53, 0.53);
+        -ms-transform: scale(0.53, 0.53);
+        transform: scale(0.53, 0.53);
+        -moz-transform-origin: top left;
+        -webkit-transform-origin: top left;
+        -o-transform-origin: top left;
+        -ms-transform-origin: top left;
+        transform-origin: top left;
+    }}
+
+    @media screen and (min-width: 440px) {
+      .powerball_area {
+          width: 100%;
+          top: -206px !important;
+          margin-left: -200px !important;
+          -ms-zoom: 0.54;
+          -moz-transform: scale(0.54, 0.54);
+          -webkit-transform: scale(0.54, 0.54);
+          -o-transform: scale(0.54, 0.54);
+          -ms-transform: scale(0.54, 0.54);
+          transform: scale(0.54, 0.54);
+          -moz-transform-origin: top left;
+          -webkit-transform-origin: top left;
+          -o-transform-origin: top left;
+          -ms-transform-origin: top left;
+          transform-origin: top left;
+      }}
+  
+      @media screen and (min-width: 450px) {
+        .powerball_area {
+            width: 100%;
+            top: -206px !important;
+            margin-left: -200px !important;
+            -ms-zoom: 0.55;
+            -moz-transform: scale(0.55, 0.55);
+            -webkit-transform: scale(0.55, 0.55);
+            -o-transform: scale(0.55, 0.55);
+            -ms-transform: scale(0.55, 0.55);
+            transform: scale(0.55, 0.55);
+            -moz-transform-origin: top left;
+            -webkit-transform-origin: top left;
+            -o-transform-origin: top left;
+            -ms-transform-origin: top left;
+            transform-origin: top left;
+        }}
+
+        @media screen and (min-width: 460px) {
+          .powerball_area {
+              width: 100%;
+              top: -206px !important;
+              margin-left: -200px !important;
+              -ms-zoom: 0.56;
+              -moz-transform: scale(0.56, 0.56);
+              -webkit-transform: scale(0.56, 0.56);
+              -o-transform: scale(0.56, 0.56);
+              -ms-transform: scale(0.56, 0.56);
+              transform: scale(0.56, 0.56);
+              -moz-transform-origin: top left;
+              -webkit-transform-origin: top left;
+              -o-transform-origin: top left;
+              -ms-transform-origin: top left;
+              transform-origin: top left;
+          }}
+  
+@media screen and (min-width: 480px) {
+.powerball_area {
+    width: 100%;
+    top: -206px !important;
+    margin-left: -200px !important;
+    -ms-zoom: 0.6;
+    -moz-transform: scale(0.6, 0.6);
+    -webkit-transform: scale(0.6, 0.6);
+    -o-transform: scale(0.6, 0.6);
+    -ms-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+}}
+
+@media screen and (min-width: 768px) {
+  .powerball_area {
+      width: 100%;
+      top: -206px !important;
+      margin-left: -200px !important;
+      -ms-zoom: 0.92;
+      -moz-transform: scale(0.92, 0.92);
+      -webkit-transform: scale(0.92, 0.92);
+      -o-transform: scale(0.92, 0.92);
+      -ms-transform: scale(0.92, 0.92);
+      transform: scale(0.92, 0.92);
+      -moz-transform-origin: top left;
+      -webkit-transform-origin: top left;
+      -o-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+  }}
+
+@media screen and (min-width: 820px) {
+  .powerball_area {
+      width: 100%;
+      top: -206px !important;
+      margin-left: -200px !important;
+      -ms-zoom: 1;
+      -moz-transform: scale(1, 1);
+      -webkit-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      transform: scale(1, 1);
+      -moz-transform-origin: top left;
+      -webkit-transform-origin: top left;
+      -o-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+  }}
+
+
+@media screen and (min-width: 325px){
+.powerball_top .powerball_area iframe {
+    height: 1050px;
+}}
+@media screen and (min-width: 335px){
+.powerball_top .powerball_area iframe {
+    height: 1050px;
+}}
+@media screen and (min-width: 345px){
+.powerball_top .powerball_area iframe {
+    height: 1050px;
+}}
+@media screen and (min-width: 355px){
+.powerball_top .powerball_area iframe {
+    height: 1050px;
+}}
+@media screen and (min-width: 360px){
+.powerball_top .powerball_area iframe {
+    height: 1050px;
+}}
+@media screen and (min-width: 390px){
+.powerball_top .powerball_area iframe {
+    height: 1050px;
+}}
+@media screen and (min-width: 378px){
+.powerball_top .powerball_area iframe {
+    height: 1050px;
+}}
+@media screen and (min-width: 480px){
+.powerball_top .powerball_area iframe {
+    height: 1050px;
+}}
+
+.powerball_top .powerball_area iframe {
+    width: 1229px;
+    height: 875px;
+    margin: 0 0 0 0px;
+}
+iframe {
+    margin: 0;
+    padding: 0;
+    border: none;
+}

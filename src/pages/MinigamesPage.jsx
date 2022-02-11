@@ -10,6 +10,7 @@ import KinoLadder from '../images/minigames/kinoladder.png'
 // import MinigamesRightPanel from 'components/minigames/MinigamesRightPanel'
 import MinigamesPanel from 'components/minigames/MinigamesPanel'
 import { Route, useLocation } from 'react-router'
+import "./IframeStyle.css"
 
 const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
@@ -88,7 +89,11 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                             className="rounded-xl  flex justify-center overflow-hidden border border-gray-dddddd"
                         >
                             <Route path="/minigame/powerball">
-                                <iframe src="https://ntry.com/scores/powerball/live.php" width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
+                                <div className='powerball_top'>
+                                    <div className='powerball_area'>
+                                        <iframe id="game_frame" src="https://ntry.com/scores/powerball/live.php" scrolling="no" frameborder="0" title="powerball"></iframe>
+                                    </div>
+                                </div>
                             </Route>
                             <Route path="/minigame/powerladder">
                                 <iframe src="https://ntry.com/scores/power_ladder/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
