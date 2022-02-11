@@ -23,8 +23,6 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
     const [selectedGame, setSelectedGame] = useState(window.location.pathname)
     const [selectedTab, setSelectedTab] = useState(0)
-    const [iFrameWidth, setIFrameWidth] = useState(1242)
-    const [iFrameHeight, setIFrameHeight] = useState(1242 * 1.34375)
     const [selectedOption, setSelectedOption] = useState([
         {
             type: "",
@@ -41,22 +39,6 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
     useEffect(() => {
         setSelectedTab(0)
     }, [location]);
-
-    useEffect(() => {
-        const body = document.querySelector('body');
-        const bodyWidth = body.offsetWidth;
-        if (bodyWidth <= 1242) {
-            setIFrameWidth(bodyWidth)
-            setIFrameHeight(bodyWidth * 1.34375)
-        }
-        window.addEventListener('resize', () => {
-            const bodyWidth = body.offsetWidth
-            if (bodyWidth <= 1242) {
-                setIFrameWidth(bodyWidth)
-                setIFrameHeight(bodyWidth * 1.34375)
-              }
-        });
-    }, [])
 
     return (
         <div style={{maxWidth: '1242px'}} className="relative flex flex-col justify-center">
@@ -96,13 +78,25 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                                 </div>
                             </Route>
                             <Route path="/minigame/powerladder">
-                                <iframe src="https://ntry.com/scores/power_ladder/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
+                                <div className='powerball_top'>
+                                    <div className='powerball_area'>
+                                        <iframe id="game_frame" src="https://ntry.com/scores/power_ladder/live.php" scrolling="yes" frameborder="0" title="powerball"></iframe>
+                                    </div>
+                                </div>
                             </Route>
                             <Route path="/minigame/speedkino">
-                                <iframe src="https://ntry.com/scores/speedkeno/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="powerball"></iframe>
+                                <div className='powerball_top'>
+                                    <div className='powerball_area'>
+                                        <iframe id="game_frame" src="https://ntry.com/scores/speedkeno/live.php" scrolling="yes" frameborder="0" title="powerball"></iframe>
+                                    </div>
+                                </div>
                             </Route>
                             <Route path="/minigame/kinoladder">
-                                <iframe src="https://ntry.com/scores/keno_ladder/live.php"  width={iFrameWidth} height={iFrameHeight} scrolling="yes" frameborder="0" style={{WebkitTransform:"scale(1.2)", marginLeft: '8%', marginTop: '13%'}} title="kinoladder"></iframe>                            
+                                <div className='powerball_top'>
+                                    <div className='powerball_area'>
+                                        <iframe id="game_frame" src="https://ntry.com/scores/keno_ladder/live.php" scrolling="yes" frameborder="0" title="kinoladder"></iframe>                            
+                                    </div>
+                                </div>
                             </Route>
                         </div>
                         {/* <MinigamesRightPanel selectedGame={selectedGame} selectedOption={selectedOption}/> */}
