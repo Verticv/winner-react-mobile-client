@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Card from '../../images/subNavbar/1_1.png'
 import Slot from '../../images/subNavbar/2_1.png'
 import Sport from '../../images/subNavbar/3_1.png'
@@ -42,24 +42,24 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
         circle.style.transform = "translate3d(" + (id * 74) + "px, 0px, 0)"
     }
 
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    // const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
-    useEffect(() => {
-        function handleResize() {
-        setWindowDimensions(getWindowDimensions());
-        }
+    // useEffect(() => {
+    //     function handleResize() {
+    //     setWindowDimensions(getWindowDimensions());
+    //     }
 
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    //     window.addEventListener('resize', handleResize);
+    //     return () => window.removeEventListener('resize', handleResize);
+    // }, []);
 
-    function getWindowDimensions() {
-        const { innerWidth: width, innerHeight: height } = window;
-        return {
-          width,
-          height
-        };
-    }
+    // function getWindowDimensions() {
+    //     const { innerWidth: width, innerHeight: height } = window;
+    //     return {
+    //       width,
+    //       height
+    //     };
+    // }
 
     function TabsList({ items }) {
         return items.map((item, index) => (
@@ -111,9 +111,9 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
         ));
     }
     return (
-        <div style={{paddingLeft: '1.75rem'}} id="container" className={`flex items-start w-screen relative ${windowDimensions.width > 640 ? "justify-center" : "justify-start"}`}>
-                <div style={{width: "680px", paddingLeft: '1.75rem'}} className={`absolute -ml-8 sm:-ml-16 md:-ml-18`}><div className="highlight" /></div>
-                <TabsList items={tabsArray}/>
+        <div style={{paddingLeft: '1.75rem'}} id="container" className={`flex items-start w-screen relative`}>
+            <div className="highlight" />
+            <TabsList items={tabsArray}/>            
         </div>
     )
 }

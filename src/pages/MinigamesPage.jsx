@@ -86,7 +86,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
                     <div className="flex w-full">
                         <div 
-                            style={{backgroundColor:"#e8e8e8", height: windowDimensions.width < 768 ? "60rem" : "45rem"}}
+                            style={{backgroundColor:"#e8e8e8", height: windowDimensions.width < 768 ? "60rem" : "42rem"}}
                             className="rounded-xl  flex justify-center overflow-hidden border border-gray-dddddd"
                         >
                             <Route path="/minigame/powerball">
