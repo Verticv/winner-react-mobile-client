@@ -40,6 +40,25 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
         setSelectedTab(0)
     }, [location]);
 
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+    useEffect(() => {
+        function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+        }
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        return {
+          width,
+          height
+        };
+    }
+
     return (
         <div style={{maxWidth: '1242px'}} className="relative flex flex-col justify-center">
             <div className="w-full z-30 flex flex-col items-center">
@@ -67,7 +86,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
 
                     <div className="flex w-full">
                         <div 
-                            style={{backgroundColor:"#e8e8e8", height: "60rem"}}
+                            style={{backgroundColor:"#e8e8e8", height: windowDimensions.width < 768 ? "60rem" : "45rem"}}
                             className="rounded-xl  flex justify-center overflow-hidden border border-gray-dddddd"
                         >
                             <Route path="/minigame/powerball">
