@@ -23,7 +23,17 @@ const DateSearchBar = ({
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date())
 
-
+    const CustomInput = (props) => {
+        return (
+            <input
+                className="place-color-grey date-picker left-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b"
+                onClick={props.onClick}
+                value={props.value}
+                type="text"
+                readOnly={true}
+            />
+        )
+    }
     return (
         <div style={{margin: withMargin ? '0 1.875rem' : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem'}} className="bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex flex-wrap items-center justify-center">
                 
@@ -84,6 +94,7 @@ const DateSearchBar = ({
                 <div className="flex items-center w-full h-full">
                     <div className="left-date-picker relative">
                         <DatePicker 
+                            customInput={<CustomInput />}
                             className="place-color-grey date-picker left-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b"
                             locale="ko" 
                             selected={startDate} 
@@ -94,6 +105,7 @@ const DateSearchBar = ({
                             onKeyDown={(e) => {
                                 e.preventDefault();
                             }}
+                            onChangeRaw={(e) => e.preventDefault()}
                         />
                         <img style={{top: '3.44rem'}} src={CalendarIcon} alt="" className="w-14 absolute right-8" />
                     </div>
@@ -101,8 +113,10 @@ const DateSearchBar = ({
                     <div className="right-date-picker relative">
                         {hasDateSuggestion ? (
                             <>
+                                <div className=' -ml-8'>
                                 <DatePicker 
-                                    className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
+                                    customInput={<CustomInput />}
+                                    // className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
                                     locale="ko"
                                     selected={endDate} 
                                     onChange={(date) => setEndDate(date)}
@@ -112,7 +126,9 @@ const DateSearchBar = ({
                                     onKeyDown={(e) => {
                                         e.preventDefault();
                                     }}
+                                    onChangeRaw={(e) => e.preventDefault()}
                                 />
+                                </div>
                                 <img style={{top: '3.44rem', right: '3.94rem'}} src={CalendarIcon} alt="" className="w-14 absolute" />
                             </>
                         ) : (

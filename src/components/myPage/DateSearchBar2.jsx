@@ -68,6 +68,17 @@ const DateSearchBar2 = () => {
         </DropDownControls>
     )
 
+    const CustomInput = (props) => {
+        return (
+            <input
+                className="place-color-grey date-picker left-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b"
+                onClick={props.onClick}
+                value={props.value}
+                type="text"
+                readOnly={true}
+            />
+        )
+    }
 
     return (
         <div className="h-63px w-full bg-gray-f9f9f9 mt-20px rounded-2xl border border-gray-dddddd flex items-center justify-center space-x-10px">
@@ -75,6 +86,7 @@ const DateSearchBar2 = () => {
                 <div className="flex space-x-10px items-center  h-full justify-center">
                     <div className="relative">
                         <DatePicker 
+                            customInput={<CustomInput />}
                             className="pt-px mt-px flex-shrink-0 outline-none w-138px h-42px rounded-2xl border border-gray-dddddd px-10px font-spoqaMedium text-15px tracking-tight text-gray-r8c8c8c focus:ml-10px"
                             locale="ko" 
                             selected={startDate} 
