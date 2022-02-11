@@ -43,10 +43,10 @@ const Navbar = () => {
                     <img style={{marginBottom: '0', height: "22px"}} className=" object-contain cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />
                 </div>
                 
-                <div className="flex items-center">
+                <div className="flex items-center relative">
                     {/* BREAK */}
                     <DropDownControls buttonChild={CountryButton} isDropdownOpen={isCountryOpen} setDropdownOpen={setCountryOpen} >
-                        <div style={{marginRight: "-90px",}}><CountryDropDown setCountry={setCountry} country={country} /></div>
+                        <div className='absolute' style={{marginRight: "-90px",}}><CountryDropDown setCountry={setCountry} country={country} /></div>
                     </DropDownControls>
                 </div>
             </header>
