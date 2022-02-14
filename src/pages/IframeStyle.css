@@ -307,6 +307,24 @@
     transform-origin: top left;
 }}
 
+@media screen and (min-width: 600px) {
+  .powerball_area {
+      width: 100%;
+      top: -206px !important;
+      margin-left: -200px !important;
+      -ms-zoom: 0.73;
+      -moz-transform: scale(0.73, 0.73);
+      -webkit-transform: scale(0.73, 0.73);
+      -o-transform: scale(0.73, 0.73);
+      -ms-transform: scale(0.73, 0.73);
+      transform: scale(0.73, 0.73);
+      -moz-transform-origin: top left;
+      -webkit-transform-origin: top left;
+      -o-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+  }}
+
 @media screen and (min-width: 768px) {
   .powerball_area {
       width: 100%;
