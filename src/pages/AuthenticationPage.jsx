@@ -153,11 +153,11 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         {/* BREAK */}
                         <div className="w-full h-full flex flex-col items-center justify-end pb-10px">
 
-                            <div style={{fontSize: '4.375rem'}} className="w-full mb-28 mt-12 font-spoqaBold text-7xl">환영합니다</div>
+                            <div style={{fontSize: '4.375rem'}} className="w-full mb-12 mt-4 font-spoqaBold text-7xl">환영합니다</div>
 
-                            <div className="w-full space-y-30px pb-40">
+                            <div className="w-full space-y-12 pb-20">
 
-                                <div style={{marginBottom: '8rem'}} className="w-full flex flex-col space-y-4px space-x-10px">
+                                <div className="w-full flex flex-col space-y-4px space-x-10px">
                                     <div className="w-full">
                                         <input 
                                             className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none" 
