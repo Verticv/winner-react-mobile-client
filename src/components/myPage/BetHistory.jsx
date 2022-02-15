@@ -10,6 +10,7 @@ import Icon6 from '../../images//newImages/mainPage/betHistory/ico_5.png'
 import Icon7 from '../../images//newImages/mainPage/betHistory/ico_6.png'
 import Icon8 from '../../images//newImages/mainPage/betHistory/ico_7.png'
 import Icon9 from '../../images//newImages/mainPage/betHistory/ico_8.png'
+import subIcon0 from '../../images/newImages/mainPage/betHistory/0.png'
 import subIcon1 from '../../images/newImages/mainPage/betHistory/1.png'
 import subIcon2 from '../../images/newImages/mainPage/betHistory/2.png'
 import subIcon3 from '../../images/newImages/mainPage/betHistory/3.png'
@@ -51,6 +52,13 @@ const tabsArray = [
 
 const LeftMenuBetHistoryArray = [
     {
+      text: "전체",
+      icon: subIcon0,
+      id: -1,
+      path: "/mypage/bet-history/all",
+      mainPath: "/mypage/bet-history",
+    },
+    {
       text: "라이브카지노",
       icon: subIcon1,
       id: 0,
@@ -86,7 +94,7 @@ const LeftMenuBetHistoryArray = [
       mainPath: "/mypage/bet-history",
     },
     {
-      text: "가상게임",
+      text: "키론가상게임",
       icon: subIcon6,
       id: 5,
       path: "/mypage/bet-history/all/ar-game",

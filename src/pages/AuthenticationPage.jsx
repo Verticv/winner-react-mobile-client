@@ -141,6 +141,10 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
     //     </div>
     // )
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [toSignup])
+
 
     return (
         <div className="w-full">
@@ -153,13 +157,14 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                         {/* BREAK */}
                         <div className="w-full h-full flex flex-col items-center justify-end pb-10px">
 
-                            <div style={{fontSize: '4.375rem'}} className="w-full mb-12 mt-4 font-spoqaBold text-7xl">환영합니다</div>
+                            <div style={{fontSize: '4.375rem', marginBottom:"8rem"}} className="w-full mb-12 mt-4 font-spoqaBold text-7xl">환영합니다</div>
 
-                            <div className="w-full space-y-12 pb-20">
+                            <div style={{paddingBottom: "10rem"}} className="w-full space-y-12 pb-20">
 
                                 <div className="w-full flex flex-col space-y-4px space-x-10px">
                                     <div className="w-full">
                                         <input 
+                                            style={{height:"7rem"}}
                                             className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none" 
                                             placeholder={"아이디"} 
                                             onFocus={(e) => {
@@ -180,6 +185,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{marginBottom: '2.375rem'}} className="w-full flex flex-col space-y-4px space-x-10px">
                                     <div className="w-full">
                                         <input 
+                                            style={{height:"7rem"}}
                                             className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none" 
                                             placeholder={"비밀번호"} 
                                             type="password"

@@ -38,7 +38,7 @@ const Navbar = () => {
 
     return (
         <div className="w-full z-50 relative">
-            <header style={{height: '42px', paddingLeft:"14px", paddingRight: "14px"}} className=" items-center justify-between h-32 shadow-plain bg-white flex flex-shrink-0">
+            <header style={{height: '42px', paddingLeft:"8px", paddingRight: "8px"}} className=" items-center justify-between h-32 shadow-plain bg-white flex flex-shrink-0">
                 <div className="flex items-center flex-shrink-0">
                     <img style={{marginBottom: '0', height: "22px"}} className=" object-contain cursor-pointer" src={Logo} alt="logo" onClick={() => history.push('/')} />
                 </div>

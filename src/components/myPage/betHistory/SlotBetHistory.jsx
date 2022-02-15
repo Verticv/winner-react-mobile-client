@@ -36,7 +36,7 @@ const subTabsArray = [
     { text: "하바네로", icon: Icon10, id: 10 },
     { text: "월드매치", icon: Icon11, id: 11 },
     { text: "메버릭", icon: Icon12, id: 12 },
-    { text: "플레인앤고", icon: Icon13, id: 13 },
+    { text: "플레이앤고", icon: Icon13, id: 13 },
     { text: "YL게이밍", icon: Icon14, id: 14 },
     { text: "레드타이거", icon: Icon15, id: 15 },
 ];

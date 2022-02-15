@@ -47,7 +47,7 @@ const AccountProfileComponent = ({isAuthenticated,setAuthenticated}) => {
         src={InboxIcon}
         alt="inbox_icon"
       />
-      <div className="absolute flex items-center justify-center w-16 h-16 bg-red-notification top-0 right-0 rounded-full shadow-plain6">
+      <div className="absolute flex items-center justify-center w-16 h-16 bg-red-notification top-0 right-0 -mt-3px -mr-3px rounded-full shadow-plain6">
         <label style={{fontSize: '2.8125rem', marginLeft: '0.1875rem'}} className="font-roboto">1</label>
       </div>
     </button>
@@ -125,7 +125,7 @@ const AccountProfileComponent = ({isAuthenticated,setAuthenticated}) => {
                 </div>
                 <div style={{marginLeft: '2.4375rem'}} className="w-full">
                   <p style={{fontSize: '2.8rem', lineHeight: '0.7', marginBottom: '1.9375rem', marginRight: '1.75rem'}} className="font-robotoBold text-right text-gray-text">
-                    LEVEL1
+                    LEVEL 3
                   </p>
                   <p style={{fontSize: '3.375rem', lineHeight: '1.1', marginBottom: '1.375rem', marginRight: '1.75rem'}} className="font-spoqaBold text-right text-blue-r1ca7ec">
                     마이마이프로틴화이팅
