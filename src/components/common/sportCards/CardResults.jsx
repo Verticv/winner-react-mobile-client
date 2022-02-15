@@ -21,6 +21,10 @@ const CardResults = ({
   isMinigame=false
 }) => {
 
+    const truncate = (str, max, len) => {
+        return str.length > max ? str.substring(0, len) + "..." : str;
+    }
+
     if (isMinigame === true) return (
         <div style={{borderBottomLeftRadius: withoutRadius ? '' : '0.5rem', borderBottomRightRadius: withoutRadius ? '' : '0.5rem'}} className={`${withoutRadius && "border-b"} flex items-center w-full p-3 pr-0 bg-gray-fefefe shadow-plain11`}>
             
@@ -107,7 +111,7 @@ const CardResults = ({
                             <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight">{stat3}</span>
                             {hasDown && <img style={{marginLeft: '0.4375rem'}} className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
                         </div>
-                        <span style={{fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem'}} className="truncate truncate-override font-spoqaMedium tracking-tight text-right">{team2}</span>
+                        <span style={{fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem'}} className="truncate truncate-override font-spoqaMedium tracking-tight text-right">{truncate(team2,7, 7)}</span>
                     </div>
                 </button>
             </div>
@@ -191,7 +195,7 @@ const CardResults = ({
                         <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight">{stat3}</span>
                         {hasDown && <img style={{marginLeft: '0.4375rem'}} className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
                     </div>
-                    <span style={{fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem'}} className="truncate truncate-override font-spoqaMedium tracking-tight text-right">{team2}</span>
+                    <span style={{fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem'}} className="font-spoqaMedium tracking-tight text-right overflow-hidden">{truncate(team2,7, 7)}</span>
                 </div>
             </button>
         </div>
