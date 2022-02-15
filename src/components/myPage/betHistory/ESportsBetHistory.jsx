@@ -31,7 +31,7 @@ const subTabsArray = [
 const ESportsBetHistory = ({isState = 0, setState, showSub = false, isPopup=false}) => {
 
     return (
-        <div className="w-full">
+        <div className="w-full h-screen">
             {showSub === true && (
                 <>
                     <div className="w-full flex relative top-0">
@@ -51,7 +51,7 @@ const ESportsBetHistory = ({isState = 0, setState, showSub = false, isPopup=fals
 
             <ScrollButton />
 
-            <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: '#585858', margin:'0 1.875rem', marginTop: '1.875rem', padding: '1.875rem', width: '73.875rem' }} className="h-full w-full flex items-center justify-center shadow-subNavbar rounded-2xl font-spoqaMedium">
+            <div style={{WebkitTextStroke:"0.2px", fontSize: '2.625rem', color: '#7b7b7b', margin:'0 1.875rem', marginTop: '1.875rem', padding: '1.875rem', width: '73.875rem' }} className="w-full flex items-center justify-center shadow-subNavbar rounded-2xl font-spoqaMedium">
                 베팅내역이 없습니다. 
             </div>
 

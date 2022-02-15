@@ -5,10 +5,7 @@ import LeftMenu from "components/myPage/LeftMenu";
 import HorizontalSubMenu from 'components/horizontalMenus/HorizontalSubMenu2'
 import Icon1 from '../../images/newImages/mainPage/sports-1.png'
 import Icon2 from '../../images/newImages/mainPage/sports-2.png'
-import Icon3 from '../../images/newImages/minigameResults/1.png'
-import Icon4 from '../../images/newImages/minigameResults/2.png'
-import Icon5 from '../../images/newImages/minigameResults/3.png'
-import Icon6 from '../../images/newImages/minigameResults/4.png'
+
 
 import HomePageTopBanner from '../common/HomePageTopBanner'
 import BottomNavbar from '../bottomNavbar/BottomNavbar'
@@ -24,13 +21,13 @@ import Logo from "../../images/newImages/mainPage/icons/logo.png";
 import ScrollButton from 'components/common/ScrollButton';
 import DateSearchBar from './DateSearchBar';
 import MinigamesMatchResultPanel from 'components/common/cards/MinigamesMatchResultPanel';
-import SubHorizontalMenu2 from './betHistory/SubHorizontalMenu2';
 import CardHeader from 'components/common/sportCards/CardHeader';
 import PowerballResultsTable from 'components/PowerballResultsTable';
+import MinigameTab from './gameResults/MinigameTab';
 
 const tabsArray = [
     { text: "스포츠", icon: Icon1, id: 0, path: "/mypage/gameresults/all" },
-    { text: "미니게임", icon: Icon2, id: 1, path: "/mypage/gameresults/powerball" },
+    { text: "미니게임", icon: Icon2, id: 1, path: "/mypage/gameresults/minigame/powerball" },
 ];
 
 const LeftMenuSubArray = [
@@ -44,16 +41,11 @@ const LeftMenuSubArray = [
       text: "미니게임",
       icon: subIcon3,
       id: 1,
-      path: "/mypage/gameresults/powerball",
+      path: "/mypage/gameresults/minigame",
     }
   ]
 
-const subTabsArray = [
-    { text: "파워볼", icon: Icon3, id: 0 },
-    { text: "파워사다리", icon: Icon4, id: 1 },
-    { text: "스피드키노", icon: Icon5, id: 2 },
-    { text: "키노사다리", icon: Icon6, id: 3, custom: "mt-8px" },
-];
+
 
 const inboxArray = [
     {
@@ -104,7 +96,6 @@ const GameResults = ({isAuthenticated}) => {
     const [selectedTab, setSelectedTab] = useState(0)
     const [selectedSubTab, setSelectedSubTab] = useState(0)
     const [page, setPage] = useState(0)
-    const [isState, setState] = useState(0)
     const [checkedState, setCheckedState] = useState(
         new Array(3).fill(false)
     );
@@ -166,7 +157,7 @@ const GameResults = ({isAuthenticated}) => {
 
             </Route>
 
-            <Route exact path="/mypage/gameresults/powerball">
+            <Route path="/mypage/gameresults/minigame">
                 <div className="w-full z-30 flex flex-col items-center">
                     <NoticeBanner />
                     <Navbar /> 
@@ -180,7 +171,9 @@ const GameResults = ({isAuthenticated}) => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex relative top-0">
+                <MinigameTab />
+
+                {/* <div className="w-full flex relative top-0">
                     <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                     <div id='scroll-wrapper1' style={{padding: '1.875rem', paddingRight: '0', paddingTop: '0'}} className="sticky overflow-x-scroll overflow-y-hidden hide-scrollbar">
                         <div className=" flex flex-shrink-0 w-full">
@@ -188,19 +181,42 @@ const GameResults = ({isAuthenticated}) => {
                         </div>
                     </div>
                     <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
-                </div>
+                </div> */}
 
                 <DateSearchBar isLeagueSearch={false} withBlackButton hasDateSuggestion={false} />
 
-                {isState === 0 
-                ? (
+                <Route exact path="/mypage/gameresults/minigame/powerball">
                     <div style={{borderRadius:"1em", margin: '1.875rem', marginTop: '1.8rem'}} className="shadow-subNavbar overflow-hidden">
                         <div className="flex flex-col w-full p-4">
-                            <CardHeader flag = 'us' name = '파워볼' date = '2021-06-29 15:45' isMinigame={true} />
+                            <CardHeader flag = 'us' name = '파워볼' date = '2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
                             <PowerballResultsTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray}/>
                         </div>
                         <div className="flex flex-col w-full p-4">
-                            <CardHeader flag = 'us' name = '파워볼' date = '2021-06-29 15:45' isMinigame={true} />
+                            <CardHeader flag = 'us' name = '파워볼' date = '2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
+                            <PowerballResultsTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray}/>
+                        </div>
+                    </div>
+                </Route>
+                <Route exact path="/mypage/gameresults/minigame/powerladder">
+                    <MinigamesMatchResultPanel />
+                </Route>
+                <Route exact path="/mypage/gameresults/minigame/speedkino">
+                    <MinigamesMatchResultPanel type="speedkino" />
+                </Route>
+                <Route exact path="/mypage/gameresults/minigame/kinoladder">
+                    <MinigamesMatchResultPanel type="kinoladder" />
+                </Route>
+
+
+                {/* {isState === 0 
+                ? (
+                    <div style={{borderRadius:"1em", margin: '1.875rem', marginTop: '1.8rem'}} className="shadow-subNavbar overflow-hidden">
+                        <div className="flex flex-col w-full p-4">
+                            <CardHeader flag = 'us' name = '파워볼' date = '2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
+                            <PowerballResultsTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray}/>
+                        </div>
+                        <div className="flex flex-col w-full p-4">
+                            <CardHeader flag = 'us' name = '파워볼' date = '2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
                             <PowerballResultsTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray}/>
                         </div>
                     </div>
@@ -216,7 +232,7 @@ const GameResults = ({isAuthenticated}) => {
                     <>
                         <MinigamesMatchResultPanel type="kinoladder" />
                     </>
-                )}
+                )} */}
 
                 <div style={{marginTop: '1.875rem'}}>
                     <Pagination page={page} setPage={setPage}/>

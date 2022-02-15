@@ -87,7 +87,7 @@ const InboxView = () => {
                 <button 
                     style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem', marginRight: '0.75rem'}} 
                     className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
-                    onClick={() => history.push('/freeboard')}
+                    onClick={() => history.push('/mypage/inbox')}
                 >
                     <div 
                         style={{
@@ -102,7 +102,7 @@ const InboxView = () => {
                 <button 
                     style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} 
                     className="flex items-center justify-center w-1/3 rounded-2xl bg-gray-r171a1d hover:opacity-75"
-                    onClick={() => history.push('/freeboard/view2')}
+                    // onClick={() => history.push('/freeboard/view2')}
                 >
                     <div 
                         style={{

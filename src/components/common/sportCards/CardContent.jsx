@@ -42,7 +42,7 @@ const CardContent = ({
           
           <div style={{width: ''}} className='flex items-center'>
             {withInput && (
-                <div style={{marginRight: "3rem"}} className="relative text-left z-50">
+                <div style={{marginRight: "3rem"}} className="relative text-left">
                     <label className="form-control">
                         <input
                             key={Math.random()}

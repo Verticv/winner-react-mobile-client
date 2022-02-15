@@ -10,6 +10,7 @@ const BoardComposeViewPanel = ({
     // checkedState,
     // setCheckedState,
     setAttachedArray = null,
+    setPopupOpen
 }) => {
 
     const data = [
@@ -103,6 +104,7 @@ const BoardComposeViewPanel = ({
     const addEntryClick = (id) => {
         const currentObject = data?.filter(card => card?.id === id)?.[0]
         setAttachedArray(oldArray => [...oldArray, currentObject]);
+        setPopupOpen(false)
     };
     const [checkedState, setCheckedState] = useState(new Array(10).fill(false))
     const [isAllSelected, setAllSelected] = useState(false)

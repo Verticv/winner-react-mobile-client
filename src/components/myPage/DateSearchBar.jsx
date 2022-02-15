@@ -35,7 +35,7 @@ const DateSearchBar = ({
         )
     }
     return (
-        <div style={{margin: withMargin ? '0 1.875rem' : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem'}} className="bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex flex-wrap items-center justify-center">
+        <div style={{margin: withMargin ? '0 1.875rem' : '0 3.875rem 0 0', width: withMargin ? '' : '73.875rem'}} className="bg-gray-f9f9f9 rounded-2xl border border-gray-dddddd flex flex-wrap items-center justify-center z-50">
                 
                 {isLeagueSearch === true && (
                     <div className="space-x-5px">

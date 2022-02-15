@@ -145,6 +145,11 @@ const DistributorPage = ({
         setArrowUp(updatedCheckedState);
     }; 
 
+    const truncate = (str, max, len) => {
+        return str.length > max ? str.substring(0, len) + "..." : str;
+    }
+
+
     const SummaryCard = ({text1, text2, img, count}) => (
         <div style={{width: '18rem', height: '16.5rem', paddingBottom: '1.5625rem', marginBottom: '0.8125rem'}} className="rounded-lg border border-gray-dddddd bg-gray-f8f8fa flex flex-col items-center justify-between shadow-plain10">
             <div className='flex flex-col items-center justify-around'>
@@ -989,11 +994,11 @@ const DistributorPage = ({
                                     <div className='mt-1'>추천 회원내역</div>
                                 </div>
                                 
-                                <div style={{width:'30.6875rem', height: '5.3125rem', borderWidth: '0.1875rem', fontSize: '2.625rem', borderRadius: '1.625rem'}} className="border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
+                                <div style={{maxWidth:'40.6875rem', height: '5.3125rem', borderWidth: '0.1875rem', fontSize: '2.625rem', borderRadius: '1.625rem'}} className="px-5 border-2 border-gray-b4b4b4 bg-gray-r5a6067 flex items-center justify-center font-spoqaMedium tracking-tight">
                                     <img style={{width: '1.3125rem', height: '1.3125rem', marginRight: '1.0625rem'}} className="object-contain" src={Diamond} alt="" />
                                     <div style={{marginTop: '0.15rem'}} className="flex items-center">
-                                        <span className="text-white">보유금 총합계:</span>
-                                        <span className="text-yellow-ffcc00 ml-3">75,000</span>
+                                        <span className="text-white flex-shrink-0">보유금 총합계:</span>
+                                        <span className="text-yellow-ffcc00 ml-3">{truncate("75,000,000", 15, 15)}</span>
                                     </div>
                                 </div>
                             </div>

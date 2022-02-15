@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom';
 import horizontalsScroll from '../../../utils/horizontalsScroll';
 
 const SubHorizontalMenu2 = ({
@@ -9,6 +10,7 @@ const SubHorizontalMenu2 = ({
 }) => {
 
     const [isHover, setHover] = useState(null)
+    const history = useHistory();
 
     function TabsList({ items }) {
         return items.map((item, index) => {
@@ -49,6 +51,7 @@ const SubHorizontalMenu2 = ({
                     onPointerUp={() => {
                         setState(item.id)
                         horizontalsScroll(itemsArray, 't-sub', 'scroll-wrapper1', index)
+                        history.push(item.path)
                     }}
                     onPointerOut={() => setHover(null)}
                     onPointerCancel={() => setHover(null)}

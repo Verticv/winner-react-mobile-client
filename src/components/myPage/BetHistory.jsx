@@ -44,7 +44,7 @@ const tabsArray = [
     { text: "슬롯", icon: Icon3, id: 2, path: "/mypage/bet-history/all/slot-game" },
     { text: "스포츠", icon: Icon4, id: 3, path: "/mypage/bet-history/all/sports" },
     { text: "e-스포츠", icon: Icon5, id: 4, path: "/mypage/bet-history/all/e-sports" },
-    { text: "미니게임", icon: Icon6, id: 5, path: "/mypage/bet-history/all/minigame" },
+    { text: "미니게임", icon: Icon6, id: 5, path: "/mypage/bet-history/all/minigame", subPath: "/mypage/bet-history/all/minigame/powerball", subPath2: "/mypage/bet-history/all/minigame/powerladder", subPath3: "/mypage/bet-history/all/minigame/speedkino", subPath4: "/mypage/bet-history/all/minigame/kinoladder" },
     { text: "키론가상게임", icon: Icon7, id: 6, path: "/mypage/bet-history/all/ar-game" },
     { text: "피싱게임", icon: Icon8, id: 7, path: "/mypage/bet-history/all/fishing-game" },
     { text: "로터리게임", icon: Icon9, id: 8, path: "/mypage/bet-history/all/lottery-game" }
@@ -52,7 +52,7 @@ const tabsArray = [
 
 const LeftMenuBetHistoryArray = [
     {
-      text: "전체",
+      text: "전체보기",
       icon: subIcon0,
       id: -1,
       path: "/mypage/bet-history/all",

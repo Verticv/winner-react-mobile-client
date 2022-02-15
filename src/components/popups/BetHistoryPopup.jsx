@@ -106,7 +106,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             <div style={{marginBottom:'5.625rem'}} className="w-full h-full">
                                 <DateSearchBar isGameResultsSearch={true} />
                                 <div style={{paddingBottom: '0.1rem'}}>
-                                    <BoardComposeViewPanel attachedArray={attachedArray} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true} checkedState={checkedState} setCheckedState={setCheckedState}/>
+                                    <BoardComposeViewPanel attachedArray={attachedArray} setPopupOpen={setPopupOpen} setAttachedArray={setAttachedArray} type={0} winAmount="0"  isAttached={true} noButtons={true} checkedState={checkedState} setCheckedState={setCheckedState}/>
                                 </div>
                                 <div style={{paddingBottom: '1rem'}}>
                                     

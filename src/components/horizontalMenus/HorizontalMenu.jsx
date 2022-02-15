@@ -13,7 +13,7 @@ const HorizontalMenu = ({
     const history = useHistory();
     const [isHover, setHover] = useState(null)
     const { pathname } = useLocation();
-        
+
     useEffect(() => {
         if (withoutFirst) {
             horizontalsScroll(itemsArray, 't', 'scroll-wrapper')
@@ -21,7 +21,25 @@ const HorizontalMenu = ({
     }, [itemsArray, withoutFirst])
 
     function TabsList({ items }) {
-        return items.map((item, index) => (
+        
+
+        return items.map((item, index) => {
+            let isSameLink = pathname === item.path
+
+            if (item.hasSameParent) {
+                const pagePath = window.location.pathname.split('/')
+                pagePath?.pop()
+                const parentPath = item.path.split('/')
+                if (parentPath.join('/') === pagePath.join('/')) {
+                    isSameLink = true
+                }
+            }
+
+            if (window.location.pathname.includes('/mypage/bet-history/all/minigame')  && item.path.includes('/mypage/bet-history/all/minigame')) {
+                isSameLink = true
+            }
+
+            return (
             <button 
                 id={`t${index}`}
                 key={item.id} 
@@ -34,7 +52,7 @@ const HorizontalMenu = ({
                     padding: '1px', 
                 }}
                 className={`${
-                    pathname === item.path
+                    (pathname === item.path || isSameLink)
                     ? "bg-blue-r58baf7" 
                     : "bg-white"
                 } overflow-hidden flex items-end`} 
@@ -59,14 +77,14 @@ const HorizontalMenu = ({
                         paddingTop: '0.5rem'
                     }} 
                     className={`flex w-full justify-end h-full items-end bg-white ${
-                        pathname === item.path
+                        pathname === item.path || isSameLink
                         ? "bg-blue-r58baf7" 
                         : "bg-white"
                     }`}
                 >
                     <div 
                         style={{
-                            background: pathname === item.path
+                            background: pathname === item.path || isSameLink
                             ? "linear-gradient(to bottom, #2087f0, #1873cf)"
                             : isHover === item.id 
                             ? "linear-gradient(to bottom, #b9dcff, #d2f6ff)"
@@ -74,7 +92,7 @@ const HorizontalMenu = ({
                             borderRadius:"1.625rem",
                             borderTopLeftRadius:"1.625rem 1.3rem",
                             borderTopRightRadius: "1.625rem 1.3rem",
-                            borderColor: pathname === item.path ? "#1a73ce" : "#d6dfe8",
+                            borderColor: pathname === item.path || isSameLink ? "#1a73ce" : "#d6dfe8",
                             boxShadow:'rgb(0 0 0 / 30%) 7px 0px 2px -7px inset, rgb(0 0 0 / 30%) -7px 0px 2px -7px inset, rgb(0 0 0 / 30%) 0px -7px 2px -7px inset',
                         }}
                         className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
@@ -83,7 +101,7 @@ const HorizontalMenu = ({
                         <span
                             style={{marginTop: '0.625rem'}}
                             className={`${
-                                pathname === item.path
+                                pathname === item.path || isSameLink
                                 ? "text-white"
                                 : "text-gray-r616161" 
                             } text-4xl font-spoqaMedium tracking-tight -mt-4px`}
@@ -91,7 +109,7 @@ const HorizontalMenu = ({
                     </div>
                 </div>
             </button>
-        ));
+        )});
     }
 
     return (

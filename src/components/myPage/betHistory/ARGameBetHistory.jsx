@@ -133,7 +133,7 @@ const ARGameBetHistory = ({isState = 0, setState, showSub = true, isPopup=false}
 
             )}
             
-            <DateSearchBar isLeagueSearch={false} />
+            <DateSearchBar isLeagueSearch={false} isGameResultsSearch={true} />
 
             <ScrollButton />
 

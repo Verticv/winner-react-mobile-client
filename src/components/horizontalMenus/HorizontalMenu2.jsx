@@ -9,6 +9,7 @@ const HorizontalMenu = ({
     setSelectedSubTab = null,
     width,
     imageWidth,
+    hasNumber=true
 }) => {
 
     useEffect(() => {
@@ -79,7 +80,7 @@ const HorizontalMenu = ({
                         }}
                         className={`h-full w-full rounded-b-lg rounded-t-md flex flex-col items-center`}
                     >
-                        <img style={{width: imageWidth ? imageWidth : '4.9375rem', marginTop: imageWidth ? '0.4375rem' : '', marginLeft: '0.4375rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className="mt-2 object-contain" src={item.icon} alt="" />
+                        <img style={{width: imageWidth ? imageWidth : '4.9375rem', marginTop: !hasNumber ? 'rem' : imageWidth ? '0.4375rem' : '', marginLeft: '0.4375rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className={`${hasNumber ? "mt-2" :"mt-5"}  object-contain`} src={item.icon} alt="" />
                         <span
                             style={{marginTop: `${imageWidth ? '0.0625rem' : ''}`}}
                             className={`${
@@ -88,15 +89,18 @@ const HorizontalMenu = ({
                                 : "text-gray-r616161" 
                             } text-4xl font-spoqaMedium tracking-tight mt-0`}
                         >{item.text}</span>
-                        <div 
-                        style={{width: '6.1875rem', height:'2.785rem', marginTop: imageWidth ? '0.0625rem' : ''}}
-                        className={`${
-                            pathname === item.path || isState === item.id
-                            ? "bg-blue-r1b4372"
-                            : "bg-gray-r8c8c8c"
-                        } rounded-full flex items-center justify-center`}>
+                        {hasNumber && (
+                            <div 
+                            style={{width: '6.1875rem', height:'2.785rem', marginTop: imageWidth ? '0.0625rem' : ''}}
+                            className={`${
+                                pathname === item.path || isState === item.id
+                                ? "bg-blue-r1b4372"
+                                : "bg-gray-r8c8c8c"
+                            } rounded-full flex items-center justify-center`}>
                             <p style={{fontSize: '2rem'}} className=" font-roboto text-white">{item.number}</p>
                         </div>
+                        )}
+                        
                     </div>
                 </div>
             </button>

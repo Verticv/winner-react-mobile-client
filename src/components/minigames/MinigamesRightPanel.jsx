@@ -375,7 +375,13 @@ const MinigamesRightPanel = ({
                 
             </div>
             <div onPointerUp={() => {
-                history.push('/mypage/bet-history/all/minigame')
+                window.location.pathname === "/minigame/powerball" 
+                ? history.push('/mypage/bet-history/all/minigame/powerball')
+                : window.location.pathname === "/minigame/powerladder" 
+                ? history.push('/mypage/bet-history/all/minigame/powerladder')
+                : window.location.pathname === "/minigame/speedkino" 
+                ? history.push('/mypage/bet-history/all/minigame/speedkino')
+                : history.push('/mypage/bet-history/all/minigame/kinoladder')
             }}>
                 <GrayButton text='전체베팅내역' />
             </div>

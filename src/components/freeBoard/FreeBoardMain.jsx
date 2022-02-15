@@ -284,7 +284,7 @@ const FreeBoardMain = () => {
                                 {item.text}
                             </p>
                             {item.replies && (
-                                <div style={{width: '7.0625rem', height: '7.0625rem', borderWidth: '0.1875rem', fontSize: "2.25rem", top: '2.375rem', right: '2.375rem'}} className="absolute pl-7px pr-8px rounded-full flex items-center justify-center border text-red-d52e2e font-roboto">{item.replies}</div>
+                                <div style={{width: '7.0625rem', height: '7.0625rem', borderWidth: '0.1875rem', fontSize: "2.6rem", top: '2.375rem', right: '2.375rem'}} className="absolute pl-7px pr-8px rounded-full flex items-center justify-center border text-red-d52e2e font-roboto">{item.replies}</div>
                             )}
                             {item.isBetHistory === true && (
                                 <div style={{backgroundColor: "#41b06c", fontSize: '2.4375rem', padding: '0.0625rem 1.65rem', marginLeft: '1.1875rem'}} className="rounded-full flex items-center justify-center text-white font-spoqaMedium"><span className='mt-1.5'>베팅내역</span></div>

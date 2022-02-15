@@ -24,7 +24,7 @@ const SportsGamePolicyTable2 = ({array}) => {
         <table style={{borderRadius:"1em",margin: '0 1.875rem', marginTop: '2.5rem' ,fontSize: '2.8125rem'}} className="shadow-subNavbar overflow-hidden">
             <thead style={{borderBottomWidth:  "0.1875rem"}} className="bg-gray-fafafa font-spoqaMedium tracking-tight text-gray-r454545  border-b border-gray-dddddd">
                 <tr style={{height: '9.375rem'}}>
-                    <td style={{width: "29.375rem"}} className="text-center">타입및 경기시간</td>
+                    <td style={{width: "29.375rem"}} className="text-center">타입 및 경기시간</td>
                     <td className="text-center">결과적용기준</td>
                 </tr>
             </thead>

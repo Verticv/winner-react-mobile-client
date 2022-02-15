@@ -1,13 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useHistory, useLocation } from 'react-router-dom';
 import horizontalsScroll from '../../../utils/horizontalsScroll';
 
 const SubHorizontalMenu5 = ({
     itemsArray, 
     isState = 0, 
-    setState
+    setState,
+    withoutFirst = true
 }) => {
 
     const [isHover, setHover] = useState(null)
+    const history = useHistory();
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        if (withoutFirst) {
+            horizontalsScroll(itemsArray, 't', 'scroll-wrapper1')
+        }
+    }, [itemsArray, withoutFirst])
 
     function TabsList({ items }) {
         return items.map((item, index) => {
@@ -40,7 +50,7 @@ const SubHorizontalMenu5 = ({
                     }}
                     key={item.id} 
                     className={`${
-                        isState === item.id
+                         pathname === item.path
                         ? "bg-d0e8ff" 
                         : "bg-white"
                     } overflow-hidden flex items-end`} 
@@ -49,6 +59,7 @@ const SubHorizontalMenu5 = ({
                     onPointerUp={() => {
                         setState(item.id)
                         horizontalsScroll(itemsArray, 't-sub', 'scroll-wrapper1', index)
+                        history.push(item.path)
                     }}
                     onPointerOut={() => setHover(null)}
                     onPointerCancel={() => setHover(null)}
@@ -57,7 +68,7 @@ const SubHorizontalMenu5 = ({
                         style={{
                             borderRadius: '1.625rem',
                             borderWidth: '0.1875rem',
-                            background: isState === item.id 
+                            background:  pathname === item.path
                             ? "#d0e8ff"
                             : isHover === item.id 
                             ? "#d0e8ff"

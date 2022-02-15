@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./style.css";
 
 
-const SortBy = ({ children, options, value, onChange, onClick }) => (
+const SortBy = ({ children, options, value, onChange, onClick}) => (
   <div className="container">
     <select
       className="select-overlay"
@@ -24,8 +24,8 @@ const SortBy = ({ children, options, value, onChange, onClick }) => (
   </div>
 );
 
-const Dropdown = ({options, children, labelStyle, labelClasses, isLeagueSelection}) => {
-  const [sortValue, setSortValue] = useState(isLeagueSelection ? options?.[0] : "전체회차")
+const Dropdown = ({options, children, labelStyle, labelClasses, isLeagueSelection, isContact=false }) => {
+  const [sortValue, setSortValue] = useState(isContact ? "선택" : isLeagueSelection ? options?.[0] : "전체회차")
 
   const onChange = e => setSortValue(e.currentTarget.value);
 

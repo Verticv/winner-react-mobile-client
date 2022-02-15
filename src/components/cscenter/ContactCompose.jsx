@@ -17,7 +17,7 @@ const ContactCompose = () => {
                         style={{ width:'26.25rem'}}
                         className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight" 
                     >
-                        <Dropdown labelClasses="group-hover:text-black" labelStyle={{marginLeft: '1.6875rem', color: '#393e41'}} options={carrierOptions} >
+                        <Dropdown labelClasses="group-hover:text-black" labelStyle={{marginLeft: '1.6875rem', color: '#393e41'}} options={carrierOptions} isContact={true}>
                             <img style={{width: '1.5625rem', height: '1rem', marginRight: '1.5625rem'}} className="w-10px h-6px object-contain" src={DownArrowIcon} alt="arrow" /> 
                         </Dropdown>
                     </div>
@@ -56,7 +56,7 @@ const ContactCompose = () => {
             <div style={{marginTop: '3.75rem', marginBottom: '14rem', fontSize: '2.8125rem'}} className="flex w-full items-center justify-center">
                 <button style={{height: '7.3125rem', padding: '1px'}} className="flex items-center justify-center w-1/2 mr-4 rounded-2xl bg-blue-r0070d9">
                     <div className="flex items-center justify-center w-full h-full bg-black rounded-2xl border border-blue-r3ba3fc bg-gradient-to-b from-blue-r1491fc via-blue-r0e84ed to-blue-r0675db cursor-pointer">
-                        <span className="font-spoqaMedium tracking-tight text-white">작성하기</span>
+                        <span className="font-spoqaMedium tracking-tight text-white">신청하기</span>
                     </div>
                 </button>
                 <button style={{height: '7.3125rem', padding: '1px', fontSize: '2.8125rem'}} className="flex items-center justify-center w-1/2 rounded-2xl bg-gray-r171a1d">

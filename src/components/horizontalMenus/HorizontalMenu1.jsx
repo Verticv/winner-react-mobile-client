@@ -38,6 +38,10 @@ const HorizontalMenu1 = ({
                 isSameLink = true
             }
 
+            if (window.location.pathname.includes('/mypage/gameresults/minigame/')  && item.path.includes('/mypage/gameresults/minigame/')) {
+                isSameLink = true
+            }
+
            return (
                 <button 
                     id={`t${index}`}

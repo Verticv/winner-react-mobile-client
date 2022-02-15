@@ -14,7 +14,7 @@ const SportsBetHistory = ({checkedState, setCheckedState , showSub = true, attac
             <DateSearchBar isGameResultsSearch={true} />
 
 
-            <div className="w-full h-full">
+            <div className="w-full h-full z-10">
 
                 <ScrollButton />
 

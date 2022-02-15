@@ -119,7 +119,7 @@ const PointsApply = () => {
                         <button
                             style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
-                            onClick={() => setInputValue(inputValue + 10000)}
+                            onClick={() => setInputValue(inputValue + 1000)}
                         >
                             <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
                                 <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white">1천P</span>
@@ -129,7 +129,7 @@ const PointsApply = () => {
                         <button 
                             style={{width: '16.75rem', height: '7.3125rem', padding: '1px'}}
                             className="flex items-center justify-center rounded-lg bg-blue-r004b8a hover:opacity-75"
-                            onClick={() => setInputValue(inputValue + 50000)}
+                            onClick={() => setInputValue(inputValue + 5000)}
                         >
                             <div className="flex items-center justify-center w-full h-full bg-black rounded-lg border border-blue-r2a699c bg-gradient-to-b from-blue-r004b8a via-blue-r003d70 to-blue-r012d53 cursor-pointer">
                                 <span style={{fontSize: '2.625rem'}} className="font-spoqaMedium tracking-tight text-white">5천P</span>

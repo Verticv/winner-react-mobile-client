@@ -11,13 +11,14 @@ import Icon6 from '../../../images/newImages/minigameResults/4.png'
 import SubHorizontalMenu5 from './SubHorizontalMenu5'
 import PowerLadderBetHistoryPanel from 'components/common/cards/PowerLadderBetHistoryPanel'
 import KinoLadderBetHistoryPanel from '../../common/cards/KinoLadderBetHistoryPanel'
+import { Route } from 'react-router-dom'
 
 const subTabsArray = [
-    { text: "전체", icon: Icon1, id: 0 },
-    { text: "파워볼", icon: Icon3, id: 1 },
-    { text: "파워사다리", icon: Icon4, id: 2 },
-    { text: "스피드키노", icon: Icon5, id: 3, custom: "mt-8px" },
-    { text: "키노사다리", icon: Icon6, id: 4 },
+    { text: "전체", path:"/mypage/bet-history/all/minigame", icon: Icon1, id: 0 },
+    { text: "파워볼", path:"/mypage/bet-history/all/minigame/powerball", icon: Icon3, id: 1 },
+    { text: "파워사다리", path:"/mypage/bet-history/all/minigame/powerladder", icon: Icon4, id: 2 },
+    { text: "스피드키노", path:"/mypage/bet-history/all/minigame/speedkino", icon: Icon5, id: 3, custom: "mt-8px" },
+    { text: "키노사다리", path:"/mypage/bet-history/all/minigame/kinoladder", icon: Icon6, id: 4 },
 ];
 
 // 베팅번호 => number
@@ -510,36 +511,39 @@ const MinigameBetHistory = ({isState = 0, setState, showSub = true, isPopup=fals
             <ScrollButton />
 
             <div className="h-full">
-                {isState === 0 ? (
+                <Route exact path="/mypage/bet-history/all/minigame">
                     <HistoryTable
-                    containerBackground= '#f7f9fc'
-                    tableData={tableData}
-                    checkedState={checkedState} 
-                    setCheckedState={setCheckedState}
-                    isPopupOpen={isPopupOpen}
-                    setPopupOpen={setPopupOpen}
-                    cardHeight='42.15rem'
-                    isPopup={isPopup}
-                />   
-                ) : isState === 1 ? (
+                        containerBackground= '#f7f9fc'
+                        tableData={tableData}
+                        checkedState={checkedState} 
+                        setCheckedState={setCheckedState}
+                        isPopupOpen={isPopupOpen}
+                        setPopupOpen={setPopupOpen}
+                        cardHeight='42.15rem'
+                        isPopup={isPopup}
+                    />     
+                </Route>  
+                <Route path="/mypage/bet-history/all/minigame/powerball">
                     <HistoryTable
-                    containerBackground= '#f7f9fc'
-                    tableData={tableData1}
-                    checkedState={checkedState} 
-                    setCheckedState={setCheckedState}
-                    isPopupOpen={isPopupOpen}
-                    setPopupOpen={setPopupOpen}
-                    cardHeight='37.75rem'
-                    isPopup={isPopup}
+                        containerBackground= '#f7f9fc'
+                        tableData={tableData1}
+                        checkedState={checkedState} 
+                        setCheckedState={setCheckedState}
+                        isPopupOpen={isPopupOpen}
+                        setPopupOpen={setPopupOpen}
+                        cardHeight='37.75rem'
+                        isPopup={isPopup}
                     />   
-                ) : isState === 2 ? (
-                    <PowerLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen}/>
-                ) : isState === 3 ? (
-                    <KinoLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} isMinigame={true} gameType="speedkino" />
-                ) : (
-                    <KinoLadderBetHistoryPanel isPopup={!showSub} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} isMinigame={true} gameType="kinoladder" />
-                )}
-                
+                </Route>  
+                <Route path="/mypage/bet-history/all/minigame/powerladder">
+                    <PowerLadderBetHistoryPanel isPopup={isPopup} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen}/>
+                </Route>  
+                <Route path="/mypage/bet-history/all/minigame/speedkino">
+                    <KinoLadderBetHistoryPanel isPopup={isPopup} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} isMinigame={true} gameType="speedkino" />
+                </Route>  
+                <Route path="/mypage/bet-history/all/minigame/kinoladder">
+                    <KinoLadderBetHistoryPanel isPopup={isPopup} type={0} checkedState={checkedState} setCheckedState={setCheckedState} setPopupOpen={setPopupOpen} isMinigame={true} gameType="kinoladder" />
+                </Route>  
             </div>
 
             <SelectAllButton buttonsNumber={3} count={20} isAllSelected={isAllSelected} setCheckedState={setCheckedState} setAllSelected={setAllSelected} />
