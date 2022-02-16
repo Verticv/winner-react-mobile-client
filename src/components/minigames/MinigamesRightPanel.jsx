@@ -246,20 +246,20 @@ const MinigamesRightPanel = ({
 
             </div>
 
-            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between pt-1">
                 <p className="font-spoqaMedium tracking-tight text-gray-r454545">보유금액</p>
                 <p className="font-robotoBold tracking-tight text-blue-r0056a6">3,522,170</p>
             </div>
-            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between pt-2">
                 <p className="font-spoqaMedium tracking-tight text-gray-r454545">배당률</p>
                 <p style={{color:"#f26522"}} className="font-roboto tracking-tight">1.95</p>
             </div>
             <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '0rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
-                <p className="font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
+                <p className="font-spoqaMedium tracking-tight text-gray-r454545  pt-2">베팅금액</p>
 
                 <input 
                     style={{color: "#d52e2e", width: "36.875rem", height: "5.375rem", backgroundColor: "#e8e8e8", borderWidth: '0.1875rem'}} 
-                    className="flex items-center justify-end border rounded-lg pr-8 border-gray-dddddd font-roboto tracking-tight text-blue-r0056a6 text-right"
+                    className="flex items-center justify-end border rounded-lg pr-8 border-gray-dddddd font-roboto tracking-tight text-blue-r0056a6 text-right pt-1"
                     placeholder="0"
                     value={nf.format(inputValue)}
                     onChange={e => setInputValue(e.target.value.replace(/,/g, ''))}
@@ -270,7 +270,7 @@ const MinigamesRightPanel = ({
                     }}
                 />
             </div>
-            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between pt-1">
                 <p className="font-spoqaMedium tracking-tight text-gray-r454545">적중금액</p>
                 <p className="font-roboto tracking-tight text-blue-r0056a6">19,500</p>
             </div>

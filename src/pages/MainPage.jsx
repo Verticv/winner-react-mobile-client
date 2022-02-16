@@ -23,7 +23,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
 
             <div className="relative flex sticky top-0 z-40 w-screen">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
-                <div id='scroll-wrapper' style={{borderTopWidth: '0.1875rem'}} className=" sticky overflow-x-scroll hide-scrollbar overflow-y-hidden shadow-subNavbar bg-gradient-to-b from-blue-lightGradLight to-white border-t border-white">
+                <div id='scroll-wrapper' style={{borderTopWidth: '0.1875rem',maxWidth: '1242px'}} className=" sticky overflow-x-scroll hide-scrollbar overflow-y-hidden shadow-subNavbar bg-gradient-to-b from-blue-lightGradLight to-white border-t border-white">
                     <div className=" flex flex-shrink-0 justify-around w-full pb-1">
                         <SubNavbar setGameBanner={setGameBanner} isGameBanner={isGameBanner} />
                     </div>

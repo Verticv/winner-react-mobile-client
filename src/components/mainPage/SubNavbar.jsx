@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '../../images/subNavbar/1_1.png'
 import Slot from '../../images/subNavbar/2_1.png'
 import Sport from '../../images/subNavbar/3_1.png'
@@ -37,29 +37,45 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
         { text: "로터리게임", icon: Lottery, iconDefault: LotteryDefault, id: 8, class: "pt-1 mr-6px", classDefault: "pt-px" }
     ];
 
-    function onClickHandle(id) {
-        var circle = document.getElementsByClassName("highlight")[0]
-        circle.style.transform = "translate3d(" + (id * 74) + "px, 0px, 0)"
+
+
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+    useEffect(() => {
+        function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+        }
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        return {
+          width,
+          height
+        };
     }
 
-    // const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-    // useEffect(() => {
-    //     function handleResize() {
-    //     setWindowDimensions(getWindowDimensions());
-    //     }
-
-    //     window.addEventListener('resize', handleResize);
-    //     return () => window.removeEventListener('resize', handleResize);
-    // }, []);
-
-    // function getWindowDimensions() {
-    //     const { innerWidth: width, innerHeight: height } = window;
-    //     return {
-    //       width,
-    //       height
-    //     };
-    // }
+    function onClickHandle(id) {
+        var circle = document.getElementsByClassName("highlight")[0]
+        if (windowDimensions.width > 1240) {
+            circle.style.transform = "translate3d(" + (id * 138) + "px, 0px, 0)"
+        } else if (windowDimensions.width > 700 && windowDimensions.width < 851) {
+            circle.style.transform = "translate3d(" + (id * (windowDimensions.width - 32) /9) + "px, 0px, 0)"
+        } else if (windowDimensions.width > 850 && windowDimensions.width < 901 ) {
+            circle.style.transform = "translate3d(" + (id * (windowDimensions.width - 26) /9) + "px, 0px, 0)"
+        } else if (windowDimensions.width > 900 && windowDimensions.width < 1050) {
+            circle.style.transform = "translate3d(" + (id * (windowDimensions.width - 26) /9) + "px, 0px, 0)"
+        } else if (windowDimensions.width > 1049 && windowDimensions.width < 1130) {
+            circle.style.transform = "translate3d(" + (id * (windowDimensions.width - 24) /9) + "px, 0px, 0)"
+        } else if (windowDimensions.width > 1129 && windowDimensions.width < 1240) {
+            circle.style.transform = "translate3d(" + (id * (windowDimensions.width - 22) /9) + "px, 0px, 0)"
+        } else {
+            circle.style.transform = "translate3d(" + (id * 74) + "px, 0px, 0)"
+        }
+    }
 
     function TabsList({ items }) {
         return items.map((item, index) => (
@@ -68,7 +84,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                 key={item.id}
                 style={{
                     height: '62px', 
-                    width: items.length - 1 === index ? 'calc(74px + 1.75rem)' : '74px',
+                    width:  (windowDimensions.width > 1240 && items.length - 1 === index) ? "calc(138px + 1rem)" : (windowDimensions.width > 700 && items.length - 1 === index) ? "calc((100vw - 3.5rem) /9 + 1.75rem)" : windowDimensions.width > 1240 ? "138px" : windowDimensions.width > 700 ? "calc((100vw - 3.5rem) /9)" : items.length - 1 === index ? 'calc(74px + 1.75rem)' : '74px',
                     paddingRight: items.length - 1 === index ? '15px' : ''
                 }}
                 className={`
@@ -76,7 +92,7 @@ const SubNavbar = ({isGameBanner, setGameBanner}) => {
                     ? "text-white duration-150" 
                     : " space-x-2px text-gray-subNavbar duration-300"
                 } 
-                flex flex-col justify-start flex-shrink-0 items-center rounded-2xl z-20 transition ease-in-out tracking-tight relative `} 
+                flex flex-col justify-start flex-shrink-0 items-center rounded-2xl z-20 transition ease-in-out tracking-tight relative`} 
                 onClick={() => {
                     horizontalsScroll(items, 't', 'scroll-wrapper', index)
                     setSelectedTab(item.id)

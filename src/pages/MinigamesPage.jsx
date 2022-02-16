@@ -69,7 +69,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
             <div style={{marginBottom: "7rem"}} className="w-full flex flex-col items-center">
                 <div className="w-full">
                 
-                <div style={{padding: '0 2.0625rem'}}>
+                <div style={{padding: '0 2.0625rem 0 2.0625rem'}}>
                 <Route path="/minigame/powerball">
                     <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerball"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} />
                 </Route>
@@ -84,7 +84,7 @@ const MinigamesPage = ({isAuthenticated, setAuthenticated}) => {
                 </Route>
                 </div>
 
-                    <div className="flex w-full">
+                    <div className="flex w-full -mt-2">
                         <div 
                             style={{backgroundColor:"#e8e8e8", height: windowDimensions.width < 768 ? "60rem" : "42rem"}}
                             className="rounded-xl  flex justify-center overflow-hidden border border-gray-dddddd"
