@@ -40,6 +40,14 @@ const MinigamesPanel = ({
         setTime(Date.now())
     }, [])
 
+    useEffect(() => {
+        const interval = setInterval(() => setTime(Date.now()), 1000);
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
+
+
     const MenuArray = [
         { id: 0, text: "게임하기" },
         { id: 1, text: "회차결과" },

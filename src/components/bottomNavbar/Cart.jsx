@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import MinigamesRightPanel from 'components/minigames/MinigamesRightPanel'
 import ArrowUp from '../../images/newImages/cart-arrow-up.png'
 import CartIcon from '../../images/newImages/cart.png'
+import Expand from 'react-expand-animated'
 
 const Cart = ({selectedOption}) => {
     const [openedCart, setOpenedCart] = useState(false)
@@ -12,10 +13,13 @@ const Cart = ({selectedOption}) => {
     }, [])
 
     return (
-        <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className="transition-all w-full z-50 rounded-t-3xl shadow-plain bg-white fixed bottom-0">
-            <div style={{height: openedCart ? '96.5rem' : '9.0625rem' , padding: openedCart ? '0' : '0 3.6875rem'}} className="flex items-center h-full">
-                {!openedCart ? (
-                   <div className='flex w-full items-center justify-between'>
+        <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className="transition-all w-full z-50 rounded-t-3xl shadow-plain bg-white fixed bottom-0" >
+            {/* <div 
+            style={{height: openedCart ? '96.5rem' : '9.0625rem' , padding: openedCart ? '0' : '0 3.6875rem'}} 
+            className="flex items-center h-full transition"
+            > */}
+                {/* {!openedCart ? ( */}
+                   <div style={{height:"9.0625rem", padding: "0 3.6875rem"}} className={`${openedCart && "hidden"}  rounded-t-3xl flex w-full h-full items-center justify-between flex-shrink-0`}  onClick={() => setOpenedCart(!openedCart)}>
                         <div style={{width: '30rem'}} className='flex items-center'>
                             <img style={{width: '4.0625rem', marginLeft: '', paddingBottom: ''}} className="object-contain" src={CartIcon} alt="" />
                             <div 
@@ -26,7 +30,7 @@ const Cart = ({selectedOption}) => {
                             <p className='text-5xl font-spoqaMedium text-gray-r727272 pt-2'>베팅카트 열기</p>
                         </div>
 
-                        <button onClick={() => setOpenedCart(true)} >
+                        <button>
                             <img style={{width: '4.5rem', marginLeft: '', paddingBottom: '1rem'}} className="w-16 object-contain mt-2" src={ArrowUp} alt="" />
                         </button>
 
@@ -37,11 +41,15 @@ const Cart = ({selectedOption}) => {
                           </div>
                       </div>
                    </div>
-                ): <div className='w-full' style={{height: '96.5rem', padding: '1.875rem'}}>
-                    <MinigamesRightPanel selectedGame={selectedGame} setOpenedCart={setOpenedCart} selectedOption={selectedOption} />
-                  </div>}
+                {/* ) : ( */}
+                    <Expand open={openedCart} duration={200} >
+                        <div className='w-full' style={{height: '96.5rem', padding: '1.875rem'}}>
+                            <MinigamesRightPanel selectedGame={selectedGame} setOpenedCart={setOpenedCart} selectedOption={selectedOption} />
+                        </div>
+                    </Expand>
+                {/* )} */}
                 
-            </div>
+            {/* </div> */}
         </div>
     )
 }

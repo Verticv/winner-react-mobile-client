@@ -7,7 +7,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -23,7 +23,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -39,7 +39,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -55,7 +55,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -71,7 +71,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -87,7 +87,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -103,7 +103,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -119,7 +119,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -135,7 +135,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -151,7 +151,7 @@ const PowerLadderResults = () => {
             month: '10월 15일',
             roundNumber: '288',
             departureText: '짝',
-            departureNumber: '4',
+            departureNumber: '3',
             departureNumberColor: '#d52e2e',
             departureNumberDirection: 'left',
         },
@@ -178,8 +178,8 @@ const PowerLadderResults = () => {
                         style={{width: "4.5rem", height: "4.5rem",fontSize: '2.25rem' ,backgroundColor: item.departureNumberColor}}
                         className="relative pt-2 rounded-full w-1/2 text-white font-spoqaMedium tracking-tight flex items-center justify-center"
                     >
-                        {item.departureText}
-                        <div style={{width: '2.25rem', height: '2.25rem', fontSize: '1.5rem', top: '-0.5rem' ,right: item.departureNumberDirection === "right" ? "-0.75rem" : "",  left: item.departureNumberDirection === "left" ? "-0.75rem" : ""}} className={`absolute rounded-full bg-black flex items-center justify-center`}
+                        <p className='pb-1'>{item.departureText}</p>
+                        <div style={{width: '2.25rem', height: '2.25rem', fontSize: '1.5rem', top: '-0.3rem' ,right: item.departureNumberDirection === "right" ? "-0.5rem" : "",  left: item.departureNumberDirection === "left" ? "-0.5rem" : ""}} className={`absolute rounded-full bg-black flex items-center justify-center`}
                         >{item.departureNumber}</div>
                     </div>
                 </div>

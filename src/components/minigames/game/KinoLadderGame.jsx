@@ -25,11 +25,11 @@ const KinoLadderGame = ({setSelectedOption}) => {
                 style={{height:"4.3rem",width: '8.4375rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
                 className="flex-shrink-0 shadow-plain2 border border-white rounded-2xl flex flex-col items-center justify-center tracking-tight text-white"
             >
-                <p style={{marginTop: '0.4rem'}} className="font-spoqaMedium">{titleNumber}{title}</p>
+                <p style={{marginTop: '0.4rem'}} className="font-spoqaMedium pb-px">{titleNumber}{title}</p>
             </div>
 
             <div style={{fontSize: '2.625rem', marginLeft: '0.75rem'}} className="h-full flex flex-col items-center justify-center pb-1">
-                <div className="tracking-tight text-gray-r585858 font-spoqaMedium flex items-center mt-2">{subText} {subText2 ? `/${subText2}` : ''} </div>
+                <div className="tracking-tight text-gray-r585858 font-spoqaMedium flex items-center mt-3">{subText} {subText2 ? `/${subText2}` : ''} </div>
             </div>
         </div>
     )
