@@ -335,7 +335,7 @@ const SpeedKinoRoundResult = () => {
                 <div className="flex w-1/2 justify-center items-center">
                     <div 
                         style={{width: "4.5rem", height: "4.5rem",fontSize: '2.25rem' ,backgroundColor: item.departureNumberColor}}
-                        className="relative pt-2 rounded-full w-1/2 text-white font-spoqaMedium tracking-tight flex items-center justify-center"
+                        className="relative pt-4px rounded-full w-1/2 text-white font-spoqaMedium tracking-tight flex items-center justify-center"
                     >
                         {item.departureText}
                         {item.departureNumber && <div style={{width: '2.25rem', height: '2.25rem', fontSize: '1.5rem', top: '-0.5rem' ,right: item.departureNumberDirection === "right" ? "-0.75rem" : "",  left: item.departureNumberDirection === "left" ? "-0.75rem" : ""}} className={`absolute rounded-full bg-black flex items-center justify-center`}

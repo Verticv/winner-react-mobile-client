@@ -41,7 +41,7 @@ const LeftMenuSubArray = [
       text: "미니게임",
       icon: subIcon3,
       id: 1,
-      path: "/mypage/gameresults/minigame",
+      path: "/mypage/gameresults/minigame/powerball",
     }
   ]
 

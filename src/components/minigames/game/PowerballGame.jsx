@@ -65,7 +65,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                             }} 
                             className="flex-shrink-0 shadow-plain2 rounded-2xl border border-white flex flex-col items-center justify-center tracking-tight text-white"
                         >
-                            <p style={{marginTop: '0.4rem'}} className={`${(titleNumber === 6 || titleNumber === 8) && "mb-1"} pb-px font-spoqaMedium`}>[{titleNumber}게임] {type}</p>
+                            <p style={{marginTop: '0.35rem'}} className={`${(titleNumber === 6 || titleNumber === 8) && ""} font-spoqaMedium`}>[{titleNumber}게임] {type}</p>
                         </div>
 
                         <div style={{fontSize: '2.625rem', marginLeft: '0.75rem'}} className="h-full flex flex-col items-center justify-center pb-1">

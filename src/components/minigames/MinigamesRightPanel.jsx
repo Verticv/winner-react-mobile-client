@@ -149,7 +149,7 @@ const MinigamesRightPanel = ({
                         marginBottom: '0.9375rem',
                         borderRadius: '1.6875rem'
                     }} 
-                    className="w-full rounded-lg flex justify-between items-center"
+                    className="w-full rounded-lg flex justify-between items-center z-50"
                 >
                     <div style={{fontSize: '2.625rem'}} className="flex">
                         <div style={{marginRight: '1.375rem'}} className="font-spoqaMedium tracking-tight text-white flex items-center">

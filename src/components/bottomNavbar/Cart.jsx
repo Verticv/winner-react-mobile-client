@@ -13,13 +13,13 @@ const Cart = ({selectedOption}) => {
     }, [])
 
     return (
-        <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className="transition-all w-full z-50 rounded-t-3xl shadow-plain bg-white fixed bottom-0" >
+        <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className="transition-all w-full z-30 rounded-t-3xl shadow-plain bg-white fixed bottom-0" >
             {/* <div 
             style={{height: openedCart ? '96.5rem' : '9.0625rem' , padding: openedCart ? '0' : '0 3.6875rem'}} 
             className="flex items-center h-full transition"
             > */}
                 {/* {!openedCart ? ( */}
-                   <div style={{height:"9.0625rem", padding: "0 3.6875rem"}} className={`${openedCart && "hidden"}  rounded-t-3xl flex w-full h-full items-center justify-between flex-shrink-0`}  onClick={() => setOpenedCart(!openedCart)}>
+                   <div style={{height:"9.0625rem", padding: "0 3.6875rem"}} className={`absolute bottom-0 z-10 shadow-plain bg-white   rounded-t-3xl flex w-full h-full items-center justify-between flex-shrink-0`}  onClick={() => setOpenedCart(!openedCart)}>
                         <div style={{width: '30rem'}} className='flex items-center'>
                             <img style={{width: '4.0625rem', marginLeft: '', paddingBottom: ''}} className="object-contain" src={CartIcon} alt="" />
                             <div 
@@ -42,8 +42,8 @@ const Cart = ({selectedOption}) => {
                       </div>
                    </div>
                 {/* ) : ( */}
-                    <Expand open={openedCart} duration={200} >
-                        <div className='w-full' style={{height: '96.5rem', padding: '1.875rem'}}>
+                    <Expand className='z-50 flex bg-white shadow-plain rounded-t-3xl' open={openedCart} duration={200} >
+                        <div className='w-full z-50 bg-white rounded-t-3xl' style={{height: '96.5rem', padding: '1.875rem'}}>
                             <MinigamesRightPanel selectedGame={selectedGame} setOpenedCart={setOpenedCart} selectedOption={selectedOption} />
                         </div>
                     </Expand>

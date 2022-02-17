@@ -18,7 +18,8 @@ const CardResults = ({
   smallCard=false,
   withoutRadius,
   smallContent = false,
-  isMinigame=false
+  isMinigame=false,
+  shouldTruncate=true
 }) => {
 
     const truncate = (str, max, len) => {
@@ -111,7 +112,7 @@ const CardResults = ({
                             <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight">{stat3}</span>
                             {hasDown && <img style={{marginLeft: '0.4375rem'}} className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
                         </div>
-                        <span style={{fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem'}} className="truncate truncate-override font-spoqaMedium tracking-tight text-right">{truncate(team2,7, 7)}</span>
+                        <span style={{fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem'}} className="truncate truncate-override font-spoqaMedium tracking-tight text-right">{team2}</span>
                     </div>
                 </button>
             </div>
@@ -141,7 +142,7 @@ const CardResults = ({
                     : "border-white from-gray-f9f9f9 via-gray-f9f9f9 to-gray-ebebeb text-gray-r454545 bg-gradient-to-b from-gray-f8f8f8 via-gray-ececec to-gray-dfdfdf"} 
                     flex items-center justify-between h-full w-full rounded-lg border bg-gradient-to-b cursor-pointer pr-3.5`
                 }>
-                    <span style={{fontSize: '2.625rem'}} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{team1}</span>
+                    <span style={{fontSize: '2.625rem'}} className="truncate text-left font-spoqaMedium tracking-tight text-14px mt-1">{shouldTruncate ? truncate(team1,7, 7) : team1}</span>
                     <div className="flex items-center">
                         {hasUp && <img style={{marginRight: '0.4375rem'}} className="object-contain w-8 h-7" src={UpIcon} alt="" /> }
                         <span  style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight text-14px mt-1">{stat1}</span>
@@ -195,7 +196,7 @@ const CardResults = ({
                         <span style={{fontSize: '2.625rem'}} className="font-roboto tracking-tight">{stat3}</span>
                         {hasDown && <img style={{marginLeft: '0.4375rem'}} className="object-contain w-8 h-7" src={DownIcon} alt="" /> }
                     </div>
-                    <span style={{fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem'}} className="font-spoqaMedium tracking-tight text-right overflow-hidden">{truncate(team2,7, 7)}</span>
+                    <span style={{fontSize: '2.625rem', maxWidth: smallContent ? '17.4rem' : '17.875rem'}} className="font-spoqaMedium tracking-tight text-right overflow-hidden">{shouldTruncate ? truncate(team2,7, 7) : team2}</span>
                 </div>
             </button>
         </div>

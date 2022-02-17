@@ -15,9 +15,9 @@ import LiveCasinoBetHistory from 'components/myPage/betHistory/LiveCasinoBetHist
 import Pagination from 'components/myPage/Pagination';
 import SlotBetHistory from 'components/myPage/betHistory/SlotBetHistory';
 import ESportsBetHistory from 'components/myPage/betHistory/ESportsBetHistory';
-import MinigameBetHistory from 'components/myPage/betHistory/MinigameBetHistory';
 import ARGameBetHistory from 'components/myPage/betHistory/ARGameBetHistory';
 import DateSearchBar from 'components/myPage/DateSearchBar';
+import MinigameBetHistoryPopup from 'components/myPage/betHistory/MinigameBetHistoryPopup';
 
 const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
 
@@ -125,7 +125,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
                             </>
                         ) : selectedTab === 4 ? (
                             <>
-                                <MinigameBetHistory isState={historySelectedSubTab} setState={setHistorySelectedSubTab}  isPopup={true} />
+                                <MinigameBetHistoryPopup isState={historySelectedSubTab} setState={setHistorySelectedSubTab}  isPopup={true} />
                                 <div style={{marginTop: '1.25rem'}}>
                                     <Pagination page={page} setPage={setPage}/>
                                 </div>

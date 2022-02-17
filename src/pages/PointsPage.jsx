@@ -77,21 +77,21 @@ const PointsPage = ({isAuthenticated, setAuthenticated}) => {
             <div style={{padding: '1.875rem', paddingTop: '0'}} className='w-full flex'>
                 <div style={{borderRadius:"1.625rem", marginRight: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem'}} className="items-center flex-col flex w-1/3 bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">전월 적립포인트</div>
-                    <div style={{fontSize: '3.625', marginTop: '0.6625rem'}} className="tracking-tight flex items-center text-gray-r616161">
+                    <div style={{fontSize: '3.625rem', marginTop: '0.6625rem'}} className="tracking-tight flex items-center text-gray-r616161">
                         <span className="font-spoqaBold">228</span>
                         <span className="font-spoqa">P</span>
                     </div>
                 </div>
                 <div style={{borderRadius:"1.625rem", marginRight: '0.46875rem',  marginLeft: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem'}} className="items-center flex-col flex w-1/3 bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">총 누적포인트</div>
-                    <div style={{fontSize: '3.625', marginTop: '0.6625rem'}} className="tracking-tight flex items-center text-gray-r616161">
+                    <div style={{fontSize: '3.625rem', marginTop: '0.6625rem'}} className="tracking-tight flex items-center text-gray-r616161">
                         <span className="font-spoqaBold">278</span>
                         <span className="font-spoqa">P</span>
                     </div>
                 </div>
                 <div style={{borderRadius:"1.625rem", marginLeft: '0.46875rem', height: '13.125rem', paddingTop: '2.5625rem'}} className="items-center flex-col flex w-1/3 bg-white border-2 border-gray-b7b7b7">
                     <div className="text-gray-r7b7b7b font-spoqaMedium text-4xl tracking-tight flex items-center">총 사용포인트</div>
-                    <div style={{fontSize: '3.625', marginTop: '0.6625rem'}} className="tracking-tight flex items-center text-gray-r616161">
+                    <div style={{fontSize: '3.625rem', marginTop: '0.6625rem'}} className="tracking-tight flex items-center text-gray-r616161">
                         <span className="font-spoqaBold">0</span>
                         <span className="font-spoqa">P</span>
                     </div>
