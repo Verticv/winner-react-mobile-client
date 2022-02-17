@@ -55,7 +55,7 @@ const PowerballGame = ({state, setChosen, setSelectedOption}) => {
                     }} className="flex flex-shrink-0 items-center justify-center w-full pb-px">
                         <div 
                             style={{
-                                height:"4.3rem",
+                                height:"4.4rem",
                                 // width: '15.9375rem', 
                                 borderWidth: '0.1875rem' , 
                                 backgroundColor: titleBg, 

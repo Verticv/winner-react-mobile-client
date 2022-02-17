@@ -19,6 +19,7 @@ const CardContent = ({
     hasHistory = null,
     time = " 2021-06-29 15:45",
     isPopup = true,
+    type
   }) => {
 
     const handleOnChange = () => {
