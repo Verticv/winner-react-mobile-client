@@ -33,7 +33,7 @@ const SpeedKinoRoundResult = () => {
                     } w-1/2 rounded-full font-spoqaMedium`}
                     style={{height: '6.375rem', fontSize: '2.8125rem', marginRight: `${!index ? '0.9375rem' : '' }`, borderWidth: `${pathname !== item.path ? '0.1875rem' : ''}`}} 
                     key={item.id} 
-                    onClick={() => {
+                    onPointerUp={() => {
                         history.push(item.path)
                         setSelectedTab(item.id)
                         if (setSelectedSubTab !== null) {
@@ -335,9 +335,9 @@ const SpeedKinoRoundResult = () => {
                 <div className="flex w-1/2 justify-center items-center">
                     <div 
                         style={{width: "4.5rem", height: "4.5rem",fontSize: '2.25rem' ,backgroundColor: item.departureNumberColor}}
-                        className="relative pt-4px rounded-full w-1/2 text-white font-spoqaMedium tracking-tight flex items-center justify-center pb-1"
+                        className="relative pt-2 rounded-full w-1/2 text-white font-spoqaMedium tracking-tight flex items-center justify-center"
                     >
-                        {item.departureText}
+                        <p className='pb-1'>{item.departureText}</p>
                         {item.departureNumber && <div style={{width: '2.25rem', height: '2.25rem', fontSize: '1.5rem', top: '-0.5rem' ,right: item.departureNumberDirection === "right" ? "-0.75rem" : "",  left: item.departureNumberDirection === "left" ? "-0.75rem" : ""}} className={`absolute rounded-full bg-black flex items-center justify-center`}
                         >{item.departureNumber}</div>} 
                     </div>

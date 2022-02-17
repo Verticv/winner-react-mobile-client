@@ -229,7 +229,7 @@ const MinigamesRightPanel = ({
                                 <div className="flex flex-col items-center -space-y-5 -mb-2">
                                     <p style={{textShadow: "2px 2px 2px #00000050", fontSize:"3.75rem"}} className="z-20 font-swagger text-white text-20px">{selectedOption[0].selection}</p>
                                     {selectedOption[0].subtitle && (
-                                        <p style={{fontSize:"10px"}} className="z-20 font-spoqa text-white tracking-tight">
+                                        <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight">
                                             {selectedOption[0].subtitle}
                                         </p>
                                     )}
