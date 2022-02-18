@@ -93,7 +93,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
 
             <Sports paddingLeft='0' />
 
-            <div className="flex flex-col items-start w-full h-full">
+            <div className="flex flex-col items-start w-full h-full ">
                 <div className=" relative flex w-full">
 
                     <div className='w-full'>

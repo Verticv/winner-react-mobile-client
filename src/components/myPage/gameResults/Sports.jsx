@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import HorizontalMenu2 from '../../horizontalMenus/HorizontalMenu2'
-
 import Icon1 from '../../../images/newImages/mainPage/icons/gameresults/icon_1.png'
 import Icon2 from '../../../images/newImages/mainPage/icons/gameresults/icon_2.png'
 import Icon3 from '../../../images/newImages/mainPage/icons/gameresults/icon_3.png'
@@ -9,6 +7,7 @@ import Icon5 from '../../../images/newImages/mainPage/icons/gameresults/icon_5.p
 import Icon6 from '../../../images/newImages/mainPage/icons/gameresults/icon_6.png'
 import Icon7 from '../../../images/newImages/mainPage/icons/gameresults/icon_7.png'
 import Icon8 from '../../../images/newImages/mainPage/icons/gameresults/icon_8.png'
+import HorizontalMenu11 from 'components/horizontalMenus/HorizontalMenu11'
 
 const tabsArray = [
   { text: "전체", icon: Icon1, id: 0, number: 854 },
@@ -34,8 +33,8 @@ const Sports = ({paddingLeft}) => {
             <div className="w-full flex relative top-0">
                 <div style={{background:"linear-gradient(to right, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full right-0 z-50"></div>
                 <div id='scroll-wrapper' style={{padding: '1.875rem', paddingRight: '0', paddingLeft: paddingLeft ? paddingLeft : '1.875rem'}} className="overflow-x-scroll overflow-y-hidden hide-scrollbar">
-                    <div className=" flex flex-shrink-0 w-full">
-                        <HorizontalMenu2 width='13.625rem' imageWidth='5.4375rem' itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
+                    <div className=" flex flex-shrink-0 w-full px-7">
+                        <HorizontalMenu11 itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
                 </div>
                 <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>

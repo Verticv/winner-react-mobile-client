@@ -83,7 +83,7 @@ const BetCombinationPanel = ({
             hasUp: true,
             hasDown: true,
             bet: "none",
-            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Jewel}
+            buttonWithExtraData : {text: '언오버 (연장미포함)', img: Jewel}
         },
         {
             id: 3,
@@ -96,61 +96,39 @@ const BetCombinationPanel = ({
             hasUp: true,
             hasDown: true,
             bet: "none",
-            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Medal}
-        },
-        {
-            id: 4,
-            type: "언오버",
-            team1: "오버",
-            team2: "언더",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: true,
-            hasDown: true,
-            bet: "none",
+            buttonWithExtraData : {text: '핸디캡 (연장미포함)', img: Medal}
         },
     ]
 
     const subArray2 = [
         {
-            id: 0,
+            id: 5,
             type: "핸디캡",
-            team1: "FK Haugesund",
-            team2: "스트룀스고세 IF",
+            team1: "바살룬즈 IF",
+            team2: "스타백 IF",
             stat1: 2.26,
             stat2: 2.96,
             stat3: 3.47,
             hasUp: false,
             hasDown: false,
-            bet: "none" 
+            bet: "none",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
         },
         {
-            id: 1,
+            id: 6,
             type: "핸디캡",
-            team1: "FK Haugesund",
-            team2: "스트룀스고세 IF",
+            team1: "바살룬즈 IF",
+            team2: "스타백 IF",
             stat1: 2.26,
             stat2: 2.96,
             stat3: 3.47,
             hasUp: false,
             hasDown: false,
-            bet: "right" 
+            bet: "right",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
         },
         {
-            id: 2,
-            type: "언오버",
-            team1: "오버",
-            team2: "언더",
-            stat1: 2.26,
-            stat2: 2.96,
-            stat3: 3.47,
-            hasUp: true,
-            hasDown: true,
-            bet: "none" 
-        },
-        {
-            id: 3,
+            id: 7,
             type: "언오버",
             team1: "오버",
             team2: "언더",
@@ -160,13 +138,357 @@ const BetCombinationPanel = ({
             hasUp: true,
             hasDown: true,
             bet: "none",
-            isLastSubarray: true
+            buttonWithExtraData : {text: '언오버 (연장미포함)', img: Jewel}
+        },
+        {
+            id: 8,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            isLastSubarray: true,
+            buttonWithExtraData : {text: '핸디캡 (연장미포함)', img: Medal}
+        },
+    ]
+    const subArray3 = [
+        {
+            id: 20,
+            type: "핸디캡",
+            team1: "SV Kuchl",
+            team2: "FC Blau Weiss Linz",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "none",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 21,
+            type: "핸디캡",
+            team1: "SV Kuchl",
+            team2: "FC Blau Weiss Linz",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "right",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 22,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            buttonWithExtraData : {text: '언오버 (연장미포함)', img: Jewel}
+        },
+        {
+            id: 23,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            isLastSubarray: true,
+            buttonWithExtraData : {text: '핸디캡 (연장미포함)', img: Medal}
         },
     ]
 
+    const subArray4 = [
+        {
+            id: 24,
+            type: "핸디캡",
+            team1: "AZ 알카르크 B",
+            team2: "FC 오스",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "none",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 25,
+            type: "핸디캡",
+            team1: "AZ 알카르크 B",
+            team2: "FC 오스",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "right",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 26,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            buttonWithExtraData : {text: '언오버 (연장미포함)', img: Jewel}
+        },
+        {
+            id: 27,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            buttonWithExtraData : {text: '핸디캡 (연장미포함)', img: Medal}
+        },
+    ]
+
+    const subArray5 = [
+        {
+            id: 29,
+            type: "핸디캡",
+            team1: "PSV 에인트호번 (asd)",
+            team2: "FC 에인트호번",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "none",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 30,
+            type: "핸디캡",
+            team1: "PSV 에인트호번 (asd)",
+            team2: "FC 에인트호번",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "right",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 31,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            buttonWithExtraData : {text: '언오버 (연장미포함)', img: Jewel}
+        },
+        {
+            id: 32,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            buttonWithExtraData : {text: '핸디캡 (연장미포함)', img: Medal}
+        },
+    ]
+
+    const subArray6 = [
+        {
+            id: 34,
+            type: "핸디캡",
+            team1: "버밍엄 시티 FC",
+            team2: "뉴캐슬 유나이티드12",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "none",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 35,
+            type: "핸디캡",
+            team1: "버밍엄 시티 FC",
+            team2: "뉴캐슬 유나이티드12",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "right",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 36,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            buttonWithExtraData : {text: '언오버 (연장미포함)', img: Jewel}
+        },
+        {
+            id: 37,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            isLastSubarray: true,
+            buttonWithExtraData : {text: '핸디캡 (연장미포함)', img: Medal}
+        },
+    ]
+    const subArray7 = [
+        {
+            id: 34,
+            type: "핸디캡",
+            team1: "노팅엄 포리스트",
+            team2: "사우스햄튼 FC",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "none",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 35,
+            type: "핸디캡",
+            team1: "노팅엄 포리스트",
+            team2: "사우스햄튼 FC",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "right",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 36,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            buttonWithExtraData : {text: '언오버 (연장미포함)', img: Jewel}
+        },
+        {
+            id: 37,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            isLastSubarray: true,
+            buttonWithExtraData : {text: '핸디캡 (연장미포함)', img: Medal}
+        },
+    ]
+    const subArray8 = [
+        {
+            id: 34,
+            type: "핸디캡",
+            team1: "레딩",
+            team2: "울버햄프턴 원더랜드",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "none",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 35,
+            type: "핸디캡",
+            team1: "레딩",
+            team2: "울버햄프턴 원더랜드",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: false,
+            hasDown: false,
+            bet: "right",
+            buttonWithExtraData : {text: '승무패 (연장미포함)', img: Cup}
+        },
+        {
+            id: 36,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            buttonWithExtraData : {text: '언오버 (연장미포함)', img: Jewel}
+        },
+        {
+            id: 37,
+            type: "언오버",
+            team1: "오버",
+            team2: "언더",
+            stat1: 2.26,
+            stat2: 2.96,
+            stat3: 3.47,
+            hasUp: true,
+            hasDown: true,
+            bet: "none",
+            isLastSubarray: true,
+            buttonWithExtraData : {text: '핸디캡 (연장미포함)', img: Medal}
+        },
+    ]
     const FirstArray = [
         {
-            id: 4,
+            id: 9,
             type: "승무패",
             team1: "FK Haugesund",
             team2: "스트룀스고세 IF",
@@ -183,7 +505,7 @@ const BetCombinationPanel = ({
             subArray: subArray
         },
         {
-            id: 5,
+            id: 10,
             type: "승무패",
             team1: "바살룬즈 IF",
             team2: "스타백 IF",
@@ -204,7 +526,7 @@ const BetCombinationPanel = ({
 
     const SecondArray = [
         {
-            id: 6,
+            id: 11,
             type: "승무패",
             team1: "SV Kuchl",
             team2: "FC Blau Weiss Linz",
@@ -218,14 +540,14 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "left",
-            subArray: subArray2,
+            subArray: subArray3,
             isLast: true
         },
     ]
 
     const ThirdArray = [
         {
-            id: 7,
+            id: 12,
             type: "승무패",
             team1: "AZ 알카르크 B",
             team2: "FC 오스",
@@ -239,10 +561,10 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray
+            subArray: subArray4
         },
         {
-            id: 8,
+            id: 13,
             type: "승무패",
             team1: "PSV 에인트호번 (Am)",
             team2: "FC 에인트호번",
@@ -256,14 +578,14 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray2,
+            subArray: subArray5,
             isLast: true
         },
     ]
 
     const FourthArray = [
         {
-            id: 9,
+            id: 14,
             type: "승무패",
             team1: "버밍엄 시티 FC",
             team2: "뉴캐슬 유나이티드 FC",
@@ -277,10 +599,10 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray
+            subArray: subArray6
         },
         {
-            id: 10,
+            id: 15,
             type: "승무패",
             team1: "노팅엄 포리스트 FC",
             team2: "사우스햄튼 FC",
@@ -294,10 +616,10 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray
+            subArray: subArray7
         },
         {
-            id: 11,
+            id: 16,
             type: "승무패",
             team1: "레딩",
             team2: "울버햄프턴 원더러스 FC",
@@ -311,7 +633,7 @@ const BetCombinationPanel = ({
             hasUp: false,
             hasDown: false,
             bet: "none",
-            subArray: subArray2,
+            subArray: subArray8,
             isLast: true
         },
         
@@ -342,7 +664,7 @@ const BetCombinationPanel = ({
         >
             <div className="flex">
                 <img style={{width: '3.75rem', marginLeft: '2.0625rem', marginRight: '0.9375rem'}} className="object-contain" src={GlobeIcon} alt="" />
-                <p className="group-hover:text-black">{selectedCarrier}</p>
+                <p style={{color:"#7b7b7b"}} className="group-hover:text-black">{selectedCarrier}</p>
             </div>
             <img style={{width: '1.5625rem', marginRight: '2.0625rem'}} src={ArrowBlack} alt="" />
         </div>
@@ -551,7 +873,7 @@ const BetCombinationPanel = ({
                         height: `${isSubButton? "9.9375rem" : "7.4375rem"}`,
                         padding: '1px',
                         fontSize: '2.625rem',
-                        marginRight: '0.375rem',
+                        marginRight: '0.45rem',
                         backgroundColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#cb4343" : "#b3b3b3" 
                     }}  
                     className="flex items-center relative justify-center rounded-xl"
@@ -586,7 +908,7 @@ const BetCombinationPanel = ({
                     {buttonWithExtraData?.text && (
                         <p style={{fontSize: '1.875rem', marginLeft: '1.1875rem'}} className="flex mt-4 w-full absolute top-0 left-0 items-center tracking-tight">
                             <img style={{maxWidth: '2.5625rem', maxHeight: '2.5625rem', marginRight: '0.1875rem'}} className="" src={buttonWithExtraData?.img} alt="" />
-                            <span className='text-gray-r7b7b7b font-spoqaMedium'>{buttonWithExtraData?.text}</span>
+                            <span style={{color: `${id}left` === isButtonClicked || `${id}left` === isHover3 ? "#fadcdc" : "#7b7b7b"}} className='text-gray-r7b7b7b font-spoqaMedium'>{buttonWithExtraData?.text}</span>
                         </p>
                     )}
                 </button>
@@ -597,7 +919,7 @@ const BetCombinationPanel = ({
                         height: `${isSubButton? "9.9375rem" : "7.4375rem"}`,
                         padding: '1px',
                         fontSize: '2.625rem',
-                        marginRight: '0.375rem',
+                        marginRight: '0.45rem',
                         backgroundColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#cb4343" : "#b3b3b3" 
                     }}  
                     className="flex items-center justify-center rounded-xl"
@@ -631,7 +953,7 @@ const BetCombinationPanel = ({
                         height: `${isSubButton? "9.9375rem" : "7.4375rem"}`,
                         padding: '1px',
                         fontSize: '2.625rem',
-                        marginRight: '0.375rem',
+                        marginRight: '0.45rem',
                         backgroundColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#cb4343" : "#b3b3b3" 
                     }}  
                     className="flex items-center justify-center rounded-xl"
@@ -765,7 +1087,7 @@ const BetCombinationPanel = ({
                     <img style={{width: '5.625rem', marginLeft: '1.0625rem', marginRight: '0.875rem'}} className="" src={flag} alt="" />
                     <p 
                         style={{fontSize: '2.625rem'}}
-                        className="font-spoqaMedium text-white truncate" 
+                        className="font-spoqaMedium text-white truncate pt-1" 
                         onMouseEnter={() => setHover4(title)}
                         onMouseLeave={() => setHover4("")}
                     >
@@ -791,10 +1113,10 @@ const BetCombinationPanel = ({
     return (
         <div style={{borderRadius:"0.5rem"}} className="w-full shadow-subNavbar bg-gray-fafafa">
             <div style={{paddingTop: '2.1875rem', paddingBottom: '1.125rem'}} className="flex w-full pb-0 font-spoqaMedium tracking-tight text-gray-r454545">
-                <div style={{fontSize: '2.625rem'}} className="h-full flex-1 flex items-center justify-end">승(홈)</div>
-                <div style={{fontSize: '2.625rem'}} className="h-full flex-1 flex items-center justify-end">무</div>
-                <div style={{fontSize: '2.625rem', flex: '1.3 1.3 0%;'}} className="h-full flex-1 flex items-center justify-end">패(원정)</div>
-                <div style={{fontSize: '2.625rem', flex: '0.8 0.8 0%;'}} className="h-full mr-8 flex-1 flex items-center justify-end">결과</div>
+                <div style={{fontSize: '2.625rem', marginLeft:"13rem"}} className="h-full flex items-center flex-shrink-0">승(홈)</div>
+                <div style={{fontSize: '2.625rem', marginLeft: "14.8rem"}} className="h-full flex items-center flex-shrink-0">무</div>
+                <div style={{fontSize: '2.625rem', marginLeft: "13.3rem"}} className="h-full flex items-center flex-shrink-0">패(원정)</div>
+                <div style={{fontSize: '2.625rem', marginLeft: "12.7rem"}} className="h-full mr-8 flex items-center flex-shrink-0">정보</div>
             </div>
         
 
@@ -802,7 +1124,7 @@ const BetCombinationPanel = ({
                 <img style={{width: '77.625rem'}} className="absolute object-contain" src={BonusCell} alt="" />
                 <img style={{width: '6.75rem'}} className="absolute left-6 z-50 object-contain" src={Gift} alt="" />
                 <div className="w-full z-20 flex items-center">
-                    <div style={{color:"#ffde00", textShadow: "2px 2px 0px #00000050", fontSize: '2.625rem'}} className="ml-36 mt-6 font-spoqaMedium">보너스 이벤트</div>
+                    <div style={{color:"#ffde00", textShadow: "2px 2px 2px #00000050", fontSize: '2.625rem'}} className="ml-36 mt-6 font-spoqaMedium">보너스 이벤트</div>
                 </div>
                 <div style={{marginLeft: '1rem'}} className="w-full z-20 flex items-center mt-8">
                     <EventOptions 
@@ -819,15 +1141,15 @@ const BetCombinationPanel = ({
                 <div style={{width: '76.875rem', height: '8.4375rem', marginTop: '1.6875rem', marginLeft: '0.3125rem', borderWidth: '0.1875rem'}} className="flex items-center justify-between border border-gray-dddddd rounded-lg bg-gray-f9f9f9">
                     <div className="flex items-center">
                         <img style={{width: '3.9375rem', marginLeft: '1.3125rem'}} className="object-contain" src={FootballIcon} alt="" />
-                        <p style={{fontSize: '2.625rem', marginLeft: '0.6875rem'}} className="font-spoqaMedium text-gray-r454545">축구</p>
+                        <p style={{fontSize: '2.625rem', marginLeft: '0.6875rem'}} className="font-spoqaMedium text-gray-r454545 mt-1">축구</p>
                         <div 
-                            style={{backgroundColor:"#8494a4", fontSize: '2.9375rem', width: '8.125rem', height: '4.5'}} 
-                            className="rounded-full ml-4 flex items-center justify-center font-spoqaMedium tracking-tight text-white"
+                            style={{backgroundColor:"#8494a4", fontSize: '2.9375rem', width: '8.125rem', height: '4.5rem'}} 
+                            className="rounded-full ml-4 flex items-center justify-center font-spoqaMedium tracking-tight text-white pt-1"
                         >
                             15
                         </div>
                     </div>
-                    <div className="mr-9px">
+                    <div style={{marginRight:'0.6rem'}} className="mr-5px">
                         {InboxSearch}
                     </div>  
                 </div>
