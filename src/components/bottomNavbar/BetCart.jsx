@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react'
 import BetCombinationRightPanel from 'components/betCombination/BetCombinationRightPanel'
 import ArrowUp from '../../images/newImages/cart-arrow-up.png'
 import CartIcon from '../../images/newImages/cart.png'
+import Expand from 'react-expand-animated'
 
 const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPanelFixed}) => {
     const [openedCart, setOpenedCart] = useState(false)
     const [selectedGame, setSelectedGame] = useState(window.location.pathname)
+    const [openedCartDelay, setOpenedCartDelay] = useState(false)
     console.log(`selectedGame`, selectedGame)
 
     useEffect(() => {
@@ -26,11 +28,25 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
   //   1
   // </div>
     
+  useEffect(() => {
+    openedCart && (
+        setOpenedCartDelay(true)
+    )
+    setTimeout(()=>{
+        !openedCart && (
+            setOpenedCartDelay(false)
+        )
+    }, 250)
+    
+}, [openedCart])
+
+
     return (
-        <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className="transition-all w-full z-50 rounded-t-3xl shadow-plain bg-white fixed bottom-0">
-            <div style={{height: openedCart ? 'auto' : '9.0625rem' , maxHeight: openedCart ? '100rem' : 'unset' ,padding: openedCart ? '0' : '0 3.6875rem'}} className="flex items-center h-full">
-                {!openedCart ? (
-                   <div className='flex w-full items-center'>
+        <div style={{maxWidth: '1242px', height: openedCartDelay ? "100%" : "auto"}} className=" w-full z-50 shadow-plain bg-black bg-opacity-60 fixed bottom-0">
+        <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className=" w-full z-50 rounded-t-3xl shadow-plain fixed bottom-0">
+            <div className="flex items-center h-full">
+                {/* {!openedCart ? ( */}
+                   <div style={{height: "9.0625rem", padding: '0 3.6875rem'}} className={`${openedCartDelay ? "opacity-0 transition" : "opacity-100 transition"} bg-white rounded-t-3xl shadow-plain absolute bottom-0  flex w-full items-center h-full flex-shrink-0`} onClick={() => setOpenedCart(true)}>
                       <div style={{marginRight: '7.25rem'}} className='flex items-center'>
                           <img style={{width: '4.0625rem', marginLeft: '', paddingBottom: ''}} className="object-contain" src={CartIcon} alt="" />
                           <div style={{width: '3.5625rem', height: '3.5625rem', marginRight: '1.125rem'}} className="bg-red-notification text-4xl rounded-full text-white flex items-center justify-center font-roboto">
@@ -40,7 +56,6 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                       </div>
                       <div style={{width: '37rem'}} className='flex justify-between'>
                           <button
-                              onClick={() => setOpenedCart(true)}
                               style={{width: '15.625rem'}}
                               className="flex flex-col">
                               <img style={{width: '4.5rem', marginLeft: '', paddingBottom: ''}} className="w-16 object-contain" src={ArrowUp} alt="" />
@@ -50,7 +65,9 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                           </div>
                       </div>
                    </div>
-                ): <div className='w-full overflow-scroll' style={{height: 'auto', maxHeight: openedCart ? '100rem' : 'unset', padding: '1.875rem'}}>
+                {/* ): */}
+                <Expand className='z-50 bg-white rounded-t-3xl shadow-plain' duration={200} open={openedCart}>
+                 <div className='w-full overflow-scroll ' style={{height: 'auto', maxHeight: openedCart ? '100vh' : 'unset', padding: '1.875rem'}}>
                     <BetCombinationRightPanel 
                         addedCard={addedCard} 
                         setAddedCard={setAddedCard} 
@@ -58,9 +75,12 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                         setPanelFixed={setPanelFixed} 
                         setOpenedCart={setOpenedCart}
                     />
-                  </div>}
+                  </div>
+                  </Expand>
+                  {/* } */}
                 
             </div>
+        </div>
         </div>
     )
 }

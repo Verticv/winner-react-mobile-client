@@ -79,12 +79,12 @@ const BetCartHorizontalMenu2 = ({
                             } font-spoqaMedium tracking-tight mt-0`}
                         >{item.text}</span>
                         <div 
-                        style={{width: '3.5625rem', height:'3.5625rem'}}
+                        style={{width: '3.5625rem', height:'3.5625rem', boxShadow: "2px 2px 2px #00000050"}}
                         className={`${
                             isState === item.id
                             ? "bg-red-notification"
                             : "bg-gradient-to-b from-blue-r4c6782 to-blue-r26303a"
-                        } rounded-full flex items-center justify-center shadow-plain1`}>
+                        } rounded-full flex items-center justify-center shadow-plain`}>
                             <p style={{fontSize: '1.9375rem'}} className=" font-roboto text-white">{item.number}</p>
                         </div>
                     </div>

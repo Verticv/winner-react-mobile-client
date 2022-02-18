@@ -116,7 +116,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 )}
 
                 {!addedCard.length ? (
-                    <div style={{height: "6.3125rem", paddingLeft: '1.8125rem', marginBottom: '1.875rem', fontSize: '2.625rem', backgroundColor: "#e8e8e8", marginTop: '0.875rem'}} className="w-full rounded-2xl border border-gray-dddddd flex items-center">
+                    <div style={{height: "6.3125rem", paddingLeft: '1.7rem', marginBottom: '1.875rem', fontSize: '2.625rem', backgroundColor: "#e8e8e8", marginTop: '0.875rem'}} className="w-full rounded-2xl border border-gray-dddddd flex items-center">
                         <p className="font-spoqaMedium tracking-tight text-gray-r454545">베팅을 선택하세요.</p>
                     </div>
                 ) : (

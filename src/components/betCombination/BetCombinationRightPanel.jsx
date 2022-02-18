@@ -52,7 +52,7 @@ const BetCombinationRightPanel = ({
             }}
             className="relative w-full z-20 rounded-t-lg flex items-center justify-between ">
                 <div style={{fontSize: '2.625rem'}} className="flex items-center">
-                    <p style={{marginRight: '1.9375rem', fontSize: '2.625rem'}} className='text-white font-spoqaMedium'>2021-08-02 (월)</p>
+                    <p style={{marginRight: '1.9375rem', fontSize: '2.625rem'}} className='ml-3 text-white font-spoqaMedium'>2021-08-02 (월)</p>
                     <div style={{color:"#ffe672", fontSize: '3.375rem'}} className="flex font-spoqaBold tracking-tight items-center">
                         <img style={{width: '2.875rem', marginRight: '0.75rem'}} className="object-contain" src={ClockIcon} alt="" />
                         {format(time, dateFormat1, { locale : ko })}
