@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Route, useHistory } from 'react-router'
+import { Route } from 'react-router'
 import PopupControls from 'components/popups/PopupControls';
 import RoundResultPopup from 'components/popups/RoundResultPopup';
 import PowerLadderRoundResultPopup from 'components/popups/PowerLadderRoundResultPopup';
@@ -19,6 +19,7 @@ import BlueButtonSq from '../../images/minigames/blue_sq.png'
 import RedButtonSq from '../../images/minigames/red_sq.png'
 import { format } from 'date-fns'
 import { ko } from "date-fns/locale"
+import { Link } from 'react-router-dom';
 
 const MinigamesRightPanel = ({
     selectedGame,
@@ -28,8 +29,24 @@ const MinigamesRightPanel = ({
 
     const [inputValue, setInputValue] = useState(null)
     const [isPopupOpen, setPopupOpen] = useState(true)
+    const [redirectPath, setRedirectPath] = useState("")
     var nf = new Intl.NumberFormat();
-    const history = useHistory();
+
+    useEffect(() => {
+        if (window.location.pathname === "/minigame/powerball" ) {
+            setRedirectPath('/mypage/bet-history/all/minigame/powerball')
+        } else if (window.location.pathname === "/minigame/powerladder") {
+            setRedirectPath('/mypage/bet-history/all/minigame/powerladder')
+        } else if (window.location.pathname === "/minigame/speedkino" ) {
+            setRedirectPath('/mypage/bet-history/all/minigame/speedkino')
+        } else {
+            setRedirectPath('/mypage/bet-history/all/minigame/kinoladder')
+        }
+        return () => {
+            setRedirectPath('')
+        };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [setRedirectPath,window.location.pathname ]);
 
     const BetAmountButton = ({amount}) => (
         <button 
@@ -374,17 +391,13 @@ const MinigamesRightPanel = ({
         
                 
             </div>
-            <div onPointerUp={() => {
-                window.location.pathname === "/minigame/powerball" 
-                ? history.push('/mypage/bet-history/all/minigame/powerball')
-                : window.location.pathname === "/minigame/powerladder" 
-                ? history.push('/mypage/bet-history/all/minigame/powerladder')
-                : window.location.pathname === "/minigame/speedkino" 
-                ? history.push('/mypage/bet-history/all/minigame/speedkino')
-                : history.push('/mypage/bet-history/all/minigame/kinoladder')
-            }}>
+            {/* <div onPointerUp={handleRedirect}>
                 <GrayButton text='전체베팅내역' />
-            </div>
+            </div> */}
+
+            <Link to={redirectPath}>
+                <GrayButton text='전체베팅내역' />
+            </Link>
         </div>
     </>
     )
