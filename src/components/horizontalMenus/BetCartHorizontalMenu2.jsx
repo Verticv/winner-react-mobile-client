@@ -76,10 +76,10 @@ const BetCartHorizontalMenu2 = ({
                                 pathname === item.path
                                 ? "text-white"
                                 : "text-gray-r8c8c8c" 
-                            } font-spoqaMedium tracking-tight mt-0`}
+                            } font-spoqaMedium tracking-tight mt-1`}
                         >{item.text}</span>
                         <div 
-                        style={{width: '3.5625rem', height:'3.5625rem', boxShadow: "2px 2px 2px #00000050"}}
+                        style={{width: '3.5625rem', height:'3.5625rem', boxShadow: "2px 2px 2px #00000050", background: isState === item.id ? "linear-gradient(to bottom right, #fb3e67, #d4184c)" : "linear-gradient(to bottom, $4c6782,#26303a)"}}
                         className={`${
                             isState === item.id
                             ? "bg-red-notification"

@@ -79,31 +79,88 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
         ));
     }
 
-    const BetAmountButton = ({amount, inputValue, setInputValue}) => (
+    // const BetAmountButton = ({amount, inputValue, setInputValue}) => (
+    //     <button 
+    //         style={{
+    //             width:"24.375rem",
+    //             height: '7.5rem',
+    //             padding: '1px',
+    //             fontSize: '2.625rem',
+    //             borderColor: "#b3bac1"
+    //         }} 
+    //         className="flex items-center justify-center rounded-lg border hover:opacity-75"
+    //         onClick={() => setInputValue(inputValue + amount)}
+    //     >
+    //         <div 
+    //             style={{
+    //                 background: "linear-gradient(to bottom, #feffff, #cedeed)",
+    //                 borderWidth: '0.1875rem'
+    //             }}  
+    //             className="flex items-center justify-center rounded-lg border border-white cursor-pointer w-full h-full"
+    //         >
+    //             <span className="font-roboto tracking-tight text-gray-r585858">{nf.format(amount)}</span>
+    //         </div>
+    //     </button>
+    // )
+    const [buttonClicked, setButtonClicked] = useState("")
+
+    const BetAmountButton = ({amount}) => (
         <button 
             style={{
-                width:"24.375rem",
+                width:"24.4rem",
                 height: '7.5rem',
-                padding: '1px',
+                // padding: '0.2rem',
                 fontSize: '2.625rem',
-                borderColor: "#b3bac1"
+                borderColor: "#b3bac1",
+                borderRadius: '0.75rem'
             }} 
-            className="flex items-center justify-center rounded-lg border hover:opacity-75"
-            onClick={() => setInputValue(inputValue + amount)}
+            className="flex rounded-lg flex-shrink-0 border hover:opacity-75"
+            onPointerUp={() => {
+                setInputValue(inputValue + amount)
+                setButtonClicked(amount)
+            }}
         >
             <div 
                 style={{
-                    background: "linear-gradient(to bottom, #feffff, #cedeed)",
-                    borderWidth: '0.1875rem'
-                }}  
-                className="flex items-center justify-center rounded-lg border border-white cursor-pointer w-full h-full"
-            >
+                    borderRadius:"0.75rem",
+                    background: buttonClicked === amount ? "linear-gradient(to bottom, #a8defd, #8dc6ee)" : "linear-gradient(to bottom, #feffff, #cedeed)",
+                    borderWidth: "0.1875rem",
+                    borderColor: "#fff",
+                    // borderWidth: '0.1875rem'
+                }} 
+                className="flex items-center justify-center w-full h-full cursor-pointer">
                 <span className="font-roboto tracking-tight text-gray-r585858">{nf.format(amount)}</span>
             </div>
         </button>
     )
 
-
+    const BetFixedAmountButton = ({amount, text}) => (
+        <button 
+            style={{
+                width:"24.4rem",
+                height: '7.5rem',
+                fontSize: '2.625rem',
+                borderColor: "#171a1d",
+                borderRadius: '0.75rem',
+                backgroundColor: '#747679',
+                // padding: '0.2rem',
+            }} 
+            className="flex rounded-lg flex-shrink-0 border hover:opacity-75"
+            onClick={() => setInputValue(amount)}
+        >
+            <div 
+                style={{
+                    width: "100%",
+                    borderRadius:"0.75rem",
+                    borderWidth: "0.1875rem",
+                    borderColor: "#747679",
+                    background: "linear-gradient(to bottom, #585b5e, #303337)",
+                }} 
+                className="flex items-center justify-center h-full cursor-pointer">
+                <span className="font-spoqaMedium tracking-tight text-white">{text}</span>
+            </div>
+        </button>
+    )
 
     return (
         <div >
@@ -127,20 +184,20 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
             </div>
             <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r454545">보유금액</p>
-                <p className="font-robotoBold tracking-tight text-blue-r0056a6">3,522,170</p>
+                <p style={{fontSize: '3rem'}} className="font-robotoBold tracking-tight text-blue-r0056a6">3,522,170</p>
             </div>
 
-            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.525rem', borderBottomWidth: '0.1875rem'}} className="pt-1 border-b border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">베팅 최소금액</p>
                 <p style={{color: "#d52e2e"}} className="font-robotoRegular tracking-tight">5,000</p>
             </div>
             
-            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.525rem', borderBottomWidth: '0.1875rem'}} className="pt-1 border-b border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">베팅 최대금액</p>
                 <p className="font-robotoRegular tracking-tight text-gray-r454545">7,000,000</p>
             </div>
 
-            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.525rem', borderBottomWidth: '0.1875rem'}} className="pt-1 border-b border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">적중 최대금액</p>
                 <p className="font-robotoRegular tracking-tight text-gray-r454545">20,000,000</p>
             </div>
@@ -194,77 +251,17 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                     </div>
                 </div>
                 
-                <div style={{marginBottom: '0.375rem'}} className="flex">
-                    <button 
-                        style={{
-                            width:"24.375rem",
-                            height: '7.5rem',
-                            borderColor: "#171a1d",
-                            fontSize: '2.625rem',
-                            borderRadius: '0.75rem',
-                            marginRight: '0.375rem'
-                        }} 
-                        className="flex items-center justify-center rounded-xl border hover:opacity-75"
-                        onClick={() => setInputValue(inputValue/2)}
-                    >
-                        <div 
-                            style={{
-                                background: "linear-gradient(to bottom, #585b5e, #303337)",
-                                borderColor:"#747679",
-                                borderWidth: '0.1875rem'
-                            }} 
-                            className="flex items-center rounded-xl justify-center h-full w-full border cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-white">하프</span>
+                <div style={{marginBottom: '0.6rem'}} className="flex">
+                        <div style={{marginRight: '0.3rem'}} className="flex-shrink-0">
+                            <BetFixedAmountButton amount={inputValue/2} text="하프" />
                         </div>
-                    </button>
-                    <button 
-                        style={{
-                            width:"24.375rem",
-                            height: '7.5rem',
-                            borderColor: "#171a1d",
-                            fontSize: '2.625rem',
-                            borderRadius: '0.75rem',
-                            marginRight: '0.375rem'
-                        }} 
-                        className="flex items-center justify-center rounded-xl border hover:opacity-75"
-                        onClick={() => setInputValue(3522170)}
-                    >
-                        <div 
-                            style={{
-                                background: "linear-gradient(to bottom, #585b5e, #303337)",
-                                borderColor:"#747679",
-                                borderWidth: '0.1875rem'
-                            }} 
-                            className="flex items-center justify-center rounded-xl h-full w-full border cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-white">최대</span>
+                        <div style={{marginRight: '0.3rem'}} className="flex-shrink-0">
+                            <BetFixedAmountButton amount={3522170} text="최대" />
                         </div>
-                    </button>
-                    <button 
-                        style={{
-                            width:"24.375rem",
-                            height: '7.5rem',
-                            borderColor: "#171a1d",
-                            fontSize: '2.625rem',
-                            borderRadius: '0.75rem'
-                        }} 
-                        className="flex items-center justify-center rounded-xl border hover:opacity-75"
-                        onClick={() => setInputValue(0)}
-                    >
-                        <div
-                            style={{
-                                background: "linear-gradient(to bottom, #585b5e, #303337)",
-                                borderColor:"#747679",
-                                borderWidth: '0.1875rem'
-                            }} 
-                            className="flex items-center justify-center rounded-xl h-full w-full border cursor-pointer"
-                        >
-                            <span className="font-spoqaMedium tracking-tight text-white">정정</span>
+                        <div className="flex-shrink-0">
+                            <BetFixedAmountButton amount={0} text="정정" />
                         </div>
-                    </button>
-                </div>
-
+                    </div>
                 <button 
                     style={{height: '9rem', padding: '1px', fontSize: '3.1875rem'}}
                     className="flex items-center w-full justify-center rounded-lg bg-blue-r2068b2 hover:opacity-75"
@@ -275,7 +272,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 >
                     <div className="flex items-center justify-center w-full h-full rounded-lg border border-blue-r3975ae bg-gradient-to-b from-blue-r125a9e via-blue-r0e508d to-blue-r0b447a cursor-pointer">
                         <img style={{width: '3.1875rem', height: '3.1875rem'}} src={BetIcon} alt="" />
-                        <span style={{marginLeft: '1.3125rem'}} className="font-spoqaMedium tracking-tight text-white">베팅하기</span>
+                        <span style={{marginLeft: '1.3125rem'}} className="font-spoqaMedium tracking-tight text-white mt-1">베팅하기</span>
                     </div>
                 </button>
 

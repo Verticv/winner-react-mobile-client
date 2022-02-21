@@ -40,6 +40,7 @@ const BetCombinationRightPanel = ({
     }, []);
 
     const [selectedTab, setSelectedTab] = useState(0)
+    const [buttonHover, setButtonHover] = useState(null)
 
     return (
         <div className="w-fill rounded-lg">
@@ -51,19 +52,25 @@ const BetCombinationRightPanel = ({
                 borderRadius: '1.6875rem',
             }}
             className="relative w-full z-20 rounded-t-lg flex items-center justify-between ">
-                <div style={{fontSize: '2.625rem'}} className="flex items-center">
+                <div style={{fontSize: '2.625rem'}} className="flex items-center pt-1">
                     <p style={{marginRight: '1.9375rem', fontSize: '2.625rem'}} className='ml-3 text-white font-spoqaMedium'>2021-08-02 (월)</p>
                     <div style={{color:"#ffe672", fontSize: '3.375rem'}} className="flex font-spoqaBold tracking-tight items-center">
                         <img style={{width: '2.875rem', marginRight: '0.75rem'}} className="object-contain" src={ClockIcon} alt="" />
-                        {format(time, dateFormat1, { locale : ko })}
+                        <p className='mt-1'>{format(time, dateFormat1, { locale : ko })}</p>
+                        
                     </div>
                 </div>
 
                 <div className="flex">
                     <button 
                         style={{width: "6.5rem", height: "6.5rem", borderColor:"#9c9c9c"}} 
-                        className="mr-3 rounded-2xl border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center hover:opacity-75"
-                        onClick={() => setAddedCard([])}
+                        className={`${buttonHover === 0 && "opacity-75"} mr-3 rounded-2xl border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center`}
+                        onPointerDown={() => setButtonHover(0)}
+                        onPointerUp={() => {
+                            setButtonHover(null)
+                            setAddedCard([])
+                        }}
+                        onPointerOut={() => setButtonHover(null)}
                     >
                         <div style={{borderColor:"#9c9c9c"}} className="flex rounded-2xl w-full h-full items-center justify-center bg-gradient-to-b from-gray-ececec to-gray-d8d8d8">
                             <img className='w-12' src={TrashIcon} alt="" />
@@ -71,16 +78,26 @@ const BetCombinationRightPanel = ({
                     </button>
                     <button 
                         style={{width: "6.5rem", height: "6.5rem", borderColor:"#9c9c9c"}} 
-                        className="mr-3 rounded-2xl border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center hover:opacity-75"
+                        className={`${buttonHover === 1 && "opacity-75"} mr-3 rounded-2xl border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center`}
+                        onPointerDown={() => setButtonHover(1)}
+                        onPointerUp={() => {
+                            setButtonHover(null)
+                        }}
+                        onPointerOut={() => setButtonHover(null)}
                     >
                         <div style={{borderColor:"#9c9c9c"}} className="flex rounded-2xl w-full h-full items-center justify-center bg-gradient-to-b from-gray-ececec to-gray-d8d8d8">
                             <img className='w-12' src={RefrshIcon} alt="" />
                         </div>
                     </button>
                     <button 
-                        onClick={() => setOpenedCart(false)}
+                        onPointerDown={() => setButtonHover(2)}
+                        onPointerUp={() => {
+                            setButtonHover(null)
+                            setOpenedCart(false)
+                        }}
+                        onPointerOut={() => setButtonHover(null)}
                         style={{width: "6.5rem", height: "6.5rem", borderColor:"#9c9c9c"}} 
-                        className="rounded-2xl border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center hover:opacity-75"
+                        className={`${buttonHover === 2 && "opacity-75"} mr-3 rounded-2xl border bg-gradient-to-br from-white to-gray-r9c9c9c flex items-center justify-center`}
                     >
                         <div style={{borderColor:"#9c9c9c"}} className="flex rounded-2xl w-full h-full items-center justify-center bg-gradient-to-b from-gray-ececec to-gray-d8d8d8 ">
                             <img style={{width: '2.75rem', height: '2.75rem'}} src={CloseIcon} alt="" />
