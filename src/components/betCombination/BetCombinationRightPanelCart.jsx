@@ -37,7 +37,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
     function BetCard({ items }) {
         return items.map(item => (
             <div
-                style={{height:"13.3125rem", width: '73.5rem', borderRadius: "1.125rem", borderWidth: '0.1875rem', marginBottom: '0.5625rem'}}
+                style={{height:"13.5rem", width: '73.5rem', borderRadius: "1.125rem", borderWidth: '0.1875rem', marginBottom: '0.5625rem'}}
                 className="border border-gray-cccccc"
                 key={item.id}
             >
@@ -53,7 +53,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 >
                     <p 
                         style={{color: item.value === "right" ? "#d52e2e" : "#454545"}} 
-                        className="font-spoqaBold tracking-tight text-gray-r454545 flex items-center"
+                        className="font-spoqaBold tracking-tight text-gray-r454545 flex items-center mt-1"
                     >
                         {item.value === "right" ? "SV Kuchl" : "FK Haugesund"}
                     </p>
@@ -64,8 +64,8 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                         {item.value === "right" ? "FC Blau Weiss Linz" : "스트룀스고세 IF"}
                     </p>
                     <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium mt-4 tracking-tight text-gray-r454545  flex items-center">축구 - 승무패 (게임)</p>
-                    <img style={{width: '2.3125rem', height: '2.3125rem', top: '5rem', right: '3.0625rem'}} src={CancelIconGray} alt="" name={item.id} className="absolute cursor-pointer hover:opacity-75" onClick={handleRemoveItem} />
-                    <div style={{fontSize: '2.4375rem', bottom: '0.2rem', right: '9.9375rem'}} className="flex absolute tracking-tight font-spoqaMedium items-center text-gray-r454545">
+                    <img style={{width: '2.7rem', height: '2.7rem', top: '5rem', right: '2rem'}} src={CancelIconGray} alt="" name={item.id} className="absolute cursor-pointer hover:opacity-75 object-contain" onClick={handleRemoveItem} />
+                    <div style={{fontSize: '2.4375rem', bottom: '0.2rem', right: '9rem'}} className="flex absolute tracking-tight font-spoqaMedium items-center text-gray-r454545">
                         <p>{item.value === "right" ? "승 @" : "패 @"}</p> 
                         <p 
                             style={{color: item.value === "right" ? "#d52e2e" : "#0056a6"}}
@@ -177,7 +177,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                         <p className="font-spoqaMedium tracking-tight text-gray-r454545">베팅을 선택하세요.</p>
                     </div>
                 ) : (
-                    <div style={{marginTop: '2.0625rem'}} className="mb-6">
+                    <div style={{marginBottom: '2.0625rem'}} className="mb-6">
                         <BetCard items={addedCard} />
                     </div>
                 )}

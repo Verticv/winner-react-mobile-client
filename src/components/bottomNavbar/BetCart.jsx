@@ -47,7 +47,7 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
 
 
     return (
-        <div style={{maxWidth: '1242px', height: openedCartDelay ? "100%" : "auto"}} className=" w-full z-50 shadow-plain bg-black bg-opacity-60 fixed bottom-0">
+        <div style={{maxWidth: '1242px', height: openedCartDelay ? "100vh" : "auto"}} className=" w-full z-50 shadow-plain bg-black bg-opacity-60 fixed bottom-0">
         <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className=" w-full z-50 rounded-t-3xl shadow-plain fixed bottom-0">
             <div className="flex items-center h-full">
                 {/* {!openedCart ? ( */}
@@ -86,7 +86,7 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                    </div>
                 {/* ): */}
                 <Expand className='z-50 bg-white rounded-t-3xl shadow-plain' duration={200} open={openedCart}>
-                 <div className='w-full overflow-scroll ' style={{height: 'auto', maxHeight: openedCart ? '100vh' : 'unset', padding: '1.875rem'}}>
+                 <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? '100vh' : 'unset', paddingTop: '1.875rem', paddingLeft: '1.875rem', paddingRight: '1.875rem'}}>
                     <BetCombinationRightPanel 
                         addedCard={addedCard} 
                         setAddedCard={setAddedCard} 

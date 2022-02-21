@@ -43,12 +43,12 @@ const BetCombinationRightPanel = ({
     const [buttonHover, setButtonHover] = useState(null)
 
     return (
-        <div className="w-fill rounded-lg">
+        <div className="w-fill rounded-lg max-h-screen">
             <div 
             style={{
                 background: "linear-gradient(to bottom, #748697, #8494a4", 
                 height: '8.5625rem',
-                padding: '0 1.125rem',
+                padding: '0 1.125rem 0 1.125rem',
                 borderRadius: '1.6875rem',
             }}
             className="relative w-full z-20 rounded-t-lg flex items-center justify-between ">
@@ -106,17 +106,20 @@ const BetCombinationRightPanel = ({
                 </div>
             </div>
 
-            <div className="bg-white flex flex-col">
+            <div style={{marginBottom: '2.0625rem'}} className="bg-white flex flex-col">
                 <BetCartHorizontalMenu2 itemsArray={tabsArray} setSelectedTab={setSelectedTab} isState={selectedTab} setState={setSelectedTab} />
             </div>
             {/* <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerball"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} /> */}
 
-            <Route exact path="/bet-combination">
-                <BetCombinationRightPanelCart addedCard={addedCard} setAddedCard={setAddedCard} />     
-            </Route>
-            <Route path="/bet-combination/history">
-                <BetCombinationRightPanelHistory /> 
-            </Route>
+            <div style={{maxHeight: "calc(100vh - 24rem)"}} className='overflow-y-scroll max-h-screen pb-8'>
+                <Route exact path="/bet-combination">
+                    <BetCombinationRightPanelCart addedCard={addedCard} setAddedCard={setAddedCard} />     
+                </Route>
+                <Route path="/bet-combination/history">
+                    <BetCombinationRightPanelHistory /> 
+                </Route>
+            </div>
+            
 
         </div>
     )
