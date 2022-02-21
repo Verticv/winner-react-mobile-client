@@ -24,12 +24,12 @@ const BetCombinationRightPanelHistory = () => {
 
             <div 
                 style={{
-                    background: "linear-gradient(120deg, #ffffff, #e0e2e6",
+                    background: "linear-gradient(120deg, #ffffff, #e0e2e6)",
                     paddingLeft: '1.75rem'
                 }}
                 className="relative w-full h-full"
             >
-                <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545 flex items-center">
+                <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545 flex items-center mt-2">
                     {time}
                 </p>
                 <p 
@@ -62,7 +62,7 @@ const BetCombinationRightPanelHistory = () => {
     )
 
     const ResultsCard = () => (
-        <div style={{height:"21rem", borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem',}} className="w-full px-7 border border-gray-cccccc">
+        <div style={{height:"21rem", borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem',background: "linear-gradient(120deg, #ffffff, #e0e2e6)",}} className="w-full px-7 border border-gray-cccccc">
             <div className="flex justify-between mt-5">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">베팅시간</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">2021-06-29 16:00</p>
@@ -98,7 +98,7 @@ const BetCombinationRightPanelHistory = () => {
 
             </div>
 
-            <div className='bg-gray-dddddd' style={{height: '0.1875rem', width: '77.625rem', margin: '1.875rem 0', marginLeft: '-1.875rem'}}></div>
+            <div className='bg-gray-dddddd' style={{height: '0.1875rem', width: '74.625rem', margin: '1.875rem 0', marginLeft: '-1.875rem'}}></div>
 
             <div className="bg-white flex flex-col rounded-b-lg">
 
