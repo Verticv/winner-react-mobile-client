@@ -37,7 +37,7 @@ const Sports = ({paddingLeft}) => {
                         <HorizontalMenu11 itemsArray={tabsArray} isState={selectedTab} setSelectedTab={setSelectedTab} />
                     </div>
                 </div>
-                <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
+                {/* <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div> */}
               </div>
         </div>
     )

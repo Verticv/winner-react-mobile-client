@@ -85,19 +85,21 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
     return (
         <div style={{maxWidth: '1242px'}} className="w-full flex flex-col overflow-hidden">
 
-            <div className="w-full z-30 flex flex-col items-center">
+            <div className="w-full z-50 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
             </div>
 
-
-            <Sports paddingLeft='0' />
+            
+            <div className='relative z-20'>
+                <Sports paddingLeft='0' />
+            </div>
 
             <div className="flex flex-col items-start w-full h-full ">
                 <div className=" relative flex w-full">
 
                     <div className='w-full'>
-                        <div className="mt-15px">
+                        <div className="mt-4px">
                             <BetCombinationPanel 
                                 addedCard={addedCard} 
                                 setAddedCard={setAddedCard} 

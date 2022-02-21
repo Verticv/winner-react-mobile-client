@@ -29,7 +29,7 @@ const HorizontalMenu11 = ({
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
                     borderRadius:"1.625rem",
                     width: `${ width ? width : '15rem'}`,
-                    height: '14.6rem',
+                    height: '15rem',
                     marginRight: items.length - 1 === index ?'1.875rem' : '0.1875rem',
                     padding: '1px'
                 }}
@@ -82,7 +82,7 @@ const HorizontalMenu11 = ({
                     >
                         <img style={{width: imageWidth ? imageWidth : '6.7375rem', marginTop: !hasNumber ? 'rem' : imageWidth ? '0.4375rem' : '', marginLeft: '0.4375rem', WebkitUserDrag:"none", MozUserDrag:"none", userDrag:"none"}} className={`${hasNumber ? "mt-2" :"mt-5"}  object-contain`} src={item.icon} alt="" />
                         <span
-                            style={{marginTop: `${imageWidth ? '0.0625rem' : ''}`}}
+                            style={{marginTop: `${imageWidth ? '0.0625rem' : ''}`, lineHeight: "2.6rem"}}
                             className={`${
                                 pathname === item.path || isState === item.id
                                 ? "text-white"

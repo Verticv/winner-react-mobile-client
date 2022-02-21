@@ -5,9 +5,9 @@ import BonusCell from '../../images/newImages/event.png'
 import Gift from '../../images/newImages/gift.png'
 import NormalCell from '../../images/newImages/blue-card.png'
 import FootballIcon from '../../images/newImages/soccer.png'
-import GlobeIcon from '../../images/newImages/world.png'
-import ArrowBlack from '../../images/newImages/down.png'
-import DropDownControls from 'components/dropdowns/SportNonLiveDropDownControls'
+// import GlobeIcon from '../../images/newImages/world.png'
+// import ArrowBlack from '../../images/newImages/down.png'
+// import DropDownControls from 'components/dropdowns/SportNonLiveDropDownControls'
 import T1 from '../../images/betCombination/t1.png'
 import T2 from '../../images/betCombination/t2.png'
 import T3 from '../../images/betCombination/t3.png'
@@ -24,6 +24,8 @@ import T13 from '../../images/betCombination/t13.png'
 import T14 from '../../images/betCombination/t14.png'
 import T15 from '../../images/betCombination/t15.png'
 import T16 from '../../images/betCombination/t16.png'
+import ArrowUp from '../../images/arrow_up.png'
+import ArrowDown from '../../images/arrow_dn.png'
 import NorwayIcon from '../../images/newImages/norway.png'
 import AustriaIcon from '../../images/newImages/austria.png'
 import NetherlandIcon from '../../images/newImages/netherland.png'
@@ -36,6 +38,8 @@ import Medal from '../../images/newImages/Medal.png'
 import Jewel from '../../images/newImages/jewel.png'
 import _uniqueId from 'lodash/uniqueId';
 import './BetCombination.css'
+// import Dropdown from 'components/common/Dropdown/Dropdown'
+import DropDownInput from 'components/common/DropDownInput'
 
 const BetCombinationPanel = ({
     addedCard, 
@@ -639,122 +643,128 @@ const BetCombinationPanel = ({
         
     ]
 
-    const [isDropdownOpen, setDropdownOpen] = useState(true)
+    // const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("국가선택")
     const [isHover1, setHover1] = useState(null)
     const [isOpen, setOpen] = useState(new Array(20).fill(false))
     const [isButtonClicked, setButtonClicked] = useState("")
     console.log(`isHover1`, isHover1)
 
+    const truncate = (str, max, len) => {
+        return str.length > max ? str.substring(0, len) + "..." : str;
+    }
+    
     useEffect(() => {
         if (!selectedCarrier) {
             setSelectedCarrier('value')
         }
     }, [selectedCarrier])
 
-    const gameResultButton = (
-        <div
-            style={{
-                width: "35.25rem",
-                height: "6.75rem",
-                borderWidth: '0.1875rem',
-                fontSize: '2.625rem'
-            }}
-            className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-2xl border border-gray-cccccc font-spoqaMedium text-15px tracking-tight text-gray-r454545 group" 
-        >
-            <div className="flex">
-                <img style={{width: '3.75rem', marginLeft: '2.0625rem', marginRight: '0.9375rem'}} className="object-contain" src={GlobeIcon} alt="" />
-                <p style={{color:"#7b7b7b"}} className="group-hover:text-black">{selectedCarrier}</p>
-            </div>
-            <img style={{width: '1.5625rem', marginRight: '2.0625rem'}} src={ArrowBlack} alt="" />
-        </div>
-    )
+    // const gameResultButton = (
+    //     <div
+    //         style={{
+    //             width: "35.25rem",
+    //             height: "6.75rem",
+    //             borderWidth: '0.1875rem',
+    //             fontSize: '2.625rem'
+    //         }}
+    //         className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-2xl border border-gray-cccccc font-spoqaMedium text-15px tracking-tight text-gray-r454545 group" 
+    //     >
+    //         <div className="flex">
+    //             <img style={{width: '3.75rem', marginLeft: '2.0625rem', marginRight: '0.9375rem'}} className="object-contain" src={GlobeIcon} alt="" />
+    //             <p style={{color:"#7b7b7b"}} className="group-hover:text-black">{selectedCarrier}</p>
+    //         </div>
+    //         <img style={{width: '1.5625rem', marginRight: '2.0625rem'}} src={ArrowBlack} alt="" />
+    //     </div>
+    // )
 
-    const handleOnChange = (position) => {
-        const updatedCheckedState = checkedState.map((item, index) =>
-          index === position ? !item : item
-        );
-        setCheckedState(updatedCheckedState);
-    }; 
+    // const handleOnChange = (position) => {
+    //     const updatedCheckedState = checkedState.map((item, index) =>
+    //       index === position ? !item : item
+    //     );
+    //     setCheckedState(updatedCheckedState);
+    // }; 
 
-    function SearchDropdownCell({ items }) {
-        return items.map(item => {
-            let isChecked = checkedState[item.id]
-            return (
-                <label style={{height: '8rem', display: 'block', padding: '1.875rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0'}} className="form-control relative w-full border-b border-gray-ececec">
-                    {item.text}
-                    <input
-                        style={{right: '1.875rem', top: '2.5rem'}}
-                        className='w-12 h-12 absolute right-0'
-                        type="checkbox"
-                        checked={isChecked}
-                        name={item.text}
-                        onChange={() => handleOnChange(item.id)}
-                    />
-                </label>
+    // function SearchDropdownCell({ items }) {
+    //     return items.map(item => {
+    //         let isChecked = checkedState[item.id]
+    //         return (
+    //             <label style={{height: '8rem', display: 'block', padding: '1.875rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0'}} className="form-control relative w-full border-b border-gray-ececec">
+    //                 {item.text}
+    //                 <input
+    //                     style={{right: '1.875rem', top: '2.5rem'}}
+    //                     className='w-12 h-12 absolute right-0'
+    //                     type="checkbox"
+    //                     checked={isChecked}
+    //                     name={item.text}
+    //                     onChange={() => handleOnChange(item.id)}
+    //                 />
+    //             </label>
 
-            )
-        });
-    }
+    //         )
+    //     });
+    // }
 
-    const searchDropdown = (
-        <div className="flex flex-col items-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
-            <SearchDropdownCell items={filterArray} />
-            <div style={{padding: '1.875rem'}} className="w-full h-full flex items-center justify-center">
-                <button 
-                    style={{
-                        backgroundColor: "#171a1d",
-                        height:"7.3125rem",
-                        padding: '1px',
-                    }} 
-                    className="relative w-1/2 flex mr-4 items-center justify-center rounded-xl hover:opacity-75"
-                    onClick={() => setDropdownOpen(false)}
-                >
-                    <div 
-                        style={{
-                            borderColor: "#737579",
-                            background: "linear-gradient(to bottom, #585b5e, #303337)",
-                        }} 
-                        className="flex w-full h-full items-center rounded-lg justify-center border cursor-pointer"
-                    >
-                        <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
-                            확인
-                        </span>
-                    </div>
-                </button>
-                <button 
-                    style={{
-                        backgroundColor: "#cb4343",
-                        height:"7.3125rem",
-                        padding: '1px',
-                    }} 
-                    className="relative w-1/2 flex items-center justify-center rounded-xl hover:opacity-75"
-                    onClick={() => setCheckedState(filterArray.fill(false))}
-                >
-                    <div 
-                        style={{
-                            borderColor: "#f36576",
-                            background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-                        }} 
-                        className="flex w-full h-full items-center justify-center rounded-lg border cursor-pointer"
-                    >
-                        <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
-                            초기화
-                        </span>
-                    </div>
-                </button>
-            </div>
-        </div>
-    )
+    // const searchDropdown = (
+    //     <div className="flex flex-col items-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
+    //         <SearchDropdownCell items={filterArray} />
+    //         <div style={{padding: '1.875rem'}} className="w-full h-full flex items-center justify-center">
+    //             <button 
+    //                 style={{
+    //                     backgroundColor: "#171a1d",
+    //                     height:"7.3125rem",
+    //                     padding: '1px',
+    //                 }} 
+    //                 className="relative w-1/2 flex mr-4 items-center justify-center rounded-xl hover:opacity-75"
+    //                 onClick={() => setDropdownOpen(false)}
+    //             >
+    //                 <div 
+    //                     style={{
+    //                         borderColor: "#737579",
+    //                         background: "linear-gradient(to bottom, #585b5e, #303337)",
+    //                     }} 
+    //                     className="flex w-full h-full items-center rounded-lg justify-center border cursor-pointer"
+    //                 >
+    //                     <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
+    //                         확인
+    //                     </span>
+    //                 </div>
+    //             </button>
+    //             <button 
+    //                 style={{
+    //                     backgroundColor: "#cb4343",
+    //                     height:"7.3125rem",
+    //                     padding: '1px',
+    //                 }} 
+    //                 className="relative w-1/2 flex items-center justify-center rounded-xl hover:opacity-75"
+    //                 onClick={() => setCheckedState(filterArray.fill(false))}
+    //             >
+    //                 <div 
+    //                     style={{
+    //                         borderColor: "#f36576",
+    //                         background: "linear-gradient(to bottom, #f03a50, #cf254d)",
+    //                     }} 
+    //                     className="flex w-full h-full items-center justify-center rounded-lg border cursor-pointer"
+    //                 >
+    //                     <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
+    //                         초기화
+    //                     </span>
+    //                 </div>
+    //             </button>
+    //         </div>
+    //     </div>
+    // )
 
     const InboxSearch = (
-        <DropDownControls
-            buttonChild={gameResultButton} 
-            isDropdownOpen={isDropdownOpen} 
-            setDropdownOpen={setDropdownOpen}
-        >
-            {searchDropdown}
-        </DropDownControls>
+
+        <DropDownInput isBetCombination={true} />
+        // <DropDownControls
+        //     buttonChild={gameResultButton} 
+        //     isDropdownOpen={isDropdownOpen} 
+        //     setDropdownOpen={setDropdownOpen}
+        // >
+        //     {searchDropdown}
+        // </DropDownControls>
     )
 
     const EventOptions = ({
@@ -783,7 +793,7 @@ const BetCombinationPanel = ({
                         borderColor: "#f9b26d",
                         background: "linear-gradient(to bottom, #f8a351, #f38236)" ,
                         color: "#ffffff",
-                        textShadow: "1px 1px 0px #00000070",
+                        textShadow: "1px 1px 0px #00000050",
                         padding: '0 1.3125rem'
                     }}  
                     className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
@@ -809,7 +819,7 @@ const BetCombinationPanel = ({
                         borderColor: "#f9b26d",
                         background: "linear-gradient(to bottom, #f8a351, #f38236)",
                         color: "#ffffff",
-                        textShadow: "1px 1px 0px #00000070"
+                        textShadow: "1px 1px 0px #00000050"
                     }}  
                     className="flex w-full h-full items-center justify-center rounded-lg border bg-gradient-to-b cursor-pointer"
                 >
@@ -834,7 +844,7 @@ const BetCombinationPanel = ({
                         borderColor:"#f9b26d",
                         background: "linear-gradient(to bottom, #f8a351, #f38236)",
                         color: "#ffffff",
-                        textShadow: "1px 1px 0px #00000070",
+                        textShadow: "1px 1px 0px #00000050",
                         padding: '0 1.3125rem'
                     }}  
                     className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
@@ -870,7 +880,7 @@ const BetCombinationPanel = ({
                 <button 
                     style={{
                         width:"29.6875rem", 
-                        height: `${isSubButton? "9.9375rem" : "7.4375rem"}`,
+                        height: `${isSubButton? "9.9375rem" : "6.4375rem"}`,
                         padding: '1px',
                         fontSize: '2.625rem',
                         marginRight: '0.45rem',
@@ -887,7 +897,7 @@ const BetCombinationPanel = ({
                 >
                     <div 
                         style={{
-                            padding: '0 1.1875rem',
+                            padding: '0 0.6875rem',
                             borderColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ff7982" : "#ffffff",
                             background:  (`${id}left` === isButtonClicked || `${id}left` === isHover3)
                             ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
@@ -897,7 +907,7 @@ const BetCombinationPanel = ({
                         }}  
                         className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
                     >
-                        <span className="truncate text-right font-spoqaMedium tracking-tight">{team1}</span>
+                        <span className="truncate text-right font-spoqaMedium tracking-tight">{truncate(team1,10, 10)}</span>
                         <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked && `${id}left` !== isHover3 ? "#d52e2e" : ""}} className="flex items-center font-roboto tracking-tight">
                             {hasUp === true && (
                                 <img className='mr-4' style={{width: '1.3125rem', height: '1.125rem'}} src={UpIcon} alt="" />
@@ -906,7 +916,7 @@ const BetCombinationPanel = ({
                             </span>
                     </div>
                     {buttonWithExtraData?.text && (
-                        <p style={{fontSize: '1.875rem', marginLeft: '1.1875rem'}} className="flex mt-4 w-full absolute top-0 left-0 items-center tracking-tight">
+                        <p style={{fontSize: '1.875rem', marginLeft: '1.4875rem'}} className="flex mt-4 w-full absolute top-0 left-0 items-center tracking-tight">
                             <img style={{maxWidth: '2.5625rem', maxHeight: '2.5625rem', marginRight: '0.1875rem'}} className="" src={buttonWithExtraData?.img} alt="" />
                             <span style={{color: `${id}left` === isButtonClicked || `${id}left` === isHover3 ? "#fadcdc" : "#7b7b7b"}} className='text-gray-r7b7b7b font-spoqaMedium'>{buttonWithExtraData?.text}</span>
                         </p>
@@ -916,7 +926,7 @@ const BetCombinationPanel = ({
                 <button 
                     style={{
                         width:"10rem", 
-                        height: `${isSubButton? "9.9375rem" : "7.4375rem"}`,
+                        height: `${isSubButton? "9.9375rem" : "6.4375rem"}`,
                         padding: '1px',
                         fontSize: '2.625rem',
                         marginRight: '0.45rem',
@@ -933,7 +943,7 @@ const BetCombinationPanel = ({
                 >
                     <div 
                         style={{
-                            padding: '0 1.1875rem',
+                            padding: '0 0.6875rem',
                             borderColor: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3) ? "#ff7982" : "#ffffff",
                             background: (`${id}middle` === isButtonClicked || `${id}middle` === isHover3)
                             ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
@@ -950,7 +960,7 @@ const BetCombinationPanel = ({
                 <button 
                     style={{
                         width:"29.6875rem", 
-                        height: `${isSubButton? "9.9375rem" : "7.4375rem"}`,
+                        height: `${isSubButton? "9.9375rem" : "6.4375rem"}`,
                         padding: '1px',
                         fontSize: '2.625rem',
                         marginRight: '0.45rem',
@@ -982,7 +992,7 @@ const BetCombinationPanel = ({
                                 <img className='ml-4' style={{width: '1.3125rem', height: '1.125rem'}} src={DownIcon} alt="" />
                             )}
                             </span>
-                        <span className="truncate font-spoqaMedium tracking-tight text-left">{team2}</span>
+                        <span className="truncate font-spoqaMedium tracking-tight text-left">{truncate(team2, 10, 7) }</span>
                     </div>
                 </button>
             </div>
@@ -1007,7 +1017,7 @@ const BetCombinationPanel = ({
         return array?.map(items => (
             <div className="flex flex-col">
                 <div 
-                    style={{backgroundColor: isSubArray === true ? "#f1f1f1" : "#ffffff", height: `${isSubButton ? "11.5625rem" : "9.0625rem"}`, borderBottomWidth: '0.1875rem'}} 
+                    style={{backgroundColor: isSubArray === true ? "#f1f1f1" : "#ffffff", height: `${isSubButton ? "11.5625rem" : "8.0625rem"}`, borderBottomWidth: '0.1875rem'}} 
                     className={`${items.isLast && isOpen[items.id] === false && " rounded-b-xl"} ${items.isLastSubarray === true && "rounded-b-xl"} w-full border-b border-gray-dddddd flex items-center`}
                 >
                     
@@ -1032,7 +1042,7 @@ const BetCombinationPanel = ({
                             <button 
                                 style={{
                                     width:"5.625rem",
-                                    height: "7.4375rem",
+                                    height: "6.4375rem",
                                     padding: '1px',
                                     backgroundColor: isOpen[items.id] === true ? "#5b646e" : "#171a1d"
                                 }} 
@@ -1093,7 +1103,7 @@ const BetCombinationPanel = ({
                     >
                         {title}
                     </p>
-                    <div style={{fontSize: '2.625rem', marginTop: '0.625rem'}} className="flex absolute mr-5 right-0 flex-col text-blue-r8494a4 font-spoqaMedium items-center justify-center h-full">
+                    <div style={{fontSize: '2.625rem', marginTop: '0.025rem'}} className="flex absolute mr-5 right-0 flex-col text-blue-r8494a4 font-spoqaMedium items-center justify-center h-full">
                         <p className="tracking-tight">2021-06-29</p>
                         <p style={{marginTop: '-0.875rem'}} className="flex w-full justify-end items-center tracking-tight">
                             <img style={{width: '2.375rem', height: '2.375rem', marginRight: '0.6875rem'}} className="" src={Clock} alt="" />
@@ -1101,9 +1111,9 @@ const BetCombinationPanel = ({
                         </p>
                     </div>
                 </div>
-                <div className="h-px w-full bg-gray-dddddd" />
+                {/* <div className="h-px w-full bg-gray-dddddd" /> */}
                 
-                <div style={{paddingBottom:  `${isLastElement ? "1.125rem" : ""}`, borderBottomWidth: `${isLastElement ? "0.1875rem" : ""}`}} className={`w-full ${isLastElement ? "border-b border-gray-ececec" : "rounded-b-xl"} bg-white z-20 flex flex-col shadow-subNavbar`}>
+                <div style={{paddingBottom:  `${isLastElement ? "1.125rem" : ""}`, borderBottomWidth: `${isLastElement ? "0.1875rem" : ""}`}} className={`w-full ${isLastElement ? "border-b border-gray-ececec" : "rounded-b-xl"} bg-white z-20 flex flex-col shadow`}>
                     <LeagueCell array={array} />
                 </div>
             </div>
@@ -1113,9 +1123,15 @@ const BetCombinationPanel = ({
     return (
         <div style={{borderRadius:"0.5rem"}} className="w-full shadow-subNavbar bg-gray-fafafa">
             <div style={{paddingTop: '2.1875rem', paddingBottom: '1.125rem'}} className="flex w-full pb-0 font-spoqaMedium tracking-tight text-gray-r454545">
-                <div style={{fontSize: '2.625rem', marginLeft:"13rem"}} className="h-full flex items-center flex-shrink-0">승(홈)</div>
+                <div style={{fontSize: '2.625rem', marginLeft:"11.15rem"}} className="h-full flex items-center flex-shrink-0 space-x-2">
+                    <p>승(홈)</p>
+                    <img className='w-7 h-7 object-contain animate-pulse' src={ArrowUp} alt="" />
+                </div>
                 <div style={{fontSize: '2.625rem', marginLeft: "14.8rem"}} className="h-full flex items-center flex-shrink-0">무</div>
-                <div style={{fontSize: '2.625rem', marginLeft: "13.3rem"}} className="h-full flex items-center flex-shrink-0">패(원정)</div>
+                <div style={{fontSize: '2.625rem', marginLeft: "11.55rem"}} className="h-full flex items-center flex-shrink-0 space-x-2">
+                    <p>패(원정)</p>
+                    <img className='w-7 h-7 object-contain animate-pulse' src={ArrowDown} alt="" />
+                </div>
                 <div style={{fontSize: '2.625rem', marginLeft: "12.7rem"}} className="h-full mr-8 flex items-center flex-shrink-0">정보</div>
             </div>
         
@@ -1124,12 +1140,12 @@ const BetCombinationPanel = ({
                 <img style={{width: '77.625rem'}} className="absolute object-contain" src={BonusCell} alt="" />
                 <img style={{width: '6.75rem'}} className="absolute left-6 z-50 object-contain" src={Gift} alt="" />
                 <div className="w-full z-20 flex items-center">
-                    <div style={{color:"#ffde00", textShadow: "2px 2px 2px #00000050", fontSize: '2.625rem'}} className="ml-36 mt-6 font-spoqaMedium">보너스 이벤트</div>
+                    <div style={{color:"#ffde00", textShadow: "1px 1px 0px #00000050", fontSize: '2.625rem', marginTop:"1.6rem"}} className="ml-36 font-spoqaMedium">보너스 이벤트</div>
                 </div>
-                <div style={{marginLeft: '1rem'}} className="w-full z-20 flex items-center mt-8">
+                <div style={{marginLeft: '1.5rem'}} className="w-full z-20 flex items-center mt-8">
                     <EventOptions 
                         team1 = "다폴더 보너스 배당"
-                        team2 = "◀ 3폴더 이상 베팅 시"
+                        team2 = "◀3폴더 이상 베팅 시"
                         stat1 = "-"
                         stat2 = "VS"
                         stat3 = "-"
@@ -1138,7 +1154,7 @@ const BetCombinationPanel = ({
             </div>
 
             <div className="">
-                <div style={{width: '76.875rem', height: '8.4375rem', marginTop: '1.6875rem', marginLeft: '0.3125rem', borderWidth: '0.1875rem'}} className="flex items-center justify-between border border-gray-dddddd rounded-lg bg-gray-f9f9f9">
+                <div style={{width: '76.875rem', height: '8.4375rem', marginTop: '2.6rem', marginLeft: '0.3125rem', borderWidth: '0.1875rem'}} className="flex items-center justify-between border border-gray-dddddd rounded-lg bg-gray-f9f9f9">
                     <div className="flex items-center">
                         <img style={{width: '3.9375rem', marginLeft: '1.3125rem'}} className="object-contain" src={FootballIcon} alt="" />
                         <p style={{fontSize: '2.625rem', marginLeft: '0.6875rem'}} className="font-spoqaMedium text-gray-r454545 mt-1">축구</p>
