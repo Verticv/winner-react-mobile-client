@@ -209,7 +209,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">짝</p>
                                 <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 left-3 top-4 flex items-center justify-center">
-                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium mt-1">3</div>
+                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
                                 </div>
                             </div>
                             <div style={{height: '3.65rem'}}>
@@ -234,7 +234,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">홀</p>
                                 <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 right-3 top-4 flex items-center justify-center">
-                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium mt-1">3</div>
+                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
                                 </div>
                             </div>
                             <div style={{height: '3.65rem'}}>
@@ -259,7 +259,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">홀</p>
                                 <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 left-3 top-4 flex items-center justify-center">
-                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium mt-1">4</div>
+                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">4</div>
                                 </div>
                             </div>
                             <div style={{height: '3.65rem'}}>
@@ -284,7 +284,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">짝</p>
                                 <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 right-3 top-4 flex items-center justify-center">
-                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium mt-1">4</div>
+                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">4</div>
                                 </div>
                             </div>
                             <div style={{height: '3.65rem'}}>

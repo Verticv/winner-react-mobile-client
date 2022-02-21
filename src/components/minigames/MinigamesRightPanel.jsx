@@ -30,6 +30,7 @@ const MinigamesRightPanel = ({
     const [inputValue, setInputValue] = useState(null)
     const [isPopupOpen, setPopupOpen] = useState(true)
     const [redirectPath, setRedirectPath] = useState("")
+    const [buttonClicked, setButtonClicked] = useState("")
     var nf = new Intl.NumberFormat();
 
     useEffect(() => {
@@ -59,12 +60,15 @@ const MinigamesRightPanel = ({
                 borderRadius: '0.75rem'
             }} 
             className="flex rounded-lg flex-shrink-0 border hover:opacity-75"
-            onClick={() => setInputValue(inputValue + amount)}
+            onPointerUp={() => {
+                setInputValue(inputValue + amount)
+                setButtonClicked(amount)
+            }}
         >
             <div 
                 style={{
                     borderRadius:"0.75rem",
-                    background: "linear-gradient(to bottom, #feffff, #cedeed)",
+                    background: buttonClicked === amount ? "linear-gradient(to bottom, #a8defd, #8dc6ee)" : "linear-gradient(to bottom, #feffff, #cedeed)",
                     borderWidth: "0.1875rem",
                     borderColor: "#fff",
                     // borderWidth: '0.1875rem'

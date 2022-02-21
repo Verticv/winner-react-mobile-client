@@ -86,7 +86,7 @@ const PointsApply = () => {
                         <Title text="전환 포인트 입력" />
                         <div className="w-full">
                             <input 
-                                className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
+                                className="w-full font-spoqa text-gray-r585858 outline-none placeholder-gray-bebebe"
                                 style={{fontSize: '2.625rem', marginBottom: '0.9375rem'}}
                                 placeholder="직접 입력시 숫자만 입력해 주세요."
                                 value={inputValue !==null ? nf.format(inputValue) : ""}

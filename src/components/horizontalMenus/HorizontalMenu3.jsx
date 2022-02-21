@@ -21,7 +21,7 @@ const HorizontalMenu3 = ({
                     background: "linear-gradient(to bottom, #dddddd, #bcbcbc)",
                     borderRadius:"1.625rem",
                     width: '18.25rem',
-                    height: '12.5rem',
+                    height: '10.5rem',
                     marginRight: `${items.length - 1 !== index ? '0.5625rem' : '' }`, 
                     padding: '1px'
                 }}
@@ -75,7 +75,7 @@ const HorizontalMenu3 = ({
                     >
                         <div className={`flex items-center -ml-px`}>
                             <span 
-                                style={{fontSize: '3.1875rem', color: item.textColor, textShadow: "-1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff"}} 
+                                style={{fontSize: '2.9875rem', color: item.textColor, textShadow: "-1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff"}} 
                                 className={`
                                 ${
                                     item.id === 0 
@@ -91,10 +91,10 @@ const HorizontalMenu3 = ({
                             </span>
                         </div>
                         
-                        <div className="flex items-center">
-                            <img style={{width: '3.1875rem', marginRight: '0.6875rem', marginBottom: "1rem"}} className="object-contain" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
+                        <div className="flex items-center -mt-1">
+                            <img style={{width: '2.8875rem', marginRight: '0.6875rem', marginBottom: "1rem"}} className="object-contain" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
                             <div 
-                                style={{fontSize: '3.875rem', color: selectedTab === item.path ? "#ffffff" : "#748496"}}
+                                style={{fontSize: '3.575rem', color: selectedTab === item.path ? "#ffffff" : "#748496"}}
                                 className="tracking-tight font-swagger flex items-center"
                             >
                                 {item.time}

@@ -18,7 +18,7 @@ const CardHeader = ({flag = 'us', name = 'MLS', date = '2021-06-29 15:45', isMin
   const headerFlag = flags[flag]
 
   if (isMinigame === true) return (
-    <div style={{height: '7.5rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem'}} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd px-7">
+    <div style={{height: '7.5rem', borderTopRightRadius: '0.5rem', borderTopLeftRadius: '0.5rem', paddingLeft: "1rem"}} className="flex items-center justify-between h-56px w-full bg-blue-r3591d5 border-b border-gray-dddddd pr-7">
       <div className="flex items-center">
           <img style={{width: '7rem', height: '7rem'}} className='object-contain' src={minigameType === "powerladder" ? Icon4 : minigameType === "kinoladder" ? Icon6 : minigameType === "powerball" ? Icon3 : Icon5} alt="" />
           <span style={{fontSize: '2.625rem', paddingTop: '0.1875rem', marginLeft: '0.6rem'}} className="ml-4 font-spoqaMedium text-20px tracking-tight text-white">{minigameType ==="powerladder" ? "파워사다리" : minigameType === "kinoladder" ? "키노사다리" : minigameType === "powerball" ? "파워볼" : "스피드키노"}</span>

@@ -28,7 +28,7 @@ const MainPage = ({isAuthenticated, setAuthenticated}) => {
                         <SubNavbar setGameBanner={setGameBanner} isGameBanner={isGameBanner} />
                     </div>
                 </div>
-                <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div>
+                {/* <div style={{background:"linear-gradient(to left, #ffffff00, #ffffff", width: '3.125rem'}} className="absolute h-full left-0 z-50"></div> */}
             </div>
             
             

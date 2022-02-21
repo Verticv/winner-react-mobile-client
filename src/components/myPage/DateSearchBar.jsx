@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+// import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from  "react-datepicker";
 import ko from 'date-fns/locale/ko';
 import DropDownInput from 'components/common/DropDownInput'
@@ -87,7 +87,7 @@ const DateSearchBar = ({
                                 const menu = document.querySelector('#main-menu');
                                 menu.style.marginBottom = '0'
                             }}
-                            />
+                        />
                     </div>
                 )}
 
@@ -106,6 +106,18 @@ const DateSearchBar = ({
                                 e.preventDefault();
                             }}
                             onChangeRaw={(e) => e.preventDefault()}
+                            popperPlacement="bottom"
+                            popperModifiers={{
+                                flip: {
+                                    behavior: ["bottom"] // don't allow it to flip to be above
+                                },
+                                preventOverflow: {
+                                    enabled: false // tell it not to try to stay within the view (this prevents the popper from covering the element you clicked)
+                                },
+                                hide: {
+                                    enabled: false // turn off since needs preventOverflow to be enabled
+                                }
+                            }}
                         />
                         <img style={{top: '3.44rem'}} src={CalendarIcon} alt="" className="w-14 absolute right-8" />
                     </div>
@@ -114,20 +126,32 @@ const DateSearchBar = ({
                         {hasDateSuggestion ? (
                             <>
                                 <div className=' -ml-8'>
-                                <DatePicker 
-                                    customInput={<CustomInput />}
-                                    // className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
-                                    locale="ko"
-                                    selected={endDate} 
-                                    onChange={(date) => setEndDate(date)}
-                                    dateFormat="yyyy-MM-dd"
-                                    dateFormatCalendar="yyyy년 MM월"
-                                    disabledKeyboardNavigation={true}
-                                    onKeyDown={(e) => {
-                                        e.preventDefault();
-                                    }}
-                                    onChangeRaw={(e) => e.preventDefault()}
-                                />
+                                    <DatePicker 
+                                        customInput={<CustomInput />}
+                                        // className="place-color-grey date-picker right-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b" 
+                                        locale="ko"
+                                        selected={endDate} 
+                                        onChange={(date) => setEndDate(date)}
+                                        dateFormat="yyyy-MM-dd"
+                                        dateFormatCalendar="yyyy년 MM월"
+                                        disabledKeyboardNavigation={true}
+                                        onKeyDown={(e) => {
+                                            e.preventDefault();
+                                        }}
+                                        onChangeRaw={(e) => e.preventDefault()}
+                                        popperPlacement="bottom"
+                                        popperModifiers={{
+                                            flip: {
+                                                behavior: ["bottom"] // don't allow it to flip to be above
+                                            },
+                                            preventOverflow: {
+                                                enabled: true // tell it not to try to stay within the view (this prevents the popper from covering the element you clicked)
+                                            },
+                                            hide: {
+                                                enabled: true // turn off since needs preventOverflow to be enabled
+                                            }
+                                        }}
+                                    />
                                 </div>
                                 <img style={{top: '3.44rem', right: '3.94rem'}} src={CalendarIcon} alt="" className="w-14 absolute" />
                             </>
