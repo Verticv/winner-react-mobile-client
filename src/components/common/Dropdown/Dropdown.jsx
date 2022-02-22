@@ -18,6 +18,8 @@ const SortBy = ({ children, options, value, onChange, onClick, multiple}) => (
           {option}
         </option>
       ))}
+              <button>asd</button>
+
     </select>
     <label style={{fontSize: '2.625rem'}} className="custom" htmlFor="filter-select">
       {children}
