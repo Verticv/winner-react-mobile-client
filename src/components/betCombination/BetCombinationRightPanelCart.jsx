@@ -114,11 +114,13 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 borderColor: "#b3bac1",
                 borderRadius: '0.75rem'
             }} 
-            className="flex rounded-lg flex-shrink-0 border hover:opacity-75"
+            className="flex rounded-lg flex-shrink-0 border"
+            onPointerDown={() => setButtonClicked(amount)}
             onPointerUp={() => {
                 setInputValue(inputValue + amount)
-                setButtonClicked(amount)
+                setButtonClicked(null)
             }}
+            onPointerOut={() => setButtonClicked(null)}
         >
             <div 
                 style={{

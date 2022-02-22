@@ -91,8 +91,8 @@ const HorizontalMenu3 = ({
                             </span>
                         </div>
                         
-                        <div className="flex items-center -mt-1">
-                            <img style={{width: '2.8875rem', marginRight: '0.6875rem', marginBottom: "1rem"}} className="object-contain" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
+                        <div className="flex items-center -mt-3">
+                            <img style={{width: '2.8875rem', marginRight: '0.6875rem', marginBottom: "1rem"}} className="object-contain mt-1" src={selectedTab === item.path ? ClockIconWhite : ClockIcon} alt="" />
                             <div 
                                 style={{fontSize: '3.575rem', color: selectedTab === item.path ? "#ffffff" : "#748496"}}
                                 className="tracking-tight font-swagger flex items-center"

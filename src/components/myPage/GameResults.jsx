@@ -14,7 +14,6 @@ import SportsContent from './gameResults/SportsContent'
 import { Route } from 'react-router'
 import Navbar from '../mainPage/Navbar'
 import NoticeBanner from '../mainPage/NoticeBanner'
-import Sports from './gameResults/Sports'
 import subIcon1 from '../../images/newImages/mainPage/results/1.png';
 import subIcon3 from '../../images/newImages/mainPage/results/3.png';
 import Logo from "../../images/newImages/mainPage/icons/logo.png";
@@ -24,6 +23,8 @@ import MinigamesMatchResultPanel from 'components/common/cards/MinigamesMatchRes
 import CardHeader from 'components/common/sportCards/CardHeader';
 import PowerballResultsTable from 'components/PowerballResultsTable';
 import MinigameTab from './gameResults/MinigameTab';
+import Sports1 from './gameResults/Sports1';
+import TableHeader2 from 'components/common/sportCards/TableHeader2';
 
 const tabsArray = [
     { text: "스포츠", icon: Icon1, id: 0, path: "/mypage/gameresults/all" },
@@ -146,7 +147,7 @@ const GameResults = ({isAuthenticated}) => {
                         </div>
                     </div>
 
-                        <Sports />
+                        <Sports1 />
                         <SportsContent checkedState={checkedState} setCheckedState={setCheckedState} />
                         <div style={{marginTop: '1.875rem'}}>
                             <Pagination page={page} setPage={setPage}/>
@@ -186,8 +187,9 @@ const GameResults = ({isAuthenticated}) => {
                 <DateSearchBar isLeagueSearch={false} withBlackButton hasDateSuggestion={false} />
 
                 <Route exact path="/mypage/gameresults/minigame/powerball">
-                    <div style={{borderRadius:"1em", margin: '1.875rem', marginTop: '1.8rem'}} className="shadow-subNavbar overflow-hidden">
-                        <div className="flex flex-col w-full p-4">
+                    <div style={{borderRadius:"1em", margin: '1.875rem', marginTop: '1.9rem'}} className="shadow-subNavbar overflow-hidden bg-gray-fafafa">
+                        <TableHeader2 isMinigame={true} />
+                        <div className="flex flex-col w-full px-4 pb-4">
                             <CardHeader flag = 'us' name = '파워볼' date = '2021-06-29 15:45' isMinigame={true} minigameType="powerball" />
                             <PowerballResultsTable checkedState={checkedState} setCheckedState={setCheckedState} array={inboxArray}/>
                         </div>

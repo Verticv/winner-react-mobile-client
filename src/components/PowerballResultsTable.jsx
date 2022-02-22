@@ -28,28 +28,19 @@ const PowerballResultsTable = ({
                     }}
                     className="flex items-center font-spoqaMedium tracking-tight text-gray-r454545 h-full" >     
                                
-                    <div style={{fontSize: '2.625rem'}} className='w-full h-full flex flex-wrap'>
-                        <div className= "text-gray-585858 font-spoqaMedium  flex items-center space-x-12">
-                          <div className= "text-gray-585858 font-spoqaMedium  flex items-center space-x-3">
-                            <p style={{textOverflow: 'ellipsis', maxWidth: '65rem', fontSize: '2.625rem'}} className="group-hover:text-gray-r585858 text-4xl text-ellipsis overflow-hidden whitespace-nowrap">경기일시 :</p>
-                            <p style={{textOverflow: 'ellipsis', maxWidth: '65rem', color:"#7b7b7b", fontSize: '2.625rem'}} className="group-hover:text-gray-r7b7b7b text-4xl text-ellipsis overflow-hidden whitespace-nowrap  font-spoqa">{item.time}</p>
-                          </div>
-                          <div className= "text-gray-585858 font-spoqaMedium  flex items-center space-x-3">
-                            <p style={{textOverflow: 'ellipsis', maxWidth: '65rem', fontSize: '2.625rem'}} className="group-hover:text-gray-r585858 text-4xl text-ellipsis overflow-hidden whitespace-nowrap">회차 :</p>
-                            <p style={{textOverflow: 'ellipsis', maxWidth: '65rem', color:"#7b7b7b", fontSize: '2.625rem'}} className="group-hover:text-gray-r7b7b7b text-4xl text-ellipsis overflow-hidden whitespace-nowrap font-spoqa">{item.num}</p>
-                          </div>                     
-                        </div>
-
-                        <div className= "text-gray-585858 font-spoqaMedium  flex items-center space-x-12">
-                          <div className= "text-gray-585858 font-spoqaMedium  flex items-center space-x-3">
-                            <p style={{textOverflow: 'ellipsis', maxWidth: '65rem', fontSize: '2.625rem'}} className="group-hover:text-gray-r585858 text-4xl text-ellipsis overflow-hidden whitespace-nowrap">결과 :</p>
-                            <p style={{textOverflow: 'ellipsis', maxWidth: '65rem', color:"#0056a6", fontSize: '2.625rem'}} className="text-4xl text-ellipsis overflow-hidden whitespace-nowrap font-spoqa">{item.results}</p>
-                          </div>
-                          <div className= "text-gray-585858 font-spoqaMedium  flex items-center space-x-3">
-                            <p style={{textOverflow: 'ellipsis', maxWidth: '65rem', fontSize: '2.625rem'}} className="group-hover:text-gray-r585858 text-4xl text-ellipsis overflow-hidden whitespace-nowrap">배당률 :</p>
-                            <p style={{textOverflow: 'ellipsis', maxWidth: '65rem', color:"#7b7b7b", fontSize: '2.625rem'}} className="group-hover:text-gray-r7b7b7b text-4xl text-ellipsis overflow-hidden whitespace-nowrap font-spoqa">{item.ratio}</p>
-                          </div>                     
-                        </div>
+                    <div style={{fontSize: '2.625rem'}} className='w-full h-full flex first-letter:space-x-12 items-center text-gray-585858 font-spoqaMedium'>
+                      <p 
+                      style={{textOverflow: 'ellipsis', maxWidth: '15rem', color:"#7b7b7b", fontSize: '2.625rem'}} 
+                      className="group-hover:text-gray-r7b7b7b text-4xl text-ellipsis overflow-hidden text-center  font-spoqa flex-shrink-0">{item.time}</p>
+                      <p 
+                      style={{textOverflow: 'ellipsis', maxWidth: '20rem', color:"#7b7b7b", fontSize: '2.625rem', marginLeft: "7rem"}} 
+                      className="group-hover:text-gray-r7b7b7b text-4xl text-ellipsis overflow-hidden font-spoqa text-center flex-shrink-0">{item.num}</p>
+                      <p 
+                      style={{textOverflow: 'ellipsis', maxWidth: '15rem', color:"#0056a6", fontSize: '2.625rem', marginLeft: "9.3rem"}} 
+                      className="text-4xl text-ellipsis overflow-hidden font-spoqa text-center flex-shrink-0">{item.results}</p>
+                      <p 
+                      style={{textOverflow: 'ellipsis', maxWidth: '20rem', color:"#7b7b7b", fontSize: '2.625rem', marginLeft: "8rem"}} 
+                      className="group-hover:text-gray-r7b7b7b text-4xl text-ellipsis overflow-hidden font-spoqa text-center flex-shrink-0">{item.ratio}</p>
                     </div>
                     
                 </div>

@@ -14,7 +14,7 @@ const SubHorizontalMenu3 = ({
             // TODO: remove this
             let imageWidth = '4.81rem'
             if (index > 0) {
-                imageWidth = '19rem';
+                imageWidth = '18rem';
             }
 
             return (

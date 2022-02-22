@@ -188,8 +188,8 @@ const MoneyExchange = () => {
                                 className="w-full font-spoqa text-gray-bebebe outline-none placeholder-gray-bebebe"
                                 style={{fontSize: '2.625rem', marginBottom: '0.9375rem'}}
                                 placeholder="비밀번호를 입력하세요."
-                                value={secondInputValue !==null ? nf.format(secondInputValue) : ""}
-                                onChange={e => setSecondInputValue(e.target.value.replace(/,/g, ''))}
+                                value={secondInputValue !==null ? secondInputValue : ""}
+                                onChange={e => setSecondInputValue(e.target.value)}
                                 onFocus={() => {
                                     const menu = document.querySelector('#main-menu');
                                     menu.style.marginBottom  = '-14.075rem'
@@ -200,12 +200,12 @@ const MoneyExchange = () => {
                                     menu.style.marginBottom = '0'
                                     SecondInputClicked(false)
                                 }}
-                                onKeyPress={(event) => {
-                                    if (!/[0-9]/.test(event.key)) {
-                                        event.preventDefault();
-                                    }
-                                }}
-                                type = "tel"
+                                // onKeyPress={(event) => {
+                                //     if (!/[0-9]/.test(event.key)) {
+                                //         event.preventDefault();
+                                //     }
+                                // }}
+                                type = "password"
                             />
                             <div style={{height: '0.1875rem'}} className={`${secondInputClicked ? "bg-blue-r1ca7ec" : "bg-gray-bebebe"} w-full`}></div>
                         </div>
