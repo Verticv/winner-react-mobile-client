@@ -992,7 +992,7 @@ const BetCombinationPanel = ({
                                 <img className='ml-4' style={{width: '1.3125rem', height: '1.125rem'}} src={DownIcon} alt="" />
                             )}
                             </span>
-                        <span className="truncate font-spoqaMedium tracking-tight text-left mt-1">{truncate(team2, 10, 7) }</span>
+                        <span className="truncate font-spoqaMedium tracking-tight text-left mt-1">{team2 === "FC Blau Weiss Linz" ? truncate(team2, 13, 13) : truncate(team2, 10, 8) }</span>
                     </div>
                 </button>
             </div>
@@ -1128,11 +1128,11 @@ const BetCombinationPanel = ({
                     <img className='w-7 h-7 object-contain animate-pulse' src={ArrowUp} alt="" />
                 </div>
                 <div style={{fontSize: '2.625rem', marginLeft: "14.8rem"}} className="h-full flex items-center flex-shrink-0">무</div>
-                <div style={{fontSize: '2.625rem', marginLeft: "11.55rem"}} className="h-full flex items-center flex-shrink-0 space-x-2">
+                <div style={{fontSize: '2.625rem', marginLeft: "13.4rem"}} className="h-full flex items-center flex-shrink-0 space-x-2">
                     <p>패(원정)</p>
                     <img className='w-7 h-7 object-contain animate-pulse' src={ArrowDown} alt="" />
                 </div>
-                <div style={{fontSize: '2.625rem', marginLeft: "12.7rem"}} className="h-full mr-8 flex items-center flex-shrink-0">정보</div>
+                <div style={{fontSize: '2.625rem', marginLeft: "10rem"}} className="h-full mr-8 flex items-center flex-shrink-0">정보</div>
             </div>
         
 

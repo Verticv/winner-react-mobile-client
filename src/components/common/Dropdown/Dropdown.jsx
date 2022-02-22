@@ -8,6 +8,7 @@ const SortBy = ({ children, options, value, onChange, onClick, multiple}) => (
     <select
       className="select-overlay"
       id="filter-select"
+      name="filter-select[]"
       value={value}
       onChange={onChange}
       onClick={onClick}
@@ -18,8 +19,6 @@ const SortBy = ({ children, options, value, onChange, onClick, multiple}) => (
           {option}
         </option>
       ))}
-              <button>asd</button>
-
     </select>
     <label style={{fontSize: '2.625rem'}} className="custom" htmlFor="filter-select">
       {children}

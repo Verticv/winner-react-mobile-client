@@ -92,17 +92,17 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                    </div>
                 {/* ): */}
                 <Expand className='z-50 bg-white rounded-t-3xl shadow-plain' duration={200} open={openedCart}>
-                 <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? '100vh' : 'unset', paddingTop: '1.875rem', paddingLeft: '1.875rem', paddingRight: '1.875rem'}}>
-                    <BetCombinationRightPanel 
-                        addedCard={addedCard} 
-                        setAddedCard={setAddedCard} 
-                        isPanelFixed={isPanelFixed} 
-                        setPanelFixed={setPanelFixed} 
-                        setOpenedCart={setOpenedCart}
-                    />
-                  </div>
-                  </Expand>
-                  {/* } */}
+                    <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? '100vh' : 'unset', paddingTop: '1.875rem'}}>
+                        <BetCombinationRightPanel 
+                            addedCard={addedCard} 
+                            setAddedCard={setAddedCard} 
+                            isPanelFixed={isPanelFixed} 
+                            setPanelFixed={setPanelFixed} 
+                            setOpenedCart={setOpenedCart}
+                        />
+                    </div>
+                </Expand>
+                {/* } */}
                 
             </div>
         </div>

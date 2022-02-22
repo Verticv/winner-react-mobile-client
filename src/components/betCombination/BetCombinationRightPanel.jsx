@@ -48,10 +48,12 @@ const BetCombinationRightPanel = ({
             style={{
                 background: "linear-gradient(to bottom, #748697, #8494a4", 
                 height: '8.5625rem',
-                padding: '0 1.125rem 0 1.125rem',
+                padding: '0 0.525rem 0 1.125rem',
                 borderRadius: '1.6875rem',
+                marginLeft: '1.875rem', 
+                marginRight: '1.875rem'
             }}
-            className="relative w-full z-20 rounded-t-lg flex items-center justify-between ">
+            className="relative z-20 rounded-t-lg flex items-center justify-between ">
                 <div style={{fontSize: '2.625rem'}} className="flex items-center pt-1">
                     <p style={{marginRight: '1.9375rem', fontSize: '2.625rem'}} className='ml-3 text-white font-spoqaMedium'>2021-08-02 (월)</p>
                     <div style={{color:"#ffe672", fontSize: '3.375rem'}} className="flex font-spoqaBold tracking-tight items-center">
@@ -106,14 +108,17 @@ const BetCombinationRightPanel = ({
                 </div>
             </div>
 
-            <div style={{marginBottom: '2.0625rem'}} className="bg-white flex flex-col">
+            <div style={{marginBottom: '2.0625rem',paddingLeft: '1.875rem', paddingRight: '1.875rem'}} className="bg-white flex flex-col">
                 <BetCartHorizontalMenu2 itemsArray={tabsArray} setSelectedTab={setSelectedTab} isState={selectedTab} setState={setSelectedTab} />
             </div>
             {/* <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerball"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} /> */}
 
             <div style={{maxHeight: "calc(100vh - 24rem)"}} className='overflow-y-scroll max-h-screen pb-8'>
                 <Route exact path="/bet-combination">
+                    <div style={{paddingLeft: '1.875rem', paddingRight: '1.875rem'}}>
                     <BetCombinationRightPanelCart addedCard={addedCard} setAddedCard={setAddedCard} />     
+
+                    </div>
                 </Route>
                 <Route path="/bet-combination/history">
                     <BetCombinationRightPanelHistory /> 

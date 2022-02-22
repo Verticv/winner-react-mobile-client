@@ -17,7 +17,7 @@ const BetCombinationRightPanelHistory = () => {
         >
             <div 
                 style={{height:"5.9375rem", backgroundColor: "#8494a4", paddingLeft: '1.625rem'}}
-                className="flex flex-shrink-0 items-center font-spoqaMedium flex items-center text-white tracking-tight"
+                className="flex flex-shrink-0 items-center font-spoqaMedium flex items-center text-white tracking-tight pt-1"
             >
                 {title}
             </div>
@@ -88,9 +88,9 @@ const BetCombinationRightPanelHistory = () => {
 
     return (
         <div>
-            <div style={{marginTop: '2.0625rem'}} className="bg-white flex flex-col">
+            <div className="bg-white flex flex-col">
 
-                <div className="flex flex-col">
+                <div style={{paddingLeft: '1.875rem', paddingRight: '1.875rem'}} className="flex flex-col">
                     <HistoryCard team1="FK Haugesund" team2="스트룀스고세 IF" side="left" winStatus="lose" />
                     <HistoryCard title="오스트리아 - 컵" team1="SV Kuchl" team2="FC Blau Weiss Linz" side="right" winStatus="win" />
                     <ResultsCard />
@@ -98,9 +98,9 @@ const BetCombinationRightPanelHistory = () => {
 
             </div>
 
-            <div className='bg-gray-dddddd' style={{height: '0.1875rem', width: '74.625rem', margin: '1.875rem 0', marginLeft: '-1.875rem'}}></div>
+            <div className='bg-gray-dddddd w-full' style={{height: '0.1875rem', margin: '1.875rem 0'}}></div>
 
-            <div className="bg-white flex flex-col rounded-b-lg">
+            <div style={{paddingLeft: '1.875rem', paddingRight: '1.875rem'}} className="bg-white flex flex-col rounded-b-lg">
 
                 <div className="flex flex-col">
                     <HistoryCard title="러시아 - Liga Pro Women" team1="Malahlt" team2="Granat" side="right" type="배구 - 승무패 (게임)" winStatus="win" />

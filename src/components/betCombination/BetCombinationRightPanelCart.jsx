@@ -49,7 +49,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                         fontSize: '2.625rem',
                         background: "linear-gradient(120deg, #ffffff, #e0e2e6)"
                     }}
-                    className="relative h-full w-full border pl-6 border-gray-cccccc"
+                    className="relative h-full w-full border pl-6 border-gray-cccccc pt-1"
                 >
                     <p 
                         style={{color: item.value === "right" ? "#d52e2e" : "#454545"}} 
@@ -59,7 +59,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                     </p>
                     <p 
                         style={{color: item.value === "right" ? "#454545" : "#d52e2e"}} 
-                        className="font-spoqaBold tracking-tight flex items-center -mt-1"
+                        className="font-spoqaBold tracking-tight flex items-center -mt-2"
                     >
                         {item.value === "right" ? "FC Blau Weiss Linz" : "스트룀스고세 IF"}
                     </p>
@@ -174,7 +174,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
 
                 {!addedCard.length ? (
                     <div style={{height: "6.3125rem", paddingLeft: '1.7rem', marginBottom: '1.875rem', fontSize: '2.625rem', backgroundColor: "#e8e8e8", marginTop: '0.875rem'}} className="w-full rounded-2xl border border-gray-dddddd flex items-center">
-                        <p className="font-spoqaMedium tracking-tight text-gray-r454545">베팅을 선택하세요.</p>
+                        <p className="font-spoqaMedium tracking-tight text-gray-r454545 mt-1">베팅을 선택하세요.</p>
                     </div>
                 ) : (
                     <div style={{marginBottom: '2.0625rem'}} className="mb-6">
@@ -187,28 +187,28 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 <p style={{fontSize: '3rem'}} className="font-robotoBold tracking-tight text-blue-r0056a6">3,522,170</p>
             </div>
 
-            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.525rem', borderBottomWidth: '0.1875rem'}} className="pt-1 border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.525rem', borderBottomWidth: '0.1875rem'}} className="pt-1 border-b bg-gray-fafafa border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">베팅 최소금액</p>
                 <p style={{color: "#d52e2e"}} className="font-robotoRegular tracking-tight">5,000</p>
             </div>
             
-            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.525rem', borderBottomWidth: '0.1875rem'}} className="pt-1 border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.525rem', borderBottomWidth: '0.1875rem'}} className="pt-1 border-b bg-gray-fafafa border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">베팅 최대금액</p>
                 <p className="font-robotoRegular tracking-tight text-gray-r454545">7,000,000</p>
             </div>
 
-            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.525rem', borderBottomWidth: '0.1875rem'}} className="pt-1 border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '2.75rem', paddingRight: '2.0625rem', fontSize: '2.525rem', borderBottomWidth: '0.1875rem'}} className="pt-1 border-b bg-gray-fafafa border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r7b7b7b">적중 최대금액</p>
                 <p className="font-robotoRegular tracking-tight text-gray-r454545">20,000,000</p>
             </div>
 
-            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="pt-2 border-b border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r454545">배당률합계</p>
                 <p style={{color: "#f26522"}} className="font-roboto tracking-tight text-blue-r0056a6">1.00</p>
             </div>
 
             <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '0rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
-                <p className="font-spoqaMedium tracking-tight text-gray-r454545">베팅금액</p>
+                <p className="font-spoqaMedium tracking-tight text-gray-r454545 mt-2">베팅금액</p>
                 <input 
                     style={{color: "#d52e2e", width: "36.875rem", height: "5.375rem", backgroundColor: "#e8e8e8", borderWidth: '0.1875rem'}} 
                     className="flex items-center justify-end pr-8 border rounded-lg border-gray-dddddd font-roboto tracking-tight outline-none text-right"
@@ -223,7 +223,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                 />
             </div>
 
-            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="border-b border-gray-dddddd flex items-center justify-between">
+            <div style={{height: '6.875rem', paddingLeft: '1.8125rem', paddingRight: '2.0625rem', fontSize: '2.625rem', borderBottomWidth: '0.1875rem'}} className="pt-2 border-b border-gray-dddddd flex items-center justify-between">
                 <p className="font-spoqaMedium tracking-tight text-gray-r454545">적중예상금액</p>
                 <p className="font-roboto tracking-tight text-blue-r0056a6">11,000</p>
             </div>
