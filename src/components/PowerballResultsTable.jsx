@@ -30,17 +30,17 @@ const PowerballResultsTable = ({
                                
                     <div style={{fontSize: '2.625rem'}} className='w-full h-full flex first-letter:space-x-12 items-center text-gray-585858 font-spoqaMedium'>
                       <p 
-                      style={{textOverflow: 'ellipsis', maxWidth: '15rem', color:"#7b7b7b", fontSize: '2.625rem'}} 
-                      className="group-hover:text-gray-r7b7b7b text-4xl text-ellipsis overflow-hidden text-center  font-spoqa flex-shrink-0">{item.time}</p>
+                      style={{maxWidth: '15rem', color:"#7b7b7b", fontSize: '2.625rem'}} 
+                      className="group-hover:text-gray-r7b7b7b text-4xl text-center font-spoqa flex-shrink-0 leading-tight">{item.time}</p>
                       <p 
-                      style={{textOverflow: 'ellipsis', maxWidth: '20rem', color:"#7b7b7b", fontSize: '2.625rem', marginLeft: "7rem"}} 
-                      className="group-hover:text-gray-r7b7b7b text-4xl text-ellipsis overflow-hidden font-spoqa text-center flex-shrink-0">{item.num}</p>
+                      style={{maxWidth: '20rem', color:"#7b7b7b", fontSize: '2.625rem', marginLeft: "7rem"}} 
+                      className="group-hover:text-gray-r7b7b7b text-4xl font-spoqa text-center flex-shrink-0 leading-tight">{item.num}</p>
                       <p 
-                      style={{textOverflow: 'ellipsis', maxWidth: '15rem', color:"#0056a6", fontSize: '2.625rem', marginLeft: "9.3rem"}} 
-                      className="text-4xl text-ellipsis overflow-hidden font-spoqa text-center flex-shrink-0">{item.results}</p>
+                      style={{maxWidth: '15rem', color:"#0056a6", fontSize: '2.625rem', marginLeft: "9.3rem"}} 
+                      className="text-4xl font-spoqa text-center flex-shrink-0 leading-tight">{item.results}</p>
                       <p 
-                      style={{textOverflow: 'ellipsis', maxWidth: '20rem', color:"#7b7b7b", fontSize: '2.625rem', marginLeft: "8rem"}} 
-                      className="group-hover:text-gray-r7b7b7b text-4xl text-ellipsis overflow-hidden font-spoqa text-center flex-shrink-0">{item.ratio}</p>
+                      style={{maxWidth: '20rem', color:"#7b7b7b", fontSize: '2.625rem', marginLeft: "8rem"}} 
+                      className="group-hover:text-gray-r7b7b7b text-4xl font-spoqa text-center flex-shrink-0 leading-tight">{item.ratio}</p>
                     </div>
                     
                 </div>

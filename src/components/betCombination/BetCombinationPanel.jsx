@@ -794,7 +794,7 @@ const BetCombinationPanel = ({
                         background: "linear-gradient(to bottom, #f8a351, #f38236)" ,
                         color: "#ffffff",
                         textShadow: "1px 1px 0px rgba(0,0,0,0.5)",
-                        padding: '0 0.7875rem'
+                        padding: '0 1.3125rem'
                     }}  
                     className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
                 >
@@ -845,7 +845,7 @@ const BetCombinationPanel = ({
                         background: "linear-gradient(to bottom, #f8a351, #f38236)",
                         color: "#ffffff",
                         textShadow: "1px 1px 0px rgba(0,0,0,0.5)",
-                        padding: '0 0.7875rem'
+                        padding: '0 1.3125rem'
                     }}  
                     className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
                 >

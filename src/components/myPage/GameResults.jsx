@@ -67,7 +67,7 @@ const inboxArray = [
         id: 2,
         time: "2021-06-29 15:45",
         num: "211",
-        results: "파워볼 구간 (A(0~2))",
+        results: "파워볼 구간 A(0~2)",
         ratio: "3.15"
     },
     {
