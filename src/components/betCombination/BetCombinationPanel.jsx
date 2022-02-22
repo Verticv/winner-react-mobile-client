@@ -5,9 +5,9 @@ import BonusCell from '../../images/newImages/event.png'
 import Gift from '../../images/newImages/gift.png'
 import NormalCell from '../../images/newImages/blue-card.png'
 import FootballIcon from '../../images/newImages/soccer.png'
-// import GlobeIcon from '../../images/newImages/world.png'
-// import ArrowBlack from '../../images/newImages/down.png'
-// import DropDownControls from 'components/dropdowns/SportNonLiveDropDownControls'
+import GlobeIcon from '../../images/newImages/world.png'
+import ArrowBlack from '../../images/newImages/down.png'
+import DropDownControls from 'components/dropdowns/SportNonLiveDropDownControls'
 import T1 from '../../images/betCombination/t1.png'
 import T2 from '../../images/betCombination/t2.png'
 import T3 from '../../images/betCombination/t3.png'
@@ -39,7 +39,7 @@ import Jewel from '../../images/newImages/jewel.png'
 import _uniqueId from 'lodash/uniqueId';
 import './BetCombination.css'
 // import Dropdown from 'components/common/Dropdown/Dropdown'
-import DropDownInput from 'components/common/DropDownInput'
+// import DropDownInput from 'components/common/DropDownInput'
 
 const BetCombinationPanel = ({
     addedCard, 
@@ -643,7 +643,7 @@ const BetCombinationPanel = ({
         
     ]
 
-    // const [isDropdownOpen, setDropdownOpen] = useState(true)
+    const [isDropdownOpen, setDropdownOpen] = useState(true)
     const [selectedCarrier, setSelectedCarrier] = useState("국가선택")
     const [isHover1, setHover1] = useState(null)
     const [isOpen, setOpen] = useState(new Array(20).fill(false))
@@ -660,111 +660,111 @@ const BetCombinationPanel = ({
         }
     }, [selectedCarrier])
 
-    // const gameResultButton = (
-    //     <div
-    //         style={{
-    //             width: "35.25rem",
-    //             height: "6.75rem",
-    //             borderWidth: '0.1875rem',
-    //             fontSize: '2.625rem'
-    //         }}
-    //         className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-2xl border border-gray-cccccc font-spoqaMedium text-15px tracking-tight text-gray-r454545 group" 
-    //     >
-    //         <div className="flex">
-    //             <img style={{width: '3.75rem', marginLeft: '2.0625rem', marginRight: '0.9375rem'}} className="object-contain" src={GlobeIcon} alt="" />
-    //             <p style={{color:"#7b7b7b"}} className="group-hover:text-black">{selectedCarrier}</p>
-    //         </div>
-    //         <img style={{width: '1.5625rem', marginRight: '2.0625rem'}} src={ArrowBlack} alt="" />
-    //     </div>
-    // )
+    const gameResultButton = (
+        <div
+            style={{
+                width: "35.25rem",
+                height: "6.75rem",
+                borderWidth: '0.1875rem',
+                fontSize: '2.625rem'
+            }}
+            className="flex items-center justify-between bg-white placeholder-gray-r8c8c8c outline-none rounded-2xl border border-gray-cccccc font-spoqaMedium text-15px tracking-tight text-gray-r454545 group" 
+        >
+            <div className="flex">
+                <img style={{width: '3.75rem', marginLeft: '2.0625rem', marginRight: '0.9375rem'}} className="object-contain" src={GlobeIcon} alt="" />
+                <p style={{color:"#7b7b7b"}} className="group-hover:text-black">{selectedCarrier}</p>
+            </div>
+            <img style={{width: '1.5625rem', marginRight: '2.0625rem'}} src={ArrowBlack} alt="" />
+        </div>
+    )
 
-    // const handleOnChange = (position) => {
-    //     const updatedCheckedState = checkedState.map((item, index) =>
-    //       index === position ? !item : item
-    //     );
-    //     setCheckedState(updatedCheckedState);
-    // }; 
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+          index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);
+    }; 
 
-    // function SearchDropdownCell({ items }) {
-    //     return items.map(item => {
-    //         let isChecked = checkedState[item.id]
-    //         return (
-    //             <label style={{height: '8rem', display: 'block', padding: '1.875rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0'}} className="form-control relative w-full border-b border-gray-ececec">
-    //                 {item.text}
-    //                 <input
-    //                     style={{right: '1.875rem', top: '2.5rem'}}
-    //                     className='w-12 h-12 absolute right-0'
-    //                     type="checkbox"
-    //                     checked={isChecked}
-    //                     name={item.text}
-    //                     onChange={() => handleOnChange(item.id)}
-    //                 />
-    //             </label>
+    function SearchDropdownCell({ items }) {
+        return items.map(item => {
+            let isChecked = checkedState[item.id]
+            return (
+                <label style={{height: '8rem', display: 'block', padding: '1.875rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0'}} className="form-control relative w-full border-b border-gray-ececec">
+                    {item.text}
+                    <input
+                        style={{right: '1.875rem', top: '2.5rem'}}
+                        className='w-12 h-12 absolute right-0'
+                        type="checkbox"
+                        checked={isChecked}
+                        name={item.text}
+                        onChange={() => handleOnChange(item.id)}
+                    />
+                </label>
 
-    //         )
-    //     });
-    // }
+            )
+        });
+    }
 
-    // const searchDropdown = (
-    //     <div className="flex flex-col items-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
-    //         <SearchDropdownCell items={filterArray} />
-    //         <div style={{padding: '1.875rem'}} className="w-full h-full flex items-center justify-center">
-    //             <button 
-    //                 style={{
-    //                     backgroundColor: "#171a1d",
-    //                     height:"7.3125rem",
-    //                     padding: '1px',
-    //                 }} 
-    //                 className="relative w-1/2 flex mr-4 items-center justify-center rounded-xl hover:opacity-75"
-    //                 onClick={() => setDropdownOpen(false)}
-    //             >
-    //                 <div 
-    //                     style={{
-    //                         borderColor: "#737579",
-    //                         background: "linear-gradient(to bottom, #585b5e, #303337)",
-    //                     }} 
-    //                     className="flex w-full h-full items-center rounded-lg justify-center border cursor-pointer"
-    //                 >
-    //                     <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
-    //                         확인
-    //                     </span>
-    //                 </div>
-    //             </button>
-    //             <button 
-    //                 style={{
-    //                     backgroundColor: "#cb4343",
-    //                     height:"7.3125rem",
-    //                     padding: '1px',
-    //                 }} 
-    //                 className="relative w-1/2 flex items-center justify-center rounded-xl hover:opacity-75"
-    //                 onClick={() => setCheckedState(filterArray.fill(false))}
-    //             >
-    //                 <div 
-    //                     style={{
-    //                         borderColor: "#f36576",
-    //                         background: "linear-gradient(to bottom, #f03a50, #cf254d)",
-    //                     }} 
-    //                     className="flex w-full h-full items-center justify-center rounded-lg border cursor-pointer"
-    //                 >
-    //                     <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
-    //                         초기화
-    //                     </span>
-    //                 </div>
-    //             </button>
-    //         </div>
-    //     </div>
-    // )
+    const searchDropdown = (
+        <div className="flex flex-col items-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl">
+            <SearchDropdownCell items={filterArray} />
+            <div style={{padding: '1.875rem'}} className="w-full h-full flex items-center justify-center">
+                <button 
+                    style={{
+                        backgroundColor: "#171a1d",
+                        height:"7.3125rem",
+                        padding: '1px',
+                    }} 
+                    className="relative w-1/2 flex mr-4 items-center justify-center rounded-xl hover:opacity-75"
+                    onClick={() => setDropdownOpen(false)}
+                >
+                    <div 
+                        style={{
+                            borderColor: "#737579",
+                            background: "linear-gradient(to bottom, #585b5e, #303337)",
+                        }} 
+                        className="flex w-full h-full items-center rounded-lg justify-center border cursor-pointer"
+                    >
+                        <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
+                            확인
+                        </span>
+                    </div>
+                </button>
+                <button 
+                    style={{
+                        backgroundColor: "#cb4343",
+                        height:"7.3125rem",
+                        padding: '1px',
+                    }} 
+                    className="relative w-1/2 flex items-center justify-center rounded-xl hover:opacity-75"
+                    onClick={() => setCheckedState(filterArray.fill(false))}
+                >
+                    <div 
+                        style={{
+                            borderColor: "#f36576",
+                            background: "linear-gradient(to bottom, #f03a50, #cf254d)",
+                        }} 
+                        className="flex w-full h-full items-center justify-center rounded-lg border cursor-pointer"
+                    >
+                        <span style={{textShadow: "1px 1px 1px #00000070", fontSize: '2.8125rem'}} className="font-spoqaMedium tracking-tight text-white" >
+                            초기화
+                        </span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    )
 
     const InboxSearch = (
 
-        <DropDownInput isBetCombination={true} />
-        // <DropDownControls
-        //     buttonChild={gameResultButton} 
-        //     isDropdownOpen={isDropdownOpen} 
-        //     setDropdownOpen={setDropdownOpen}
-        // >
-        //     {searchDropdown}
-        // </DropDownControls>
+        // <DropDownInput isBetCombination={true} />
+        <DropDownControls
+            buttonChild={gameResultButton} 
+            isDropdownOpen={isDropdownOpen} 
+            setDropdownOpen={setDropdownOpen}
+        >
+            {searchDropdown}
+        </DropDownControls>
     )
 
     const EventOptions = ({
