@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./style.css";
 
 
-const SortBy = ({ children, options, value, onChange, onClick}) => (
+const SortBy = ({ children, options, value, onChange, onClick, multiple}) => (
   <div className="container">
     <select
       className="select-overlay"
@@ -11,6 +11,7 @@ const SortBy = ({ children, options, value, onChange, onClick}) => (
       value={value}
       onChange={onChange}
       onClick={onClick}
+      multiple={multiple}
     >
       {options.map(option => (
         <option key={option} value={option}>
@@ -24,7 +25,7 @@ const SortBy = ({ children, options, value, onChange, onClick}) => (
   </div>
 );
 
-const Dropdown = ({options, children, labelStyle, labelClasses, isLeagueSelection, isContact=false }) => {
+const Dropdown = ({options, children, labelStyle, labelClasses, isLeagueSelection, isContact=false, multiple=false }) => {
   const [sortValue, setSortValue] = useState(isContact ? "선택" : isLeagueSelection ? "리그선택" : "전체회차")
 
   const onChange = e => setSortValue(e.currentTarget.value);
@@ -36,6 +37,7 @@ const Dropdown = ({options, children, labelStyle, labelClasses, isLeagueSelectio
         value={sortValue}
         onChange={onChange}
         onClick={() => console.log('on click!')}
+        multiple={multiple}
       >
         <div className="flex w-full items-center justify-between">
           <div className={labelClasses} style={labelStyle}><p style={{marginTop:"0.5rem"}}>{sortValue}</p></div>

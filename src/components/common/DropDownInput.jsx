@@ -6,7 +6,7 @@ import GlobeIcon from '../../images/newImages/world.png'
 const DropDownInput = ({isLeagueSelection = true, isBetCombination = false}) => {
 
     const carrierOptions1 = ["league 1", "league 2", "league 3", "league 4", "league 5", "league 6", "league 7", "league 8", "league 9", "league 10"]
-    const carrierOptions3 = ["Alabama", "California", "Colorado", "Connecticut", "New York", "Country 1", "Country 2", "Country 3", "Country 4"]
+    const carrierOptions3 = ["러시아", "중국", "터키", "브라질", "칠레", "요르단", "폴란드", "아르헨티나", "헝가리", "이스라엘", "덴마크", "독일", "스웨덴", "루마니아", "잉글랜드", "북아일랜드", "스페인", "프랑스", "콜롬비아", "에콰도르", "미국"]
     const carrierOptions2 = ["234회", "235회", "236회", "237회", "238회", "239회", "240회"]
 
     if (isBetCombination) return (
@@ -20,7 +20,7 @@ const DropDownInput = ({isLeagueSelection = true, isBetCombination = false}) => 
                         className="flex w-full text-gray-r393e41 font-spoqaMedium outline-none rounded-2xl  border-gray-dddddd h-full justify-between items-center tracking-tight" 
                     >
 
-                        <Dropdown labelStyle={{marginLeft: '1.75rem', color: '#7b7b7b'}} options={carrierOptions3} isLeagueSelection={isLeagueSelection} labelClasses="pl-16">
+                        <Dropdown multiple={true} labelStyle={{marginLeft: '1.75rem', color: '#7b7b7b'}} options={carrierOptions3} isLeagueSelection={isLeagueSelection} labelClasses="pl-16">
                             <img style={{width: '4rem', height: '4rem'}} className="object-contain absolute ml-8 -mr-3 flex-shrink-0" src={GlobeIcon} alt="arrow" /> 
                             <img style={{width: '1.5625rem', marginRight: '1.875rem', height: '1rem'}} className="object-contain" src={DownArrowIcon} alt="arrow" /> 
                         </Dropdown>

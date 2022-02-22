@@ -99,7 +99,7 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                 <div className=" relative flex w-full">
 
                     <div className='w-full'>
-                        <div className="mt-4px">
+                        <div className="">
                             <BetCombinationPanel 
                                 addedCard={addedCard} 
                                 setAddedCard={setAddedCard} 

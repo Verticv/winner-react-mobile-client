@@ -793,7 +793,7 @@ const BetCombinationPanel = ({
                         borderColor: "#f9b26d",
                         background: "linear-gradient(to bottom, #f8a351, #f38236)" ,
                         color: "#ffffff",
-                        textShadow: "1px 1px 0px #00000050",
+                        textShadow: "1px 1px 0px rgba(0,0,0,0.5)",
                         padding: '0 1.3125rem'
                     }}  
                     className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
@@ -819,7 +819,7 @@ const BetCombinationPanel = ({
                         borderColor: "#f9b26d",
                         background: "linear-gradient(to bottom, #f8a351, #f38236)",
                         color: "#ffffff",
-                        textShadow: "1px 1px 0px #00000050"
+                        textShadow: "1px 1px 0px rgba(0,0,0,0.5)",
                     }}  
                     className="flex w-full h-full items-center justify-center rounded-lg border bg-gradient-to-b cursor-pointer"
                 >
@@ -844,7 +844,7 @@ const BetCombinationPanel = ({
                         borderColor:"#f9b26d",
                         background: "linear-gradient(to bottom, #f8a351, #f38236)",
                         color: "#ffffff",
-                        textShadow: "1px 1px 0px #00000050",
+                        textShadow: "1px 1px 0px rgba(0,0,0,0.5)",
                         padding: '0 1.3125rem'
                     }}  
                     className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
@@ -897,7 +897,7 @@ const BetCombinationPanel = ({
                 >
                     <div 
                         style={{
-                            padding: '0 0.6875rem',
+                            padding: '0 1.1875rem',
                             borderColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ff7982" : "#ffffff",
                             background:  (`${id}left` === isButtonClicked || `${id}left` === isHover3)
                             ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
@@ -907,13 +907,13 @@ const BetCombinationPanel = ({
                         }}  
                         className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
                     >
-                        <span className="truncate text-right font-spoqaMedium tracking-tight">{truncate(team1,10, 10)}</span>
+                        <span className="truncate text-right font-spoqaMedium tracking-tight mt-1">{truncate(team1,10, 10)}</span>
                         <span style={{color: stat1Color === "red" && `${id}left` !== isButtonClicked && `${id}left` !== isHover3 ? "#d52e2e" : ""}} className="flex items-center font-roboto tracking-tight">
                             {hasUp === true && (
                                 <img className='mr-4' style={{width: '1.3125rem', height: '1.125rem'}} src={UpIcon} alt="" />
                             )} 
                             <p>{stat1}</p>
-                            </span>
+                        </span>
                     </div>
                     {buttonWithExtraData?.text && (
                         <p style={{fontSize: '1.875rem', marginLeft: '1.4875rem'}} className="flex mt-4 w-full absolute top-0 left-0 items-center tracking-tight">
@@ -992,7 +992,7 @@ const BetCombinationPanel = ({
                                 <img className='ml-4' style={{width: '1.3125rem', height: '1.125rem'}} src={DownIcon} alt="" />
                             )}
                             </span>
-                        <span className="truncate font-spoqaMedium tracking-tight text-left">{truncate(team2, 10, 7) }</span>
+                        <span className="truncate font-spoqaMedium tracking-tight text-left mt-1">{truncate(team2, 10, 7) }</span>
                     </div>
                 </button>
             </div>
@@ -1140,7 +1140,7 @@ const BetCombinationPanel = ({
                 <img style={{width: '77.625rem'}} className="absolute object-contain" src={BonusCell} alt="" />
                 <img style={{width: '6.75rem'}} className="absolute left-6 z-50 object-contain" src={Gift} alt="" />
                 <div className="w-full z-20 flex items-center">
-                    <div style={{color:"#ffde00", textShadow: "1px 1px 0px #00000050", fontSize: '2.625rem', marginTop:"1.6rem"}} className="ml-36 font-spoqaMedium">보너스 이벤트</div>
+                    <p style={{color:"#ffde00", textShadow: "1px 1px 0px rgba(0, 0, 0, 0.4)", fontSize: '2.625rem', marginTop:"1.6rem"}} className="ml-36 font-spoqaMedium">보너스 이벤트</p>
                 </div>
                 <div style={{marginLeft: '1.5rem'}} className="w-full z-20 flex items-center mt-8">
                     <EventOptions 
