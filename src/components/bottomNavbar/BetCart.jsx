@@ -6,7 +6,6 @@ import CartIcon from '../../images/newImages/cart.png'
 import Expand from 'react-expand-animated'
 import Home from '../../images/newImages/mainPage/icons/navbar/home.png'
 import MyInfo from '../../images/tabbar/2.png'
-import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 
 const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPanelFixed}) => {
@@ -14,8 +13,6 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
     const [selectedGame, setSelectedGame] = useState(window.location.pathname)
     const [openedCartDelay, setOpenedCartDelay] = useState(false)
     console.log(`selectedGame`, selectedGame)
-
-    const history = useHistory()
 
     useEffect(() => {
       setSelectedGame(window.location.pathname)
@@ -52,7 +49,7 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
         <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className=" w-full z-50 rounded-t-3xl shadow-plain fixed bottom-0">
             <div className="flex items-center h-full">
                 {/* {!openedCart ? ( */}
-                   <div style={{height: "9.0625rem", padding: '0 3.6875rem'}} className={`${openedCartDelay ? "opacity-0 transition" : "opacity-100 transition"} bg-white rounded-t-3xl shadow-plain absolute bottom-0  flex w-full items-center h-full flex-shrink-0 justify-between`} onClick={() => setOpenedCart(true)}>
+                   <div style={{height: "9.0625rem", padding: '0 3.6875rem', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className={`${openedCartDelay ? "opacity-0 transition" : "opacity-100 transition"} bg-white shadow-plain absolute bottom-0  flex w-full items-center h-full flex-shrink-0 justify-between`} onClick={() => setOpenedCart(true)}>
                         <div style={{width: '40.625rem'}} className='flex items-center'>
                             <img style={{width: '4.0625rem', marginLeft: '', paddingBottom: ''}} className="object-contain" src={CartIcon} alt="" />
                             <div style={{width: '3.5625rem', height: '3.5625rem', marginRight: '1.125rem', background: "linear-gradient(to bottom right, #fb3e67, #d4184c)", boxShadow: "1px 1px 1px #00000060"}} className="flex-shrink-0 bg-red-notification text-4xl rounded-full text-white flex items-center justify-center font-roboto pt-1">
@@ -69,7 +66,6 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                                 <img 
                                     className='h-24 object-contain flex-shrink-0 mb-2 -mr-4 cursor-pointer' 
                                     onPointerUp={e => {
-                                        history.push('/main')
                                         e.preventDefault();
                                     }} 
                                     src={Home} 
@@ -80,7 +76,6 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                                 <img 
                                     className='h-24 object-contain flex-shrink-0 mb-2 -mr-6 cursor-pointer' 
                                     onPointerUp={e => {
-                                        history.push('/mypage')
                                         e.preventDefault();
                                     }} 
                                     src={MyInfo} 
@@ -92,7 +87,7 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                    </div>
                 {/* ): */}
                 <Expand className='z-50 bg-white rounded-t-3xl shadow-plain' duration={200} open={openedCart}>
-                    <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? '100vh' : 'unset', paddingTop: '1.875rem'}}>
+                    <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? '-webkit-fill-available' : 'unset', paddingTop: '1.875rem'}}>
                         <BetCombinationRightPanel 
                             addedCard={addedCard} 
                             setAddedCard={setAddedCard} 

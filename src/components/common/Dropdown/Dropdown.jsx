@@ -26,8 +26,8 @@ const SortBy = ({ children, options, value, onChange, onClick, multiple}) => (
   </div>
 );
 
-const Dropdown = ({options, children, labelStyle, labelClasses, isLeagueSelection, isContact=false, multiple=false }) => {
-  const [sortValue, setSortValue] = useState(isContact ? "선택" : isLeagueSelection ? "리그선택" : "전체회차")
+const Dropdown = ({options, children, labelStyle, labelClasses, isLeagueSelection=false, isContact=false, multiple=false,isSignup=false }) => {
+  const [sortValue, setSortValue] = useState(isContact ? "선택" : isLeagueSelection ? "리그선택" : isSignup ? options[0] : "전체회차")
 
   const onChange = e => setSortValue(e.currentTarget.value);
 

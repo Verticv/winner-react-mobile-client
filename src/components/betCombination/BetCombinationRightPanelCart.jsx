@@ -234,19 +234,19 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
 
                 <div className="flex flex-col w-full">
                     <div className="flex">
-                        <div style={{marginRight: '0.375rem'}}>
+                        <div style={{marginRight: '0.3rem'}}>
                             <BetAmountButton amount={5000} inputValue={inputValue} setInputValue={setInputValue}/>
                         </div>
-                        <div style={{marginRight: '0.375rem'}}>
+                        <div style={{marginRight: '0.3rem'}}>
                             <BetAmountButton amount={10000} inputValue={inputValue} setInputValue={setInputValue}/>
                         </div>
                         <BetAmountButton amount={50000} inputValue={inputValue} setInputValue={setInputValue}/>
                     </div>
                     <div style={{marginTop: '0.375rem', marginBottom: '0.375rem'}} className="flex">
-                        <div style={{marginRight: '0.375rem'}}>
+                        <div style={{marginRight: '0.3rem'}}>
                             <BetAmountButton amount={100000} inputValue={inputValue} setInputValue={setInputValue}/>
                         </div>
-                        <div style={{marginRight: '0.375rem'}}>
+                        <div style={{marginRight: '0.3rem'}}>
                             <BetAmountButton amount={500000} inputValue={inputValue} setInputValue={setInputValue}/>
                         </div>
                         <BetAmountButton amount={1000000} inputValue={inputValue} setInputValue={setInputValue}/>
@@ -263,7 +263,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                         <div className="flex-shrink-0">
                             <BetFixedAmountButton amount={0} text="정정" />
                         </div>
-                    </div>
+                </div>
                 <button 
                     style={{height: '9rem', padding: '1px', fontSize: '3.1875rem'}}
                     className="flex items-center w-full justify-center rounded-lg bg-blue-r2068b2 hover:opacity-75"

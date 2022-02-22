@@ -307,7 +307,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                     {carrierDropdown}
                                 </DropDownControls> */}
                                 <div className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-between items-center tracking-minus05" >
-                                    <Dropdown options={carrierOptions} isLeagueSelection={true}>
+                                    <Dropdown options={carrierOptions} isSignup={true}>
                                         <img style={{marginRight: '20%', width: '1.5625rem'}} className="h-4 object-contain" src={DownArrowIcon} alt="arrow" /> 
                                     </Dropdown>
                                 </div>
@@ -365,7 +365,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                             // onBlur={(e) => setSelectedInput(false)}
                                             className="relative flex cursor-pointer group w-full text-gray-r393e41 font-spoqaMedium text-5xl outline-none h-full justify-between items-center tracking-minus05" 
                                         >
-                                            <Dropdown options={banksOptions} isLeagueSelection={true} >
+                                            <Dropdown options={banksOptions} isSignup={true} >
                                                 <img style={{marginRight: '20%', width: '1.5625rem'}} className="h-4 object-contain" src={DownArrowIcon} alt="arrow" />
                                             </Dropdown>
                                         </div>

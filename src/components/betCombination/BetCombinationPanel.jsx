@@ -663,7 +663,7 @@ const BetCombinationPanel = ({
     const gameResultButton = (
         <div
             style={{
-                width: "35.25rem",
+                width: "35.06rem",
                 height: "6.75rem",
                 borderWidth: '0.1875rem',
                 fontSize: '2.625rem'
@@ -689,17 +689,17 @@ const BetCombinationPanel = ({
         return items.map(item => {
             let isChecked = checkedState[item.id]
             return (
-                <label style={{height: '8rem', display: 'block', padding: '1.875rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0'}} className="form-control relative w-full border-b border-gray-ececec">
-                    {item.text}
+                <div style={{height: '8rem', paddingLeft: '3rem', paddingRight: '3rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0'}} className=" relative w-full border-b border-gray-ececec flex items-center justify-between pt-3">
+                    <p>{item.text}</p>
                     <input
-                        style={{right: '1.875rem', top: '2.5rem'}}
-                        className='w-12 h-12 absolute right-0'
+                        // style={{right: '1.875rem', top: '2.5rem'}}
+                        className='w-12 h-12'
                         type="checkbox"
                         checked={isChecked}
                         name={item.text}
                         onChange={() => handleOnChange(item.id)}
                     />
-                </label>
+                </div>
 
             )
         });
@@ -794,7 +794,7 @@ const BetCombinationPanel = ({
                         background: "linear-gradient(to bottom, #f8a351, #f38236)" ,
                         color: "#ffffff",
                         textShadow: "1px 1px 0px rgba(0,0,0,0.5)",
-                        padding: '0 1.3125rem'
+                        padding: '0 0.7875rem'
                     }}  
                     className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
                 >
@@ -805,7 +805,7 @@ const BetCombinationPanel = ({
 
             <button 
                 style={{
-                    width:"10rem", 
+                    width:"10.2rem", 
                     height: "7.4375rem",
                     padding: '1px',
                     fontSize: '2.625rem',
@@ -845,7 +845,7 @@ const BetCombinationPanel = ({
                         background: "linear-gradient(to bottom, #f8a351, #f38236)",
                         color: "#ffffff",
                         textShadow: "1px 1px 0px rgba(0,0,0,0.5)",
-                        padding: '0 1.3125rem'
+                        padding: '0 0.7875rem'
                     }}  
                     className="flex w-full h-full items-center justify-between rounded-lg border bg-gradient-to-b cursor-pointer"
                 >
@@ -897,7 +897,7 @@ const BetCombinationPanel = ({
                 >
                     <div 
                         style={{
-                            padding: '0 1.1875rem',
+                            padding: '0 0.7875rem',
                             borderColor: (`${id}left` === isButtonClicked || `${id}left` === isHover3) ? "#ff7982" : "#ffffff",
                             background:  (`${id}left` === isButtonClicked || `${id}left` === isHover3)
                             ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
@@ -976,7 +976,7 @@ const BetCombinationPanel = ({
                 >
                     <div 
                         style={{
-                            padding: '0 1.1875rem',
+                            padding: '0 0.7875rem',
                             borderColor: (`${id}right` === isButtonClicked || `${id}right` === isHover3) ? "#ff7982" : "#ffffff",
                             background: (`${id}right` === isButtonClicked || `${id}right` === isHover3)
                             ? "linear-gradient(to bottom, #ff535f, #ee4e5a)"  
@@ -1106,7 +1106,7 @@ const BetCombinationPanel = ({
                     <div style={{fontSize: '2.625rem', marginTop: '0.025rem'}} className="flex absolute mr-5 right-0 flex-col text-blue-r8494a4 font-spoqaMedium items-center justify-center h-full">
                         <p className="tracking-tight">2021-06-29</p>
                         <p style={{marginTop: '-0.875rem'}} className="flex w-full justify-end items-center tracking-tight">
-                            <img style={{width: '2.375rem', height: '2.375rem', marginRight: '0.6875rem'}} className="" src={Clock} alt="" />
+                            <img style={{width: '2.375rem', height: '2.375rem', marginRight: '0.2875rem'}} className="mb-1" src={Clock} alt="" />
                             <span>15:45</span>
                         </p>
                     </div>
@@ -1125,12 +1125,12 @@ const BetCombinationPanel = ({
             <div style={{paddingTop: '2.1875rem', paddingBottom: '1.125rem'}} className="flex w-full pb-0 font-spoqaMedium tracking-tight text-gray-r454545">
                 <div style={{fontSize: '2.625rem', marginLeft:"11.15rem"}} className="h-full flex items-center flex-shrink-0 space-x-2">
                     <p>승(홈)</p>
-                    <img className='w-7 h-7 object-contain animate-pulse' src={ArrowUp} alt="" />
+                    <img className='w-7 h-7 object-contain blink mb-1' src={ArrowUp} alt="" />
                 </div>
                 <div style={{fontSize: '2.625rem', marginLeft: "14.8rem"}} className="h-full flex items-center flex-shrink-0">무</div>
                 <div style={{fontSize: '2.625rem', marginLeft: "13.4rem"}} className="h-full flex items-center flex-shrink-0 space-x-2">
                     <p>패(원정)</p>
-                    <img className='w-7 h-7 object-contain animate-pulse' src={ArrowDown} alt="" />
+                    <img className='w-7 h-7 object-contain blink mb-1' src={ArrowDown} alt="" />
                 </div>
                 <div style={{fontSize: '2.625rem', marginLeft: "10rem"}} className="h-full mr-8 flex items-center flex-shrink-0">정보</div>
             </div>

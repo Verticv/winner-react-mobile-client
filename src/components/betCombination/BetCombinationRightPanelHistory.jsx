@@ -88,7 +88,7 @@ const BetCombinationRightPanelHistory = () => {
 
     return (
         <div>
-            <div className="bg-white flex flex-col">
+            <div className="bg-white flex flex-col w-full">
 
                 <div style={{paddingLeft: '1.875rem', paddingRight: '1.875rem'}} className="flex flex-col">
                     <HistoryCard team1="FK Haugesund" team2="스트룀스고세 IF" side="left" winStatus="lose" />
