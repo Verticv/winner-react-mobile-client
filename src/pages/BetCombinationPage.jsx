@@ -74,7 +74,6 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
     ])
     const [openedCart, setOpenedCart] = useState(false)
 
-
     useEffect(() => {
         setSelectedOption({
             type: "",

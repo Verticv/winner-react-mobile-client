@@ -678,6 +678,18 @@ const BetCombinationPanel = ({
         </div>
     )
 
+    const handleResize = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`); 
+    };
+      
+    useEffect(() => {
+        handleResize();
+        window.addEventListener("resize", handleResize);
+      
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const handleOnChange = (position) => {
         const updatedCheckedState = checkedState.map((item, index) =>
           index === position ? !item : item
@@ -707,7 +719,7 @@ const BetCombinationPanel = ({
 
     const searchDropdown = (
         <div className="flex flex-col items-center bg-white rounded-3xl shadow-plain5 text-gray-r393e41 font-spoqaMedium text-5xl overflow-hidden">
-            <div style={{height:"calc(100vh - 40rem) "}} className='w-full overflow-y-scroll'>
+            <div style={{height:"calc(var(--vh) * 100 - 40rem)"}} className='w-full overflow-y-scroll'>
                 <SearchDropdownCell items={filterArray} />
             </div>
             <div style={{padding: '1.875rem'}} className="w-full h-full flex items-center justify-center">
