@@ -77,13 +77,3 @@
         }
     } 
 }
-
-.dropdown-select:focus, .dropdown-select .select__control input:focus {
-  font-size: 1.8vh;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .dropdown-select:focus, .dropdown-select .select__control input:focus {
-      font-size: 1.8vh;
-   }
- }
