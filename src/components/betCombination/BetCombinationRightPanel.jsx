@@ -38,6 +38,17 @@ const BetCombinationRightPanel = ({
             clearInterval(interval);
         };
     }, []);
+    const handleResize = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`); 
+    };
+
+    useEffect(() => {
+        handleResize();
+        window.addEventListener("resize", handleResize);
+      
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const [selectedTab, setSelectedTab] = useState(0)
     const [buttonHover, setButtonHover] = useState(null)
@@ -113,7 +124,7 @@ const BetCombinationRightPanel = ({
             </div>
             {/* <HorizontalMenu3 itemsArray={GameTypeArray} selectedTab={"/minigame/powerball"} setSelectedTab={setSelectedGame} setSelectedOption={setSelectedOption} setSelectedTab1={setSelectedTab} /> */}
 
-            <div style={{maxHeight: "calc(100vh - 24rem)"}} className='overflow-y-scroll max-h-screen pb-8'>
+            <div style={{maxHeight: "calc((var(--vh) * 100) - 24rem)"}} className='overflow-y-scroll max-h-screen pb-8'>
                 <Route exact path="/bet-combination">
                     <div style={{paddingLeft: '1.875rem', paddingRight: '1.875rem'}}>
                     <BetCombinationRightPanelCart addedCard={addedCard} setAddedCard={setAddedCard} />     
