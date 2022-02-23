@@ -98,8 +98,8 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                         </div>
                    </div>
                 {/* ): */}
-                <Expand className='z-50 bg-white rounded-t-3xl shadow-plain' duration={200} open={openedCart}>
-                    <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? 'calc(var(--vh) * 100)' : 'unset', paddingTop: '1.875rem'}}>
+                <Expand className='z-50  bg-opacity-0' duration={200} open={openedCart}>
+                    <div className='w-full bg-white shadow-plain' style={{height: 'auto', maxHeight: openedCart ? 'calc(var(--vh) * 100)' : 'unset', paddingTop: '1.875rem',borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}}>
                         <BetCombinationRightPanel 
                             addedCard={addedCard} 
                             setAddedCard={setAddedCard} 

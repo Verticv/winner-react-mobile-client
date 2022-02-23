@@ -67,8 +67,8 @@ const Cart = ({selectedOption}) => {
 
                 </div>
             </div>
-            <Expand className='z-50 flex bg-white shadow-plain rounded-t-3xl' open={openedCart} duration={200} >
-                <div className='w-full z-50 bg-white rounded-t-3xl' style={{height: '96.5rem', padding: '1.875rem'}}>
+            <Expand className='z-50 flex rounded-t-3xl bg-opacity-0' open={openedCart} duration={200} >
+                <div className='w-full z-50 bg-white rounded-t-3xl  shadow-plain' style={{height: '96.5rem', padding: '1.875rem',borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}}>
                     <MinigamesRightPanel selectedGame={selectedGame} setOpenedCart={setOpenedCart} selectedOption={selectedOption} />
                 </div>
             </Expand>

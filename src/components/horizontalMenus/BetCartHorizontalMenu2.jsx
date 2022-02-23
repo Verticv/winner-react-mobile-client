@@ -31,7 +31,7 @@ const BetCartHorizontalMenu2 = ({
                     ? "bg-blue-r58baf7" 
                     : "bg-white"
                 } overflow-hidden rounded-lg flex items-end`} 
-                onClick={() => {
+                onPointerUp={() => {
                     history.push(item.path)
                     setSelectedTab(item.id)
                     if (setSelectedSubTab !== null) {

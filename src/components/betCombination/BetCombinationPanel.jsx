@@ -701,7 +701,7 @@ const BetCombinationPanel = ({
         return items.map(item => {
             let isChecked = checkedState[item.id]
             return (
-                <div style={{height: '8rem', paddingLeft: '3rem', paddingRight: '3rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0'}} className=" relative w-full border-b border-gray-ececec flex items-center justify-between pt-3">
+                <div onPointerUp={() => handleOnChange(item.id)} style={{height: '8rem', paddingLeft: '3rem', paddingRight: '3rem', fontSize: '2.8125rem', fontWeight: '400', fontFamily: 'SpoqaHanSansNeoMedium', margin: '0'}} className=" relative w-full border-b border-gray-ececec flex items-center justify-between pt-3">
                     <p>{item.text}</p>
                     <input
                         // style={{right: '1.875rem', top: '2.5rem'}}
@@ -709,7 +709,7 @@ const BetCombinationPanel = ({
                         type="checkbox"
                         checked={isChecked}
                         name={item.text}
-                        onChange={() => handleOnChange(item.id)}
+                        // onChange={() => handleOnChange(item.id)}
                     />
                 </div>
 
