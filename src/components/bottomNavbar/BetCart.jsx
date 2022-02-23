@@ -31,17 +31,29 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
   //   1
   // </div>
     
-  useEffect(() => {
-    openedCart && (
-        setOpenedCartDelay(true)
-    )
-    setTimeout(()=>{
-        !openedCart && (
-            setOpenedCartDelay(false)
+    useEffect(() => {
+        openedCart && (
+            setOpenedCartDelay(true)
         )
-    }, 250)
-    
-}, [openedCart])
+        setTimeout(()=>{
+            !openedCart && (
+                setOpenedCartDelay(false)
+            )
+        }, 250)
+        
+    }, [openedCart])
+
+    const handleResize = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`); 
+    };
+      
+    useEffect(() => {
+        handleResize();
+        window.addEventListener("resize", handleResize);
+      
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
 
     return (
@@ -87,7 +99,7 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                    </div>
                 {/* ): */}
                 <Expand className='z-50 bg-white rounded-t-3xl shadow-plain' duration={200} open={openedCart}>
-                    <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? '100%' : 'unset', paddingTop: '1.875rem'}}>
+                    <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? 'calc(var(--vh) * 100)' : 'unset', paddingTop: '1.875rem'}}>
                         <BetCombinationRightPanel 
                             addedCard={addedCard} 
                             setAddedCard={setAddedCard} 
