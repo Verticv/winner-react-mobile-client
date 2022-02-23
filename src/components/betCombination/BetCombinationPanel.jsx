@@ -1154,7 +1154,7 @@ const BetCombinationPanel = ({
                 <img style={{width: '77.625rem'}} className="absolute object-contain" src={BonusCell} alt="" />
                 <img style={{width: '6.75rem'}} className="absolute left-6 z-50 object-contain" src={Gift} alt="" />
                 <div className="w-full z-20 flex items-center">
-                    <p style={{color:"#ffde00", textShadow: "1px 1px 0px rgba(0, 0, 0, 0.4)", fontSize: '2.625rem', marginTop:"1.6rem"}} className="ml-36 font-spoqaMedium">보너스 이벤트</p>
+                    <p style={{color:"#ffde00", textShadow: "1px 1px 0px rgba(0, 0, 0, 0.4)", fontSize: '2.625rem', marginTop:"1.6rem"}} className="ml-36 font-spoqaBold">보너스 이벤트</p>
                 </div>
                 <div style={{marginLeft: '1.5rem'}} className="w-full z-20 flex items-center mt-8">
                     <EventOptions 
