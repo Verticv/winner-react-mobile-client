@@ -159,8 +159,9 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 </div>
                                 <div style={{marginBottom: '3.75rem'}}>
                                     <ContactCompose />
+                                    <BottomNavbar />
+
                                 </div>
-                                <BottomNavbar />
                             </Route>
                             <Route exact path="/cscenter/all/announcement">
                                 <div className="w-full z-30 flex flex-col items-center">
