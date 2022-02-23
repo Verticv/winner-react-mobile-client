@@ -87,7 +87,7 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                    </div>
                 {/* ): */}
                 <Expand className='z-50 bg-white rounded-t-3xl shadow-plain' duration={200} open={openedCart}>
-                    <div className='w-full' style={{height: 'auto', minHeight: openedCart ? '-webkit-fill-available' : 'unset', paddingTop: '1.875rem'}}>
+                    <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? '100%' : 'unset', paddingTop: '1.875rem'}}>
                         <BetCombinationRightPanel 
                             addedCard={addedCard} 
                             setAddedCard={setAddedCard} 
