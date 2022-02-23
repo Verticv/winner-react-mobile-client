@@ -8,8 +8,8 @@ import Home from '../../images/newImages/mainPage/icons/navbar/home.png'
 import MyInfo from '../../images/tabbar/2.png'
 import { Link } from 'react-router-dom';
 
-const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPanelFixed}) => {
-    const [openedCart, setOpenedCart] = useState(false)
+const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPanelFixed, setOpenedCart, openedCart}) => {
+    // const [openedCart, setOpenedCart] = useState(false)
     const [selectedGame, setSelectedGame] = useState(window.location.pathname)
     const [openedCartDelay, setOpenedCartDelay] = useState(false)
     console.log(`selectedGame`, selectedGame)
@@ -87,7 +87,7 @@ const BetCart = ({selectedOption, addedCard, setAddedCard, isPanelFixed, setPane
                    </div>
                 {/* ): */}
                 <Expand className='z-50 bg-white rounded-t-3xl shadow-plain' duration={200} open={openedCart}>
-                    <div className='w-full' style={{height: 'auto', maxHeight: openedCart ? '-webkit-fill-available' : 'unset', paddingTop: '1.875rem'}}>
+                    <div className='w-full' style={{height: 'auto', minHeight: openedCart ? '-webkit-fill-available' : 'unset', paddingTop: '1.875rem'}}>
                         <BetCombinationRightPanel 
                             addedCard={addedCard} 
                             setAddedCard={setAddedCard} 

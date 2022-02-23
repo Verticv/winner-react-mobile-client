@@ -72,6 +72,8 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
             subtitle: null
         }
     ])
+    const [openedCart, setOpenedCart] = useState(false)
+
 
     useEffect(() => {
         setSelectedOption({
@@ -111,6 +113,8 @@ const BetCombinationPage = ({isAuthenticated, setAuthenticated}) => {
                     </div>
 
                     <BetCart 
+                        setOpenedCart={setOpenedCart}
+                        openedCart={openedCart}
                         selectedOption={selectedOption} 
                         addedCard={addedCard} 
                         setAddedCard={setAddedCard} 
