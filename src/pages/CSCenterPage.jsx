@@ -160,7 +160,6 @@ const CSCenterPage = ({isAuthenticated, setAuthenticated}) => {
                                 <div style={{marginBottom: '3.75rem'}}>
                                     <ContactCompose />
                                     <BottomNavbar />
-
                                 </div>
                             </Route>
                             <Route exact path="/cscenter/all/announcement">
