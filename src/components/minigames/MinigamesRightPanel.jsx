@@ -258,7 +258,7 @@ const MinigamesRightPanel = ({
                                     )}
                                 </div> 
                                 {selectedOption[0].tailSide && (
-                                    <div style={{width: '3.75rem', height: '3.75rem'}} className={`${selectedOption[0].tailSide === "left" ? "left-4" : "right-4"} absolute w-22px h-22px rounded-full bg-black z-20 top-4 flex items-center justify-center`}>
+                                    <div style={{width: '3.75rem', height: '3.75rem'}} className={`${selectedOption[0].tailSide === "left" ? "left-4" : "right-4"} absolute w-22px h-22px rounded-full bg-black  mt-px z-20 top-4 flex items-center justify-center`}>
                                         <div style={{fontSize: '2.0625rem'}} className="text-white text-12px tracking-tight font-spoqaMedium mt-1">{selectedOption[0].tail}</div>
                                     </div>
                                 )}   
@@ -356,7 +356,7 @@ const MinigamesRightPanel = ({
 
 
             { (window.location.pathname === "/minigame/speedkino" || window.location.pathname === "/minigame/kinoladder") && (
-                <div className="absolute w-full h-full bg-black bg-opacity-70 z-20 flex justify-center"> 
+                <div className="absolute w-full h-full bg-black  mt-px bg-opacity-70 z-20 flex justify-center"> 
                     <div className="flex flex-col items-center justify-center">
                         <img style={{width: '20.5rem'}} className="object-contain" src={LockIcon} alt="" />
                         <div 

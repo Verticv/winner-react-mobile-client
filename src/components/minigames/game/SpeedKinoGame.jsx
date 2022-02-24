@@ -25,7 +25,7 @@ const SpeedKinoGame = ({setSelectedOption}) => {
                 style={{height:"4.4rem",width: '8.4375rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
                 className="flex-shrink-0 shadow-plain2 border rounded-2xl border-white flex flex-col items-center justify-center tracking-tight text-white"
             >
-                <p style={{marginTop: '0.35rem'}} className="font-spoqaMedium pb-2px">{titleNumber}{title}</p>
+                <p style={{marginTop: '0.35rem'}} className="font-spoqaMedium pb-px">{titleNumber}{title}</p>
             </div>
 
             <div style={{fontSize: '2.625rem', marginLeft: '0.75rem'}} className="h-full flex flex-col items-center justify-center pb-1">
