@@ -34,7 +34,7 @@ const BetCombinationRightPanelHistory = () => {
                 }}
                 className="relative w-full h-full py-5"
             >
-                <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545 flex items-center">
+                <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545 flex items-center mt-1">
                     {time}
                 </p>
                 <p 
