@@ -18,11 +18,21 @@ const BetCombinationRightPanelHistory = () => {
                 fontSize: '2.625rem', 
                 marginBottom: '0.375rem'
             }}
-            className="flex flex-col border border-gray-cccccc overflow-hidden"
+            className="flex flex-col"
         >
             <div 
-                style={{height:"5.9375rem", backgroundColor: "#8494a4", paddingLeft: '1.625rem'}}
-                className="flex flex-shrink-0 items-center font-spoqaMedium flex items-center text-white tracking-tight pt-1"
+                style={{
+                    height:"6rem", 
+                    backgroundColor: "#8494a4", 
+                    paddingLeft: '1.625rem', 
+                    borderTopWidth: '0.1875rem', 
+                    borderLeftWidth: '0.1875rem', 
+                    borderRightWidth: '0.1875rem', 
+                    borderTopLeftRadius:"1.3125rem", 
+                    borderTopRightRadius:"1.3125rem",
+
+                }}
+                className="flex-shrink-0 font-spoqaMedium flex items-center text-white tracking-tight pt-1 border-t border-l border-r border-gray-cccccc"
             >
                 {title}
             </div>
@@ -30,9 +40,14 @@ const BetCombinationRightPanelHistory = () => {
             <div 
                 style={{
                     background: "linear-gradient(120deg, #ffffff, #e0e2e6)",
-                    paddingLeft: '1.75rem'
+                    paddingLeft: '1.75rem',
+                    borderBottomWidth: '0.1875rem', 
+                    borderLeftWidth: '0.1875rem', 
+                    borderRightWidth: '0.1875rem', 
+                    borderBottomLeftRadius:"1.3125rem", 
+                    borderBottomRightRadius:"1.3125rem",
                 }}
-                className="relative w-full h-full py-5"
+                className="relative w-full h-full py-5 border-gray-cccccc"
             >
                 <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545 flex items-center mt-1">
                     {time}
@@ -67,7 +82,7 @@ const BetCombinationRightPanelHistory = () => {
     )
 
     const ResultsCard = () => (
-        <div style={{borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem',background: "linear-gradient(120deg, #ffffff, #e0e2e6)",}} className="w-full px-7 border border-gray-cccccc py-5">
+        <div style={{borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem',background: "linear-gradient(120deg, #ffffff, #e0e2e6)",}} className="w-full px-7 border border-gray-cccccc py-6">
             <div className="flex justify-between">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">베팅시간</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">2021-06-29 16:00</p>
