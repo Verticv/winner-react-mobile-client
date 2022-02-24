@@ -37,7 +37,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
     function BetCard({ items }) {
         return items.map(item => (
             <div
-                style={{height:"15.5rem", width: '73.5rem', borderRadius: "1.125rem", borderWidth: '0.1875rem', marginBottom: '0.5625rem'}}
+                style={{width: '73.5rem', borderRadius: "1.125rem", borderWidth: '0.1875rem', marginBottom: '0.5625rem'}}
                 className="border border-gray-cccccc"
                 key={item.id}
             >
@@ -49,11 +49,11 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                         fontSize: '2.625rem',
                         background: "linear-gradient(120deg, #ffffff, #e0e2e6)"
                     }}
-                    className="relative h-full w-full border pl-6 border-gray-cccccc py-3"
+                    className="relative h-full w-full border pl-6 border-gray-cccccc py-5 flex flex-col justify-center"
                 >
                     <p 
                         style={{color: item.value === "right" ? "#d52e2e" : "#454545"}} 
-                        className="font-spoqaBold tracking-tight text-gray-r454545 flex items-center mt-1"
+                        className="font-spoqaBold tracking-tight text-gray-r454545 flex items-center"
                     >
                         {item.value === "right" ? "SV Kuchl" : "FK Haugesund"}
                     </p>
@@ -63,9 +63,9 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                     >
                         {item.value === "right" ? "FC Blau Weiss Linz" : "스트룀스고세 IF"}
                     </p>
-                    <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium mt-4 tracking-tight text-gray-r454545  flex items-center">축구 - 승무패 (게임)</p>
-                    <img style={{width: '2.7rem', height: '2.7rem', top: '5rem', right: '2rem'}} src={CancelIconGray} alt="" name={item.id} className="absolute cursor-pointer hover:opacity-75 object-contain" onClick={handleRemoveItem} />
-                    <div style={{fontSize: '2.4375rem', bottom: '0.2rem', right: '9rem'}} className="flex absolute tracking-tight font-spoqaMedium items-center text-gray-r454545">
+                    <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium mt-4 tracking-tight text-gray-r454545 flex items-center">축구 - 승무패 (게임)</p>
+                    <img style={{width: '2.7rem', height: '2.7rem', right: '2rem'}} src={CancelIconGray} alt="" name={item.id} className="absolute cursor-pointer hover:opacity-75 object-contain" onClick={handleRemoveItem} />
+                    <div style={{fontSize: '2.4375rem', right: '9rem'}} className="flex absolute tracking-tight font-spoqaMedium items-center text-gray-r454545 bottom-5">
                         <p>{item.value === "right" ? "승 @" : "패 @"}</p> 
                         <p 
                             style={{color: item.value === "right" ? "#d52e2e" : "#0056a6"}}
