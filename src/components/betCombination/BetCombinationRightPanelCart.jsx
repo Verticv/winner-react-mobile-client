@@ -37,7 +37,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
     function BetCard({ items }) {
         return items.map(item => (
             <div
-                style={{height:"13.5rem", width: '73.5rem', borderRadius: "1.125rem", borderWidth: '0.1875rem', marginBottom: '0.5625rem'}}
+                style={{height:"15.5rem", width: '73.5rem', borderRadius: "1.125rem", borderWidth: '0.1875rem', marginBottom: '0.5625rem'}}
                 className="border border-gray-cccccc"
                 key={item.id}
             >
@@ -49,7 +49,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                         fontSize: '2.625rem',
                         background: "linear-gradient(120deg, #ffffff, #e0e2e6)"
                     }}
-                    className="relative h-full w-full border pl-6 border-gray-cccccc pt-1"
+                    className="relative h-full w-full border pl-6 border-gray-cccccc py-3"
                 >
                     <p 
                         style={{color: item.value === "right" ? "#d52e2e" : "#454545"}} 
@@ -59,7 +59,7 @@ const BetCombinationRightPanelCart = ({addedCard ,setAddedCard}) => {
                     </p>
                     <p 
                         style={{color: item.value === "right" ? "#454545" : "#d52e2e"}} 
-                        className="font-spoqaBold tracking-tight flex items-center -mt-2"
+                        className="font-spoqaBold tracking-tight flex items-center"
                     >
                         {item.value === "right" ? "FC Blau Weiss Linz" : "스트룀스고세 IF"}
                     </p>

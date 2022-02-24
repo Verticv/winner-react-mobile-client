@@ -12,7 +12,7 @@ const BetCombinationRightPanelHistory = () => {
         winStatus = "lose"
     }) => (
         <div 
-            style={{height:"23.5rem", borderRadius:"1.3125rem", borderWidth: '0.1875rem', fontSize: '2.625rem', marginBottom: '0.375rem'}}
+            style={{height:"25.5rem", borderRadius:"1.3125rem", borderWidth: '0.1875rem', fontSize: '2.625rem', marginBottom: '0.375rem'}}
             className="flex flex-col border border-gray-cccccc overflow-hidden"
         >
             <div 
@@ -29,7 +29,7 @@ const BetCombinationRightPanelHistory = () => {
                 }}
                 className="relative w-full h-full"
             >
-                <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545 flex items-center mt-2">
+                <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545 flex items-center mt-5">
                     {time}
                 </p>
                 <p 
@@ -39,7 +39,7 @@ const BetCombinationRightPanelHistory = () => {
                     {team1}
                 </p>
                 <p 
-                    className="font-spoqaBold -mt-1  tracking-tight flex items-center"
+                    className="font-spoqaBold mt-1 tracking-tight flex items-center"
                     style={{color: side === "left" ? "#d52e2e" : "#454545"}}
                 >
                     {team2}
@@ -62,24 +62,24 @@ const BetCombinationRightPanelHistory = () => {
     )
 
     const ResultsCard = () => (
-        <div style={{height:"21rem", borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem',background: "linear-gradient(120deg, #ffffff, #e0e2e6)",}} className="w-full px-7 border border-gray-cccccc">
-            <div className="flex justify-between mt-5">
+        <div style={{height:"24rem", borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem',background: "linear-gradient(120deg, #ffffff, #e0e2e6)",}} className="w-full px-7 border border-gray-cccccc">
+            <div className="flex justify-between mt-8">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">베팅시간</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">2021-06-29 16:00</p>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between mt-2">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">베팅금액</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">5,000</p>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between mt-2">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">배당률</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">1.00</p>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between mt-2">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">적중예상금액</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">11,000.00</p>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between mt-2">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">티켓번호</p>
                 <p className="font-roboto flex items-center tracking-tight text-blue-r0056a6">189106964</p>
             </div>

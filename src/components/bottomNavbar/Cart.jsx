@@ -29,6 +29,7 @@ const Cart = ({selectedOption}) => {
     }, [openedCart])
 
     return (
+        <div style={{maxWidth: '1242px', height: openedCartDelay ? "100vh" : "auto"}} className=" w-full z-50 shadow-plain bg-black bg-opacity-60 fixed bottom-0">
         <div style={{maxWidth: '1242px', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className="transition-all w-full z-30 rounded-t-3xl shadow-plain bg-white fixed bottom-0" >
 
             <div style={{height: "9.0625rem", padding: '0 3.6875rem', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}} className={`${openedCartDelay ? "opacity-0 transition" : "opacity-100 transition"} bg-white rounded-t-3xl shadow-plain absolute bottom-0  flex w-full items-center h-full flex-shrink-0 justify-between`} onClick={() => setOpenedCart(true)}>
@@ -68,11 +69,12 @@ const Cart = ({selectedOption}) => {
                 </div>
             </div>
             <Expand className='z-50 flex rounded-t-3xl bg-opacity-0' open={openedCart} duration={200} >
-                <div className='w-full z-50 bg-white rounded-t-3xl  shadow-plain' style={{height: '96.5rem', padding: '1.875rem',borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}}>
+                <div className='w-full z-50 bg-white rounded-t-3xl  shadow-plain' style={{height: '96.5rem', padding: '1.875rem', borderTopLeftRadius: '2.5rem', borderTopRightRadius: '2.5rem'}}>
                     <MinigamesRightPanel selectedGame={selectedGame} setOpenedCart={setOpenedCart} selectedOption={selectedOption} />
                 </div>
             </Expand>
                 
+        </div>
         </div>
     )
 }

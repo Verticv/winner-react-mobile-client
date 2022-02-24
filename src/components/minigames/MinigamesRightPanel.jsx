@@ -164,35 +164,35 @@ const MinigamesRightPanel = ({
 
     return (
         <>
-        <div 
-                    style={{
-                        background: "linear-gradient(to right, #2087f0, #1873cf", 
-                        height: '8.5625rem',
-                        padding: '0 1.125rem',
-                        marginBottom: '0.9375rem',
-                        borderRadius: '1.6875rem'
-                    }} 
-                    className="w-full rounded-lg flex justify-between items-center z-50"
-                >
-                    <div style={{fontSize: '2.625rem'}} className="flex">
-                        <div style={{marginRight: '1.375rem'}} className="font-spoqaMedium tracking-tight text-white flex items-center">
-                            {format(time, dateFormat, { locale : ko })} {format(time, dateFormat1, { locale : ko })} <p style={{color:"#ffea00", marginLeft: '0.8125rem'}} className=""> [216회차]</p>
-                        </div>
-                        <div style={{color:"#bffff5"}} className="flex font-spoqaBold tracking-tight items-center">
-                            <img style={{width: '2.875rem', marginRight: '0.75rem'}} className="object-contain mb-1" src={ClockIcon} alt="" />
-                            <p style={{fontSize: '3.375rem'}}>02:16</p>
-                        </div>
+            <div 
+                style={{
+                    background: "linear-gradient(to right, #2087f0, #1873cf", 
+                    height: '8.5625rem',
+                    padding: '0 1.125rem',
+                    marginBottom: '0.9375rem',
+                    borderRadius: '1.6875rem'
+                }} 
+                className="w-full rounded-lg flex justify-between items-center z-50"
+            >
+                <div style={{fontSize: '2.625rem'}} className="flex">
+                    <div style={{marginRight: '1.375rem'}} className="font-spoqaMedium tracking-tight text-white flex items-center">
+                        {format(time, dateFormat, { locale : ko })} {format(time, dateFormat1, { locale : ko })} <p style={{color:"#ffea00", marginLeft: '0.8125rem'}} className=""> [216회차]</p>
                     </div>
-                    <div className='flex'>
-                        <img style={{width: '6.55rem', marginRight: '0.75rem'}} src={RefreshIcon} alt="" className="cursor-pointer" />
-                        <button
-                            onClick={() => setOpenedCart(false)}
-                            // style={{width: '15.625rem'}}
-                            className="">
-                            <img style={{width: '6.55rem'}} src={CloseIcon} alt="" className="cursor-pointer" />
-                        </button>
+                    <div style={{color:"#bffff5"}} className="flex font-spoqaBold tracking-tight items-center">
+                        <img style={{width: '2.875rem', marginRight: '0.75rem'}} className="object-contain mb-1" src={ClockIcon} alt="" />
+                        <p style={{fontSize: '3.375rem'}}>02:16</p>
                     </div>
                 </div>
+                <div className='flex'>
+                    <img style={{width: '6.55rem', marginRight: '0.75rem'}} src={RefreshIcon} alt="" className="cursor-pointer" />
+                    <button
+                        onClick={() => setOpenedCart(false)}
+                        // style={{width: '15.625rem'}}
+                        className="">
+                        <img style={{width: '6.55rem'}} src={CloseIcon} alt="" className="cursor-pointer" />
+                    </button>
+                </div>
+            </div>
 
         <div 
             className="relative rounded-xl flex flex-col overflow-hidden"
@@ -258,7 +258,7 @@ const MinigamesRightPanel = ({
                                     )}
                                 </div> 
                                 {selectedOption[0].tailSide && (
-                                    <div style={{width: '3.75rem', height: '3.75rem'}} className={`${selectedOption[0].tailSide === "left" ? "left-3" : "right-3"} absolute w-22px h-22px rounded-full bg-black z-20 top-4 flex items-center justify-center`}>
+                                    <div style={{width: '3.75rem', height: '3.75rem'}} className={`${selectedOption[0].tailSide === "left" ? "left-4" : "right-4"} absolute w-22px h-22px rounded-full bg-black z-20 top-4 flex items-center justify-center`}>
                                         <div style={{fontSize: '2.0625rem'}} className="text-white text-12px tracking-tight font-spoqaMedium mt-1">{selectedOption[0].tail}</div>
                                     </div>
                                 )}   

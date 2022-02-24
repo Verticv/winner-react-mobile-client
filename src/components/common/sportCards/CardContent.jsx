@@ -82,7 +82,7 @@ const CardContent = ({
           </div>
             {withUploadButton === true && (
                 <button 
-                    onClick={() => uploadHandler(id)} 
+                    // onClick={() => uploadHandler(id)} 
                     style={{width: '9rem', height: '9rem',  padding: '1px'}}
                     className="flex items-center bg-blue-r286fce justify-center rounded-2xl hover:opacity-75"
                     >

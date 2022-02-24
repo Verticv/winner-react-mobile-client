@@ -25,7 +25,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                 style={{height:"4.4rem",width: '8.4375rem', borderWidth: '0.1875rem' , backgroundColor: titleBg, fontSize: '2.25rem'}} 
                 className="flex-shrink-0 shadow-plain2 border rounded-2xl border-white flex flex-col items-center justify-center tracking-tight text-white"
             >
-                <p style={{marginTop: '0.35rem'}} className="font-spoqaMedium">{titleNumber}{title}</p>
+                <p style={{marginTop: '0.35rem'}} className="font-spoqaMedium pb-2px">{titleNumber}{title}</p>
             </div>
 
             <div style={{fontSize: '2.625rem', marginLeft: '0.75rem'}} className="h-full flex flex-col items-center justify-center pb-1">
@@ -207,9 +207,9 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 className="relative flex items-center justify-center cursor-pointer hover:opacity-75"
                             >
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-1` ? RedSMButtonPressed : RedSMButton} alt="" />
-                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">짝</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 left-3 top-4 flex items-center justify-center">
-                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
+                                <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">짝</p>
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 left-4 top-4 flex items-center justify-center">
+                                    <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium mr-px">3</div>
                                 </div>
                             </div>
                             <div style={{height: '3.65rem'}}>
@@ -233,7 +233,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-2` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">홀</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 right-3 top-4 flex items-center justify-center">
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 right-4 top-4 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">3</div>
                                 </div>
                             </div>
@@ -258,7 +258,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                             >
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-3` ? BlueSMButtonPressed : BlueSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white  absolute">홀</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 left-3 top-4 flex items-center justify-center">
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 left-4 top-4 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium -ml-1">4</div>
                                 </div>
                             </div>
@@ -283,7 +283,7 @@ const PowerLadderGame = ({setSelectedOption}) => {
                                 
                                 <img style={{width: '11.375rem', maxWidth: 'unset'}} className=" object-contain" src={state === `${titleNumber}-4` ? RedSMButtonPressed : RedSMButton} alt="" />
                                 <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 0.6)", fontSize: '3.75rem', marginTop: '0.3rem'}} className="z-20 font-swagger text-white absolute">짝</p>
-                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 right-3 top-4 flex items-center justify-center">
+                                <div style={{width: '3.75rem', height: '3.75rem'}} className="absolute rounded-full bg-black flex-shrink-0 z-20 right-4 top-4 flex items-center justify-center">
                                     <div style={{fontSize: '2.0625rem'}} className="text-white tracking-tight font-spoqaMedium">4</div>
                                 </div>
                             </div>
