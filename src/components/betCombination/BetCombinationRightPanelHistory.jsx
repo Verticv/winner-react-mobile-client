@@ -12,7 +12,7 @@ const BetCombinationRightPanelHistory = () => {
         winStatus = "lose"
     }) => (
         <div 
-            style={{height:"25.5rem", borderRadius:"1.3125rem", borderWidth: '0.1875rem', fontSize: '2.625rem', marginBottom: '0.375rem'}}
+            style={{borderRadius:"1.3125rem", borderWidth: '0.1875rem', fontSize: '2.625rem', marginBottom: '0.375rem'}}
             className="flex flex-col border border-gray-cccccc overflow-hidden"
         >
             <div 
@@ -27,25 +27,25 @@ const BetCombinationRightPanelHistory = () => {
                     background: "linear-gradient(120deg, #ffffff, #e0e2e6)",
                     paddingLeft: '1.75rem'
                 }}
-                className="relative w-full h-full"
+                className="relative w-full h-full py-5"
             >
-                <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545 flex items-center mt-5">
+                <p style={{fontSize: '2.4375rem'}} className="font-spoqaMedium tracking-tight text-gray-r454545 flex items-center">
                     {time}
                 </p>
                 <p 
-                    className="font-spoqaBold  tracking-tight text-gray-r454545 flex items-center"
+                    className="font-spoqaBold  tracking-tight text-gray-r454545 flex items-center mt-1"
                     style={{color: side === "left" ? "#454545" : "#d52e2e"}}
                 >
                     {team1}
                 </p>
                 <p 
-                    className="font-spoqaBold mt-1 tracking-tight flex items-center"
+                    className="font-spoqaBold tracking-tight flex items-center"
                     style={{color: side === "left" ? "#d52e2e" : "#454545"}}
                 >
                     {team2}
                 </p>
                 <p className="font-spoqaMedium mt-4 tracking-tight text-gray-r454545 flex items-center">{type}</p>
-                <div style={{bottom: '1.375rem', right: '1.8125rem'}} className="flex absolute tracking-tight font-spoqaMedium items-center text-gray-r454545">
+                <div style={{right: '1.8125rem'}} className="flex absolute tracking-tight font-spoqaMedium items-center text-gray-r454545 bottom-5">
                     <p>{winStatus === "win" ? "승 @" : "패 @"}</p> 
                     <p 
                         className="ml-3"
@@ -54,7 +54,7 @@ const BetCombinationRightPanelHistory = () => {
                         {winStatus === "win" ? "2.26" : "3.47"}
                     </p>
                 </div>
-                <div style={{top: '1.25rem',  right: '1.8125rem'}} className="flex absolute tracking-tight font-spoqaMedium items-center text-blue-r0056a6">
+                <div style={{ right: '1.8125rem'}} className="flex absolute tracking-tight font-spoqaMedium items-center text-blue-r0056a6 top-5">
                     대기중
                 </div>
             </div>
@@ -62,24 +62,24 @@ const BetCombinationRightPanelHistory = () => {
     )
 
     const ResultsCard = () => (
-        <div style={{height:"24rem", borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem',background: "linear-gradient(120deg, #ffffff, #e0e2e6)",}} className="w-full px-7 border border-gray-cccccc">
-            <div className="flex justify-between mt-8">
+        <div style={{borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem',background: "linear-gradient(120deg, #ffffff, #e0e2e6)",}} className="w-full px-7 border border-gray-cccccc py-5">
+            <div className="flex justify-between">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">베팅시간</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">2021-06-29 16:00</p>
             </div>
-            <div className="flex justify-between mt-2">
+            <div className="flex justify-between mt-1">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">베팅금액</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">5,000</p>
             </div>
-            <div className="flex justify-between mt-2">
+            <div className="flex justify-between mt-1">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">배당률</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">1.00</p>
             </div>
-            <div className="flex justify-between mt-2">
+            <div className="flex justify-between mt-1">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">적중예상금액</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">11,000.00</p>
             </div>
-            <div className="flex justify-between mt-2">
+            <div className="flex justify-between mt-1">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">티켓번호</p>
                 <p className="font-roboto flex items-center tracking-tight text-blue-r0056a6">189106964</p>
             </div>
