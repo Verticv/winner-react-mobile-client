@@ -12,7 +12,12 @@ const BetCombinationRightPanelHistory = () => {
         winStatus = "lose"
     }) => (
         <div 
-            style={{borderRadius:"1.3125rem", borderWidth: '0.1875rem', fontSize: '2.625rem', marginBottom: '0.375rem'}}
+            style={{
+                borderRadius:"1.3125rem", 
+                // borderWidth: '0.1875rem', 
+                fontSize: '2.625rem', 
+                marginBottom: '0.375rem'
+            }}
             className="flex flex-col border border-gray-cccccc overflow-hidden"
         >
             <div 
