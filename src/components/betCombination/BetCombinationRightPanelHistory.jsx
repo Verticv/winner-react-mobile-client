@@ -82,7 +82,7 @@ const BetCombinationRightPanelHistory = () => {
     )
 
     const ResultsCard = () => (
-        <div style={{borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem',background: "linear-gradient(120deg, #ffffff, #e0e2e6)",}} className="w-full px-7 border border-gray-cccccc py-6">
+        <div style={{borderRadius:"1.3125rem", fontSize: '2.4375rem', borderWidth: '0.1875rem', background: "#ffffff",}} className="w-full px-7 border border-gray-cccccc py-6">
             <div className="flex justify-between">
                 <p className="font-spoqaMedium flex items-center tracking-tight text-gray-r454545">베팅시간</p>
                 <p className="font-roboto flex items-center tracking-tight text-gray-r454545">2021-06-29 16:00</p>

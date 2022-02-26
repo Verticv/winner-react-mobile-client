@@ -132,7 +132,7 @@ const BoardComposeViewPanel = ({
                                 hasDown={false}
                             />
                         </div>
-                        <CardContent isPopup={true} withButtons={false} withInput={true} withUploadButton={true} number="0" id={data[0].id} uploadHandler={addEntryClick} checkedState={checkedState} setCheckedState={setCheckedState} />
+                        <CardContent canUpload={true} isPopup={true} withButtons={false} withInput={true} withUploadButton={true} number="0" id={data[0].id} uploadHandler={addEntryClick} checkedState={checkedState} setCheckedState={setCheckedState} />
                     </div>
                 </div>
             </div>
@@ -172,7 +172,7 @@ const BoardComposeViewPanel = ({
                                 hasDown={true}
                             />
                         </div>
-                        <CardContent isPopup={true} withButtons={false} withInput={true} withUploadButton={true} number="1" id={data[1].id} uploadHandler={addEntryClick} checkedState={checkedState} setCheckedState={setCheckedState} winAmount="+900,000,000" />
+                        <CardContent canUpload={true} isPopup={true} withButtons={false} withInput={true} withUploadButton={true} number="1" id={data[1].id} uploadHandler={addEntryClick} checkedState={checkedState} setCheckedState={setCheckedState} winAmount="+900,000,000" />
                     </div>
                 </div>
             </div>
@@ -214,7 +214,7 @@ const BoardComposeViewPanel = ({
                                 hasDown={false}
                             />
                         </div>
-                        <CardContent isPopup={true} withButtons={false} withInput={true} withUploadButton={true} number="2" id={data[1].id} uploadHandler={addEntryClick} checkedState={checkedState} setCheckedState={setCheckedState} winAmount="0" />
+                        <CardContent canUpload={true} isPopup={true} withButtons={false} withInput={true} withUploadButton={true} number="2" id={data[1].id} uploadHandler={addEntryClick} checkedState={checkedState} setCheckedState={setCheckedState} winAmount="0" />
                     </div>
                 </div>
             </div>
