@@ -1,4 +1,4 @@
-export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, buttonIndex) {
+export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, buttonIndex, leftScrollShift) {
   const currentPath = window.location.pathname;
   const activeTapId = buttonIndex === 0 ? 0 : buttonIndex || array?.filter((item) => item.path === currentPath)?.[0]?.id
   const scrollWrapper = window.document.querySelector(`#${scrollWrapperId}`);
@@ -8,7 +8,7 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
   if (scrollWrapper) {
     if (activeTapId > 2) {
       const elementWidth = window.document.querySelector(`#${tapIdPrefix}${activeTapId}`)?.offsetWidth;
-      const leftScrollValue = ((activeTapId - 1.5) * elementWidth)
+      const leftScrollValue = ((activeTapId - (leftScrollShift || 1.5)) * elementWidth)
       if ('scroll-behavior' in document.documentElement.style) {
         scrollWrapper.scrollLeft = Number(leftScrollValue);
       } else {
