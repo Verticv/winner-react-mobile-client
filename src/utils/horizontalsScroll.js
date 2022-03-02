@@ -1,6 +1,6 @@
 export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, buttonIndex) {
   const currentPath = window.location.pathname;
-  const activeTapId = buttonIndex || array?.filter((item) => (item.path === currentPath))?.[0]?.id || array?.filter((item) => (item.subPath === currentPath))?.[0]?.id || array?.filter((item) => (item.subPath2 === currentPath))?.[0]?.id || array?.filter((item) => (item.subPath3 === currentPath))?.[0]?.id || array?.filter((item) => (item.subPath4 === currentPath))?.[0]?.id
+  const activeTapId = buttonIndex === 0 ? 0 : buttonIndex || array?.filter((item) => item.path === currentPath)?.[0]?.id
   const scrollWrapper = window.document.querySelector(`#${scrollWrapperId}`);
   if (!window.prevActiveTapId) {
     window.prevActiveTapId = activeTapId
@@ -28,6 +28,7 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
         }, 16);
       }
     } else {
+      console.log('else!')
       scrollWrapper.scrollLeft = 0;
     }
   }
