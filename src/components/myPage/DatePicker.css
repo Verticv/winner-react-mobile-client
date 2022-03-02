@@ -834,6 +834,7 @@
 
 .right-date-picker .react-datepicker-popper {
   transform: translate(-37.8125rem, 9.5rem) !important;
+  inset: 0px auto auto 0px !important;
 }
 
 
