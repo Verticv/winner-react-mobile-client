@@ -250,7 +250,7 @@ const MinigamesRightPanel = ({
                                     alt="" 
                                 />
                                 <div className="flex flex-col items-center -space-y-5 -mb-2">
-                                    <p style={{textShadow: "2px 2px 2px #00000050", fontSize:"3.75rem"}} className="z-20 font-swagger text-white text-20px">{selectedOption[0].selection}</p>
+                                    <p style={{textShadow: "2px 2px 2px rgba(0,0,0, 60%)", fontSize:"3.75rem"}} className="z-20 font-swagger text-white text-20px -mt-1">{selectedOption[0].selection}</p>
                                     {selectedOption[0].subtitle && (
                                         <p style={{fontSize:"1.6rem"}} className="z-20 font-spoqa text-white tracking-tight">
                                             {selectedOption[0].subtitle}
@@ -258,7 +258,7 @@ const MinigamesRightPanel = ({
                                     )}
                                 </div> 
                                 {selectedOption[0].tailSide && (
-                                    <div style={{width: '3.75rem', height: '3.75rem'}} className={`${selectedOption[0].tailSide === "left" ? "left-4" : "right-4"} absolute w-22px h-22px rounded-full bg-black  mt-px z-20 top-4 flex items-center justify-center`}>
+                                    <div style={{width: '3.75rem', height: '3.75rem'}} className={`${selectedOption[0].tailSide === "left" ? "left-4" : "right-4"} absolute w-22px h-22px rounded-full bg-black  mt-2px z-20 top-4 flex items-center justify-center`}>
                                         <div style={{fontSize: '2.0625rem'}} className="text-white text-12px tracking-tight font-spoqaMedium">{selectedOption[0].tail}</div>
                                     </div>
                                 )}   
