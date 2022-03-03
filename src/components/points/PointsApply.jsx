@@ -18,7 +18,7 @@ const PointsApply = () => {
     )
 
     const Title = ({text}) => (
-        <div style={{width: "21.2rem", marginRight: '1.875rem'}} className="flex-shrink-0">
+        <div style={{width: "24rem", marginRight: '1.875rem'}} className="flex-shrink-0 tracking-tighter">
             <div style={{fontSize: '2.625rem'}} className="text-gray-r454545 font-spoqaMedium">{text}</div>
             <div style={{height: '0.1875rem', marginTop: '0.9375rem'}} className="w-full bg-gray-bebebe"></div>
         </div>

@@ -184,12 +184,12 @@ const MinigamesRightPanel = ({
                     </div>
                 </div>
                 <div className='flex'>
-                    <img style={{width: '6.55rem', marginRight: '0.75rem'}} src={RefreshIcon} alt="" className="cursor-pointer" />
+                    <img style={{width: '6.55rem', marginRight: '0.75rem'}} src={RefreshIcon} alt="" className="cursor-pointer object-contain" />
                     <button
                         onClick={() => setOpenedCart(false)}
                         // style={{width: '15.625rem'}}
                         className="">
-                        <img style={{width: '6.55rem'}} src={CloseIcon} alt="" className="cursor-pointer" />
+                        <img style={{width: '6.55rem'}} src={CloseIcon} alt="" className="cursor-pointer  object-contain" />
                     </button>
                 </div>
             </div>

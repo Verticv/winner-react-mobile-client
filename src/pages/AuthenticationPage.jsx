@@ -318,6 +318,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                     className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe"
                                     placeholder="휴대폰번호(숫자만 입력)"
                                     type='number'
+                                    pattern="\d*"
                                     onFocus={(e) => {
                                         // e.target.placeholder = ""
                                         setSelectedInput(5)
@@ -394,6 +395,7 @@ const AuthenticationPage = ({isAuthenticated, setAuthenticated}) => {
                                         className="placeholder-gray w-full text-gray-r393e41 font-spoqaMedium h-24 text-5xl outline-none placeholder-gray-bebebe" 
                                         type='number'
                                         placeholder="계좌번호 (숫자만 입력)"
+                                        pattern="\d*"
                                         onFocus={(e) => {
                                             // e.target.placeholder = ""
                                             setSelectedInput(9)

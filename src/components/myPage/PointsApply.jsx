@@ -10,7 +10,7 @@ const PointsApply = () => {
 
     const Title = ({text}) => (
         <div className="space-y-14px w-140px flex-shrink-0">
-            <div className="h-16px text-gray-r393e41 font-spoqaMedium text-16px">{text}</div>
+            <div className="h-16px text-gray-r393e41 font-spoqaMedium text-16px  tracking-tighter">{text}</div>
             <div className="h-px w-full bg-gray-bebebe"></div>
         </div>
     )
