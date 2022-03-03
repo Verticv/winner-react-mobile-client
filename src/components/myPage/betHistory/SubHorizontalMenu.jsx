@@ -13,8 +13,10 @@ const SubHorizontalMenu = ({
         return items.map((item, index) => {
             // TODO: remove this
             let imageWidth = '4.81rem'
-            if (index >= 1) {
+            if (index === 2) {
                 imageWidth = '13rem';
+            } else if (index >= 1) {
+                imageWidth = '19rem';
             }
 
             return (
