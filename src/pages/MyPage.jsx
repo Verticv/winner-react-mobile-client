@@ -28,6 +28,7 @@ import Icon12 from "../images/newImages/mainPage/icons/12.png";
 import Icon13 from "../images/newImages/mainPage/icons/13.png";
 import Icon14 from "../images/newImages/mainPage/icons/14.png";
 import Logo from "../images/newImages/mainPage/icons/logo.png";
+import Freeboard from "./Freeboard";
 
 
 const MyPage = ({setAuthenticated, isAuthenticated }) => {
@@ -103,7 +104,7 @@ const MyPage = ({setAuthenticated, isAuthenticated }) => {
       text: "게시판",
       icon: Icon9,
       id: 8,
-      path: "/freeboard",
+      path: "/mypage/freeboard",
       mainPath: "#",
     },
     {
@@ -192,6 +193,9 @@ const MyPage = ({setAuthenticated, isAuthenticated }) => {
         </Route>
         <Route path="/mypage/gameresults">
             <GameResultsPage isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
+        </Route>
+        <Route path="/mypage/freeboard">
+            <Freeboard isAuthenticated={isAuthenticated} setAuthenticated={setAuthenticated} />
         </Route>
 
         <Route path="/mypage/coupon">

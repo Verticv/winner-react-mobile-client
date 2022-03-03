@@ -21,7 +21,7 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                <HomePageTopBanner pageTitle='게시판' toPath='/mypage' />
+                <HomePageTopBanner pageTitle='게시판' toPath={window.location.pathname.includes('/mypage') ? '/mypage' : '/main'} />
             </div>
 
 
@@ -40,6 +40,22 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
                         <BottomNavbar />
                     </Route>
                     <Route path="/freeboard/compose">
+                        <FreeBoardCompose />
+                        <BottomNavbar />
+                    </Route>
+                    <Route exact path="/mypage/freeboard">
+                        <FreeBoardMain />
+                        <BottomNavbar />
+                    </Route>
+                    <Route path="/mypage/freeboard/view">
+                        <FreeBoardView />
+                        <BottomNavbar />
+                    </Route>
+                    <Route path="/mypage/freeboard/view2">
+                        <FreeBoardView2 />
+                        <BottomNavbar />
+                    </Route>
+                    <Route path="/mypage/freeboard/compose">
                         <FreeBoardCompose />
                         <BottomNavbar />
                     </Route>
