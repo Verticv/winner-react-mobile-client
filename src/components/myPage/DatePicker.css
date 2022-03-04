@@ -804,7 +804,7 @@
 
 /* date picker override styling */
 .react-datepicker__month-container {
-  width: 73.7rem;
+  width: 73.5rem;
 }
 
 .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
@@ -833,7 +833,7 @@
 }
 
 .right-date-picker .react-datepicker-popper {
-  transform: translate(-37.8125rem, 9.5rem) !important;
+  transform: translate(-38rem, 9.5rem) !important;
   inset: 0px auto auto 0px !important;
 }
 

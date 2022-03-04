@@ -94,7 +94,9 @@ const DateSearchBar = ({
                 <div className="flex items-center w-full h-full">
                     <div className="left-date-picker relative">
                         <DatePicker 
-                            customInput={<CustomInput />}
+                            customInput={
+                            <CustomInput />
+                        }
                             className="place-color-grey date-picker left-input flex-shrink-0 outline-none rounded-2xl border border-gray-dddddd font-roboto text-15px tracking-tight text-gray-r7b7b7b"
                             locale="ko" 
                             selected={startDate} 
@@ -153,7 +155,7 @@ const DateSearchBar = ({
                                         }}
                                     />
                                 </div>
-                                <img style={{top: '3.44rem', right: '3.94rem'}} src={CalendarIcon} alt="" className="w-14 absolute" />
+                                <img style={{top: '3.44rem', right: '2rem'}} src={CalendarIcon} alt="" className="w-14 absolute" />
                             </>
                         ) : (
                             <div className='mt-7 -ml-8 text-15px'>
