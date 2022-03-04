@@ -258,7 +258,7 @@ const MinigamesRightPanel = ({
                                     )}
                                 </div> 
                                 {selectedOption[0].tailSide && (
-                                    <div style={{width: '3.75rem', height: '3.75rem', marginTop: '0.18rem', top: '1.12rem'}} className={`${selectedOption[0].tailSide === "left" ? "left-4 pr-1" : "right-4 pr-0.5"} absolute w-22px h-22px rounded-full bg-black  z-20 top-4 flex items-center justify-center`}>
+                                    <div style={{width: '3.75rem', height: '3.75rem', marginTop: '0.18rem', top: '1.125rem'}} className={`${selectedOption[0].tailSide === "left" ? "left-4 pr-1" : "right-4 pr-0.5"} absolute w-22px h-22px rounded-full bg-black  z-20 top-4 flex items-center justify-center`}>
                                         <div style={{fontSize: '2.0625rem'}} className="text-white text-12px tracking-tight font-spoqaMedium">{selectedOption[0].tail}</div>
                                     </div>
                                 )}   
