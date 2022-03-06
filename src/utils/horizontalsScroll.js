@@ -5,6 +5,9 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
   if (!window.prevActiveTapId) {
     window.prevActiveTapId = activeTapId
   }
+  const isLastElement = activeTapId === array.length - 1 || activeTapId === array.length - 2 || activeTapId === array.length - 3
+  const isContactPage = window.location.pathname.includes('cscenter/all/contact/all')
+  const isContactPageLastElement = activeTapId === array.length - 1 || activeTapId === array.length - 2 || activeTapId === array.length - 3 || activeTapId === array.length - 4
   if (scrollWrapper) {
     if (activeTapId > 2) {
       const elementWidth = window.document.querySelector(`#${tapIdPrefix}${activeTapId}`)?.offsetWidth;
@@ -18,7 +21,11 @@ export default function horizontalsScroll(array, tapIdPrefix, scrollWrapperId, b
           if (window.prevActiveTapId < activeTapId || window.prevActiveTapId === activeTapId) {
             scrollWrapper.scrollLeft += scrolledValue
           } else {
-            scrollWrapper.scrollLeft -= scrolledValue
+            if (!isLastElement && !isContactPage) {
+              scrollWrapper.scrollLeft -= scrolledValue
+            } else if (isContactPage && !isContactPageLastElement) {
+              scrollWrapper.scrollLeft -= scrolledValue
+            }
           }
           leftScrollValueAmount = leftScrollValueAmount - scrolledValue
           if (leftScrollValueAmount < 1) {
