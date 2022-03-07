@@ -5,12 +5,14 @@ import { useHistory } from 'react-router';
 import HomeIcon from '../../images/newImages/mypage/home.png'
 import LeftArrowIcon from '../../images/newImages/newLeftArrow.png'
 
-const HomePageTopBanner = ({pageTitle, toPath="/mypage"}) => {
+const HomePageTopBanner = ({pageTitle, toPath="/mypage", isFreeboard=false}) => {
     const history = useHistory();
     return (
       <div style={{height: '7.5rem'}} className="relative flex w-full justify-center items-center border-b border-gray-ececec bg-gray-ebeff4">
       <img
-          onClick={() => history.goBack()}
+          onClick={() => {
+              isFreeboard ? history.goBack() : history.push(toPath)
+          }}
           style={{height: '3.375rem', width: '2.1875rem', top: '1.875rem', left: '3.6875rem'}}
           className="absolute w-9 cursor-pointer"
           src={LeftArrowIcon}

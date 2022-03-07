@@ -21,7 +21,7 @@ const Freeboard = ({isAuthenticated, setAuthenticated}) => {
             <div className="w-full z-30 flex flex-col items-center">
                 <NoticeBanner />
                 <Navbar isAuthenticated={isAuthenticated} setAuth={setAuthenticated} />
-                <HomePageTopBanner pageTitle='게시판' toPath={window.location.pathname.includes('/mypage') ? '/mypage' : '/main'} />
+                <HomePageTopBanner pageTitle='게시판' toPath={window.location.pathname.includes('/mypage') ? '/mypage' : '/main'} isFreeboard={true} />
             </div>
 
 
