@@ -59,7 +59,7 @@ const HorizontalMenu = ({
                 onPointerDown={() => setHover(item.id)}
                 onPointerUp={() => {
                     setHover(null)
-                    horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index, 2.5)
+                    horizontalsScroll(itemsArray, 't', 'scroll-wrapper', index)
                     history.push(item.path)
                     setSelectedTab(item.id)
                     if (setSelectedSubTab !== null) {
