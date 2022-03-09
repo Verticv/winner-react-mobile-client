@@ -1139,12 +1139,12 @@ const BetCombinationPanel = ({
             <div style={{paddingTop: '2.1875rem', paddingBottom: '1.125rem'}} className="flex w-full pb-0 font-spoqaMedium tracking-tight text-gray-r454545">
                 <div style={{fontSize: '2.625rem', marginLeft:"11.15rem"}} className="h-full flex items-center flex-shrink-0 space-x-2">
                     <p>승(홈)</p>
-                    <img className='w-7 h-7 object-contain blink mb-1' src={ArrowUp} alt="" />
+                    <img className='w-7 h-7 object-contain mb-1' src={ArrowUp} alt="" />
                 </div>
                 <div style={{fontSize: '2.625rem', marginLeft: "14.8rem"}} className="h-full flex items-center flex-shrink-0">무</div>
                 <div style={{fontSize: '2.625rem', marginLeft: "13.4rem"}} className="h-full flex items-center flex-shrink-0 space-x-2">
                     <p>패(원정)</p>
-                    <img className='w-7 h-7 object-contain blink mb-1' src={ArrowDown} alt="" />
+                    <img className='w-7 h-7 object-contain mb-1' src={ArrowDown} alt="" />
                 </div>
                 <div style={{fontSize: '2.625rem', marginLeft: "10rem"}} className="h-full mr-8 flex items-center flex-shrink-0">정보</div>
             </div>
