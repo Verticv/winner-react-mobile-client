@@ -1,7 +1,7 @@
 import BoardViewPanel from 'components/common/cards/BoardViewPanel';
 import BetHistoryPopup from 'components/popups/BetHistoryPopup';
 import PopupControls from 'components/popups/PopupControls';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router';
 
 const FreeBoardCompose = () => {
@@ -18,6 +18,18 @@ const FreeBoardCompose = () => {
             베팅내역첨부
         </button>
     )
+
+    const handleResize = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`); 
+    };
+      
+    useEffect(() => {
+        handleResize();
+        window.addEventListener("resize", handleResize);
+      
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <div style={{padding: '1.875rem'}}>
@@ -42,7 +54,9 @@ const FreeBoardCompose = () => {
                 <div style={{height: '9.1875rem', paddingLeft: '2.8125rem',  borderBottomWidth: '0.1875rem'}} className="w-full bg-gray-fafafa border-b border-gray-dddddd flex items-center">
 
                     <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                        <BetHistoryPopup setPopupOpen={setPopupOpen} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                        <div style={{height: 'calc(var(--vh) * 100)'}}>
+                            <BetHistoryPopup setPopupOpen={setPopupOpen} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
+                        </div>
                     </PopupControls> 
                     
                 </div>
