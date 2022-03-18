@@ -19,13 +19,6 @@ const FreeBoardCompose = () => {
         </button>
     )
 
-    const appHeight = () => {
-        const doc = document.documentElement
-        doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-    }
-    window.addEventListener('resize', appHeight)
-    appHeight()
-
     return (
         <div style={{padding: '1.875rem'}}>
             
@@ -49,9 +42,7 @@ const FreeBoardCompose = () => {
                 <div style={{height: '9.1875rem', paddingLeft: '2.8125rem',  borderBottomWidth: '0.1875rem'}} className="w-full bg-gray-fafafa border-b border-gray-dddddd flex items-center">
 
                     <PopupControls buttonChild={AttachButton} isPopupOpen={isPopupOpen} setPopupOpen={setPopupOpen}>
-                        <div style={{height: 'var(--app-height)'}}>
-                            <BetHistoryPopup setPopupOpen={setPopupOpen} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
-                        </div>
+                        <BetHistoryPopup setPopupOpen={setPopupOpen} attachedArray={attachedArray} setAttachedArray={setAttachedArray} />
                     </PopupControls> 
                     
                 </div>
