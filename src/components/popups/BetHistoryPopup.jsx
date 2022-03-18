@@ -60,7 +60,7 @@ const BetHistoryPopup = ({setPopupOpen, setAttachedArray, attachedArray}) => {
     console.log(`selectedSubTab`, selectedSubTab)
 
     return (
-        <div style={{height:"100%", width: '77.625rem' ,borderTopLeftRadius: '4rem', borderTopRightRadius: '4rem', position:'fixed', top:0, left:0}} className="flex flex-col rounded-lg overflow-hidden">
+        <div style={{height:"100%", width: '77.625rem' ,borderTopLeftRadius: '4rem', borderTopRightRadius: '4rem', position:'fixed', top:0, left:0, minHeight:'-webkit-fill-available'}} className="flex flex-col rounded-lg overflow-hidden">
             <div style={{height: '9.5rem'}} className="relative bg-blue-r5d799c flex items-center justify-center flex-shrink-0">
                 <label style={{fontSize: '3.75rem'}} className="font-spoqaBold text-white tracking-tight mt-2">베팅내역</label>
                 <button style={{marginRight: '4.625rem'}} className="absolute right-0 cursor-pointer z-20" onClick={() => setPopupOpen(false)}>
